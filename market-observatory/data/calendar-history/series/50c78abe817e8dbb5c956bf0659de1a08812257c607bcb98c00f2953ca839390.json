@@ -1,0 +1,46 @@
+{
+  "bucket": {
+    "available_from": "2026-10-29",
+    "available_to": "2026-10-29",
+    "category": "GDP/PCE/무역",
+    "count": 1,
+    "country": "US",
+    "event_title": "GDP (Advance Estimate), 3rd Quarter 2026",
+    "kind": "event",
+    "label": "GDP (Advance Estimate), 3rd Quarter 2026",
+    "quality": {
+      "actual_count": 1,
+      "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
+      "consensus_count": 1,
+      "frequency_validation": "NOT_VALIDATED",
+      "max_observed_gap_days": 0,
+      "rows_by_year": {
+        "2026": 1
+      },
+      "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
+    },
+    "ref": "US::gdp-quarter",
+    "rows": [
+      {
+        "actual": "3.4%",
+        "checked_kst": "2026-11-01T22:42:29+09:00",
+        "consensus": "3.2%",
+        "consensus_source": "FairEconomy/ForexFactory",
+        "consensus_source_tier": "MARKET_FEED",
+        "date": "2026-10-29",
+        "datetime_kst": "2026-10-29T21:30+09:00",
+        "label": "GDP (Advance Estimate), 3rd Quarter 2026",
+        "previous": "2.2%",
+        "previous_source": "FairEconomy/ForexFactory",
+        "previous_source_tier": "MARKET_FEED",
+        "source": "FairEconomy/ForexFactory",
+        "source_tier": "MARKET_FEED",
+        "source_url": "https://www.forexfactory.com/calendar?week=oct25.2026",
+        "surprise": "actual_vs_consensus",
+        "verification_status": "MARKET_REPORTED"
+      }
+    ]
+  },
+  "ref": "US::gdp-quarter",
+  "schema": "JJOONI_CALENDAR_HISTORY_SERIES_V1"
+}

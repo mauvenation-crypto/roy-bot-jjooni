@@ -1,9 +1,9 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-01T22:40:21+09:00",
-  "overall": "WARN",
+  "generated_kst": "2026-11-01T22:42:40+09:00",
+  "overall": "PASS",
   "critical_count": 0,
-  "warning_count": 1,
+  "warning_count": 0,
   "observatory_session": "2026-10-30",
   "file_status": {
     "observatory": {
@@ -33,10 +33,10 @@
       "audit_state": "LIVE"
     },
     "calendar": {
-      "generated_kst": "2026-11-01T20:13:09+09:00",
+      "generated_kst": "2026-11-01T22:42:34+09:00",
       "events": 189,
-      "actual_freshness": "DEGRADED",
-      "overdue_count": 1,
+      "actual_freshness": "LIVE",
+      "overdue_count": 0,
       "pending_count": 0,
       "collection_health": "LIVE",
       "failed_source_count": 0,
@@ -68,12 +68,11 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-01T22:40:19+09:00",
+      "generated_kst": "2026-11-01T22:42:39+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
-        "calendar",
-        "audit"
+        "calendar"
       ]
     },
     "watchdog": {
@@ -519,24 +518,18 @@
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-01T22:38:51+09:00",
-      "current_quote_age_seconds": 90,
+      "current_quote_age_seconds": 229,
       "captured_quote_age_seconds": 87
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-01T22:39:04+09:00",
-      "current_quote_age_seconds": 77,
+      "current_quote_age_seconds": 216,
       "captured_quote_age_seconds": 74
     }
   },
-  "issues": [
-    {
-      "code": "CALENDAR_ACTUAL_DEGRADED",
-      "severity": "WARN",
-      "detail": "overdue_count=1 pending_count=0"
-    }
-  ],
+  "issues": [],
   "contracts": {
     "completed_session": "CORE_US_AND_US_SUPPLEMENT_MUST_MATCH_OBSERVATORY_SESSION",
     "continuous_daily": "FX_ENERGY_METALS_MAY_LAG_CORE_BY_AT_MOST_1_CALENDAR_DAY",

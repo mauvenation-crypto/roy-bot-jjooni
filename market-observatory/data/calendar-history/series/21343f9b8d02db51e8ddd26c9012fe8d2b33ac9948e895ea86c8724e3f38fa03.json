@@ -1,0 +1,78 @@
+{
+  "bucket": {
+    "available_from": "2026-09-30",
+    "available_to": "2026-10-29",
+    "category": "GDP/PCE/무역",
+    "count": 2,
+    "country": "US",
+    "event_title": "Personal Income and Outlays, August 2026",
+    "kind": "event",
+    "label": "Personal Income and Outlays, August 2026",
+    "quality": {
+      "actual_count": 2,
+      "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
+      "consensus_count": 2,
+      "frequency_validation": "NOT_VALIDATED",
+      "max_observed_gap_days": 29,
+      "rows_by_year": {
+        "2026": 2
+      },
+      "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
+    },
+    "ref": "US::personal-income-and-outlays",
+    "rows": [
+      {
+        "actual": "0.2%",
+        "checked_kst": "2026-10-13T08:53:44+09:00",
+        "consensus": "0.5%",
+        "consensus_source": "FairEconomy/ForexFactory",
+        "consensus_source_tier": "MARKET_FEED",
+        "date": "2026-09-30",
+        "datetime_kst": "2026-09-30T21:30+09:00",
+        "label": "Personal Income and Outlays, August 2026",
+        "metric_key": null,
+        "previous": "0.3%",
+        "previous_source": "FairEconomy/ForexFactory",
+        "previous_source_tier": "MARKET_FEED",
+        "reference_period": "",
+        "source": "FairEconomy/ForexFactory",
+        "source_tier": "MARKET_FEED",
+        "source_url": "https://www.forexfactory.com/calendar?week=sep27.2026",
+        "surprise": "actual_vs_consensus",
+        "te_forecast": null,
+        "verification_status": "MARKET_REPORTED"
+      },
+      {
+        "actual": "0.3%",
+        "checked_kst": "2026-11-01T22:42:29+09:00",
+        "consensus": "0.3%",
+        "consensus_source": "FairEconomy/ForexFactory",
+        "consensus_source_tier": "MARKET_FEED",
+        "date": "2026-10-29",
+        "datetime_kst": "2026-10-29T21:30+09:00",
+        "label": "Personal Income and Outlays, September 2026",
+        "previous": "0.3%",
+        "previous_source": "FairEconomy/ForexFactory",
+        "previous_source_tier": "MARKET_FEED",
+        "revisions": [
+          {
+            "accepted": true,
+            "actual": "0.3%",
+            "checked_kst": "2026-10-30T09:48:52+09:00",
+            "prior_actual": "0.2%",
+            "source": "FairEconomy/ForexFactory",
+            "source_tier": "MARKET_FEED",
+            "value_vintage": null
+          }
+        ],
+        "source": "FairEconomy/ForexFactory",
+        "source_tier": "MARKET_FEED",
+        "source_url": "https://www.forexfactory.com/calendar?week=oct25.2026",
+        "surprise": "actual_vs_consensus",
+        "verification_status": "MARKET_REPORTED"
+      }
+    ]
+  },
+  "ref": "US::personal-income-and-outlays",
+  "schema": "JJOONI_CALENDAR_HISTORY_SERIES_V1"
+}
