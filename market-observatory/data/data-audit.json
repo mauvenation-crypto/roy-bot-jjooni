@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-01T18:24:48+09:00",
+  "generated_kst": "2026-11-01T18:43:41+09:00",
   "overall": "WARN",
   "critical_count": 0,
   "warning_count": 1,
@@ -68,11 +68,10 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-01T18:24:45+09:00",
+      "generated_kst": "2026-11-01T18:24:48+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
-        "jp_rates",
         "calendar",
         "audit"
       ]
@@ -465,17 +464,17 @@
         "BTCUSD": {
           "count": 1097,
           "last_date": "2026-11-01",
-          "last_value": 77969.09,
+          "last_value": 77979.0,
           "group": "crypto",
-          "latest_value": 77969.09,
+          "latest_value": 77979.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1097,
           "last_date": "2026-11-01",
-          "last_value": 2268.23,
+          "last_value": 2269.36,
           "group": "crypto",
-          "latest_value": 2268.23,
+          "latest_value": 2269.36,
           "latest_matches": true
         }
       },
@@ -519,16 +518,16 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-01T18:24:38+09:00",
-      "current_quote_age_seconds": 10,
-      "captured_quote_age_seconds": 4
+      "quote_as_of_kst": "2026-11-01T18:43:20+09:00",
+      "current_quote_age_seconds": 21,
+      "captured_quote_age_seconds": 20
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-01T18:24:31+09:00",
-      "current_quote_age_seconds": 17,
-      "captured_quote_age_seconds": 11
+      "quote_as_of_kst": "2026-11-01T18:43:06+09:00",
+      "current_quote_age_seconds": 35,
+      "captured_quote_age_seconds": 34
     }
   },
   "issues": [
