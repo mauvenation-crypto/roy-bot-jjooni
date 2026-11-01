@@ -113,7 +113,7 @@
       "state": "LIVE",
       "generated_kst": "2026-11-02T06:40:31+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=96s · ETHUSD age=96s",
+      "detail": "BTCUSD age=97s · ETHUSD age=97s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
@@ -176,7 +176,7 @@
     "official_macro": {
       "label": "Official Macro",
       "state": "LIVE",
-      "generated_kst": "2026-10-31T03:55:02+09:00",
+      "generated_kst": "2026-11-02T06:41:34+09:00",
       "as_of": null,
       "detail": "JJOONI_OFFICIAL_MACRO_V1",
       "source": "official-macro.json",
@@ -200,7 +200,7 @@
     "audit": {
       "label": "Full Data Audit",
       "state": "PASS",
-      "generated_kst": "2026-11-02T06:41:57+09:00",
+      "generated_kst": "2026-11-02T06:41:58+09:00",
       "as_of": "2026-10-30",
       "detail": "critical=0 · warnings=0",
       "source": "data-audit.json",
