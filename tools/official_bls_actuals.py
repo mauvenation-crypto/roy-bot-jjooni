@@ -185,5 +185,9 @@ def collect_bls(e,kind,checks):
    check.update(result=f'HTTP_{exc.code}' if hasattr(exc,'code') else type(exc).__name__,error=str(exc)[:250])
    if hasattr(exc,'read'):check['response_prefix']=exc.read(350).decode('utf-8',errors='replace')
    checks.append(check)
+ if code=='eci':
+  from official_eci_fred_fallback import collect_eci_fred
+  result=collect_eci_fred(e,checks)
+  if result:return result
  from official_bls_api import collect_api
  return collect_api(e,code,checks)

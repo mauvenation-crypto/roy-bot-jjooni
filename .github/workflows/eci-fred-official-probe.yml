@@ -1,0 +1,39 @@
+name: BLS ECI FRED Official Vintage Probe
+
+on:
+  pull_request:
+    paths:
+      - tools/official_eci_fred_fallback.py
+      - tools/official_bls_actuals.py
+      - tools/official_calendar_collectors.py
+      - tests/test_eci_fred_fallback.py
+      - .github/workflows/eci-fred-official-probe.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  eci_official_probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify period identity, official provenance and fail-closed tests
+        run: python -m unittest discover -s tests -p 'test_eci_fred_fallback.py' -v
+      - name: Verify GitHub runner FRED transport against BLS as-released Table 1
+        run: |
+          PYTHONPATH=tools python - <<'PY'
+          from official_eci_fred_fallback import RELEASES, fetch_csv, parse_verified_csv
+          release = RELEASES['2026-10-30']
+          actual = parse_verified_csv(fetch_csv(), release)
+          if actual != '0.8%':
+              raise AssertionError('ECI_HEADLINE_MISMATCH')
+          print('ECI_OFFICIAL_FRED_PROBE=PASS',
+                'reference_period='+release['period'],
+                'series=ECIALLCIV', 'actual='+actual,
+                'BLS='+release['bls_url'])
+          PY

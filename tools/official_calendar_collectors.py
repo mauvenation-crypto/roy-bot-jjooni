@@ -444,7 +444,9 @@ def apply_official_actuals(calendar,now):
                 m['market_value_status'] = 'ACTUAL_AVAILABLE'
             old[m['key']]=merge_observation(old.get(m['key'],{}),m)
         representative=old[expected[0]]
-        patch=dict(provenance,actual=representative['actual'],market_metrics=list(old.values()),actual_source=kind+' official release')
+        source_label=representative.get('source') or kind+' official release'
+        patch=dict(provenance,actual=representative['actual'],market_metrics=list(old.values()),
+                   source=source_label,actual_source=source_label)
         if kind == 'BOK_GDP' and clean(representative.get('actual')) is not None:
             patch['market_value_status'] = 'ACTUAL_AVAILABLE'
         from calendar_actual_contract import PROVENANCE
@@ -453,7 +455,7 @@ def apply_official_actuals(calendar,now):
         # Keep compact previous/consensus identical to primary metric.
         for f in ('previous','consensus'):
             if clean(representative.get(f)) is None and clean(e.get(f)) is not None: representative[f]=e[f]
-        e.update(merge_observation(e,patch)); e['market_data_source']=kind+' official release'
+        e.update(merge_observation(e,patch)); e['market_data_source']=source_label
         updates+=1
     calendar['actual_backfill']={'lookback_days':14,'unresolved_candidates':candidates,'checks':checks,'checked_kst':now.isoformat(timespec='seconds')}
     return updates,checks
