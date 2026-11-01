@@ -4212,6 +4212,13 @@
         "captured_kst": "2026-10-01T11:04:29+09:00",
         "series_identity": "901Y033/M/A00/2",
         "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y033/M/202608/202608/A00/2"
+      },
+      {
+        "version": "revision_2",
+        "value": 0.0831,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "901Y033/M/A00/2",
+        "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y033/M/202609/202609/A00/2"
       }
     ],
     "US_SEP_DOT_PLOT|official_forecast:2026|2026-09-16": [
@@ -4361,6 +4368,13 @@
         "captured_kst": "2026-10-01T11:04:29+09:00",
         "series_identity": "901Y033/M/A00/2",
         "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y033/M/202608/202608/A00/2"
+      },
+      {
+        "version": "revision_1",
+        "value": -1.1618,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "901Y033/M/A00/2",
+        "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y033/M/202609/202609/A00/2"
       }
     ],
     "US_FED_FUNDS|2026-10-01": [
@@ -4794,7 +4808,196 @@
         "series_identity": null,
         "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
       }
+    ],
+    "US_ECI|ECIALLCIV|2022-04-01": [
+      {
+        "version": "baseline_import",
+        "value": 152.1,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2022-07-01": [
+      {
+        "version": "baseline_import",
+        "value": 153.9,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2022-10-01": [
+      {
+        "version": "baseline_import",
+        "value": 155.7,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2023-01-01": [
+      {
+        "version": "baseline_import",
+        "value": 157.3,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2023-04-01": [
+      {
+        "version": "baseline_import",
+        "value": 159.0,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2023-07-01": [
+      {
+        "version": "baseline_import",
+        "value": 160.7,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2023-10-01": [
+      {
+        "version": "baseline_import",
+        "value": 162.2,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2024-01-01": [
+      {
+        "version": "baseline_import",
+        "value": 163.9,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2024-04-01": [
+      {
+        "version": "baseline_import",
+        "value": 165.4,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2024-07-01": [
+      {
+        "version": "baseline_import",
+        "value": 166.8,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2024-10-01": [
+      {
+        "version": "baseline_import",
+        "value": 168.3,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2025-01-01": [
+      {
+        "version": "baseline_import",
+        "value": 169.8,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2025-04-01": [
+      {
+        "version": "baseline_import",
+        "value": 171.38,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2025-07-01": [
+      {
+        "version": "baseline_import",
+        "value": 172.752,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2025-10-01": [
+      {
+        "version": "baseline_import",
+        "value": 174.047,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2026-01-01": [
+      {
+        "version": "baseline_import",
+        "value": 175.618,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2026-04-01": [
+      {
+        "version": "baseline_import",
+        "value": 177.178,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_ECI|ECIALLCIV|2026-07-01": [
+      {
+        "version": "baseline_import",
+        "value": 178.574,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "ECIALLCIV",
+        "source_url": "https://fred.stlouisfed.org/series/ECIALLCIV"
+      }
+    ],
+    "US_FED_FUNDS|2026-10-31": [
+      {
+        "version": "baseline_import",
+        "value": 3.875,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
+      }
+    ],
+    "US_FED_FUNDS|2026-11-01": [
+      {
+        "version": "baseline_import",
+        "value": 3.875,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
+      }
+    ],
+    "KR_INDUSTRIAL_PRODUCTION|901Y033/M/A00/2|2026-09-01": [
+      {
+        "version": "baseline_import",
+        "value": 3.0227,
+        "captured_kst": "2026-11-02T06:41:34+09:00",
+        "series_identity": "901Y033/M/A00/2",
+        "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y033/M/202609/202609/A00/2"
+      }
     ]
   },
-  "updated_kst": "2026-10-31T03:55:02+09:00"
+  "updated_kst": "2026-11-02T06:41:34+09:00"
 }
