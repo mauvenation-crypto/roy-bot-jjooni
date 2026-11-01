@@ -1,6 +1,6 @@
 {
   "contains_account_data": false,
-  "generated_kst": "2026-11-02T01:17:50+09:00",
+  "generated_kst": "2026-11-02T01:17:53+09:00",
   "market_context": {
     "available_count": 12,
     "basis": "PUBLIC_MARKET_COMPLETED_DAILY_SIDECAR",
@@ -119,17 +119,17 @@
         "value": 4.94
       },
       "USDKRW": {
-        "as_of_date": "2026-11-01",
+        "as_of_date": "2026-10-30",
         "basis": "LATEST_COMPLETED_DAILY_CLOSE_VS_PREVIOUS_CLOSE",
-        "change": -4.540039060000026,
-        "change_pct": -0.3393204028662056,
+        "change": -2.880004880000115,
+        "change_pct": -0.2152502221287711,
         "label": "원/달러",
         "market_state": "COMPLETED_DAILY_REFERENCE",
         "prev_close": 1337.97998047,
-        "session_date": "2026-11-01",
+        "session_date": "2026-10-30",
         "source": "OBSERVATORY_CANONICAL",
         "unit": "KRW/USD",
-        "value": 1333.43994141
+        "value": 1335.09997559
       },
       "VIX": {
         "as_of_date": "2026-10-30",
@@ -169,7 +169,7 @@
     "drawdown_52w_pct": -9.094216906793761,
     "ma250": 27407.40533593772,
     "ndx": 28384.84960938,
-    "observed_at": "2026-11-02T01:17:50+09:00",
+    "observed_at": "2026-11-02T01:17:53+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -5.835041864514123,
     "previous_ma250": 27397.29846093772,
