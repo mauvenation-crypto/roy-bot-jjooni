@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-02T06:40:34+09:00",
+  "generated_kst": "2026-11-02T06:41:02+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
@@ -9,7 +9,9 @@
   "overall": "LIVE_WITH_WARNINGS",
   "critical_bad": [],
   "warnings": [
-    "calendar"
+    "crypto",
+    "calendar",
+    "audit"
   ],
   "watchdog_required": false,
   "session_alignment": {
@@ -110,20 +112,20 @@
     },
     "crypto": {
       "label": "Crypto",
-      "state": "LIVE",
-      "generated_kst": "2026-11-02T06:40:31+09:00",
+      "state": "STALE",
+      "generated_kst": "2026-11-02T05:35:55+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=13s · ETHUSD age=13s",
+      "detail": "BTCUSD age=3909s · ETHUSD age=3921s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
         "BTCUSD": {
-          "status": "LIVE",
-          "quote_as_of_kst": "2026-11-02T06:40:21+09:00"
+          "status": "STALE",
+          "quote_as_of_kst": "2026-11-02T05:35:52+09:00"
         },
         "ETHUSD": {
-          "status": "LIVE",
-          "quote_as_of_kst": "2026-11-02T06:40:21+09:00"
+          "status": "STALE",
+          "quote_as_of_kst": "2026-11-02T05:35:40+09:00"
         }
       },
       "max_age_seconds": 3600
@@ -185,24 +187,24 @@
     "calendar": {
       "label": "Economic Calendar",
       "state": "DEGRADED",
-      "generated_kst": "2026-11-01T22:43:50+09:00",
-      "as_of": "2026-11-01T22:43:50+09:00",
+      "generated_kst": "2026-11-02T06:40:55+09:00",
+      "as_of": "2026-11-02T06:40:55+09:00",
       "detail": "events=189 · overdue=0 · pending=0 · source_failures=0 · official_probe_blocked=1",
       "source": "economic-calendar.json",
       "critical": false,
       "actual_completeness_state": "LIVE",
       "official_probe_state": "DEGRADED",
-      "official_probe_failure_count": 4,
+      "official_probe_failure_count": 3,
       "official_probe_blocked_releases": [
         "Employment Cost Index"
       ]
     },
     "audit": {
       "label": "Full Data Audit",
-      "state": "PASS",
-      "generated_kst": "2026-11-02T06:40:34+09:00",
+      "state": "WARN",
+      "generated_kst": "2026-11-02T06:41:01+09:00",
       "as_of": "2026-10-30",
-      "detail": "critical=0 · warnings=0",
+      "detail": "critical=0 · warnings=3",
       "source": "data-audit.json",
       "critical": true
     },
