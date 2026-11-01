@@ -12535,6 +12535,51 @@
       "ref": "KR::2026년-3분기-실질-gdp::gdp_qoq",
       "sha256": "76bafd2c8e9ec0674f8ef765770e9082c1d886eabbb9581afb3664833a6e39ea"
     },
+    "KR::2026년-4분기-실질-gdp": {
+      "available_from": null,
+      "available_to": null,
+      "category": "GDP",
+      "count": 0,
+      "country": "KR",
+      "event_title": "2026년 3/4분기 실질 GDP(속보)",
+      "kind": "event",
+      "label": "2026년 3/4분기 실질 GDP(속보)",
+      "path": "./calendar-history/series/ac6b5918f258f7520469ba3343b09758893b4e852a27f1907aac5a663e1d88a6.json",
+      "quality": {
+        "actual_count": 0,
+        "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
+        "consensus_count": 0,
+        "frequency_validation": "NOT_VALIDATED",
+        "max_observed_gap_days": 0,
+        "rows_by_year": {},
+        "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
+      },
+      "ref": "KR::2026년-4분기-실질-gdp",
+      "sha256": "ac6b5918f258f7520469ba3343b09758893b4e852a27f1907aac5a663e1d88a6"
+    },
+    "KR::2026년-4분기-실질-gdp::gdp_qoq": {
+      "available_from": null,
+      "available_to": null,
+      "category": "GDP",
+      "count": 0,
+      "country": "KR",
+      "event_title": "2026년 3/4분기 실질 GDP(속보)",
+      "kind": "metric",
+      "label": "GDP QoQ",
+      "metric_key": "gdp_qoq",
+      "path": "./calendar-history/series/b5197cfa7ce32eef7dcb27f878225920fc6c68ccc1ebc7e5f99f26ab768a5a3d.json",
+      "quality": {
+        "actual_count": 0,
+        "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
+        "consensus_count": 0,
+        "frequency_validation": "NOT_VALIDATED",
+        "max_observed_gap_days": 0,
+        "rows_by_year": {},
+        "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
+      },
+      "ref": "KR::2026년-4분기-실질-gdp::gdp_qoq",
+      "sha256": "b5197cfa7ce32eef7dcb27f878225920fc6c68ccc1ebc7e5f99f26ab768a5a3d"
+    },
     "KR::고용동향": {
       "available_from": "2026-09-09",
       "available_to": "2026-10-16",
@@ -14312,7 +14357,7 @@
       "event_title": "S&P Global US Manufacturing PMI",
       "kind": "event",
       "label": "S&P Global US Manufacturing PMI",
-      "path": "./calendar-history/series/f935a5480197b17314ccd4d5d4895fa02919081c15d76fc88a8352f8ea3e9ba1.json",
+      "path": "./calendar-history/series/adc0fe5af756dea165d21d0ba02006b59b91d6cb897d00f36bc7ab259212cfa9.json",
       "quality": {
         "actual_count": 3,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14325,7 +14370,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::s-p-global-us-manufacturing-pmi",
-      "sha256": "f935a5480197b17314ccd4d5d4895fa02919081c15d76fc88a8352f8ea3e9ba1"
+      "sha256": "adc0fe5af756dea165d21d0ba02006b59b91d6cb897d00f36bc7ab259212cfa9"
     },
     "US::s-p-global-us-manufacturing-pmi::sp_us_manufacturing_pmi": {
       "available_from": "2016-11-22",
@@ -14337,7 +14382,7 @@
       "kind": "metric",
       "label": "S&P Global US Manufacturing PMI",
       "metric_key": "sp_us_manufacturing_pmi",
-      "path": "./calendar-history/series/9e2ec27e7f9f480188892c70dcc0b9ed35ecac5e213f828e5dc517d89358be32.json",
+      "path": "./calendar-history/series/693b40eef6da41391fdf9e5d770f5b679d784778952eb6d61dc3a96513502ba3.json",
       "quality": {
         "actual_count": 386,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14360,7 +14405,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::s-p-global-us-manufacturing-pmi::sp_us_manufacturing_pmi",
-      "sha256": "9e2ec27e7f9f480188892c70dcc0b9ed35ecac5e213f828e5dc517d89358be32"
+      "sha256": "693b40eef6da41391fdf9e5d770f5b679d784778952eb6d61dc3a96513502ba3"
     },
     "US::s-p-global-us-services-composite-pmi": {
       "available_from": "2026-08-05",
@@ -14808,9 +14853,9 @@
     }
   },
   "series_completeness_status": "NOT_VALIDATED",
-  "series_count": 437,
-  "snapshot_id": "3e424c218af45733a2b64105374bc4a226a6f96fb028cc22ad16b2b1b5052034",
-  "source_sha256": "3e424c218af45733a2b64105374bc4a226a6f96fb028cc22ad16b2b1b5052034",
+  "series_count": 439,
+  "snapshot_id": "be91153f2573d5f9758fb3ef3a73ddb1bee1fd9dacc9e9129382b1975d1ccc65",
+  "source_sha256": "be91153f2573d5f9758fb3ef3a73ddb1bee1fd9dacc9e9129382b1975d1ccc65",
   "timezone": "Asia/Seoul",
   "window_days": 3650,
   "window_end": "2026-11-02",
