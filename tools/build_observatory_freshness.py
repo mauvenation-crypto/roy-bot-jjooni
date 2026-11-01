@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -51,6 +52,62 @@ def _count_field(obj,count_key,list_key):
     except Exception:return len(obj.get(list_key) or [])
 
 
+
+def calendar_probe_health(checks: list[dict], events: list[dict]) -> dict:
+    """Keep BLS transport failures visible without hiding a verified official fallback.
+
+    Only a same-release, same-value ECIALLCIV observation with official
+    provenance can resolve a BLS ECI transport failure. Other releases and
+    failed fallback attempts remain blocked.
+    """
+    failures = [c for c in checks if
+                str(c.get('result') or '').startswith('HTTP_') or
+                str(c.get('result') or '') in {'REFERENCE_PERIOD_MISSING','SERIES_NOT_CONFIGURED','PARTIAL'} or
+                str(c.get('result') or '').endswith('Error')]
+
+    def release_id(url):
+        match = re.search(r'eci_(\d{8})\.(?:htm|pdf|txt)(?:$|\?)', str(url or ''), re.I)
+        return match.group(1) if match else None
+
+    verified = set()
+    for check in checks:
+        if check.get('adapter') != 'ECI_FRED' or check.get('result') != 'VERIFIED_BLS_TABLE1_FRED_MATCH':
+            continue
+        title = text(check.get('title'))
+        release = release_id(check.get('bls_url'))
+        if not title or not release:
+            continue
+        for event in events:
+            if not isinstance(event, dict) or event.get('title') != title:
+                continue
+            if (event.get('verification_status') != 'VERIFIED_OFFICIAL' or
+                    event.get('source_tier') != 'OFFICIAL' or
+                    event.get('actual') != check.get('actual') or
+                    release_id(event.get('official_url')) != release):
+                continue
+            if any(isinstance(m, dict) and m.get('series_id') == 'ECIALLCIV' and
+                   m.get('reference_period') == check.get('reference_period') and
+                   m.get('verification_status') == 'VERIFIED_OFFICIAL'
+                   for m in event.get('market_metrics') or []):
+                verified.add((title, release))
+
+    def key(check):
+        return text(check.get('title')) or text(check.get('adapter')) or 'unknown'
+
+    unresolved = [c for c in failures if (key(c), release_id(c.get('url'))) not in verified]
+    blocked = sorted({key(c) for c in unresolved})
+    transport_blocked = sorted({key(c) for c in failures})
+    return {
+        'state': ('DEGRADED' if blocked else
+                  'PASS_WITH_TRANSPORT_WARNINGS' if failures else
+                  'PASS' if checks else 'NOT_CHECKED'),
+        'failure_count': len(failures),
+        'unresolved_failure_count': len(unresolved),
+        'blocked_releases': blocked,
+        'transport_blocked_releases': transport_blocked,
+        'verified_fallback_releases': sorted({title for title, _ in verified}),
+    }
+
 def build_status(root: Path = ROOT, now=None) -> dict:
     now = now or datetime.now(KST)
     data=root/'market-observatory'/'data'
@@ -82,11 +139,8 @@ def build_status(root: Path = ROOT, now=None) -> dict:
     # Release-actual completeness and official-document accessibility are independent.
     # Do not call a calendar wholly LIVE when its BLS release probes are blocked.
     cal_official_checks=[c for c in (cal_fresh.get('official_checks') or []) if isinstance(c,dict)]
-    cal_probe_failures=[c for c in cal_official_checks if
-                        str(c.get('result') or '').startswith('HTTP_') or
-                        str(c.get('result') or '') in {'REFERENCE_PERIOD_MISSING','SERIES_NOT_CONFIGURED','PARTIAL'} or
-                        str(c.get('result') or '').endswith('Error')]
-    cal_probe_blocked=sorted({str(c.get('title') or c.get('adapter') or 'unknown') for c in cal_probe_failures})
+    cal_probe=calendar_probe_health(cal_official_checks, cal.get('events') or [])
+    cal_probe_blocked=cal_probe['blocked_releases']
     cal_actual_state=cal_state
     if cal_probe_blocked and cal_state=='LIVE':
         cal_state='DEGRADED'
@@ -121,9 +175,12 @@ def build_status(root: Path = ROOT, now=None) -> dict:
         'audit':group('Full Data Audit',audit.get('overall') or 'UNAVAILABLE',audit.get('generated_kst'),session,f"critical={audit.get('critical_count','—')} · warnings={audit.get('warning_count','—')}",'data-audit.json',True),
     }
     groups['calendar']['actual_completeness_state']=cal_actual_state
-    groups['calendar']['official_probe_state']='DEGRADED' if cal_probe_blocked else ('PASS' if cal_official_checks else 'NOT_CHECKED')
-    groups['calendar']['official_probe_failure_count']=len(cal_probe_failures)
+    groups['calendar']['official_probe_state']=cal_probe['state']
+    groups['calendar']['official_probe_failure_count']=cal_probe['failure_count']
+    groups['calendar']['official_probe_unresolved_failure_count']=cal_probe['unresolved_failure_count']
     groups['calendar']['official_probe_blocked_releases']=cal_probe_blocked
+    groups['calendar']['official_probe_transport_blocked_releases']=cal_probe['transport_blocked_releases']
+    groups['calendar']['official_probe_verified_fallback_releases']=cal_probe['verified_fallback_releases']
     regime = load(data/'market-regime.json')
     window = regime.get('effective_window') or {}
     groups['market_regime'] = group('과거 주간 분석 · 투자보드 관리', regime_state(regime, now), regime.get('generated_kst'), window.get('end_kst'), '이력 참고용 · 최신 시장/계좌 판정과 별개 · 투자보드에서 주간 전략 관리', 'market-regime.json', False)

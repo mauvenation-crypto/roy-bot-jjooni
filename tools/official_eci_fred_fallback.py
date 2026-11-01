@@ -99,7 +99,7 @@ def collect_eci_fred(event, checks):
            "source_tier": "OFFICIAL", "verification_status": "VERIFIED_OFFICIAL",
            "value_vintage": "AS_RELEASED", "reference_period": entry["period"],
            "series_id": SERIES}
-    checks.append({"adapter": "ECI_FRED", "result": "VERIFIED_BLS_TABLE1_FRED_MATCH",
+    checks.append({"adapter": "ECI_FRED", "title": event["title"], "result": "VERIFIED_BLS_TABLE1_FRED_MATCH",
                    "url": FRED_URL, "bls_url": entry["bls_url"],
                    "reference_period": entry["period"], "actual": actual})
     return [row], FRED_URL

@@ -41,6 +41,7 @@ on:
       - market-observatory/freshness-all-groups-v1.js
       - tests/observatory-status-core.test.cjs
       - tests/observatory-crypto-freshness.test.cjs
+      - tests/test_calendar_probe_fallback_health.py
       - .github/workflows/market-observatory-freshness-ui.yml
   workflow_dispatch:
 
@@ -79,6 +80,7 @@ jobs:
           set -euo pipefail
           python -m py_compile tools/build_observatory_freshness.py
           python -m unittest discover -s tests -p 'test_observatory_freshness_status.py' -v
+          python -m unittest discover -s tests -p 'test_calendar_probe_fallback_health.py' -v
           python tools/build_observatory_freshness.py
 
       - name: Freshness and full-data audit acceptance
