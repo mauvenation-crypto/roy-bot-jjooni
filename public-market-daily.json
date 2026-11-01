@@ -1,6 +1,6 @@
 {
   "contains_account_data": false,
-  "generated_kst": "2026-11-02T06:44:47+09:00",
+  "generated_kst": "2026-11-02T08:40:57+09:00",
   "market_context": {
     "available_count": 12,
     "basis": "PUBLIC_MARKET_COMPLETED_DAILY_SIDECAR",
@@ -8,17 +8,17 @@
     "expected_count": 12,
     "items": {
       "BRENT": {
-        "as_of_date": "2026-10-30",
+        "as_of_date": "2026-11-01",
         "basis": "LATEST_COMPLETED_DAILY_CLOSE_VS_PREVIOUS_CLOSE",
-        "change": -1.4499969400000055,
-        "change_pct": -1.262183996091626,
+        "change": -5.940002440000001,
+        "change_pct": -5.049305058484155,
         "label": "브렌트유",
         "market_state": "COMPLETED_DAILY_REFERENCE",
-        "prev_close": 114.87999725,
-        "session_date": "2026-10-30",
+        "prev_close": 117.63999939,
+        "session_date": "2026-11-01",
         "source": "OBSERVATORY_CANONICAL",
         "unit": "USD/bbl",
-        "value": 113.43000031
+        "value": 111.69999695
       },
       "DOW30": {
         "as_of_date": "2026-10-30",
@@ -34,17 +34,17 @@
         "value": 51770.30859375
       },
       "DXY": {
-        "as_of_date": "2026-10-30",
+        "as_of_date": "2026-11-01",
         "basis": "LATEST_COMPLETED_DAILY_CLOSE_VS_PREVIOUS_CLOSE",
-        "change": -0.1600036699999947,
-        "change_pct": -0.15680484962503627,
+        "change": 0.06700134999999818,
+        "change_pct": 0.06576497036565598,
         "label": "달러인덱스",
         "market_state": "COMPLETED_DAILY_REFERENCE",
-        "prev_close": 102.04000092,
-        "session_date": "2026-10-30",
+        "prev_close": 101.87999725,
+        "session_date": "2026-11-01",
         "source": "OBSERVATORY_CANONICAL",
         "unit": "index",
-        "value": 101.87999725
+        "value": 101.9469986
       },
       "FEAR_GREED": {
         "as_of_date": "2026-10-30",
@@ -119,17 +119,17 @@
         "value": 4.94
       },
       "USDKRW": {
-        "as_of_date": "2026-10-30",
+        "as_of_date": "2026-11-01",
         "basis": "LATEST_COMPLETED_DAILY_CLOSE_VS_PREVIOUS_CLOSE",
-        "change": -2.880004880000115,
-        "change_pct": -0.2152502221287711,
+        "change": -5.140014650000012,
+        "change_pct": -0.3841622987658222,
         "label": "원/달러",
         "market_state": "COMPLETED_DAILY_REFERENCE",
         "prev_close": 1337.97998047,
-        "session_date": "2026-10-30",
+        "session_date": "2026-11-01",
         "source": "OBSERVATORY_CANONICAL",
         "unit": "KRW/USD",
-        "value": 1335.09997559
+        "value": 1332.83996582
       },
       "VIX": {
         "as_of_date": "2026-10-30",
@@ -145,17 +145,17 @@
         "value": 19.42000008
       },
       "WTI": {
-        "as_of_date": "2026-10-30",
+        "as_of_date": "2026-11-01",
         "basis": "LATEST_COMPLETED_DAILY_CLOSE_VS_PREVIOUS_CLOSE",
-        "change": 2.1200027499999976,
-        "change_pct": 2.078434068627444,
+        "change": -1.7400054999999952,
+        "change_pct": -1.6711539128344777,
         "label": "WTI 유가",
         "market_state": "COMPLETED_DAILY_REFERENCE",
-        "prev_close": 102.0,
-        "session_date": "2026-10-30",
+        "prev_close": 104.12000275,
+        "session_date": "2026-11-01",
         "source": "OBSERVATORY_CANONICAL",
         "unit": "USD/bbl",
-        "value": 104.12000275
+        "value": 102.37999725
       }
     },
     "state": "FULL"
@@ -169,7 +169,7 @@
     "drawdown_52w_pct": -9.094216906793761,
     "ma250": 27407.40533593772,
     "ndx": 28384.84960938,
-    "observed_at": "2026-11-02T06:44:47+09:00",
+    "observed_at": "2026-11-02T08:40:57+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -5.835041864514123,
     "previous_ma250": 27397.29846093772,
