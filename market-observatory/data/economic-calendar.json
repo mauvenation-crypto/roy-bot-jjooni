@@ -12400,7 +12400,7 @@
   },
   "actual_freshness": {
     "status": "LIVE",
-    "checked_kst": "2026-11-02T06:47:56+09:00",
+    "checked_kst": "2026-11-02T06:47:57+09:00",
     "grace_minutes": 45,
     "unresolved_expiry": null,
     "pending_count": 0,
