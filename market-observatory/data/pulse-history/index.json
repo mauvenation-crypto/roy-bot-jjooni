@@ -5398,6 +5398,13 @@
       "path": "./observations/cb36e6cbbf11480eff6ec994dc8e402a2ba459fedb2a128a38554871aa49bf27.json",
       "quality": "LIVE",
       "snapshot_id": "cb36e6cbbf11480eff6ec994dc8e402a2ba459fedb2a128a38554871aa49bf27"
+    },
+    {
+      "generated_kst": "2026-11-01T10:19:45+09:00",
+      "market_date_us": "2026-10-30",
+      "path": "./observations/f8a458d0f0f81b0f5106831e21c8b8946e1ce5721811b4385850ee7de9a317ed.json",
+      "quality": "LIVE",
+      "snapshot_id": "f8a458d0f0f81b0f5106831e21c8b8946e1ce5721811b4385850ee7de9a317ed"
     }
   ],
   "retention": "NO_AUTOMATIC_EXPIRY",
