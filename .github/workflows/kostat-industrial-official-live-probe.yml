@@ -1,0 +1,33 @@
+name: KOSTAT Industrial Official Live Probe
+on:
+  pull_request:
+    paths:
+      - tools/enrich_calendar_from_official_macro.py
+      - tests/test_kostat_industrial_official_fallback.py
+      - .github/workflows/kostat-industrial-official-live-probe.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live_official_transport:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline date, period, and metric regression
+        run: python -m unittest discover -s tests -p 'test_kostat_industrial_official_fallback.py' -v
+      - name: Verify actual GitHub-runner official transport and released value
+        run: |
+          PYTHONPATH=tools python - <<'PY'
+          from enrich_calendar_from_official_macro import KOSTAT_INDUSTRIAL_RELEASES, _fetch_kostat_release, _parse_kostat_industrial_release
+          period = '2026-09-01'
+          date, url = KOSTAT_INDUSTRIAL_RELEASES[period]
+          page = _fetch_kostat_release(url)
+          actual = _parse_kostat_industrial_release(page, period, date)
+          if actual != '3.0%':
+              raise AssertionError(f'KOSTAT_RELEASE_ACTUAL_MISMATCH expected=3.0% observed={actual}')
+          print('KOSTAT_LIVE_OFFICIAL_TRANSPORT=PASS', 'reference_period=2026-09', 'published=2026-10-30', 'actual=3.0%', 'url='+url)
+          PY

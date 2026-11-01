@@ -17,9 +17,11 @@ This adapter is deliberately narrow and fail-closed:
 """
 from __future__ import annotations
 
+import html
 import json
 import math
 import re
+import urllib.request
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -30,6 +32,81 @@ ROOT = Path(__file__).resolve().parents[1]
 CAL = ROOT / 'market-observatory/data/economic-calendar.json'
 MACRO = ROOT / 'market-observatory/data/official-macro.json'
 KST = ZoneInfo('Asia/Seoul')
+
+# Date-locked official press-release fallback for the 2026-09 industrial
+# production release. Future months require their own verified official URL;
+# an older BOK ECOS vintage must never be silently relabeled as September.
+KOSTAT_INDUSTRIAL_RELEASES = {
+    '2026-09-01': (
+        '2026-10-30',
+        'https://mods.go.kr/board.es?act=view&bid=216&list_no=447747&mainXml=Y&mid=a10301010000',
+    ),
+}
+
+
+def _fetch_kostat_release(url: str) -> str:
+    request = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 JJOONI-Official-Calendar/2.0'})
+    with urllib.request.urlopen(request, timeout=12) as response:
+        return response.read().decode('utf-8', errors='replace')
+
+
+def _parse_kostat_industrial_release(page: str, expected_period: str, release_date: str) -> str:
+    year, month, day = map(int, expected_period.split('-'))
+    if day != 1:
+        raise ValueError('REFERENCE_PERIOD_DAY_MISMATCH')
+    clean_page = re.sub(r'<(script|style)\b[^>]*>.*?</\1>', ' ', page, flags=re.I | re.S)
+    clean_page = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', clean_page)))
+    title = rf'{year}년\s*{month}월\s*산업활동동향'
+    if not re.search(title, clean_page):
+        raise ValueError('KOSTAT_INDUSTRIAL_REFERENCE_PERIOD_MISMATCH')
+    if not re.search(rf'게시일\s*{re.escape(release_date)}(?!\d)', clean_page):
+        raise ValueError('KOSTAT_INDUSTRIAL_PUBLICATION_DATE_MISMATCH')
+    match = re.search(
+        r'□\s*\(\s*생산\s*\)\s*전산업생산은.{0,250}?전월\s*대비\s*'
+        r'(\d+(?:\.\d+)?)\s*%\s*(증가|감소)',
+        clean_page,
+    )
+    if not match:
+        raise ValueError('KOSTAT_INDUSTRIAL_MOM_HEADLINE_NOT_FOUND')
+    value = float(match.group(1))
+    if not 0 <= value <= 50:
+        raise ValueError('KOSTAT_INDUSTRIAL_MOM_OUT_OF_RANGE')
+    sign = '-' if match.group(2) == '감소' and value else ''
+    return f'{sign}{match.group(1)}%'
+
+
+def _apply_kostat_industrial_release(event: dict, expected: str, now: datetime, fetcher):
+    if fetcher is None or event.get('title') != '2026년 9월 산업활동동향':
+        return None
+    if _clean(event.get('actual')) is not None:
+        return None
+    release = KOSTAT_INDUSTRIAL_RELEASES.get(expected)
+    if not release:
+        return None
+    release_date, url = release
+    if now.date().isoformat() < release_date:
+        return None
+    try:
+        actual = _parse_kostat_industrial_release(fetcher(url), expected, release_date)
+    except Exception as exc:
+        return {'status': 'OFFICIAL_RELEASE_UNAVAILABLE', 'source_url': url,
+                'reason': f'{type(exc).__name__}: {exc}'[:160]}
+    checked = now.isoformat(timespec='seconds')
+    source = 'KOSTAT official industrial activity press release'
+    patch = {
+        'actual': actual, 'source_tier': 'OFFICIAL', 'source': source,
+        'market_data_source': source, 'actual_source': source,
+        'official_actual_source': source, 'source_url': url,
+        'official_url': url, 'official_actual_url': url,
+        'checked_kst': checked, 'official_actual_checked_kst': checked,
+        'verification_status': 'VERIFIED_OFFICIAL',
+        'reference_period': expected[:7], 'value_vintage': 'AS_RELEASED',
+        'market_value_status': 'ACTUAL_AVAILABLE',
+    }
+    event.update(merge_observation(event, patch))
+    return {'status': 'APPLIED_OFFICIAL_RELEASE' if event.get('actual') == actual else 'MERGE_REJECTED',
+            'actual': event.get('actual'), 'source_url': url, 'reference_period': expected}
+
 
 MAPPINGS = (
     (re.compile(r'소비자물가동향'), 'KR_CPI'),
@@ -95,7 +172,7 @@ def _eligible_release(metric: dict, expected_period: str) -> tuple[bool, str]:
     return True, 'PASS'
 
 
-def apply(calendar: dict, macro: dict, now: datetime | None = None) -> dict:
+def apply(calendar: dict, macro: dict, now: datetime | None = None, official_release_fetcher=None) -> dict:
     now = (now or datetime.now(KST)).astimezone(KST)
     metrics = macro.get('metrics') or {}
     checked = now.isoformat(timespec='seconds')
@@ -114,6 +191,12 @@ def apply(calendar: dict, macro: dict, now: datetime | None = None) -> dict:
         ok, reason = _eligible_release(metric, expected)
         check = {'title': event.get('title'), 'metric': key, 'reference_period': expected, 'status': reason}
         if not ok:
+            fallback = _apply_kostat_industrial_release(event, expected, now, official_release_fetcher)
+            if fallback:
+                check.update(fallback)
+                if fallback['status'] == 'APPLIED_OFFICIAL_RELEASE':
+                    matched += 1
+                    updated += 1
             checks.append(check)
             continue
 
@@ -166,7 +249,7 @@ def apply(calendar: dict, macro: dict, now: datetime | None = None) -> dict:
 def main():
     calendar = json.loads(CAL.read_text(encoding='utf-8'))
     macro = json.loads(MACRO.read_text(encoding='utf-8'))
-    report = apply(calendar, macro)
+    report = apply(calendar, macro, official_release_fetcher=_fetch_kostat_release)
     CAL.write_text(json.dumps(calendar, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print('CALENDAR_OFFICIAL_MACRO_BRIDGE=PASS',
           'matched=', report['matched_events'],
