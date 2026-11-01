@@ -1,0 +1,67 @@
+{
+  "bucket": {
+    "available_from": "2026-09-02",
+    "available_to": "2026-10-02",
+    "category": "물가",
+    "count": 2,
+    "country": "KR",
+    "event_title": "2026년 8월 소비자물가동향",
+    "kind": "event",
+    "label": "2026년 8월 소비자물가동향",
+    "quality": {
+      "actual_count": 2,
+      "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
+      "consensus_count": 1,
+      "frequency_validation": "NOT_VALIDATED",
+      "max_observed_gap_days": 30,
+      "rows_by_year": {
+        "2026": 2
+      },
+      "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
+    },
+    "ref": "KR::소비자물가동향",
+    "rows": [
+      {
+        "actual": "3.1%",
+        "consensus": "3.2%",
+        "consensus_source": "KOSTAT",
+        "consensus_source_tier": null,
+        "date": "2026-09-02",
+        "datetime_kst": "2026-09-02T08:00+09:00",
+        "label": "2026년 8월 소비자물가동향",
+        "metric_key": null,
+        "previous": "2.8%",
+        "previous_source": "KOSTAT",
+        "previous_source_tier": null,
+        "reference_period": "",
+        "source": "KOSTAT",
+        "surprise": "actual_vs_consensus",
+        "te_forecast": null
+      },
+      {
+        "actual": "2.8789%",
+        "checked_kst": "2026-11-02T06:40:53+09:00",
+        "consensus": null,
+        "date": "2026-10-02",
+        "datetime_kst": "2026-10-02T08:00+09:00",
+        "label": "2026년 9월 소비자물가동향",
+        "metric_key": null,
+        "official_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y009/M/202609/202609/0",
+        "previous": "3.1%",
+        "previous_source": "KOSTAT via BOK ECOS official API",
+        "previous_source_tier": "OFFICIAL",
+        "reference_period": "2026-09",
+        "series_id": "901Y009/M/0",
+        "source": "KOSTAT via BOK ECOS official API",
+        "source_tier": "OFFICIAL",
+        "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y009/M/202609/202609/0",
+        "surprise": null,
+        "te_forecast": null,
+        "value_vintage": "LATEST_REVISION",
+        "verification_status": "VERIFIED_OFFICIAL"
+      }
+    ]
+  },
+  "ref": "KR::소비자물가동향",
+  "schema": "JJOONI_CALENDAR_HISTORY_SERIES_V1"
+}
