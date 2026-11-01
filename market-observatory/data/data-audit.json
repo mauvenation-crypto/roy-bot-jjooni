@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-02T01:17:54+09:00",
+  "generated_kst": "2026-11-02T02:23:14+09:00",
   "overall": "PASS",
   "critical_count": 0,
   "warning_count": 0,
@@ -68,14 +68,11 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-02T01:17:51+09:00",
+      "generated_kst": "2026-11-02T01:17:54+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
-        "fx",
-        "jp_rates",
-        "calendar",
-        "audit"
+        "calendar"
       ]
     },
     "watchdog": {
@@ -466,17 +463,17 @@
         "BTCUSD": {
           "count": 1097,
           "last_date": "2026-11-01",
-          "last_value": 77940.0,
+          "last_value": 78088.0,
           "group": "crypto",
-          "latest_value": 77940.0,
+          "latest_value": 78088.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1097,
           "last_date": "2026-11-01",
-          "last_value": 2267.66,
+          "last_value": 2266.01,
           "group": "crypto",
-          "latest_value": 2267.66,
+          "latest_value": 2266.01,
           "latest_matches": true
         }
       },
@@ -520,16 +517,16 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-02T01:17:12+09:00",
-      "current_quote_age_seconds": 42,
-      "captured_quote_age_seconds": 36
+      "quote_as_of_kst": "2026-11-02T02:21:49+09:00",
+      "current_quote_age_seconds": 85,
+      "captured_quote_age_seconds": 85
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-02T01:17:02+09:00",
-      "current_quote_age_seconds": 52,
-      "captured_quote_age_seconds": 46
+      "quote_as_of_kst": "2026-11-02T02:22:18+09:00",
+      "current_quote_age_seconds": 56,
+      "captured_quote_age_seconds": 56
     }
   },
   "issues": [],
