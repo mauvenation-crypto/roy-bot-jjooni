@@ -53,6 +53,26 @@ class ObservatoryFreshnessStatusTest(unittest.TestCase):
         self.assertEqual(freshness.regime_state({'effective_window':window},now),'UNAVAILABLE')
         self.assertEqual(freshness.regime_state({'effective_window':window,'authority':'ANALYST_PROVISIONAL','source':{'consensus_status':'CLOSED'}},now),'PROVISIONAL')
 
+    def test_crypto_freshness_reports_actual_provider_and_quote_collection_time(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            self.write(root,'market-observatory/data/observatory.json',{
+                'generated_kst':'2026-11-01T17:00:00+09:00',
+                'supplemental_refreshed_kst':'2026-11-01T16:40:00+09:00',
+                'crypto_enriched_kst':'2026-11-01T18:43:41+09:00',
+                'crypto_market':{
+                    'BTCUSD':{'source':'CoinGecko public simple/price USD spot'},
+                    'ETHUSD':{'source':'Yahoo Finance spot crypto quote + UTC daily candles'},
+                },
+            })
+            self.write_v2_support(root)
+            out=freshness.build_status(root,now=datetime.fromisoformat('2026-11-01T18:44:00+09:00'))
+            crypto=out['groups']['crypto']
+            self.assertEqual(crypto['generated_kst'],'2026-11-01T18:43:41+09:00')
+            self.assertIn('BTCUSD: CoinGecko',crypto['source'])
+            self.assertIn('ETHUSD: Yahoo Finance',crypto['source'])
+            self.assertNotEqual(crypto['generated_kst'],'2026-11-01T16:40:00+09:00')
+
     def write(self, root: Path, rel: str, obj: dict):
         p = root / rel
         p.parent.mkdir(parents=True, exist_ok=True)

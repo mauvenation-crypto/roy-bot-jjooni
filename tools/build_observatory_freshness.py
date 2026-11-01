@@ -91,6 +91,15 @@ def build_status(root: Path = ROOT, now=None) -> dict:
     if cal_probe_blocked and cal_state=='LIVE':
         cal_state='DEGRADED'
 
+    # The crypto provider can switch per symbol (CoinGecko primary / Yahoo fallback).
+    # Never hard-code Yahoo or substitute a market-wide timestamp for the quote writer.
+    crypto_quotes=obs.get('crypto_market') or {}
+    crypto_sources=' · '.join(
+        f"{key}: {str((crypto_quotes.get(key) or {}).get('source') or 'UNKNOWN')}"
+        for key in ('BTCUSD','ETHUSD')
+    )
+    crypto_generated=obs.get('crypto_enriched_kst') or obs.get('supplemental_refreshed_kst') or obs.get('equity_enriched_kst')
+
     groups={
         'market':group('Market SSOT',market_state,obs.get('generated_kst'),session,'미국 핵심 완료세션 NDX/SPX/VIX','observatory.json',True),
         'kr_equity':group('KR Equity',kr_state,obs.get('supplemental_refreshed_kst') or obs.get('equity_enriched_kst'),kr_asof,_audit_detail(ag.get('kr_equity') or {}) or f"KOSPI {kr_kospi.get('last_date') or '—'} · KOSDAQ {kr_kosdaq.get('last_date') or '—'}",'Naver Finance primary',True),
@@ -101,7 +110,7 @@ def build_status(root: Path = ROOT, now=None) -> dict:
         'us_rates':group('US Rates',(ag.get('us_rates') or {}).get('state'),obs.get('generated_kst'),_audit_asof(ag.get('us_rates') or {}),_audit_detail(ag.get('us_rates') or {}),'U.S. Treasury official',False),
         'kr_rates':group('KR Rates',(ag.get('kr_rates') or {}).get('state'),obs.get('kr_rates_refreshed_kst') or obs.get('generated_kst'),_audit_asof(ag.get('kr_rates') or {}),_audit_detail(ag.get('kr_rates') or {}),'BOK ECOS',False),
         'jp_rates':group('JP Rates',(ag.get('jp_rates') or {}).get('state'),obs.get('supplemental_refreshed_kst') or obs.get('generated_kst'),_audit_asof(ag.get('jp_rates') or {}),_audit_detail(ag.get('jp_rates') or {}),'Japan MOF current JGB CSV',False),
-        'crypto':group('Crypto',(ag.get('crypto') or {}).get('state'),obs.get('supplemental_refreshed_kst') or obs.get('equity_enriched_kst'),None,' · '.join(f"{k} age={v.get('current_quote_age_seconds','—')}s" for k,v in (audit.get('crypto_status') or {}).items()),'Yahoo spot crypto quote',False),
+        'crypto':group('Crypto',(ag.get('crypto') or {}).get('state'),crypto_generated,None,' · '.join(f"{k} age={v.get('current_quote_age_seconds','—')}s" for k,v in (audit.get('crypto_status') or {}).items()),crypto_sources,False),
         'pulse':group('Daily Pulse',pulse_state,pulse.get('generated_kst'),pulse_session,f"snapshot={pulse.get('snapshot_status') or '—'} · Observatory session={session or '—'}",'daily-market-pulse.json',True),
         'fear_greed':group('Fear & Greed',fg_state,obs.get('supplemental_refreshed_kst') or obs.get('generated_kst'),_audit_asof(ag.get('sentiment') or {}) or fgq.get('observed_at') or session,f"{(obs.get('latest') or {}).get('FEAR_GREED','—')}/100 · {(obs.get('latest') or {}).get('FEAR_GREED_RATING') or ''}".strip(),fgq.get('source') or 'Fear & Greed public',False),
         'fedwatch':group('FedWatch',fed_state,fed.get('generated_kst'),fed.get('market_data_as_of'),f"expected={(audit.get('file_status') or {}).get('fedwatch',{}).get('audit_expected_market_data_date') or '—'} · FOMC {fed.get('meeting_date') or '—'}",text(fed.get('source')) or 'CME Fed Funds settlement',False),
