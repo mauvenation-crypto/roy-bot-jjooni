@@ -68,7 +68,7 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-02T08:30:50+09:00",
+      "generated_kst": "2026-11-02T08:30:51+09:00",
       "overall": "LIVE",
       "critical_bad": [],
       "warnings": []
