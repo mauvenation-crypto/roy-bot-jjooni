@@ -103,7 +103,7 @@ function rateSourceWarning(item,s){
  return `<div class="latestRateLag" role="status"><b>자료 지연 · ${esc(basis)}</b><small>실제 관측 ${esc(lag.observed)} · ${esc(note)}<br>아래 등락은 직전 관측일 기준이며 오늘 등락이 아닙니다.</small></div>`;
 }
 function rateDateContext(item,s){if(item.kind!=='bp'||!s)return '';const region=item.k.startsWith('US')?'미국 현지':item.k.startsWith('JP')?'일본 현지':'한국';return `<div class="latestCryptoBasis">${region} ${esc(s.date)} 기준 · 일별 확정값<br>실시간 금리가 아닙니다.</div>`}
-function cryptoQuoteContext(item){if(!['BTCUSD','ETHUSD'].includes(item.k))return '';const q=(typeof DATA!=='undefined'&&DATA?.crypto_market?.[item.k])||{};const when=q.quote_as_of_kst?String(q.quote_as_of_kst).slice(0,16).replace('T',' ')+' KST':'시각 미확인';return `<div class="latestCryptoBasis">${esc(when)} · ${esc(q.status==='LIVE'?'수집 시점 시세':q.status==='STALE'?'이전 시세 · 갱신 지연':'시세 확인 중')}<br>등락 기준: UTC 일봉</div>`}
+function cryptoQuoteContext(item){if(!['BTCUSD','ETHUSD'].includes(item.k))return '';const q=(typeof DATA!=='undefined'&&DATA?.crypto_market?.[item.k])||{};const when=q.quote_as_of_kst?String(q.quote_as_of_kst).slice(0,16).replace('T',' ')+' KST':'시각 미확인';const stamp=Date.parse(q.quote_as_of_kst||'');const age=Date.now()-stamp;const fresh=Number.isFinite(stamp)&&age>=-60000&&age<=3600000;const label=q.status==='LIVE'&&fresh?'수집 시점 시세':q.status==='LIVE'||q.status==='STALE'?'이전 시세 · 갱신 지연':'시세 확인 중';return `<div class="latestCryptoBasis">${esc(when)} · ${esc(label)}<br>등락 기준: UTC 일봉</div>`}
 function primaryChange(item,s){
  const lag=compareKey==='D1'&&japaneseRateFreshness(item,s);
  const label=s?.intraday?(['BTCUSD','ETHUSD'].includes(item.k)?'전일 기준값 대비':'전일 종가 대비'):lag?'직전 관측일 대비':(COMPARES[compareKey]?.label||'비교')+' 대비';
@@ -284,5 +284,5 @@ const st=document.createElement('style');st.textContent=`
 .latestChangeFirst[data-comparison="D1"] .latestTilePeriods>span:first-child,.latestChangeFirst[data-comparison="W1"] .latestTilePeriods>span:nth-child(2){display:none}
 `;document.head.appendChild(st);
 let tries=0;const id=setInterval(()=>{tries++;ensureIndexShell();ensureOfficialMacroRuntime();hookRender();hookCalendar();bindTabs();if(renderBoard()&&tries>10&&window.__JJOONI_OFFICIAL_MACRO_V1)clearInterval(id);if(tries>120)clearInterval(id)},100);
-window.__JJOONI_LATEST_BOARD={version:'20261031-intraday-quotes',items:ITEMS,render:renderBoard,getSeries:seriesOf,getComparison:()=>({key:compareKey,...COMPARES[compareKey]}),contract:'GROUPED_MARKET_BOARD_WITH_INDEX_TAB_PERIOD_COMPARISON_AND_SOURCE_BASIS',tabs:Object.keys(TAB_CONFIG),comparisons:Object.keys(COMPARES)};
+window.__JJOONI_LATEST_BOARD={version:'20261101-crypto-runtime-stale',items:ITEMS,render:renderBoard,getSeries:seriesOf,getComparison:()=>({key:compareKey,...COMPARES[compareKey]}),contract:'GROUPED_MARKET_BOARD_WITH_INDEX_TAB_PERIOD_COMPARISON_AND_SOURCE_BASIS',tabs:Object.keys(TAB_CONFIG),comparisons:Object.keys(COMPARES)};
 })();

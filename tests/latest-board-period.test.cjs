@@ -4,10 +4,10 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const path = require('node:path');
 
-function board(series, quality={}, quotes={}) {
+function board(series, quality={}, quotes={}, crypto_market={}) {
   const src = fs.readFileSync(path.join(__dirname, '../market-observatory/latest-board-v1.js'), 'utf8');
   const context = {
-    DATA: {series,cross_market_freshness_quality:quality}, window: {__JJOONI_OBSERVATORY_QUOTES:{get:key=>quotes[key]||null}}, document: {createElement: () => ({}), head: {appendChild() {}}},
+    DATA: {series,cross_market_freshness_quality:quality,crypto_market}, window: {__JJOONI_OBSERVATORY_QUOTES:{get:key=>quotes[key]||null}}, document: {createElement: () => ({}), head: {appendChild() {}}},
     setInterval() {}, clearInterval() {}, console,
   };
   vm.createContext(context);
@@ -150,4 +150,20 @@ test('intraday overlay updates daily card only and leaves closed history and wee
  assert.match(api.standardTile(item),/전일 종가 대비/);assert.match(api.standardTile(item),/10-31 01:00:00 KST/);
  api.setCompare('W1');assert.equal(api.stat(item).value,100);assert.match(api.standardTile(item),/주간 대비/);
  assert.doesNotMatch(api.standardTile(item),/장중 관측/);assert.equal(JSON.stringify(series),before);
+});
+
+
+test('crypto cards recompute LIVE status from the actual quote timestamp',()=>{
+ const kst=minutes=>new Date(Date.now()-minutes*60000+9*3600000).toISOString().replace('Z','+09:00');
+ const series={BTCUSD:[{date:'2026-10-30',value:100},{date:'2026-10-31',value:101}],ETHUSD:[{date:'2026-10-30',value:200},{date:'2026-10-31',value:202}]};
+ const recent=board(series,{}, {}, {BTCUSD:{status:'LIVE',quote_as_of_kst:kst(5)}});
+ assert.match(recent.standardTile(recent.BY_KEY.BTCUSD),/수집 시점 시세/);
+ const old=board(series,{}, {}, {BTCUSD:{status:'LIVE',quote_as_of_kst:kst(90)},ETHUSD:{status:'LIVE',quote_as_of_kst:kst(120)}});
+ for(const key of ['BTCUSD','ETHUSD']){
+  const html=old.standardTile(old.BY_KEY[key]);
+  assert.match(html,/이전 시세 · 갱신 지연/);
+  assert.doesNotMatch(html,/수집 시점 시세/);
+ }
+ const noStamp=board(series,{}, {}, {BTCUSD:{status:'LIVE'}});
+ assert.match(noStamp.standardTile(noStamp.BY_KEY.BTCUSD),/이전 시세 · 갱신 지연/);
 });

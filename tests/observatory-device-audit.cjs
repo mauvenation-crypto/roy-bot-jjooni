@@ -80,7 +80,13 @@ const smoke=process.env.OBS_PUBLIC_SMOKE==='1';
   if([390,820].includes(width)&&await page.locator('body.obsDeviceUI').count()){
    if(await page.locator('#obsCalendarDelay').isVisible()){
     await page.locator('#obsCalendarDelay').click();
-    await page.waitForFunction(()=>{const r=document.querySelector('#events [data-actual-status="OVERDUE"]')?.getBoundingClientRect();return r&&r.top>=0&&r.top<innerHeight});
+    try {
+      await page.waitForFunction(()=>{const r=document.querySelector('#events [data-actual-status="OVERDUE"]')?.getBoundingClientRect();return r&&r.top>=0&&r.top<innerHeight});
+    } catch(err) {
+      const diag=await page.evaluate(()=>{const row=document.querySelector('#events [data-actual-status="OVERDUE"]');const rect=row?.getBoundingClientRect();return {hash:location.hash,month:document.querySelector('#calendarMonth')?.textContent,calendarActive:document.querySelector('#calendar')?.classList.contains('on'),overdueRows:document.querySelectorAll('#events [data-actual-status="OVERDUE"]').length,rowRect:rect?{top:rect.top,bottom:rect.bottom}:null,viewport:innerHeight,button:document.querySelector('#obsCalendarDelay')?.textContent,eventsText:document.querySelector('#events')?.textContent?.slice(0,180)}});
+      console.error('CALENDAR_DELAY_NAV_DIAGNOSTIC',JSON.stringify({width,...diag}));
+      throw err;
+    }
    }
    await page.locator('.obsFreshDetails>summary').click();
    const expectedGroups=await page.evaluate(()=>window.__JJOONI_FRESHNESS_ALL_GROUPS.order.length+1);
