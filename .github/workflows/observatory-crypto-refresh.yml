@@ -1,6 +1,11 @@
 name: Observatory BTC ETH Quote Refresh
 
 on:
+  pull_request:
+    paths:
+      - tools/add_observatory_equities.py
+      - tests/test_observatory_crypto.py
+      - .github/workflows/observatory-crypto-refresh.yml
   push:
     branches: [main]
     paths:
@@ -24,7 +29,35 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  provider_probe:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate BTC ETH source timestamps and fallback contracts
+        run: python -m unittest discover -s tests -p 'test_observatory_crypto.py' -v
+      - name: Verify actual CoinGecko USD spot and provider timestamps
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, 'tools')
+          from add_observatory_equities import coingecko_spot_observations
+          observations = coingecko_spot_observations()
+          assert set(observations) == {'BTCUSD', 'ETHUSD'}, 'COINGECKO_LIVE_PROBE_INCOMPLETE'
+          for key, (rows, snapshot) in observations.items():
+              assert snapshot['status'] == 'LIVE', (key, snapshot)
+              assert rows[-1]['value'] == snapshot['price'], key
+              print('COINGECKO_LIVE_PROBE=PASS', key, snapshot['quote_as_of_kst'])
+          PY
+
   crypto:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
