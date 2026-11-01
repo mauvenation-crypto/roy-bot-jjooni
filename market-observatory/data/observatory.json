@@ -38,8 +38,8 @@
     "JP10Y": 2.876,
     "JP30Y": 3.956,
     "JP_2S10S": 0.975,
-    "BTCUSD": 77400.12,
-    "ETHUSD": 2251.84,
+    "BTCUSD": 77431.66,
+    "ETHUSD": 2252.58,
     "KR_US_10Y": -0.932,
     "FEAR_GREED": 26.2,
     "FEAR_GREED_RATING": "FEAR",
@@ -287037,12 +287037,6 @@
     ],
     "BTCUSD": [
       {
-        "date": "2023-10-31",
-        "value": 34667.78125,
-        "session_status": "COMPLETED",
-        "date_basis": "UTC"
-      },
-      {
         "date": "2023-11-01",
         "value": 35437.25390625,
         "session_status": "COMPLETED",
@@ -293613,20 +293607,14 @@
         "date_basis": "UTC"
       },
       {
-        "date": "2026-10-31",
-        "value": 77400.12,
+        "date": "2026-11-01",
+        "value": 77431.66,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-01T08:18:14+09:00"
+        "observed_kst": "2026-11-01T09:24:59+09:00"
       }
     ],
     "ETHUSD": [
-      {
-        "date": "2023-10-31",
-        "value": 1816.45898438,
-        "session_status": "COMPLETED",
-        "date_basis": "UTC"
-      },
       {
         "date": "2023-11-01",
         "value": 1847.08972168,
@@ -300198,11 +300186,11 @@
         "date_basis": "UTC"
       },
       {
-        "date": "2026-10-31",
-        "value": 2251.84,
+        "date": "2026-11-01",
+        "value": 2252.58,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-01T08:18:14+09:00"
+        "observed_kst": "2026-11-01T09:24:59+09:00"
       }
     ],
     "FEAR_GREED": [
@@ -324314,9 +324302,9 @@
       "symbol": "BTC-USD",
       "source": "Yahoo Finance spot crypto quote + UTC daily candles",
       "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?interval=1d&range=3y&includePrePost=false",
-      "price": 77400.12,
-      "quote_as_of_kst": "2026-11-01T08:18:14+09:00",
-      "captured_kst": "2026-11-01T08:18:19+09:00",
+      "price": 77431.66,
+      "quote_as_of_kst": "2026-11-01T09:24:59+09:00",
+      "captured_kst": "2026-11-01T09:25:04+09:00",
       "status": "LIVE",
       "quote_age_seconds": 5,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
@@ -324326,9 +324314,9 @@
       "symbol": "ETH-USD",
       "source": "Yahoo Finance spot crypto quote + UTC daily candles",
       "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ETH-USD?interval=1d&range=3y&includePrePost=false",
-      "price": 2251.84,
-      "quote_as_of_kst": "2026-11-01T08:18:14+09:00",
-      "captured_kst": "2026-11-01T08:18:20+09:00",
+      "price": 2252.58,
+      "quote_as_of_kst": "2026-11-01T09:24:59+09:00",
+      "captured_kst": "2026-11-01T09:25:05+09:00",
       "status": "LIVE",
       "quote_age_seconds": 6,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
@@ -324692,5 +324680,5 @@
   "supplemental_refreshed_kst": "2026-11-01T06:49:02+09:00",
   "supplemental_refresh_contract": "ALL_MARKET_FAMILIES_COMPLETED_SESSION_PLUS_24X7_CRYPTO_V1",
   "us_rates_refreshed_kst": "2026-11-01T06:48:57+09:00",
-  "crypto_enriched_kst": "2026-11-01T07:51:23+09:00"
+  "crypto_enriched_kst": "2026-11-01T09:25:05+09:00"
 }
