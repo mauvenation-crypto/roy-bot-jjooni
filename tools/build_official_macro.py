@@ -53,7 +53,7 @@ US_DEF = {
     "US_UNEMPLOYMENT": {"series": "UNRATE", "institution": "BLS", "name": "Unemployment Rate", "group": "labor", "kind": "level", "unit": "%"},
     "US_AHE": {"series": "CES0500000003", "institution": "BLS", "name": "Average Hourly Earnings", "group": "labor", "kind": "monthly_index", "unit": "$/hour"},
     "US_JOLTS": {"series": "JTSJOL", "institution": "BLS", "name": "JOLTS Openings", "group": "labor", "kind": "level", "unit": "K"},
-    "US_ECI": {"series": "ECIWAG", "institution": "BLS", "name": "Employment Cost Index", "group": "labor", "kind": "quarterly_index"},
+    "US_ECI": {"series": "ECIALLCIV", "institution": "BLS", "name": "Employment Cost Index: Total Compensation (Civilian)", "group": "labor", "kind": "quarterly_index"},
     "US_GDP": {"series": "A191RL1Q225SBEA", "institution": "BEA", "name": "Real GDP", "group": "growth", "kind": "direct", "unit": "% SAAR"},
 }
 
@@ -384,6 +384,10 @@ def metric_payload(metric_key: str, cfg: dict, rows: list[dict], calendar: dict)
         "history": hist,
         "status": "LIVE" if latest else "DEGRADED",
     }
+    # Preserve historical ECIWAG wage-only vintages under their legacy keys.
+    # A new headline ECI source must never be misclassified as a revision.
+    if metric_key == "US_ECI":
+        out["series_identity"] = cfg["series"]
     return out
 
 
