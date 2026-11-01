@@ -2,13 +2,13 @@
   "available_from": "2016-11-04",
   "available_to": "2026-11-02",
   "backfill": {
-    "canonical_rows_matched": 1,
-    "checked_kst": "2026-10-27T17:20:28+09:00",
+    "canonical_rows_matched": 9,
+    "checked_kst": "2026-11-02T07:24:26+09:00",
     "coverage_scope": "FETCHED_WEEKS_NOT_PER_SERIES_COMPLETENESS",
     "errors": [],
     "failed_weeks": [],
-    "generic_rows_retained": 15,
-    "previous_available_from": "2016-10-29",
+    "generic_rows_retained": 82,
+    "previous_available_from": "2016-11-04",
     "recent_completed_weeks": [
       "2016-10-16",
       "2025-09-21",
@@ -67,26 +67,27 @@
       "2026-09-27",
       "2026-10-04",
       "2026-10-11",
-      "2026-10-18"
+      "2026-10-18",
+      "2026-10-25"
     ],
-    "requested_window_start": "2016-10-29",
+    "requested_window_start": "2016-11-04",
     "resumable": true,
-    "rows_inserted": 0,
-    "rows_merged": 16,
-    "rows_parsed": 74,
-    "source_count": 1,
+    "rows_inserted": 19,
+    "rows_merged": 72,
+    "rows_parsed": 159,
+    "source_count": 2,
     "source_pattern": "https://www.forexfactory.com/calendar?week=<week>",
-    "weeks_fetched": 1,
-    "weeks_requested": 1
+    "weeks_fetched": 2,
+    "weeks_requested": 2
   },
   "backfill_contract": "FOREXFACTORY_HISTORICAL_10Y_RESUMABLE_V2",
   "backfill_status": "COMPLETE",
   "contract": "ROLLING_3650D_EVENT_AND_METRIC_HISTORY_PRESERVE_V2",
   "coverage_scope": "ARCHIVE_BOUNDARY_AND_FETCH_ERRORS_ONLY",
   "coverage_status": "FULL",
-  "generated_kst": "2026-11-02T06:46:48+09:00",
+  "generated_kst": "2026-11-02T07:24:27+09:00",
   "missing_policy": "Historical consensus/actual is shown only when captured or verified; values are never synthesized.",
-  "row_count": 37778,
+  "row_count": 37797,
   "schema": "JJOONI_CALENDAR_HISTORY_INDEX_V1",
   "series": {
     "FF::AU::aig-construction-index": {
@@ -187,16 +188,16 @@
     },
     "FF::AU::anz-job-advertisements-m-m": {
       "available_from": "2016-11-07",
-      "available_to": "2026-10-06",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 115,
+      "count": 116,
       "country": "AU",
       "event_title": "ANZ Job Advertisements m/m",
       "kind": "event",
       "label": "ANZ Job Advertisements m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/ffe2123899255668221bf445717c8179c087117aa830e4bf136c1e299947707b.json",
+      "path": "./calendar-history/series/539a9bc9d6de455a2d17470b3d933ab9a8e94209f9a9a66f21a694585303ba45.json",
       "quality": {
         "actual_count": 115,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -214,29 +215,29 @@
           "2023": 9,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::AU::anz-job-advertisements-m-m",
-      "sha256": "ffe2123899255668221bf445717c8179c087117aa830e4bf136c1e299947707b"
+      "sha256": "539a9bc9d6de455a2d17470b3d933ab9a8e94209f9a9a66f21a694585303ba45"
     },
     "FF::AU::building-approvals-m-m": {
       "available_from": "2016-11-30",
-      "available_to": "2026-09-30",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "AU",
       "event_title": "Building Approvals m/m",
       "kind": "event",
       "label": "Building Approvals m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/11089e558370f7e6704eb45d46d585d21208f003e53d70aa778cb950c00243c8.json",
+      "path": "./calendar-history/series/8178a5c187f5e7d65b37cd1b93719ec1e131c01d3fd4c2c57a10e7ef66660512.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 41,
         "rows_by_year": {
@@ -250,12 +251,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::AU::building-approvals-m-m",
-      "sha256": "11089e558370f7e6704eb45d46d585d21208f003e53d70aa778cb950c00243c8"
+      "sha256": "8178a5c187f5e7d65b37cd1b93719ec1e131c01d3fd4c2c57a10e7ef66660512"
     },
     "FF::AU::cash-rate": {
       "available_from": "2016-12-06",
@@ -331,16 +332,16 @@
     },
     "FF::AU::commodity-prices-y-y": {
       "available_from": "2016-12-01",
-      "available_to": "2026-10-01",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "AU",
       "event_title": "Commodity Prices y/y",
       "kind": "event",
       "label": "Commodity Prices y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/5af35e64faa73b1b8789c5dd8739f063f7f7004aef2a13fdb4637f8e7d26c9f6.json",
+      "path": "./calendar-history/series/3aaac9f3a5aa9828d08f75942f5ca91a211b68180c363dc041c49bf4a5c53929.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -358,12 +359,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 13,
-          "2026": 9
+          "2026": 10
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::AU::commodity-prices-y-y",
-      "sha256": "5af35e64faa73b1b8789c5dd8739f063f7f7004aef2a13fdb4637f8e7d26c9f6"
+      "sha256": "3aaac9f3a5aa9828d08f75942f5ca91a211b68180c363dc041c49bf4a5c53929"
     },
     "FF::AU::company-operating-profits-q-q": {
       "available_from": "2016-12-05",
@@ -448,7 +449,7 @@
       "kind": "event",
       "label": "CPI m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/029f8703d86c78c4bec62c7bf3c561726cb157f163dbc4e3efaf33eb6676d690.json",
+      "path": "./calendar-history/series/c006851cea9122c14cc362a3ec850ef6e801739949f901ee885bd9fd7bd0505d.json",
       "quality": {
         "actual_count": 48,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -470,7 +471,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::AU::cpi-m-m",
-      "sha256": "029f8703d86c78c4bec62c7bf3c561726cb157f163dbc4e3efaf33eb6676d690"
+      "sha256": "c006851cea9122c14cc362a3ec850ef6e801739949f901ee885bd9fd7bd0505d"
     },
     "FF::AU::cpi-y-y": {
       "available_from": "2022-10-26",
@@ -483,7 +484,7 @@
       "kind": "event",
       "label": "CPI y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/b2b370887edab6d7a1319f2d3095ed88acae54d77b5ed39b00363fb9c279eaf5.json",
+      "path": "./calendar-history/series/c29d393ce01577d04e6ababd1cd29f9f910e3a3f4f9186ab91b6ebb6d351b9d1.json",
       "quality": {
         "actual_count": 49,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -500,7 +501,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::AU::cpi-y-y",
-      "sha256": "b2b370887edab6d7a1319f2d3095ed88acae54d77b5ed39b00363fb9c279eaf5"
+      "sha256": "c29d393ce01577d04e6ababd1cd29f9f910e3a3f4f9186ab91b6ebb6d351b9d1"
     },
     "FF::AU::current-account": {
       "available_from": "2016-12-06",
@@ -845,7 +846,7 @@
       "kind": "event",
       "label": "Import Prices q/q",
       "metric_key": null,
-      "path": "./calendar-history/series/a8a233980788f4c448abc46828cfb08a0cfd8d97c3748c89edb4aa89d3693606.json",
+      "path": "./calendar-history/series/31f271f82a716812da5bbd304cfb8d7bcf8d770eea8f36b1355d441849c4718b.json",
       "quality": {
         "actual_count": 40,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -867,7 +868,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::AU::import-prices-q-q",
-      "sha256": "a8a233980788f4c448abc46828cfb08a0cfd8d97c3748c89edb4aa89d3693606"
+      "sha256": "31f271f82a716812da5bbd304cfb8d7bcf8d770eea8f36b1355d441849c4718b"
     },
     "FF::AU::mi-inflation-expectations": {
       "available_from": "2016-11-10",
@@ -907,16 +908,16 @@
     },
     "FF::AU::mi-inflation-gauge-m-m": {
       "available_from": "2016-12-05",
-      "available_to": "2026-10-05",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "AU",
       "event_title": "MI Inflation Gauge m/m",
       "kind": "event",
       "label": "MI Inflation Gauge m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/27b9593343aab51bb369079c05d9420abb5ce0bc65df3f61e4b4c60a722e6eec.json",
+      "path": "./calendar-history/series/186739bc190fa5b214e2c809840ab917738450d0b6ce42b1fe33bd6838790c27.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -934,12 +935,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::AU::mi-inflation-gauge-m-m",
-      "sha256": "27b9593343aab51bb369079c05d9420abb5ce0bc65df3f61e4b4c60a722e6eec"
+      "sha256": "186739bc190fa5b214e2c809840ab917738450d0b6ce42b1fe33bd6838790c27"
     },
     "FF::AU::mi-leading-index-m-m": {
       "available_from": "2016-11-16",
@@ -1087,9 +1088,9 @@
       "kind": "event",
       "label": "PPI q/q",
       "metric_key": null,
-      "path": "./calendar-history/series/863521eb93daf145aae3017bf9a799bf8157c1180202643b39201249df9e4b62.json",
+      "path": "./calendar-history/series/0d7922adadb1978468d9f551c538d50463161ad9a9c57fa9b8e186bd4ed8867f.json",
       "quality": {
-        "actual_count": 39,
+        "actual_count": 40,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 40,
         "frequency_validation": "NOT_VALIDATED",
@@ -1109,7 +1110,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::AU::ppi-q-q",
-      "sha256": "863521eb93daf145aae3017bf9a799bf8157c1180202643b39201249df9e4b62"
+      "sha256": "0d7922adadb1978468d9f551c538d50463161ad9a9c57fa9b8e186bd4ed8867f"
     },
     "FF::AU::private-capital-expenditure-q-q": {
       "available_from": "2016-12-01",
@@ -1158,9 +1159,9 @@
       "kind": "event",
       "label": "Private Sector Credit m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/36fad7600f57c1bc1e0cd9d34a5ddf0ff446849f70027e31203fc9168c27abc1.json",
+      "path": "./calendar-history/series/d2afb78f5e8084ded62157e8e4586af85ade2fc7a55c34ee81bc6a80ecd181fe.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -1181,7 +1182,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::AU::private-sector-credit-m-m",
-      "sha256": "36fad7600f57c1bc1e0cd9d34a5ddf0ff446849f70027e31203fc9168c27abc1"
+      "sha256": "d2afb78f5e8084ded62157e8e4586af85ade2fc7a55c34ee81bc6a80ecd181fe"
     },
     "FF::AU::retail-sales-m-m": {
       "available_from": "2016-11-04",
@@ -1229,7 +1230,7 @@
       "kind": "event",
       "label": "Trimmed Mean CPI m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/a1eda28bcf57ad5de526b1d26de66e324a1e9c0e700abab08eae70a45b7f2917.json",
+      "path": "./calendar-history/series/436605f29682bead300168f0c83a90ae882fd14041b68a2e20b330243f67f3e1.json",
       "quality": {
         "actual_count": 48,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -1251,7 +1252,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::AU::trimmed-mean-cpi-m-m",
-      "sha256": "a1eda28bcf57ad5de526b1d26de66e324a1e9c0e700abab08eae70a45b7f2917"
+      "sha256": "436605f29682bead300168f0c83a90ae882fd14041b68a2e20b330243f67f3e1"
     },
     "FF::AU::unemployment-rate": {
       "available_from": "2016-11-17",
@@ -1763,9 +1764,9 @@
       "kind": "event",
       "label": "GDP m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/d2638b2b2cbd9eb317b8fd58c8e8adee964a20995490bd04c9e7a5cbb6d8b625.json",
+      "path": "./calendar-history/series/a75fc84cdf95f32a849c70ab89f8e7d068ca7650eb73735bb03aee01d02f194f.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -1786,7 +1787,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CA::gdp-m-m",
-      "sha256": "d2638b2b2cbd9eb317b8fd58c8e8adee964a20995490bd04c9e7a5cbb6d8b625"
+      "sha256": "a75fc84cdf95f32a849c70ab89f8e7d068ca7650eb73735bb03aee01d02f194f"
     },
     "FF::CA::housing-starts": {
       "available_from": "2016-11-08",
@@ -1934,16 +1935,16 @@
     },
     "FF::CA::manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-10-01",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "CA",
       "event_title": "Manufacturing PMI",
       "kind": "event",
       "label": "Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/dc5278e7dc6f95d1e87cc1dba63f5ec7eb8c194312e1ef7a396d19a8d6dcf618.json",
+      "path": "./calendar-history/series/2c232a1891a0f7e9e1305356aebaf376d4f40f88af4f8b9e066d493bbd4590b1.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -1961,12 +1962,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CA::manufacturing-pmi",
-      "sha256": "dc5278e7dc6f95d1e87cc1dba63f5ec7eb8c194312e1ef7a396d19a8d6dcf618"
+      "sha256": "2c232a1891a0f7e9e1305356aebaf376d4f40f88af4f8b9e066d493bbd4590b1"
     },
     "FF::CA::manufacturing-sales-m-m": {
       "available_from": "2016-11-16",
@@ -2087,7 +2088,7 @@
       "kind": "event",
       "label": "Overnight Rate",
       "metric_key": null,
-      "path": "./calendar-history/series/1b94392fdebeb226ba44d3591c36c6cbd87bf6314cbb716289cac98be3f80e5a.json",
+      "path": "./calendar-history/series/aee7bee5511656b846cef639c2c19bd8a88dd373babe0f7b4e56eeecb6625d14.json",
       "quality": {
         "actual_count": 82,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -2110,7 +2111,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CA::overnight-rate",
-      "sha256": "1b94392fdebeb226ba44d3591c36c6cbd87bf6314cbb716289cac98be3f80e5a"
+      "sha256": "aee7bee5511656b846cef639c2c19bd8a88dd373babe0f7b4e56eeecb6625d14"
     },
     "FF::CA::retail-sales-m-m": {
       "available_from": "2016-11-22",
@@ -2447,9 +2448,9 @@
       "kind": "event",
       "label": "KOF Economic Barometer",
       "metric_key": null,
-      "path": "./calendar-history/series/e87c7a852a80592d347611b299799da14d3784aad4ce1aba60f8e5876e820fdd.json",
+      "path": "./calendar-history/series/cd3b350d2a634aeb25cd73af5d5747d965fe9d5c2243426de04c1bb43a878afa.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -2470,7 +2471,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CH::kof-economic-barometer",
-      "sha256": "e87c7a852a80592d347611b299799da14d3784aad4ce1aba60f8e5876e820fdd"
+      "sha256": "cd3b350d2a634aeb25cd73af5d5747d965fe9d5c2243426de04c1bb43a878afa"
     },
     "FF::CH::libor-rate": {
       "available_from": "2016-12-15",
@@ -2503,20 +2504,20 @@
     },
     "FF::CH::manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-10-01",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "CH",
       "event_title": "Manufacturing PMI",
       "kind": "event",
       "label": "Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/037e66d9cc4574e8bfc40036ea409b4aa8dfc61c0fff2b25682cfb1c3c524b64.json",
+      "path": "./calendar-history/series/1b3005bfe141700fc112048af8175fc491ccbfc3aba10050e257a14e70714680.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 34,
         "rows_by_year": {
@@ -2530,12 +2531,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CH::manufacturing-pmi",
-      "sha256": "037e66d9cc4574e8bfc40036ea409b4aa8dfc61c0fff2b25682cfb1c3c524b64"
+      "sha256": "1b3005bfe141700fc112048af8175fc491ccbfc3aba10050e257a14e70714680"
     },
     "FF::CH::ppi-m-m": {
       "available_from": "2016-11-14",
@@ -2575,20 +2576,20 @@
     },
     "FF::CH::retail-sales-y-y": {
       "available_from": "2016-12-01",
-      "available_to": "2026-10-01",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "CH",
       "event_title": "Retail Sales y/y",
       "kind": "event",
       "label": "Retail Sales y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/76720e90ed65d24bc68e5354ecd5a5aee8dab50cfd8de7ee59ef69333a03c735.json",
+      "path": "./calendar-history/series/e31a440bfd9be92ecb910efce03a8a2f8fa5a80dfe5e8eff6309d6576bd7bff8.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 40,
         "rows_by_year": {
@@ -2602,12 +2603,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CH::retail-sales-y-y",
-      "sha256": "76720e90ed65d24bc68e5354ecd5a5aee8dab50cfd8de7ee59ef69333a03c735"
+      "sha256": "e31a440bfd9be92ecb910efce03a8a2f8fa5a80dfe5e8eff6309d6576bd7bff8"
     },
     "FF::CH::seco-consumer-climate": {
       "available_from": "2017-02-07",
@@ -2751,7 +2752,7 @@
       "kind": "event",
       "label": "UBS Economic Expectations",
       "metric_key": null,
-      "path": "./calendar-history/series/69edf8914fcf3b3b4dfbb8f608f2f9a3c361d8941cb11a2349d4d0c7f00fa97c.json",
+      "path": "./calendar-history/series/9d3dace55b25c7ca9bdf5f97c9aec4a0ead591f5f4d26ad51182b68eec4632da.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -2774,7 +2775,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CH::ubs-economic-expectations",
-      "sha256": "69edf8914fcf3b3b4dfbb8f608f2f9a3c361d8941cb11a2349d4d0c7f00fa97c"
+      "sha256": "9d3dace55b25c7ca9bdf5f97c9aec4a0ead591f5f4d26ad51182b68eec4632da"
     },
     "FF::CH::unemployment-rate": {
       "available_from": "2016-11-08",
@@ -2889,7 +2890,7 @@
       "kind": "event",
       "label": "CB Leading Index m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/f09e1451e6f16f3d9cca6e1aee2bb6b96c2b10de0439900a11bd96680be0fd2b.json",
+      "path": "./calendar-history/series/1796e3fcc90b0ebe2f93732e278c696a2205f1b064470499184369c101f42aaf.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -2912,7 +2913,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CN::cb-leading-index-m-m",
-      "sha256": "f09e1451e6f16f3d9cca6e1aee2bb6b96c2b10de0439900a11bd96680be0fd2b"
+      "sha256": "1796e3fcc90b0ebe2f93732e278c696a2205f1b064470499184369c101f42aaf"
     },
     "FF::CN::cpi-y-y": {
       "available_from": "2016-11-09",
@@ -3131,20 +3132,20 @@
     },
     "FF::CN::manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-09-30",
+      "available_to": "2026-10-31",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "CN",
       "event_title": "Manufacturing PMI",
       "kind": "event",
       "label": "Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/a966086c0ae2800ec6cb34f2934662501275fdd5b1e124f93b17940023233bf7.json",
+      "path": "./calendar-history/series/43f6886c0f752cf4548a5e0f8e53f191ba2030848be0b5b2684ff4ecb72e750b.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 33,
         "rows_by_year": {
@@ -3158,12 +3159,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 9
+          "2026": 10
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CN::manufacturing-pmi",
-      "sha256": "a966086c0ae2800ec6cb34f2934662501275fdd5b1e124f93b17940023233bf7"
+      "sha256": "43f6886c0f752cf4548a5e0f8e53f191ba2030848be0b5b2684ff4ecb72e750b"
     },
     "FF::CN::new-home-prices-m-m": {
       "available_from": "2018-04-18",
@@ -3237,20 +3238,20 @@
     },
     "FF::CN::non-manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-09-30",
+      "available_to": "2026-10-31",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "CN",
       "event_title": "Non-Manufacturing PMI",
       "kind": "event",
       "label": "Non-Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/fa6bce439d26641adf9d8982b4dc48444e8928925b1a7f3386fb5c27fc984540.json",
+      "path": "./calendar-history/series/7e66cca33feefe420f5eaeb1555f4651de4e959920bc3f9036ab3d4febecf9e0.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 103,
+        "consensus_count": 104,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 33,
         "rows_by_year": {
@@ -3264,12 +3265,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 9
+          "2026": 10
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CN::non-manufacturing-pmi",
-      "sha256": "fa6bce439d26641adf9d8982b4dc48444e8928925b1a7f3386fb5c27fc984540"
+      "sha256": "7e66cca33feefe420f5eaeb1555f4651de4e959920bc3f9036ab3d4febecf9e0"
     },
     "FF::CN::ppi-y-y": {
       "available_from": "2016-11-09",
@@ -3309,20 +3310,20 @@
     },
     "FF::CN::ratingdog-manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-09-30",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "CN",
       "event_title": "RatingDog Manufacturing PMI",
       "kind": "event",
       "label": "RatingDog Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/68b37aaa550b22d03d4c5e04975f8c51bd63ad71f0c75fbbcb4876dfded6d730.json",
+      "path": "./calendar-history/series/ca46372ac7c92530be12d6528774b6c31ba02c70b0cec96608256fa69395aa47.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 34,
         "rows_by_year": {
@@ -3336,12 +3337,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 13,
-          "2026": 9
+          "2026": 10
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CN::ratingdog-manufacturing-pmi",
-      "sha256": "68b37aaa550b22d03d4c5e04975f8c51bd63ad71f0c75fbbcb4876dfded6d730"
+      "sha256": "ca46372ac7c92530be12d6528774b6c31ba02c70b0cec96608256fa69395aa47"
     },
     "FF::CN::ratingdog-services-pmi": {
       "available_from": "2016-12-05",
@@ -3811,20 +3812,20 @@
     },
     "FF::EU::final-manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-10-01",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "EU",
       "event_title": "Final Manufacturing PMI",
       "kind": "event",
       "label": "Final Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/399f3c9665a4abb0bc9c632943c7b812e46519401284b764a05dbeaacd0ded9e.json",
+      "path": "./calendar-history/series/bd07318d1aefb0ca3264a0901f9731e03bb6746449554471ce8d8071b7797719.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 34,
         "rows_by_year": {
@@ -3838,12 +3839,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::final-manufacturing-pmi",
-      "sha256": "399f3c9665a4abb0bc9c632943c7b812e46519401284b764a05dbeaacd0ded9e"
+      "sha256": "bd07318d1aefb0ca3264a0901f9731e03bb6746449554471ce8d8071b7797719"
     },
     "FF::EU::final-services-pmi": {
       "available_from": "2016-11-04",
@@ -4069,9 +4070,9 @@
       "kind": "event",
       "label": "French Consumer Spending m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/26f14d494000b8bf06be95952bcebc69076fd82cb0cddbf4f439b544f1661784.json",
+      "path": "./calendar-history/series/71e7cb42cc2a702180bf9165bc1807e25e5307736838b4288ce38a5671179aa7.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -4092,7 +4093,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::french-consumer-spending-m-m",
-      "sha256": "26f14d494000b8bf06be95952bcebc69076fd82cb0cddbf4f439b544f1661784"
+      "sha256": "71e7cb42cc2a702180bf9165bc1807e25e5307736838b4288ce38a5671179aa7"
     },
     "FF::EU::french-final-cpi-m-m": {
       "available_from": "2016-11-15",
@@ -4132,20 +4133,20 @@
     },
     "FF::EU::french-final-manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-10-01",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "EU",
       "event_title": "French Final Manufacturing PMI",
       "kind": "event",
       "label": "French Final Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/b4e6cb91bbe43fa9dba87bad9904755152e93860120d28d513866eddb086a3b4.json",
+      "path": "./calendar-history/series/e3e4c5008a6a0b2ab188f37431bdd3c9a2ac70ccfc6c5cdad0b512cf223b9401.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 34,
         "rows_by_year": {
@@ -4159,12 +4160,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::french-final-manufacturing-pmi",
-      "sha256": "b4e6cb91bbe43fa9dba87bad9904755152e93860120d28d513866eddb086a3b4"
+      "sha256": "e3e4c5008a6a0b2ab188f37431bdd3c9a2ac70ccfc6c5cdad0b512cf223b9401"
     },
     "FF::EU::french-final-private-payrolls-q-q": {
       "available_from": "2016-12-08",
@@ -4249,9 +4250,9 @@
       "kind": "event",
       "label": "French Flash GDP q/q",
       "metric_key": null,
-      "path": "./calendar-history/series/9bf4b805dcab5f32624b9a4d22343d6d12fef3922db13bb1a5c6436e99733834.json",
+      "path": "./calendar-history/series/c7a9bd288012b0622cc4afafd46d196169c8c161b220c55735f05107844f9f33.json",
       "quality": {
-        "actual_count": 39,
+        "actual_count": 40,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 40,
         "frequency_validation": "NOT_VALIDATED",
@@ -4271,7 +4272,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::french-flash-gdp-q-q",
-      "sha256": "9bf4b805dcab5f32624b9a4d22343d6d12fef3922db13bb1a5c6436e99733834"
+      "sha256": "c7a9bd288012b0622cc4afafd46d196169c8c161b220c55735f05107844f9f33"
     },
     "FF::EU::french-flash-manufacturing-pmi": {
       "available_from": "2016-11-23",
@@ -4428,9 +4429,9 @@
       "kind": "event",
       "label": "French Prelim CPI m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/d6fcd2ad7b176fe813a8cf95ca3822e4c46b799e5d4e7b8a7f8ec98f7925dfd1.json",
+      "path": "./calendar-history/series/019808151d3d2107a60b65505d9a7eb0cd45efb9b3c5c0696f298075b556610b.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -4451,7 +4452,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::french-prelim-cpi-m-m",
-      "sha256": "d6fcd2ad7b176fe813a8cf95ca3822e4c46b799e5d4e7b8a7f8ec98f7925dfd1"
+      "sha256": "019808151d3d2107a60b65505d9a7eb0cd45efb9b3c5c0696f298075b556610b"
     },
     "FF::EU::french-prelim-gdp-q-q": {
       "available_from": "2016-11-29",
@@ -4500,9 +4501,9 @@
       "kind": "event",
       "label": "French Prelim Private Payrolls q/q",
       "metric_key": null,
-      "path": "./calendar-history/series/d6993f1a59f2ec5117bc5533044bc21a2a4de805c2cea5bc5d96c4d6b0d1dc90.json",
+      "path": "./calendar-history/series/6e7824be7d5131f160765d7610362d72f1c56528d8288c173549284d3df3d638.json",
       "quality": {
-        "actual_count": 40,
+        "actual_count": 41,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 41,
         "frequency_validation": "NOT_VALIDATED",
@@ -4523,7 +4524,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::french-prelim-private-payrolls-q-q",
-      "sha256": "d6993f1a59f2ec5117bc5533044bc21a2a4de805c2cea5bc5d96c4d6b0d1dc90"
+      "sha256": "6e7824be7d5131f160765d7610362d72f1c56528d8288c173549284d3df3d638"
     },
     "FF::EU::french-trade-balance": {
       "available_from": "2016-11-08",
@@ -4572,7 +4573,7 @@
       "kind": "event",
       "label": "German 10-y Bond Auction",
       "metric_key": null,
-      "path": "./calendar-history/series/af260f9afd09029cd76007daf39d3cc15e0929878920c6107c3837da1ba84b68.json",
+      "path": "./calendar-history/series/ddc3fdbbb7c7331c849209f409de27c1739ec5a93968f71932e42976659bfd60.json",
       "quality": {
         "actual_count": 151,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -4595,7 +4596,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::german-10-y-bond-auction",
-      "sha256": "af260f9afd09029cd76007daf39d3cc15e0929878920c6107c3837da1ba84b68"
+      "sha256": "ddc3fdbbb7c7331c849209f409de27c1739ec5a93968f71932e42976659bfd60"
     },
     "FF::EU::german-30-y-bond-auction": {
       "available_from": "2017-01-25",
@@ -4742,20 +4743,20 @@
     },
     "FF::EU::german-final-manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-10-01",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "EU",
       "event_title": "German Final Manufacturing PMI",
       "kind": "event",
       "label": "German Final Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/03c970ebae66b4e732692011530f838c3c8caf68ac6358443a6f3aad5fa52674.json",
+      "path": "./calendar-history/series/f85ec31613f8a6ea43c593d22e3a6eab7f5235ad954e49961563cc02e859b5e5.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 34,
         "rows_by_year": {
@@ -4769,12 +4770,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::german-final-manufacturing-pmi",
-      "sha256": "03c970ebae66b4e732692011530f838c3c8caf68ac6358443a6f3aad5fa52674"
+      "sha256": "f85ec31613f8a6ea43c593d22e3a6eab7f5235ad954e49961563cc02e859b5e5"
     },
     "FF::EU::german-final-services-pmi": {
       "available_from": "2016-11-04",
@@ -4895,7 +4896,7 @@
       "kind": "event",
       "label": "German GfK Consumer Climate",
       "metric_key": null,
-      "path": "./calendar-history/series/45de2e80e9d1d45166a6a65229fa58886fb7f298fcd2bddfdb006363f19145a5.json",
+      "path": "./calendar-history/series/1d4550c1039829cafea3faa8945cf35a170192eaf836d4e64bba976a58b32782.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -4918,7 +4919,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::german-gfk-consumer-climate",
-      "sha256": "45de2e80e9d1d45166a6a65229fa58886fb7f298fcd2bddfdb006363f19145a5"
+      "sha256": "1d4550c1039829cafea3faa8945cf35a170192eaf836d4e64bba976a58b32782"
     },
     "FF::EU::german-ifo-business-climate": {
       "available_from": "2016-11-24",
@@ -4931,7 +4932,7 @@
       "kind": "event",
       "label": "German ifo Business Climate",
       "metric_key": null,
-      "path": "./calendar-history/series/f047e43c4e4dc6b291b13b0606e8fad17d0eedd12df7d91ae0488755ce627e5a.json",
+      "path": "./calendar-history/series/3e89eef20229804f8bbb08c19f9767ad4e2a403e595066cb4579d4c9b173b936.json",
       "quality": {
         "actual_count": 121,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -4954,7 +4955,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::german-ifo-business-climate",
-      "sha256": "f047e43c4e4dc6b291b13b0606e8fad17d0eedd12df7d91ae0488755ce627e5a"
+      "sha256": "3e89eef20229804f8bbb08c19f9767ad4e2a403e595066cb4579d4c9b173b936"
     },
     "FF::EU::german-import-prices-m-m": {
       "available_from": "2016-11-29",
@@ -4967,9 +4968,9 @@
       "kind": "event",
       "label": "German Import Prices m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/9c31c9fea205a22349bab9b03d29da5b217ef43f5ffb57fb05476b99f0958a61.json",
+      "path": "./calendar-history/series/629266e39f6cf91175c7e628a8ee0c71389afcb4c98534ec311599ad156cef78.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -4990,7 +4991,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::german-import-prices-m-m",
-      "sha256": "9c31c9fea205a22349bab9b03d29da5b217ef43f5ffb57fb05476b99f0958a61"
+      "sha256": "629266e39f6cf91175c7e628a8ee0c71389afcb4c98534ec311599ad156cef78"
     },
     "FF::EU::german-industrial-production-m-m": {
       "available_from": "2016-11-08",
@@ -5066,20 +5067,20 @@
     },
     "FF::EU::german-prelim-cpi-m-m": {
       "available_from": "2016-11-30",
-      "available_to": "2026-10-01",
+      "available_to": "2026-10-31",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "EU",
       "event_title": "German Prelim CPI m/m",
       "kind": "event",
       "label": "German Prelim CPI m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/43489b4e3a8a01fea8fab60ae3dd8a5c75bb29655774ceddabd52090c166a377.json",
+      "path": "./calendar-history/series/b0fd2567902723d83d57c79218852d08e30f500311c3e000b3ea59b724f71bdd.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 39,
         "rows_by_year": {
@@ -5093,12 +5094,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::german-prelim-cpi-m-m",
-      "sha256": "43489b4e3a8a01fea8fab60ae3dd8a5c75bb29655774ceddabd52090c166a377"
+      "sha256": "b0fd2567902723d83d57c79218852d08e30f500311c3e000b3ea59b724f71bdd"
     },
     "FF::EU::german-prelim-gdp-q-q": {
       "available_from": "2016-11-15",
@@ -5111,9 +5112,9 @@
       "kind": "event",
       "label": "German Prelim GDP q/q",
       "metric_key": null,
-      "path": "./calendar-history/series/53e24feb3f5d8e10d889c4faa097ae9772f1ca96d8892dec956b583d2b0955b8.json",
+      "path": "./calendar-history/series/7a5e21ddb4e299161741fa97c8f7b7d33d70072e6df2c702926eae3441c786b7.json",
       "quality": {
-        "actual_count": 40,
+        "actual_count": 41,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 41,
         "frequency_validation": "NOT_VALIDATED",
@@ -5134,24 +5135,24 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::german-prelim-gdp-q-q",
-      "sha256": "53e24feb3f5d8e10d889c4faa097ae9772f1ca96d8892dec956b583d2b0955b8"
+      "sha256": "7a5e21ddb4e299161741fa97c8f7b7d33d70072e6df2c702926eae3441c786b7"
     },
     "FF::EU::german-retail-sales-m-m": {
       "available_from": "2016-11-30",
-      "available_to": "2026-09-30",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 117,
+      "count": 118,
       "country": "EU",
       "event_title": "German Retail Sales m/m",
       "kind": "event",
       "label": "German Retail Sales m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/5766c03bc5c9e43b5c0bf6137170d9fc0e4a8aa1c1f4c7367ca96a7111f1818b.json",
+      "path": "./calendar-history/series/5fd0bcffaeff9587035a29e0a277c8acd70fd1691f0d02ac3d146f8de231c8f4.json",
       "quality": {
         "actual_count": 117,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 115,
+        "consensus_count": 116,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 132,
         "rows_by_year": {
@@ -5165,12 +5166,12 @@
           "2023": 12,
           "2024": 10,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::german-retail-sales-m-m",
-      "sha256": "5766c03bc5c9e43b5c0bf6137170d9fc0e4a8aa1c1f4c7367ca96a7111f1818b"
+      "sha256": "5fd0bcffaeff9587035a29e0a277c8acd70fd1691f0d02ac3d146f8de231c8f4"
     },
     "FF::EU::german-trade-balance": {
       "available_from": "2016-11-08",
@@ -5219,9 +5220,9 @@
       "kind": "event",
       "label": "German Unemployment Change",
       "metric_key": null,
-      "path": "./calendar-history/series/4722289eb472a04bdba7365f1d68d34f8ba1b18f79dd2de13cd55bccdcbd227b.json",
+      "path": "./calendar-history/series/1ffc8ed0b76701ee0d3cb439548819acce54cdcc502dadfc1fe0f7d60bed8c53.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -5242,7 +5243,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::german-unemployment-change",
-      "sha256": "4722289eb472a04bdba7365f1d68d34f8ba1b18f79dd2de13cd55bccdcbd227b"
+      "sha256": "1ffc8ed0b76701ee0d3cb439548819acce54cdcc502dadfc1fe0f7d60bed8c53"
     },
     "FF::EU::german-wpi-m-m": {
       "available_from": "2016-11-11",
@@ -5363,7 +5364,7 @@
       "kind": "event",
       "label": "Italian 10-y Bond Auction",
       "metric_key": null,
-      "path": "./calendar-history/series/9d436239906c04afa93244fa9ea7b334ec90729273b3ec3ebae2992e0f7e1b10.json",
+      "path": "./calendar-history/series/d5ef4c983ecd933b8a26b176e07c7668ebe41761b71b98dec7ba753160cdd059.json",
       "quality": {
         "actual_count": 114,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -5386,7 +5387,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::italian-10-y-bond-auction",
-      "sha256": "9d436239906c04afa93244fa9ea7b334ec90729273b3ec3ebae2992e0f7e1b10"
+      "sha256": "d5ef4c983ecd933b8a26b176e07c7668ebe41761b71b98dec7ba753160cdd059"
     },
     "FF::EU::italian-constitution-amendment-vote": {
       "available_from": "2016-12-05",
@@ -5452,20 +5453,20 @@
     },
     "FF::EU::italian-manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-10-01",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "EU",
       "event_title": "Italian Manufacturing PMI",
       "kind": "event",
       "label": "Italian Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/df29e985ce46ea2c9b0f6ae67641fac805312a5f9461bee0c4e34509b368e555.json",
+      "path": "./calendar-history/series/c038b435089f4b294c6b1b9c4cbdb2b32ce2da1478d2ea049dce568078f169c7.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 34,
         "rows_by_year": {
@@ -5479,12 +5480,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::italian-manufacturing-pmi",
-      "sha256": "df29e985ce46ea2c9b0f6ae67641fac805312a5f9461bee0c4e34509b368e555"
+      "sha256": "c038b435089f4b294c6b1b9c4cbdb2b32ce2da1478d2ea049dce568078f169c7"
     },
     "FF::EU::italian-monthly-unemployment-rate": {
       "available_from": "2016-12-01",
@@ -5497,7 +5498,7 @@
       "kind": "event",
       "label": "Italian Monthly Unemployment Rate",
       "metric_key": null,
-      "path": "./calendar-history/series/68e8fc5d7da7a575fd28d0db26db2a302f02561abae0c2296013ba435d63200b.json",
+      "path": "./calendar-history/series/c41748bee02ae417bfb8da42d8b1a420499038f0199920f276b5ff2f5cb61b19.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -5520,7 +5521,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::italian-monthly-unemployment-rate",
-      "sha256": "68e8fc5d7da7a575fd28d0db26db2a302f02561abae0c2296013ba435d63200b"
+      "sha256": "c41748bee02ae417bfb8da42d8b1a420499038f0199920f276b5ff2f5cb61b19"
     },
     "FF::EU::italian-prelim-cpi-m-m": {
       "available_from": "2016-11-30",
@@ -5533,9 +5534,9 @@
       "kind": "event",
       "label": "Italian Prelim CPI m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/40a6b05a10bdd523d161cc27d94bdb8f9fa30c9437c8af0958939fea27a538df.json",
+      "path": "./calendar-history/series/b19a2be69ca16cf6c216ee8c59522b31e9f617724645eedaeb0be07a2a2d19ee.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -5556,7 +5557,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::italian-prelim-cpi-m-m",
-      "sha256": "40a6b05a10bdd523d161cc27d94bdb8f9fa30c9437c8af0958939fea27a538df"
+      "sha256": "b19a2be69ca16cf6c216ee8c59522b31e9f617724645eedaeb0be07a2a2d19ee"
     },
     "FF::EU::italian-prelim-gdp-q-q": {
       "available_from": "2016-11-15",
@@ -5569,9 +5570,9 @@
       "kind": "event",
       "label": "Italian Prelim GDP q/q",
       "metric_key": null,
-      "path": "./calendar-history/series/cc6439d70f263f251c0e1665160d72c7e111c7a95ecafdbc7cd90621a156099f.json",
+      "path": "./calendar-history/series/8eb168e2548962b494deeeb4027136d8fe335e174f97016d82498c6b3698f026.json",
       "quality": {
-        "actual_count": 40,
+        "actual_count": 41,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 41,
         "frequency_validation": "NOT_VALIDATED",
@@ -5592,7 +5593,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::italian-prelim-gdp-q-q",
-      "sha256": "cc6439d70f263f251c0e1665160d72c7e111c7a95ecafdbc7cd90621a156099f"
+      "sha256": "8eb168e2548962b494deeeb4027136d8fe335e174f97016d82498c6b3698f026"
     },
     "FF::EU::italian-quarterly-unemployment-rate": {
       "available_from": "2016-12-07",
@@ -5776,7 +5777,7 @@
       "kind": "event",
       "label": "M3 Money Supply y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/63d9f20846b7c17f0052e206f0b9e96d040a5293f687f831df518df0391ee973.json",
+      "path": "./calendar-history/series/75a976a2df599b453ecd69dd5c95dd80a9412c6cf915132358b27d8d863688ff.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -5799,7 +5800,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::m3-money-supply-y-y",
-      "sha256": "63d9f20846b7c17f0052e206f0b9e96d040a5293f687f831df518df0391ee973"
+      "sha256": "75a976a2df599b453ecd69dd5c95dd80a9412c6cf915132358b27d8d863688ff"
     },
     "FF::EU::main-refinancing-rate": {
       "available_from": "2016-12-08",
@@ -5812,7 +5813,7 @@
       "kind": "event",
       "label": "Main Refinancing Rate",
       "metric_key": null,
-      "path": "./calendar-history/series/f28f761518a127e5e8a96d3786c457e4dcb69ce941a629bb6b29d5babf49f7e3.json",
+      "path": "./calendar-history/series/75a9645b194d0b0aa40d541cc84709b814c68d6c9d1ddf11f81af108d4454f3b.json",
       "quality": {
         "actual_count": 80,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -5835,7 +5836,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::main-refinancing-rate",
-      "sha256": "f28f761518a127e5e8a96d3786c457e4dcb69ce941a629bb6b29d5babf49f7e3"
+      "sha256": "75a9645b194d0b0aa40d541cc84709b814c68d6c9d1ddf11f81af108d4454f3b"
     },
     "FF::EU::ppi-m-m": {
       "available_from": "2016-11-04",
@@ -5884,9 +5885,9 @@
       "kind": "event",
       "label": "Prelim Flash GDP q/q",
       "metric_key": null,
-      "path": "./calendar-history/series/f2ca3e89542c3885e5b1dfb5694ef8c59350ccf76d4849307a81ba954d3508b3.json",
+      "path": "./calendar-history/series/82fec62676ea1a5d71a04a9af260d5ae91531d69a32dcf0b5bdc9a57c0b2eaad.json",
       "quality": {
-        "actual_count": 39,
+        "actual_count": 40,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 40,
         "frequency_validation": "NOT_VALIDATED",
@@ -5906,7 +5907,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::prelim-flash-gdp-q-q",
-      "sha256": "f2ca3e89542c3885e5b1dfb5694ef8c59350ccf76d4849307a81ba954d3508b3"
+      "sha256": "82fec62676ea1a5d71a04a9af260d5ae91531d69a32dcf0b5bdc9a57c0b2eaad"
     },
     "FF::EU::private-loans-y-y": {
       "available_from": "2016-11-28",
@@ -5919,7 +5920,7 @@
       "kind": "event",
       "label": "Private Loans y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/e14177b5041f97bb61e9236bbbc92a5c4a1c2af2c02d298c966a0e56a306baf3.json",
+      "path": "./calendar-history/series/a848b790aed13f3dcd426f2236d306a3647afc78ad061da1dba443d2f74eefd1.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -5942,7 +5943,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::private-loans-y-y",
-      "sha256": "e14177b5041f97bb61e9236bbbc92a5c4a1c2af2c02d298c966a0e56a306baf3"
+      "sha256": "a848b790aed13f3dcd426f2236d306a3647afc78ad061da1dba443d2f74eefd1"
     },
     "FF::EU::retail-pmi": {
       "available_from": "2016-11-07",
@@ -6127,9 +6128,9 @@
       "kind": "event",
       "label": "Spanish Flash CPI y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/9edd690f18fdecbc19ee3e233752136711048103a58db26800d53957b96fd0b5.json",
+      "path": "./calendar-history/series/c83faebdda1cccb96664275758859f13770b1efdb4077b54da965dec3a10cd61.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -6150,7 +6151,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::spanish-flash-cpi-y-y",
-      "sha256": "9edd690f18fdecbc19ee3e233752136711048103a58db26800d53957b96fd0b5"
+      "sha256": "c83faebdda1cccb96664275758859f13770b1efdb4077b54da965dec3a10cd61"
     },
     "FF::EU::spanish-flash-gdp-q-q": {
       "available_from": "2017-01-30",
@@ -6163,9 +6164,9 @@
       "kind": "event",
       "label": "Spanish Flash GDP q/q",
       "metric_key": null,
-      "path": "./calendar-history/series/bdaedc42a6d96bf45df673c036e7c043be6d6a15d1631a61cc74dc77c1c1b0d1.json",
+      "path": "./calendar-history/series/0e32f6dc575584fb421bad53f5ea22f23ab440da02216b20163f2262c65c08b1.json",
       "quality": {
-        "actual_count": 39,
+        "actual_count": 40,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 40,
         "frequency_validation": "NOT_VALIDATED",
@@ -6185,24 +6186,24 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::spanish-flash-gdp-q-q",
-      "sha256": "bdaedc42a6d96bf45df673c036e7c043be6d6a15d1631a61cc74dc77c1c1b0d1"
+      "sha256": "0e32f6dc575584fb421bad53f5ea22f23ab440da02216b20163f2262c65c08b1"
     },
     "FF::EU::spanish-manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-10-01",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "EU",
       "event_title": "Spanish Manufacturing PMI",
       "kind": "event",
       "label": "Spanish Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/7029cb06f0288662f416255bf2707b222a63cfed4501598a0362dc98c3616c86.json",
+      "path": "./calendar-history/series/e56da92565dee8ca9d218568b254442e1d07d4699a16b5c3adf087cc62ef8f56.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 34,
         "rows_by_year": {
@@ -6216,12 +6217,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::spanish-manufacturing-pmi",
-      "sha256": "7029cb06f0288662f416255bf2707b222a63cfed4501598a0362dc98c3616c86"
+      "sha256": "e56da92565dee8ca9d218568b254442e1d07d4699a16b5c3adf087cc62ef8f56"
     },
     "FF::EU::spanish-services-pmi": {
       "available_from": "2016-11-04",
@@ -6306,7 +6307,7 @@
       "kind": "event",
       "label": "Spanish Unemployment Rate",
       "metric_key": null,
-      "path": "./calendar-history/series/2fe611250119c35d9c0d59c61630790ed4b24cfbc06b0ac26df88457b001f651.json",
+      "path": "./calendar-history/series/491f38112d739cea8aaf2e7fa2d289b49f7d36735f8d71b1dd163a5506232358.json",
       "quality": {
         "actual_count": 40,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -6328,7 +6329,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::spanish-unemployment-rate",
-      "sha256": "2fe611250119c35d9c0d59c61630790ed4b24cfbc06b0ac26df88457b001f651"
+      "sha256": "491f38112d739cea8aaf2e7fa2d289b49f7d36735f8d71b1dd163a5506232358"
     },
     "FF::EU::trade-balance": {
       "available_from": "2016-11-15",
@@ -6377,9 +6378,9 @@
       "kind": "event",
       "label": "Unemployment Rate",
       "metric_key": null,
-      "path": "./calendar-history/series/1955e58728b057a5f20cad52206de60568ee44757c15a3ed807bfa2b3f88969f.json",
+      "path": "./calendar-history/series/53c47b94077117488ec20062212c8d2201b2980363883f60e6931ff1b558a3b4.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -6400,7 +6401,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::unemployment-rate",
-      "sha256": "1955e58728b057a5f20cad52206de60568ee44757c15a3ed807bfa2b3f88969f"
+      "sha256": "53c47b94077117488ec20062212c8d2201b2980363883f60e6931ff1b558a3b4"
     },
     "FF::EU::zew-economic-sentiment": {
       "available_from": "2016-11-15",
@@ -6625,7 +6626,7 @@
       "kind": "event",
       "label": "BRC Shop Price Index y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/40a5215ebe38bca621f96f75ee9cff3f01079490d1e941bea03b3a17a997fce4.json",
+      "path": "./calendar-history/series/525d5cbfed4c096e16f6b264c52772c32c6cad9eeeebdd7a5471eea18ccbbd3e.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -6648,7 +6649,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::GB::brc-shop-price-index-y-y",
-      "sha256": "40a5215ebe38bca621f96f75ee9cff3f01079490d1e941bea03b3a17a997fce4"
+      "sha256": "525d5cbfed4c096e16f6b264c52772c32c6cad9eeeebdd7a5471eea18ccbbd3e"
     },
     "FF::GB::cb-leading-index-m-m": {
       "available_from": "2016-11-16",
@@ -6733,7 +6734,7 @@
       "kind": "event",
       "label": "CBI Realized Sales",
       "metric_key": null,
-      "path": "./calendar-history/series/e6b142e963ea5b11c870ee6571fe42c6add3ba1d8af8b4f068b8614a2f3a1485.json",
+      "path": "./calendar-history/series/0cbdb4bf1b5b377fdf1d023155d6dddf29cfbe3ad08ad7ca43946de1420096f3.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -6756,7 +6757,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::GB::cbi-realized-sales",
-      "sha256": "e6b142e963ea5b11c870ee6571fe42c6add3ba1d8af8b4f068b8614a2f3a1485"
+      "sha256": "0cbdb4bf1b5b377fdf1d023155d6dddf29cfbe3ad08ad7ca43946de1420096f3"
     },
     "FF::GB::claimant-count-change": {
       "available_from": "2016-11-16",
@@ -7048,20 +7049,20 @@
     },
     "FF::GB::final-manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-10-01",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "GB",
       "event_title": "Final Manufacturing PMI",
       "kind": "event",
       "label": "Final Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/f45a0175d581b0053c4d65d633a93abfec92f1c4f7581b855de4af3937e39c57.json",
+      "path": "./calendar-history/series/dd8d76da59bf2191a116d11be7ac72bbbe0a823c4694ebece0f124b89bfc4d84.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 34,
         "rows_by_year": {
@@ -7075,12 +7076,12 @@
           "2023": 12,
           "2024": 12,
           "2025": 12,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::GB::final-manufacturing-pmi",
-      "sha256": "f45a0175d581b0053c4d65d633a93abfec92f1c4f7581b855de4af3937e39c57"
+      "sha256": "dd8d76da59bf2191a116d11be7ac72bbbe0a823c4694ebece0f124b89bfc4d84"
     },
     "FF::GB::final-services-pmi": {
       "available_from": "2016-12-05",
@@ -7511,7 +7512,7 @@
       "kind": "event",
       "label": "M4 Money Supply m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/b88a64be7b7601461d56af7a1bb40544aa6a814d4b9527d41cbb7c920e50a58b.json",
+      "path": "./calendar-history/series/96cf331b45704c0fb845e80bdc70165c582bd935f2f8d7be1c70be0fc42f6d25.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -7534,7 +7535,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::GB::m4-money-supply-m-m",
-      "sha256": "b88a64be7b7601461d56af7a1bb40544aa6a814d4b9527d41cbb7c920e50a58b"
+      "sha256": "96cf331b45704c0fb845e80bdc70165c582bd935f2f8d7be1c70be0fc42f6d25"
     },
     "FF::GB::manufacturing-production-m-m": {
       "available_from": "2016-11-08",
@@ -7583,7 +7584,7 @@
       "kind": "event",
       "label": "Mortgage Approvals",
       "metric_key": null,
-      "path": "./calendar-history/series/1575cfde00b8c8c1ce87cbca5b04dbe8142b94c56e9ec845a598ed025e5899a2.json",
+      "path": "./calendar-history/series/3f446aa03fb0c36fe95509e0dd6eaf7f79cd4f50947e47377484512c7e7cc517.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -7606,7 +7607,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::GB::mortgage-approvals",
-      "sha256": "1575cfde00b8c8c1ce87cbca5b04dbe8142b94c56e9ec845a598ed025e5899a2"
+      "sha256": "3f446aa03fb0c36fe95509e0dd6eaf7f79cd4f50947e47377484512c7e7cc517"
     },
     "FF::GB::mpc-asset-purchase-facility-votes": {
       "available_from": "2016-12-15",
@@ -7687,9 +7688,9 @@
       "kind": "event",
       "label": "Nationwide HPI m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/13227f0a296bc27821af55f231abf25b77d45b790f6dd74c0664eb532e331088.json",
+      "path": "./calendar-history/series/9bb213eef47caa000f16eb26b2a3ecbed542a480c0cff00ac32ff72c93c4a507.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -7710,7 +7711,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::GB::nationwide-hpi-m-m",
-      "sha256": "13227f0a296bc27821af55f231abf25b77d45b790f6dd74c0664eb532e331088"
+      "sha256": "9bb213eef47caa000f16eb26b2a3ecbed542a480c0cff00ac32ff72c93c4a507"
     },
     "FF::GB::net-lending-to-individuals-m-m": {
       "available_from": "2016-11-29",
@@ -7723,7 +7724,7 @@
       "kind": "event",
       "label": "Net Lending to Individuals m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/ec1c3fcd66e183a83cfcfccca9070f81e1e918befb8d05d01e859b694c1afbe4.json",
+      "path": "./calendar-history/series/aefdc5a73c9f129e1c39fcdf247ee10498c72d2eca68eb28b4d3db0c40dcb4ed.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -7746,7 +7747,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::GB::net-lending-to-individuals-m-m",
-      "sha256": "ec1c3fcd66e183a83cfcfccca9070f81e1e918befb8d05d01e859b694c1afbe4"
+      "sha256": "aefdc5a73c9f129e1c39fcdf247ee10498c72d2eca68eb28b4d3db0c40dcb4ed"
     },
     "FF::GB::niesr-gdp-estimate": {
       "available_from": "2016-11-09",
@@ -8417,7 +8418,7 @@
       "kind": "event",
       "label": "BOJ Core CPI y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/57054178848ab0c5a2dd7e7ccd447cf0227e0081f1bcb618a08dc543768416c1.json",
+      "path": "./calendar-history/series/b8c25d8427adeeee472d02554c26e19cda3a6bb2fe4db095033ca1d70085fce3.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -8440,7 +8441,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::JP::boj-core-cpi-y-y",
-      "sha256": "57054178848ab0c5a2dd7e7ccd447cf0227e0081f1bcb618a08dc543768416c1"
+      "sha256": "b8c25d8427adeeee472d02554c26e19cda3a6bb2fe4db095033ca1d70085fce3"
     },
     "FF::JP::bsi-manufacturing-index": {
       "available_from": "2016-12-09",
@@ -8525,7 +8526,7 @@
       "kind": "event",
       "label": "Consumer Confidence",
       "metric_key": null,
-      "path": "./calendar-history/series/93336550a6e422d0cfe0a1dccc8b1be6c09f87591fc2d45b07a67ec969acceb2.json",
+      "path": "./calendar-history/series/d8b583d49bb34d90dfede78e464484db48868a7b0d0885d1e9134c968845a7c8.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -8548,7 +8549,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::JP::consumer-confidence",
-      "sha256": "93336550a6e422d0cfe0a1dccc8b1be6c09f87591fc2d45b07a67ec969acceb2"
+      "sha256": "d8b583d49bb34d90dfede78e464484db48868a7b0d0885d1e9134c968845a7c8"
     },
     "FF::JP::core-machinery-orders-m-m": {
       "available_from": "2016-11-10",
@@ -8732,20 +8733,20 @@
     },
     "FF::JP::final-manufacturing-pmi": {
       "available_from": "2016-12-01",
-      "available_to": "2026-10-01",
+      "available_to": "2026-11-02",
       "canonical": false,
       "category": null,
-      "count": 119,
+      "count": 120,
       "country": "JP",
       "event_title": "Final Manufacturing PMI",
       "kind": "event",
       "label": "Final Manufacturing PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/731db529cc786fc821017c64f445a195378df7f9cb55ed6395c2fa2615cde622.json",
+      "path": "./calendar-history/series/7c5a96b526639bc1ef1de8899d7c8bdca26d94e0aad7aec85c3e0fd3fe1404f7.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 119,
+        "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
         "max_observed_gap_days": 36,
         "rows_by_year": {
@@ -8759,12 +8760,12 @@
           "2023": 12,
           "2024": 13,
           "2025": 11,
-          "2026": 10
+          "2026": 11
         },
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::JP::final-manufacturing-pmi",
-      "sha256": "731db529cc786fc821017c64f445a195378df7f9cb55ed6395c2fa2615cde622"
+      "sha256": "7c5a96b526639bc1ef1de8899d7c8bdca26d94e0aad7aec85c3e0fd3fe1404f7"
     },
     "FF::JP::flash-manufacturing-pmi": {
       "available_from": "2016-11-24",
@@ -8849,9 +8850,9 @@
       "kind": "event",
       "label": "Housing Starts y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/745a51ae15d7bb59f47abc089f6bd3be4f4f0c58169f48f3c8cd7402c758697d.json",
+      "path": "./calendar-history/series/dd288ca7de5ebe9a3ef3923bc431581957dbc5629338f74c2a87b08d12c5879c.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -8872,7 +8873,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::JP::housing-starts-y-y",
-      "sha256": "745a51ae15d7bb59f47abc089f6bd3be4f4f0c58169f48f3c8cd7402c758697d"
+      "sha256": "dd288ca7de5ebe9a3ef3923bc431581957dbc5629338f74c2a87b08d12c5879c"
     },
     "FF::JP::leading-indicators": {
       "available_from": "2016-11-08",
@@ -9137,9 +9138,9 @@
       "kind": "event",
       "label": "Prelim Industrial Production m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/a68dd29a33ca35f043078bbdde867fc2e1a1b30dde72ffe6cce3953bcc986b80.json",
+      "path": "./calendar-history/series/7a01bd8b5e6ac97100fbe5286e7e257cc796a44ad2c56dfce6faf9579c068aa2.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -9160,7 +9161,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::JP::prelim-industrial-production-m-m",
-      "sha256": "a68dd29a33ca35f043078bbdde867fc2e1a1b30dde72ffe6cce3953bcc986b80"
+      "sha256": "7a01bd8b5e6ac97100fbe5286e7e257cc796a44ad2c56dfce6faf9579c068aa2"
     },
     "FF::JP::prelim-machine-tool-orders-y-y": {
       "available_from": "2016-11-10",
@@ -9209,9 +9210,9 @@
       "kind": "event",
       "label": "Retail Sales y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/3819a7ac3c7521da67d68b37e3bb3e3e1ee0ed292d6a741d7a95c97b177f752c.json",
+      "path": "./calendar-history/series/0dc311d08488ad7418d77b11d799e5e6eae4e8a7431161806348425031a4eaf0.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -9232,7 +9233,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::JP::retail-sales-y-y",
-      "sha256": "3819a7ac3c7521da67d68b37e3bb3e3e1ee0ed292d6a741d7a95c97b177f752c"
+      "sha256": "0dc311d08488ad7418d77b11d799e5e6eae4e8a7431161806348425031a4eaf0"
     },
     "FF::JP::revised-industrial-production-m-m": {
       "available_from": "2016-11-14",
@@ -9281,7 +9282,7 @@
       "kind": "event",
       "label": "SPPI y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/9efb9f2bc51850d653bbb579f87a7b93666d2da2e6edd1e5ad85cee7c27c1be4.json",
+      "path": "./calendar-history/series/04003697e102df61f72d80b15c6fdc5c0ddbeb15118adc406a0b41e87b6058ca.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -9304,7 +9305,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::JP::sppi-y-y",
-      "sha256": "9efb9f2bc51850d653bbb579f87a7b93666d2da2e6edd1e5ad85cee7c27c1be4"
+      "sha256": "04003697e102df61f72d80b15c6fdc5c0ddbeb15118adc406a0b41e87b6058ca"
     },
     "FF::JP::tankan-manufacturing-index": {
       "available_from": "2016-12-14",
@@ -9425,9 +9426,9 @@
       "kind": "event",
       "label": "Tokyo Core CPI y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/469a926cc585b9db97ec78aca41b042bfd03e3f1c0c053e3015fae199c2e9513.json",
+      "path": "./calendar-history/series/94d5ab2896c84052294e42e978d9065c471625eee2f8eda167ffa09c44e61873.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -9448,7 +9449,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::JP::tokyo-core-cpi-y-y",
-      "sha256": "469a926cc585b9db97ec78aca41b042bfd03e3f1c0c053e3015fae199c2e9513"
+      "sha256": "94d5ab2896c84052294e42e978d9065c471625eee2f8eda167ffa09c44e61873"
     },
     "FF::JP::trade-balance": {
       "available_from": "2016-11-21",
@@ -9497,9 +9498,9 @@
       "kind": "event",
       "label": "Unemployment Rate",
       "metric_key": null,
-      "path": "./calendar-history/series/762437576ad04c2755de722a1d0c13ae84189462fca945fada8943a54307ec10.json",
+      "path": "./calendar-history/series/40a68cead6008783764ed607f51d7de63be76a7f859414ef2877db8e3977c282.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -9520,7 +9521,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::JP::unemployment-rate",
-      "sha256": "762437576ad04c2755de722a1d0c13ae84189462fca945fada8943a54307ec10"
+      "sha256": "40a68cead6008783764ed607f51d7de63be76a7f859414ef2877db8e3977c282"
     },
     "FF::NZ::anz-business-confidence": {
       "available_from": "2016-11-30",
@@ -9533,7 +9534,7 @@
       "kind": "event",
       "label": "ANZ Business Confidence",
       "metric_key": null,
-      "path": "./calendar-history/series/ffa169b5ee98b22ce4f9015cba68e0dbd9187dd0ff0d60824b3663dfa4febc1a.json",
+      "path": "./calendar-history/series/d2413c18428ae5f065546f0cae9018a693c33b901fc2ba210eeb496d4a87b140.json",
       "quality": {
         "actual_count": 114,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -9556,7 +9557,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::NZ::anz-business-confidence",
-      "sha256": "ffa169b5ee98b22ce4f9015cba68e0dbd9187dd0ff0d60824b3663dfa4febc1a"
+      "sha256": "d2413c18428ae5f065546f0cae9018a693c33b901fc2ba210eeb496d4a87b140"
     },
     "FF::NZ::anz-commodity-prices-m-m": {
       "available_from": "2016-12-05",
@@ -10140,7 +10141,7 @@
       "kind": "event",
       "label": "Official Cash Rate",
       "metric_key": null,
-      "path": "./calendar-history/series/dba85aed7f03681ca4a2a3272c1a05470db2b16b37ed401f81e344f493f30290.json",
+      "path": "./calendar-history/series/ce99c2ece1e67c20770f5b96772af33d67f995b7f7975726727002790843ea81.json",
       "quality": {
         "actual_count": 70,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -10163,7 +10164,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::NZ::official-cash-rate",
-      "sha256": "dba85aed7f03681ca4a2a3272c1a05470db2b16b37ed401f81e344f493f30290"
+      "sha256": "ce99c2ece1e67c20770f5b96772af33d67f995b7f7975726727002790843ea81"
     },
     "FF::NZ::overseas-trade-index-q-q": {
       "available_from": "2016-12-01",
@@ -10598,7 +10599,7 @@
       "kind": "event",
       "label": "ADP Weekly Employment Change",
       "metric_key": null,
-      "path": "./calendar-history/series/ad8262940014d2e4b949c93f7bf868cc903be4ec48ff7d48567e64fc77737c9d.json",
+      "path": "./calendar-history/series/4351d0933c29648dec12d85a91e2d5be05da1da606e019aa9b943aacb326431f.json",
       "quality": {
         "actual_count": 51,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -10612,7 +10613,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::adp-weekly-employment-change",
-      "sha256": "ad8262940014d2e4b949c93f7bf868cc903be4ec48ff7d48567e64fc77737c9d"
+      "sha256": "4351d0933c29648dec12d85a91e2d5be05da1da606e019aa9b943aacb326431f"
     },
     "FF::US::advance-gdp-price-index-q-q": {
       "available_from": "2017-01-27",
@@ -10625,7 +10626,7 @@
       "kind": "event",
       "label": "Advance GDP Price Index q/q",
       "metric_key": null,
-      "path": "./calendar-history/series/8c24f91816cf0847b2e41dd4a0597e5bb0e2672e7ca4784a2bef07da2bee2fcc.json",
+      "path": "./calendar-history/series/23337f7ae2dc1010c4fcc03ed8bb1f4c2669123701f36dcd9b4d650a7dcbf5fc.json",
       "quality": {
         "actual_count": 39,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -10647,7 +10648,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::advance-gdp-price-index-q-q",
-      "sha256": "8c24f91816cf0847b2e41dd4a0597e5bb0e2672e7ca4784a2bef07da2bee2fcc"
+      "sha256": "23337f7ae2dc1010c4fcc03ed8bb1f4c2669123701f36dcd9b4d650a7dcbf5fc"
     },
     "FF::US::advance-gdp-q-q": {
       "available_from": "2017-01-27",
@@ -10660,7 +10661,7 @@
       "kind": "event",
       "label": "Advance GDP q/q",
       "metric_key": null,
-      "path": "./calendar-history/series/09559fc6927fe6be6a9d1bc6760773e9968b40385542cb63123ecc296ed3b501.json",
+      "path": "./calendar-history/series/23b44bd3b20fce145a2ff413e27dd9c7273edca96c8f1719be50b6fd5306ede8.json",
       "quality": {
         "actual_count": 39,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -10682,7 +10683,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::advance-gdp-q-q",
-      "sha256": "09559fc6927fe6be6a9d1bc6760773e9968b40385542cb63123ecc296ed3b501"
+      "sha256": "23b44bd3b20fce145a2ff413e27dd9c7273edca96c8f1719be50b6fd5306ede8"
     },
     "FF::US::building-permits": {
       "available_from": "2016-11-17",
@@ -10803,7 +10804,7 @@
       "kind": "event",
       "label": "CB Consumer Confidence",
       "metric_key": null,
-      "path": "./calendar-history/series/0b6a1effbad4bed64e481067b0e53e0cdf1f16cb5669f6a3ed0edbab33d12400.json",
+      "path": "./calendar-history/series/51816d2aa49d706d77f6fa125812445137415f8f11f5863bc348f36478a12ed8.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -10826,7 +10827,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::cb-consumer-confidence",
-      "sha256": "0b6a1effbad4bed64e481067b0e53e0cdf1f16cb5669f6a3ed0edbab33d12400"
+      "sha256": "51816d2aa49d706d77f6fa125812445137415f8f11f5863bc348f36478a12ed8"
     },
     "FF::US::cb-leading-index-m-m": {
       "available_from": "2016-11-19",
@@ -10911,9 +10912,9 @@
       "kind": "event",
       "label": "Chicago PMI",
       "metric_key": null,
-      "path": "./calendar-history/series/65a6600930f6e5e177e8f92528c419bbd6bdd949d57f1236b75678c316520975.json",
+      "path": "./calendar-history/series/aae7d8235572582ac321ce6bb5f0383d616f0f82a021302ee3a0014c917c3dac.json",
       "quality": {
-        "actual_count": 119,
+        "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 120,
         "frequency_validation": "NOT_VALIDATED",
@@ -10934,7 +10935,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::chicago-pmi",
-      "sha256": "65a6600930f6e5e177e8f92528c419bbd6bdd949d57f1236b75678c316520975"
+      "sha256": "aae7d8235572582ac321ce6bb5f0383d616f0f82a021302ee3a0014c917c3dac"
     },
     "FF::US::cleveland-fed-inflation-expectations": {
       "available_from": "2023-05-22",
@@ -11012,7 +11013,7 @@
       "kind": "event",
       "label": "Core Durable Goods Orders m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/1fc9050fd33d44e77dfb2e3c9781c6a28fc0c3aaf38e1240e1be2159fdd0f842.json",
+      "path": "./calendar-history/series/82bf73169ddcac868094f070b4597151f1a98b4b364fffc56580527f9d9c009f.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -11035,7 +11036,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::core-durable-goods-orders-m-m",
-      "sha256": "1fc9050fd33d44e77dfb2e3c9781c6a28fc0c3aaf38e1240e1be2159fdd0f842"
+      "sha256": "82bf73169ddcac868094f070b4597151f1a98b4b364fffc56580527f9d9c009f"
     },
     "FF::US::core-retail-sales-m-m": {
       "available_from": "2016-11-15",
@@ -11084,7 +11085,7 @@
       "kind": "event",
       "label": "Crude Oil Inventories",
       "metric_key": null,
-      "path": "./calendar-history/series/b764c9608b849305855420f31112f8c8f8e1f8d80641af8f7ffae7e8f97afc49.json",
+      "path": "./calendar-history/series/54376c398e736a7d5d96351d6d3cc63d8d1829ffd30f9c9ef083abb56181ebb7.json",
       "quality": {
         "actual_count": 520,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -11107,7 +11108,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::crude-oil-inventories",
-      "sha256": "b764c9608b849305855420f31112f8c8f8e1f8d80641af8f7ffae7e8f97afc49"
+      "sha256": "54376c398e736a7d5d96351d6d3cc63d8d1829ffd30f9c9ef083abb56181ebb7"
     },
     "FF::US::current-account": {
       "available_from": "2016-12-15",
@@ -11156,7 +11157,7 @@
       "kind": "event",
       "label": "Durable Goods Orders m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/1c5b7077f5a37e9bdd0c597083c05422512c6699a6535813d3be5e510ec1e8ff.json",
+      "path": "./calendar-history/series/e8c82799a5c3fbd8166795e4bf1417ebc1243c7a312d607988c39c64c56b2ecc.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -11179,7 +11180,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::durable-goods-orders-m-m",
-      "sha256": "1c5b7077f5a37e9bdd0c597083c05422512c6699a6535813d3be5e510ec1e8ff"
+      "sha256": "e8c82799a5c3fbd8166795e4bf1417ebc1243c7a312d607988c39c64c56b2ecc"
     },
     "FF::US::empire-state-manufacturing-index": {
       "available_from": "2016-11-15",
@@ -11471,7 +11472,7 @@
       "kind": "event",
       "label": "Goods Trade Balance",
       "metric_key": null,
-      "path": "./calendar-history/series/0b5ef48332fe5b7cd0fb230cdd261b8f98eeeb1dc3e7e2aebe6c6abb3d576890.json",
+      "path": "./calendar-history/series/15d75226186f3a0316b3aeaa5c9277899270cff231e9ee18553d9a27d32b1d73.json",
       "quality": {
         "actual_count": 117,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -11494,7 +11495,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::goods-trade-balance",
-      "sha256": "0b5ef48332fe5b7cd0fb230cdd261b8f98eeeb1dc3e7e2aebe6c6abb3d576890"
+      "sha256": "15d75226186f3a0316b3aeaa5c9277899270cff231e9ee18553d9a27d32b1d73"
     },
     "FF::US::housing-starts": {
       "available_from": "2016-11-17",
@@ -11543,7 +11544,7 @@
       "kind": "event",
       "label": "HPI m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/ef4abd301b175339612b4f94198ef0e6ba817c15578cddee16a862ba3dff1da7.json",
+      "path": "./calendar-history/series/c32445ddf26a723cb1830ea71b0f3d6bab5d792c55a5944fd86cdfed7b515dda.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -11566,7 +11567,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::hpi-m-m",
-      "sha256": "ef4abd301b175339612b4f94198ef0e6ba817c15578cddee16a862ba3dff1da7"
+      "sha256": "c32445ddf26a723cb1830ea71b0f3d6bab5d792c55a5944fd86cdfed7b515dda"
     },
     "FF::US::industrial-production-m-m": {
       "available_from": "2016-11-16",
@@ -11750,7 +11751,7 @@
       "kind": "event",
       "label": "Natural Gas Storage",
       "metric_key": null,
-      "path": "./calendar-history/series/89ba1cfac7e796ee77687d748cc91a142fbc7058876ea4bf4fb75f18e9d379d8.json",
+      "path": "./calendar-history/series/18b426eda3630d281cd4b20607eba1f831354b7badbf1efccee3a9ab69803d47.json",
       "quality": {
         "actual_count": 520,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -11773,7 +11774,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::natural-gas-storage",
-      "sha256": "89ba1cfac7e796ee77687d748cc91a142fbc7058876ea4bf4fb75f18e9d379d8"
+      "sha256": "18b426eda3630d281cd4b20607eba1f831354b7badbf1efccee3a9ab69803d47"
     },
     "FF::US::new-home-sales": {
       "available_from": "2016-11-24",
@@ -11786,7 +11787,7 @@
       "kind": "event",
       "label": "New Home Sales",
       "metric_key": null,
-      "path": "./calendar-history/series/aed1cd5aa517dd91c9d620b942e72f5594a712963fada0b386250007a541d6c6.json",
+      "path": "./calendar-history/series/7c4bc6e6cafc820c06f9a4c52484939580c35b2a17a307b8845386bd9a89bc0f.json",
       "quality": {
         "actual_count": 118,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -11809,7 +11810,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::new-home-sales",
-      "sha256": "aed1cd5aa517dd91c9d620b942e72f5594a712963fada0b386250007a541d6c6"
+      "sha256": "7c4bc6e6cafc820c06f9a4c52484939580c35b2a17a307b8845386bd9a89bc0f"
     },
     "FF::US::nfib-small-business-index": {
       "available_from": "2016-11-08",
@@ -12109,7 +12110,7 @@
       "kind": "event",
       "label": "Prelim Wholesale Inventories m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/ec39da1573035b684d05f2f6c53a1a9363de0a0d581771d5bff29caaa49578ae.json",
+      "path": "./calendar-history/series/e2fddf00a93ea42618949acbcf16ad36de170b20c068b3a4c15185fda9365934.json",
       "quality": {
         "actual_count": 112,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -12132,7 +12133,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::prelim-wholesale-inventories-m-m",
-      "sha256": "ec39da1573035b684d05f2f6c53a1a9363de0a0d581771d5bff29caaa49578ae"
+      "sha256": "e2fddf00a93ea42618949acbcf16ad36de170b20c068b3a4c15185fda9365934"
     },
     "FF::US::rcm-tipp-economic-optimism": {
       "available_from": "2016-12-07",
@@ -12217,7 +12218,7 @@
       "kind": "event",
       "label": "S&P/CS Composite-20 HPI y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/8f55411ec976e52fdd72e6fce8ca7718e34aab2e8eee6c19c4b52e50027de8a1.json",
+      "path": "./calendar-history/series/eb7360d4ceab35984e546cd681c9b9e8431a28c54e64779e37b39f91823553f9.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -12240,7 +12241,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::s-p-cs-composite-20-hpi-y-y",
-      "sha256": "8f55411ec976e52fdd72e6fce8ca7718e34aab2e8eee6c19c4b52e50027de8a1"
+      "sha256": "eb7360d4ceab35984e546cd681c9b9e8431a28c54e64779e37b39f91823553f9"
     },
     "FF::US::tic-long-term-purchases": {
       "available_from": "2016-11-17",
@@ -12461,9 +12462,9 @@
       "kind": "metric",
       "label": "BOJ overnight call rate target",
       "metric_key": "boj_policy_rate",
-      "path": "./calendar-history/series/c7b086778b7b15101aa53393cdeca494966c8bd4d8b2f5ca78b481204a5f7d34.json",
+      "path": "./calendar-history/series/d7038dec6c135d0ff755ea90169147e7433e0e2ed759c39397617c8cc3ddb83a.json",
       "quality": {
-        "actual_count": 80,
+        "actual_count": 81,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
         "consensus_count": 81,
         "frequency_validation": "NOT_VALIDATED",
@@ -12484,7 +12485,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "JP::boj-금융정책결정회의-결과::boj_policy_rate",
-      "sha256": "c7b086778b7b15101aa53393cdeca494966c8bd4d8b2f5ca78b481204a5f7d34"
+      "sha256": "d7038dec6c135d0ff755ea90169147e7433e0e2ed759c39397617c8cc3ddb83a"
     },
     "KR::2026년-3분기-실질-gdp": {
       "available_from": "2026-10-27",
@@ -12534,51 +12535,6 @@
       },
       "ref": "KR::2026년-3분기-실질-gdp::gdp_qoq",
       "sha256": "76bafd2c8e9ec0674f8ef765770e9082c1d886eabbb9581afb3664833a6e39ea"
-    },
-    "KR::2026년-4분기-실질-gdp": {
-      "available_from": null,
-      "available_to": null,
-      "category": "GDP",
-      "count": 0,
-      "country": "KR",
-      "event_title": "2026년 3/4분기 실질 GDP(속보)",
-      "kind": "event",
-      "label": "2026년 3/4분기 실질 GDP(속보)",
-      "path": "./calendar-history/series/ac6b5918f258f7520469ba3343b09758893b4e852a27f1907aac5a663e1d88a6.json",
-      "quality": {
-        "actual_count": 0,
-        "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 0,
-        "frequency_validation": "NOT_VALIDATED",
-        "max_observed_gap_days": 0,
-        "rows_by_year": {},
-        "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
-      },
-      "ref": "KR::2026년-4분기-실질-gdp",
-      "sha256": "ac6b5918f258f7520469ba3343b09758893b4e852a27f1907aac5a663e1d88a6"
-    },
-    "KR::2026년-4분기-실질-gdp::gdp_qoq": {
-      "available_from": null,
-      "available_to": null,
-      "category": "GDP",
-      "count": 0,
-      "country": "KR",
-      "event_title": "2026년 3/4분기 실질 GDP(속보)",
-      "kind": "metric",
-      "label": "GDP QoQ",
-      "metric_key": "gdp_qoq",
-      "path": "./calendar-history/series/b5197cfa7ce32eef7dcb27f878225920fc6c68ccc1ebc7e5f99f26ab768a5a3d.json",
-      "quality": {
-        "actual_count": 0,
-        "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 0,
-        "frequency_validation": "NOT_VALIDATED",
-        "max_observed_gap_days": 0,
-        "rows_by_year": {},
-        "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
-      },
-      "ref": "KR::2026년-4분기-실질-gdp::gdp_qoq",
-      "sha256": "b5197cfa7ce32eef7dcb27f878225920fc6c68ccc1ebc7e5f99f26ab768a5a3d"
     },
     "KR::고용동향": {
       "available_from": "2026-09-09",
@@ -13368,7 +13324,7 @@
       "kind": "metric",
       "label": "Employment Cost Index",
       "metric_key": "eci",
-      "path": "./calendar-history/series/9be49ca22a4d2aa2940f33b5939b780bdea89853121e312bf4fa81a76a5fc20e.json",
+      "path": "./calendar-history/series/ba9829ded21b505e2994460166c86b31b57b57194fa18c7c492b168e03371216.json",
       "quality": {
         "actual_count": 40,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13390,7 +13346,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::employment-cost-index::eci",
-      "sha256": "9be49ca22a4d2aa2940f33b5939b780bdea89853121e312bf4fa81a76a5fc20e"
+      "sha256": "ba9829ded21b505e2994460166c86b31b57b57194fa18c7c492b168e03371216"
     },
     "US::employment-situation": {
       "available_from": "2026-01-09",
@@ -13629,7 +13585,7 @@
       "kind": "metric",
       "label": "Federal Funds Rate",
       "metric_key": "fed_rate",
-      "path": "./calendar-history/series/bc4bfc3d60654aa9aaeab57910e9c5bd984ddcdcc557f3dea6eec8b424a74fd9.json",
+      "path": "./calendar-history/series/48119462ea10ab01060efa5234a0d881880d769f00afd26b21e31ceb7bc4e48d.json",
       "quality": {
         "actual_count": 83,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13652,7 +13608,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::fomc-정책결정::fed_rate",
-      "sha256": "bc4bfc3d60654aa9aaeab57910e9c5bd984ddcdcc557f3dea6eec8b424a74fd9"
+      "sha256": "48119462ea10ab01060efa5234a0d881880d769f00afd26b21e31ceb7bc4e48d"
     },
     "US::gdp-industries-corporate-profits-state-gdp-and-state-personal-income-quarter-state-pce": {
       "available_from": "2026-09-30",
@@ -13867,7 +13823,7 @@
       "kind": "metric",
       "label": "Core PCE MoM",
       "metric_key": "core_pce_mom",
-      "path": "./calendar-history/series/6dd56c9b832de21cc4c9df0426640d6ade0743558d0e35244350212aff2cf27d.json",
+      "path": "./calendar-history/series/49f2458ed1499e88323318e5702e82e543a205f7d4868bb9eb252a14527e0e1b.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13890,7 +13846,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::personal-income-and-outlays::core_pce_mom",
-      "sha256": "6dd56c9b832de21cc4c9df0426640d6ade0743558d0e35244350212aff2cf27d"
+      "sha256": "49f2458ed1499e88323318e5702e82e543a205f7d4868bb9eb252a14527e0e1b"
     },
     "US::personal-income-and-outlays::pce_yoy": {
       "available_from": "2026-09-30",
@@ -13927,7 +13883,7 @@
       "kind": "metric",
       "label": "Personal Income MoM",
       "metric_key": "personal_income",
-      "path": "./calendar-history/series/319b40b9087328f3c92407bcf8b1bb452aaae23d5f0c3e9e8d72caa2c7bf4855.json",
+      "path": "./calendar-history/series/9933766e96dabd585673991e7e8d26abf6a085eef3d3c7e04abf74a8b1dcbddc.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13950,7 +13906,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::personal-income-and-outlays::personal_income",
-      "sha256": "319b40b9087328f3c92407bcf8b1bb452aaae23d5f0c3e9e8d72caa2c7bf4855"
+      "sha256": "9933766e96dabd585673991e7e8d26abf6a085eef3d3c7e04abf74a8b1dcbddc"
     },
     "US::personal-income-and-outlays::personal_spending": {
       "available_from": "2016-11-30",
@@ -13962,7 +13918,7 @@
       "kind": "metric",
       "label": "Personal Spending MoM",
       "metric_key": "personal_spending",
-      "path": "./calendar-history/series/bfb77d5092789425ba5453de601ce1dd8eec4dc37c791882d5b98e8d9f488a66.json",
+      "path": "./calendar-history/series/2bea84f5e1cd7bb50d28daae90664a4d02d3bc3d6d6a8b093274add3b0e21a5f.json",
       "quality": {
         "actual_count": 234,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13985,7 +13941,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::personal-income-and-outlays::personal_spending",
-      "sha256": "bfb77d5092789425ba5453de601ce1dd8eec4dc37c791882d5b98e8d9f488a66"
+      "sha256": "2bea84f5e1cd7bb50d28daae90664a4d02d3bc3d6d6a8b093274add3b0e21a5f"
     },
     "US::producer-price-index": {
       "available_from": "2026-01-14",
@@ -14357,7 +14313,7 @@
       "event_title": "S&P Global US Manufacturing PMI",
       "kind": "event",
       "label": "S&P Global US Manufacturing PMI",
-      "path": "./calendar-history/series/b2f63b899faf753583bc0fbf613384beefcf270c11823ba4f084ccc89995ad7a.json",
+      "path": "./calendar-history/series/c37559d86a02b1594611f338307c22d897756ae917298b9011b2b6353f3c73c7.json",
       "quality": {
         "actual_count": 3,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14370,7 +14326,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::s-p-global-us-manufacturing-pmi",
-      "sha256": "b2f63b899faf753583bc0fbf613384beefcf270c11823ba4f084ccc89995ad7a"
+      "sha256": "c37559d86a02b1594611f338307c22d897756ae917298b9011b2b6353f3c73c7"
     },
     "US::s-p-global-us-manufacturing-pmi::sp_us_manufacturing_pmi": {
       "available_from": "2016-11-22",
@@ -14382,7 +14338,7 @@
       "kind": "metric",
       "label": "S&P Global US Manufacturing PMI",
       "metric_key": "sp_us_manufacturing_pmi",
-      "path": "./calendar-history/series/df9d3b8b670d0efda570efc2369237666d6f828832c68b6d198338c4c017b3a0.json",
+      "path": "./calendar-history/series/2d0adc0af50eec36fe6462aa4c2d9023434885693dd40bb4de2641a96e524eae.json",
       "quality": {
         "actual_count": 386,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14405,7 +14361,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::s-p-global-us-manufacturing-pmi::sp_us_manufacturing_pmi",
-      "sha256": "df9d3b8b670d0efda570efc2369237666d6f828832c68b6d198338c4c017b3a0"
+      "sha256": "2d0adc0af50eec36fe6462aa4c2d9023434885693dd40bb4de2641a96e524eae"
     },
     "US::s-p-global-us-services-composite-pmi": {
       "available_from": "2026-08-05",
@@ -14683,7 +14639,7 @@
       "kind": "metric",
       "label": "Initial Jobless Claims",
       "metric_key": "initial_claims",
-      "path": "./calendar-history/series/e13b9f3e95ed37fe421345a2e02ad1595e2137846ceeeab160f10bce4844e425.json",
+      "path": "./calendar-history/series/6ff7ddf3fb6f36931603183491c09f4073c11f5a368d3892417fa08c0245b805.json",
       "quality": {
         "actual_count": 517,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14706,7 +14662,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::u-s-initial-jobless-claims::initial_claims",
-      "sha256": "e13b9f3e95ed37fe421345a2e02ad1595e2137846ceeeab160f10bce4844e425"
+      "sha256": "6ff7ddf3fb6f36931603183491c09f4073c11f5a368d3892417fa08c0245b805"
     },
     "US::u-s-international-trade-in-goods-and-services": {
       "available_from": "2026-10-06",
@@ -14853,9 +14809,9 @@
     }
   },
   "series_completeness_status": "NOT_VALIDATED",
-  "series_count": 439,
-  "snapshot_id": "07bc437fccd558603b9d87a493999e5a94c40dd1fa8fcf7905146c7a90ea148d",
-  "source_sha256": "07bc437fccd558603b9d87a493999e5a94c40dd1fa8fcf7905146c7a90ea148d",
+  "series_count": 437,
+  "snapshot_id": "5a84b6ab7dcd05f88cccd0556e14af6b39620b58e91a1d992ac57cb2344a71c2",
+  "source_sha256": "5a84b6ab7dcd05f88cccd0556e14af6b39620b58e91a1d992ac57cb2344a71c2",
   "timezone": "Asia/Seoul",
   "window_days": 3650,
   "window_end": "2026-11-02",
