@@ -80,16 +80,43 @@ def merge_generated(path, local, remote):
             result['supplemental_refreshed_kst']=supplemental['supplemental_refreshed_kst']
             result['supplemental_refresh_contract']=supplemental.get('supplemental_refresh_contract')
             owned=('NASDAQ100','SP500','VIX','RUSSELL2000','DOW','NASDAQCOMPOSITE','DXY','USDKRW','USDJPY','JPYKRW','WTI','BRENT','NATGAS','GOLD','SILVER','COPPER','KOSPI','KOSDAQ','FEAR_GREED','JP2Y','JP5Y','JP10Y','JP30Y','JP_2S10S')
+            jp_owned={'JP2Y','JP5Y','JP10Y','JP30Y','JP_2S10S'}
             for key in owned:
-                rows=(supplemental.get('series') or {}).get(key)
-                if rows:
-                    result.setdefault('series',{})[key]=deepcopy(rows)
-                    result.setdefault('latest',{})[key]=rows[-1]['value']
+                if key in jp_owned:
+                    # An older supplemental attempt must not erase a newly
+                    # published official MOF date. Existing main observations
+                    # take precedence on overlap; append only missing dates.
+                    merged={}
+                    for doc in (local,remote):
+                        for row in (doc.get('series') or {}).get(key,[]):
+                            if row.get('date') and row.get('value') is not None:
+                                merged[str(row['date'])]=deepcopy(row)
+                    if merged:
+                        rows=[merged[d] for d in sorted(merged)]
+                        result.setdefault('series',{})[key]=rows
+                        result.setdefault('latest',{})[key]=rows[-1]['value']
+                else:
+                    rows=(supplemental.get('series') or {}).get(key)
+                    if rows:
+                        result.setdefault('series',{})[key]=deepcopy(rows)
+                        result.setdefault('latest',{})[key]=rows[-1]['value']
                 for section in ('cross_market_freshness_quality','market_supplement_quality'):
                     quality=(supplemental.get(section) or {}).get(key)
                     if quality is not None:result.setdefault(section,{})[key]=deepcopy(quality)
             jp_quality=(supplemental.get('cross_market_freshness_quality') or {}).get('JP_RATES')
-            if jp_quality is not None:result.setdefault('cross_market_freshness_quality',{})['JP_RATES']=deepcopy(jp_quality)
+            if jp_quality is not None:
+                quality=deepcopy(jp_quality)
+                dates=[str((result.get('series') or {}).get(k, [{}])[-1].get('date') or '') for k in ('JP2Y','JP5Y','JP10Y','JP30Y')]
+                latest_jp=min(dates) if all(dates) else ''
+                if latest_jp and latest_jp>str(quality.get('last_date') or ''):
+                    quality['last_date']=latest_jp
+                    expected=str(quality.get('expected_latest_weekday') or '')
+                    quality['status']='LIVE' if expected and latest_jp>=expected else 'LAGGING'
+                    # The merged observation may originate from either official
+                    # mirror; do not retain a stale mirror-specific source URL.
+                    quality.pop('source_url',None)
+                    quality['source']='Japan MOF official JGB CSV (merged)'
+                result.setdefault('cross_market_freshness_quality',{})['JP_RATES']=quality
             jp_source=(supplemental.get('sources') or {}).get('JP_JGB_CURRENT')
             if jp_source:result.setdefault('sources',{})['JP_JGB_CURRENT']=jp_source
         # A daily producer may advance generated_kst while the independent KR
