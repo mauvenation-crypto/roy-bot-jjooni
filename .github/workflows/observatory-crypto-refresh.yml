@@ -5,10 +5,13 @@ on:
     paths:
       - tools/add_observatory_equities.py
       - tests/test_observatory_crypto.py
+      - tools/probe_observatory_runtime.py
+      - tests/test_observatory_runtime_probe.py
       - .github/workflows/observatory-crypto-refresh.yml
   push:
     branches: [main]
     paths:
+      - tools/probe_observatory_runtime.py
       - tools/refresh_observatory_crypto.py
       - tools/add_observatory_equities.py
       - .github/workflows/observatory-crypto-refresh.yml
@@ -41,7 +44,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate BTC ETH source timestamps and fallback contracts
-        run: python -m unittest discover -s tests -p 'test_observatory_crypto.py' -v
+        run: |
+          python -m unittest discover -s tests -p 'test_observatory_crypto.py' -v
+          python -m unittest discover -s tests -p 'test_observatory_runtime_probe.py' -v
       - name: Verify actual CoinGecko USD spot and provider timestamps
         run: |
           python - <<'PY'
@@ -69,7 +74,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate crypto time basis and source failure retention
-        run: python -m unittest discover -s tests -p 'test_observatory_crypto.py' -v
+        run: |
+          python -m unittest discover -s tests -p 'test_observatory_crypto.py' -v
+          python -m unittest discover -s tests -p 'test_observatory_runtime_probe.py' -v
       - name: Collect and validate actual BTC ETH quotes
         id: collect
         continue-on-error: true
@@ -79,6 +86,8 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           python tools/publish_observatory_data.py --message 'data(observatory): refresh BTC ETH spot quotes' market-observatory/data/observatory.json
+      - name: Verify public API and actual deployed Pages observations
+        run: python tools/probe_observatory_runtime.py
       - name: Require both symbols healthy after publishing isolated results
         if: always()
         env:
