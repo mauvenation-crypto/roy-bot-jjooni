@@ -83,6 +83,16 @@ test('broker supplements exclude duplicate IDs, duplicate executions and non-bro
  assert.equal(S.withBrokerTrades(ledger([]),{recent_trades:[{...fresh,source:'MODEL'}, {...fresh,order_id:''}]}).rows.length,0);
 });
 
+test('large historical ledgers are parsed once when merging recent broker fills',()=>{
+ let reads=0;
+ const rows=Array.from({length:2000},(_,i)=>{const row=tr('TOSS','history-'+i,'BUY',i+1,20);Object.defineProperty(row,'side',{enumerable:true,get(){reads++;return 'BUY'}});return row});
+ const recent_trades=Array.from({length:100},(_,i)=>({...tr('TOSS','new-'+i,'BUY',3000+i,30),order_id:'new-'+i,source:'BROKER_DIRECT_TOSS_API_FAST'}));
+ const merged=S.withBrokerTrades(ledger(rows),{recent_trades});
+ assert.equal(merged.rows.length,2100);assert.equal(merged.broker_added,100);
+ assert.ok(reads<=2000,'historical executions must not be reparsed for each new fill');
+ assert.equal(S.withBrokerTrades(merged,{recent_trades}).rows.length,2100,'repeated refresh cannot duplicate fills');
+});
+
 test('shared confirmed FX resolves missing trade FX and stays fixed when spot FX changes',()=>{
  const C=c(),b=openingBook(C);C.accounts.TOSS.nav=100000;C.accounts.TOSS.positions=[p('TQQQ',3,60000,{currency:'USD',fx:9999})];
  const t=tr('TOSS','pinned','BUY',1,20,{fx:null,commission:.1});
