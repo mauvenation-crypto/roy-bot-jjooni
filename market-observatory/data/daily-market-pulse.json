@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_DAILY_MARKET_PULSE_V1",
-  "generated_kst": "2026-11-02T21:19:13+09:00",
+  "generated_kst": "2026-11-03T02:02:40+09:00",
   "market_date_us": "2026-10-30",
   "snapshot_status": "FINAL",
   "read_only": true,
@@ -143,16 +143,16 @@
         "source": "OBSERVATORY_CANONICAL"
       },
       "dxy": {
-        "value": 101.87999725,
-        "market_date": "2026-10-30",
-        "change_pct": -0.15680484962503627,
+        "value": 101.69599915,
+        "market_date": "2026-11-02",
+        "change_pct": -0.18060277283723503,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
       "usdkrw": {
-        "value": 1335.09997559,
-        "market_date": "2026-10-30",
-        "change_pct": -0.2152502221287711,
+        "value": 1344.43994141,
+        "market_date": "2026-11-02",
+        "change_pct": 0.4828144691470415,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
@@ -236,22 +236,11 @@
       "observed_at_kst": "2026-11-02T09:35:47+09:00"
     },
     "fear_greed": {
-      "score": 26.2,
+      "score": 28.6,
       "status": "OBSERVATORY_CANONICAL",
-      "market_date": "2026-10-30"
+      "market_date": "2026-11-02"
     },
     "calendar": [
-      {
-        "datetime_kst": "2026-11-02T23:45+09:00",
-        "country": "US",
-        "title": "S&P Global US Manufacturing PMI",
-        "importance": 2,
-        "previous": "56.0",
-        "consensus": "56.0",
-        "actual": null,
-        "source": "S&P Global Market Intelligence",
-        "source_url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
-      },
       {
         "datetime_kst": "2026-11-03T08:00+09:00",
         "country": "KR",
@@ -262,6 +251,39 @@
         "actual": null,
         "source": "KOSTAT",
         "source_url": null
+      },
+      {
+        "datetime_kst": "2026-11-04T00:00+09:00",
+        "country": "US",
+        "title": "Job Openings and Labor Turnover Survey",
+        "importance": 2,
+        "previous": "7.08M",
+        "consensus": "7.11M",
+        "actual": null,
+        "source": "BLS",
+        "source_url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
+      },
+      {
+        "datetime_kst": "2026-11-04T22:30+09:00",
+        "country": "US",
+        "title": "U.S. International Trade in Goods and Services, September 2026",
+        "importance": 2,
+        "previous": "-105.6B",
+        "consensus": "-107.9B",
+        "actual": null,
+        "source": "BEA",
+        "source_url": "https://www.forexfactory.com/calendar?week=nov1.2026"
+      },
+      {
+        "datetime_kst": "2026-11-04T23:45+09:00",
+        "country": "US",
+        "title": "S&P Global US Services & Composite PMI",
+        "importance": 3,
+        "previous": "57.9",
+        "consensus": "57.9",
+        "actual": null,
+        "source": "S&P Global Market Intelligence",
+        "source_url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
       }
     ],
     "canonical_context": {
@@ -668,18 +690,18 @@
     },
     {
       "market_date_us": "2026-10-30",
-      "generated_kst": "2026-11-02T21:19:13+09:00",
+      "generated_kst": "2026-11-03T02:02:40+09:00",
       "snapshot_status": "FINAL",
       "ndx": 28384.84960938,
-      "dxy": 101.87999725,
-      "usdkrw": 1335.09997559,
+      "dxy": 101.69599915,
+      "usdkrw": 1344.43994141,
       "us10y": 4.94,
       "sp500": 7580.06982422,
       "vix": 19.42000008,
       "breadth_ratio": null,
       "breadth_proxy_ratio": 0.7272727272727273,
       "top10_weight_pct": 65.77,
-      "fear_greed": 26.2,
+      "fear_greed": 28.6,
       "risk": "NEUTRAL"
     }
   ],
@@ -705,27 +727,27 @@
     "finviz_sp500_map": {
       "url": "https://finviz.com/map?t=sec",
       "status": "WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-02T21:19:13+09:00"
+      "observed_at_kst": "2026-11-03T02:02:40+09:00"
     },
     "finviz_calendar": {
       "url": "https://finviz.com/calendar.ashx",
       "status": "OBSERVATORY_CALENDAR_AVAILABLE_WEB_CROSSCHECK_REQUIRED",
-      "observed_at_kst": "2026-11-02T21:19:13+09:00"
+      "observed_at_kst": "2026-11-03T02:02:40+09:00"
     },
     "tradingview": {
       "url": "https://kr.tradingview.com/",
       "status": "OBSERVATORY_FALLBACK_WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-02T21:19:13+09:00"
+      "observed_at_kst": "2026-11-03T02:02:40+09:00"
     },
     "slickcharts_nasdaq100": {
       "url": "https://www.slickcharts.com/nasdaq100",
       "status": "LIVE",
-      "observed_at_kst": "2026-11-02T21:19:13+09:00"
+      "observed_at_kst": "2026-11-03T02:02:40+09:00"
     },
     "cnn_fear_greed": {
       "url": "https://edition.cnn.com/markets/fear-and-greed",
       "status": "OBSERVATORY_CANONICAL",
-      "observed_at_kst": "2026-11-02T21:19:13+09:00"
+      "observed_at_kst": "2026-11-03T02:02:40+09:00"
     }
   },
   "usage_contract": {
