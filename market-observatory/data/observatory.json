@@ -48,8 +48,7 @@
     "RUSSELL2000": 2805.87597656,
     "DOW": 51983.98046875,
     "NASDAQCOMPOSITE": 25164.36328125,
-    "SILVER": 50.65000153,
-    "JP20Y": 3.652
+    "SILVER": 50.65000153
   },
   "series": {
     "NASDAQ100": [
@@ -319027,92 +319026,6 @@
         "date": "2026-11-02",
         "value": 50.65000153
       }
-    ],
-    "JP20Y": [
-      {
-        "date": "2026-10-01",
-        "value": 3.91
-      },
-      {
-        "date": "2026-10-02",
-        "value": 3.925
-      },
-      {
-        "date": "2026-10-05",
-        "value": 3.935
-      },
-      {
-        "date": "2026-10-06",
-        "value": 3.946
-      },
-      {
-        "date": "2026-10-07",
-        "value": 3.943
-      },
-      {
-        "date": "2026-10-08",
-        "value": 3.916
-      },
-      {
-        "date": "2026-10-09",
-        "value": 3.853
-      },
-      {
-        "date": "2026-10-13",
-        "value": 3.841
-      },
-      {
-        "date": "2026-10-14",
-        "value": 3.849
-      },
-      {
-        "date": "2026-10-15",
-        "value": 3.786
-      },
-      {
-        "date": "2026-10-16",
-        "value": 3.803
-      },
-      {
-        "date": "2026-10-19",
-        "value": 3.776
-      },
-      {
-        "date": "2026-10-20",
-        "value": 3.723
-      },
-      {
-        "date": "2026-10-21",
-        "value": 3.726
-      },
-      {
-        "date": "2026-10-22",
-        "value": 3.707
-      },
-      {
-        "date": "2026-10-23",
-        "value": 3.645
-      },
-      {
-        "date": "2026-10-26",
-        "value": 3.63
-      },
-      {
-        "date": "2026-10-27",
-        "value": 3.638
-      },
-      {
-        "date": "2026-10-28",
-        "value": 3.685
-      },
-      {
-        "date": "2026-10-29",
-        "value": 3.701
-      },
-      {
-        "date": "2026-10-30",
-        "value": 3.652
-      }
     ]
   },
   "curves": {
@@ -319234,7 +319147,7 @@
     "drawdown_52w_pct": -10.359344186727204,
     "ma250": 27415.472859375237,
     "ndx": 27989.8203125,
-    "observed_at": "2026-11-03T08:58:14+09:00",
+    "observed_at": "2026-11-03T08:58:17+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -9.094216906793761,
     "previous_ma250": 27407.40533593772,
@@ -324623,14 +324536,6 @@
       "last_date": "2026-11-02",
       "target_session": "2026-11-02"
     },
-    "JP_RATES": {
-      "status": "LIVE",
-      "source": "Japan MOF current JGB yield CSV",
-      "source_url": "https://www.mof.go.jp/jgbs/reference/interest_rate/jgbcm.csv",
-      "last_date": "2026-10-30",
-      "expected_latest_weekday": "2026-10-30",
-      "timing_note": "Japanese holidays or publication delays can cause a nonfatal LAGGING warning"
-    },
     "KOSPI": {
       "status": "LIVE",
       "source": "Naver Finance index daily",
@@ -324647,6 +324552,14 @@
       "status": "LIVE",
       "source": "FearAndGreedGraph public JSON",
       "last_date": "2026-11-02"
+    },
+    "JP_RATES": {
+      "status": "LIVE",
+      "source": "Japan MOF current JGB yield CSV",
+      "source_url": "https://www.mof.go.jp/jgbs/reference/interest_rate/jgbcm.csv",
+      "last_date": "2026-10-30",
+      "expected_latest_weekday": "2026-10-30",
+      "timing_note": "Japanese holidays or publication delays can cause a nonfatal LAGGING warning"
     }
   },
   "kr_rates_refreshed_kst": "2026-11-03T08:57:59+09:00",
