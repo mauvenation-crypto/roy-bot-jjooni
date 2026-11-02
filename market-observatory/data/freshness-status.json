@@ -1,14 +1,16 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-03T08:14:45+09:00",
+  "generated_kst": "2026-11-03T08:44:39+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
     "watchdog_scope": "US_CLOSE_RECOVERY_ONLY"
   },
-  "overall": "LIVE",
+  "overall": "LIVE_WITH_WARNINGS",
   "critical_bad": [],
-  "warnings": [],
+  "warnings": [
+    "calendar"
+  ],
   "watchdog_required": false,
   "session_alignment": {
     "expected_session": "2026-11-02",
@@ -111,7 +113,7 @@
       "state": "LIVE",
       "generated_kst": "2026-11-03T08:14:42+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=7s · ETHUSD age=31s",
+      "detail": "BTCUSD age=1800s · ETHUSD age=1824s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
@@ -182,20 +184,20 @@
     },
     "calendar": {
       "label": "Economic Calendar",
-      "state": "LIVE",
-      "generated_kst": "2026-11-03T06:37:22+09:00",
-      "as_of": "2026-11-03T06:37:22+09:00",
-      "detail": "events=189 · overdue=0 · pending=0 · source_failures=0 · official_probe_blocked=0 · 기존 공식 검증 96건 · 이번 원천 조회 NOT_CHECKED",
+      "state": "PENDING",
+      "generated_kst": "2026-11-03T08:44:32+09:00",
+      "as_of": "2026-11-03T08:44:32+09:00",
+      "detail": "events=189 · overdue=0 · pending=1 · source_failures=0 · official_probe_blocked=0 · 기존 공식 검증 96건 · 이번 원천 조회 NOT_CHECKED",
       "source": "economic-calendar.json",
       "critical": false,
       "official_probe_scope": "LATEST_COLLECTION_ATTEMPTS_ONLY",
       "official_verification_evidence": {
         "scope": "STORED_EVENT_PROVENANCE_NOT_CURRENT_NETWORK_CHECK",
         "verified_event_count": 96,
-        "latest_verified_kst": "2026-11-02T15:15:33+09:00",
+        "latest_verified_kst": "2026-11-03T07:29:05+09:00",
         "note": "기존 공식 검증 이력 · 이번 실행의 원천 접속 성공을 뜻하지 않습니다."
       },
-      "actual_completeness_state": "LIVE",
+      "actual_completeness_state": "PENDING",
       "official_probe_state": "NOT_CHECKED",
       "official_probe_failure_count": 0,
       "official_probe_unresolved_failure_count": 0,
@@ -206,7 +208,7 @@
     "audit": {
       "label": "Full Data Audit",
       "state": "PASS",
-      "generated_kst": "2026-11-03T08:14:45+09:00",
+      "generated_kst": "2026-11-03T08:44:38+09:00",
       "as_of": "2026-11-02",
       "detail": "critical=0 · warnings=0",
       "source": "data-audit.json",
