@@ -1,14 +1,17 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-02T16:56:56+09:00",
+  "generated_kst": "2026-11-02T17:59:55+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
     "watchdog_scope": "US_CLOSE_RECOVERY_ONLY"
   },
-  "overall": "LIVE",
+  "overall": "LIVE_WITH_WARNINGS",
   "critical_bad": [],
-  "warnings": [],
+  "warnings": [
+    "crypto",
+    "audit"
+  ],
   "watchdog_required": false,
   "session_alignment": {
     "expected_session": "2026-10-30",
@@ -108,19 +111,19 @@
     },
     "crypto": {
       "label": "Crypto",
-      "state": "LIVE",
+      "state": "STALE",
       "generated_kst": "2026-11-02T16:56:41+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=41s · ETHUSD age=17s",
+      "detail": "BTCUSD age=3820s · ETHUSD age=3796s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
         "BTCUSD": {
-          "status": "LIVE",
+          "status": "STALE",
           "quote_as_of_kst": "2026-11-02T16:56:15+09:00"
         },
         "ETHUSD": {
-          "status": "LIVE",
+          "status": "STALE",
           "quote_as_of_kst": "2026-11-02T16:56:39+09:00"
         }
       },
@@ -183,8 +186,8 @@
     "calendar": {
       "label": "Economic Calendar",
       "state": "LIVE",
-      "generated_kst": "2026-11-02T16:56:31+09:00",
-      "as_of": "2026-11-02T16:56:31+09:00",
+      "generated_kst": "2026-11-02T17:59:50+09:00",
+      "as_of": "2026-11-02T17:59:50+09:00",
       "detail": "events=189 · overdue=0 · pending=0 · source_failures=0 · official_probe_blocked=0 · 기존 공식 검증 96건 · 이번 원천 조회 NOT_CHECKED",
       "source": "economic-calendar.json",
       "critical": false,
@@ -205,10 +208,10 @@
     },
     "audit": {
       "label": "Full Data Audit",
-      "state": "PASS",
-      "generated_kst": "2026-11-02T16:56:56+09:00",
+      "state": "WARN",
+      "generated_kst": "2026-11-02T17:59:55+09:00",
       "as_of": "2026-10-30",
-      "detail": "critical=0 · warnings=0",
+      "detail": "critical=0 · warnings=3",
       "source": "data-audit.json",
       "critical": true
     },
