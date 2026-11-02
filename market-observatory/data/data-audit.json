@@ -1,23 +1,23 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-02T16:56:16+09:00",
-  "overall": "PASS",
+  "generated_kst": "2026-11-02T16:56:52+09:00",
+  "overall": "WARN",
   "critical_count": 0,
-  "warning_count": 0,
+  "warning_count": 3,
   "observatory_session": "2026-10-30",
   "file_status": {
     "observatory": {
-      "generated_kst": "2026-11-02T15:59:01+09:00",
+      "generated_kst": "2026-11-02T16:56:26+09:00",
       "session": "2026-10-30",
       "schema": "JJOONI_MARKET_OBSERVATORY_V1"
     },
     "daily_pulse": {
-      "generated_kst": "2026-11-02T15:59:36+09:00",
+      "generated_kst": "2026-11-02T16:56:51+09:00",
       "session": "2026-10-30",
       "snapshot_status": "FINAL"
     },
     "public_tripod": {
-      "generated_kst": "2026-11-02T15:59:36+09:00",
+      "generated_kst": "2026-11-02T16:56:51+09:00",
       "session": "2026-10-30",
       "ok": true,
       "target": "QQQ 50% + QLD 50%"
@@ -33,7 +33,7 @@
       "audit_state": "LIVE"
     },
     "calendar": {
-      "generated_kst": "2026-11-02T15:59:07+09:00",
+      "generated_kst": "2026-11-02T16:56:31+09:00",
       "events": 189,
       "actual_freshness": "LIVE",
       "overdue_count": 0,
@@ -43,7 +43,7 @@
       "failed_sources": []
     },
     "sector": {
-      "generated_kst": "2026-11-02T15:59:17+09:00",
+      "generated_kst": "2026-11-02T16:56:41+09:00",
       "as_of_date": "2026-11-02",
       "priced_count": 46
     },
@@ -68,7 +68,7 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-02T16:56:15+09:00",
+      "generated_kst": "2026-11-02T16:55:26+09:00",
       "overall": "LIVE",
       "critical_bad": [],
       "warnings": []
@@ -155,7 +155,7 @@
       "critical": true,
       "items": {
         "KOSPI": {
-          "count": 61,
+          "count": 60,
           "last_date": "2026-11-02",
           "last_value": 5859.08,
           "group": "kr_equity",
@@ -163,7 +163,7 @@
           "latest_matches": true
         },
         "KOSDAQ": {
-          "count": 61,
+          "count": 60,
           "last_date": "2026-11-02",
           "last_value": 734.36,
           "group": "kr_equity",
@@ -175,41 +175,41 @@
       "latest_mismatch": []
     },
     "fx": {
-      "state": "LIVE",
+      "state": "AHEAD_OF_ANCHOR",
       "anchor": "2026-10-30",
       "allow_lag_days": 1,
       "critical": false,
       "items": {
         "DXY": {
-          "count": 756,
-          "last_date": "2026-10-30",
-          "last_value": 101.87999725,
+          "count": 754,
+          "last_date": "2026-11-02",
+          "last_value": 101.7559967,
           "group": "fx",
-          "latest_value": 101.87999725,
+          "latest_value": 101.7559967,
           "latest_matches": true
         },
         "USDKRW": {
-          "count": 781,
-          "last_date": "2026-10-30",
-          "last_value": 1335.09997559,
+          "count": 778,
+          "last_date": "2026-11-02",
+          "last_value": 1343.68005371,
           "group": "fx",
-          "latest_value": 1335.09997559,
+          "latest_value": 1343.68005371,
           "latest_matches": true
         },
         "USDJPY": {
-          "count": 780,
-          "last_date": "2026-10-29",
-          "last_value": 157.80400085,
+          "count": 778,
+          "last_date": "2026-11-02",
+          "last_value": 157.70899963,
           "group": "fx",
-          "latest_value": 157.80400085,
+          "latest_value": 157.70899963,
           "latest_matches": true
         },
         "JPYKRW": {
-          "count": 780,
-          "last_date": "2026-10-29",
-          "last_value": 8.47339344,
+          "count": 778,
+          "last_date": "2026-11-02",
+          "last_value": 8.5,
           "group": "fx",
-          "latest_value": 8.47339344,
+          "latest_value": 8.5,
           "latest_matches": true
         }
       },
@@ -217,33 +217,33 @@
       "latest_mismatch": []
     },
     "energy": {
-      "state": "LIVE",
+      "state": "AHEAD_OF_ANCHOR",
       "anchor": "2026-10-30",
       "allow_lag_days": 1,
       "critical": false,
       "items": {
         "WTI": {
-          "count": 756,
-          "last_date": "2026-10-30",
-          "last_value": 104.12000275,
+          "count": 754,
+          "last_date": "2026-11-02",
+          "last_value": 100.95999908,
           "group": "energy",
-          "latest_value": 104.12000275,
+          "latest_value": 100.95999908,
           "latest_matches": true
         },
         "BRENT": {
-          "count": 757,
-          "last_date": "2026-10-30",
-          "last_value": 117.63999939,
+          "count": 755,
+          "last_date": "2026-11-02",
+          "last_value": 110.5,
           "group": "energy",
-          "latest_value": 117.63999939,
+          "latest_value": 110.5,
           "latest_matches": true
         },
         "NATGAS": {
-          "count": 757,
-          "last_date": "2026-10-30",
-          "last_value": 2.898,
+          "count": 755,
+          "last_date": "2026-11-02",
+          "last_value": 2.89599991,
           "group": "energy",
-          "latest_value": 2.898,
+          "latest_value": 2.89599991,
           "latest_matches": true
         }
       },
@@ -251,33 +251,33 @@
       "latest_mismatch": []
     },
     "metals": {
-      "state": "LIVE",
+      "state": "AHEAD_OF_ANCHOR",
       "anchor": "2026-10-30",
       "allow_lag_days": 1,
       "critical": false,
       "items": {
         "GOLD": {
-          "count": 757,
-          "last_date": "2026-10-30",
-          "last_value": 3898.89990234,
+          "count": 755,
+          "last_date": "2026-11-02",
+          "last_value": 3908.5,
           "group": "metals",
-          "latest_value": 3898.89990234,
+          "latest_value": 3908.5,
           "latest_matches": true
         },
         "SILVER": {
-          "count": 756,
-          "last_date": "2026-10-30",
-          "last_value": 49.09700012,
+          "count": 754,
+          "last_date": "2026-11-02",
+          "last_value": 50.29000092,
           "group": "metals",
-          "latest_value": 49.09700012,
+          "latest_value": 50.29000092,
           "latest_matches": true
         },
         "COPPER": {
-          "count": 757,
-          "last_date": "2026-10-30",
-          "last_value": 6.45849991,
+          "count": 755,
+          "last_date": "2026-11-02",
+          "last_value": 6.51249981,
           "group": "metals",
-          "latest_value": 6.45849991,
+          "latest_value": 6.51249981,
           "latest_matches": true
         }
       },
@@ -349,51 +349,51 @@
       "critical": false,
       "items": {
         "KR3Y": {
-          "count": 282,
-          "last_date": "2026-10-30",
-          "last_value": 3.715,
+          "count": 283,
+          "last_date": "2026-11-02",
+          "last_value": 3.74,
           "group": "kr_rates",
-          "latest_value": 3.715,
+          "latest_value": 3.74,
           "latest_matches": true
         },
         "KR5Y": {
-          "count": 282,
-          "last_date": "2026-10-30",
-          "last_value": 3.865,
+          "count": 283,
+          "last_date": "2026-11-02",
+          "last_value": 3.892,
           "group": "kr_rates",
-          "latest_value": 3.865,
+          "latest_value": 3.892,
           "latest_matches": true
         },
         "KR10Y": {
-          "count": 282,
-          "last_date": "2026-10-30",
-          "last_value": 4.008,
+          "count": 283,
+          "last_date": "2026-11-02",
+          "last_value": 4.034,
           "group": "kr_rates",
-          "latest_value": 4.008,
+          "latest_value": 4.034,
           "latest_matches": true
         },
         "KR20Y": {
-          "count": 282,
-          "last_date": "2026-10-30",
-          "last_value": 4.106,
+          "count": 283,
+          "last_date": "2026-11-02",
+          "last_value": 4.115,
           "group": "kr_rates",
-          "latest_value": 4.106,
+          "latest_value": 4.115,
           "latest_matches": true
         },
         "KR30Y": {
-          "count": 282,
-          "last_date": "2026-10-30",
-          "last_value": 4.124,
+          "count": 283,
+          "last_date": "2026-11-02",
+          "last_value": 4.131,
           "group": "kr_rates",
-          "latest_value": 4.124,
+          "latest_value": 4.131,
           "latest_matches": true
         },
         "KR_3S10S": {
-          "count": 282,
-          "last_date": "2026-10-30",
-          "last_value": 0.293,
+          "count": 283,
+          "last_date": "2026-11-02",
+          "last_value": 0.294,
           "group": "kr_rates",
-          "latest_value": 0.293,
+          "latest_value": 0.294,
           "latest_matches": true
         }
       },
@@ -450,7 +450,7 @@
       "missing": [],
       "latest_mismatch": [],
       "expected_latest_weekday": "2026-10-30",
-      "published_source_status": "LIVE"
+      "published_source_status": null
     },
     "crypto": {
       "state": "LIVE",
@@ -461,17 +461,17 @@
         "BTCUSD": {
           "count": 1098,
           "last_date": "2026-11-02",
-          "last_value": 78109.0,
+          "last_value": 78042.0,
           "group": "crypto",
-          "latest_value": 78109.0,
+          "latest_value": 78042.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1098,
           "last_date": "2026-11-02",
-          "last_value": 2283.6,
+          "last_value": 2282.67,
           "group": "crypto",
-          "latest_value": 2283.6,
+          "latest_value": 2282.67,
           "latest_matches": true
         }
       },
@@ -515,19 +515,35 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-02T15:58:36+09:00",
-      "current_quote_age_seconds": 3460,
-      "captured_quote_age_seconds": 39
+      "quote_as_of_kst": "2026-11-02T16:56:15+09:00",
+      "current_quote_age_seconds": 37,
+      "captured_quote_age_seconds": 26
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-02T15:58:36+09:00",
-      "current_quote_age_seconds": 3460,
-      "captured_quote_age_seconds": 39
+      "quote_as_of_kst": "2026-11-02T16:56:39+09:00",
+      "current_quote_age_seconds": 13,
+      "captured_quote_age_seconds": 2
     }
   },
-  "issues": [],
+  "issues": [
+    {
+      "code": "GROUP_FX_AHEAD_OF_ANCHOR",
+      "severity": "WARN",
+      "detail": "anchor=2026-10-30 dates=DXY:2026-11-02,USDKRW:2026-11-02,USDJPY:2026-11-02,JPYKRW:2026-11-02"
+    },
+    {
+      "code": "GROUP_ENERGY_AHEAD_OF_ANCHOR",
+      "severity": "WARN",
+      "detail": "anchor=2026-10-30 dates=WTI:2026-11-02,BRENT:2026-11-02,NATGAS:2026-11-02"
+    },
+    {
+      "code": "GROUP_METALS_AHEAD_OF_ANCHOR",
+      "severity": "WARN",
+      "detail": "anchor=2026-10-30 dates=GOLD:2026-11-02,SILVER:2026-11-02,COPPER:2026-11-02"
+    }
+  ],
   "contracts": {
     "completed_session": "CORE_US_AND_US_SUPPLEMENT_MUST_MATCH_OBSERVATORY_SESSION",
     "continuous_daily": "FX_ENERGY_METALS_MAY_LAG_CORE_BY_AT_MOST_1_CALENDAR_DAY",
