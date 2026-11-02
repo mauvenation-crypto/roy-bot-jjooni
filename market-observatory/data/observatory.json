@@ -43,8 +43,8 @@
     "ETHUSD": 2282.22,
     "FEAR_GREED": 26.2,
     "FEAR_GREED_RATING": "FEAR",
-    "KOSPI": 5871.57,
-    "KOSDAQ": 734.62,
+    "KOSPI": 5859.08,
+    "KOSDAQ": 734.36,
     "RUSSELL2000": 2811.84008789,
     "DOW": 51770.30859375,
     "NASDAQCOMPOSITE": 25437.0,
@@ -306792,7 +306792,7 @@
       },
       {
         "date": "2026-11-02",
-        "value": 5871.57
+        "value": 5859.08
       }
     ],
     "KOSDAQ": [
@@ -307038,7 +307038,7 @@
       },
       {
         "date": "2026-11-02",
-        "value": 734.62
+        "value": 734.36
       }
     ],
     "RUSSELL2000": [
@@ -324390,9 +324390,9 @@
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
       "price": 78074.0,
       "quote_as_of_kst": "2026-11-02T15:57:25+09:00",
-      "captured_kst": "2026-11-02T15:58:44+09:00",
+      "captured_kst": "2026-11-02T15:58:56+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 79,
+      "quote_age_seconds": 91,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     },
@@ -324402,9 +324402,9 @@
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
       "price": 2282.22,
       "quote_as_of_kst": "2026-11-02T15:57:39+09:00",
-      "captured_kst": "2026-11-02T15:58:44+09:00",
+      "captured_kst": "2026-11-02T15:58:56+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 65,
+      "quote_age_seconds": 77,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     }
@@ -324664,7 +324664,7 @@
       "status": "LIVE"
     }
   },
-  "kr_rates_refreshed_kst": "2026-11-02T15:31:36+09:00",
+  "kr_rates_refreshed_kst": "2026-11-02T15:59:00+09:00",
   "quality": {
     "kr_rates": {
       "state": "PASS",
@@ -324763,8 +324763,8 @@
   "equity_session_contract": "KR_TRADING_DATE_NAVER_PRIMARY_YAHOO_FALLBACK_V2",
   "market_supplement_contract": "US_SUPPLEMENT_MATCH_COMPLETED_CORE_SESSION_V3",
   "equity_enriched_kst": "2026-11-02T15:27:09+09:00",
-  "supplemental_refreshed_kst": "2026-11-02T15:31:32+09:00",
+  "supplemental_refreshed_kst": "2026-11-02T15:58:56+09:00",
   "supplemental_refresh_contract": "ALL_MARKET_FAMILIES_COMPLETED_SESSION_PLUS_24X7_CRYPTO_V1",
-  "us_rates_refreshed_kst": "2026-11-02T15:31:29+09:00",
-  "crypto_enriched_kst": "2026-11-02T15:58:45+09:00"
+  "us_rates_refreshed_kst": "2026-11-02T15:58:53+09:00",
+  "crypto_enriched_kst": "2026-11-02T15:58:56+09:00"
 }
