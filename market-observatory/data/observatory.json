@@ -33,18 +33,18 @@
     "US10Y_OFFICIAL": 4.94,
     "US30Y_OFFICIAL": 5.31,
     "US_2S10S": 0.38,
-    "JP2Y": 1.901,
-    "JP5Y": 2.285,
-    "JP10Y": 2.876,
-    "JP30Y": 3.956,
-    "JP_2S10S": 0.975,
-    "BTCUSD": 78419.0,
-    "ETHUSD": 2290.63,
+    "JP2Y": 1.875,
+    "JP5Y": 2.237,
+    "JP10Y": 2.817,
+    "JP30Y": 3.908,
+    "JP_2S10S": 0.942,
+    "BTCUSD": 78383.0,
+    "ETHUSD": 2292.0,
     "KR_US_10Y": -0.932,
     "FEAR_GREED": 26.2,
     "FEAR_GREED_RATING": "FEAR",
-    "KOSPI": 5730.74,
-    "KOSDAQ": 724.38,
+    "KOSPI": 5809.57,
+    "KOSDAQ": 733.72,
     "RUSSELL2000": 2811.84008789,
     "DOW": 51770.30859375,
     "NASDAQCOMPOSITE": 25437.0,
@@ -127381,6 +127381,10 @@
       {
         "date": "2026-10-29",
         "value": 1.901
+      },
+      {
+        "date": "2026-10-30",
+        "value": 1.875
       }
     ],
     "JP5Y": [
@@ -180699,6 +180703,10 @@
       {
         "date": "2026-10-29",
         "value": 2.285
+      },
+      {
+        "date": "2026-10-30",
+        "value": 2.237
       }
     ],
     "JP10Y": [
@@ -220573,6 +220581,10 @@
       {
         "date": "2026-10-29",
         "value": 2.876
+      },
+      {
+        "date": "2026-10-30",
+        "value": 2.817
       }
     ],
     "JP30Y": [
@@ -247183,6 +247195,10 @@
       {
         "date": "2026-10-29",
         "value": 3.956
+      },
+      {
+        "date": "2026-10-30",
+        "value": 3.908
       }
     ],
     "JP_2S10S": [
@@ -287057,6 +287073,10 @@
       {
         "date": "2026-10-29",
         "value": 0.975
+      },
+      {
+        "date": "2026-10-30",
+        "value": 0.942
       }
     ],
     "BTCUSD": [
@@ -293647,10 +293667,10 @@
       },
       {
         "date": "2026-11-02",
-        "value": 78419.0,
+        "value": 78383.0,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-02T11:38:29+09:00",
+        "observed_kst": "2026-11-02T11:42:52+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -300243,10 +300263,10 @@
       },
       {
         "date": "2026-11-02",
-        "value": 2290.63,
+        "value": 2292.0,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-02T11:38:23+09:00",
+        "observed_kst": "2026-11-02T11:43:06+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -306769,6 +306789,10 @@
       {
         "date": "2026-10-30",
         "value": 5730.74
+      },
+      {
+        "date": "2026-11-02",
+        "value": 5809.57
       }
     ],
     "KOSDAQ": [
@@ -307011,6 +307035,10 @@
       {
         "date": "2026-10-30",
         "value": 724.38
+      },
+      {
+        "date": "2026-11-02",
+        "value": 733.72
       }
     ],
     "RUSSELL2000": [
@@ -324360,11 +324388,11 @@
       "symbol": "BTC-USD",
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
-      "price": 78419.0,
-      "quote_as_of_kst": "2026-11-02T11:38:29+09:00",
-      "captured_kst": "2026-11-02T11:39:36+09:00",
+      "price": 78383.0,
+      "quote_as_of_kst": "2026-11-02T11:42:52+09:00",
+      "captured_kst": "2026-11-02T11:44:09+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 67,
+      "quote_age_seconds": 77,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     },
@@ -324372,11 +324400,11 @@
       "symbol": "ETH-USD",
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
-      "price": 2290.63,
-      "quote_as_of_kst": "2026-11-02T11:38:23+09:00",
-      "captured_kst": "2026-11-02T11:39:36+09:00",
+      "price": 2292.0,
+      "quote_as_of_kst": "2026-11-02T11:43:06+09:00",
+      "captured_kst": "2026-11-02T11:44:09+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 73,
+      "quote_age_seconds": 63,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     }
@@ -324389,7 +324417,7 @@
       "item_code": "010200000",
       "last_date": "2026-10-30",
       "age_days": 3,
-      "verified_rows": 20,
+      "verified_rows": 10,
       "api_mode": "sample",
       "fetch_succeeded": true
     },
@@ -324400,7 +324428,7 @@
       "item_code": "010200001",
       "last_date": "2026-10-30",
       "age_days": 3,
-      "verified_rows": 20,
+      "verified_rows": 10,
       "api_mode": "sample",
       "fetch_succeeded": true
     },
@@ -324411,7 +324439,7 @@
       "item_code": "010210000",
       "last_date": "2026-10-30",
       "age_days": 3,
-      "verified_rows": 20,
+      "verified_rows": 10,
       "api_mode": "sample",
       "fetch_succeeded": true
     },
@@ -324422,7 +324450,7 @@
       "item_code": "010220000",
       "last_date": "2026-10-30",
       "age_days": 3,
-      "verified_rows": 20,
+      "verified_rows": 10,
       "api_mode": "sample",
       "fetch_succeeded": true
     },
@@ -324433,7 +324461,7 @@
       "item_code": "010230000",
       "last_date": "2026-10-30",
       "age_days": 3,
-      "verified_rows": 20,
+      "verified_rows": 10,
       "api_mode": "sample",
       "fetch_succeeded": true
     },
@@ -324559,13 +324587,13 @@
     "KOSPI": {
       "status": "LIVE",
       "source": "Naver Finance index daily",
-      "last_date": "2026-10-30",
+      "last_date": "2026-11-02",
       "source_url": "https://m.stock.naver.com/api/index/KOSPI/price?pageSize=60&page=1"
     },
     "KOSDAQ": {
       "status": "LIVE",
       "source": "Naver Finance index daily",
-      "last_date": "2026-10-30",
+      "last_date": "2026-11-02",
       "source_url": "https://m.stock.naver.com/api/index/KOSDAQ/price?pageSize=60&page=1"
     },
     "FEAR_GREED": {
@@ -324577,8 +324605,8 @@
       "status": "LIVE",
       "source": "Japan MOF current JGB yield CSV",
       "source_url": "https://www.mof.go.jp/jgbs/reference/interest_rate/jgbcm.csv",
-      "last_date": "2026-10-29",
-      "expected_latest_weekday": "2026-10-29",
+      "last_date": "2026-10-30",
+      "expected_latest_weekday": "2026-10-30",
       "timing_note": "Japanese holidays or publication delays can cause a nonfatal LAGGING warning"
     },
     "US2Y": {
@@ -324636,7 +324664,7 @@
       "status": "LIVE"
     }
   },
-  "kr_rates_refreshed_kst": "2026-11-02T11:39:23+09:00",
+  "kr_rates_refreshed_kst": "2026-11-02T11:44:13+09:00",
   "quality": {
     "kr_rates": {
       "state": "PASS",
@@ -324698,13 +324726,13 @@
     "KOSPI": {
       "status": "LIVE",
       "source": "Naver Finance index daily",
-      "last_date": "2026-10-30",
+      "last_date": "2026-11-02",
       "source_url": "https://m.stock.naver.com/api/index/KOSPI/price?pageSize=60&page=1"
     },
     "KOSDAQ": {
       "status": "LIVE",
       "source": "Naver Finance index daily",
-      "last_date": "2026-10-30",
+      "last_date": "2026-11-02",
       "source_url": "https://m.stock.naver.com/api/index/KOSDAQ/price?pageSize=60&page=1"
     },
     "RUSSELL2000": {
@@ -324735,8 +324763,8 @@
   "equity_session_contract": "KR_TRADING_DATE_NAVER_PRIMARY_YAHOO_FALLBACK_V2",
   "market_supplement_contract": "US_SUPPLEMENT_MATCH_COMPLETED_CORE_SESSION_V3",
   "equity_enriched_kst": "2026-11-02T11:39:37+09:00",
-  "supplemental_refreshed_kst": "2026-11-02T08:44:03+09:00",
+  "supplemental_refreshed_kst": "2026-11-02T11:44:09+09:00",
   "supplemental_refresh_contract": "ALL_MARKET_FAMILIES_COMPLETED_SESSION_PLUS_24X7_CRYPTO_V1",
-  "us_rates_refreshed_kst": "2026-11-02T08:44:00+09:00",
+  "us_rates_refreshed_kst": "2026-11-02T11:44:06+09:00",
   "crypto_enriched_kst": "2026-11-02T11:24:58+09:00"
 }
