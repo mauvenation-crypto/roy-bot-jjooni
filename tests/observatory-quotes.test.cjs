@@ -33,7 +33,7 @@ test('runtime coalesces requests, updates board, preserves previous values after
  await Promise.all([runtime.refresh(true),runtime.refresh(true)]);
  assert.equal(reads,1);assert.equal(paints,1);assert.equal(runtime.get('NASDAQ100').value,103);
  fail=true;await assert.rejects(runtime.refresh(true));
- assert.equal(runtime.status,'FAILED');assert.equal(runtime.get('NASDAQ100').value,103);assert.equal(paints,1);
+ assert.equal(runtime.status,'FAILED');assert.equal(runtime.get('NASDAQ100').value,103);assert.equal(paints,2);assert.equal(runtime.get('NASDAQ100').display_status,'이전 관측 유지');
 });
 test('one button click locks until completion and failure always releases it',async()=>{
  const source=fs.readFileSync('market-observatory/data-refresh-v1.js','utf8');
@@ -46,4 +46,23 @@ test('one button click locks until completion and failure always releases it',as
  release(payload(row));await pending;assert.equal(button.disabled,false);assert.match(message.textContent,/시세 조회 완료/);
  root.__JJOONI_OBSERVATORY_QUOTES.refresh=async()=>{throw Error('offline')};await root.force();
  assert.equal(button.disabled,false);assert.equal(message.dataset.state,'FAILED');assert.match(message.textContent,/마지막 값 유지/);
+});
+
+test('newer published crypto observation wins over a cached API quote',()=>{
+ assert.equal(Q.select(row,'2026-10-30T16:00:00Z',now),null);
+ assert.equal(Q.select(row,'2026-10-30T15:58:00Z',now),row);
+ assert.equal(Q.select(row,null,now),row);
+ assert.equal(Q.select({...row,observed_at:'invalid'},null,now),null);
+});
+test('API failure rechecks published data without reporting source collection success',async()=>{
+ const source=fs.readFileSync('market-observatory/data-refresh-v1.js','utf8');
+ const code=source.slice(source.indexOf('let nowBusy='),source.indexOf('\nfunction init()'));
+ const button={},message={dataset:{}};let reads=0;
+ const root={__JJOONI_OBSERVATORY_QUOTES:{refresh:async()=>{throw Error('offline')}},
+  __JJOONI_OBSERVATORY_MARKET_REFRESH:{status:'UPDATED',refresh:async()=>{reads++;return true}}};
+ vm.runInNewContext(code+';root.force=forceNow;root.controls=(b,m)=>{nowButton=b;nowMessage=m}',{root,Error,Object,Promise});
+ root.controls(button,message);await root.force();
+ assert.equal(reads,1);assert.equal(button.disabled,false);
+ assert.equal(message.dataset.state,'API_FAILED_PUBLISHED');
+ assert.match(message.textContent,/신규 원천 조회 완료가 아니며/);
 });

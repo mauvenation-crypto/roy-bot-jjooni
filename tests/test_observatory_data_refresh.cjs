@@ -84,3 +84,12 @@ test('independent rate collection advances the market clock',()=>{
  assert.equal(live.marketClock(next),next.us_rates_refreshed_kst);
  assert.equal(live.canApply(base,next),true);
 });
+
+test('crypto-only heartbeat advances clock and unchanged price with new provenance repaints',()=>{
+ const next={...base,crypto_enriched_kst:'2026-10-21T08:00:00+09:00',crypto_market:{BTCUSD:{status:'LIVE',quote_as_of_kst:'2026-10-21T07:59:00+09:00'}}};
+ assert.equal(live.marketClock(next),next.crypto_enriched_kst);
+ assert.equal(live.canApply(base,next),true);
+ assert.notEqual(live.revision(base),live.revision(next));
+ const retry={...next,crypto_market:{BTCUSD:{...next.crypto_market.BTCUSD,status:'STALE'}}};
+ assert.notEqual(live.revision(next),live.revision(retry));
+});

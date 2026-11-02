@@ -81,7 +81,16 @@ async function forceNow(){
   const count=result.fetched_count||0,total=result.expected_count||20,kept=Object.values(result.quotes||{}).filter(q=>q.refresh_status==='RETAINED').length;
   nowMessage.dataset.state=result.status;
   nowMessage.textContent=(result.cached?'최근 서버 조회 결과 확인':'시세 조회 완료')+' · '+count+'/'+total+'개 원천 응답'+(kept?' · '+kept+'개 이전 관측 유지':'')+(result.status!=='COMPLETE'?' · 일부 조회 실패':'')+' · 실제 시세 기준 시각은 각 카드에 표시';
- }catch(error){nowMessage.dataset.state='FAILED';nowMessage.textContent='현재 시세 조회 실패 · 마지막 값 유지 · 잠시 후 다시 눌러 주세요. 완료로 처리하지 않았습니다.'}
+ }catch(error){
+  nowMessage.dataset.state='FAILED';nowMessage.textContent='현재 시세 조회 실패 · 마지막 값 유지 · 잠시 후 다시 눌러 주세요. 완료로 처리하지 않았습니다.';
+  const published=root.__JJOONI_OBSERVATORY_MARKET_REFRESH;
+  if(published){
+   try{const updated=await published.refresh(true);if(published.status!=='RETRY'){
+    nowMessage.dataset.state='API_FAILED_PUBLISHED';
+    nowMessage.textContent='시세 API 조회 실패 · '+(updated?'최신 게시값을 대신 반영했습니다.':'게시값 재확인 · 새 게시값 없음.')+' 신규 원천 조회 완료가 아니며 코인별 관측 시각을 확인하세요.';
+   }}catch(_){}
+  }
+ }
  finally{nowBusy=false;nowButton.disabled=false;nowButton.textContent='지금 최신화'}
 }
 function init(){

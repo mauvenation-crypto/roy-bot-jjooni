@@ -2,7 +2,7 @@
 from __future__ import annotations
 import json, math, urllib.parse, urllib.request
 from copy import deepcopy
-from datetime import datetime, time
+from datetime import datetime, time, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -178,8 +178,12 @@ def enrich_crypto(data):
             if key in coingecko:
                 fresh,snapshot=coingecko[key]
                 rows=series_map.get(key,[])
+                # Only repair missing completed daily history. A successful spot
+                # refresh must not download three years twice every heartbeat.
+                previous_day=(datetime.fromisoformat(fresh[0]['date']).date()-timedelta(days=1)).isoformat()
+                history_ready=any(r.get('date')==previous_day and r.get('session_status')=='COMPLETED' for r in rows)
                 try:
-                    yahoo_rows,_=crypto_observation(symbol)
+                    yahoo_rows=[] if history_ready else crypto_observation(symbol)[0]
                     completed=[r for r in yahoo_rows if r.get('date','')<fresh[0]['date']
                                and r.get('session_status')=='COMPLETED']
                     rows=merge_rows(rows,completed)
@@ -196,6 +200,7 @@ def enrich_crypto(data):
             print('CRYPTO_QUOTE=WARN',key,old['status'],old['fetch_error'])
     data.setdefault('sources',{})['CRYPTO_SPOT']='CoinGecko simple/price USD spot primary; Yahoo Finance spot + UTC daily candles fallback; provider observation timestamps preserved'
     data['crypto_contract']='SPOT_QUOTE_WITH_UTC_DAILY_COMPARISON_V1'
+    data['crypto_enriched_kst']=datetime.now(KST).isoformat(timespec='seconds')
 
 
 def fear_greed_series():

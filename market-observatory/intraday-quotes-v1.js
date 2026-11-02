@@ -21,11 +21,16 @@ function quality(row,now=Date.now()){
  const stale=['REGULAR','CONTINUOUS'].includes(row?.market_state)&&now-Date.parse(row?.observed_at)>1200000;
  return row?.refresh_status==='RETAINED'?'이전 관측 유지':stale||row?.quality==='STALE'?'관측 지연':row?.market_state==='CLOSED'?'최근 마감 관측':'장중 관측 · 지연 가능';
 }
-const api={ENDPOINT,valid,merge,quality};
+function select(row,publishedAt,now=Date.now()){
+ if(!row||!valid(row,row.key,now))return null;
+ if(Number.isFinite(Date.parse(publishedAt))&&Date.parse(publishedAt)>Date.parse(row.observed_at))return null;
+ return row;
+}
+const api={ENDPOINT,valid,merge,quality,select};
 if(typeof module==='object'&&module.exports){module.exports=api;return}
 if(!root.document)return;
 let quotes={},pending=null;
-const state={version:'1.0',status:'WAITING',result:null,paintSummary,get:key=>quotes[key]?{...quotes[key],display_status:quality(quotes[key])}:null,refresh};
+const state={version:'1.0',status:'WAITING',result:null,paintSummary,get:(key,publishedAt)=>{const q=select(quotes[key],publishedAt);if(!q)return null;const row=state.status==='FAILED'?{...q,refresh_status:'RETAINED'}:q;return {...row,display_status:quality(row)}},refresh};
 root.__JJOONI_OBSERVATORY_QUOTES=state;
 function paintSummary(){
  const host=document.getElementById?.('overviewKpis');if(!host)return;
@@ -50,7 +55,13 @@ async function refresh(force=false){
    root.__JJOONI_LATEST_BOARD?.render?.();
    document.dispatchEvent(new CustomEvent('jjooni:observatory-quotes-updated'));
    return result;
-  }catch(error){state.status='FAILED';state.error=String(error.message||error);throw error}
+  }catch(error){
+   state.status='FAILED';state.error=String(error.message||error);
+   const message=document.getElementById?.('obsNowMessage');
+   if(message){message.dataset.state='FAILED';message.textContent='현재 시세 API 조회 실패 · 마지막 검증값 유지 · 지금 최신화로 재시도할 수 있습니다.'}
+   root.__JJOONI_LATEST_BOARD?.render?.();
+   throw error
+  }
   finally{pending=null}
  })();return pending;
 }

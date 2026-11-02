@@ -160,6 +160,42 @@ class CryptoObservationTest(unittest.TestCase):
         with patch.object(equities, 'get_json', return_value=payload):
             self.assertEqual(equities.coingecko_spot_observations(now), {})
 
+    def test_completed_yesterday_avoids_redundant_yahoo_history_requests(self):
+        now = datetime(2026, 11, 1, 9, 0, tzinfo=ZoneInfo('UTC'))
+        with patch.object(equities, 'get_json', return_value={
+            'bitcoin': {'usd': 77700, 'last_updated_at': int(now.timestamp())},
+            'ethereum': {'usd': 2200, 'last_updated_at': int(now.timestamp())},
+        }):
+            quotes = equities.coingecko_spot_observations(now)
+        data = {'series': {key: [{'date':'2026-10-31','value':100,'session_status':'COMPLETED'}]
+                           for key in equities.CRYPTO_SYMBOLS}}
+        with patch.object(equities, 'coingecko_spot_observations', return_value=quotes), \
+             patch.object(equities, 'crypto_observation', side_effect=AssertionError('redundant history')) as history:
+            equities.enrich_crypto(data)
+        history.assert_not_called()
+        self.assertEqual(data['crypto_market']['BTCUSD']['status'], 'LIVE')
+        self.assertEqual(data['series']['BTCUSD'][0]['value'], 100)
+        self.assertIn('crypto_enriched_kst', data)
+
+    def test_partial_collection_persists_healthy_symbol_and_failure_before_exit(self):
+        import json
+        import tempfile
+        import refresh_observatory_crypto as refresh
+        with tempfile.TemporaryDirectory() as tmp:
+            obs = Path(tmp)/'observatory.json'
+            obs.write_text(json.dumps({'series': {}, 'latest': {}}))
+            def collect(data):
+                data.update(series={'BTCUSD':[{'date':'2026-11-01','value':100}]},
+                            latest={'BTCUSD':100}, crypto_market={
+                                'BTCUSD':{'status':'LIVE','price':100},
+                                'ETHUSD':{'status':'STALE','price':10}})
+            with patch.object(refresh, 'OBS', obs), patch.object(refresh, 'enrich_crypto', side_effect=collect):
+                with self.assertRaisesRegex(SystemExit, 'PARTIAL failed=ETHUSD'):
+                    refresh.main()
+            saved=json.loads(obs.read_text())
+            self.assertEqual(saved['latest']['BTCUSD'],100)
+            self.assertEqual(saved['crypto_market']['ETHUSD']['status'],'STALE')
+
 
 if __name__ == '__main__':
     unittest.main()
