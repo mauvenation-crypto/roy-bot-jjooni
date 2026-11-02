@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_DAILY_MARKET_PULSE_V1",
-  "generated_kst": "2026-11-03T07:31:11+09:00",
+  "generated_kst": "2026-11-03T08:47:09+09:00",
   "market_date_us": "2026-11-02",
   "snapshot_status": "FINAL",
   "read_only": true,
@@ -143,16 +143,16 @@
         "source": "OBSERVATORY_CANONICAL"
       },
       "dxy": {
-        "value": 101.77600098,
+        "value": 101.7990036,
         "market_date": "2026-11-02",
-        "change_pct": -0.10207722105135542,
+        "change_pct": -0.07949906967630316,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
       "usdkrw": {
-        "value": 1345.9699707,
+        "value": 1345.48999023,
         "market_date": "2026-11-02",
-        "change_pct": 0.5971681450116506,
+        "change_pct": 0.5612946284414555,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
@@ -258,7 +258,7 @@
         "title": "Job Openings and Labor Turnover Survey",
         "importance": 2,
         "previous": "7.08M",
-        "consensus": "7.11M",
+        "consensus": "7.15M",
         "actual": null,
         "source": "BLS",
         "source_url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
@@ -272,7 +272,7 @@
         "consensus": "-107.9B",
         "actual": null,
         "source": "BEA",
-        "source_url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
+        "source_url": "https://www.forexfactory.com/calendar?week=nov1.2026"
       },
       {
         "datetime_kst": "2026-11-04T23:45+09:00",
@@ -706,11 +706,11 @@
     },
     {
       "market_date_us": "2026-11-02",
-      "generated_kst": "2026-11-03T07:31:11+09:00",
+      "generated_kst": "2026-11-03T08:47:09+09:00",
       "snapshot_status": "FINAL",
       "ndx": 27989.8203125,
-      "dxy": 101.77600098,
-      "usdkrw": 1345.9699707,
+      "dxy": 101.7990036,
+      "usdkrw": 1345.48999023,
       "us10y": 4.91,
       "sp500": 7541.39990234,
       "vix": 21.14999962,
@@ -743,27 +743,27 @@
     "finviz_sp500_map": {
       "url": "https://finviz.com/map?t=sec",
       "status": "WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-03T07:31:11+09:00"
+      "observed_at_kst": "2026-11-03T08:47:09+09:00"
     },
     "finviz_calendar": {
       "url": "https://finviz.com/calendar.ashx",
       "status": "OBSERVATORY_CALENDAR_AVAILABLE_WEB_CROSSCHECK_REQUIRED",
-      "observed_at_kst": "2026-11-03T07:31:11+09:00"
+      "observed_at_kst": "2026-11-03T08:47:09+09:00"
     },
     "tradingview": {
       "url": "https://kr.tradingview.com/",
       "status": "OBSERVATORY_FALLBACK_WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-03T07:31:11+09:00"
+      "observed_at_kst": "2026-11-03T08:47:09+09:00"
     },
     "slickcharts_nasdaq100": {
       "url": "https://www.slickcharts.com/nasdaq100",
       "status": "LIVE",
-      "observed_at_kst": "2026-11-03T07:31:11+09:00"
+      "observed_at_kst": "2026-11-03T08:47:09+09:00"
     },
     "cnn_fear_greed": {
       "url": "https://edition.cnn.com/markets/fear-and-greed",
       "status": "OBSERVATORY_CANONICAL",
-      "observed_at_kst": "2026-11-03T07:31:11+09:00"
+      "observed_at_kst": "2026-11-03T08:47:09+09:00"
     }
   },
   "usage_contract": {
