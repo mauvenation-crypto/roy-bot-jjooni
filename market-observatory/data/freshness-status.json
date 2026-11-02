@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-02T09:35:53+09:00",
+  "generated_kst": "2026-11-02T09:35:58+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
@@ -112,19 +112,19 @@
     "crypto": {
       "label": "Crypto",
       "state": "LIVE",
-      "generated_kst": "2026-11-02T07:47:12+09:00",
+      "generated_kst": "2026-11-02T09:35:50+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=3143s · ETHUSD age=3120s",
+      "detail": "BTCUSD age=28s · ETHUSD age=28s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
         "BTCUSD": {
           "status": "LIVE",
-          "quote_as_of_kst": "2026-11-02T08:43:30+09:00"
+          "quote_as_of_kst": "2026-11-02T09:35:30+09:00"
         },
         "ETHUSD": {
           "status": "LIVE",
-          "quote_as_of_kst": "2026-11-02T08:43:53+09:00"
+          "quote_as_of_kst": "2026-11-02T09:35:30+09:00"
         }
       },
       "max_age_seconds": 3600
@@ -132,7 +132,7 @@
     "pulse": {
       "label": "Daily Pulse",
       "state": "LIVE",
-      "generated_kst": "2026-11-02T09:35:53+09:00",
+      "generated_kst": "2026-11-02T09:35:57+09:00",
       "as_of": "2026-10-30",
       "detail": "snapshot=FINAL · Observatory session=2026-10-30",
       "source": "daily-market-pulse.json",
@@ -159,7 +159,7 @@
     "tripod": {
       "label": "TRI-POD",
       "state": "LIVE",
-      "generated_kst": "2026-11-02T09:35:53+09:00",
+      "generated_kst": "2026-11-02T09:35:57+09:00",
       "as_of": "2026-10-30",
       "detail": "상승 · QQQ 50% + QLD 50%",
       "source": "public-market-daily.json + observatory.json",
@@ -202,7 +202,7 @@
     "audit": {
       "label": "Full Data Audit",
       "state": "WARN",
-      "generated_kst": "2026-11-02T09:35:53+09:00",
+      "generated_kst": "2026-11-02T09:35:58+09:00",
       "as_of": "2026-10-30",
       "detail": "critical=0 · warnings=1",
       "source": "data-audit.json",
