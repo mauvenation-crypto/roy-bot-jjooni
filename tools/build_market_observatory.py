@@ -197,10 +197,19 @@ def series_map():
             rows=yahoo_series(s,'3y')
             out[k]=completed_us_bars(rows) if k in US_COMPLETED_SESSION_KEYS else rows
         except Exception:out[k]=prev.get(k,[])
+    # The dedicated official ECOS freshness collector runs in postprocess and
+    # merges verified observations into these cached historical series. Repeating
+    # five 1100-day ECOS downloads during every market build competes with that
+    # smaller collector and can exhaust the provider connection budget.
+    # Only bootstrap a tenor here when no prior historical data exists.
     key=os.getenv('BOK_ECOS_API_KEY','sample'); end=datetime.now(KST).strftime('%Y%m%d'); start=(datetime.now(KST)-timedelta(days=1100)).strftime('%Y%m%d')
     for k,item in KR_ECOS.items():
+        cached=prev.get(k) or []
+        if cached:
+            out[k]=cached
+            continue
         try:out[k]=ecos_series(item,start,end,key)
-        except Exception:out[k]=prev.get(k,[])
+        except Exception:out[k]=[]
     # derived spreads
     def derive(a,b,name):
         ma={x['date']:x['value'] for x in out.get(a,[])}; mb={x['date']:x['value'] for x in out.get(b,[])}

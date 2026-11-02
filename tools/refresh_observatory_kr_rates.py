@@ -15,6 +15,8 @@ import os
 import urllib.parse
 import urllib.request
 import urllib.error
+import socket
+import ssl
 import time
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -51,6 +53,30 @@ def _fallback_json(url: str) -> dict:
         raise RuntimeError('ECOS_CURL_FALLBACK_' + type(exc).__name__) from None
 
 
+
+def _diagnose_ecos_connectivity() -> str:
+    """Secret-free diagnostics against the documented official HTTPS origin.
+
+    No registered-key URL or API request is issued by this probe. A successful
+    TLS connection is NOT treated as evidence that StatisticSearch works.
+    """
+    host = 'ecos.bok.or.kr'
+    try:
+        socket.getaddrinfo(host, 443, type=socket.SOCK_STREAM)
+    except OSError:
+        return 'DNS_UNAVAILABLE'
+    try:
+        with socket.create_connection((host, 443), timeout=3) as sock:
+            with ssl.create_default_context().wrap_socket(sock, server_hostname=host):
+                return 'TLS_OK_API_RESPONSE_UNVERIFIED'
+    except ssl.SSLError:
+        return 'TLS_FAILURE'
+    except TimeoutError:
+        return 'TCP_OR_TLS_TIMEOUT'
+    except OSError:
+        return 'TCP_FAILURE'
+
+
 def _get_json(url: str) -> dict:
     req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': 'application/json'})
     # Retry transient transport errors only, with a bounded per-request budget.
@@ -71,7 +97,12 @@ def _get_json(url: str) -> dict:
         print('ECOS_TRANSPORT_RECOVERED=HTTPS_LIBCURL_FALLBACK')
         return result
     except RuntimeError as exc:
-        raise RuntimeError('ECOS_TRANSPORT_FAILED_AFTER_3_ATTEMPTS;' + str(exc)) from None
+        diagnostic = _diagnose_ecos_connectivity()
+        # A key is a path segment in ECOS URLs; never log the request or exception
+        # object from a network library. Emit only fixed diagnostic categories.
+        print('ECOS_NETWORK_DIAGNOSTIC=' + diagnostic)
+        raise RuntimeError('ECOS_TRANSPORT_FAILED_AFTER_3_ATTEMPTS;' + str(exc) +
+                           ';ECOS_NETWORK_' + diagnostic) from None
 
 
 def _url(key: str, start_count: int, end_count: int, start: str, end: str, item: str) -> str:
