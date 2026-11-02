@@ -20,8 +20,8 @@
     "COPPER": 6.54349995,
     "US3M": 4.21,
     "US5Y": 4.69299984,
-    "US10Y": 4.89400005,
-    "US30Y": 5.26900005,
+    "US10Y": 4.88800001,
+    "US30Y": 5.25500011,
     "KR3Y": 3.74,
     "KR5Y": 3.892,
     "KR10Y": 4.034,
@@ -40387,6 +40387,26 @@
     ],
     "US5Y": [
       {
+        "date": "2023-10-26",
+        "value": 4.79699993
+      },
+      {
+        "date": "2023-10-27",
+        "value": 4.76999998
+      },
+      {
+        "date": "2023-10-30",
+        "value": 4.8039999
+      },
+      {
+        "date": "2023-10-31",
+        "value": 4.81599998
+      },
+      {
+        "date": "2023-11-01",
+        "value": 4.70499992
+      },
+      {
         "date": "2023-11-02",
         "value": 4.63600016
       },
@@ -43397,6 +43417,26 @@
     ],
     "US10Y": [
       {
+        "date": "2023-10-26",
+        "value": 4.84499979
+      },
+      {
+        "date": "2023-10-27",
+        "value": 4.84499979
+      },
+      {
+        "date": "2023-10-30",
+        "value": 4.875
+      },
+      {
+        "date": "2023-10-31",
+        "value": 4.875
+      },
+      {
+        "date": "2023-11-01",
+        "value": 4.78900003
+      },
+      {
         "date": "2023-11-02",
         "value": 4.66900015
       },
@@ -46402,10 +46442,30 @@
       },
       {
         "date": "2026-11-02",
-        "value": 4.89400005
+        "value": 4.88800001
       }
     ],
     "US30Y": [
+      {
+        "date": "2023-10-26",
+        "value": 4.98799992
+      },
+      {
+        "date": "2023-10-27",
+        "value": 5.02299976
+      },
+      {
+        "date": "2023-10-30",
+        "value": 5.03499985
+      },
+      {
+        "date": "2023-10-31",
+        "value": 5.02199984
+      },
+      {
+        "date": "2023-11-01",
+        "value": 4.9749999
+      },
       {
         "date": "2023-11-02",
         "value": 4.8210001
@@ -49412,7 +49472,7 @@
       },
       {
         "date": "2026-11-02",
-        "value": 5.26900005
+        "value": 5.25500011
       }
     ],
     "KR3Y": [
@@ -319087,7 +319147,7 @@
     "drawdown_52w_pct": -10.359344186727204,
     "ma250": 27415.472859375237,
     "ndx": 27989.8203125,
-    "observed_at": "2026-11-03T08:47:09+09:00",
+    "observed_at": "2026-11-03T08:47:11+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -9.094216906793761,
     "previous_ma250": 27407.40533593772,
@@ -324324,6 +324384,60 @@
       },
       "failed_series": {},
       "spread_contract": "SAME_DATE_KR10Y_MINUS_KR3Y_NO_INTERPOLATION"
+    },
+    "US2Y": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-10-30",
+      "target_session": "2026-10-30",
+      "status": "LIVE"
+    },
+    "US3M": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-10-30",
+      "target_session": "2026-10-30",
+      "status": "LIVE"
+    },
+    "US5Y_OFFICIAL": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-10-30",
+      "target_session": "2026-10-30",
+      "status": "LIVE"
+    },
+    "US10Y_OFFICIAL": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-10-30",
+      "target_session": "2026-10-30",
+      "status": "LIVE"
+    },
+    "US30Y_OFFICIAL": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-10-30",
+      "target_session": "2026-10-30",
+      "status": "LIVE"
+    },
+    "US5Y": {
+      "source": "Cboe / Yahoo completed daily",
+      "last_date": "2026-11-02",
+      "target_session": "2026-10-30",
+      "status": "LIVE"
+    },
+    "US10Y": {
+      "source": "Cboe / Yahoo completed daily",
+      "last_date": "2026-11-02",
+      "target_session": "2026-10-30",
+      "status": "LIVE"
+    },
+    "US30Y": {
+      "source": "Cboe / Yahoo completed daily",
+      "last_date": "2026-11-02",
+      "target_session": "2026-10-30",
+      "status": "LIVE"
+    },
+    "US_2S10S": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-10-30",
+      "target_session": "2026-10-30",
+      "status": "LIVE"
     }
   },
   "kr_rates_refreshed_kst": "2026-11-03T08:47:03+09:00",
@@ -324435,5 +324549,6 @@
   "equity_enrichment_contract": "KOSPI_KOSDAQ_DAILY_REFERENCE_V1",
   "equity_session_contract": "KR_TRADING_DATE_NAVER_PRIMARY_YAHOO_FALLBACK_V2",
   "market_supplement_contract": "US_SUPPLEMENT_MATCH_COMPLETED_CORE_SESSION_V3",
-  "equity_enriched_kst": "2026-11-03T08:47:08+09:00"
+  "equity_enriched_kst": "2026-11-03T08:47:08+09:00",
+  "us_rates_refreshed_kst": "2026-11-03T02:17:14+09:00"
 }
