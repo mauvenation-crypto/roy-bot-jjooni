@@ -39,8 +39,8 @@
     "JP30Y": 3.908,
     "JP_2S10S": 0.942,
     "KR_US_10Y": -0.932,
-    "BTCUSD": 78349.0,
-    "ETHUSD": 2290.57,
+    "BTCUSD": 78358.0,
+    "ETHUSD": 2290.08,
     "FEAR_GREED": 26.2,
     "FEAR_GREED_RATING": "FEAR",
     "KOSPI": 5809.57,
@@ -293667,10 +293667,10 @@
       },
       {
         "date": "2026-11-02",
-        "value": 78349.0,
+        "value": 78358.0,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-02T14:55:40+09:00",
+        "observed_kst": "2026-11-02T14:58:35+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -300263,10 +300263,10 @@
       },
       {
         "date": "2026-11-02",
-        "value": 2290.57,
+        "value": 2290.08,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-02T14:55:52+09:00",
+        "observed_kst": "2026-11-02T14:58:26+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -324388,11 +324388,11 @@
       "symbol": "BTC-USD",
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
-      "price": 78349.0,
-      "quote_as_of_kst": "2026-11-02T14:55:40+09:00",
-      "captured_kst": "2026-11-02T14:56:55+09:00",
+      "price": 78358.0,
+      "quote_as_of_kst": "2026-11-02T14:58:35+09:00",
+      "captured_kst": "2026-11-02T14:58:52+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 75,
+      "quote_age_seconds": 17,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     },
@@ -324400,11 +324400,11 @@
       "symbol": "ETH-USD",
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
-      "price": 2290.57,
-      "quote_as_of_kst": "2026-11-02T14:55:52+09:00",
-      "captured_kst": "2026-11-02T14:56:55+09:00",
+      "price": 2290.08,
+      "quote_as_of_kst": "2026-11-02T14:58:26+09:00",
+      "captured_kst": "2026-11-02T14:58:52+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 63,
+      "quote_age_seconds": 26,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     }
@@ -324773,5 +324773,5 @@
   "supplemental_refreshed_kst": "2026-11-02T11:44:09+09:00",
   "supplemental_refresh_contract": "ALL_MARKET_FAMILIES_COMPLETED_SESSION_PLUS_24X7_CRYPTO_V1",
   "us_rates_refreshed_kst": "2026-11-02T11:44:06+09:00",
-  "crypto_enriched_kst": "2026-11-02T11:24:58+09:00"
+  "crypto_enriched_kst": "2026-11-02T14:58:52+09:00"
 }
