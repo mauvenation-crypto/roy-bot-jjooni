@@ -1,23 +1,23 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-02T09:37:14+09:00",
+  "generated_kst": "2026-11-02T09:37:31+09:00",
   "overall": "WARN",
   "critical_count": 0,
-  "warning_count": 2,
+  "warning_count": 1,
   "observatory_session": "2026-10-30",
   "file_status": {
     "observatory": {
-      "generated_kst": "2026-11-02T09:37:05+09:00",
+      "generated_kst": "2026-11-02T08:40:31+09:00",
       "session": "2026-10-30",
       "schema": "JJOONI_MARKET_OBSERVATORY_V1"
     },
     "daily_pulse": {
-      "generated_kst": "2026-11-02T09:37:13+09:00",
+      "generated_kst": "2026-11-02T09:35:57+09:00",
       "session": "2026-10-30",
       "snapshot_status": "FINAL"
     },
     "public_tripod": {
-      "generated_kst": "2026-11-02T09:37:13+09:00",
+      "generated_kst": "2026-11-02T09:35:57+09:00",
       "session": "2026-10-30",
       "ok": true,
       "target": "QQQ 50% + QLD 50%"
@@ -68,14 +68,10 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-02T09:37:11+09:00",
+      "generated_kst": "2026-11-02T09:37:27+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
-        "energy",
-        "fx",
-        "metals",
-        "kr_rates",
         "jp_rates",
         "audit"
       ]
@@ -350,7 +346,7 @@
       "latest_mismatch": []
     },
     "kr_rates": {
-      "state": "STALE",
+      "state": "LIVE",
       "anchor": "2026-11-02",
       "allow_lag_days": 4,
       "critical": false,
@@ -405,11 +401,7 @@
         }
       },
       "missing": [],
-      "latest_mismatch": [],
-      "fetch_succeeded": false,
-      "failed_series": {
-        "KR10Y": "RuntimeError:ECOS_010210000_INFO-200"
-      }
+      "latest_mismatch": []
     },
     "jp_rates": {
       "state": "LAGGING",
@@ -472,17 +464,17 @@
         "BTCUSD": {
           "count": 1098,
           "last_date": "2026-11-02",
-          "last_value": 78047.0,
+          "last_value": 78102.0,
           "group": "crypto",
-          "latest_value": 78047.0,
+          "latest_value": 78102.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1098,
           "last_date": "2026-11-02",
-          "last_value": 2268.46,
+          "last_value": 2269.87,
           "group": "crypto",
-          "latest_value": 2268.46,
+          "latest_value": 2269.87,
           "latest_matches": true
         }
       },
@@ -526,24 +518,19 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-02T09:37:01+09:00",
-      "current_quote_age_seconds": 13,
-      "captured_quote_age_seconds": 7
+      "quote_as_of_kst": "2026-11-02T09:35:30+09:00",
+      "current_quote_age_seconds": 121,
+      "captured_quote_age_seconds": 20
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-02T09:37:01+09:00",
-      "current_quote_age_seconds": 13,
-      "captured_quote_age_seconds": 7
+      "quote_as_of_kst": "2026-11-02T09:35:30+09:00",
+      "current_quote_age_seconds": 121,
+      "captured_quote_age_seconds": 20
     }
   },
   "issues": [
-    {
-      "code": "GROUP_KR_RATES_STALE",
-      "severity": "WARN",
-      "detail": "anchor=2026-11-02 dates=KR3Y:2026-10-30,KR5Y:2026-10-30,KR10Y:2026-10-30,KR20Y:2026-10-30,KR30Y:2026-10-30,KR_3S10S:2026-10-30"
-    },
     {
       "code": "GROUP_JP_RATES_LAGGING",
       "severity": "WARN",
