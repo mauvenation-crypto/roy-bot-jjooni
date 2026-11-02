@@ -1,6 +1,6 @@
 {
   "schema": "OBS_EARNINGS_V1",
-  "updated_kst": "2026-10-29T08:15:59+09:00",
+  "updated_kst": "2026-11-03T06:42:43+09:00",
   "universe": [
     {
       "symbol": "005930",
@@ -217,6 +217,13 @@
       "name": "TSMC",
       "market": "US",
       "theme": "파운드리",
+      "scope": "US_CORE_AND_SUPPLY_CHAIN"
+    },
+    {
+      "symbol": "ON",
+      "name": "onsemi",
+      "market": "US",
+      "theme": "AI전력반도체",
       "scope": "US_CORE_AND_SUPPLY_CHAIN"
     }
   ],
@@ -600,6 +607,88 @@
         "광고 성장 대비 CAPEX·FCF 전환 추세"
       ],
       "updated_kst": "2026-10-29T08:15:59+09:00"
+    },
+    {
+      "id": "ON:2026Q3",
+      "symbol": "ON",
+      "fiscal_period": "2026Q3",
+      "status": "RELEASED",
+      "date_kst": "2026-11-03",
+      "time_status": "DATE_ONLY",
+      "release_at_kst": null,
+      "call_at_kst": "2026-11-03T07:00:00+09:00",
+      "sources": [
+        {
+          "url": "https://investor.onsemi.com/node/23401/pdf",
+          "kind": "OFFICIAL",
+          "checked_kst": "2026-11-03T06:42:43+09:00"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "매출",
+          "actual": 1.7223,
+          "unit": "USD_BILLION",
+          "basis": "REPORTED",
+          "yoy_pct": 11,
+          "consensus": null,
+          "consensus_basis": null
+        },
+        {
+          "label": "EPS",
+          "actual": 0.79,
+          "unit": "USD_PER_SHARE",
+          "basis": "GAAP",
+          "yoy_pct": null,
+          "consensus": null,
+          "consensus_basis": null
+        },
+        {
+          "label": "EPS",
+          "actual": 0.9,
+          "unit": "USD_PER_SHARE",
+          "basis": "NON_GAAP",
+          "yoy_pct": null,
+          "consensus": null,
+          "consensus_basis": null
+        },
+        {
+          "label": "영업현금흐름",
+          "actual": 0.516,
+          "unit": "USD_BILLION",
+          "basis": "REPORTED",
+          "yoy_pct": 23,
+          "consensus": null,
+          "consensus_basis": null
+        },
+        {
+          "label": "FCF",
+          "actual": 0.489,
+          "unit": "USD_BILLION",
+          "basis": "NON_GAAP",
+          "yoy_pct": 31,
+          "consensus": null,
+          "consensus_basis": null
+        }
+      ],
+      "facts": [
+        "AI 데이터센터 매출이 전분기 대비 39%, 전년 대비 175% 증가했다고 발표했습니다.",
+        "Ferric 인수 효과를 포함해 2030년 AI 데이터센터 매출 목표를 5억 달러 높여 30억 달러 이상으로 제시했습니다.",
+        "Synaptics 인수 조건을 종전 70억 달러 주식거래에서 57억 달러 현금거래로 변경했습니다."
+      ],
+      "analysis": [
+        "해석: AI 전력반도체 수요가 매출과 자유현금흐름으로 함께 전환되고 있습니다. 다만 현금 인수에 따른 재무 레버리지와 통합비용을 별도로 봐야 합니다."
+      ],
+      "risks": [
+        "2030년 매출 목표와 인수 후 EPS 증가는 경영진 전망이며 이미 발생한 실적이 아닙니다.",
+        "컨퍼런스콜은 2026-11-03 07:00 KST로 보고 마감 후여서 Q&A를 확인하지 못했습니다."
+      ],
+      "next_checks": [
+        "인수자금 조달비용과 부채 변화",
+        "Ferric 매출 인식과 AI 데이터센터 총마진",
+        "컨퍼런스콜 Q&A 및 다음 분기 가이던스"
+      ],
+      "updated_kst": "2026-11-03T06:42:43+09:00"
     }
   ],
   "coverage_note": "공식 확인된 일정만 게시합니다. 목록에 없는 일정은 미확인이며 예정 없음으로 해석하지 않습니다.",
