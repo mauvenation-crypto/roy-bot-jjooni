@@ -1,0 +1,25 @@
+name: MOF Current JGB Official Source Probe
+
+on:
+  pull_request:
+    paths:
+      - tools/build_market_observatory.py
+      - tools/probe_mof_jgb_current.py
+      - tests/test_observatory_mof_current_append_only.py
+      - .github/workflows/mof-jgb-official-probe.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  official_source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify published MOF current CSV and expected observation date
+        run: python tools/probe_mof_jgb_current.py
