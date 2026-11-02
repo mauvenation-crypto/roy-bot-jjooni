@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-02T18:03:59+09:00",
+  "generated_kst": "2026-11-02T18:56:06+09:00",
   "overall": "PASS",
   "critical_count": 0,
   "warning_count": 0,
@@ -68,15 +68,10 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-02T18:03:57+09:00",
-      "overall": "LIVE_WITH_WARNINGS",
+      "generated_kst": "2026-11-02T18:03:59+09:00",
+      "overall": "LIVE",
       "critical_bad": [],
-      "warnings": [
-        "energy",
-        "fx",
-        "metals",
-        "audit"
-      ]
+      "warnings": []
     },
     "watchdog": {
       "checked_kst": "2026-11-02T08:30:16+09:00",
@@ -466,17 +461,17 @@
         "BTCUSD": {
           "count": 1098,
           "last_date": "2026-11-02",
-          "last_value": 78211.0,
+          "last_value": 78064.0,
           "group": "crypto",
-          "latest_value": 78211.0,
+          "latest_value": 78064.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1098,
           "last_date": "2026-11-02",
-          "last_value": 2297.09,
+          "last_value": 2290.0,
           "group": "crypto",
-          "latest_value": 2297.09,
+          "latest_value": 2290.0,
           "latest_matches": true
         }
       },
@@ -520,16 +515,16 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-02T18:03:32+09:00",
-      "current_quote_age_seconds": 27,
-      "captured_quote_age_seconds": 23
+      "quote_as_of_kst": "2026-11-02T18:55:17+09:00",
+      "current_quote_age_seconds": 49,
+      "captured_quote_age_seconds": 48
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-02T18:03:32+09:00",
-      "current_quote_age_seconds": 27,
-      "captured_quote_age_seconds": 23
+      "quote_as_of_kst": "2026-11-02T18:55:04+09:00",
+      "current_quote_age_seconds": 62,
+      "captured_quote_age_seconds": 61
     }
   },
   "issues": [],
