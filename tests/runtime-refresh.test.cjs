@@ -7,7 +7,7 @@ const read=p=>fs.readFileSync(path.join(__dirname,'..',p),'utf8');
 
 test('manual refresh retries after automatic collection and allows the server collection budget',async()=>{
  const source=read('live-bridge.js');let calls=0;const timers=[];
- const context={window:{},Date,TextEncoder,AbortController,sessionStorage:{getItem:()=> 'test-only'},
+ const context={window:{__JJOONI_LIVE_BRIDGE:{}},CONNECTION:{state:"READY"},Date,TextEncoder,AbortController,sessionStorage:{getItem:()=> 'test-only'},
   crypto:require('node:crypto').webcrypto,renderRefreshStatus(){},refresh(){},console,
   setTimeout(fn,ms){timers.push(ms);return timers.length},clearTimeout(){},
   fetch:async()=>{calls++;return {ok:true,json:async()=>({status:'PASS',snapshot_id:'new'})}}};
