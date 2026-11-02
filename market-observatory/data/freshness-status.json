@@ -1,14 +1,17 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-02T08:45:03+09:00",
+  "generated_kst": "2026-11-02T09:34:48+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
     "watchdog_scope": "US_CLOSE_RECOVERY_ONLY"
   },
-  "overall": "LIVE",
+  "overall": "LIVE_WITH_WARNINGS",
   "critical_bad": [],
-  "warnings": [],
+  "warnings": [
+    "jp_rates",
+    "audit"
+  ],
   "watchdog_required": false,
   "session_alignment": {
     "expected_session": "2026-10-30",
@@ -99,7 +102,7 @@
     },
     "jp_rates": {
       "label": "JP Rates",
-      "state": "LIVE",
+      "state": "LAGGING",
       "generated_kst": "2026-11-02T08:44:03+09:00",
       "as_of": "2026-10-29",
       "detail": "JP2Y 2026-10-29 · JP5Y 2026-10-29 · JP10Y 2026-10-29 · JP30Y 2026-10-29 · JP_2S10S 2026-10-29",
@@ -111,7 +114,7 @@
       "state": "LIVE",
       "generated_kst": "2026-11-02T07:47:12+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=93s · ETHUSD age=70s",
+      "detail": "BTCUSD age=3078s · ETHUSD age=3055s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
@@ -183,8 +186,8 @@
     "calendar": {
       "label": "Economic Calendar",
       "state": "LIVE",
-      "generated_kst": "2026-11-02T08:40:34+09:00",
-      "as_of": "2026-11-02T08:40:34+09:00",
+      "generated_kst": "2026-11-02T09:34:42+09:00",
+      "as_of": "2026-11-02T09:34:42+09:00",
       "detail": "events=189 · overdue=0 · pending=0 · source_failures=0 · official_probe_blocked=0",
       "source": "economic-calendar.json",
       "critical": false,
@@ -198,10 +201,10 @@
     },
     "audit": {
       "label": "Full Data Audit",
-      "state": "PASS",
-      "generated_kst": "2026-11-02T08:45:03+09:00",
+      "state": "WARN",
+      "generated_kst": "2026-11-02T09:34:48+09:00",
       "as_of": "2026-10-30",
-      "detail": "critical=0 · warnings=0",
+      "detail": "critical=0 · warnings=1",
       "source": "data-audit.json",
       "critical": true
     },
