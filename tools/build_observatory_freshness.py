@@ -108,6 +108,26 @@ def calendar_probe_health(checks: list[dict], events: list[dict]) -> dict:
         'verified_fallback_releases': sorted({title for title, _ in verified}),
     }
 
+def calendar_official_evidence(events, now):
+    """Summarize stored provenance, never claim a new network check took place."""
+    rows=[]
+    for event in events:
+        if (not isinstance(event,dict) or event.get('source_tier')!='OFFICIAL' or
+                event.get('verification_status')!='VERIFIED_OFFICIAL' or
+                event.get('actual') is None or str(event.get('actual')).strip() in ('','—','-') or
+                not (event.get('official_url') or event.get('source_url'))):
+            continue
+        stamp=event.get('official_actual_checked_kst') or event.get('checked_kst')
+        try:
+            dt=datetime.fromisoformat(str(stamp))
+            if dt.tzinfo is None or dt>now:continue
+        except (TypeError,ValueError):continue
+        rows.append((dt,stamp))
+    latest=max(rows,key=lambda row:row[0])[1] if rows else None
+    return {'scope':'STORED_EVENT_PROVENANCE_NOT_CURRENT_NETWORK_CHECK',
+            'verified_event_count':len(rows),'latest_verified_kst':latest,
+            'note': '기존 공식 검증 이력 · 이번 실행의 원천 접속 성공을 뜻하지 않습니다.'}
+
 def build_status(root: Path = ROOT, now=None) -> dict:
     now = now or datetime.now(KST)
     data=root/'market-observatory'/'data'
@@ -174,6 +194,10 @@ def build_status(root: Path = ROOT, now=None) -> dict:
         'calendar':group('Economic Calendar',cal_state,cal.get('generated_kst'),cal_fresh.get('latest_released_at') or cal.get('generated_kst'),f"events={len(cal.get('events') or [])} · overdue={cal_overdue} · pending={cal_pending} · source_failures={cal_failed_sources} · official_probe_blocked={len(cal_probe_blocked)}",'economic-calendar.json',False),
         'audit':group('Full Data Audit',audit.get('overall') or 'UNAVAILABLE',audit.get('generated_kst'),session,f"critical={audit.get('critical_count','—')} · warnings={audit.get('warning_count','—')}",'data-audit.json',True),
     }
+    evidence=calendar_official_evidence(cal.get('events') or [],now)
+    groups['calendar']['official_probe_scope']='LATEST_COLLECTION_ATTEMPTS_ONLY'
+    groups['calendar']['official_verification_evidence']=evidence
+    groups['calendar']['detail']+=f" · 기존 공식 검증 {evidence['verified_event_count']}건 · 이번 원천 조회 {cal_probe['state']}"
     groups['calendar']['actual_completeness_state']=cal_actual_state
     groups['calendar']['official_probe_state']=cal_probe['state']
     groups['calendar']['official_probe_failure_count']=cal_probe['failure_count']

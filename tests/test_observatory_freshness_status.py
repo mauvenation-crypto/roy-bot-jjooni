@@ -301,6 +301,29 @@ class ObservatoryFreshnessStatusTest(unittest.TestCase):
             self.assertEqual(cal['official_probe_failure_count'],0)
             self.assertNotIn('calendar',out['warnings'])
 
+    def test_no_current_probe_does_not_erase_or_promote_stored_official_evidence(self):
+        now=datetime.fromisoformat('2026-11-02T17:00:00+09:00')
+        event={'title':'Employment Cost Index','actual':'0.8%',
+               'source_tier':'OFFICIAL','verification_status':'VERIFIED_OFFICIAL',
+               'official_url':'https://www.bls.gov/news.release/eci.htm',
+               'checked_kst':'2026-11-02T06:40:50+09:00'}
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            self.write(root,'market-observatory/data/economic-calendar.json',{
+                'events':[event], 'actual_freshness':{'status':'LIVE','official_checks':[]}})
+            cal=freshness.build_status(root,now)['groups']['calendar']
+            self.assertEqual(cal['official_probe_state'],'NOT_CHECKED')
+            evidence=cal['official_verification_evidence']
+            self.assertEqual(evidence['verified_event_count'],1)
+            self.assertEqual(evidence['latest_verified_kst'],event['checked_kst'])
+            self.assertEqual(evidence['scope'],'STORED_EVENT_PROVENANCE_NOT_CURRENT_NETWORK_CHECK')
+            self.assertNotEqual(evidence['latest_verified_kst'],now.isoformat())
+        for bad in [dict(event,source_tier='SECONDARY'),dict(event,verification_status='MARKET_REPORTED'),
+                    dict(event,actual=None),dict(event,official_url=None),dict(event,checked_kst='bad'),
+                    dict(event,checked_kst='2026-11-02T18:00:00+09:00'),
+                    dict(event,checked_kst='2026-11-02T06:40:50')]:
+            self.assertEqual(freshness.calendar_official_evidence([bad],now)['verified_event_count'],0)
+
 
 if __name__ == '__main__':
     unittest.main()

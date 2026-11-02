@@ -29,7 +29,7 @@ function select(row,publishedAt,now=Date.now()){
 const api={ENDPOINT,valid,merge,quality,select};
 if(typeof module==='object'&&module.exports){module.exports=api;return}
 if(!root.document)return;
-let quotes={},pending=null;
+let quotes={},pending=null,lastAttempt=null;
 const state={version:'1.0',status:'WAITING',result:null,paintSummary,get:(key,publishedAt)=>{const q=select(quotes[key],publishedAt);if(!q)return null;const row=state.status==='FAILED'?{...q,refresh_status:'RETAINED'}:q;return {...row,display_status:quality(row)}},refresh};
 root.__JJOONI_OBSERVATORY_QUOTES=state;
 function paintSummary(){
@@ -44,6 +44,8 @@ function paintSummary(){
 }
 async function refresh(force=false){
  if(pending)return pending;
+ if(!force&&(document.hidden||(lastAttempt!==null&&Date.now()-lastAttempt<60000)))return state.result;
+ lastAttempt=Date.now();
  state.status='CHECKING';
  pending=(async()=>{
   try{
@@ -51,7 +53,9 @@ async function refresh(force=false){
    if(!response.ok)throw Error('QUOTE_HTTP_'+response.status);
    const result=await response.json();quotes=merge(quotes,result);
    if(!Object.keys(quotes).length)throw Error('NO_VALID_QUOTES');
-   state.result=result;state.status=result.status==='COMPLETE'?'COMPLETE':'PARTIAL';
+   state.error=null;state.result=result;state.status=result.status==='COMPLETE'?'COMPLETE':'PARTIAL';
+   const message=document.getElementById?.('obsNowMessage');
+   if(!force&&message){message.dataset.state=state.status;message.textContent='현재 시세 확인 · '+(result.fetched_count||0)+'/'+(result.expected_count||20)+'개 원천 응답 · 실제 관측시각은 각 카드에 표시'}
    root.__JJOONI_LATEST_BOARD?.render?.();
    document.dispatchEvent(new CustomEvent('jjooni:observatory-quotes-updated'));
    return result;
@@ -65,7 +69,11 @@ async function refresh(force=false){
   finally{pending=null}
  })();return pending;
 }
-// One cached read on open. Further source collection belongs to the user's
-// explicit button, with server-side coalescing; no new polling or scheduler.
-refresh(false).catch(()=>{});
+// Reuse the public, server-coalesced read when a mobile tab returns. Hidden
+// tabs do not fetch; lifecycle bursts share one flight and a 60-second gate.
+// No polling timer or scheduler is added; the explicit button bypasses the gate.
+function resume(){return refresh(false).catch(()=>{})}
+document.addEventListener?.('visibilitychange',resume);
+root.addEventListener?.('pageshow',resume);
+resume();
 })(typeof window==='object'?window:globalThis);

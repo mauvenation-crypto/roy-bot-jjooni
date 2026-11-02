@@ -66,3 +66,23 @@ test('API failure rechecks published data without reporting source collection su
  assert.equal(message.dataset.state,'API_FAILED_PUBLISHED');
  assert.match(message.textContent,/신규 원천 조회 완료가 아니며/);
 });
+
+test('mobile resume reads current quotes once, suppresses hidden/burst reads and permits manual retry',async()=>{
+ let clock=Date.now(),reads=0,fail=false;const listeners={};
+ class Clock extends Date{static now(){return clock}}
+ const document={hidden:true,dispatchEvent(){},addEventListener:(name,fn)=>listeners[name]=fn};
+ const context=vm.createContext({document,CustomEvent:class{},AbortSignal,Date:Clock,Promise,Error,console,
+  fetch:async()=>{reads++;if(fail)throw Error('offline');return {ok:true,json:async()=>payload({...row,observed_at:new Date(clock-1000).toISOString()})}}});
+ context.window=context;context.addEventListener=(name,fn)=>listeners[name]=fn;
+ vm.runInContext(fs.readFileSync('market-observatory/intraday-quotes-v1.js','utf8'),context);
+ const runtime=context.__JJOONI_OBSERVATORY_QUOTES;
+ assert.equal(reads,0,'a hidden tab must not collect');
+ document.hidden=false;await listeners.visibilitychange();assert.equal(reads,1);
+ await listeners.pageshow({persisted:true});await listeners.visibilitychange();assert.equal(reads,1);
+ clock+=60000;await listeners.visibilitychange();assert.equal(reads,2);
+ clock+=60000;document.hidden=true;await listeners.visibilitychange();assert.equal(reads,2);
+ document.hidden=false;fail=true;await listeners.pageshow({persisted:true});assert.equal(runtime.status,'FAILED');
+ await listeners.visibilitychange();assert.equal(reads,3,'failed automatic requests are also bounded');
+ fail=false;await runtime.refresh(true);assert.equal(reads,4,'manual request bypasses the lifecycle gate');
+ assert.equal(runtime.error,null);assert.equal(runtime.status,'COMPLETE');
+});
