@@ -2,11 +2,15 @@ name: Market Observatory Latest Board E2E
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths: ['market-observatory/latest-board-v1.js', 'market-observatory/metric-detail-v1.js', 'market-observatory/index.html', 'tests/observatory-tripod*.test.cjs', '.github/workflows/market-observatory-latest-board-e2e.yml']
   push:
     branches: [main]
     paths:
       - market-observatory/index.html
       - market-observatory/latest-board-v1.js
+      - market-observatory/metric-detail-v1.js
+      - tests/observatory-tripod-state.test.cjs
       - market-observatory/sector-etf-v1.js
       - market-observatory/data/observatory.json
       - market-observatory/data/sector-etf.json
@@ -32,15 +36,19 @@ jobs:
       - name: Syntax and period-sign regression check
         run: |
           node --check market-observatory/latest-board-v1.js
-          node --test tests/latest-board-period.test.cjs tests/observatory-tripod-next.test.cjs tests/observatory-bipod-weekly.test.cjs tests/observatory-metric-bipod-weekly.test.cjs
+          node --test tests/latest-board-period.test.cjs tests/observatory-tripod-next.test.cjs tests/observatory-bipod-weekly.test.cjs tests/observatory-metric-bipod-weekly.test.cjs tests/observatory-tripod-state.test.cjs
       - name: Install Playwright Chromium
         run: |
           npm init -y >/dev/null 2>&1
           npm install --silent playwright@1.55.0
           npx playwright install --with-deps chromium >/dev/null
+      - name: Serve proposed source for pull requests
+        if: github.event_name == 'pull_request'
+        run: python3 -m http.server 8123 >/tmp/obs-tripod-http.log 2>&1 &
       - name: Verify public tab-scoped indicator boards
         env:
-          URL: https://mauveplace.github.io/jjooni-control-tower/market-observatory/
+          URL: ${{ github.event_name == 'pull_request' && 'http://127.0.0.1:8123/market-observatory/' || 'https://mauveplace.github.io/jjooni-control-tower/market-observatory/' }}
+          LOCAL_QA: ${{ github.event_name == 'pull_request' && '1' || '0' }}
         run: |
           node <<'JS'
           const { chromium } = require('playwright');
@@ -53,7 +61,7 @@ jobs:
             fx:{title:'환율 주요 지표',must:['USD/KRW','USD/JPY','JPY/KRW','DXY'],mustNot:['미국 10Y','WTI','KOSPI']},
             energy:{title:'원자재 주요 지표',must:['WTI','Brent','Natural Gas','Gold','Silver','Copper'],mustNot:['USD/KRW','미국 10Y','KOSPI']},
             sectors:{title:'섹터·ETF 주요 지표',must:['MA20 상회','1M RS 강세','1M RS 약세','성장-방어','SPY 1M','QQQ 1M'],mustNot:['USD/KRW','미국 10Y']},
-            tripod:{title:'TRI-POD 주요 입력',must:['현재 상태','목표 노출','NASDAQ 100','BIPOD 전환가격','NOPOD 가격선','MA250 · 계산 참고','VIX / VIX10','52주 고점대비'],mustNot:['USD/KRW','WTI']},
+            tripod:{title:'TRI-POD 주요 입력',must:['현재 상태','목표 노출','NASDAQ 100','MA250 · 계산 참고','VIX / VIX10','52주 고점대비'],mustNot:['USD/KRW','WTI']},
             calendar:{title:'경제일정 주요 지표',must:['오늘 일정','향후 7일','다음 일정','다음 ★★★'],mustNot:['USD/KRW','WTI','미국 10Y']}
           };
           async function snapshot(page){return page.evaluate(()=>({
@@ -73,7 +81,7 @@ jobs:
           (async()=>{
             const browser=await chromium.launch({headless:true});
             let passed=false,last='';
-            for(let attempt=1;attempt<=20&&!passed;attempt++){
+            for(let attempt=1;attempt<=(process.env.LOCAL_QA==='1'?1:20)&&!passed;attempt++){
               const page=await browser.newPage({viewport:{width:390,height:844}});
               const errors=[];page.on('pageerror',e=>errors.push(String(e)));
               try{
@@ -97,6 +105,19 @@ jobs:
                   for(const k of cfg.must)assert(x.labels.includes(k),`${tab} missing ${k}: ${x.labels.join(',')}`);
                   for(const k of cfg.mustNot)assert(!x.labels.includes(k),`${tab} leaked ${k}`);
                   assert(x.pulse.length>0,`${tab} pulse empty`);
+                  if(tab==='tripod'){
+                    const state=await page.evaluate(()=>window.__JJOONI_LATEST_BOARD.getTripodDisplay());
+                    assert(state.available,'completed-session strategy snapshot unavailable');
+                    for(const label of [state.primary.label,state.secondary.label])assert(x.labels.includes(label),'state transition missing '+label);
+                    const dates=await page.locator('#latestBoardGrid .latestTile time').allTextContents();
+                    assert(dates.every(d=>d===state.date),'mixed signal dates '+dates.join(','));
+                    for(const width of [390,800,1363]){
+                      await page.setViewportSize({width,height:960});
+                      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+3),'strategy overflow at '+width);
+                      await page.screenshot({path:'tripod-state-'+width+'.png',fullPage:true});
+                    }
+                    await page.setViewportSize({width:390,height:844});
+                  }
                   assert(x.width<=x.inner+3,`${tab} mobile overflow ${x.width}>${x.inner}`);
                 }
                 assert(errors.length===0,`page errors ${errors.join(' | ')}`);
@@ -104,7 +125,7 @@ jobs:
                 passed=true;
               }catch(e){last=String(e);console.log(`LATEST_BOARD_E2E_RETRY attempt=${attempt} ${last}`)}
               await page.close();
-              if(!passed)await sleep(15000);
+              if(!passed&&process.env.LOCAL_QA!=='1')await sleep(15000);
             }
             await browser.close();
             assert(passed,`public tab-scoped latest board verification failed: ${last}`);
@@ -113,3 +134,8 @@ jobs:
 
 
 
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tripod-state-responsive
+          path: tripod-state-*.png
