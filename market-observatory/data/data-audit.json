@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-04T00:26:04+09:00",
+  "generated_kst": "2026-11-04T00:26:05+09:00",
   "overall": "WARN",
   "critical_count": 0,
   "warning_count": 1,
@@ -520,14 +520,14 @@
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-04T00:22:45+09:00",
-      "current_quote_age_seconds": 199,
+      "current_quote_age_seconds": 200,
       "captured_quote_age_seconds": 62
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-04T00:22:26+09:00",
-      "current_quote_age_seconds": 218,
+      "current_quote_age_seconds": 219,
       "captured_quote_age_seconds": 81
     }
   },
