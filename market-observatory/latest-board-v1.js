@@ -222,7 +222,7 @@ function tripodNextModel(t,session,previous=null,previousWeek=null){
  const max=target==='TQQQ 100%',cash=target==='현금 100%';
  return {available:true,date,ndx,ma,vix,dd,target,max,cash,
   state:max?'트라이팟 · 3배':cash?'노팟 · 현금 100%':'바이팟 · 1.5배',
-  title:max?'다음 전환 · 바이팟 감속 / 노팟':cash?'다음 전환 · 바이팟 재진입 / 상승 복귀':t.regime==='상승'?'다음 전환 · 트라이팟 복귀 / 노팟':'다음 전환 · 상승 복귀 / 노팟',
+  title:max?'다음 스텝 · 바이팟 감속 / 노팟':cash?'다음 스텝 · 바이팟 재진입 / 상승 복귀':t.regime==='상승'?'다음 스텝 · 트라이팟 복귀 / 노팟':'다음 스텝 · 상승 복귀 / 노팟',
   gates:max?[drawdown,vixGate(28,'≥',vix>=28),fall]:cash?[vixGate(18,'<',vix<18),rise]:t.regime==='상승'?[{...drawdown,label:'트라이팟 복귀선 · 고점 −9%',op:'≥',met:dd>=-9,note:'종가가 고점 −9% 선 이상이고 VIX10 < 28을 함께 충족해야 트라이팟 복귀' },vixGate(28,'<',vix<28),fall]:[rise,vixGate(18,'≥',vix>=18)],
   rule:max?'낙폭 9% 초과 또는 VIX10 ≥ 28이면 감속. 단, 지수가 MA250 × 0.95 미만이면 하락 레짐이 먼저 적용되며 VIX10 ≥ 18일 때 현금 전환.':cash?'하락 레짐에서 VIX10 < 18이면 감속 목표로 재진입. 상승 복귀는 NDX > MA250 × 1.01이며 VIX10·낙폭 조건에 따라 목표가 결정됩니다.':t.regime==='상승'?'최대 노출 복귀는 낙폭 9% 이내와 VIX10 < 28을 모두 충족해야 합니다. NDX < MA250 × 0.95이면 하락 레짐으로 전환 후 VIX10 18 기준을 적용합니다.':'하락 레짐에서 VIX10 ≥ 18이면 현금 전환. NDX > MA250 × 1.01이면 상승 복귀 후 VIX10 28·낙폭 9% 기준을 적용합니다.'};
 }
