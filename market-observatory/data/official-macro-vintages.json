@@ -4300,6 +4300,13 @@
         "captured_kst": "2026-09-30T03:16:59+09:00",
         "series_identity": null,
         "source_url": "https://fred.stlouisfed.org/series/JTSJOL"
+      },
+      {
+        "version": "revision_1",
+        "value": 7190.0,
+        "captured_kst": "2026-11-04T04:52:09+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/JTSJOL"
       }
     ],
     "US_FED_FUNDS|2026-09-29": [
@@ -5006,7 +5013,25 @@
         "series_identity": null,
         "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
       }
+    ],
+    "US_JOLTS|2026-09-01": [
+      {
+        "version": "baseline_import",
+        "value": 7523.0,
+        "captured_kst": "2026-11-04T04:52:09+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/JTSJOL"
+      }
+    ],
+    "US_FED_FUNDS|2026-11-03": [
+      {
+        "version": "baseline_import",
+        "value": 3.875,
+        "captured_kst": "2026-11-04T04:52:09+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
+      }
     ]
   },
-  "updated_kst": "2026-11-03T21:24:05+09:00"
+  "updated_kst": "2026-11-04T04:52:09+09:00"
 }
