@@ -255,3 +255,9 @@ test('new IRP allocation keeps its original capital after a sell and reinvestmen
  const v=S.build(C,b,src),o=S.strategySummary(v),m=S.estimateMasterRealized(src,v);for(const row of o.accounts)row.masterRealized=m.accounts[row.id];S.applyStrategyPerformance(o,b,v,src,src);
  assert.equal(o.accounts[3].capital,100000);assert.equal(o.accounts[3].cumulativePnl,-14000);assert.equal(o.accounts[3].cumulativeReturn,-14);assert.equal(b.baseline.accounts.IRP.positions.length,0);
 });
+
+test('only explicit strategy capital flow changes return denominator; trades and dividends never rebase P0',()=>{
+ const C=c(),b=openingBook(C);C.accounts.TOSS.positions=[p('TQQQ',3,31500,{cost_basis_krw:30000})];C.accounts.TOSS.nav=40000;
+ b.events=[{id:'new-strategy-cash',kind:'DEPOSIT',account:'TOSS',strategy:'NASDAQ_SYSTEM',amount_krw:10000,at:'2026-10-16T09:20:00Z'},{id:'other-cash',kind:'DEPOSIT',account:'TOSS',strategy:'OTHER',amount_krw:7000,at:'2026-10-16T09:20:00Z'},{id:'income',kind:'DIVIDEND',account:'TOSS',strategy:'NASDAQ_SYSTEM',amount_krw:50,at:'2026-10-16T09:20:00Z'}];
+ const out=performance(C,b,ledger([tr('TOSS','new-buy','BUY',1,10)])).accounts[0];assert.equal(out.initialCapital,20000);assert.equal(out.capital,30000);assert.equal(out.cumulativeReturn,100*1550/30000);assert.equal(out.strategyIncome,50);assert.equal(b.cost_basis_v1.positions['TOSS|TQQQ'].cost_krw,20000);
+});
