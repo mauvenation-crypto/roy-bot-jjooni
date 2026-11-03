@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_MARKET_OBSERVATORY_V1",
-  "generated_kst": "2026-11-04T06:36:58+09:00",
+  "generated_kst": "2026-11-04T07:36:21+09:00",
   "read_only": true,
   "contains_account_data": false,
   "us_market_session_contract": "COMMON_LAST_COMPLETED_US_SESSION_V1",
@@ -9,15 +9,15 @@
     "NASDAQ100": 28180.26367188,
     "SP500": 7568.91992188,
     "VIX": 20.82999992,
-    "DXY": 101.85900116,
-    "USDKRW": 1344.35998535,
-    "USDJPY": 158.72399902,
-    "JPYKRW": 8.44699955,
-    "WTI": 96.91999817,
-    "BRENT": 104.51000214,
-    "NATGAS": 2.90799999,
-    "GOLD": 3934.19995117,
-    "COPPER": 6.40749979,
+    "DXY": 101.8730011,
+    "USDKRW": 1343.39001465,
+    "USDJPY": 158.66000366,
+    "JPYKRW": 8.44400024,
+    "WTI": 96.76000214,
+    "BRENT": 104.41999817,
+    "NATGAS": 2.90400004,
+    "GOLD": 3940.19995117,
+    "COPPER": 6.41300011,
     "US3M": 4.21,
     "US5Y": 4.72900009,
     "US10Y": 4.9369998,
@@ -39,8 +39,8 @@
     "JP30Y": 3.908,
     "JP_2S10S": 0.942,
     "KR_US_10Y": -0.949,
-    "BTCUSD": 77711.0,
-    "ETHUSD": 2287.48,
+    "BTCUSD": 77712.0,
+    "ETHUSD": 2287.33,
     "FEAR_GREED": 19.1,
     "FEAR_GREED_RATING": "EXTREME FEAR",
     "KOSPI": 5648.79,
@@ -48,7 +48,7 @@
     "RUSSELL2000": 2812.44726562,
     "DOW": 51786.71875,
     "NASDAQCOMPOSITE": 25372.00976562,
-    "SILVER": 49.77999878
+    "SILVER": 49.81000137
   },
   "series": {
     "NASDAQ100": [
@@ -12096,7 +12096,7 @@
       },
       {
         "date": "2026-11-03",
-        "value": 101.85900116
+        "value": 101.8730011
       }
     ],
     "USDKRW": [
@@ -15210,7 +15210,7 @@
       },
       {
         "date": "2026-11-02",
-        "value": 1344.35998535
+        "value": 1343.39001465
       }
     ],
     "USDJPY": [
@@ -18324,7 +18324,7 @@
       },
       {
         "date": "2026-11-02",
-        "value": 158.72399902
+        "value": 158.66000366
       }
     ],
     "JPYKRW": [
@@ -21438,7 +21438,7 @@
       },
       {
         "date": "2026-11-02",
-        "value": 8.44699955
+        "value": 8.44400024
       }
     ],
     "WTI": [
@@ -24456,7 +24456,7 @@
       },
       {
         "date": "2026-11-03",
-        "value": 96.91999817
+        "value": 96.76000214
       }
     ],
     "BRENT": [
@@ -27478,7 +27478,7 @@
       },
       {
         "date": "2026-11-03",
-        "value": 104.51000214
+        "value": 104.41999817
       }
     ],
     "NATGAS": [
@@ -30500,7 +30500,7 @@
       },
       {
         "date": "2026-11-03",
-        "value": 2.90799999
+        "value": 2.90400004
       }
     ],
     "GOLD": [
@@ -33522,7 +33522,7 @@
       },
       {
         "date": "2026-11-03",
-        "value": 3934.19995117
+        "value": 3940.19995117
       }
     ],
     "COPPER": [
@@ -36544,7 +36544,7 @@
       },
       {
         "date": "2026-11-03",
-        "value": 6.40749979
+        "value": 6.41300011
       }
     ],
     "US3M": [
@@ -293690,10 +293690,10 @@
       },
       {
         "date": "2026-11-03",
-        "value": 77711.0,
+        "value": 77712.0,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-04T07:34:32+09:00",
+        "observed_kst": "2026-11-04T07:35:48+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -300289,10 +300289,10 @@
       },
       {
         "date": "2026-11-03",
-        "value": 2287.48,
+        "value": 2287.33,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-04T07:34:42+09:00",
+        "observed_kst": "2026-11-04T07:36:03+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -319100,7 +319100,7 @@
       },
       {
         "date": "2026-11-03",
-        "value": 49.77999878
+        "value": 49.81000137
       }
     ]
   },
@@ -319223,7 +319223,7 @@
     "drawdown_52w_pct": -9.749427172630408,
     "ma250": 27426.45111718776,
     "ndx": 28180.26367188,
-    "observed_at": "2026-11-04T06:37:39+09:00",
+    "observed_at": "2026-11-04T07:36:26+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -10.359344186727204,
     "previous_ma250": 27415.472859375237,
@@ -324361,11 +324361,11 @@
       "symbol": "BTC-USD",
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
-      "price": 77711.0,
-      "quote_as_of_kst": "2026-11-04T07:34:32+09:00",
-      "captured_kst": "2026-11-04T07:35:15+09:00",
+      "price": 77712.0,
+      "quote_as_of_kst": "2026-11-04T07:35:48+09:00",
+      "captured_kst": "2026-11-04T07:36:24+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 43,
+      "quote_age_seconds": 36,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     },
@@ -324373,11 +324373,11 @@
       "symbol": "ETH-USD",
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
-      "price": 2287.48,
-      "quote_as_of_kst": "2026-11-04T07:34:42+09:00",
-      "captured_kst": "2026-11-04T07:35:15+09:00",
+      "price": 2287.33,
+      "quote_as_of_kst": "2026-11-04T07:36:03+09:00",
+      "captured_kst": "2026-11-04T07:36:24+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 33,
+      "quote_age_seconds": 21,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     }
@@ -324516,7 +324516,7 @@
       "status": "LIVE"
     }
   },
-  "kr_rates_refreshed_kst": "2026-11-04T06:36:57+09:00",
+  "kr_rates_refreshed_kst": "2026-11-04T07:36:20+09:00",
   "quality": {
     "kr_rates": {
       "state": "PASS",
@@ -324526,7 +324526,7 @@
     "fear_greed": {
       "state": "LIVE",
       "source": "CNN_FEAR_GREED_PUBLIC",
-      "observed_at": "2026-11-03T21:20:01+00:00",
+      "observed_at": "2026-11-03T22:17:56+00:00",
       "rating": "EXTREME FEAR",
       "error": null,
       "history_source": "DAILY_MARKET_PULSE_HISTORY",
@@ -324564,7 +324564,7 @@
   "today_strategy_contract": "TRIPOD_CANONICAL_DECISION_SUPPORT_V1",
   "freshness": {
     "status": "LIVE",
-    "checked_kst": "2026-11-04T06:36:57+09:00",
+    "checked_kst": "2026-11-04T07:36:20+09:00",
     "market_date_us": "2026-11-03",
     "us_close_refresh_contract": "US_REGULAR_CLOSE_PLUS_10M_DST_AWARE",
     "scheduled_kst": "05:10_OR_06:10_DST_DEPENDENT",
@@ -324577,7 +324577,7 @@
   "history_base_generated_kst": "2026-09-13T00:12:30+09:00",
   "history_base_path": "./data/history-30y.json",
   "crypto_contract": "SPOT_QUOTE_WITH_UTC_DAILY_COMPARISON_V1",
-  "crypto_enriched_kst": "2026-11-04T07:35:15+09:00",
+  "crypto_enriched_kst": "2026-11-04T07:36:24+09:00",
   "market_supplement_quality": {
     "KOSPI": {
       "status": "LIVE",
@@ -324626,6 +324626,6 @@
   "equity_enrichment_contract": "KOSPI_KOSDAQ_DAILY_REFERENCE_V1",
   "equity_session_contract": "KR_TRADING_DATE_NAVER_PRIMARY_YAHOO_FALLBACK_V2",
   "market_supplement_contract": "US_SUPPLEMENT_MATCH_COMPLETED_CORE_SESSION_V3",
-  "equity_enriched_kst": "2026-11-04T06:37:15+09:00",
+  "equity_enriched_kst": "2026-11-04T07:36:25+09:00",
   "us_rates_refreshed_kst": "2026-11-04T00:23:44+09:00"
 }
