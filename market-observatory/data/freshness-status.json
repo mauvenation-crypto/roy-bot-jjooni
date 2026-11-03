@@ -1,14 +1,17 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-03T09:24:44+09:00",
+  "generated_kst": "2026-11-03T10:46:14+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
     "watchdog_scope": "US_CLOSE_RECOVERY_ONLY"
   },
-  "overall": "LIVE",
+  "overall": "LIVE_WITH_WARNINGS",
   "critical_bad": [],
-  "warnings": [],
+  "warnings": [
+    "jp_rates",
+    "audit"
+  ],
   "watchdog_required": false,
   "session_alignment": {
     "expected_session": "2026-11-02",
@@ -99,7 +102,7 @@
     },
     "jp_rates": {
       "label": "JP Rates",
-      "state": "LIVE",
+      "state": "LAGGING",
       "generated_kst": "2026-11-03T08:57:55+09:00",
       "as_of": "2026-10-30",
       "detail": "JP2Y 2026-10-30 · JP5Y 2026-10-30 · JP10Y 2026-10-30 · JP30Y 2026-10-30 · JP_2S10S 2026-10-30",
@@ -109,19 +112,19 @@
     "crypto": {
       "label": "Crypto",
       "state": "LIVE",
-      "generated_kst": "2026-11-03T09:18:25+09:00",
+      "generated_kst": "2026-11-03T10:46:13+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=398s · ETHUSD age=398s",
+      "detail": "BTCUSD age=22s · ETHUSD age=22s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
         "BTCUSD": {
           "status": "LIVE",
-          "quote_as_of_kst": "2026-11-03T09:18:06+09:00"
+          "quote_as_of_kst": "2026-11-03T10:45:52+09:00"
         },
         "ETHUSD": {
           "status": "LIVE",
-          "quote_as_of_kst": "2026-11-03T09:18:06+09:00"
+          "quote_as_of_kst": "2026-11-03T10:45:52+09:00"
         }
       },
       "max_age_seconds": 3600
@@ -205,10 +208,10 @@
     },
     "audit": {
       "label": "Full Data Audit",
-      "state": "PASS",
-      "generated_kst": "2026-11-03T09:24:44+09:00",
+      "state": "WARN",
+      "generated_kst": "2026-11-03T10:46:14+09:00",
       "as_of": "2026-11-02",
-      "detail": "critical=0 · warnings=0",
+      "detail": "critical=0 · warnings=1",
       "source": "data-audit.json",
       "critical": true
     },
