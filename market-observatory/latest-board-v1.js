@@ -145,7 +145,7 @@ function tripodBipodChange(t){
  return change?{...change,label:'전주',refDate:prior.date}:null;
 }
 function tripodPriceDistance(level,price){return level==null||price==null||price<=0?'현재 종가 대비 —':`현재 종가 대비 ${level>=price?'+':''}${fmt((level/price-1)*100,2)}%`;}
-function customTile(group,label,value,foot='',tone='flat',time='',change=null,note=''){const key={REGIME:'TRIPOD_TREND',TARGET:'TRIPOD_TARGET',INDEX:'NASDAQ100',TREND:'TRIPOD_MA',FALL:'TRIPOD_FALL',RISE:'TRIPOD_RISE',BIPOD:'TRIPOD_BIPOD',NOPOD:'TRIPOD_FALL',RISK:'TRIPOD_VIX',DRAWDOWN:'TRIPOD_DD'}[group];return `<div class="latestTile" ${key?`data-metric="${key}" role="button" tabindex="0" aria-haspopup="dialog" aria-label="${esc(label)} 추이 보기"`:''}><div class="latestTileTop"><span>${esc(group)}</span><b>${esc(label)}</b></div><strong class="${esc(tone)}">${esc(value)}</strong>${change?`<div class="latestMaChange ${esc(change.tone)}"><span title="${esc(change.refDate?'기준: '+change.refDate:'')}">${esc(change.label||'전일')} ${esc(change.points)}pt</span><span>(${esc(change.percent)}%)</span></div>`:''}<div class="latestTileFoot"><span class="${esc(tone)}">${esc(foot||'')}</span><time>${esc(time||'')}</time></div>${note?`<div class="latestCryptoBasis">${esc(note)}</div>`:''}</div>`}
+function customTile(group,label,value,foot='',tone='flat',time='',change=null,note='',metric=null){const key=metric||{REGIME:'TRIPOD_TREND',TARGET:'TRIPOD_TARGET',INDEX:'NASDAQ100',TREND:'TRIPOD_MA',FALL:'TRIPOD_FALL',RISE:'TRIPOD_RISE',BIPOD:'TRIPOD_BIPOD',NOPOD:'TRIPOD_FALL',RISK:'TRIPOD_VIX',DRAWDOWN:'TRIPOD_DD'}[group];return `<div class="latestTile" ${key?`data-metric="${key}" role="button" tabindex="0" aria-haspopup="dialog" aria-label="${esc(label)} 추이 보기"`:''}><div class="latestTileTop"><span>${esc(group)}</span><b>${esc(label)}</b></div><strong class="${esc(tone)}">${esc(value)}</strong>${change?`<div class="latestMaChange ${esc(change.tone)}"><span title="${esc(change.refDate?'기준: '+change.refDate:'')}">${esc(change.label||'전일')} ${esc(change.points)}pt</span><span>(${esc(change.percent)}%)</span></div>`:''}<div class="latestTileFoot"><span class="${esc(tone)}">${esc(foot||'')}</span><time>${esc(time||'')}</time></div>${note?`<div class="latestCryptoBasis">${esc(note)}</div>`:''}</div>`}
 function dataGenerated(){const d=typeof DATA!=='undefined'?DATA:null;const clock=[d?.generated_kst,d?.supplemental_refreshed_kst].filter(x=>Number.isFinite(Date.parse(x))).sort((a,b)=>Date.parse(b)-Date.parse(a))[0];return String(clock||'').replace('T',' ').slice(0,16)}
 function renderCompare(show=true){const host=ensure(),box=host?.querySelector('#latestCompare');if(!box)return;box.style.display=show?'flex':'none';if(!show)return;box.innerHTML=Object.entries(COMPARES).map(([k,v])=>`<button type="button" data-compare="${k}" class="${k===compareKey?'on':''}">${esc(v.label)}</button>`).join('');box.querySelectorAll('button[data-compare]').forEach(b=>b.onclick=()=>{compareKey=b.dataset.compare;renderBoard()})}
 function setHeader(title,sub,generated,showCompare=true){const host=ensure();if(!host)return;const t=host.querySelector('#latestBoardTitle'),s=host.querySelector('#latestBoardSub'),g=host.querySelector('#latestBoardGenerated');if(t)t.textContent=title;if(s)s.textContent=showCompare?`${sub} · 선택 기준: ${COMPARES[compareKey]?.label||'일간'} 대비`:sub;if(g)g.textContent=generated?`수집 ${generated} KST`:'';renderCompare(showCompare)}
@@ -221,11 +221,41 @@ function tripodNextModel(t,session,previous=null,previousWeek=null){
 
  const max=target==='TQQQ 100%',cash=target==='현금 100%';
  return {available:true,date,ndx,ma,vix,dd,target,max,cash,
-  state:max?'최대 노출':cash?'현금 대기':'감속 · BIPOD·MONOPOD',
-  title:max?'다음 스텝 · 감속 (BIPOD·MONOPOD)':cash?'다음 스텝 · 위험자산 재진입':'다음 스텝 · 최대 노출 복귀 / 현금 전환',
-  gates:max?[drawdown,vixGate(28,'≥',vix>=28),fall]:cash?[vixGate(18,'<',vix<18),rise]:t.regime==='상승'?[{...drawdown,op:'≥',met:dd>=-9,note:'낙폭 9% 이내 회복' },vixGate(28,'<',vix<28),fall]:[rise,vixGate(18,'≥',vix>=18)],
+  state:max?'트라이팟 · 3배':cash?'노팟 · 현금 100%':'바이팟 · 1.5배',
+  title:max?'다음 전환 · 바이팟 감속 / 노팟':cash?'다음 전환 · 바이팟 재진입 / 상승 복귀':t.regime==='상승'?'다음 전환 · 트라이팟 복귀 / 노팟':'다음 전환 · 상승 복귀 / 노팟',
+  gates:max?[drawdown,vixGate(28,'≥',vix>=28),fall]:cash?[vixGate(18,'<',vix<18),rise]:t.regime==='상승'?[{...drawdown,label:'트라이팟 복귀선 · 고점 −9%',op:'≥',met:dd>=-9,note:'종가가 고점 −9% 선 이상이고 VIX10 < 28을 함께 충족해야 트라이팟 복귀' },vixGate(28,'<',vix<28),fall]:[rise,vixGate(18,'≥',vix>=18)],
   rule:max?'낙폭 9% 초과 또는 VIX10 ≥ 28이면 감속. 단, 지수가 MA250 × 0.95 미만이면 하락 레짐이 먼저 적용되며 VIX10 ≥ 18일 때 현금 전환.':cash?'하락 레짐에서 VIX10 < 18이면 감속 목표로 재진입. 상승 복귀는 NDX > MA250 × 1.01이며 VIX10·낙폭 조건에 따라 목표가 결정됩니다.':t.regime==='상승'?'최대 노출 복귀는 낙폭 9% 이내와 VIX10 < 28을 모두 충족해야 합니다. NDX < MA250 × 0.95이면 하락 레짐으로 전환 후 VIX10 18 기준을 적용합니다.':'하락 레짐에서 VIX10 ≥ 18이면 현금 전환. NDX > MA250 × 1.01이면 상승 복귀 후 VIX10 28·낙폭 9% 기준을 적용합니다.'};
 }
+
+function tripodDisplayModel(t,session,history=[]){
+ const model=tripodNextModel(t,session),number=v=>v==null||v===''?null:(Number.isFinite(Number(v))?Number(v):null);
+ const date=t.session_date||t.date,prior=history.filter(r=>r.date<date).sort((a,b)=>String(a.date).localeCompare(String(b.date))).at(-1);
+ const atDate=history.find(r=>r.date===date);
+ const snapshot={date,ndx:number(t.ndx),vix:number(t.vix_latest_close)??number(t.vix)??number(atDate?.vix),
+  ndxChange:number(prior?.ndx)>0&&number(t.ndx)>0?(Number(t.ndx)/Number(prior.ndx)-1)*100:null,
+  vixChange:number(prior?.vix)>0&&(number(t.vix_latest_close)??number(t.vix)??number(atDate?.vix))!=null?((number(t.vix_latest_close)??number(t.vix)??number(atDate?.vix))/Number(prior.vix)-1)*100:null};
+ const cases=[{key:'TRIPOD',label:'트라이팟',exposure:'3배'},{key:'BIPOD',label:'바이팟',exposure:'1.5배'},{key:'MONOPOD',label:'모노팟',exposure:'1배 적용형'},{key:'NOPOD',label:'노팟',exposure:'현금 100%'}];
+ if(!model.available)return {available:false,snapshot,cases,pod:null,stateLabel:'판정자료 확인 중'};
+ const pod=model.max?'TRIPOD':model.cash?'NOPOD':'BIPOD',gate=key=>model.gates.find(g=>g.key===key);
+ const price=(group,label,g,metric,comparison,note)=>({group,label,kind:'price',boundary:g.boundary,op:g.op,met:g.met,metric,comparison,note});
+ const volatility=(label,g,note)=>({group:'VIX10',label,kind:'vix',boundary:g.boundary,op:g.op,met:g.met,metric:'TRIPOD_VIX',comparison:null,note});
+ let primary,secondary;
+ if(model.max){
+  primary=price('BIPOD','바이팟 전환가격',gate('drawdown'),'TRIPOD_BIPOD','weekly','종가 < 52주 최고 종가 × 0.91 또는 VIX10 ≥ 28이면 바이팟 감속');
+  secondary=price('NOPOD','노팟 전환가격',gate('fall'),'TRIPOD_FALL','daily','종가 < MA250 × 0.95 그리고 VIX10 ≥ 18일 때 현금 전환 · VIX10 < 18이면 바이팟');
+ }else if(model.cash){
+  primary=volatility('바이팟 재진입 VIX10',gate('vix'),'하락 레짐에서 VIX10 < 18이면 바이팟 재진입 · 당일 VIX가 아닌 10일 평균');
+  secondary=price('RISE','상승 레짐 복귀선',gate('rise'),'TRIPOD_RISE','rise','종가 > MA250 × 1.01이면 상승 전환 · 이후 VIX10 < 28과 낙폭 9% 이내 여부로 목표 판정');
+ }else if(t.regime==='상승'){
+  primary=price('TRIPOD','트라이팟 복귀가격',gate('drawdown'),'TRIPOD_BIPOD','weekly','종가 ≥ 52주 최고 종가 × 0.91 그리고 VIX10 < 28을 모두 충족해야 트라이팟 복귀');
+  secondary=price('NOPOD','노팟 전환가격',gate('fall'),'TRIPOD_FALL','daily','종가 < MA250 × 0.95 그리고 VIX10 ≥ 18일 때 현금 전환 · VIX10 < 18이면 바이팟 유지');
+ }else{
+  primary=price('RISE','상승 레짐 복귀선',gate('rise'),'TRIPOD_RISE','rise','종가 > MA250 × 1.01이면 상승 전환 · 트라이팟은 낙폭 9% 이내와 VIX10 < 28도 필요');
+  secondary=volatility('노팟 전환 VIX10',gate('vix'),'현재 하락 레짐 · VIX10 ≥ 18이면 현금 100% 전환 · 별도 지수 하락선 재돌파 불필요');
+ }
+ return {...model,pod,stateLabel:cases.find(c=>c.key===pod).label,exposure:cases.find(c=>c.key===pod).exposure,snapshot,cases,primary,secondary};
+}
+
 function tripodNextHtml(t,session){
  const history=typeof DATA!=='undefined'?(DATA?.tripod_history||[]):[];
  const previous=[...history].reverse().find(row=>row?.date&&row.date<session);
@@ -234,18 +264,31 @@ function tripodNextHtml(t,session){
  if(!m.available)return '<section class="tripodNext"><h3>다음 스텝 · 판정 보류</h3><p>동일 완료세션의 검증된 NDX·MA250·VIX10·낙폭 데이터가 필요합니다.</p></section>';
  const comparison=g=>{if(g.previousBoundary==null)return '';const delta=g.boundary-g.previousBoundary,sign=delta>0?'+':delta<0?'-':'',weekly=g.key==='drawdown',label=weekly?'전주':'전일',date=weekly&&g.previousBoundaryDate?' ('+g.previousBoundaryDate+')':'';return `<div class="tripodBoundaryChange"><span>${label} 기준${date} ${fmt(g.previousBoundary,2)}</span><span>${label} ${sign}${fmt(Math.abs(delta),2)}pt (${sign}${fmt(Math.abs(delta/g.previousBoundary*100),3)}%)</span></div>`};
  const distance=g=>g.met?'조건 충족':g.key==='vix'?`${fmt(g.distance,2)}pt ${g.op==='<'?'하락':'상승'} 필요${g.op==='<'?' · 경계 미만':''}`:`${fmt(g.distance,2)}% ${g.boundary<m.ndx?'하락':'상승'} 시 경계${g.gapPctPoint!=null?' · 낙폭 차이 '+fmt(g.gapPctPoint,2)+'%p':''}`;
- return `<section class="tripodNext" data-tripod-next="ready"><header><h3>${esc(m.title)}</h3><span>완료세션 ${esc(m.date)}</span></header><p><b>현재 ${esc(m.state)}</b> · ${esc(m.target)}</p><div class="tripodGateGrid">${m.gates.map(g=>`<article data-gate="${esc(g.key)}" role="button" tabindex="0" aria-haspopup="dialog" aria-label="${esc(g.label)} 추이 보기"><h4>${esc(g.label)}</h4><b>${esc(distance(g))}</b><p>현재 ${fmt(g.current,2)} → ${esc(g.op)} ${fmt(g.boundary,2)}</p>${comparison(g)}<small>${esc(g.note)}</small></article>`).join('')}</div><p>${esc(m.rule)}</p><small>판정: ${esc(t.action||'—')} · 종가 기준 조건까지의 거리이며 남은 일수 예측이 아닙니다. MA250·52주 고점·VIX10은 매일 변합니다. 상품 배수가 아닌 전략 전환 조건이며 계좌별 목표 구성은 다릅니다.</small></section>`;
+ return `<section class="tripodNext" data-tripod-next="ready"><header><h3>${esc(m.title)}</h3><span>완료세션 ${esc(m.date)}</span></header><div class="tripodStageLegend" aria-label="전략 운용 형태">${[['TRIPOD','트라이팟 · 3배'],['BIPOD','바이팟 · 1.5배'],['MONOPOD','모노팟 · 1배 적용형'],['NOPOD','노팟 · 현금']].map(([key,label])=>`<span data-pod-case="${key}" class="${(m.max?'TRIPOD':m.cash?'NOPOD':'BIPOD')===key?'active':''}">${label}</span>`).join('')}</div><p><b>현재 ${esc(m.state)}</b> · ${esc(m.target)}</p><div class="tripodGateGrid">${m.gates.map(g=>`<article data-gate="${esc(g.key)}" role="button" tabindex="0" aria-haspopup="dialog" aria-label="${esc(g.label)} 추이 보기"><h4>${esc(g.label)}</h4><b>${esc(distance(g))}</b><p>현재 ${fmt(g.current,2)} → ${esc(g.op)} ${fmt(g.boundary,2)}</p>${comparison(g)}<small>${esc(g.note)}</small></article>`).join('')}</div><p>${esc(m.rule)}</p><small>판정: ${esc(t.action||'—')} · 종가 기준 조건까지의 거리이며 남은 일수 예측이 아닙니다. MA250·52주 고점·VIX10은 매일 변합니다. 계좌별 목표 구성은 다릅니다. 모노팟은 계좌별 1배 적용형이며 별도 시장신호 전환조건은 설정되지 않았습니다.</small></section>`;
 }
-function tripodTiles(){const t=(typeof DATA!=='undefined'&&DATA?.tripod_latest)||{},ndx=stat(BY_KEY.NASDAQ100),vix=stat(BY_KEY.VIX),ma=num(t.ma250),v10=num(t.vix10),dd=num(t.drawdown_52w_pct);const rows=[
- customTile('REGIME','현재 상태',t.regime||'—','상승 ×1.01 / 하락 ×0.95'),
- customTile('TARGET','목표 노출',t.target||'—','송팀장 Tri-Pod'),
- customTile('INDEX','NASDAQ 100',ndx?fmt(ndx.value,2):'—',ndx?changeText(BY_KEY.NASDAQ100,ndx.change):'전일 대비 —',cls(ndx?.change),ndx?.date||''),
- customTile('BIPOD','BIPOD 전환가격',fmt(tripodBipodLevel(t),2),tripodPriceDistance(tripodBipodLevel(t),t.ndx),'flat',t.date||'',tripodBipodChange(t),'52주 최고 종가 × 0.91 · 전주 마지막 거래일 대비 · VIX10 ≥ 28도 감속 조건'),
- customTile('NOPOD','NOPOD 가격선',ma==null?'—':fmt(ma*.95,2),tripodPriceDistance(ma==null?null:ma*.95,t.ndx),'flat',t.date||'',ma250Change(t,.95),'MA250 × 0.95 미만 + VIX10 ≥ 18 · 52주 낙폭 기준 아님'),
- customTile('TREND','MA250 · 계산 참고',ma250Display(t.ma250),'전환선 아님 · 250일 평균','flat',t.date||'',ma250Change(t)),
- customTile('RISK','VIX / VIX10',`${vix?fmt(vix.value,2):'—'} / ${v10==null?'—':fmt(v10,2)}`,'현재 / 10일 평균',cls(vix?.change),vix?.date||''),
- customTile('DRAWDOWN','52주 고점대비',dd==null?'—':`${dd.toFixed(2)}%`,ma!=null&&tripodBipodLevel(t)!=null?`52주 최고 종가 ${fmt(tripodBipodLevel(t)/.91,2)}pt · 낙폭`:'낙폭',dd<-9?'down':'flat',t.date||'')
- ];rows.push(tripodNextHtml(t,typeof DATA!=='undefined'?DATA.us_completed_session_date:null));return rows}
+function tripodTiles(){
+ const data=typeof DATA!=='undefined'?DATA:null,t=data?.tripod_latest||{},display=tripodDisplayModel(t,data?.us_completed_session_date,data?.tripod_history||[]);
+ const s=display.snapshot,date=s.date||'',ma=t.ma250==null?null:Number(t.ma250),v10=t.vix10==null?null:Number(t.vix10),dd=t.drawdown_52w_pct==null?null:Number(t.drawdown_52w_pct);
+ const transition=d=>{
+  if(!d)return customTile('STATUS','전환 기준 확인 중','—','동일 완료세션의 검증된 신호가 필요합니다.','flat',date);
+  const value=d.kind==='vix'?'VIX10 '+d.op+' '+fmt(d.boundary,2):fmt(d.boundary,2);
+  const foot=d.kind==='vix'?'현재 VIX10 '+fmt(v10,2)+' · '+(d.met?'조건 충족':'조건 미충족'):tripodPriceDistance(d.boundary,s.ndx)+' · '+d.op+' 조건';
+  const change=d.comparison==='weekly'?tripodBipodChange(t):d.comparison==='rise'?ma250Change(t,1.01):d.comparison==='daily'?ma250Change(t,.95):null;
+  const volatility=display.available&&d.kind==='price'?(display.max?' · VIX10 '+fmt(v10,2)+' / 감속 경계 28':t.regime==='상승'&&d.group==='TRIPOD'?' · VIX10 < 28 '+(v10<28?'충족':'미충족'):d.group==='NOPOD'?' · VIX10 ≥ 18 '+(v10>=18?'충족':'미충족'):''):'';
+  return customTile(d.group,d.label,value,foot,'flat',date,change,d.note+volatility,d.metric);
+ };
+ const changeTextClosed=v=>v==null?'판정 종가 · 전일 비교 확인 중':'종가 '+(v>=0?'+':'')+fmt(v,2)+'%';
+ const rows=[
+  customTile('REGIME','현재 상태',display.available?display.stateLabel+' · '+display.exposure:'판정자료 확인 중',(t.regime||'—')+' 레짐 · 종가 판정','flat',date),
+  customTile('TARGET','목표 노출',t.target||'—','전략 판정과 같은 완료세션','flat',date),
+  customTile('INDEX','NASDAQ 100',fmt(s.ndx,2),changeTextClosed(s.ndxChange),cls(s.ndxChange),date,null,'전환선·거리 계산과 동일한 완료 종가 · 장중 지수는 지수 점검에서 확인'),
+  transition(display.primary),transition(display.secondary),
+  customTile('TREND','MA250 · 계산 참고',ma250Display(t.ma250),'전환선 아님 · 250일 평균','flat',date,ma250Change(t)),
+  customTile('RISK','VIX / VIX10',fmt(s.vix,2)+' / '+fmt(v10,2),'같은 세션의 종가 / 10일 평균',cls(s.vixChange),date),
+  customTile('DRAWDOWN','52주 고점대비',dd==null?'—':dd.toFixed(2)+'%',ma!=null&&tripodBipodLevel(t)!=null?'52주 최고 종가 '+fmt(tripodBipodLevel(t)/.91,2)+'pt · 낙폭':'낙폭',dd<-9?'down':'flat',date)
+ ];
+ rows.push(tripodNextHtml(t,data?.us_completed_session_date));return rows;
+}
 function renderTripod(){const rows=tripodTiles();setHeader(TAB_CONFIG.tripod.title,TAB_CONFIG.tripod.sub,dataGenerated(),false);setGrid(rows.join(''),rows.length);const t=(typeof DATA!=='undefined'&&DATA?.tripod_latest)||{};pulseChips([`Regime ${t.regime||'—'}`,`Target ${t.target||'—'}`])}
 
 function kstDay(d=new Date()){return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(d)}
@@ -282,7 +325,8 @@ const st=document.createElement('style');st.textContent=`
 .latestChangeFirst .latestPrimaryChange.up{color:#d92d20}.latestChangeFirst .latestPrimaryChange.down{color:#175cd3}.latestChangeFirst .latestPrimaryChange.flat{color:#667085}
 .latestTile.latestChangeFirst>strong.latestLevelValue{margin-top:6px;font-size:15px;line-height:1.5;font-weight:650;color:#526071;white-space:normal;overflow-wrap:anywhere;overflow:visible}
 .latestChangeFirst[data-comparison="D1"] .latestTilePeriods>span:first-child,.latestChangeFirst[data-comparison="W1"] .latestTilePeriods>span:nth-child(2){display:none}
+.latestTile[data-metric="TRIPOD_TARGET"]>strong,.latestTile[data-metric="TRIPOD_TREND"]>strong{white-space:normal;text-overflow:clip;overflow:visible;line-height:1.35;font-size:clamp(16px,2vw,24px);overflow-wrap:anywhere}.latestTile[data-metric^="TRIPOD_"] .latestTileFoot>span{white-space:normal;overflow:visible;text-overflow:clip;line-height:1.5}.tripodStageLegend{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.tripodStageLegend span{padding:6px 9px;border:1px solid #dce5ef;border-radius:8px;font-size:12px;color:#526071;background:#fff}.tripodStageLegend span.active{color:#153b65;background:#eaf3ff;border-color:#8fb2dc;font-weight:800}
 `;document.head.appendChild(st);
 let tries=0;const id=setInterval(()=>{tries++;ensureIndexShell();ensureOfficialMacroRuntime();hookRender();hookCalendar();bindTabs();if(renderBoard()&&tries>10&&window.__JJOONI_OFFICIAL_MACRO_V1)clearInterval(id);if(tries>120)clearInterval(id)},100);
-window.__JJOONI_LATEST_BOARD={version:'20261102-crypto-api-recovery',items:ITEMS,render:renderBoard,getSeries:seriesOf,getComparison:()=>({key:compareKey,...COMPARES[compareKey]}),contract:'GROUPED_MARKET_BOARD_WITH_INDEX_TAB_PERIOD_COMPARISON_AND_SOURCE_BASIS',tabs:Object.keys(TAB_CONFIG),comparisons:Object.keys(COMPARES)};
+window.__JJOONI_LATEST_BOARD={version:'20261104-state-aware-tripod',items:ITEMS,render:renderBoard,getSeries:seriesOf,getComparison:()=>({key:compareKey,...COMPARES[compareKey]}),getTripodDisplay:()=>tripodDisplayModel(typeof DATA==='undefined'?{}:DATA?.tripod_latest||{},typeof DATA==='undefined'?null:DATA?.us_completed_session_date,typeof DATA==='undefined'?[]:DATA?.tripod_history||[]),contract:'GROUPED_MARKET_BOARD_WITH_INDEX_TAB_PERIOD_COMPARISON_AND_SOURCE_BASIS',tabs:Object.keys(TAB_CONFIG),comparisons:Object.keys(COMPARES)};
 })();
