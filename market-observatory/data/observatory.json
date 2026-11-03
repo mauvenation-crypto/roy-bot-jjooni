@@ -39,8 +39,8 @@
     "JP30Y": 3.908,
     "JP_2S10S": 0.942,
     "KR_US_10Y": -0.876,
-    "BTCUSD": 76710.0,
-    "ETHUSD": 2252.08,
+    "BTCUSD": 76619.0,
+    "ETHUSD": 2256.37,
     "FEAR_GREED": 22.7,
     "FEAR_GREED_RATING": "EXTREME FEAR",
     "KOSPI": 5648.79,
@@ -293642,10 +293642,10 @@
       },
       {
         "date": "2026-11-03",
-        "value": 76710.0,
+        "value": 76619.0,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-03T16:41:26+09:00",
+        "observed_kst": "2026-11-03T18:06:40+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -300241,10 +300241,10 @@
       },
       {
         "date": "2026-11-03",
-        "value": 2252.08,
+        "value": 2256.37,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-03T16:41:08+09:00",
+        "observed_kst": "2026-11-03T18:06:51+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -324322,11 +324322,11 @@
       "symbol": "BTC-USD",
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
-      "price": 76710.0,
-      "quote_as_of_kst": "2026-11-03T16:41:26+09:00",
-      "captured_kst": "2026-11-03T16:41:38+09:00",
+      "price": 76619.0,
+      "quote_as_of_kst": "2026-11-03T18:06:40+09:00",
+      "captured_kst": "2026-11-03T18:07:05+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 12,
+      "quote_age_seconds": 25,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     },
@@ -324334,11 +324334,11 @@
       "symbol": "ETH-USD",
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
-      "price": 2252.08,
-      "quote_as_of_kst": "2026-11-03T16:41:08+09:00",
-      "captured_kst": "2026-11-03T16:41:38+09:00",
+      "price": 2256.37,
+      "quote_as_of_kst": "2026-11-03T18:06:51+09:00",
+      "captured_kst": "2026-11-03T18:07:05+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 30,
+      "quote_age_seconds": 14,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     }
@@ -324658,7 +324658,7 @@
   "history_base_generated_kst": "2026-09-13T00:12:30+09:00",
   "history_base_path": "./data/history-30y.json",
   "crypto_contract": "SPOT_QUOTE_WITH_UTC_DAILY_COMPARISON_V1",
-  "crypto_enriched_kst": "2026-11-03T16:41:39+09:00",
+  "crypto_enriched_kst": "2026-11-03T18:07:05+09:00",
   "market_supplement_quality": {
     "KOSPI": {
       "status": "LIVE",
