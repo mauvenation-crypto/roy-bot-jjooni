@@ -1,0 +1,34 @@
+name: KOSTAT CPI Official Live Probe
+on:
+  pull_request:
+    paths:
+      - tools/enrich_calendar_from_official_macro.py
+      - tests/test_kostat_cpi_official_fallback.py
+      - .github/workflows/kostat-cpi-official-live-probe.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live_official_transport:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline reference-period, release-date and headline regression
+        run: python -m unittest discover -s tests -p 'test_kostat_cpi_official_fallback.py' -v
+      - name: Verify actual official KOSTAT release and headline value
+        run: |
+          PYTHONPATH=tools python - <<'PY'
+          from enrich_calendar_from_official_macro import KOSTAT_CPI_RELEASES, _fetch_kostat_release, _parse_kostat_cpi_release
+          period = '2026-10-01'
+          date, url = KOSTAT_CPI_RELEASES[period]
+          page = _fetch_kostat_release(url)
+          actual = _parse_kostat_cpi_release(page, period, date)
+          if actual != '2.8%':
+              raise AssertionError(f'KOSTAT_CPI_ACTUAL_MISMATCH expected=2.8% observed={actual}')
+          print('KOSTAT_CPI_LIVE_OFFICIAL_TRANSPORT=PASS', 'reference_period=2026-10',
+                'published=2026-11-03', 'actual=2.8%', 'url='+url)
+          PY

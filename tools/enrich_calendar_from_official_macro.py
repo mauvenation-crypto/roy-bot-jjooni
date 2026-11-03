@@ -108,6 +108,76 @@ def _apply_kostat_industrial_release(event: dict, expected: str, now: datetime, 
             'actual': event.get('actual'), 'source_url': url, 'reference_period': expected}
 
 
+# Only this independently verified 2026-10 release is authorized. A later
+# month's data must never be inferred from a rolling CPI page or older ECOS.
+KOSTAT_CPI_RELEASES = {
+    '2026-10-01': (
+        '2026-11-03',
+        'https://mods.go.kr/board.es?act=view&bid=213&list_no=447801&mainXml=Y&mid=a10301010000',
+    ),
+}
+
+
+def _parse_kostat_cpi_release(page: str, expected_period: str, release_date: str) -> str:
+    year, month, day = map(int, expected_period.split('-'))
+    if day != 1:
+        raise ValueError('KOSTAT_CPI_REFERENCE_PERIOD_DAY_MISMATCH')
+    clean_page = re.sub(r'<(script|style)\b[^>]*>.*?</\1>', ' ', page, flags=re.I | re.S)
+    clean_page = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', clean_page)))
+    if not re.search(rf'{year}년\s*{month}월\s*소비자물가동향', clean_page):
+        raise ValueError('KOSTAT_CPI_REFERENCE_PERIOD_MISMATCH')
+    if not re.search(rf'게시일\s*{re.escape(release_date)}(?!\d)', clean_page):
+        raise ValueError('KOSTAT_CPI_PUBLICATION_DATE_MISMATCH')
+    # Headline CPI YoY only; never confuse MoM, core CPI or the index level.
+    matches = re.findall(
+        rf'□\s*{month}월\s*소비자물가지수는\s*전월대비\s*'
+        r'[0-9]+(?:\.[0-9]+)?\s*%\s*,?\s*전년동월대비\s*'
+        r'([0-9]+(?:\.[0-9]+)?)\s*%\s*각각\s*(상승|하락)',
+        clean_page,
+    )
+    if len(matches) != 1:
+        raise ValueError('KOSTAT_CPI_HEADLINE_MISSING_OR_AMBIGUOUS')
+    number, direction = matches[0]
+    if not 0 <= float(number) <= 50:
+        raise ValueError('KOSTAT_CPI_YOY_OUT_OF_RANGE')
+    return ('-' if direction == '하락' and float(number) else '') + number + '%'
+
+
+def _apply_kostat_cpi_release(event: dict, expected: str, now: datetime, fetcher):
+    if fetcher is None or event.get('title') != '2026년 10월 소비자물가동향':
+        return None
+    if _clean(event.get('actual')) is not None:
+        return None
+    release = KOSTAT_CPI_RELEASES.get(expected)
+    if not release:
+        return None
+    release_date, url = release
+    if str(event.get('datetime_kst') or '')[:10] != release_date:
+        return {'status': 'RELEASE_DATE_MISMATCH', 'source_url': url}
+    if now.date().isoformat() < release_date:
+        return None
+    try:
+        actual = _parse_kostat_cpi_release(fetcher(url), expected, release_date)
+    except Exception as exc:
+        return {'status': 'OFFICIAL_RELEASE_UNAVAILABLE', 'source_url': url,
+                'reason': f'{type(exc).__name__}: {exc}'[:160]}
+    checked = now.isoformat(timespec='seconds')
+    source = 'KOSTAT official October 2026 CPI press release'
+    patch = {
+        'actual': actual, 'source_tier': 'OFFICIAL', 'source': source,
+        'market_data_source': source, 'actual_source': source,
+        'official_actual_source': source, 'source_url': url,
+        'official_url': url, 'official_actual_url': url,
+        'checked_kst': checked, 'official_actual_checked_kst': checked,
+        'verification_status': 'VERIFIED_OFFICIAL',
+        'reference_period': expected[:7], 'value_vintage': 'AS_RELEASED',
+        'market_value_status': 'ACTUAL_AVAILABLE',
+    }
+    event.update(merge_observation(event, patch))
+    return {'status': 'APPLIED_OFFICIAL_RELEASE' if event.get('actual') == actual else 'MERGE_REJECTED',
+            'actual': event.get('actual'), 'source_url': url, 'reference_period': expected}
+
+
 MAPPINGS = (
     (re.compile(r'소비자물가동향'), 'KR_CPI'),
     (re.compile(r'산업활동동향'), 'KR_INDUSTRIAL_PRODUCTION'),
@@ -191,7 +261,8 @@ def apply(calendar: dict, macro: dict, now: datetime | None = None, official_rel
         ok, reason = _eligible_release(metric, expected)
         check = {'title': event.get('title'), 'metric': key, 'reference_period': expected, 'status': reason}
         if not ok:
-            fallback = _apply_kostat_industrial_release(event, expected, now, official_release_fetcher)
+            fallback = (_apply_kostat_cpi_release(event, expected, now, official_release_fetcher)
+                        or _apply_kostat_industrial_release(event, expected, now, official_release_fetcher))
             if fallback:
                 check.update(fallback)
                 if fallback['status'] == 'APPLIED_OFFICIAL_RELEASE':
