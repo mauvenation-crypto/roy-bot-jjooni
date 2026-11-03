@@ -248,3 +248,10 @@ test('sold-out strategy keeps its cumulative percentage and cannot become not-in
  const C=c(),b=openingBook(C);C.accounts.TOSS.positions=[];
  const o=performance(C,b,ledger([tr('TOSS','close','SELL',2,8)])).accounts[0];assert.equal(o.count,0);assert.equal(o.capital,20000);assert.equal(o.cumulativePnl,-4000);assert.equal(o.cumulativeReturn,-20);
 });
+test('new IRP allocation keeps its original capital after a sell and reinvestment',()=>{
+ const C=c(),b=book(C);C.accounts.IRP.positions=[p('133690',8,72000,{cost_basis_krw:76000})];C.accounts.IRP.nav=100000;
+ const r=(id,kind,qty,amount,time)=>tr('IRP',id,kind,qty,1,{ticker:'133690',name:'TIGER 미국나스닥100',currency:'KRW',fx:1,krw_amount:amount,filled_at_kst:time});
+ const src=ledger([r('first','BUY',10,100000,'2026-10-16T09:10:00Z'),r('sale','SELL',5,40000,'2026-10-16T09:20:00Z'),r('reinvest','BUY',3,26000,'2026-10-16T09:30:00Z')]);
+ const v=S.build(C,b,src),o=S.strategySummary(v),m=S.estimateMasterRealized(src,v);for(const row of o.accounts)row.masterRealized=m.accounts[row.id];S.applyStrategyPerformance(o,b,v,src,src);
+ assert.equal(o.accounts[3].capital,100000);assert.equal(o.accounts[3].cumulativePnl,-14000);assert.equal(o.accounts[3].cumulativeReturn,-14);assert.equal(b.baseline.accounts.IRP.positions.length,0);
+});
