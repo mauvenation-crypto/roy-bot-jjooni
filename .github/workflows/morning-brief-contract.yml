@@ -7,12 +7,18 @@ on:
       - market-observatory/morning-brief-v1.js
       - market-observatory/data/morning-brief/**
       - tools/validate_morning_brief.py
+      - tests/test_morning_brief_editorial.py
+      - tools/observatory_session.py
+      - docs/song-daily-editorial-contract.md
       - .github/workflows/morning-brief-contract.yml
   pull_request:
     paths:
       - market-observatory/morning-brief-v1.js
       - market-observatory/data/morning-brief/**
       - tools/validate_morning_brief.py
+      - tests/test_morning_brief_editorial.py
+      - tools/observatory_session.py
+      - docs/song-daily-editorial-contract.md
       - .github/workflows/morning-brief-contract.yml
   workflow_dispatch:
 
@@ -33,5 +39,7 @@ jobs:
           node-version: '22'
       - name: Validate full text, dates, latest and archives
         run: python tools/validate_morning_brief.py
+      - name: Verify editorial and completed-session regression cases
+        run: python -m unittest discover -s tests -p test_morning_brief_editorial.py
       - name: Validate reader runtime
         run: node --check market-observatory/morning-brief-v1.js

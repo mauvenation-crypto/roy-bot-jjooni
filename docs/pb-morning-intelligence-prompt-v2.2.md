@@ -66,3 +66,8 @@
 - `tools/validate_morning_brief.py` 검증, main HEAD 경쟁 업데이트 확인, Pages 배포 완료 확인. 미완료 시 'Git 저장 완료/Pages 진행 중' 또는 실패로 정확히 구분.
 - 보고서 하단에 `market_date_us, korea_asia_session, data_asof_kst, source_coverage, missing_fields, audit_issues, pb_gate, publication_commit, pages_status` 표기.
 - 매일 최종 보고 후 권한 분리된 MAIOS 투자보드의 `AI_BOARD`에 1건을 기록한다. 동일 날짜·유형 중복 방지, 새 행 추기, 원문/시장기준일/수치 신선도/리스크/반론/다른 PB 독립검토 대기(`REVEALED`, `PENDING_CROSS_CHECK`, `NO_TRADE_REVIEW_ONLY`)를 유지한다. 계좌 원천을 검증하지 못하면 market-only 요약만 사용한다. 공개 repo에 투자보드 파일 ID·비공개 URL·개인 계좌 사실을 기록하지 않는다. 보드 기록 실패 시 실패를 알리고 자동 성공으로 처리하지 않는다.
+
+
+## 2026-11-03 일일시황 재구성 적용
+
+[일일시황 구성·검증 계약](song-daily-editorial-contract.md)이 기존 섹션 순서보다 우선합니다. 오늘의 시장 이야기·숫자 대시보드·핵심 이슈의 인과 설명을 구성하고 완료 세션/DST/NDX·SOX 독립 가격 검증을 수행합니다. 같은 완성 본문을 채팅과 Observatory에 게시하며 PR·CI 통과만으로 반영 완료라고 하지 않습니다. 예약시간·개인정보·계좌 SSOT·주문 경계는 유지합니다.

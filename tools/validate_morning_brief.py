@@ -6,6 +6,44 @@ import json
 import re
 from datetime import date, datetime, timedelta
 from pathlib import Path
+from urllib.parse import urlparse
+from observatory_session import expected_completed_session
+
+EDITORIAL_SECTIONS = [
+    '① 오늘의 시장 이야기', '② 시장 한눈에', '③ 핵심 이슈 깊이 읽기',
+    '④ 글로벌·한국 시장', '⑤ AI 산업·기업실적', '⑥ 주요 일정',
+    '⑦ 투자전략·위험점검·복기', '⑧ 원천·데이터 감사',
+]
+
+def validate_editorial(d, created):
+    """Keep the new daily format and close proof from silently reverting."""
+    if d['report_date_kst'] < '2026-11-03':
+        return  # Dated historical reports retain their original presentation.
+    contract = d.get('editorial_contract') or {}
+    assert contract.get('version') == 'SONG_INSPIRED_DAILY_V1', 'EDITORIAL_VERSION'
+    body = d['body_markdown']
+    assert re.findall(r'^##\s+(.+)$', body, re.M) == EDITORIAL_SECTIONS, 'EDITORIAL_SECTIONS'
+    for label in ('핵심 숫자', '무슨 일이 있었나', '왜 중요한가', '반대 해석', '다음 확인'):
+        assert body.count('**' + label + ':**') >= 3, ('ISSUE_EXPLANATION_MISSING', label)
+    checked = datetime.fromisoformat(contract['verified_at_kst'])
+    assert checked.utcoffset() == timedelta(hours=9) and checked <= created, 'VERIFICATION_CLOCK'
+    assert d['market_date_us'] <= expected_completed_session(checked), 'UNFINISHED_US_SESSION'
+    checks = contract.get('close_checks') or []
+    assert {x.get('symbol') for x in checks} == {'NDX', 'SOX'}, 'CORE_CLOSE_COVERAGE'
+    for check in checks:
+        assert check.get('session_date') == d['market_date_us'], 'CLOSE_SESSION_MISMATCH'
+        assert check.get('status') in {'VERIFIED', 'MISSING', 'CONFLICT'}, 'CLOSE_STATUS'
+        if check['status'] != 'VERIFIED':
+            assert check.get('reason'), 'UNVERIFIED_CLOSE_REASON'
+            continue
+        close, previous = check['close'], check['previous_close']
+        assert all(isinstance(v, (int, float)) and 0 < v < float('inf') for v in (close, previous)), 'CLOSE_VALUE'
+        assert abs((close / previous - 1) * 100 - check['change_pct']) < .01, 'CLOSE_RETURN_ARITHMETIC'
+        urls = check.get('source_urls') or []
+        hosts = {urlparse(u).hostname for u in urls if urlparse(u).scheme == 'https'}
+        assert len(hosts) >= 2 and any(h and (h == 'nasdaq.com' or h.endswith('.nasdaq.com')) for h in hosts), 'INDEPENDENT_CLOSE_SOURCES'
+        assert check.get('observation_type') == 'REGULAR_SESSION_CLOSE', 'CLOSE_OBSERVATION_TYPE'
+    return d
 
 def read(path):
     return json.loads(path.read_text(encoding='utf-8'))
@@ -27,6 +65,7 @@ def validate_report(d):
     assert sections == list('①②③④⑤⑥⑦⑧'), ('EIGHT_SECTIONS', sections)
     assert re.search(r'\[[^\]\n]+\]\(https?://[^\s)]+\)', body), 'SOURCE_LINKS'
     assert '' not in body, 'CHAT_ONLY_CITATION_TOKEN'
+    validate_editorial(d, created)
     return d
 
 def validate_directory(directory):

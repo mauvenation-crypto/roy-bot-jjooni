@@ -47,6 +47,15 @@ class CompletedSessionRecoveryTests(unittest.TestCase):
         self.assertEqual(expected_completed_session(datetime(2026,1,23,6,14,tzinfo=KST)),'2026-01-21')
         self.assertEqual(expected_completed_session(datetime(2026,1,23,6,15,tzinfo=KST)),'2026-01-22')
 
+    def test_november_2026_dst_rollover_never_finalizes_at_old_kst_close(self):
+        # 2026-11-02 is the first US cash session after DST ends on Nov 1.
+        self.assertEqual(expected_completed_session(datetime(2026,11,3,5,40,tzinfo=KST)),'2026-10-30')
+        self.assertEqual(expected_completed_session(datetime(2026,11,3,6,14,tzinfo=KST)),'2026-10-30')
+        self.assertEqual(expected_completed_session(datetime(2026,11,3,6,15,tzinfo=KST)),'2026-11-02')
+        args=snapshot('2026-11-02','2026-11-03T05:40:00+09:00')
+        self.assertFalse(readiness(*args,now=datetime(2026,11,3,5,40,tzinfo=KST))['healthy'])
+        self.assertTrue(readiness(*args,now=datetime(2026,11,3,6,40,tzinfo=KST))['healthy'])
+
     def test_holidays_weekends_and_bank_holidays(self):
         for day,expected in [('2026-04-03','2026-04-02'),('2026-06-19','2026-06-18'),
                              ('2026-10-25','2026-10-23'),('2026-10-12','2026-10-12'),

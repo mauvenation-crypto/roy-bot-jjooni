@@ -9,6 +9,7 @@ import urllib.request
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from observatory_session import expected_completed_session
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "market-observatory" / "data"
@@ -304,8 +305,19 @@ def main(offline=False, *, data_dir=None, out=None):
     if not market_date:
         market_date = series_fact(obs, "SP500").get("market_date")
 
-    # Production contract is FINAL-only: one snapshot at US close +35 minutes.
-    phase = "FINAL"
+    # A dated bar is not evidence that the US regular session is completed.
+    # This shared clock handles EST/EDT, holidays, early closes and grace.
+    expected_session = expected_completed_session(now)
+    core_dates = {key: str(((obs.get("series") or {}).get(key) or [{}])[-1].get("date") or "")[:10]
+                  for key in ("NASDAQ100", "SP500", "VIX")}
+    session_aligned = bool(market_date == expected_session and
+                           all(day == expected_session for day in core_dates.values()))
+    phase = "FINAL" if session_aligned else "STALE"
+    session_gate = {"expected_session": expected_session, "actual_session": market_date,
+                    "core_dates": core_dates, "aligned": session_aligned,
+                    "clock": "America/New_York 16:00 + 15m grace; DST-aware",
+                    "price_crosscheck": "NOT_VERIFIED",
+                    "note": "FINAL certifies session alignment, not independent price accuracy"}
 
     sectors, breadth = sector_proxy(sec)
     cross = {
@@ -366,13 +378,14 @@ def main(offline=False, *, data_dir=None, out=None):
         "us10y": cross["us10y"].get("value") is not None,
         "market_date_us": bool(market_date),
     }
-    quality = "LIVE" if all(required_values.values()) else "PARTIAL"
+    quality = "LIVE" if session_aligned and all(required_values.values()) else "PARTIAL"
 
     result = {
         "schema": "JJOONI_DAILY_MARKET_PULSE_V1",
         "generated_kst": now.isoformat(timespec="seconds"),
         "market_date_us": market_date,
         "snapshot_status": phase,
+        "session_gate": session_gate,
         "read_only": True,
         "contains_account_data": False,
         "contract": {
