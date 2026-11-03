@@ -160,3 +160,43 @@ test('TRI-POD missing original cost source fails closed instead of resetting',()
 test('unchanged anchor timestamps cannot conceal a rewritten opening KRW cost or account baseline',()=>{const initial={baseline:{at:'2026-10-17',snapshot_id:'s0',accounts:{TOSS:{nav:100,positions:[{ticker:'TQQQ',qty:2}]}}},cost_basis_v1:{at:'2026-10-17',snapshot_id:'b0',policy:'CURRENT_FX_OPENING_THEN_TRADE_FX',positions:{'TOSS|TQQQ':{qty:2,cost_krw:9000,fx:1500}}}};const normal=structuredClone(initial);normal.cost_basis_v1.positions['TOSS|QQQ']={qty:1,cost_krw:5000};assert.equal(S.assertImmutableStrategyAnchor(initial,normal),true);const changedCost=structuredClone(normal);changedCost.cost_basis_v1.positions['TOSS|TQQQ'].cost_krw=12000;assert.throws(()=>S.assertImmutableStrategyAnchor(initial,changedCost),/STRATEGY_P0_ANCHOR_REBASE_BLOCKED/);const changedFX=structuredClone(normal);changedFX.cost_basis_v1.positions['TOSS|TQQQ'].fx=1600;assert.throws(()=>S.assertImmutableStrategyAnchor(initial,changedFX),/STRATEGY_P0_ANCHOR_REBASE_BLOCKED/);const changedBaseline=structuredClone(normal);changedBaseline.baseline.accounts.TOSS.nav=999;assert.throws(()=>S.assertImmutableStrategyAnchor(initial,changedBaseline),/STRATEGY_P0_ANCHOR_REBASE_BLOCKED/)});
 
 test('2026-11-03 master attribution: ticker-only RISE Nasdaq100 368590 is IRP strategy, never another NAV',()=>{const C=c();C.accounts.IRP.positions=[p('368590.KS',197,5478964,{name:'',cost_basis_krw:5478964})];C.accounts.IRP.nav=6000000;const v=S.build(C),o=S.strategySummary(v);assert.equal(S.classify({ticker:'368590.KS'},'IRP'),'NASDAQ_SYSTEM');assert.equal(S.classify({ticker:'368590.KS'},'ISA'),'NASDAQ_SYSTEM');assert.equal(v.accounts[3].groups[0].positions[0].qty,197);assert.equal(o.accounts[3].holdings[0].ticker,'368590');assert.equal(v.accounts.length,4);assert.equal(v.total.nav,6000300);assert.equal(S.classify({ticker:'368590.KS'},'TOSS'),'OTHER')});
+
+
+test('ISA BI-POD rotation includes 2026-11-02 realized loss without counting it twice in holdings',()=>{
+ const C=c();C.observed_at='2026-11-03T10:55:21+09:00';C.accounts.ISA.nav=54486996;
+ C.accounts.ISA.positions=[
+  p('133690.KS',16,2500000,{name:'TIGER 미국나스닥100',cost_basis_krw:2677584}),
+  p('418660.KS',78,2824560,{name:'TIGER 미국나스닥100레버리지(합성)',cost_basis_krw:3013920})
+ ];
+ const b=book(C);b.baseline.at='2026-10-16T19:31:37+09:00';
+ const v=S.build(C,b,ledger([])),holding=S.strategySummary(v).accounts[1];
+ assert.equal(holding.holdingPnl,-366944);
+ const mr=(id,at,side,ticker,qty,krw_amount)=>({trade_key:id,trade_date:at,filled_at_kst:at+'T00:00:00+09:00',side,account:'ISA',ticker,qty,krw_amount,source:'MASTER_TRADE_LEDGER',currency:'KRW',fx:1,commission:null,tax:null});
+ const rows=[
+  mr('409-buy','2026-10-14','BUY','409820.KS',47,1002510),
+  mr('409-sell','2026-10-15','SELL','409820.KS',47,943290),
+  mr('418-buy-26','2026-10-15','BUY','418660.KS',26,1005680),
+  mr('418-buy-65a','2026-10-15','BUY','418660.KS',65,2512575),
+  mr('418-buy-65b','2026-10-15','BUY','418660.KS',65,2509000),
+  mr('418-sell-78','2026-11-02','SELL','418660.KS',78,2755350),
+  mr('133-buy-3','2026-11-02','BUY','133690.KS',3,510615),
+  mr('133-buy-13','2026-11-03','BUY','133690.KS',13,2166710)
+ ];
+ const details=S.estimateMasterRealized({status:'AVAILABLE',source:'MASTER_WEEKLY_USER_ENTERED_TRANSACTIONS',rows},v).accounts.ISA;
+ assert.equal(details.status,'AVAILABLE');
+ assert.equal(details.sales.length,1,'the 10/15 legacy sale precedes original P0 and must not be counted');
+ assert.equal(details.sales[0].date,'2026-11-02');
+ assert.equal(details.sales[0].qty,78);
+ assert.equal(details.sales[0].cost,3013627.5);
+ assert.equal(details.sales[0].pnl,-258277.5);
+ assert.equal(details.pnl,-258277.5);
+ assert.equal(holding.holdingPnl+details.pnl,-625221.5);
+ assert.equal(v.total.nav,54487296,'realized calculation never creates a fifth account or changes NAV');
+ const duplicate=S.estimateMasterRealized({status:'AVAILABLE',rows:[...rows,rows[5]]},v).accounts.ISA;
+ assert.equal(duplicate.pnl,details.pnl,'stable source row ID prevents double counting');
+ C.accounts.ISA.positions[1].qty=77;
+ const mismatch=S.estimateMasterRealized({status:'AVAILABLE',rows},S.build(C,b,ledger([]))).accounts.ISA;
+ assert.equal(mismatch.status,'PARTIAL');
+ assert.equal(mismatch.pnl,null,'a position mismatch must never publish a provisional total');
+ assert.equal(S.estimateMasterRealized({status:'UNAVAILABLE',rows:[]},v).accounts.ISA.pnl,null);
+});
