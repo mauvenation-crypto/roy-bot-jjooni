@@ -29,3 +29,16 @@ Confirmed with the user on 2026-10-22 KST. The current daily reference is the us
 | Target | TQQQ 100% | TQQQ 100% | Matches |
 
 MA250 is 27,309.65. The NOPOD line rose from 25,925.38 to 25,944.16, a full-precision daily increase displayed as +18.79 pt. BIPOD remains 28,414.27 because its rolling high is unchanged. The chart cursor label 29,160.83 in the screenshot is not the current NDX close.
+
+## State-aware transition display (2026-11-04)
+
+The summary names the current market allocation explicitly: TRI-POD (3x), BIPOD (1.5x), or NOPOD (cash). A four-form legend also includes MONOPOD as an account-specific 1x implementation; it is not a newly invented fourth market signal or an implicit transition between BIPOD and cash.
+
+| Current signal | Primary next condition | Other exit or recovery |
+| --- | --- | --- |
+| Rising TRI-POD | BIPOD when NDX < 52-week closing high × 0.91 OR VIX10 ≥ 28 | Falling regime below MA250 × 0.95; cash only with VIX10 ≥ 18 |
+| Rising BIPOD | TRI-POD recovery when NDX ≥ 52-week closing high × 0.91 AND VIX10 < 28 | Cash after NDX < MA250 × 0.95 AND VIX10 ≥ 18 |
+| Falling BIPOD | Rising regime when NDX > MA250 × 1.01; then recompute drawdown/VIX target | Cash when VIX10 ≥ 18 |
+| NOPOD | BIPOD reentry when VIX10 < 18 | Rising regime above MA250 × 1.01; target still depends on drawdown/VIX |
+
+Both the overview and strategy tab use the same state-aware descriptor. NDX, VIX close, MA250, VIX10, drawdown and all displayed transition distances use the same certified completed-session snapshot. Intraday quotes remain in the separate market-index section and never replace the signal's close. A mixed-session or unverified snapshot cannot advertise actionable transition thresholds. The recovery threshold's drilldown retains its 52-week-high formula and prior-week comparison while changing its title and explanation with the current allocation.
