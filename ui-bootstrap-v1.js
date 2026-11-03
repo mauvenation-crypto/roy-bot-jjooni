@@ -8,7 +8,7 @@ window.__JJOONI_VERIFIED_BOOT_OWNER=true;
 if(!window.__JJOONI_BOOT_COORDINATOR_BOOTSTRAPPED){
  window.__JJOONI_BOOT_COORDINATOR_BOOTSTRAPPED=true;
  const c=document.createElement('script');
- c.src='boot-coordinator-v33.js?v=33.0&_='+(window.__JJOONI_UI_RELEASE||'20261025-r3');
+ c.src='boot-coordinator-v33.js?v=33.1-toss-exit&_='+(window.__JJOONI_UI_RELEASE||'20261025-r3');
  c.async=false;
  c.onerror=()=>{console.warn('CT boot coordinator load failed')};
  (document.head||document.documentElement).appendChild(c);

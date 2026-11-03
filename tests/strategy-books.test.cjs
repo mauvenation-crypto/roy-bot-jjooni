@@ -200,3 +200,17 @@ test('ISA BI-POD rotation includes 2026-11-02 realized loss without counting it 
  assert.equal(mismatch.pnl,null,'a position mismatch must never publish a provisional total');
  assert.equal(S.estimateMasterRealized({status:'UNAVAILABLE',rows:[]},v).accounts.ISA.pnl,null);
 });
+
+test('TOSS full TQQQ sale uses the verified prior holding checkpoint, never resets principal',()=>{
+ const C=c(),b=book(C);C.accounts.TOSS.positions=[p('QQQ',1,100)];
+ b.cost_basis_v1={at:old,snapshot_id:'anchor',policy:'CURRENT_FX_OPENING_THEN_TRADE_FX',positions:{'TOSS|TQQQ':{qty:2,cost_krw:20000}}};
+ const evidence=structuredClone(S.costEvidence(b));
+ b.holding_costs_v1={'TOSS|TQQQ':{source:'VERIFIED_ROLLED_KRW_COST',qty:2,cost_krw:20000,through_at:'2026-10-16T09:15:00Z',input_evidence:evidence}};
+ const sale=tr('TOSS','sell-1','SELL',2,9,{source:'BROKER_DIRECT_TOSS_API',filled_at_kst:'2026-10-16T09:30:00Z'});
+ const view=S.build(C,b,ledger([]));const result=()=>S.estimateTossExit(b,ledger([sale]),view);
+ assert.equal(result().status,'AVAILABLE');assert.equal(result().pnl,-2000);assert.equal(b.cost_basis_v1.positions['TOSS|TQQQ'].cost_krw,20000);
+ sale.qty=1;assert.equal(result().status,'UNAVAILABLE');sale.qty=2;
+ sale.source='MASTER';assert.equal(result().status,'UNAVAILABLE');sale.source='BROKER_DIRECT_TOSS_API';
+ sale.fx=null;assert.equal(result().status,'UNAVAILABLE');sale.fx=1000;
+ b.cost_basis_v1.positions['TOSS|TQQQ'].cost_krw=1;assert.equal(result().status,'UNAVAILABLE');
+});

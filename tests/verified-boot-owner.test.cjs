@@ -8,7 +8,7 @@ test('coordinator publishes no fake ACTIVE and starts one stable loader only aft
  assert.equal(window.__JJOONI_UI_BOOT_V14,undefined);assert.equal(scripts.length,0);
  window.__JJOONI_CANONICAL_SSOT={};window.__JJOONI_LIVE_PAYLOAD={};pulse();assert.equal(scripts.length,0);
  window.__JJOONI_LINEAGE_GUARD={version:'verified',policy:'verified'};pulse();listeners['jjooni:live-applied']();pulse();
- assert.equal(scripts.length,1);assert.equal(scripts[0].src,'trade-review-loader.js?v=14.36&_=release-A');
+ assert.equal(scripts.length,1);assert.equal(scripts[0].src,'trade-review-loader.js?v=14.37-toss-exit&_=release-A');
  assert.equal(window.__JJOONI_LIVE_READY,true);
 });
 test('startup name subset comes from private sources; full master is never fetched until requested',async()=>{
