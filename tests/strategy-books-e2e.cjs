@@ -30,7 +30,20 @@ await page.waitForFunction(()=>window.__JJOONI_STRATEGY_BOOKS_V1.performance?.ac
 const isaText=await isa.locator('.ctStrategySleeve').innerText();
 assert.match(isaText,/바이팟/);assert.match(isaText,/-6\.45%/);
 assert.match(isaText,/기록된 매도 실현손익 · 비용 전\s+-₩258,278/);
-assert.match(isaText,/바이팟 잠정 합산손익 · 보유\+매도\s+-₩625,222/);
+assert.match(isaText,/보유\+기록된 매도손익\s+-₩625,222/);
+await page.evaluate(()=>{
+ const S=window.__JJOONI_STRATEGY_BOOKS_V1;
+ S.book.broker_realized_sales_v1={fixture:{source:'OWNER_PROVIDED_BROKER_RECEIPT',kind:'REALIZED_SALE',account:'ISA',ticker:'418660',qty:78,trade_date:'2026-11-02',net_pnl_krw:-300000,confirmed_at:'2026-11-03T10:00:00+09:00'}};
+ S.book.broker_holding_costs_v1={'ISA|133690':{source:'OWNER_PROVIDED_BROKER_RECEIPT',account:'ISA',ticker:'133690',qty:16,cost_krw:2800000,avg_native:167349,confirmed_at:'2026-11-03T10:00:00+09:00'}};
+ window.dispatchEvent(new Event('resize'));
+});
+await page.waitForFunction(()=>window.__JJOONI_STRATEGY_BOOKS_V1.performance?.accounts?.[1]?.masterRealized?.confirmed===true);
+const receiptText=await isa.locator('.ctStrategySleeve').innerText();
+assert.match(receiptText,/증권사 확정 매도손익\s+-₩300,000/);
+assert.match(receiptText,/보유 원가 ₩5,813,920/);
+assert.match(receiptText,/보유\+기록된 매도손익\s+-₩789,360/);
+assert.doesNotMatch(receiptText,/-₩258,278/,'confirmed receipt replaces the same estimate once');
+await page.evaluate(()=>{delete window.__JJOONI_STRATEGY_BOOKS_V1.book.broker_realized_sales_v1;delete window.__JJOONI_STRATEGY_BOOKS_V1.book.broker_holding_costs_v1});
 assert.equal(await page.evaluate(()=>window.__JJOONI_STRATEGY_BOOKS_V1.snapshot.total.nav),54487296,'realized sale must not inflate asset NAV');
 await page.evaluate(()=>{
  const C=window.__JJOONI_CANONICAL_SSOT,S=window.__JJOONI_STRATEGY_BOOKS_V1,b=window.fixtureBipodBackup;

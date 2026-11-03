@@ -6,7 +6,7 @@ const read=p=>fs.readFileSync(path.join(__dirname,'..',p),'utf8');
 
 test('shell explicitly loads pure metrics then application bootstrap, without an eager UI loader',()=>{
  const index=read('index.html');
- assert.ok(index.indexOf('canonical-metrics.js?v=34.1-quality')<index.indexOf('ui-bootstrap-v1.js?v=3-toss-exit'));
+ assert.ok(index.indexOf('canonical-metrics.js?v=34.1-quality')<index.indexOf('ui-bootstrap-v1.js?v=3-broker-evidence'));
  assert.doesNotMatch(index,/<script src="trade-review-loader/);
  assert.match(index,/legacyDocument.querySelectorAll/);
 });
@@ -18,7 +18,7 @@ test('canonical calculation does not inject UI or mutate boot state',()=>{
 test('verified coordinator owns a single real loader without fabricated ACTIVE',()=>{
  const boot=read('boot-coordinator-v33.js');
  assert.match(boot,/function verifiedReady\(\)\{return factsReady\(\)&&lineageReady\(\)\}/);
- assert.match(boot,/trade-review-loader\.js\?v=14\.37-toss-exit/);
+ assert.match(boot,/trade-review-loader\.js\?v=14\.37-broker-evidence/);
  assert.doesNotMatch(boot,/V33_DEFERRED_BOOT_HOLD|state:'ACTIVE',version/);
  assert.match(boot,/window\.__JJOONI_LIVE_READY=true/);
 });
