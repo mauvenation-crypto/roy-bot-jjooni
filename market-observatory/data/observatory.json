@@ -10,9 +10,9 @@
     "SP500": 7541.39990234,
     "VIX": 21.14999962,
     "DXY": 101.75,
-    "USDKRW": 1340.73999023,
-    "USDJPY": 157.82600403,
-    "JPYKRW": 8.47399998,
+    "USDKRW": 1343.7800293,
+    "USDJPY": 158.57400513,
+    "JPYKRW": 8.45400047,
     "WTI": 96.45999908,
     "BRENT": 104.76999664,
     "NATGAS": 2.85599995,
@@ -40,15 +40,16 @@
     "JP_2S10S": 0.942,
     "KR_US_10Y": -0.909,
     "BTCUSD": 77300.0,
-    "ETHUSD": 2284.9,
-    "FEAR_GREED": 22.7,
+    "ETHUSD": 2283.81,
+    "FEAR_GREED": 19.9,
     "FEAR_GREED_RATING": "EXTREME FEAR",
     "KOSPI": 5648.79,
     "KOSDAQ": 704.39,
     "RUSSELL2000": 2805.87988281,
     "DOW": 51983.98046875,
     "NASDAQCOMPOSITE": 25164.31054688,
-    "SILVER": 50.72000122
+    "SILVER": 50.72000122,
+    "JP20Y": 3.652
   },
   "series": {
     "NASDAQ100": [
@@ -15214,7 +15215,7 @@
       },
       {
         "date": "2026-11-02",
-        "value": 1340.73999023
+        "value": 1343.7800293
       }
     ],
     "USDJPY": [
@@ -18332,7 +18333,7 @@
       },
       {
         "date": "2026-11-02",
-        "value": 157.82600403
+        "value": 158.57400513
       }
     ],
     "JPYKRW": [
@@ -21450,7 +21451,7 @@
       },
       {
         "date": "2026-11-02",
-        "value": 8.47399998
+        "value": 8.45400047
       }
     ],
     "WTI": [
@@ -293681,7 +293682,7 @@
         "value": 77300.0,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-04T00:04:49+09:00",
+        "observed_kst": "2026-11-04T00:22:45+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -300277,10 +300278,10 @@
       },
       {
         "date": "2026-11-03",
-        "value": 2284.9,
+        "value": 2283.81,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-04T00:04:49+09:00",
+        "observed_kst": "2026-11-04T00:22:26+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -306564,11 +306565,11 @@
       },
       {
         "date": "2026-11-02",
-        "value": 22.7
+        "value": 19.4
       },
       {
         "date": "2026-11-03",
-        "value": 22.7
+        "value": 19.9
       }
     ],
     "KOSPI": [
@@ -319098,6 +319099,92 @@
         "date": "2026-11-02",
         "value": 50.72000122
       }
+    ],
+    "JP20Y": [
+      {
+        "date": "2026-10-01",
+        "value": 3.91
+      },
+      {
+        "date": "2026-10-02",
+        "value": 3.925
+      },
+      {
+        "date": "2026-10-05",
+        "value": 3.935
+      },
+      {
+        "date": "2026-10-06",
+        "value": 3.946
+      },
+      {
+        "date": "2026-10-07",
+        "value": 3.943
+      },
+      {
+        "date": "2026-10-08",
+        "value": 3.916
+      },
+      {
+        "date": "2026-10-09",
+        "value": 3.853
+      },
+      {
+        "date": "2026-10-13",
+        "value": 3.841
+      },
+      {
+        "date": "2026-10-14",
+        "value": 3.849
+      },
+      {
+        "date": "2026-10-15",
+        "value": 3.786
+      },
+      {
+        "date": "2026-10-16",
+        "value": 3.803
+      },
+      {
+        "date": "2026-10-19",
+        "value": 3.776
+      },
+      {
+        "date": "2026-10-20",
+        "value": 3.723
+      },
+      {
+        "date": "2026-10-21",
+        "value": 3.726
+      },
+      {
+        "date": "2026-10-22",
+        "value": 3.707
+      },
+      {
+        "date": "2026-10-23",
+        "value": 3.645
+      },
+      {
+        "date": "2026-10-26",
+        "value": 3.63
+      },
+      {
+        "date": "2026-10-27",
+        "value": 3.638
+      },
+      {
+        "date": "2026-10-28",
+        "value": 3.685
+      },
+      {
+        "date": "2026-10-29",
+        "value": 3.701
+      },
+      {
+        "date": "2026-10-30",
+        "value": 3.652
+      }
     ]
   },
   "curves": {
@@ -319219,7 +319306,7 @@
     "drawdown_52w_pct": -10.359344186727204,
     "ma250": 27415.472859375237,
     "ndx": 27989.8203125,
-    "observed_at": "2026-11-04T00:05:34+09:00",
+    "observed_at": "2026-11-04T00:24:06+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -9.094216906793761,
     "previous_ma250": 27407.40533593772,
@@ -324359,10 +324446,10 @@
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
       "price": 77300.0,
-      "quote_as_of_kst": "2026-11-04T00:04:49+09:00",
-      "captured_kst": "2026-11-04T00:05:11+09:00",
+      "quote_as_of_kst": "2026-11-04T00:22:45+09:00",
+      "captured_kst": "2026-11-04T00:23:47+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 22,
+      "quote_age_seconds": 62,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     },
@@ -324370,11 +324457,11 @@
       "symbol": "ETH-USD",
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
-      "price": 2284.9,
-      "quote_as_of_kst": "2026-11-04T00:04:49+09:00",
-      "captured_kst": "2026-11-04T00:05:11+09:00",
+      "price": 2283.81,
+      "quote_as_of_kst": "2026-11-04T00:22:26+09:00",
+      "captured_kst": "2026-11-04T00:23:47+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 22,
+      "quote_age_seconds": 81,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     }
@@ -324611,19 +324698,19 @@
     },
     "US5Y": {
       "source": "Cboe / Yahoo completed daily",
-      "last_date": "2026-11-02",
+      "last_date": "2026-11-03",
       "target_session": "2026-11-02",
       "status": "LIVE"
     },
     "US10Y": {
       "source": "Cboe / Yahoo completed daily",
-      "last_date": "2026-11-02",
+      "last_date": "2026-11-03",
       "target_session": "2026-11-02",
       "status": "LIVE"
     },
     "US30Y": {
       "source": "Cboe / Yahoo completed daily",
-      "last_date": "2026-11-02",
+      "last_date": "2026-11-03",
       "target_session": "2026-11-02",
       "status": "LIVE"
     },
@@ -324634,7 +324721,7 @@
       "status": "LIVE"
     }
   },
-  "kr_rates_refreshed_kst": "2026-11-04T00:04:56+09:00",
+  "kr_rates_refreshed_kst": "2026-11-04T00:23:51+09:00",
   "quality": {
     "kr_rates": {
       "state": "PASS",
@@ -324670,7 +324757,7 @@
       "vix10_risk_on_limit": 28.0,
       "drawdown_52w_pct": -10.359344186727204,
       "risk_on_drawdown_limit_pct": -9.0,
-      "fear_greed": 22.7,
+      "fear_greed": 19.9,
       "market_pulse_risk": "NEUTRAL"
     },
     "pulse_aligned": true,
@@ -324694,7 +324781,7 @@
   "history_base_generated_kst": "2026-09-13T00:12:30+09:00",
   "history_base_path": "./data/history-30y.json",
   "crypto_contract": "SPOT_QUOTE_WITH_UTC_DAILY_COMPARISON_V1",
-  "crypto_enriched_kst": "2026-11-04T00:05:11+09:00",
+  "crypto_enriched_kst": "2026-11-04T00:23:47+09:00",
   "market_supplement_quality": {
     "KOSPI": {
       "status": "LIVE",
@@ -324736,7 +324823,7 @@
   "equity_session_contract": "KR_TRADING_DATE_NAVER_PRIMARY_YAHOO_FALLBACK_V2",
   "market_supplement_contract": "US_SUPPLEMENT_MATCH_COMPLETED_CORE_SESSION_V3",
   "equity_enriched_kst": "2026-11-04T00:05:12+09:00",
-  "supplemental_refreshed_kst": "2026-11-03T16:03:23+09:00",
+  "supplemental_refreshed_kst": "2026-11-04T00:23:47+09:00",
   "supplemental_refresh_contract": "ALL_MARKET_FAMILIES_COMPLETED_SESSION_PLUS_24X7_CRYPTO_V1",
-  "us_rates_refreshed_kst": "2026-11-03T16:03:21+09:00"
+  "us_rates_refreshed_kst": "2026-11-04T00:23:44+09:00"
 }
