@@ -214,3 +214,50 @@ test('TOSS full TQQQ sale uses the verified prior holding checkpoint, never rese
  sale.fx=null;assert.equal(result().status,'UNAVAILABLE');sale.fx=1000;
  b.cost_basis_v1.positions['TOSS|TQQQ'].cost_krw=1;assert.equal(result().status,'UNAVAILABLE');
 });
+
+function performance(C,b,src=ledger([])){
+ const v=S.build(C,b,src),o=S.strategySummary(v),m=S.estimateMasterRealized(src,v);
+ for(const row of o.accounts)row.masterRealized=S.preferBrokerRealized(b,v,row.id,m.accounts[row.id],src);
+ return S.applyStrategyPerformance(o,b,v,src);
+}
+test('rotation headline includes realized loss over fixed original capital; daily is separate',()=>{
+ const C=c(),b=openingBook(C);b.cost_basis_v1.positions={'TOSS|TQQQ':{account:'TOSS',ticker:'TQQQ',qty:1,cost_krw:100000}};
+ C.accounts.TOSS.nav=100000;C.accounts.TOSS.positions=[p('QLD',1,77200,{cost_basis_krw:80000,daily_pnl:-800})];
+ const src=ledger([tr('TOSS','exit','SELL',1,80),tr('TOSS','rotation','BUY',1,80,{ticker:'QLD',name:'QLD'})]);
+ const out=performance(C,b,src).accounts[0];
+ assert.equal(out.holdingReturn,-3.5);assert.equal(out.cumulativePnl,-22800);assert.equal(out.cumulativeReturn,-22.8);
+ assert.equal(out.capital,100000);assert.equal(out.day,-800);assert.ok(Math.abs(out.dayReturn-100*-800/78000)<1e-9);
+ assert.equal(b.cost_basis_v1.positions['TOSS|TQQQ'].cost_krw,100000);
+});
+test('confirmed net sale replaces modeled sale once; earlier realized wins stay in the same strategy',()=>{
+ const C=c(),b=openingBook(C);b.cost_basis_v1.positions={'TOSS|TQQQ':{account:'TOSS',ticker:'TQQQ',qty:1,cost_krw:100000},'TOSS|QQQ':{account:'TOSS',ticker:'QQQ',qty:1,cost_krw:100000}};
+ C.accounts.TOSS.nav=210000;C.accounts.TOSS.positions=[p('QLD',1,175000,{cost_basis_krw:180000})];
+ const src=ledger([tr('TOSS','prior-win','SELL',1,110,{ticker:'QQQ',name:'QQQ'}),tr('TOSS','exit','SELL',1,80),tr('TOSS','rotation','BUY',1,180,{ticker:'QLD',name:'QLD'})]);
+ b.broker_realized_sales_v1={exit:{source:'OWNER_PROVIDED_BROKER_RECEIPT',kind:'REALIZED_SALE',account:'TOSS',ticker:'TQQQ',qty:1,trade_id:'exit',trade_date:'2026-10-16',confirmed_at:old,net_pnl_krw:-21000}};
+ const o=performance(C,b,src).accounts[0];assert.equal(o.masterRealized.pnl,-11000);assert.equal(o.masterRealized.sales.length,2);assert.equal(o.cumulativePnl,-16000);assert.equal(o.cumulativeReturn,-8);
+});
+test('duplicate legacy carry does not enlarge fixed capital; unknown current cash is never included',()=>{
+ const b={cost_basis_v1:{at:old,positions:{'TOSS|TQQQ':{account:'TOSS',ticker:'TQQQ',qty:1,cost_krw:100},'TRIPOD|TQQQ':{account:'TRIPOD',ticker:'TQQQ',qty:1,cost_krw:50}}},cost_basis_transfers_v1:[{source:'VERIFIED_LEGACY_TRIPOD_COST_CARRY',source_key:'TRIPOD|TQQQ',from_account:'TRIPOD',to_account:'TOSS',qty:1,cost_krw:50}]};b.cost_basis_transfers_v1.push({...b.cost_basis_transfers_v1[0]});assert.equal(S.strategyCapital(b,'TOSS').value,150);
+});
+test('missing history cannot relabel current holding return as cumulative, even with one receipt',()=>{
+ const C=c(),b=openingBook(C);C.accounts.TOSS.positions=[p('TQQQ',2,19000,{cost_basis_krw:20000})];
+ b.broker_realized_sales_v1={exit:{source:'OWNER_PROVIDED_BROKER_RECEIPT',kind:'REALIZED_SALE',account:'TOSS',ticker:'QQQ',qty:1,trade_id:'old',trade_date:'2026-10-16',confirmed_at:old,net_pnl_krw:-1000}};
+ const o=performance(C,b,{status:'UNAVAILABLE',rows:[]}).accounts[0];assert.equal(o.holdingReturn,-5);assert.equal(o.cumulativePnl,-2000);assert.equal(o.cumulativeReturn,null);assert.equal(o.cumulativeComplete,false);
+});
+test('sold-out strategy keeps its cumulative percentage and cannot become not-invested',()=>{
+ const C=c(),b=openingBook(C);C.accounts.TOSS.positions=[];
+ const o=performance(C,b,ledger([tr('TOSS','close','SELL',2,8)])).accounts[0];assert.equal(o.count,0);assert.equal(o.capital,20000);assert.equal(o.cumulativePnl,-4000);assert.equal(o.cumulativeReturn,-20);
+});
+test('new IRP allocation keeps its original capital after a sell and reinvestment',()=>{
+ const C=c(),b=book(C);C.accounts.IRP.positions=[p('133690',8,72000,{cost_basis_krw:76000})];C.accounts.IRP.nav=100000;
+ const r=(id,kind,qty,amount,time)=>tr('IRP',id,kind,qty,1,{ticker:'133690',name:'TIGER 미국나스닥100',currency:'KRW',fx:1,krw_amount:amount,filled_at_kst:time});
+ const src=ledger([r('first','BUY',10,100000,'2026-10-16T09:10:00Z'),r('sale','SELL',5,40000,'2026-10-16T09:20:00Z'),r('reinvest','BUY',3,26000,'2026-10-16T09:30:00Z')]);
+ const v=S.build(C,b,src),o=S.strategySummary(v),m=S.estimateMasterRealized(src,v);for(const row of o.accounts)row.masterRealized=m.accounts[row.id];S.applyStrategyPerformance(o,b,v,src,src);
+ assert.equal(o.accounts[3].capital,100000);assert.equal(o.accounts[3].cumulativePnl,-14000);assert.equal(o.accounts[3].cumulativeReturn,-14);assert.equal(b.baseline.accounts.IRP.positions.length,0);
+});
+
+test('only explicit strategy capital flow changes return denominator; trades and dividends never rebase P0',()=>{
+ const C=c(),b=openingBook(C);C.accounts.TOSS.positions=[p('TQQQ',3,31500,{cost_basis_krw:30000})];C.accounts.TOSS.nav=40000;
+ b.events=[{id:'new-strategy-cash',kind:'DEPOSIT',account:'TOSS',strategy:'NASDAQ_SYSTEM',amount_krw:10000,at:'2026-10-16T09:20:00Z'},{id:'other-cash',kind:'DEPOSIT',account:'TOSS',strategy:'OTHER',amount_krw:7000,at:'2026-10-16T09:20:00Z'},{id:'income',kind:'DIVIDEND',account:'TOSS',strategy:'NASDAQ_SYSTEM',amount_krw:50,at:'2026-10-16T09:20:00Z'}];
+ const out=performance(C,b,ledger([tr('TOSS','new-buy','BUY',1,10)])).accounts[0];assert.equal(out.initialCapital,20000);assert.equal(out.capital,30000);assert.equal(out.cumulativeReturn,100*1550/30000);assert.equal(out.strategyIncome,50);assert.equal(b.cost_basis_v1.positions['TOSS|TQQQ'].cost_krw,20000);
+});
