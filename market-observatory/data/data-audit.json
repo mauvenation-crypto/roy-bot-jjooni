@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-05T03:52:22+09:00",
+  "generated_kst": "2026-11-05T05:05:13+09:00",
   "overall": "WARN",
   "critical_count": 0,
   "warning_count": 1,
@@ -48,7 +48,7 @@
       "priced_count": 46
     },
     "official_macro": {
-      "generated_kst": "2026-11-04T21:35:13+09:00",
+      "generated_kst": "2026-11-05T05:04:10+09:00",
       "schema": "JJOONI_OFFICIAL_MACRO_V1"
     },
     "market_regime": {
@@ -68,7 +68,7 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-05T03:52:21+09:00",
+      "generated_kst": "2026-11-05T03:52:23+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
@@ -465,17 +465,17 @@
         "BTCUSD": {
           "count": 1100,
           "last_date": "2026-11-04",
-          "last_value": 80360.0,
+          "last_value": 79936.0,
           "group": "crypto",
-          "latest_value": 80360.0,
+          "latest_value": 79936.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1100,
           "last_date": "2026-11-04",
-          "last_value": 2422.36,
+          "last_value": 2406.82,
           "group": "crypto",
-          "latest_value": 2422.36,
+          "latest_value": 2406.82,
           "latest_matches": true
         }
       },
@@ -519,16 +519,16 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-05T03:52:02+09:00",
-      "current_quote_age_seconds": 20,
-      "captured_quote_age_seconds": 18
+      "quote_as_of_kst": "2026-11-05T05:04:51+09:00",
+      "current_quote_age_seconds": 22,
+      "captured_quote_age_seconds": 22
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-05T03:51:46+09:00",
-      "current_quote_age_seconds": 36,
-      "captured_quote_age_seconds": 34
+      "quote_as_of_kst": "2026-11-05T05:04:44+09:00",
+      "current_quote_age_seconds": 29,
+      "captured_quote_age_seconds": 29
     }
   },
   "issues": [
