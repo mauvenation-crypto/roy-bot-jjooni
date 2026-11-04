@@ -7,7 +7,7 @@ function valid(row,key,now=Date.now()){
 }
 function merge(previous,payload,now=Date.now()){
  if(payload?.schema!=='JJOONI_OBSERVATORY_QUOTES_V1'||!payload.quotes)throw Error('INVALID_QUOTES_RESPONSE');
- const quotes={...previous};
+ const quotes=Object.fromEntries(Object.entries(previous).map(([key,row])=>[key,{...row,refresh_status:'RETAINED'}]));
  for(const [key,row] of Object.entries(payload.quotes)){
   if(!valid(row,key,now))continue;
   if(quotes[key]&&Date.parse(quotes[key].observed_at)>Date.parse(row.observed_at))continue;
@@ -17,20 +17,32 @@ function merge(previous,payload,now=Date.now()){
  }
  return quotes;
 }
+function ageLabel(row,now=Date.now()){
+ const ms=Date.parse(row?.observed_at),seconds=Math.max(0,Math.floor((now-ms)/1000));
+ if(!Number.isFinite(ms)||ms>now+120000)return '관측 시각 확인 불가';
+ if(seconds<60)return `${seconds}초 전`;
+ if(seconds<3600)return `${Math.floor(seconds/60)}분 전`;
+ if(seconds<86400)return `${Math.floor(seconds/3600)}시간 전`;
+ return `${Math.floor(seconds/86400)}일 전`;
+}
 function quality(row,now=Date.now()){
  const stale=['REGULAR','CONTINUOUS'].includes(row?.market_state)&&now-Date.parse(row?.observed_at)>1200000;
  return row?.refresh_status==='RETAINED'?'이전 관측 유지':stale||row?.quality==='STALE'?'관측 지연':row?.market_state==='CLOSED'?'최근 마감 관측':'장중 관측 · 지연 가능';
+}
+function summary(quotes,now=Date.now()){
+ const rows=Object.values(quotes||{});
+ return {delayed:rows.filter(r=>quality(r,now)==='관측 지연').length,retained:rows.filter(r=>r.refresh_status==='RETAINED').length,missing:[...KEYS].filter(key=>!quotes?.[key]).length};
 }
 function select(row,publishedAt,now=Date.now()){
  if(!row||!valid(row,row.key,now))return null;
  if(Number.isFinite(Date.parse(publishedAt))&&Date.parse(publishedAt)>Date.parse(row.observed_at))return null;
  return row;
 }
-const api={ENDPOINT,valid,merge,quality,select};
+const api={ENDPOINT,valid,merge,quality,ageLabel,summary,select};
 if(typeof module==='object'&&module.exports){module.exports=api;return}
 if(!root.document)return;
 let quotes={},pending=null,lastAttempt=null;
-const state={version:'1.0',status:'WAITING',result:null,paintSummary,get:(key,publishedAt)=>{const q=select(quotes[key],publishedAt);if(!q)return null;const row=state.status==='FAILED'?{...q,refresh_status:'RETAINED'}:q;return {...row,display_status:quality(row)}},refresh};
+const state={version:'1.0',status:'WAITING',result:null,paintSummary,summary:()=>summary(quotes),supports:key=>KEYS.has(key),get:(key,publishedAt)=>{const q=select(quotes[key],publishedAt);if(!q)return null;const row=state.status==='FAILED'?{...q,refresh_status:'RETAINED'}:q;return {...row,display_status:quality(row),age_label:ageLabel(row)}},refresh};
 root.__JJOONI_OBSERVATORY_QUOTES=state;
 function paintSummary(){
  const host=document.getElementById?.('overviewKpis');if(!host)return;
@@ -39,7 +51,7 @@ function paintSummary(){
   const q=state.get(key);if(!q||!value)continue;
   const text=q.value.toLocaleString('ko-KR',{maximumFractionDigits:2});
   if(value.textContent!==text)value.textContent=text;
-  const title=key+' · '+(q.refresh_status==='RETAINED'?'이전 관측':'최근 시세');if(label.textContent!==title)label.textContent=title;
+  const title=key+' · '+q.display_status+' · '+q.age_label;if(label.textContent!==title)label.textContent=title;
  }
 }
 async function refresh(force=false){
@@ -55,8 +67,9 @@ async function refresh(force=false){
    if(!Object.keys(quotes).length)throw Error('NO_VALID_QUOTES');
    state.error=null;state.result=result;state.status=result.status==='COMPLETE'?'COMPLETE':'PARTIAL';
    const message=document.getElementById?.('obsNowMessage');
-   if(!force&&message){message.dataset.state=state.status;message.textContent='현재 시세 확인 · '+(result.fetched_count||0)+'/'+(result.expected_count||20)+'개 원천 응답 · 실제 관측시각은 각 카드에 표시'}
+   if(!force&&message){const counts=summary(quotes);message.dataset.state=counts.delayed||counts.retained||counts.missing?'PARTIAL':state.status;message.textContent='시세 응답 '+(result.fetched_count||0)+'/'+(result.expected_count||20)+'개 · 관측 지연 '+counts.delayed+'개 · 이전 값 유지 '+counts.retained+'개 · 값 미확인 '+counts.missing+'개 · 각 카드의 시각 확인'}
    root.__JJOONI_LATEST_BOARD?.render?.();
+   paintSummary();
    document.dispatchEvent(new CustomEvent('jjooni:observatory-quotes-updated'));
    return result;
   }catch(error){
@@ -64,6 +77,7 @@ async function refresh(force=false){
    const message=document.getElementById?.('obsNowMessage');
    if(message){message.dataset.state='FAILED';message.textContent='현재 시세 API 조회 실패 · 마지막 검증값 유지 · 지금 최신화로 재시도할 수 있습니다.'}
    root.__JJOONI_LATEST_BOARD?.render?.();
+   paintSummary();
    throw error
   }
   finally{pending=null}
@@ -73,6 +87,7 @@ async function refresh(force=false){
 // tabs do not fetch; lifecycle bursts share one flight and a 60-second gate.
 // No polling timer or scheduler is added; the explicit button bypasses the gate.
 function resume(){return refresh(false).catch(()=>{})}
+if(typeof root.setInterval==='function')root.setInterval(()=>{if(!document.hidden){root.__JJOONI_LATEST_BOARD?.render?.();paintSummary()}},60000);
 document.addEventListener?.('visibilitychange',resume);
 root.addEventListener?.('pageshow',resume);
 resume();
