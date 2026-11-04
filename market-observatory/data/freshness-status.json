@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-04T11:12:20+09:00",
+  "generated_kst": "2026-11-04T11:12:23+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
@@ -41,7 +41,7 @@
     "kr_equity": {
       "label": "KR Equity",
       "state": "LIVE",
-      "generated_kst": "2026-11-04T11:12:18+09:00",
+      "generated_kst": "2026-11-04T10:31:03+09:00",
       "as_of": "2026-11-04",
       "detail": "KOSPI 2026-11-04 · KOSDAQ 2026-11-04",
       "source": "Naver Finance primary",
@@ -50,7 +50,7 @@
     "us_supplement": {
       "label": "US Supplement",
       "state": "LIVE",
-      "generated_kst": "2026-11-04T11:12:18+09:00",
+      "generated_kst": "2026-11-04T10:31:03+09:00",
       "as_of": "2026-11-03",
       "detail": "RUSSELL2000 2026-11-03 · DOW 2026-11-03 · NASDAQCOMPOSITE 2026-11-03",
       "source": "Yahoo completed cash-session daily",
@@ -59,7 +59,7 @@
     "energy": {
       "label": "Energy",
       "state": "LIVE",
-      "generated_kst": "2026-11-04T11:12:14+09:00",
+      "generated_kst": "2026-11-04T10:31:03+09:00",
       "as_of": "2026-11-03",
       "detail": "WTI 2026-11-03 · BRENT 2026-11-03 · NATGAS 2026-11-03",
       "source": "Yahoo CL=F / BZ=F / NG=F",
@@ -68,7 +68,7 @@
     "fx": {
       "label": "FX / DXY",
       "state": "LIVE",
-      "generated_kst": "2026-11-04T11:12:14+09:00",
+      "generated_kst": "2026-11-04T10:31:03+09:00",
       "as_of": "2026-11-03",
       "detail": "DXY 2026-11-03 · USDKRW 2026-11-03 · USDJPY 2026-11-03 · JPYKRW 2026-11-03",
       "source": "Yahoo DXY / FX daily",
@@ -77,7 +77,7 @@
     "metals": {
       "label": "Metals",
       "state": "LIVE",
-      "generated_kst": "2026-11-04T11:12:14+09:00",
+      "generated_kst": "2026-11-04T10:31:03+09:00",
       "as_of": "2026-11-03",
       "detail": "GOLD 2026-11-03 · SILVER 2026-11-03 · COPPER 2026-11-03",
       "source": "Yahoo Gold / Silver / Copper",
@@ -104,7 +104,7 @@
     "jp_rates": {
       "label": "JP Rates",
       "state": "LAGGING",
-      "generated_kst": "2026-11-04T11:12:14+09:00",
+      "generated_kst": "2026-11-04T10:31:03+09:00",
       "as_of": "2026-11-02",
       "detail": "JP2Y 2026-11-02 · JP5Y 2026-11-02 · JP10Y 2026-11-02 · JP30Y 2026-11-02 · JP_2S10S 2026-11-02",
       "source": "Japan MOF current JGB CSV",
@@ -115,7 +115,7 @@
       "state": "LIVE",
       "generated_kst": "2026-11-04T11:12:17+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=39s · ETHUSD age=39s",
+      "detail": "BTCUSD age=42s · ETHUSD age=42s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
@@ -133,7 +133,7 @@
     "pulse": {
       "label": "Daily Pulse",
       "state": "LIVE",
-      "generated_kst": "2026-11-04T11:12:19+09:00",
+      "generated_kst": "2026-11-04T11:12:22+09:00",
       "as_of": "2026-11-03",
       "detail": "snapshot=FINAL · Observatory session=2026-11-03",
       "source": "daily-market-pulse.json",
@@ -142,7 +142,7 @@
     "fear_greed": {
       "label": "Fear & Greed",
       "state": "LIVE",
-      "generated_kst": "2026-11-04T11:12:14+09:00",
+      "generated_kst": "2026-11-04T10:31:03+09:00",
       "as_of": "2026-11-03",
       "detail": "19.1/100 · EXTREME FEAR",
       "source": "CNN_FEAR_GREED_PUBLIC",
@@ -160,7 +160,7 @@
     "tripod": {
       "label": "TRI-POD",
       "state": "LIVE",
-      "generated_kst": "2026-11-04T11:12:19+09:00",
+      "generated_kst": "2026-11-04T11:12:22+09:00",
       "as_of": "2026-11-03",
       "detail": "상승 · QQQ 50% + QLD 50%",
       "source": "public-market-daily.json + observatory.json",
@@ -214,7 +214,7 @@
     "audit": {
       "label": "Full Data Audit",
       "state": "WARN",
-      "generated_kst": "2026-11-04T11:12:20+09:00",
+      "generated_kst": "2026-11-04T11:12:23+09:00",
       "as_of": "2026-11-03",
       "detail": "critical=0 · warnings=1",
       "source": "data-audit.json",
