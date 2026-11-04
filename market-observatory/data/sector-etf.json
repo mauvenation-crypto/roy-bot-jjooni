@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_SECTOR_ETF_V1",
-  "generated_kst": "2026-11-05T05:29:12+09:00",
+  "generated_kst": "2026-11-05T08:09:32+09:00",
   "as_of_date": "2026-11-04",
   "read_only": true,
   "contains_account_data": false,
@@ -10,7 +10,7 @@
   "daily_bar_contract": "PER_MARKET_COMPLETED_CUTOFF_V1",
   "completed_cutoffs": {
     "KR": "2026-11-04",
-    "US": "2026-11-03"
+    "US": "2026-11-04"
   },
   "source_contract": "YAHOO_PUBLIC_COMPLETED_DAILY_REFERENCE",
   "horizons_sessions": [
@@ -25,81 +25,81 @@
     "SPY": {
       "ticker": "SPY",
       "name": "SPDR S&P 500 ETF Trust",
-      "price": 754.35,
-      "ytd_pct": 10.4191,
-      "ma20": 768.0945,
-      "ma60": 767.5037,
-      "vs_ma20_pct": -1.7894,
-      "vs_ma60_pct": -1.7138,
-      "high20_gap_pct": -3.1108,
+      "price": 766.81,
+      "ytd_pct": 12.2429,
+      "ma20": 767.574,
+      "ma60": 767.4412,
+      "vs_ma20_pct": -0.0995,
+      "vs_ma60_pct": -0.0822,
+      "high20_gap_pct": -1.5105,
       "above_ma20": false,
       "above_ma60": false,
-      "observed_date": "2026-11-03",
-      "ret_1d_pct": 0.2992,
-      "ret_5d_pct": -1.9892,
-      "ret_10d_pct": -1.9115,
-      "ret_20d_pct": -3.1755,
-      "ret_50d_pct": -1.1945,
-      "ret_100d_pct": 2.2487,
+      "observed_date": "2026-11-04",
+      "ret_1d_pct": 1.6518,
+      "ret_5d_pct": -0.7121,
+      "ret_10d_pct": -0.8123,
+      "ret_20d_pct": -1.3394,
+      "ret_50d_pct": 0.1175,
+      "ret_100d_pct": 3.3785,
       "calendar_returns": {
         "1": {
-          "pct": -1.9866,
+          "pct": -0.3677,
           "base_date": "2026-10-02",
-          "end_date": "2026-11-03"
+          "end_date": "2026-11-04"
         },
         "3": {
-          "pct": -0.4382,
-          "base_date": "2026-08-03",
-          "end_date": "2026-11-03"
+          "pct": -0.586,
+          "base_date": "2026-08-04",
+          "end_date": "2026-11-04"
         },
         "12": {
-          "pct": 10.3916,
-          "base_date": "2025-11-03",
-          "end_date": "2026-11-03"
+          "pct": 13.5611,
+          "base_date": "2025-11-04",
+          "end_date": "2026-11-04"
         }
       },
-      "ret_1m_pct": -2.6432,
-      "ret_3m_pct": -2.0057,
+      "ret_1m_pct": -1.5762,
+      "ret_3m_pct": -0.2277,
       "source": "Yahoo public daily"
     },
     "QQQ": {
       "ticker": "QQQ",
       "name": "Invesco QQQ Trust",
-      "price": 685.28,
-      "ytd_pct": 11.7693,
-      "ma20": 720.713,
-      "ma60": 723.2682,
-      "vs_ma20_pct": -4.9164,
-      "vs_ma60_pct": -5.2523,
-      "high20_gap_pct": -9.5614,
+      "price": 691.95,
+      "ytd_pct": 12.8572,
+      "ma20": 717.424,
+      "ma60": 722.8265,
+      "vs_ma20_pct": -3.5508,
+      "vs_ma60_pct": -4.2716,
+      "high20_gap_pct": -7.896,
       "above_ma20": false,
       "above_ma60": false,
-      "observed_date": "2026-11-03",
-      "ret_1d_pct": 0.6152,
-      "ret_5d_pct": -4.9872,
-      "ret_10d_pct": -4.5079,
-      "ret_20d_pct": -9.7912,
-      "ret_50d_pct": -2.9788,
-      "ret_100d_pct": -4.44,
+      "observed_date": "2026-11-04",
+      "ret_1d_pct": 0.9733,
+      "ret_5d_pct": -4.6389,
+      "ret_10d_pct": -4.5849,
+      "ret_20d_pct": -8.6812,
+      "ret_50d_pct": -2.641,
+      "ret_100d_pct": -4.0744,
       "calendar_returns": {
         "1": {
-          "pct": -8.5781,
+          "pct": -7.6883,
           "base_date": "2026-10-02",
-          "end_date": "2026-11-03"
+          "end_date": "2026-11-04"
         },
         "3": {
-          "pct": -2.1126,
-          "base_date": "2026-08-03",
-          "end_date": "2026-11-03"
+          "pct": -4.407,
+          "base_date": "2026-08-04",
+          "end_date": "2026-11-04"
         },
         "12": {
-          "pct": 8.4167,
-          "base_date": "2025-11-03",
-          "end_date": "2026-11-03"
+          "pct": 11.74,
+          "base_date": "2025-11-04",
+          "end_date": "2026-11-04"
         }
       },
-      "ret_1m_pct": -9.3785,
-      "ret_3m_pct": -4.464,
+      "ret_1m_pct": -8.9132,
+      "ret_3m_pct": -3.1764,
       "source": "Yahoo public daily"
     }
   },
@@ -110,62 +110,62 @@
     "classic_above_ma20": 8,
     "leaders_20d_rs_spy": [
       {
-        "ticker": "XLV",
-        "value": 13.3078
+        "ticker": "XLP",
+        "value": 13.8731
       },
       {
-        "ticker": "XLP",
-        "value": 11.9163
+        "ticker": "XLV",
+        "value": 13.6906
       },
       {
         "ticker": "XLRE",
-        "value": 9.4285
+        "value": 12.5546
       }
     ],
     "laggards_20d_rs_spy": [
       {
         "ticker": "XLK",
-        "value": -9.4433
+        "value": -11.0197
       },
       {
         "ticker": "XLC",
-        "value": -5.9691
+        "value": -4.323
       },
       {
-        "ticker": "XLI",
-        "value": 3.024
+        "ticker": "XLE",
+        "value": 1.5919
       }
     ],
-    "growth_defense_spread_20d_pct": -13.7019,
+    "growth_defense_spread_20d_pct": -13.0112,
     "leaders_1m_rs_spy": [
       {
         "ticker": "XLV",
-        "value": 12.5912
+        "value": 15.0839
       },
       {
         "ticker": "XLP",
-        "value": 12.4038
+        "value": 13.9723
       },
       {
-        "ticker": "XLU",
-        "value": 11.2747
+        "ticker": "XLRE",
+        "value": 11.3572
       }
     ],
     "laggards_1m_rs_spy": [
       {
         "ticker": "XLK",
-        "value": -9.5103
+        "value": -11.0476
       },
       {
         "ticker": "XLC",
-        "value": -6.4689
+        "value": -4.4157
       },
       {
         "ticker": "XLI",
-        "value": 3.3604
+        "value": 0.3406
       }
     ],
-    "growth_defense_spread_1m_pct": -14.4493
+    "growth_defense_spread_1m_pct": -13.6583
   },
   "groups": [
     {
@@ -965,41 +965,41 @@
       "label": "미국 벤치마크 노출",
       "rows": [
         {
-          "price": 685.28,
-          "ytd_pct": 11.7693,
-          "ma20": 720.713,
-          "ma60": 723.2682,
-          "vs_ma20_pct": -4.9164,
-          "vs_ma60_pct": -5.2523,
-          "high20_gap_pct": -9.5614,
+          "price": 691.95,
+          "ytd_pct": 12.8572,
+          "ma20": 717.424,
+          "ma60": 722.8265,
+          "vs_ma20_pct": -3.5508,
+          "vs_ma60_pct": -4.2716,
+          "high20_gap_pct": -7.896,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 0.6152,
-          "ret_5d_pct": -4.9872,
-          "ret_10d_pct": -4.5079,
-          "ret_20d_pct": -9.7912,
-          "ret_50d_pct": -2.9788,
-          "ret_100d_pct": -4.44,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 0.9733,
+          "ret_5d_pct": -4.6389,
+          "ret_10d_pct": -4.5849,
+          "ret_20d_pct": -8.6812,
+          "ret_50d_pct": -2.641,
+          "ret_100d_pct": -4.0744,
           "calendar_returns": {
             "1": {
-              "pct": -8.5781,
+              "pct": -7.6883,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -2.1126,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -4.407,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 8.4167,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 11.74,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -9.3785,
-          "ret_3m_pct": -4.464,
+          "ret_1m_pct": -8.9132,
+          "ret_3m_pct": -3.1764,
           "ticker": "QQQ",
           "name": "Invesco QQQ Trust",
           "group": "미국 벤치마크 노출",
@@ -1008,20 +1008,20 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 0.316,
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -0.6785,
           "rs_qqq_1d_pct": 0.0,
-          "rs_spy_5d_pct": -2.998,
+          "rs_spy_5d_pct": -3.9268,
           "rs_qqq_5d_pct": 0.0,
-          "rs_spy_10d_pct": -2.5964,
+          "rs_spy_10d_pct": -3.7726,
           "rs_qqq_10d_pct": 0.0,
-          "rs_spy_20d_pct": -6.6157,
+          "rs_spy_20d_pct": -7.3418,
           "rs_qqq_20d_pct": 0.0,
-          "rs_spy_50d_pct": -1.7843,
+          "rs_spy_50d_pct": -2.7585,
           "rs_qqq_50d_pct": 0.0,
-          "rs_spy_100d_pct": -6.6887,
+          "rs_spy_100d_pct": -7.4529,
           "rs_qqq_100d_pct": 0.0,
-          "rs_spy_1m_pct": -6.7353,
+          "rs_spy_1m_pct": -7.337,
           "rs_qqq_1m_pct": 0.0
         }
       ]
@@ -1031,41 +1031,41 @@
       "label": "S&P 500 섹터",
       "rows": [
         {
-          "price": 176.51,
-          "ytd_pct": 22.3215,
-          "ma20": 188.249,
-          "ma60": 188.8938,
-          "vs_ma20_pct": -6.2359,
-          "vs_ma60_pct": -6.556,
-          "high20_gap_pct": -12.3541,
+          "price": 176.5,
+          "ytd_pct": 22.3146,
+          "ma20": 187.0045,
+          "ma60": 188.734,
+          "vs_ma20_pct": -5.6172,
+          "vs_ma60_pct": -6.4821,
+          "high20_gap_pct": -11.2084,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 1.3144,
-          "ret_5d_pct": -6.85,
-          "ret_10d_pct": -4.8156,
-          "ret_20d_pct": -12.6188,
-          "ret_50d_pct": -1.9661,
-          "ret_100d_pct": -3.657,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -0.0057,
+          "ret_5d_pct": -7.5916,
+          "ret_10d_pct": -6.3859,
+          "ret_20d_pct": -12.3591,
+          "ret_50d_pct": -2.8832,
+          "ret_100d_pct": -4.4913,
           "calendar_returns": {
             "1": {
-              "pct": -11.6611,
+              "pct": -11.6661,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -0.8594,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -5.5645,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 16.9289,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 20.0925,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -12.1535,
-          "ret_3m_pct": -5.0562,
+          "ret_1m_pct": -12.6238,
+          "ret_3m_pct": -4.7645,
           "ticker": "XLK",
           "name": "Technology",
           "group": "S&P 500 섹터",
@@ -1074,58 +1074,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 1.0152,
-          "rs_qqq_1d_pct": 0.6992,
-          "rs_spy_5d_pct": -4.8608,
-          "rs_qqq_5d_pct": -1.8628,
-          "rs_spy_10d_pct": -2.9041,
-          "rs_qqq_10d_pct": -0.3077,
-          "rs_spy_20d_pct": -9.4433,
-          "rs_qqq_20d_pct": -2.8276,
-          "rs_spy_50d_pct": -0.7716,
-          "rs_qqq_50d_pct": 1.0127,
-          "rs_spy_100d_pct": -5.9057,
-          "rs_qqq_100d_pct": 0.783,
-          "rs_spy_1m_pct": -9.5103,
-          "rs_qqq_1m_pct": -2.775
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -1.6575,
+          "rs_qqq_1d_pct": -0.979,
+          "rs_spy_5d_pct": -6.8795,
+          "rs_qqq_5d_pct": -2.9527,
+          "rs_spy_10d_pct": -5.5736,
+          "rs_qqq_10d_pct": -1.801,
+          "rs_spy_20d_pct": -11.0197,
+          "rs_qqq_20d_pct": -3.6779,
+          "rs_spy_50d_pct": -3.0007,
+          "rs_qqq_50d_pct": -0.2422,
+          "rs_spy_100d_pct": -7.8698,
+          "rs_qqq_100d_pct": -0.4169,
+          "rs_spy_1m_pct": -11.0476,
+          "rs_qqq_1m_pct": -3.7106
         },
         {
-          "price": 101.44,
-          "ytd_pct": -13.225,
-          "ma20": 107.329,
-          "ma60": 110.4607,
-          "vs_ma20_pct": -5.4869,
-          "vs_ma60_pct": -8.1664,
-          "high20_gap_pct": -9.783,
+          "price": 104.96,
+          "ytd_pct": -10.2139,
+          "ma20": 107.014,
+          "ma60": 110.3555,
+          "vs_ma20_pct": -1.9194,
+          "vs_ma60_pct": -4.8892,
+          "high20_gap_pct": -6.6524,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 1.1769,
-          "ret_5d_pct": -2.066,
-          "ret_10d_pct": -7.9408,
-          "ret_20d_pct": -9.1446,
-          "ret_50d_pct": -9.6866,
-          "ret_100d_pct": -9.5255,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 3.47,
+          "ret_5d_pct": 1.7646,
+          "ret_10d_pct": -3.6799,
+          "ret_20d_pct": -5.6624,
+          "ret_50d_pct": -7.2628,
+          "ret_100d_pct": -5.9919,
           "calendar_returns": {
             "1": {
-              "pct": -8.0493,
+              "pct": -4.8586,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -8.8917,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -6.3192,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": -10.6964,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": -6.9586,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -9.1121,
-          "ret_3m_pct": -8.5055,
+          "ret_1m_pct": -5.9919,
+          "ret_3m_pct": -5.5945,
           "ticker": "XLC",
           "name": "Communication Services",
           "group": "S&P 500 섹터",
@@ -1134,58 +1134,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 0.8777,
-          "rs_qqq_1d_pct": 0.5617,
-          "rs_spy_5d_pct": -0.0768,
-          "rs_qqq_5d_pct": 2.9212,
-          "rs_spy_10d_pct": -6.0293,
-          "rs_qqq_10d_pct": -3.4329,
-          "rs_spy_20d_pct": -5.9691,
-          "rs_qqq_20d_pct": 0.6466,
-          "rs_spy_50d_pct": -8.4921,
-          "rs_qqq_50d_pct": -6.7078,
-          "rs_spy_100d_pct": -11.7742,
-          "rs_qqq_100d_pct": -5.0855,
-          "rs_spy_1m_pct": -6.4689,
-          "rs_qqq_1m_pct": 0.2664
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 1.8182,
+          "rs_qqq_1d_pct": 2.4967,
+          "rs_spy_5d_pct": 2.4767,
+          "rs_qqq_5d_pct": 6.4035,
+          "rs_spy_10d_pct": -2.8676,
+          "rs_qqq_10d_pct": 0.905,
+          "rs_spy_20d_pct": -4.323,
+          "rs_qqq_20d_pct": 3.0188,
+          "rs_spy_50d_pct": -7.3803,
+          "rs_qqq_50d_pct": -4.6218,
+          "rs_spy_100d_pct": -9.3704,
+          "rs_qqq_100d_pct": -1.9175,
+          "rs_spy_1m_pct": -4.4157,
+          "rs_qqq_1m_pct": 2.9213
         },
         {
-          "price": 117.33,
-          "ytd_pct": -0.8618,
-          "ma20": 114.1815,
-          "ma60": 113.9915,
-          "vs_ma20_pct": 2.7575,
-          "vs_ma60_pct": 2.9287,
-          "high20_gap_pct": -0.7024,
+          "price": 122.33,
+          "ytd_pct": 3.3629,
+          "ma20": 114.73,
+          "ma60": 114.043,
+          "vs_ma20_pct": 6.6242,
+          "vs_ma60_pct": 7.2666,
+          "high20_gap_pct": 0.0,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -0.7024,
-          "ret_5d_pct": 1.6284,
-          "ret_10d_pct": 1.5844,
-          "ret_20d_pct": 5.0215,
-          "ret_50d_pct": -0.82,
-          "ret_100d_pct": 0.8856,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 4.2615,
+          "ret_5d_pct": 6.0695,
+          "ret_10d_pct": 5.8859,
+          "ret_20d_pct": 9.8509,
+          "ret_50d_pct": 3.7134,
+          "ret_100d_pct": 4.9142,
           "calendar_returns": {
             "1": {
-              "pct": 6.6249,
+              "pct": 11.1687,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -0.7444,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": 3.4153,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": -3.1051,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 2.7293,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 6.2579,
-          "ret_3m_pct": -1.1042,
+          "ret_1m_pct": 9.497,
+          "ret_3m_pct": 3.5817,
           "ticker": "XLY",
           "name": "Consumer Discretionary",
           "group": "S&P 500 섹터",
@@ -1194,58 +1194,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -1.0016,
-          "rs_qqq_1d_pct": -1.3176,
-          "rs_spy_5d_pct": 3.6176,
-          "rs_qqq_5d_pct": 6.6156,
-          "rs_spy_10d_pct": 3.4959,
-          "rs_qqq_10d_pct": 6.0923,
-          "rs_spy_20d_pct": 8.197,
-          "rs_qqq_20d_pct": 14.8127,
-          "rs_spy_50d_pct": 0.3745,
-          "rs_qqq_50d_pct": 2.1588,
-          "rs_spy_100d_pct": -1.3631,
-          "rs_qqq_100d_pct": 5.3256,
-          "rs_spy_1m_pct": 8.9011,
-          "rs_qqq_1m_pct": 15.6364
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 2.6097,
+          "rs_qqq_1d_pct": 3.2882,
+          "rs_spy_5d_pct": 6.7816,
+          "rs_qqq_5d_pct": 10.7084,
+          "rs_spy_10d_pct": 6.6982,
+          "rs_qqq_10d_pct": 10.4708,
+          "rs_spy_20d_pct": 11.1903,
+          "rs_qqq_20d_pct": 18.5321,
+          "rs_spy_50d_pct": 3.5959,
+          "rs_qqq_50d_pct": 6.3544,
+          "rs_spy_100d_pct": 1.5357,
+          "rs_qqq_100d_pct": 8.9886,
+          "rs_spy_1m_pct": 11.0732,
+          "rs_qqq_1m_pct": 18.4102
         },
         {
-          "price": 57.19,
-          "ytd_pct": 4.1143,
-          "ma20": 55.6745,
-          "ma60": 56.234,
-          "vs_ma20_pct": 2.7221,
-          "vs_ma60_pct": 1.7,
-          "high20_gap_pct": -0.6428,
+          "price": 59.2,
+          "ytd_pct": 7.7735,
+          "ma20": 55.947,
+          "ma60": 56.2573,
+          "vs_ma20_pct": 5.8144,
+          "vs_ma60_pct": 5.2307,
+          "high20_gap_pct": 0.0,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -0.6428,
-          "ret_5d_pct": 2.3443,
-          "ret_10d_pct": 2.6382,
-          "ret_20d_pct": 5.8878,
-          "ret_50d_pct": -1.7692,
-          "ret_100d_pct": 8.6849,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 3.5146,
+          "ret_5d_pct": 5.4694,
+          "ret_10d_pct": 5.6388,
+          "ret_20d_pct": 10.1395,
+          "ret_50d_pct": 1.5263,
+          "ret_100d_pct": 10.9861,
           "calendar_returns": {
             "1": {
-              "pct": 6.9172,
+              "pct": 10.6749,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -0.3311,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": 2.2806,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 9.6644,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 12.934,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 6.1433,
-          "ret_3m_pct": -1.3966,
+          "ret_1m_pct": 9.6093,
+          "ret_3m_pct": 2.4044,
           "ticker": "XLF",
           "name": "Financials",
           "group": "S&P 500 섹터",
@@ -1254,58 +1254,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -0.942,
-          "rs_qqq_1d_pct": -1.258,
-          "rs_spy_5d_pct": 4.3335,
-          "rs_qqq_5d_pct": 7.3315,
-          "rs_spy_10d_pct": 4.5497,
-          "rs_qqq_10d_pct": 7.1461,
-          "rs_spy_20d_pct": 9.0633,
-          "rs_qqq_20d_pct": 15.679,
-          "rs_spy_50d_pct": -0.5747,
-          "rs_qqq_50d_pct": 1.2096,
-          "rs_spy_100d_pct": 6.4362,
-          "rs_qqq_100d_pct": 13.1249,
-          "rs_spy_1m_pct": 8.7865,
-          "rs_qqq_1m_pct": 15.5218
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 1.8628,
+          "rs_qqq_1d_pct": 2.5413,
+          "rs_spy_5d_pct": 6.1815,
+          "rs_qqq_5d_pct": 10.1083,
+          "rs_spy_10d_pct": 6.4511,
+          "rs_qqq_10d_pct": 10.2237,
+          "rs_spy_20d_pct": 11.4789,
+          "rs_qqq_20d_pct": 18.8207,
+          "rs_spy_50d_pct": 1.4088,
+          "rs_qqq_50d_pct": 4.1673,
+          "rs_spy_100d_pct": 7.6076,
+          "rs_qqq_100d_pct": 15.0605,
+          "rs_spy_1m_pct": 11.1855,
+          "rs_qqq_1m_pct": 18.5225
         },
         {
-          "price": 171.32,
-          "ytd_pct": 8.4441,
-          "ma20": 168.0535,
-          "ma60": 172.5185,
-          "vs_ma20_pct": 1.9437,
-          "vs_ma60_pct": -0.6947,
-          "high20_gap_pct": 0.0,
+          "price": 169.46,
+          "ytd_pct": 7.2667,
+          "ma20": 168.1345,
+          "ma60": 172.2478,
+          "vs_ma20_pct": 0.7884,
+          "vs_ma60_pct": -1.6185,
+          "high20_gap_pct": -1.0857,
           "above_ma20": true,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 0.9487,
-          "ret_5d_pct": 2.0248,
-          "ret_10d_pct": 2.7098,
-          "ret_20d_pct": -0.1515,
-          "ret_50d_pct": -4.2905,
-          "ret_100d_pct": -2.1867,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -1.0857,
+          "ret_5d_pct": 0.5757,
+          "ret_10d_pct": 0.6833,
+          "ret_20d_pct": 0.9652,
+          "ret_50d_pct": -5.0112,
+          "ret_100d_pct": -3.8143,
           "calendar_returns": {
             "1": {
-              "pct": 0.8061,
+              "pct": -0.2883,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -6.4643,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -9.088,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 10.9586,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 11.0412,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 0.7172,
-          "ret_3m_pct": -8.0655,
+          "ret_1m_pct": -1.2356,
+          "ret_3m_pct": -8.281,
           "ticker": "XLI",
           "name": "Industrials",
           "group": "S&P 500 섹터",
@@ -1314,58 +1314,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 0.6495,
-          "rs_qqq_1d_pct": 0.3335,
-          "rs_spy_5d_pct": 4.014,
-          "rs_qqq_5d_pct": 7.012,
-          "rs_spy_10d_pct": 4.6213,
-          "rs_qqq_10d_pct": 7.2177,
-          "rs_spy_20d_pct": 3.024,
-          "rs_qqq_20d_pct": 9.6397,
-          "rs_spy_50d_pct": -3.096,
-          "rs_qqq_50d_pct": -1.3117,
-          "rs_spy_100d_pct": -4.4354,
-          "rs_qqq_100d_pct": 2.2533,
-          "rs_spy_1m_pct": 3.3604,
-          "rs_qqq_1m_pct": 10.0957
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -2.7375,
+          "rs_qqq_1d_pct": -2.059,
+          "rs_spy_5d_pct": 1.2878,
+          "rs_qqq_5d_pct": 5.2146,
+          "rs_spy_10d_pct": 1.4956,
+          "rs_qqq_10d_pct": 5.2682,
+          "rs_spy_20d_pct": 2.3046,
+          "rs_qqq_20d_pct": 9.6464,
+          "rs_spy_50d_pct": -5.1287,
+          "rs_qqq_50d_pct": -2.3702,
+          "rs_spy_100d_pct": -7.1928,
+          "rs_qqq_100d_pct": 0.2601,
+          "rs_spy_1m_pct": 0.3406,
+          "rs_qqq_1m_pct": 7.6776
         },
         {
-          "price": 66.68,
-          "ytd_pct": 46.0679,
-          "ma20": 67.4555,
-          "ma60": 64.6482,
-          "vs_ma20_pct": -1.1496,
-          "vs_ma60_pct": 3.1429,
-          "high20_gap_pct": -4.7701,
+          "price": 63.52,
+          "ytd_pct": 39.1457,
+          "ma20": 67.4635,
+          "ma60": 64.6913,
+          "vs_ma20_pct": -5.8454,
+          "vs_ma60_pct": -1.8106,
+          "high20_gap_pct": -9.2831,
           "above_ma20": false,
-          "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -0.8476,
-          "ret_5d_pct": -2.2431,
-          "ret_10d_pct": -1.8979,
-          "ret_20d_pct": 4.5961,
-          "ret_50d_pct": 5.6568,
-          "ret_100d_pct": 16.7367,
+          "above_ma60": false,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -4.7391,
+          "ret_5d_pct": -7.2023,
+          "ret_10d_pct": -6.8075,
+          "ret_20d_pct": 0.2525,
+          "ret_50d_pct": 2.3526,
+          "ret_100d_pct": 10.3736,
           "calendar_returns": {
             "1": {
-              "pct": 6.1445,
+              "pct": 1.1143,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": 13.4206,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": 8.5441,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 51.3047,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 45.7048,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 5.0906,
-          "ret_3m_pct": 16.3497,
+          "ret_1m_pct": -0.3608,
+          "ret_3m_pct": 9.216,
           "ticker": "XLE",
           "name": "Energy",
           "group": "S&P 500 섹터",
@@ -1374,58 +1374,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -1.1468,
-          "rs_qqq_1d_pct": -1.4628,
-          "rs_spy_5d_pct": -0.2539,
-          "rs_qqq_5d_pct": 2.7441,
-          "rs_spy_10d_pct": 0.0136,
-          "rs_qqq_10d_pct": 2.61,
-          "rs_spy_20d_pct": 7.7716,
-          "rs_qqq_20d_pct": 14.3873,
-          "rs_spy_50d_pct": 6.8513,
-          "rs_qqq_50d_pct": 8.6356,
-          "rs_spy_100d_pct": 14.488,
-          "rs_qqq_100d_pct": 21.1767,
-          "rs_spy_1m_pct": 7.7338,
-          "rs_qqq_1m_pct": 14.4691
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -6.3909,
+          "rs_qqq_1d_pct": -5.7124,
+          "rs_spy_5d_pct": -6.4902,
+          "rs_qqq_5d_pct": -2.5634,
+          "rs_spy_10d_pct": -5.9952,
+          "rs_qqq_10d_pct": -2.2226,
+          "rs_spy_20d_pct": 1.5919,
+          "rs_qqq_20d_pct": 8.9337,
+          "rs_spy_50d_pct": 2.2351,
+          "rs_qqq_50d_pct": 4.9936,
+          "rs_spy_100d_pct": 6.9951,
+          "rs_qqq_100d_pct": 14.448,
+          "rs_spy_1m_pct": 1.2154,
+          "rs_qqq_1m_pct": 8.5524
         },
         {
-          "price": 52.59,
-          "ytd_pct": 14.0286,
-          "ma20": 51.052,
-          "ma60": 51.2573,
-          "vs_ma20_pct": 3.0126,
-          "vs_ma60_pct": 2.6,
-          "high20_gap_pct": -2.0123,
+          "price": 53.9,
+          "ytd_pct": 16.869,
+          "ma20": 51.298,
+          "ma60": 51.2683,
+          "vs_ma20_pct": 5.0723,
+          "vs_ma60_pct": 5.1331,
+          "high20_gap_pct": 0.0,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -2.0123,
-          "ret_5d_pct": 1.5643,
-          "ret_10d_pct": 2.6547,
-          "ret_20d_pct": 5.7511,
-          "ret_50d_pct": -1.8477,
-          "ret_100d_pct": 2.6747,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 2.491,
+          "ret_5d_pct": 3.9337,
+          "ret_10d_pct": 5.0273,
+          "ret_20d_pct": 10.0449,
+          "ret_50d_pct": 0.5972,
+          "ret_100d_pct": 3.2963,
           "calendar_returns": {
             "1": {
-              "pct": 7.6341,
+              "pct": 10.3152,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": 3.0974,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": 3.6538,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 23.5377,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 27.2427,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 6.2424,
-          "ret_3m_pct": -0.095,
+          "ret_1m_pct": 8.3853,
+          "ret_3m_pct": 3.3161,
           "ticker": "XLB",
           "name": "Materials",
           "group": "S&P 500 섹터",
@@ -1434,58 +1434,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -2.3115,
-          "rs_qqq_1d_pct": -2.6275,
-          "rs_spy_5d_pct": 3.5535,
-          "rs_qqq_5d_pct": 6.5515,
-          "rs_spy_10d_pct": 4.5662,
-          "rs_qqq_10d_pct": 7.1626,
-          "rs_spy_20d_pct": 8.9266,
-          "rs_qqq_20d_pct": 15.5423,
-          "rs_spy_50d_pct": -0.6532,
-          "rs_qqq_50d_pct": 1.1311,
-          "rs_spy_100d_pct": 0.426,
-          "rs_qqq_100d_pct": 7.1147,
-          "rs_spy_1m_pct": 8.8856,
-          "rs_qqq_1m_pct": 15.6209
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 0.8392,
+          "rs_qqq_1d_pct": 1.5177,
+          "rs_spy_5d_pct": 4.6458,
+          "rs_qqq_5d_pct": 8.5726,
+          "rs_spy_10d_pct": 5.8396,
+          "rs_qqq_10d_pct": 9.6122,
+          "rs_spy_20d_pct": 11.3843,
+          "rs_qqq_20d_pct": 18.7261,
+          "rs_spy_50d_pct": 0.4797,
+          "rs_qqq_50d_pct": 3.2382,
+          "rs_spy_100d_pct": -0.0822,
+          "rs_qqq_100d_pct": 7.3707,
+          "rs_spy_1m_pct": 9.9615,
+          "rs_qqq_1m_pct": 17.2985
         },
         {
-          "price": 184.02,
-          "ytd_pct": 18.3332,
-          "ma20": 177.3995,
-          "ma60": 172.2738,
-          "vs_ma20_pct": 3.732,
-          "vs_ma60_pct": 6.8183,
-          "high20_gap_pct": -0.4598,
+          "price": 189.66,
+          "ytd_pct": 21.96,
+          "ma20": 178.442,
+          "ma60": 172.6347,
+          "vs_ma20_pct": 6.2866,
+          "vs_ma60_pct": 9.8621,
+          "high20_gap_pct": 0.0,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -0.3142,
-          "ret_5d_pct": 2.7012,
-          "ret_10d_pct": 2.3357,
-          "ret_20d_pct": 10.1323,
-          "ret_50d_pct": 5.3349,
-          "ret_100d_pct": 19.4237,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 3.0649,
+          "ret_5d_pct": 5.5308,
+          "ret_10d_pct": 5.9908,
+          "ret_20d_pct": 12.3512,
+          "ret_50d_pct": 8.1978,
+          "ret_100d_pct": 23.308,
           "calendar_returns": {
             "1": {
-              "pct": 10.7354,
+              "pct": 14.1293,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": 13.4246,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": 17.0018,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 27.3936,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 30.7099,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 9.948,
-          "ret_3m_pct": 12.098,
+          "ret_1m_pct": 13.5077,
+          "ret_3m_pct": 15.3299,
           "ticker": "XLV",
           "name": "Health Care",
           "group": "S&P 500 섹터",
@@ -1494,58 +1494,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -0.6134,
-          "rs_qqq_1d_pct": -0.9294,
-          "rs_spy_5d_pct": 4.6904,
-          "rs_qqq_5d_pct": 7.6884,
-          "rs_spy_10d_pct": 4.2472,
-          "rs_qqq_10d_pct": 6.8436,
-          "rs_spy_20d_pct": 13.3078,
-          "rs_qqq_20d_pct": 19.9235,
-          "rs_spy_50d_pct": 6.5294,
-          "rs_qqq_50d_pct": 8.3137,
-          "rs_spy_100d_pct": 17.175,
-          "rs_qqq_100d_pct": 23.8637,
-          "rs_spy_1m_pct": 12.5912,
-          "rs_qqq_1m_pct": 19.3265
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 1.4131,
+          "rs_qqq_1d_pct": 2.0916,
+          "rs_spy_5d_pct": 6.2429,
+          "rs_qqq_5d_pct": 10.1697,
+          "rs_spy_10d_pct": 6.8031,
+          "rs_qqq_10d_pct": 10.5757,
+          "rs_spy_20d_pct": 13.6906,
+          "rs_qqq_20d_pct": 21.0324,
+          "rs_spy_50d_pct": 8.0803,
+          "rs_qqq_50d_pct": 10.8388,
+          "rs_spy_100d_pct": 19.9295,
+          "rs_qqq_100d_pct": 27.3824,
+          "rs_spy_1m_pct": 15.0839,
+          "rs_qqq_1m_pct": 22.4209
         },
         {
-          "price": 88.95,
-          "ytd_pct": 14.4935,
-          "ma20": 86.858,
-          "ma60": 84.9013,
-          "vs_ma20_pct": 2.4085,
-          "vs_ma60_pct": 4.7687,
-          "high20_gap_pct": -2.0698,
+          "price": 91.94,
+          "ytd_pct": 18.3421,
+          "ma20": 87.37,
+          "ma60": 85.0222,
+          "vs_ma20_pct": 5.2306,
+          "vs_ma60_pct": 8.1365,
+          "high20_gap_pct": 0.0,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -2.0698,
-          "ret_5d_pct": 2.0654,
-          "ret_10d_pct": 1.3675,
-          "ret_20d_pct": 8.7408,
-          "ret_50d_pct": 1.7153,
-          "ret_100d_pct": 4.3157,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 3.3614,
+          "ret_5d_pct": 5.8729,
+          "ret_10d_pct": 5.5447,
+          "ret_20d_pct": 12.5337,
+          "ret_50d_pct": 6.2645,
+          "ret_100d_pct": 7.1312,
           "calendar_returns": {
             "1": {
-              "pct": 10.4557,
+              "pct": 14.1686,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": 4.8197,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": 7.6959,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 17.5344,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 20.9896,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 9.7606,
-          "ret_3m_pct": 4.2423,
+          "ret_1m_pct": 12.3961,
+          "ret_3m_pct": 8.0249,
           "ticker": "XLP",
           "name": "Consumer Staples",
           "group": "S&P 500 섹터",
@@ -1554,58 +1554,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -2.369,
-          "rs_qqq_1d_pct": -2.685,
-          "rs_spy_5d_pct": 4.0546,
-          "rs_qqq_5d_pct": 7.0526,
-          "rs_spy_10d_pct": 3.279,
-          "rs_qqq_10d_pct": 5.8754,
-          "rs_spy_20d_pct": 11.9163,
-          "rs_qqq_20d_pct": 18.532,
-          "rs_spy_50d_pct": 2.9098,
-          "rs_qqq_50d_pct": 4.6941,
-          "rs_spy_100d_pct": 2.067,
-          "rs_qqq_100d_pct": 8.7557,
-          "rs_spy_1m_pct": 12.4038,
-          "rs_qqq_1m_pct": 19.1391
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 1.7096,
+          "rs_qqq_1d_pct": 2.3881,
+          "rs_spy_5d_pct": 6.585,
+          "rs_qqq_5d_pct": 10.5118,
+          "rs_spy_10d_pct": 6.357,
+          "rs_qqq_10d_pct": 10.1296,
+          "rs_spy_20d_pct": 13.8731,
+          "rs_qqq_20d_pct": 21.2149,
+          "rs_spy_50d_pct": 6.147,
+          "rs_qqq_50d_pct": 8.9055,
+          "rs_spy_100d_pct": 3.7527,
+          "rs_qqq_100d_pct": 11.2056,
+          "rs_spy_1m_pct": 13.9723,
+          "rs_qqq_1m_pct": 21.3093
         },
         {
-          "price": 43.42,
-          "ytd_pct": 0.5558,
-          "ma20": 42.2465,
-          "ma60": 42.1072,
-          "vs_ma20_pct": 2.7777,
-          "vs_ma60_pct": 3.1178,
-          "high20_gap_pct": -0.5725,
+          "price": 43.61,
+          "ytd_pct": 0.9958,
+          "ma20": 42.3695,
+          "ma60": 42.1068,
+          "vs_ma20_pct": 2.9278,
+          "vs_ma60_pct": 3.5699,
+          "high20_gap_pct": -0.1374,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -0.5725,
-          "ret_5d_pct": 1.3302,
-          "ret_10d_pct": 3.6772,
-          "ret_20d_pct": 5.4908,
-          "ret_50d_pct": 0.4627,
-          "ret_100d_pct": -1.4302,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 0.4376,
+          "ret_5d_pct": 2.6359,
+          "ret_10d_pct": 3.8333,
+          "ret_20d_pct": 5.9781,
+          "ret_50d_pct": 0.6927,
+          "ret_100d_pct": -2.066,
           "calendar_returns": {
             "1": {
-              "pct": 9.0133,
+              "pct": 9.4903,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -2.119,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -1.1335,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": -2.5911,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": -1.8125,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 8.6315,
-          "ret_3m_pct": -0.5497,
+          "ret_1m_pct": 5.9524,
+          "ret_3m_pct": 0.5302,
           "ticker": "XLU",
           "name": "Utilities",
           "group": "S&P 500 섹터",
@@ -1614,58 +1614,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -0.8717,
-          "rs_qqq_1d_pct": -1.1877,
-          "rs_spy_5d_pct": 3.3194,
-          "rs_qqq_5d_pct": 6.3174,
-          "rs_spy_10d_pct": 5.5887,
-          "rs_qqq_10d_pct": 8.1851,
-          "rs_spy_20d_pct": 8.6663,
-          "rs_qqq_20d_pct": 15.282,
-          "rs_spy_50d_pct": 1.6572,
-          "rs_qqq_50d_pct": 3.4415,
-          "rs_spy_100d_pct": -3.6789,
-          "rs_qqq_100d_pct": 3.0098,
-          "rs_spy_1m_pct": 11.2747,
-          "rs_qqq_1m_pct": 18.01
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -1.2142,
+          "rs_qqq_1d_pct": -0.5357,
+          "rs_spy_5d_pct": 3.348,
+          "rs_qqq_5d_pct": 7.2748,
+          "rs_spy_10d_pct": 4.6456,
+          "rs_qqq_10d_pct": 8.4182,
+          "rs_spy_20d_pct": 7.3175,
+          "rs_qqq_20d_pct": 14.6593,
+          "rs_spy_50d_pct": 0.5752,
+          "rs_qqq_50d_pct": 3.3337,
+          "rs_spy_100d_pct": -5.4445,
+          "rs_qqq_100d_pct": 2.0084,
+          "rs_spy_1m_pct": 7.5286,
+          "rs_qqq_1m_pct": 14.8656
         },
         {
-          "price": 43.67,
-          "ytd_pct": 8.1476,
-          "ma20": 42.2265,
-          "ma60": 42.9722,
-          "vs_ma20_pct": 3.4185,
-          "vs_ma60_pct": 1.6239,
+          "price": 45.12,
+          "ytd_pct": 11.7385,
+          "ma20": 42.454,
+          "ma60": 42.9895,
+          "vs_ma20_pct": 6.2797,
+          "vs_ma60_pct": 4.9559,
           "high20_gap_pct": 0.0,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 0.0687,
-          "ret_5d_pct": 2.8982,
-          "ret_10d_pct": 3.0439,
-          "ret_20d_pct": 6.253,
-          "ret_50d_pct": -3.662,
-          "ret_100d_pct": -2.7827,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 3.3204,
+          "ret_5d_pct": 7.0971,
+          "ret_10d_pct": 7.2753,
+          "ret_20d_pct": 11.2152,
+          "ret_50d_pct": -0.5291,
+          "ret_100d_pct": -0.5291,
           "calendar_returns": {
             "1": {
-              "pct": 7.0081,
+              "pct": 10.5611,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -3.3422,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -0.1107,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 6.9557,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 10.2101,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 7.3764,
-          "ret_3m_pct": -3.385,
+          "ret_1m_pct": 9.781,
+          "ret_3m_pct": 0.6918,
           "ticker": "XLRE",
           "name": "Real Estate",
           "group": "S&P 500 섹터",
@@ -1674,21 +1674,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -0.2305,
-          "rs_qqq_1d_pct": -0.5465,
-          "rs_spy_5d_pct": 4.8874,
-          "rs_qqq_5d_pct": 7.8854,
-          "rs_spy_10d_pct": 4.9554,
-          "rs_qqq_10d_pct": 7.5518,
-          "rs_spy_20d_pct": 9.4285,
-          "rs_qqq_20d_pct": 16.0442,
-          "rs_spy_50d_pct": -2.4675,
-          "rs_qqq_50d_pct": -0.6832,
-          "rs_spy_100d_pct": -5.0314,
-          "rs_qqq_100d_pct": 1.6573,
-          "rs_spy_1m_pct": 10.0196,
-          "rs_qqq_1m_pct": 16.7549
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 1.6686,
+          "rs_qqq_1d_pct": 2.3471,
+          "rs_spy_5d_pct": 7.8092,
+          "rs_qqq_5d_pct": 11.736,
+          "rs_spy_10d_pct": 8.0876,
+          "rs_qqq_10d_pct": 11.8602,
+          "rs_spy_20d_pct": 12.5546,
+          "rs_qqq_20d_pct": 19.8964,
+          "rs_spy_50d_pct": -0.6466,
+          "rs_qqq_50d_pct": 2.1119,
+          "rs_spy_100d_pct": -3.9076,
+          "rs_qqq_100d_pct": 3.5453,
+          "rs_spy_1m_pct": 11.3572,
+          "rs_qqq_1m_pct": 18.6942
         }
       ]
     },
@@ -1697,41 +1697,41 @@
       "label": "반도체·메모리",
       "rows": [
         {
-          "price": 518.52,
-          "ytd_pct": 38.9017,
-          "ma20": 557.922,
-          "ma60": 571.3287,
-          "vs_ma20_pct": -7.0623,
-          "vs_ma60_pct": -9.2431,
-          "high20_gap_pct": -17.0408,
+          "price": 504.27,
+          "ytd_pct": 35.0844,
+          "ma20": 551.884,
+          "ma60": 570.1843,
+          "vs_ma20_pct": -8.6275,
+          "vs_ma60_pct": -11.5602,
+          "high20_gap_pct": -16.9612,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 2.0086,
-          "ret_5d_pct": -7.0719,
-          "ret_10d_pct": -5.0955,
-          "ret_20d_pct": -18.0206,
-          "ret_50d_pct": -5.1719,
-          "ret_100d_pct": -14.92,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -2.7482,
+          "ret_5d_pct": -11.1685,
+          "ret_10d_pct": -9.418,
+          "ret_20d_pct": -19.3207,
+          "ret_50d_pct": -9.2746,
+          "ret_100d_pct": -18.6609,
           "calendar_returns": {
             "1": {
-              "pct": -17.7735,
+              "pct": -20.0333,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -4.939,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -12.409,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 41.6334,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 42.9499,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -18.2016,
-          "ret_3m_pct": -8.9837,
+          "ret_1m_pct": -20.2735,
+          "ret_3m_pct": -11.7607,
           "ticker": "SMH",
           "name": "VanEck Semiconductor ETF",
           "group": "반도체·메모리",
@@ -1740,58 +1740,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 1.7094,
-          "rs_qqq_1d_pct": 1.3934,
-          "rs_spy_5d_pct": -5.0827,
-          "rs_qqq_5d_pct": -2.0847,
-          "rs_spy_10d_pct": -3.184,
-          "rs_qqq_10d_pct": -0.5876,
-          "rs_spy_20d_pct": -14.8451,
-          "rs_qqq_20d_pct": -8.2294,
-          "rs_spy_50d_pct": -3.9774,
-          "rs_qqq_50d_pct": -2.1931,
-          "rs_spy_100d_pct": -17.1687,
-          "rs_qqq_100d_pct": -10.48,
-          "rs_spy_1m_pct": -15.5584,
-          "rs_qqq_1m_pct": -8.8231
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -4.4,
+          "rs_qqq_1d_pct": -3.7215,
+          "rs_spy_5d_pct": -10.4564,
+          "rs_qqq_5d_pct": -6.5296,
+          "rs_spy_10d_pct": -8.6057,
+          "rs_qqq_10d_pct": -4.8331,
+          "rs_spy_20d_pct": -17.9813,
+          "rs_qqq_20d_pct": -10.6395,
+          "rs_spy_50d_pct": -9.3921,
+          "rs_qqq_50d_pct": -6.6336,
+          "rs_spy_100d_pct": -22.0394,
+          "rs_qqq_100d_pct": -14.5865,
+          "rs_spy_1m_pct": -18.6973,
+          "rs_qqq_1m_pct": -11.3603
         },
         {
-          "price": 465.0,
-          "ytd_pct": 48.2355,
-          "ma20": 510.8405,
-          "ma60": 528.1488,
-          "vs_ma20_pct": -8.9735,
-          "vs_ma60_pct": -11.9566,
-          "high20_gap_pct": -20.2155,
+          "price": 450.41,
+          "ytd_pct": 43.5844,
+          "ma20": 504.22,
+          "ma60": 526.7523,
+          "vs_ma20_pct": -10.6719,
+          "vs_ma60_pct": -14.493,
+          "high20_gap_pct": -20.038,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 2.5019,
-          "ret_5d_pct": -9.0126,
-          "ret_10d_pct": -7.0019,
-          "ret_20d_pct": -21.1129,
-          "ret_50d_pct": -8.1354,
-          "ret_100d_pct": -20.7742,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -3.1376,
+          "ret_5d_pct": -13.7046,
+          "ret_10d_pct": -11.7466,
+          "ret_20d_pct": -22.7189,
+          "ret_50d_pct": -12.3818,
+          "ret_100d_pct": -24.4595,
           "calendar_returns": {
             "1": {
-              "pct": -21.0392,
+              "pct": -23.5167,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -8.4069,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -16.9307,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 50.788,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 52.032,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -21.1209,
-          "ret_3m_pct": -12.3799,
+          "ret_1m_pct": -23.5881,
+          "ret_3m_pct": -15.4191,
           "ticker": "SOXX",
           "name": "iShares Semiconductor ETF",
           "group": "반도체·메모리",
@@ -1800,21 +1800,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 2.2027,
-          "rs_qqq_1d_pct": 1.8867,
-          "rs_spy_5d_pct": -7.0234,
-          "rs_qqq_5d_pct": -4.0254,
-          "rs_spy_10d_pct": -5.0904,
-          "rs_qqq_10d_pct": -2.494,
-          "rs_spy_20d_pct": -17.9374,
-          "rs_qqq_20d_pct": -11.3217,
-          "rs_spy_50d_pct": -6.9409,
-          "rs_qqq_50d_pct": -5.1566,
-          "rs_spy_100d_pct": -23.0229,
-          "rs_qqq_100d_pct": -16.3342,
-          "rs_spy_1m_pct": -18.4777,
-          "rs_qqq_1m_pct": -11.7424
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -4.7894,
+          "rs_qqq_1d_pct": -4.1109,
+          "rs_spy_5d_pct": -12.9925,
+          "rs_qqq_5d_pct": -9.0657,
+          "rs_spy_10d_pct": -10.9343,
+          "rs_qqq_10d_pct": -7.1617,
+          "rs_spy_20d_pct": -21.3795,
+          "rs_qqq_20d_pct": -14.0377,
+          "rs_spy_50d_pct": -12.4993,
+          "rs_qqq_50d_pct": -9.7408,
+          "rs_spy_100d_pct": -27.838,
+          "rs_qqq_100d_pct": -20.3851,
+          "rs_spy_1m_pct": -22.0119,
+          "rs_qqq_1m_pct": -14.6749
         }
       ]
     },
@@ -1823,41 +1823,41 @@
       "label": "소프트웨어·클라우드·사이버",
       "rows": [
         {
-          "price": 102.66,
-          "ytd_pct": 0.039,
-          "ma20": 108.445,
-          "ma60": 106.3368,
-          "vs_ma20_pct": -5.3345,
-          "vs_ma60_pct": -3.4577,
-          "high20_gap_pct": -8.8843,
+          "price": 103.56,
+          "ytd_pct": 0.916,
+          "ma20": 108.131,
+          "ma60": 106.3308,
+          "vs_ma20_pct": -4.2273,
+          "vs_ma60_pct": -2.6059,
+          "high20_gap_pct": -8.0856,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 0.7458,
-          "ret_5d_pct": -8.1589,
-          "ret_10d_pct": -3.9933,
-          "ret_20d_pct": -7.6466,
-          "ret_50d_pct": 0.205,
-          "ret_100d_pct": 12.9125,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 0.8767,
+          "ret_5d_pct": -7.4614,
+          "ret_10d_pct": -4.8337,
+          "ret_20d_pct": -5.7174,
+          "ret_50d_pct": 1.6789,
+          "ret_100d_pct": 14.1786,
           "calendar_returns": {
             "1": {
-              "pct": -5.3214,
+              "pct": -4.4914,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": 5.3788,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": 1.5294,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": -11.2705,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": -7.5357,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -6.4346,
-          "ret_3m_pct": 1.3325,
+          "ret_1m_pct": -6.837,
+          "ret_3m_pct": 4.1642,
           "ticker": "IGV",
           "name": "iShares Expanded Tech-Software Sector ETF",
           "group": "소프트웨어·클라우드·사이버",
@@ -1866,58 +1866,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 0.4466,
-          "rs_qqq_1d_pct": 0.1306,
-          "rs_spy_5d_pct": -6.1697,
-          "rs_qqq_5d_pct": -3.1717,
-          "rs_spy_10d_pct": -2.0818,
-          "rs_qqq_10d_pct": 0.5146,
-          "rs_spy_20d_pct": -4.4711,
-          "rs_qqq_20d_pct": 2.1446,
-          "rs_spy_50d_pct": 1.3995,
-          "rs_qqq_50d_pct": 3.1838,
-          "rs_spy_100d_pct": 10.6638,
-          "rs_qqq_100d_pct": 17.3525,
-          "rs_spy_1m_pct": -3.7914,
-          "rs_qqq_1m_pct": 2.9439
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -0.7751,
+          "rs_qqq_1d_pct": -0.0966,
+          "rs_spy_5d_pct": -6.7493,
+          "rs_qqq_5d_pct": -2.8225,
+          "rs_spy_10d_pct": -4.0214,
+          "rs_qqq_10d_pct": -0.2488,
+          "rs_spy_20d_pct": -4.378,
+          "rs_qqq_20d_pct": 2.9638,
+          "rs_spy_50d_pct": 1.5614,
+          "rs_qqq_50d_pct": 4.3199,
+          "rs_spy_100d_pct": 10.8001,
+          "rs_qqq_100d_pct": 18.253,
+          "rs_spy_1m_pct": -5.2608,
+          "rs_qqq_1m_pct": 2.0762
         },
         {
-          "price": 155.98,
-          "ytd_pct": 22.0787,
-          "ma20": 166.1535,
-          "ma60": 164.2097,
-          "vs_ma20_pct": -6.123,
-          "vs_ma60_pct": -5.0117,
-          "high20_gap_pct": -10.8125,
+          "price": 156.69,
+          "ytd_pct": 22.6344,
+          "ma20": 165.449,
+          "ma60": 164.1363,
+          "vs_ma20_pct": -5.2941,
+          "vs_ma60_pct": -4.5367,
+          "high20_gap_pct": -10.4065,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 0.9253,
-          "ret_5d_pct": -9.0284,
-          "ret_10d_pct": -4.5059,
-          "ret_20d_pct": -8.789,
-          "ret_50d_pct": -1.8809,
-          "ret_100d_pct": 16.5944,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 0.4552,
+          "ret_5d_pct": -9.0651,
+          "ret_10d_pct": -5.9653,
+          "ret_20d_pct": -8.2504,
+          "ret_50d_pct": -1.2043,
+          "ret_100d_pct": 16.9154,
           "calendar_returns": {
             "1": {
-              "pct": -7.2321,
+              "pct": -6.8098,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": 5.4061,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": 2.1248,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 8.7272,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 13.4859,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -8.1606,
-          "ret_3m_pct": 1.6289,
+          "ret_1m_pct": -8.3738,
+          "ret_3m_pct": 4.0507,
           "ticker": "SKYY",
           "name": "First Trust Cloud Computing ETF",
           "group": "소프트웨어·클라우드·사이버",
@@ -1926,58 +1926,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 0.6261,
-          "rs_qqq_1d_pct": 0.3101,
-          "rs_spy_5d_pct": -7.0392,
-          "rs_qqq_5d_pct": -4.0412,
-          "rs_spy_10d_pct": -2.5944,
-          "rs_qqq_10d_pct": 0.002,
-          "rs_spy_20d_pct": -5.6135,
-          "rs_qqq_20d_pct": 1.0022,
-          "rs_spy_50d_pct": -0.6864,
-          "rs_qqq_50d_pct": 1.0979,
-          "rs_spy_100d_pct": 14.3457,
-          "rs_qqq_100d_pct": 21.0344,
-          "rs_spy_1m_pct": -5.5174,
-          "rs_qqq_1m_pct": 1.2179
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -1.1966,
+          "rs_qqq_1d_pct": -0.5181,
+          "rs_spy_5d_pct": -8.353,
+          "rs_qqq_5d_pct": -4.4262,
+          "rs_spy_10d_pct": -5.153,
+          "rs_qqq_10d_pct": -1.3804,
+          "rs_spy_20d_pct": -6.911,
+          "rs_qqq_20d_pct": 0.4308,
+          "rs_spy_50d_pct": -1.3218,
+          "rs_qqq_50d_pct": 1.4367,
+          "rs_spy_100d_pct": 13.5369,
+          "rs_qqq_100d_pct": 20.9898,
+          "rs_spy_1m_pct": -6.7976,
+          "rs_qqq_1m_pct": 0.5394
         },
         {
-          "price": 119.83,
-          "ytd_pct": 51.1288,
-          "ma20": 124.795,
-          "ma60": 119.448,
-          "vs_ma20_pct": -3.9785,
-          "vs_ma60_pct": 0.3198,
-          "high20_gap_pct": -10.2531,
+          "price": 119.63,
+          "ytd_pct": 50.8765,
+          "ma20": 124.486,
+          "ma60": 119.4618,
+          "vs_ma20_pct": -3.9008,
+          "vs_ma60_pct": 0.1408,
+          "high20_gap_pct": -10.4029,
           "above_ma20": false,
           "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 0.9265,
-          "ret_5d_pct": -10.2531,
-          "ret_10d_pct": 1.2249,
-          "ret_20d_pct": -6.1335,
-          "ret_50d_pct": 9.3639,
-          "ret_100d_pct": 24.0219,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -0.1669,
+          "ret_5d_pct": -8.8603,
+          "ret_10d_pct": -2.1111,
+          "ret_20d_pct": -4.9122,
+          "ret_50d_pct": 10.6763,
+          "ret_100d_pct": 24.5497,
           "calendar_returns": {
             "1": {
-              "pct": -2.6406,
+              "pct": -2.8031,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": 9.2841,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": 4.8742,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 37.121,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 40.4932,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -4.1207,
-          "ret_3m_pct": 4.5181,
+          "ret_1m_pct": -6.2902,
+          "ret_3m_pct": 5.6895,
           "ticker": "HACK",
           "name": "ETFMG Prime Cyber Security ETF",
           "group": "소프트웨어·클라우드·사이버",
@@ -1986,21 +1986,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 0.6273,
-          "rs_qqq_1d_pct": 0.3113,
-          "rs_spy_5d_pct": -8.2639,
-          "rs_qqq_5d_pct": -5.2659,
-          "rs_spy_10d_pct": 3.1364,
-          "rs_qqq_10d_pct": 5.7328,
-          "rs_spy_20d_pct": -2.958,
-          "rs_qqq_20d_pct": 3.6577,
-          "rs_spy_50d_pct": 10.5584,
-          "rs_qqq_50d_pct": 12.3427,
-          "rs_spy_100d_pct": 21.7732,
-          "rs_qqq_100d_pct": 28.4619,
-          "rs_spy_1m_pct": -1.4775,
-          "rs_qqq_1m_pct": 5.2578
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -1.8187,
+          "rs_qqq_1d_pct": -1.1402,
+          "rs_spy_5d_pct": -8.1482,
+          "rs_qqq_5d_pct": -4.2214,
+          "rs_spy_10d_pct": -1.2988,
+          "rs_qqq_10d_pct": 2.4738,
+          "rs_spy_20d_pct": -3.5728,
+          "rs_qqq_20d_pct": 3.769,
+          "rs_spy_50d_pct": 10.5588,
+          "rs_qqq_50d_pct": 13.3173,
+          "rs_spy_100d_pct": 21.1712,
+          "rs_qqq_100d_pct": 28.6241,
+          "rs_spy_1m_pct": -4.714,
+          "rs_qqq_1m_pct": 2.623
         }
       ]
     },
@@ -2009,41 +2009,41 @@
       "label": "바이오",
       "rows": [
         {
-          "price": 154.97,
-          "ytd_pct": 27.5263,
-          "ma20": 151.5515,
-          "ma60": 157.0235,
-          "vs_ma20_pct": 2.2557,
-          "vs_ma60_pct": -1.3078,
-          "high20_gap_pct": -1.7872,
+          "price": 159.1,
+          "ytd_pct": 30.925,
+          "ma20": 151.995,
+          "ma60": 157.0407,
+          "vs_ma20_pct": 4.6745,
+          "vs_ma60_pct": 1.3113,
+          "high20_gap_pct": 0.0,
           "above_ma20": true,
-          "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 1.9204,
-          "ret_5d_pct": 0.084,
-          "ret_10d_pct": 1.1289,
-          "ret_20d_pct": 2.6972,
-          "ret_50d_pct": -5.6039,
-          "ret_100d_pct": 16.747,
+          "above_ma60": true,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 2.665,
+          "ret_5d_pct": 1.0095,
+          "ret_10d_pct": 4.1367,
+          "ret_20d_pct": 5.9043,
+          "ret_50d_pct": -5.9137,
+          "ret_100d_pct": 18.9177,
           "calendar_returns": {
             "1": {
-              "pct": 0.3497,
+              "pct": 3.024,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": 5.1999,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": 4.7538,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 41.0614,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 47.2603,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -0.7811,
-          "ret_3m_pct": 1.281,
+          "ret_1m_pct": 5.4341,
+          "ret_3m_pct": 2.9774,
           "ticker": "XBI",
           "name": "SPDR S&P Biotech ETF",
           "group": "바이오",
@@ -2052,21 +2052,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 1.6212,
-          "rs_qqq_1d_pct": 1.3052,
-          "rs_spy_5d_pct": 2.0732,
-          "rs_qqq_5d_pct": 5.0712,
-          "rs_spy_10d_pct": 3.0404,
-          "rs_qqq_10d_pct": 5.6368,
-          "rs_spy_20d_pct": 5.8727,
-          "rs_qqq_20d_pct": 12.4884,
-          "rs_spy_50d_pct": -4.4094,
-          "rs_qqq_50d_pct": -2.6251,
-          "rs_spy_100d_pct": 14.4983,
-          "rs_qqq_100d_pct": 21.187,
-          "rs_spy_1m_pct": 1.8621,
-          "rs_qqq_1m_pct": 8.5974
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 1.0132,
+          "rs_qqq_1d_pct": 1.6917,
+          "rs_spy_5d_pct": 1.7216,
+          "rs_qqq_5d_pct": 5.6484,
+          "rs_spy_10d_pct": 4.949,
+          "rs_qqq_10d_pct": 8.7216,
+          "rs_spy_20d_pct": 7.2437,
+          "rs_qqq_20d_pct": 14.5855,
+          "rs_spy_50d_pct": -6.0312,
+          "rs_qqq_50d_pct": -3.2727,
+          "rs_spy_100d_pct": 15.5392,
+          "rs_qqq_100d_pct": 22.9921,
+          "rs_spy_1m_pct": 7.0103,
+          "rs_qqq_1m_pct": 14.3473
         }
       ]
     },
@@ -2075,41 +2075,41 @@
       "label": "지역은행",
       "rows": [
         {
-          "price": 72.88,
-          "ytd_pct": 11.7106,
-          "ma20": 70.924,
-          "ma60": 72.6493,
-          "vs_ma20_pct": 2.7579,
-          "vs_ma60_pct": 0.3175,
-          "high20_gap_pct": -1.1529,
+          "price": 74.13,
+          "ytd_pct": 13.6266,
+          "ma20": 71.186,
+          "ma60": 72.6047,
+          "vs_ma20_pct": 4.1356,
+          "vs_ma60_pct": 2.1009,
+          "high20_gap_pct": 0.0,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -1.1529,
-          "ret_5d_pct": 0.4133,
-          "ret_10d_pct": 3.2002,
-          "ret_20d_pct": 4.0103,
-          "ret_50d_pct": -2.5147,
-          "ret_100d_pct": 0.7325,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 1.7151,
+          "ret_5d_pct": 2.8013,
+          "ret_10d_pct": 4.9703,
+          "ret_20d_pct": 7.6063,
+          "ret_50d_pct": -0.2691,
+          "ret_100d_pct": 0.9808,
           "calendar_returns": {
             "1": {
-              "pct": 2.9669,
+              "pct": 4.733,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -5.4243,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -4.7662,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 21.1839,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 23.9218,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 3.5374,
-          "ret_3m_pct": -5.7667,
+          "ret_1m_pct": 5.7942,
+          "ret_3m_pct": -3.0854,
           "ticker": "KRE",
           "name": "SPDR S&P Regional Banking ETF",
           "group": "지역은행",
@@ -2118,21 +2118,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -1.4521,
-          "rs_qqq_1d_pct": -1.7681,
-          "rs_spy_5d_pct": 2.4025,
-          "rs_qqq_5d_pct": 5.4005,
-          "rs_spy_10d_pct": 5.1117,
-          "rs_qqq_10d_pct": 7.7081,
-          "rs_spy_20d_pct": 7.1858,
-          "rs_qqq_20d_pct": 13.8015,
-          "rs_spy_50d_pct": -1.3202,
-          "rs_qqq_50d_pct": 0.4641,
-          "rs_spy_100d_pct": -1.5162,
-          "rs_qqq_100d_pct": 5.1725,
-          "rs_spy_1m_pct": 6.1806,
-          "rs_qqq_1m_pct": 12.9159
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 0.0633,
+          "rs_qqq_1d_pct": 0.7418,
+          "rs_spy_5d_pct": 3.5134,
+          "rs_qqq_5d_pct": 7.4402,
+          "rs_spy_10d_pct": 5.7826,
+          "rs_qqq_10d_pct": 9.5552,
+          "rs_spy_20d_pct": 8.9457,
+          "rs_qqq_20d_pct": 16.2875,
+          "rs_spy_50d_pct": -0.3866,
+          "rs_qqq_50d_pct": 2.3719,
+          "rs_spy_100d_pct": -2.3977,
+          "rs_qqq_100d_pct": 5.0552,
+          "rs_spy_1m_pct": 7.3704,
+          "rs_qqq_1m_pct": 14.7074
         }
       ]
     },
@@ -2141,41 +2141,41 @@
       "label": "방산·인프라·에너지",
       "rows": [
         {
-          "price": 216.17,
-          "ytd_pct": -2.6305,
-          "ma20": 207.3905,
-          "ma60": 219.3348,
-          "vs_ma20_pct": 4.2333,
-          "vs_ma60_pct": -1.4429,
-          "high20_gap_pct": 0.0,
+          "price": 212.84,
+          "ytd_pct": -4.1304,
+          "ma20": 207.8525,
+          "ma60": 218.6838,
+          "vs_ma20_pct": 2.3995,
+          "vs_ma60_pct": -2.6723,
+          "high20_gap_pct": -1.5405,
           "above_ma20": true,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 0.6941,
-          "ret_5d_pct": 4.8249,
-          "ret_10d_pct": 4.8605,
-          "ret_20d_pct": 3.7981,
-          "ret_50d_pct": -7.3822,
-          "ret_100d_pct": -8.4181,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -1.5405,
+          "ret_5d_pct": 2.455,
+          "ret_10d_pct": 3.4258,
+          "ret_20d_pct": 4.5383,
+          "ret_50d_pct": -9.1592,
+          "ret_100d_pct": -8.961,
           "calendar_returns": {
             "1": {
-              "pct": 4.0329,
+              "pct": 2.4303,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -12.1546,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -15.0848,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 0.5535,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 0.51,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 4.44,
-          "ret_3m_pct": -14.3135,
+          "ret_1m_pct": 2.1992,
+          "ret_3m_pct": -14.8606,
           "ticker": "ITA",
           "name": "iShares U.S. Aerospace & Defense ETF",
           "group": "방산·인프라·에너지",
@@ -2184,58 +2184,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 0.3949,
-          "rs_qqq_1d_pct": 0.0789,
-          "rs_spy_5d_pct": 6.8141,
-          "rs_qqq_5d_pct": 9.8121,
-          "rs_spy_10d_pct": 6.772,
-          "rs_qqq_10d_pct": 9.3684,
-          "rs_spy_20d_pct": 6.9736,
-          "rs_qqq_20d_pct": 13.5893,
-          "rs_spy_50d_pct": -6.1877,
-          "rs_qqq_50d_pct": -4.4034,
-          "rs_spy_100d_pct": -10.6668,
-          "rs_qqq_100d_pct": -3.9781,
-          "rs_spy_1m_pct": 7.0832,
-          "rs_qqq_1m_pct": 13.8185
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -3.1923,
+          "rs_qqq_1d_pct": -2.5138,
+          "rs_spy_5d_pct": 3.1671,
+          "rs_qqq_5d_pct": 7.0939,
+          "rs_spy_10d_pct": 4.2381,
+          "rs_qqq_10d_pct": 8.0107,
+          "rs_spy_20d_pct": 5.8777,
+          "rs_qqq_20d_pct": 13.2195,
+          "rs_spy_50d_pct": -9.2767,
+          "rs_qqq_50d_pct": -6.5182,
+          "rs_spy_100d_pct": -12.3395,
+          "rs_qqq_100d_pct": -4.8866,
+          "rs_spy_1m_pct": 3.7754,
+          "rs_qqq_1m_pct": 11.1124
         },
         {
-          "price": 234.07,
-          "ytd_pct": -6.5216,
-          "ma20": 225.2495,
-          "ma60": 245.2323,
-          "vs_ma20_pct": 3.9159,
-          "vs_ma60_pct": -4.5517,
-          "high20_gap_pct": -0.5185,
+          "price": 225.53,
+          "ytd_pct": -9.9321,
+          "ma20": 225.194,
+          "ma60": 244.119,
+          "vs_ma20_pct": 0.1492,
+          "vs_ma60_pct": -7.6147,
+          "high20_gap_pct": -4.1481,
           "above_ma20": true,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 1.2895,
-          "ret_5d_pct": 4.286,
-          "ret_10d_pct": 5.361,
-          "ret_20d_pct": 0.1926,
-          "ret_50d_pct": -11.8745,
-          "ret_100d_pct": -17.694,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -3.6485,
+          "ret_5d_pct": 0.2445,
+          "ret_10d_pct": 1.2981,
+          "ret_20d_pct": -0.4898,
+          "ret_50d_pct": -14.8461,
+          "ret_100d_pct": -19.4449,
           "calendar_returns": {
             "1": {
-              "pct": 0.4204,
+              "pct": -3.2434,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -14.4575,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -20.0503,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": -5.4988,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": -6.7942,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 1.2063,
-          "ret_3m_pct": -17.02,
+          "ret_1m_pct": -3.4629,
+          "ret_3m_pct": -20.2821,
           "ticker": "XAR",
           "name": "SPDR S&P Aerospace & Defense ETF",
           "group": "방산·인프라·에너지",
@@ -2244,58 +2244,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 0.9903,
-          "rs_qqq_1d_pct": 0.6743,
-          "rs_spy_5d_pct": 6.2752,
-          "rs_qqq_5d_pct": 9.2732,
-          "rs_spy_10d_pct": 7.2725,
-          "rs_qqq_10d_pct": 9.8689,
-          "rs_spy_20d_pct": 3.3681,
-          "rs_qqq_20d_pct": 9.9838,
-          "rs_spy_50d_pct": -10.68,
-          "rs_qqq_50d_pct": -8.8957,
-          "rs_spy_100d_pct": -19.9427,
-          "rs_qqq_100d_pct": -13.254,
-          "rs_spy_1m_pct": 3.8495,
-          "rs_qqq_1m_pct": 10.5848
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -5.3003,
+          "rs_qqq_1d_pct": -4.6218,
+          "rs_spy_5d_pct": 0.9566,
+          "rs_qqq_5d_pct": 4.8834,
+          "rs_spy_10d_pct": 2.1104,
+          "rs_qqq_10d_pct": 5.883,
+          "rs_spy_20d_pct": 0.8496,
+          "rs_qqq_20d_pct": 8.1914,
+          "rs_spy_50d_pct": -14.9636,
+          "rs_qqq_50d_pct": -12.2051,
+          "rs_spy_100d_pct": -22.8234,
+          "rs_qqq_100d_pct": -15.3705,
+          "rs_spy_1m_pct": -1.8867,
+          "rs_qqq_1m_pct": 5.4503
         },
         {
-          "price": 54.83,
-          "ytd_pct": 12.2416,
-          "ma20": 53.17,
-          "ma60": 54.2715,
-          "vs_ma20_pct": 3.1221,
-          "vs_ma60_pct": 1.0291,
-          "high20_gap_pct": 0.0,
+          "price": 53.91,
+          "ytd_pct": 10.3582,
+          "ma20": 53.201,
+          "ma60": 54.1917,
+          "vs_ma20_pct": 1.3327,
+          "vs_ma60_pct": -0.5198,
+          "high20_gap_pct": -1.6779,
           "above_ma20": true,
-          "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 0.6979,
-          "ret_5d_pct": 3.531,
-          "ret_10d_pct": 4.1406,
-          "ret_20d_pct": 0.3294,
-          "ret_50d_pct": -1.9492,
-          "ret_100d_pct": -4.1098,
+          "above_ma60": false,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -1.6779,
+          "ret_5d_pct": 1.0686,
+          "ret_10d_pct": 1.449,
+          "ret_20d_pct": 1.1634,
+          "ret_50d_pct": -3.0919,
+          "ret_100d_pct": -6.6655,
           "calendar_returns": {
             "1": {
-              "pct": 1.7632,
+              "pct": 0.0557,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -4.7098,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -7.972,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 13.9443,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 13.185,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 1.3306,
-          "ret_3m_pct": -6.5132,
+          "ret_1m_pct": -1.3541,
+          "ret_3m_pct": -7.6093,
           "ticker": "PAVE",
           "name": "Global X U.S. Infrastructure Development ETF",
           "group": "방산·인프라·에너지",
@@ -2304,58 +2304,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 0.3987,
-          "rs_qqq_1d_pct": 0.0827,
-          "rs_spy_5d_pct": 5.5202,
-          "rs_qqq_5d_pct": 8.5182,
-          "rs_spy_10d_pct": 6.0521,
-          "rs_qqq_10d_pct": 8.6485,
-          "rs_spy_20d_pct": 3.5049,
-          "rs_qqq_20d_pct": 10.1206,
-          "rs_spy_50d_pct": -0.7547,
-          "rs_qqq_50d_pct": 1.0296,
-          "rs_spy_100d_pct": -6.3585,
-          "rs_qqq_100d_pct": 0.3302,
-          "rs_spy_1m_pct": 3.9738,
-          "rs_qqq_1m_pct": 10.7091
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -3.3297,
+          "rs_qqq_1d_pct": -2.6512,
+          "rs_spy_5d_pct": 1.7807,
+          "rs_qqq_5d_pct": 5.7075,
+          "rs_spy_10d_pct": 2.2613,
+          "rs_qqq_10d_pct": 6.0339,
+          "rs_spy_20d_pct": 2.5028,
+          "rs_qqq_20d_pct": 9.8446,
+          "rs_spy_50d_pct": -3.2094,
+          "rs_qqq_50d_pct": -0.4509,
+          "rs_spy_100d_pct": -10.044,
+          "rs_qqq_100d_pct": -2.5911,
+          "rs_spy_1m_pct": 0.2221,
+          "rs_qqq_1m_pct": 7.5591
         },
         {
-          "price": 191.52,
-          "ytd_pct": 48.5112,
-          "ma20": 197.5585,
-          "ma60": 190.4765,
-          "vs_ma20_pct": -3.0566,
-          "vs_ma60_pct": 0.5478,
-          "high20_gap_pct": -6.5118,
+          "price": 179.29,
+          "ytd_pct": 39.0276,
+          "ma20": 197.111,
+          "ma60": 190.4918,
+          "vs_ma20_pct": -9.0411,
+          "vs_ma60_pct": -5.8805,
+          "high20_gap_pct": -12.4817,
           "above_ma20": false,
-          "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -1.0539,
-          "ret_5d_pct": -4.2448,
-          "ret_10d_pct": -4.2639,
-          "ret_20d_pct": 1.6237,
-          "ret_50d_pct": 2.8351,
-          "ret_100d_pct": 17.2021,
+          "above_ma60": false,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -6.3858,
+          "ret_5d_pct": -10.5205,
+          "ret_10d_pct": -9.9136,
+          "ret_20d_pct": -4.7546,
+          "ret_50d_pct": -1.8826,
+          "ret_100d_pct": 8.4372,
           "calendar_returns": {
             "1": {
-              "pct": 3.5635,
+              "pct": -3.0498,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": 9.8921,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": 4.2687,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 50.0235,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 42.3727,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 2.1767,
-          "ret_3m_pct": 15.9392,
+          "ret_1m_pct": -4.8658,
+          "ret_3m_pct": 7.3271,
           "ticker": "XOP",
           "name": "SPDR S&P Oil & Gas Exploration & Production ETF",
           "group": "방산·인프라·에너지",
@@ -2364,21 +2364,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -1.3531,
-          "rs_qqq_1d_pct": -1.6691,
-          "rs_spy_5d_pct": -2.2556,
-          "rs_qqq_5d_pct": 0.7424,
-          "rs_spy_10d_pct": -2.3524,
-          "rs_qqq_10d_pct": 0.244,
-          "rs_spy_20d_pct": 4.7992,
-          "rs_qqq_20d_pct": 11.4149,
-          "rs_spy_50d_pct": 4.0296,
-          "rs_qqq_50d_pct": 5.8139,
-          "rs_spy_100d_pct": 14.9534,
-          "rs_qqq_100d_pct": 21.6421,
-          "rs_spy_1m_pct": 4.8199,
-          "rs_qqq_1m_pct": 11.5552
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -8.0376,
+          "rs_qqq_1d_pct": -7.3591,
+          "rs_spy_5d_pct": -9.8084,
+          "rs_qqq_5d_pct": -5.8816,
+          "rs_spy_10d_pct": -9.1013,
+          "rs_qqq_10d_pct": -5.3287,
+          "rs_spy_20d_pct": -3.4152,
+          "rs_qqq_20d_pct": 3.9266,
+          "rs_spy_50d_pct": -2.0001,
+          "rs_qqq_50d_pct": 0.7584,
+          "rs_spy_100d_pct": 5.0587,
+          "rs_qqq_100d_pct": 12.5116,
+          "rs_spy_1m_pct": -3.2896,
+          "rs_qqq_1m_pct": 4.0474
         }
       ]
     },
@@ -2387,41 +2387,41 @@
       "label": "로봇·자동화",
       "rows": [
         {
-          "price": 32.32,
-          "ytd_pct": -11.9586,
-          "ma20": 33.691,
-          "ma60": 35.1036,
-          "vs_ma20_pct": -4.0693,
-          "vs_ma60_pct": -7.9296,
-          "high20_gap_pct": -9.3916,
+          "price": 32.81,
+          "ytd_pct": -10.6238,
+          "ma20": 33.548,
+          "ma60": 35.0258,
+          "vs_ma20_pct": -2.1998,
+          "vs_ma60_pct": -6.3261,
+          "high20_gap_pct": -7.5254,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 0.1549,
-          "ret_5d_pct": -3.4648,
-          "ret_10d_pct": -3.7809,
-          "ret_20d_pct": -10.6442,
-          "ret_50d_pct": -8.3121,
-          "ret_100d_pct": -13.2582,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 1.5161,
+          "ret_5d_pct": -3.5851,
+          "ret_10d_pct": -2.3221,
+          "ret_20d_pct": -8.0179,
+          "ret_50d_pct": -8.4798,
+          "ret_100d_pct": -11.611,
           "calendar_returns": {
             "1": {
-              "pct": -10.297,
+              "pct": -8.937,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -10.0473,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -11.5395,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": -15.5033,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": -12.0847,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -10.7182,
-          "ret_3m_pct": -13.3512,
+          "ret_1m_pct": -9.2895,
+          "ret_3m_pct": -11.1803,
           "ticker": "BOTZ",
           "name": "Global X Robotics & Artificial Intelligence ETF",
           "group": "로봇·자동화",
@@ -2430,58 +2430,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -0.1443,
-          "rs_qqq_1d_pct": -0.4603,
-          "rs_spy_5d_pct": -1.4756,
-          "rs_qqq_5d_pct": 1.5224,
-          "rs_spy_10d_pct": -1.8694,
-          "rs_qqq_10d_pct": 0.727,
-          "rs_spy_20d_pct": -7.4687,
-          "rs_qqq_20d_pct": -0.853,
-          "rs_spy_50d_pct": -7.1176,
-          "rs_qqq_50d_pct": -5.3333,
-          "rs_spy_100d_pct": -15.5069,
-          "rs_qqq_100d_pct": -8.8182,
-          "rs_spy_1m_pct": -8.075,
-          "rs_qqq_1m_pct": -1.3397
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -0.1357,
+          "rs_qqq_1d_pct": 0.5428,
+          "rs_spy_5d_pct": -2.873,
+          "rs_qqq_5d_pct": 1.0538,
+          "rs_spy_10d_pct": -1.5098,
+          "rs_qqq_10d_pct": 2.2628,
+          "rs_spy_20d_pct": -6.6785,
+          "rs_qqq_20d_pct": 0.6633,
+          "rs_spy_50d_pct": -8.5973,
+          "rs_qqq_50d_pct": -5.8388,
+          "rs_spy_100d_pct": -14.9895,
+          "rs_qqq_100d_pct": -7.5366,
+          "rs_spy_1m_pct": -7.7133,
+          "rs_qqq_1m_pct": -0.3763
         },
         {
-          "price": 74.47,
-          "ytd_pct": 5.3175,
-          "ma20": 77.3015,
-          "ma60": 79.6437,
-          "vs_ma20_pct": -3.6629,
-          "vs_ma60_pct": -6.496,
-          "high20_gap_pct": -8.9831,
+          "price": 74.72,
+          "ytd_pct": 5.6711,
+          "ma20": 76.9465,
+          "ma60": 79.489,
+          "vs_ma20_pct": -2.8936,
+          "vs_ma60_pct": -5.9996,
+          "high20_gap_pct": -8.0482,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -0.4545,
-          "ret_5d_pct": -3.5113,
-          "ret_10d_pct": -2.9074,
-          "ret_20d_pct": -10.7074,
-          "ret_50d_pct": -6.8776,
-          "ret_100d_pct": -9.6567,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 0.3357,
+          "ret_5d_pct": -4.3278,
+          "ret_10d_pct": -3.6493,
+          "ret_20d_pct": -8.6776,
+          "ret_50d_pct": -7.6733,
+          "ret_100d_pct": -9.9759,
           "calendar_returns": {
             "1": {
-              "pct": -10.0821,
+              "pct": -9.7802,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -8.2769,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -11.4062,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 6.7976,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 9.5441,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -10.6431,
-          "ret_3m_pct": -11.734,
+          "ret_1m_pct": -10.4077,
+          "ret_3m_pct": -10.0518,
           "ticker": "ROBO",
           "name": "ROBO Global Robotics and Automation Index ETF",
           "group": "로봇·자동화",
@@ -2490,21 +2490,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -0.7537,
-          "rs_qqq_1d_pct": -1.0697,
-          "rs_spy_5d_pct": -1.5221,
-          "rs_qqq_5d_pct": 1.4759,
-          "rs_spy_10d_pct": -0.9959,
-          "rs_qqq_10d_pct": 1.6005,
-          "rs_spy_20d_pct": -7.5319,
-          "rs_qqq_20d_pct": -0.9162,
-          "rs_spy_50d_pct": -5.6831,
-          "rs_qqq_50d_pct": -3.8988,
-          "rs_spy_100d_pct": -11.9054,
-          "rs_qqq_100d_pct": -5.2167,
-          "rs_spy_1m_pct": -7.9999,
-          "rs_qqq_1m_pct": -1.2646
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -1.3161,
+          "rs_qqq_1d_pct": -0.6376,
+          "rs_spy_5d_pct": -3.6157,
+          "rs_qqq_5d_pct": 0.3111,
+          "rs_spy_10d_pct": -2.837,
+          "rs_qqq_10d_pct": 0.9356,
+          "rs_spy_20d_pct": -7.3382,
+          "rs_qqq_20d_pct": 0.0036,
+          "rs_spy_50d_pct": -7.7908,
+          "rs_qqq_50d_pct": -5.0323,
+          "rs_spy_100d_pct": -13.3544,
+          "rs_qqq_100d_pct": -5.9015,
+          "rs_spy_1m_pct": -8.8315,
+          "rs_qqq_1m_pct": -1.4945
         }
       ]
     },
@@ -2513,41 +2513,41 @@
       "label": "국가별 대표 ETF",
       "rows": [
         {
-          "price": 754.35,
-          "ytd_pct": 10.4191,
-          "ma20": 768.0945,
-          "ma60": 767.5037,
-          "vs_ma20_pct": -1.7894,
-          "vs_ma60_pct": -1.7138,
-          "high20_gap_pct": -3.1108,
+          "price": 766.81,
+          "ytd_pct": 12.2429,
+          "ma20": 767.574,
+          "ma60": 767.4412,
+          "vs_ma20_pct": -0.0995,
+          "vs_ma60_pct": -0.0822,
+          "high20_gap_pct": -1.5105,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 0.2992,
-          "ret_5d_pct": -1.9892,
-          "ret_10d_pct": -1.9115,
-          "ret_20d_pct": -3.1755,
-          "ret_50d_pct": -1.1945,
-          "ret_100d_pct": 2.2487,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 1.6518,
+          "ret_5d_pct": -0.7121,
+          "ret_10d_pct": -0.8123,
+          "ret_20d_pct": -1.3394,
+          "ret_50d_pct": 0.1175,
+          "ret_100d_pct": 3.3785,
           "calendar_returns": {
             "1": {
-              "pct": -1.9866,
+              "pct": -0.3677,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -0.4382,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -0.586,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 10.3916,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 13.5611,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -2.6432,
-          "ret_3m_pct": -2.0057,
+          "ret_1m_pct": -1.5762,
+          "ret_3m_pct": -0.2277,
           "ticker": "SPY",
           "name": "미국 · SPDR S&P 500 ETF Trust",
           "group": "국가별 대표 ETF",
@@ -2556,58 +2556,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
+          "completed_cutoff": "2026-11-04",
           "rs_spy_1d_pct": 0.0,
-          "rs_qqq_1d_pct": -0.316,
+          "rs_qqq_1d_pct": 0.6785,
           "rs_spy_5d_pct": 0.0,
-          "rs_qqq_5d_pct": 2.998,
+          "rs_qqq_5d_pct": 3.9268,
           "rs_spy_10d_pct": 0.0,
-          "rs_qqq_10d_pct": 2.5964,
+          "rs_qqq_10d_pct": 3.7726,
           "rs_spy_20d_pct": 0.0,
-          "rs_qqq_20d_pct": 6.6157,
+          "rs_qqq_20d_pct": 7.3418,
           "rs_spy_50d_pct": 0.0,
-          "rs_qqq_50d_pct": 1.7843,
+          "rs_qqq_50d_pct": 2.7585,
           "rs_spy_100d_pct": 0.0,
-          "rs_qqq_100d_pct": 6.6887,
+          "rs_qqq_100d_pct": 7.4529,
           "rs_spy_1m_pct": 0.0,
-          "rs_qqq_1m_pct": 6.7353
+          "rs_qqq_1m_pct": 7.337
         },
         {
-          "price": 155.06,
-          "ytd_pct": 51.6924,
-          "ma20": 160.282,
-          "ma60": 174.734,
-          "vs_ma20_pct": -3.258,
-          "vs_ma60_pct": -11.2594,
-          "high20_gap_pct": -15.586,
+          "price": 152.12,
+          "ytd_pct": 48.8163,
+          "ma20": 158.7035,
+          "ma60": 174.482,
+          "vs_ma20_pct": -4.1483,
+          "vs_ma60_pct": -12.8162,
+          "high20_gap_pct": -14.1729,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 2.2688,
-          "ret_5d_pct": -1.5242,
-          "ret_10d_pct": 0.6948,
-          "ret_20d_pct": -16.8133,
-          "ret_50d_pct": -10.7003,
-          "ret_100d_pct": -22.0569,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -1.896,
+          "ret_5d_pct": -8.3117,
+          "ret_10d_pct": -3.0342,
+          "ret_20d_pct": -17.1866,
+          "ret_50d_pct": -15.5593,
+          "ret_100d_pct": -22.9577,
           "calendar_returns": {
             "1": {
-              "pct": -19.1891,
+              "pct": -20.7213,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -3.2327,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -11.1137,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 53.8599,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 58.8555,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -19.0118,
-          "ret_3m_pct": -8.3245,
+          "ret_1m_pct": -18.3906,
+          "ret_3m_pct": -7.3117,
           "ticker": "EWY",
           "name": "한국 · iShares MSCI South Korea ETF",
           "group": "국가별 대표 ETF",
@@ -2616,58 +2616,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 1.9696,
-          "rs_qqq_1d_pct": 1.6536,
-          "rs_spy_5d_pct": 0.465,
-          "rs_qqq_5d_pct": 3.463,
-          "rs_spy_10d_pct": 2.6063,
-          "rs_qqq_10d_pct": 5.2027,
-          "rs_spy_20d_pct": -13.6378,
-          "rs_qqq_20d_pct": -7.0221,
-          "rs_spy_50d_pct": -9.5058,
-          "rs_qqq_50d_pct": -7.7215,
-          "rs_spy_100d_pct": -24.3056,
-          "rs_qqq_100d_pct": -17.6169,
-          "rs_spy_1m_pct": -16.3686,
-          "rs_qqq_1m_pct": -9.6333
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -3.5478,
+          "rs_qqq_1d_pct": -2.8693,
+          "rs_spy_5d_pct": -7.5996,
+          "rs_qqq_5d_pct": -3.6728,
+          "rs_spy_10d_pct": -2.2219,
+          "rs_qqq_10d_pct": 1.5507,
+          "rs_spy_20d_pct": -15.8472,
+          "rs_qqq_20d_pct": -8.5054,
+          "rs_spy_50d_pct": -15.6768,
+          "rs_qqq_50d_pct": -12.9183,
+          "rs_spy_100d_pct": -26.3362,
+          "rs_qqq_100d_pct": -18.8833,
+          "rs_spy_1m_pct": -16.8144,
+          "rs_qqq_1m_pct": -9.4774
         },
         {
-          "price": 92.59,
-          "ytd_pct": 13.8448,
-          "ma20": 95.3465,
-          "ma60": 96.4335,
-          "vs_ma20_pct": -2.891,
-          "vs_ma60_pct": -3.9857,
-          "high20_gap_pct": -5.8279,
+          "price": 93.86,
+          "ytd_pct": 15.4064,
+          "ma20": 95.1235,
+          "ma60": 96.3932,
+          "vs_ma20_pct": -1.3283,
+          "vs_ma60_pct": -2.628,
+          "high20_gap_pct": -4.0875,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -0.2693,
-          "ret_5d_pct": -2.7927,
-          "ret_10d_pct": -2.976,
-          "ret_20d_pct": -6.7761,
-          "ret_50d_pct": -2.3724,
-          "ret_100d_pct": 0.4448,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 1.3716,
+          "ret_5d_pct": -1.1896,
+          "ret_10d_pct": -1.9432,
+          "ret_20d_pct": -4.5362,
+          "ret_50d_pct": -1.8509,
+          "ret_100d_pct": 1.2404,
           "calendar_returns": {
             "1": {
-              "pct": -6.3991,
+              "pct": -5.1152,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -0.3444,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -0.7927,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 10.7006,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 13.3164,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -6.7573,
-          "ret_3m_pct": -2.7007,
+          "ret_1m_pct": -5.4974,
+          "ret_3m_pct": -1.3558,
           "ticker": "EWJ",
           "name": "일본 · iShares MSCI Japan ETF",
           "group": "국가별 대표 ETF",
@@ -2676,58 +2676,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -0.5685,
-          "rs_qqq_1d_pct": -0.8845,
-          "rs_spy_5d_pct": -0.8035,
-          "rs_qqq_5d_pct": 2.1945,
-          "rs_spy_10d_pct": -1.0645,
-          "rs_qqq_10d_pct": 1.5319,
-          "rs_spy_20d_pct": -3.6006,
-          "rs_qqq_20d_pct": 3.0151,
-          "rs_spy_50d_pct": -1.1779,
-          "rs_qqq_50d_pct": 0.6064,
-          "rs_spy_100d_pct": -1.8039,
-          "rs_qqq_100d_pct": 4.8848,
-          "rs_spy_1m_pct": -4.1141,
-          "rs_qqq_1m_pct": 2.6212
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -0.2802,
+          "rs_qqq_1d_pct": 0.3983,
+          "rs_spy_5d_pct": -0.4775,
+          "rs_qqq_5d_pct": 3.4493,
+          "rs_spy_10d_pct": -1.1309,
+          "rs_qqq_10d_pct": 2.6417,
+          "rs_spy_20d_pct": -3.1968,
+          "rs_qqq_20d_pct": 4.145,
+          "rs_spy_50d_pct": -1.9684,
+          "rs_qqq_50d_pct": 0.7901,
+          "rs_spy_100d_pct": -2.1381,
+          "rs_qqq_100d_pct": 5.3148,
+          "rs_spy_1m_pct": -3.9212,
+          "rs_qqq_1m_pct": 3.4158
         },
         {
-          "price": 49.4,
-          "ytd_pct": -20.6298,
-          "ma20": 50.4165,
-          "ma60": 52.695,
-          "vs_ma20_pct": -2.0162,
-          "vs_ma60_pct": -6.253,
-          "high20_gap_pct": -5.9943,
-          "above_ma20": false,
+          "price": 51.56,
+          "ytd_pct": -17.1594,
+          "ma20": 50.4125,
+          "ma60": 52.6273,
+          "vs_ma20_pct": 2.2762,
+          "vs_ma60_pct": -2.0281,
+          "high20_gap_pct": -1.8839,
+          "above_ma20": true,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -0.3831,
-          "ret_5d_pct": 0.652,
-          "ret_10d_pct": -3.0612,
-          "ret_20d_pct": -5.4002,
-          "ret_50d_pct": -10.0674,
-          "ret_100d_pct": -9.0909,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 4.3725,
+          "ret_5d_pct": 5.1387,
+          "ret_10d_pct": 3.017,
+          "ret_20d_pct": -0.1549,
+          "ret_50d_pct": -6.4586,
+          "ret_100d_pct": -5.9639,
           "calendar_returns": {
             "1": {
-              "pct": -3.5909,
+              "pct": 0.6245,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -11.6279,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -8.0763,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": -22.2659,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": -17.8065,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -5.5088,
-          "ret_3m_pct": -11.8015,
+          "ret_1m_pct": -1.2639,
+          "ret_3m_pct": -7.7804,
           "ticker": "MCHI",
           "name": "중국 · iShares MSCI China ETF",
           "group": "국가별 대표 ETF",
@@ -2736,58 +2736,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -0.6823,
-          "rs_qqq_1d_pct": -0.9983,
-          "rs_spy_5d_pct": 2.6412,
-          "rs_qqq_5d_pct": 5.6392,
-          "rs_spy_10d_pct": -1.1497,
-          "rs_qqq_10d_pct": 1.4467,
-          "rs_spy_20d_pct": -2.2247,
-          "rs_qqq_20d_pct": 4.391,
-          "rs_spy_50d_pct": -8.8729,
-          "rs_qqq_50d_pct": -7.0886,
-          "rs_spy_100d_pct": -11.3396,
-          "rs_qqq_100d_pct": -4.6509,
-          "rs_spy_1m_pct": -2.8656,
-          "rs_qqq_1m_pct": 3.8697
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 2.7207,
+          "rs_qqq_1d_pct": 3.3992,
+          "rs_spy_5d_pct": 5.8508,
+          "rs_qqq_5d_pct": 9.7776,
+          "rs_spy_10d_pct": 3.8293,
+          "rs_qqq_10d_pct": 7.6019,
+          "rs_spy_20d_pct": 1.1845,
+          "rs_qqq_20d_pct": 8.5263,
+          "rs_spy_50d_pct": -6.5761,
+          "rs_qqq_50d_pct": -3.8176,
+          "rs_spy_100d_pct": -9.3424,
+          "rs_qqq_100d_pct": -1.8895,
+          "rs_spy_1m_pct": 0.3123,
+          "rs_qqq_1m_pct": 7.6493
         },
         {
-          "price": 98.27,
-          "ytd_pct": 51.7215,
-          "ma20": 107.913,
-          "ma60": 109.2345,
-          "vs_ma20_pct": -8.9359,
-          "vs_ma60_pct": -10.0376,
-          "high20_gap_pct": -15.4594,
+          "price": 97.08,
+          "ytd_pct": 49.8842,
+          "ma20": 106.955,
+          "ma60": 109.1202,
+          "vs_ma20_pct": -9.2329,
+          "vs_ma60_pct": -11.0339,
+          "high20_gap_pct": -15.073,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -2.3743,
-          "ret_5d_pct": -8.373,
-          "ret_10d_pct": -8.4413,
-          "ret_20d_pct": -16.4442,
-          "ret_50d_pct": -4.8969,
-          "ret_100d_pct": -4.08,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": -1.2109,
+          "ret_5d_pct": -10.8867,
+          "ret_10d_pct": -10.9276,
+          "ret_20d_pct": -16.4831,
+          "ret_50d_pct": -7.8937,
+          "ret_100d_pct": -5.3986,
           "calendar_returns": {
             "1": {
-              "pct": -15.5248,
+              "pct": -16.5478,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": 0.296,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -5.0191,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 46.8909,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 48.3723,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -16.7203,
-          "ret_3m_pct": -3.3727,
+          "ret_1m_pct": -17.456,
+          "ret_3m_pct": -4.8049,
           "ticker": "EWT",
           "name": "대만 · iShares MSCI Taiwan ETF",
           "group": "국가별 대표 ETF",
@@ -2796,58 +2796,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -2.6735,
-          "rs_qqq_1d_pct": -2.9895,
-          "rs_spy_5d_pct": -6.3838,
-          "rs_qqq_5d_pct": -3.3858,
-          "rs_spy_10d_pct": -6.5298,
-          "rs_qqq_10d_pct": -3.9334,
-          "rs_spy_20d_pct": -13.2687,
-          "rs_qqq_20d_pct": -6.653,
-          "rs_spy_50d_pct": -3.7024,
-          "rs_qqq_50d_pct": -1.9181,
-          "rs_spy_100d_pct": -6.3287,
-          "rs_qqq_100d_pct": 0.36,
-          "rs_spy_1m_pct": -14.0771,
-          "rs_qqq_1m_pct": -7.3418
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -2.8627,
+          "rs_qqq_1d_pct": -2.1842,
+          "rs_spy_5d_pct": -10.1746,
+          "rs_qqq_5d_pct": -6.2478,
+          "rs_spy_10d_pct": -10.1153,
+          "rs_qqq_10d_pct": -6.3427,
+          "rs_spy_20d_pct": -15.1437,
+          "rs_qqq_20d_pct": -7.8019,
+          "rs_spy_50d_pct": -8.0112,
+          "rs_qqq_50d_pct": -5.2527,
+          "rs_spy_100d_pct": -8.7771,
+          "rs_qqq_100d_pct": -1.3242,
+          "rs_spy_1m_pct": -15.8798,
+          "rs_qqq_1m_pct": -8.5428
         },
         {
-          "price": 48.7,
-          "ytd_pct": -10.7405,
-          "ma20": 47.131,
-          "ma60": 48.1452,
-          "vs_ma20_pct": 3.329,
-          "vs_ma60_pct": 1.1524,
+          "price": 50.03,
+          "ytd_pct": -8.3028,
+          "ma20": 47.327,
+          "ma60": 48.1442,
+          "vs_ma20_pct": 5.7113,
+          "vs_ma60_pct": 3.9171,
           "high20_gap_pct": 0.0,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": 0.516,
-          "ret_5d_pct": 4.1934,
-          "ret_10d_pct": 1.9255,
-          "ret_20d_pct": 4.2157,
-          "ret_50d_pct": -1.3171,
-          "ret_100d_pct": 1.9042,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 2.731,
+          "ret_5d_pct": 6.9246,
+          "ret_10d_pct": 5.8388,
+          "ret_20d_pct": 8.5014,
+          "ret_50d_pct": -0.3982,
+          "ret_100d_pct": 3.5175,
           "calendar_returns": {
             "1": {
-              "pct": 4.6862,
+              "pct": 7.5451,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -2.9107,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -0.9895,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": -10.2139,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": -7.3862,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 4.5738,
-          "ret_3m_pct": -3.2002,
+          "ret_1m_pct": 7.0618,
+          "ret_3m_pct": -0.1796,
           "ticker": "INDA",
           "name": "인도 · iShares MSCI India ETF",
           "group": "국가별 대표 ETF",
@@ -2856,58 +2856,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": 0.2168,
-          "rs_qqq_1d_pct": -0.0992,
-          "rs_spy_5d_pct": 6.1826,
-          "rs_qqq_5d_pct": 9.1806,
-          "rs_spy_10d_pct": 3.837,
-          "rs_qqq_10d_pct": 6.4334,
-          "rs_spy_20d_pct": 7.3912,
-          "rs_qqq_20d_pct": 14.0069,
-          "rs_spy_50d_pct": -0.1226,
-          "rs_qqq_50d_pct": 1.6617,
-          "rs_spy_100d_pct": -0.3445,
-          "rs_qqq_100d_pct": 6.3442,
-          "rs_spy_1m_pct": 7.217,
-          "rs_qqq_1m_pct": 13.9523
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 1.0792,
+          "rs_qqq_1d_pct": 1.7577,
+          "rs_spy_5d_pct": 7.6367,
+          "rs_qqq_5d_pct": 11.5635,
+          "rs_spy_10d_pct": 6.6511,
+          "rs_qqq_10d_pct": 10.4237,
+          "rs_spy_20d_pct": 9.8408,
+          "rs_qqq_20d_pct": 17.1826,
+          "rs_spy_50d_pct": -0.5157,
+          "rs_qqq_50d_pct": 2.2428,
+          "rs_spy_100d_pct": 0.139,
+          "rs_qqq_100d_pct": 7.5919,
+          "rs_spy_1m_pct": 8.638,
+          "rs_qqq_1m_pct": 15.975
         },
         {
-          "price": 31.73,
-          "ytd_pct": -1.4596,
-          "ma20": 39.215,
-          "ma60": 37.6012,
-          "vs_ma20_pct": -19.0871,
-          "vs_ma60_pct": -15.6143,
-          "high20_gap_pct": -27.1245,
+          "price": 32.25,
+          "ytd_pct": 0.1553,
+          "ma20": 38.709,
+          "ma60": 37.5723,
+          "vs_ma20_pct": -16.686,
+          "vs_ma60_pct": -14.1656,
+          "high20_gap_pct": -25.9302,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -1.3371,
-          "ret_5d_pct": -7.4927,
-          "ret_10d_pct": -26.1062,
-          "ret_20d_pct": -26.2093,
-          "ret_50d_pct": -9.7811,
-          "ret_100d_pct": -8.848,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 1.6388,
+          "ret_5d_pct": -4.075,
+          "ret_10d_pct": -24.1355,
+          "ret_20d_pct": -23.8848,
+          "ret_50d_pct": -10.1171,
+          "ret_100d_pct": -8.1197,
           "calendar_returns": {
             "1": {
-              "pct": -16.9154,
+              "pct": -15.5538,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -12.8775,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -10.6401,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 0.6662,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 3.4317,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": -26.175,
-          "ret_3m_pct": -12.1296,
+          "ret_1m_pct": -25.0,
+          "ret_3m_pct": -9.9414,
           "ticker": "EWZ",
           "name": "브라질 · iShares MSCI Brazil ETF",
           "group": "국가별 대표 ETF",
@@ -2916,58 +2916,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -1.6363,
-          "rs_qqq_1d_pct": -1.9523,
-          "rs_spy_5d_pct": -5.5035,
-          "rs_qqq_5d_pct": -2.5055,
-          "rs_spy_10d_pct": -24.1947,
-          "rs_qqq_10d_pct": -21.5983,
-          "rs_spy_20d_pct": -23.0338,
-          "rs_qqq_20d_pct": -16.4181,
-          "rs_spy_50d_pct": -8.5866,
-          "rs_qqq_50d_pct": -6.8023,
-          "rs_spy_100d_pct": -11.0967,
-          "rs_qqq_100d_pct": -4.408,
-          "rs_spy_1m_pct": -23.5318,
-          "rs_qqq_1m_pct": -16.7965
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": -0.013,
+          "rs_qqq_1d_pct": 0.6655,
+          "rs_spy_5d_pct": -3.3629,
+          "rs_qqq_5d_pct": 0.5639,
+          "rs_spy_10d_pct": -23.3232,
+          "rs_qqq_10d_pct": -19.5506,
+          "rs_spy_20d_pct": -22.5454,
+          "rs_qqq_20d_pct": -15.2036,
+          "rs_spy_50d_pct": -10.2346,
+          "rs_qqq_50d_pct": -7.4761,
+          "rs_spy_100d_pct": -11.4982,
+          "rs_qqq_100d_pct": -4.0453,
+          "rs_spy_1m_pct": -23.4238,
+          "rs_qqq_1m_pct": -16.0868
         },
         {
-          "price": 87.54,
-          "ytd_pct": 3.5241,
-          "ma20": 86.803,
-          "ma60": 89.0322,
-          "vs_ma20_pct": 0.8491,
-          "vs_ma60_pct": -1.676,
-          "high20_gap_pct": -0.6807,
+          "price": 90.24,
+          "ytd_pct": 6.7171,
+          "ma20": 87.037,
+          "ma60": 88.9978,
+          "vs_ma20_pct": 3.68,
+          "vs_ma60_pct": 1.3957,
+          "high20_gap_pct": 0.0,
           "above_ma20": true,
-          "above_ma60": false,
-          "observed_date": "2026-11-03",
-          "ret_1d_pct": -0.5905,
-          "ret_5d_pct": 0.5744,
-          "ret_10d_pct": 0.4129,
-          "ret_20d_pct": 1.1088,
-          "ret_50d_pct": -5.4746,
-          "ret_100d_pct": -2.1462,
+          "above_ma60": true,
+          "observed_date": "2026-11-04",
+          "ret_1d_pct": 3.0843,
+          "ret_5d_pct": 3.3559,
+          "ret_10d_pct": 3.0372,
+          "ret_20d_pct": 5.4698,
+          "ret_50d_pct": -3.1656,
+          "ret_100d_pct": 0.6918,
           "calendar_returns": {
             "1": {
-              "pct": 1.3429,
+              "pct": 4.4686,
               "base_date": "2026-10-02",
-              "end_date": "2026-11-03"
+              "end_date": "2026-11-04"
             },
             "3": {
-              "pct": -3.7281,
-              "base_date": "2026-08-03",
-              "end_date": "2026-11-03"
+              "pct": -1.7422,
+              "base_date": "2026-08-04",
+              "end_date": "2026-11-04"
             },
             "12": {
-              "pct": 9.193,
-              "base_date": "2025-11-03",
-              "end_date": "2026-11-03"
+              "pct": 13.7814,
+              "base_date": "2025-11-04",
+              "end_date": "2026-11-04"
             }
           },
-          "ret_1m_pct": 1.4604,
-          "ret_3m_pct": -4.6924,
+          "ret_1m_pct": 4.2273,
+          "ret_3m_pct": -1.7315,
           "ticker": "VGK",
           "name": "유럽 · Vanguard FTSE Europe ETF",
           "group": "국가별 대표 ETF",
@@ -2976,31 +2976,27 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-03",
-          "rs_spy_1d_pct": -0.8897,
-          "rs_qqq_1d_pct": -1.2057,
-          "rs_spy_5d_pct": 2.5636,
-          "rs_qqq_5d_pct": 5.5616,
-          "rs_spy_10d_pct": 2.3244,
-          "rs_qqq_10d_pct": 4.9208,
-          "rs_spy_20d_pct": 4.2843,
-          "rs_qqq_20d_pct": 10.9,
-          "rs_spy_50d_pct": -4.2801,
-          "rs_qqq_50d_pct": -2.4958,
-          "rs_spy_100d_pct": -4.3949,
-          "rs_qqq_100d_pct": 2.2938,
-          "rs_spy_1m_pct": 4.1036,
-          "rs_qqq_1m_pct": 10.8389
+          "completed_cutoff": "2026-11-04",
+          "rs_spy_1d_pct": 1.4325,
+          "rs_qqq_1d_pct": 2.111,
+          "rs_spy_5d_pct": 4.068,
+          "rs_qqq_5d_pct": 7.9948,
+          "rs_spy_10d_pct": 3.8495,
+          "rs_qqq_10d_pct": 7.6221,
+          "rs_spy_20d_pct": 6.8092,
+          "rs_qqq_20d_pct": 14.151,
+          "rs_spy_50d_pct": -3.2831,
+          "rs_qqq_50d_pct": -0.5246,
+          "rs_spy_100d_pct": -2.6867,
+          "rs_qqq_100d_pct": 4.7662,
+          "rs_spy_1m_pct": 5.8035,
+          "rs_qqq_1m_pct": 13.1405
         }
       ]
     }
   ],
   "series": {
     "SPY": [
-      {
-        "date": "2025-04-02",
-        "value": 564.52001953
-      },
       {
         "date": "2025-04-03",
         "value": 536.70001221
@@ -4596,13 +4592,13 @@
       {
         "date": "2026-11-03",
         "value": 754.34997559
+      },
+      {
+        "date": "2026-11-04",
+        "value": 766.80999756
       }
     ],
     "QQQ": [
-      {
-        "date": "2025-04-02",
-        "value": 476.1499939
-      },
       {
         "date": "2025-04-03",
         "value": 450.66000366
@@ -6198,6 +6194,10 @@
       {
         "date": "2026-11-03",
         "value": 685.2800293
+      },
+      {
+        "date": "2026-11-04",
+        "value": 691.95001221
       }
     ],
     "069500": [
@@ -27028,10 +27028,6 @@
     ],
     "XLK": [
       {
-        "date": "2025-04-02",
-        "value": 104.76499939
-      },
-      {
         "date": "2025-04-03",
         "value": 97.61499786
       },
@@ -28626,13 +28622,13 @@
       {
         "date": "2026-11-03",
         "value": 176.50999451
+      },
+      {
+        "date": "2026-11-04",
+        "value": 176.5
       }
     ],
     "XLC": [
-      {
-        "date": "2025-04-02",
-        "value": 96.84999847
-      },
       {
         "date": "2025-04-03",
         "value": 92.52999878
@@ -30228,13 +30224,13 @@
       {
         "date": "2026-11-03",
         "value": 101.44000244
+      },
+      {
+        "date": "2026-11-04",
+        "value": 104.95999908
       }
     ],
     "XLY": [
-      {
-        "date": "2025-04-02",
-        "value": 101.65499878
-      },
       {
         "date": "2025-04-03",
         "value": 95.51499939
@@ -31830,13 +31826,13 @@
       {
         "date": "2026-11-03",
         "value": 117.33000183
+      },
+      {
+        "date": "2026-11-04",
+        "value": 122.33000183
       }
     ],
     "XLF": [
-      {
-        "date": "2025-04-02",
-        "value": 50.15999985
-      },
       {
         "date": "2025-04-03",
         "value": 47.68999863
@@ -33432,13 +33428,13 @@
       {
         "date": "2026-11-03",
         "value": 57.18999863
+      },
+      {
+        "date": "2026-11-04",
+        "value": 59.20000076
       }
     ],
     "XLI": [
-      {
-        "date": "2025-04-02",
-        "value": 133.05000305
-      },
       {
         "date": "2025-04-03",
         "value": 125.84999847
@@ -35034,13 +35030,13 @@
       {
         "date": "2026-11-03",
         "value": 171.32000732
+      },
+      {
+        "date": "2026-11-04",
+        "value": 169.46000671
       }
     ],
     "XLE": [
-      {
-        "date": "2025-04-02",
-        "value": 47.06499863
-      },
       {
         "date": "2025-04-03",
         "value": 43.36999893
@@ -36636,13 +36632,13 @@
       {
         "date": "2026-11-03",
         "value": 66.68000031
+      },
+      {
+        "date": "2026-11-04",
+        "value": 63.52000046
       }
     ],
     "XLB": [
-      {
-        "date": "2025-04-02",
-        "value": 43.50500107
-      },
       {
         "date": "2025-04-03",
         "value": 41.54000092
@@ -38238,13 +38234,13 @@
       {
         "date": "2026-11-03",
         "value": 52.59000015
+      },
+      {
+        "date": "2026-11-04",
+        "value": 53.90000153
       }
     ],
     "XLV": [
-      {
-        "date": "2025-04-02",
-        "value": 144.30000305
-      },
       {
         "date": "2025-04-03",
         "value": 143.13000488
@@ -39840,13 +39836,13 @@
       {
         "date": "2026-11-03",
         "value": 184.02000427
+      },
+      {
+        "date": "2026-11-04",
+        "value": 189.66000366
       }
     ],
     "XLP": [
-      {
-        "date": "2025-04-02",
-        "value": 81.55000305
-      },
       {
         "date": "2025-04-03",
         "value": 82.01999664
@@ -41442,13 +41438,13 @@
       {
         "date": "2026-11-03",
         "value": 88.94999695
+      },
+      {
+        "date": "2026-11-04",
+        "value": 91.94000244
       }
     ],
     "XLU": [
-      {
-        "date": "2025-04-02",
-        "value": 39.70999908
-      },
       {
         "date": "2025-04-03",
         "value": 39.45999908
@@ -43044,13 +43040,13 @@
       {
         "date": "2026-11-03",
         "value": 43.41999817
+      },
+      {
+        "date": "2026-11-04",
+        "value": 43.61000061
       }
     ],
     "XLRE": [
-      {
-        "date": "2025-04-02",
-        "value": 42.08000183
-      },
       {
         "date": "2025-04-03",
         "value": 40.81999969
@@ -44646,13 +44642,13 @@
       {
         "date": "2026-11-03",
         "value": 43.66999817
+      },
+      {
+        "date": "2026-11-04",
+        "value": 45.11999893
       }
     ],
     "SMH": [
-      {
-        "date": "2025-04-02",
-        "value": 214.08999634
-      },
       {
         "date": "2025-04-03",
         "value": 195.57000732
@@ -46248,13 +46244,13 @@
       {
         "date": "2026-11-03",
         "value": 518.52001953
+      },
+      {
+        "date": "2026-11-04",
+        "value": 504.26998901
       }
     ],
     "SOXX": [
-      {
-        "date": "2025-04-02",
-        "value": 189.47999573
-      },
       {
         "date": "2025-04-03",
         "value": 170.36000061
@@ -47850,13 +47846,13 @@
       {
         "date": "2026-11-03",
         "value": 465.0
+      },
+      {
+        "date": "2026-11-04",
+        "value": 450.41000366
       }
     ],
     "IGV": [
-      {
-        "date": "2025-04-02",
-        "value": 91.51999664
-      },
       {
         "date": "2025-04-03",
         "value": 86.62999725
@@ -49452,13 +49448,13 @@
       {
         "date": "2026-11-03",
         "value": 102.66000366
+      },
+      {
+        "date": "2026-11-04",
+        "value": 103.55999756
       }
     ],
     "SKYY": [
-      {
-        "date": "2025-04-02",
-        "value": 105.06999969
-      },
       {
         "date": "2025-04-03",
         "value": 96.80000305
@@ -51054,13 +51050,13 @@
       {
         "date": "2026-11-03",
         "value": 155.97999573
+      },
+      {
+        "date": "2026-11-04",
+        "value": 156.69000244
       }
     ],
     "HACK": [
-      {
-        "date": "2025-04-02",
-        "value": 73.23999786
-      },
       {
         "date": "2025-04-03",
         "value": 69.08999634
@@ -52656,13 +52652,13 @@
       {
         "date": "2026-11-03",
         "value": 119.83000183
+      },
+      {
+        "date": "2026-11-04",
+        "value": 119.62999725
       }
     ],
     "XBI": [
-      {
-        "date": "2025-04-02",
-        "value": 80.58999634
-      },
       {
         "date": "2025-04-03",
         "value": 78.13999939
@@ -54258,13 +54254,13 @@
       {
         "date": "2026-11-03",
         "value": 154.97000122
+      },
+      {
+        "date": "2026-11-04",
+        "value": 159.1000061
       }
     ],
     "KRE": [
-      {
-        "date": "2025-04-02",
-        "value": 57.22000122
-      },
       {
         "date": "2025-04-03",
         "value": 51.31000137
@@ -55860,13 +55856,13 @@
       {
         "date": "2026-11-03",
         "value": 72.87999725
+      },
+      {
+        "date": "2026-11-04",
+        "value": 74.12999725
       }
     ],
     "ITA": [
-      {
-        "date": "2025-04-02",
-        "value": 154.77999878
-      },
       {
         "date": "2025-04-03",
         "value": 147.77999878
@@ -57462,13 +57458,13 @@
       {
         "date": "2026-11-03",
         "value": 216.16999817
+      },
+      {
+        "date": "2026-11-04",
+        "value": 212.83999634
       }
     ],
     "XAR": [
-      {
-        "date": "2025-04-02",
-        "value": 164.52000427
-      },
       {
         "date": "2025-04-03",
         "value": 156.94000244
@@ -59064,13 +59060,13 @@
       {
         "date": "2026-11-03",
         "value": 234.07000732
+      },
+      {
+        "date": "2026-11-04",
+        "value": 225.52999878
       }
     ],
     "PAVE": [
-      {
-        "date": "2025-04-02",
-        "value": 38.63000107
-      },
       {
         "date": "2025-04-03",
         "value": 36.06999969
@@ -60666,13 +60662,13 @@
       {
         "date": "2026-11-03",
         "value": 54.83000183
+      },
+      {
+        "date": "2026-11-04",
+        "value": 53.90999985
       }
     ],
     "XOP": [
-      {
-        "date": "2025-04-02",
-        "value": 133.75
-      },
       {
         "date": "2025-04-03",
         "value": 119.45999908
@@ -62268,13 +62264,13 @@
       {
         "date": "2026-11-03",
         "value": 191.52000427
+      },
+      {
+        "date": "2026-11-04",
+        "value": 179.28999329
       }
     ],
     "BOTZ": [
-      {
-        "date": "2025-04-02",
-        "value": 28.93000031
-      },
       {
         "date": "2025-04-03",
         "value": 27.23999977
@@ -63870,13 +63866,13 @@
       {
         "date": "2026-11-03",
         "value": 32.31999969
+      },
+      {
+        "date": "2026-11-04",
+        "value": 32.81000137
       }
     ],
     "ROBO": [
-      {
-        "date": "2025-04-02",
-        "value": 52.02999878
-      },
       {
         "date": "2025-04-03",
         "value": 48.70000076
@@ -65472,13 +65468,13 @@
       {
         "date": "2026-11-03",
         "value": 74.47000122
+      },
+      {
+        "date": "2026-11-04",
+        "value": 74.72000122
       }
     ],
     "EWY": [
-      {
-        "date": "2025-04-02",
-        "value": 54.63000107
-      },
       {
         "date": "2025-04-03",
         "value": 53.13999939
@@ -67074,13 +67070,13 @@
       {
         "date": "2026-11-03",
         "value": 155.05999756
+      },
+      {
+        "date": "2026-11-04",
+        "value": 152.11999512
       }
     ],
     "EWJ": [
-      {
-        "date": "2025-04-02",
-        "value": 68.22000122
-      },
       {
         "date": "2025-04-03",
         "value": 65.41000366
@@ -68676,13 +68672,13 @@
       {
         "date": "2026-11-03",
         "value": 92.58999634
+      },
+      {
+        "date": "2026-11-04",
+        "value": 93.86000061
       }
     ],
     "MCHI": [
-      {
-        "date": "2025-04-02",
-        "value": 54.15999985
-      },
       {
         "date": "2025-04-03",
         "value": 53.66999817
@@ -70278,13 +70274,13 @@
       {
         "date": "2026-11-03",
         "value": 49.40000153
+      },
+      {
+        "date": "2026-11-04",
+        "value": 51.56000137
       }
     ],
     "EWT": [
-      {
-        "date": "2025-04-02",
-        "value": 48.47999954
-      },
       {
         "date": "2025-04-03",
         "value": 46.04999924
@@ -71880,13 +71876,13 @@
       {
         "date": "2026-11-03",
         "value": 98.26999664
+      },
+      {
+        "date": "2026-11-04",
+        "value": 97.08000183
       }
     ],
     "INDA": [
-      {
-        "date": "2025-04-02",
-        "value": 51.56000137
-      },
       {
         "date": "2025-04-03",
         "value": 51.18000031
@@ -73482,13 +73478,13 @@
       {
         "date": "2026-11-03",
         "value": 48.70000076
+      },
+      {
+        "date": "2026-11-04",
+        "value": 50.02999878
       }
     ],
     "EWZ": [
-      {
-        "date": "2025-04-02",
-        "value": 26.13999939
-      },
       {
         "date": "2025-04-03",
         "value": 26.32999992
@@ -75084,13 +75080,13 @@
       {
         "date": "2026-11-03",
         "value": 31.72999954
+      },
+      {
+        "date": "2026-11-04",
+        "value": 32.25
       }
     ],
     "VGK": [
-      {
-        "date": "2025-04-02",
-        "value": 70.62000275
-      },
       {
         "date": "2025-04-03",
         "value": 69.61000061
@@ -76686,6 +76682,10 @@
       {
         "date": "2026-11-03",
         "value": 87.54000092
+      },
+      {
+        "date": "2026-11-04",
+        "value": 90.23999786
       }
     ]
   },

@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_DAILY_MARKET_PULSE_V1",
-  "generated_kst": "2026-11-05T07:21:37+09:00",
+  "generated_kst": "2026-11-05T08:09:48+09:00",
   "market_date_us": "2026-11-04",
   "snapshot_status": "FINAL",
   "session_gate": {
@@ -39,111 +39,111 @@
       {
         "ticker": "XLK",
         "name": "Technology",
-        "d1_pct": 1.3144,
-        "w1_pct": -6.85,
-        "m1_pct": -12.1535,
+        "d1_pct": -0.0057,
+        "w1_pct": -7.5916,
+        "m1_pct": -12.6238,
         "above_ma20": false,
-        "observed_date": "2026-11-03",
+        "observed_date": "2026-11-04",
         "source": "Yahoo public daily"
       },
       {
         "ticker": "XLC",
         "name": "Communication Services",
-        "d1_pct": 1.1769,
-        "w1_pct": -2.066,
-        "m1_pct": -9.1121,
+        "d1_pct": 3.47,
+        "w1_pct": 1.7646,
+        "m1_pct": -5.9919,
         "above_ma20": false,
-        "observed_date": "2026-11-03",
+        "observed_date": "2026-11-04",
         "source": "Yahoo public daily"
       },
       {
         "ticker": "XLY",
         "name": "Consumer Discretionary",
-        "d1_pct": -0.7024,
-        "w1_pct": 1.6284,
-        "m1_pct": 6.2579,
+        "d1_pct": 4.2615,
+        "w1_pct": 6.0695,
+        "m1_pct": 9.497,
         "above_ma20": true,
-        "observed_date": "2026-11-03",
+        "observed_date": "2026-11-04",
         "source": "Yahoo public daily"
       },
       {
         "ticker": "XLF",
         "name": "Financials",
-        "d1_pct": -0.6428,
-        "w1_pct": 2.3443,
-        "m1_pct": 6.1433,
+        "d1_pct": 3.5146,
+        "w1_pct": 5.4694,
+        "m1_pct": 9.6093,
         "above_ma20": true,
-        "observed_date": "2026-11-03",
+        "observed_date": "2026-11-04",
         "source": "Yahoo public daily"
       },
       {
         "ticker": "XLI",
         "name": "Industrials",
-        "d1_pct": 0.9487,
-        "w1_pct": 2.0248,
-        "m1_pct": 0.7172,
+        "d1_pct": -1.0857,
+        "w1_pct": 0.5757,
+        "m1_pct": -1.2356,
         "above_ma20": true,
-        "observed_date": "2026-11-03",
+        "observed_date": "2026-11-04",
         "source": "Yahoo public daily"
       },
       {
         "ticker": "XLE",
         "name": "Energy",
-        "d1_pct": -0.8476,
-        "w1_pct": -2.2431,
-        "m1_pct": 5.0906,
+        "d1_pct": -4.7391,
+        "w1_pct": -7.2023,
+        "m1_pct": -0.3608,
         "above_ma20": false,
-        "observed_date": "2026-11-03",
+        "observed_date": "2026-11-04",
         "source": "Yahoo public daily"
       },
       {
         "ticker": "XLB",
         "name": "Materials",
-        "d1_pct": -2.0123,
-        "w1_pct": 1.5643,
-        "m1_pct": 6.2424,
+        "d1_pct": 2.491,
+        "w1_pct": 3.9337,
+        "m1_pct": 8.3853,
         "above_ma20": true,
-        "observed_date": "2026-11-03",
+        "observed_date": "2026-11-04",
         "source": "Yahoo public daily"
       },
       {
         "ticker": "XLV",
         "name": "Health Care",
-        "d1_pct": -0.3142,
-        "w1_pct": 2.7012,
-        "m1_pct": 9.948,
+        "d1_pct": 3.0649,
+        "w1_pct": 5.5308,
+        "m1_pct": 13.5077,
         "above_ma20": true,
-        "observed_date": "2026-11-03",
+        "observed_date": "2026-11-04",
         "source": "Yahoo public daily"
       },
       {
         "ticker": "XLP",
         "name": "Consumer Staples",
-        "d1_pct": -2.0698,
-        "w1_pct": 2.0654,
-        "m1_pct": 9.7606,
+        "d1_pct": 3.3614,
+        "w1_pct": 5.8729,
+        "m1_pct": 12.3961,
         "above_ma20": true,
-        "observed_date": "2026-11-03",
+        "observed_date": "2026-11-04",
         "source": "Yahoo public daily"
       },
       {
         "ticker": "XLU",
         "name": "Utilities",
-        "d1_pct": -0.5725,
-        "w1_pct": 1.3302,
-        "m1_pct": 8.6315,
+        "d1_pct": 0.4376,
+        "w1_pct": 2.6359,
+        "m1_pct": 5.9524,
         "above_ma20": true,
-        "observed_date": "2026-11-03",
+        "observed_date": "2026-11-04",
         "source": "Yahoo public daily"
       },
       {
         "ticker": "XLRE",
         "name": "Real Estate",
-        "d1_pct": 0.0687,
-        "w1_pct": 2.8982,
-        "m1_pct": 7.3764,
+        "d1_pct": 3.3204,
+        "w1_pct": 7.0971,
+        "m1_pct": 9.781,
         "above_ma20": true,
-        "observed_date": "2026-11-03",
+        "observed_date": "2026-11-04",
         "source": "Yahoo public daily"
       }
     ],
@@ -156,16 +156,16 @@
         "source": "OBSERVATORY_CANONICAL"
       },
       "dxy": {
-        "value": 101.52700043,
+        "value": 101.50800323,
         "market_date": "2026-11-04",
-        "change_pct": -0.3367059102194814,
+        "change_pct": -0.3553543832607753,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
       "usdkrw": {
-        "value": 1340.26000977,
+        "value": 1340.04003906,
         "market_date": "2026-11-03",
-        "change_pct": -0.33834137326208547,
+        "change_pct": -0.35469838283341826,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
@@ -740,11 +740,11 @@
     },
     {
       "market_date_us": "2026-11-04",
-      "generated_kst": "2026-11-05T07:21:37+09:00",
+      "generated_kst": "2026-11-05T08:09:48+09:00",
       "snapshot_status": "FINAL",
       "ndx": 28437.16601562,
-      "dxy": 101.52700043,
-      "usdkrw": 1340.26000977,
+      "dxy": 101.50800323,
+      "usdkrw": 1340.04003906,
       "us10y": 4.9,
       "sp500": 7688.62011719,
       "vix": 16.61000061,
@@ -777,27 +777,27 @@
     "finviz_sp500_map": {
       "url": "https://finviz.com/map?t=sec",
       "status": "WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-05T07:21:37+09:00"
+      "observed_at_kst": "2026-11-05T08:09:48+09:00"
     },
     "finviz_calendar": {
       "url": "https://finviz.com/calendar.ashx",
       "status": "OBSERVATORY_CALENDAR_AVAILABLE_WEB_CROSSCHECK_REQUIRED",
-      "observed_at_kst": "2026-11-05T07:21:37+09:00"
+      "observed_at_kst": "2026-11-05T08:09:48+09:00"
     },
     "tradingview": {
       "url": "https://kr.tradingview.com/",
       "status": "OBSERVATORY_FALLBACK_WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-05T07:21:37+09:00"
+      "observed_at_kst": "2026-11-05T08:09:48+09:00"
     },
     "slickcharts_nasdaq100": {
       "url": "https://www.slickcharts.com/nasdaq100",
       "status": "LIVE",
-      "observed_at_kst": "2026-11-05T07:21:37+09:00"
+      "observed_at_kst": "2026-11-05T08:09:48+09:00"
     },
     "cnn_fear_greed": {
       "url": "https://edition.cnn.com/markets/fear-and-greed",
       "status": "OBSERVATORY_CANONICAL",
-      "observed_at_kst": "2026-11-05T07:21:37+09:00"
+      "observed_at_kst": "2026-11-05T08:09:48+09:00"
     }
   },
   "usage_contract": {
