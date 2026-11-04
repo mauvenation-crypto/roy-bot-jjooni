@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_DAILY_MARKET_PULSE_V1",
-  "generated_kst": "2026-11-04T15:05:07+09:00",
+  "generated_kst": "2026-11-04T15:09:41+09:00",
   "market_date_us": "2026-11-03",
   "snapshot_status": "FINAL",
   "session_gate": {
@@ -156,16 +156,16 @@
         "source": "OBSERVATORY_CANONICAL"
       },
       "dxy": {
-        "value": 101.87000275,
-        "market_date": "2026-11-03",
-        "change_pct": 0.11793882063881878,
+        "value": 101.45500183,
+        "market_date": "2026-11-04",
+        "change_pct": -0.4073828495111065,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
       "usdkrw": {
-        "value": 1340.30004883,
+        "value": 1340.68005371,
         "market_date": "2026-11-03",
-        "change_pct": -0.33536407102194854,
+        "change_pct": -0.3071069296083362,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
@@ -333,7 +333,7 @@
     "breadth": "BROAD",
     "breadth_basis": "SECTOR_MA20_PROXY",
     "rates_pressure": "STABLE",
-    "usd_pressure": "STABLE",
+    "usd_pressure": "EASING",
     "score": 3,
     "inputs_used": [
       "NDX_D1",
@@ -746,11 +746,11 @@
     },
     {
       "market_date_us": "2026-11-03",
-      "generated_kst": "2026-11-04T15:05:07+09:00",
+      "generated_kst": "2026-11-04T15:09:41+09:00",
       "snapshot_status": "FINAL",
       "ndx": 28180.25976562,
-      "dxy": 101.87000275,
-      "usdkrw": 1340.30004883,
+      "dxy": 101.45500183,
+      "usdkrw": 1340.68005371,
       "us10y": 4.95,
       "sp500": 7568.91992188,
       "vix": 20.82999992,
@@ -783,27 +783,27 @@
     "finviz_sp500_map": {
       "url": "https://finviz.com/map?t=sec",
       "status": "WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-04T15:05:07+09:00"
+      "observed_at_kst": "2026-11-04T15:09:41+09:00"
     },
     "finviz_calendar": {
       "url": "https://finviz.com/calendar.ashx",
       "status": "OBSERVATORY_CALENDAR_AVAILABLE_WEB_CROSSCHECK_REQUIRED",
-      "observed_at_kst": "2026-11-04T15:05:07+09:00"
+      "observed_at_kst": "2026-11-04T15:09:41+09:00"
     },
     "tradingview": {
       "url": "https://kr.tradingview.com/",
       "status": "OBSERVATORY_FALLBACK_WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-04T15:05:07+09:00"
+      "observed_at_kst": "2026-11-04T15:09:41+09:00"
     },
     "slickcharts_nasdaq100": {
       "url": "https://www.slickcharts.com/nasdaq100",
       "status": "LIVE",
-      "observed_at_kst": "2026-11-04T15:05:07+09:00"
+      "observed_at_kst": "2026-11-04T15:09:41+09:00"
     },
     "cnn_fear_greed": {
       "url": "https://edition.cnn.com/markets/fear-and-greed",
       "status": "OBSERVATORY_CANONICAL",
-      "observed_at_kst": "2026-11-04T15:05:07+09:00"
+      "observed_at_kst": "2026-11-04T15:09:41+09:00"
     }
   },
   "usage_contract": {
