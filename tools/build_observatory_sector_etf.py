@@ -128,6 +128,7 @@ def yahoo_series(symbol: str, range_: str = '1y', now=None):
         'range': range_,
         'includePrePost': 'false',
         'events': 'div,splits',
+        '_cb': str(int(time.time() // 60)),
     })
     url = YAHOO + urllib.parse.quote(symbol, safe='') + '?' + qs
     last_error = None
