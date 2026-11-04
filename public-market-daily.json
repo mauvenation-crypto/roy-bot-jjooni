@@ -1,6 +1,6 @@
 {
   "contains_account_data": false,
-  "generated_kst": "2026-11-05T08:12:25+09:00",
+  "generated_kst": "2026-11-05T08:12:29+09:00",
   "market_context": {
     "available_count": 12,
     "basis": "PUBLIC_MARKET_COMPLETED_DAILY_SIDECAR",
@@ -169,7 +169,7 @@
     "drawdown_52w_pct": -8.926667529456278,
     "ma250": 27437.71964843768,
     "ndx": 28437.16601562,
-    "observed_at": "2026-11-05T08:12:25+09:00",
+    "observed_at": "2026-11-05T08:12:29+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -9.7494396828825,
     "previous_ma250": 27426.45110156272,
