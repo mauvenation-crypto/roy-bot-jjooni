@@ -86,3 +86,18 @@ test('mobile resume reads current quotes once, suppresses hidden/burst reads and
  fail=false;await runtime.refresh(true);assert.equal(reads,4,'manual request bypasses the lifecycle gate');
  assert.equal(runtime.error,null);assert.equal(runtime.status,'COMPLETE');
 });
+test('partial responses mark missing, invalid, and regressed observations as retained',()=>{
+ const old=Q.merge({},payload(row),now);
+ for(const quotes of [{},{NASDAQ100:{...row,value:null}},{NASDAQ100:{...row,observed_at:'2026-10-29T15:59:00Z'}}]){
+  const result=Q.merge(old,{schema:'JJOONI_OBSERVATORY_QUOTES_V1',quotes,status:'PARTIAL'},now);
+  assert.equal(result.NASDAQ100.refresh_status,'RETAINED');
+  assert.equal(Q.quality(result.NASDAQ100,now),'이전 관측 유지');
+ }
+ assert.equal(old.NASDAQ100.refresh_status,'FETCHED');
+});
+test('age and delay are evaluated at viewing time, while closed markets remain closed',()=>{
+ assert.equal(Q.ageLabel(row,now),'1분 전');
+ assert.equal(Q.quality(row,now+21*60000),'관측 지연');
+ assert.equal(Q.quality({...row,market_state:'CLOSED'},now+86400000),'최근 마감 관측');
+ assert.equal(Q.summary({NASDAQ100:row},now+21*60000).delayed,1);
+});
