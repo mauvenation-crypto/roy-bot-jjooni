@@ -26,7 +26,11 @@ function ageLabel(row,now=Date.now()){
  return `${Math.floor(seconds/86400)}일 전`;
 }
 function quality(row,now=Date.now()){
- const stale=['REGULAR','CONTINUOUS'].includes(row?.market_state)&&now-Date.parse(row?.observed_at)>1200000;
+ // A provider can report CLOSED during Korean trading hours. Treat an old
+ // observation conservatively; exchange holidays may produce a warning.
+ const kst=new Date(now+9*3600000),minute=kst.getUTCHours()*60+kst.getUTCMinutes();
+ const krWindow=['KOSPI','KOSDAQ'].includes(row?.key)&&kst.getUTCDay()>0&&kst.getUTCDay()<6&&minute>=540&&minute<930;
+ const stale=(krWindow||['REGULAR','CONTINUOUS'].includes(row?.market_state))&&now-Date.parse(row?.observed_at)>1200000;
  return row?.refresh_status==='RETAINED'?'이전 관측 유지':stale||row?.quality==='STALE'?'관측 지연':row?.market_state==='CLOSED'?'최근 마감 관측':'장중 관측 · 지연 가능';
 }
 function summary(quotes,now=Date.now()){
