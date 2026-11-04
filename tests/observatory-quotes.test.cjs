@@ -101,3 +101,9 @@ test('age and delay are evaluated at viewing time, while closed markets remain c
  assert.equal(Q.quality({...row,market_state:'CLOSED'},now+86400000),'최근 마감 관측');
  assert.equal(Q.summary({NASDAQ100:row},now+21*60000).delayed,1);
 });
+
+test('Korean market stale observations are not called a recent close during weekday trading hours',()=>{
+ const at=Date.parse('2026-11-04T06:05:00Z'),kr={...row,key:'KOSPI',market_state:'CLOSED',observed_at:'2026-11-04T05:40:00Z'};
+ assert.equal(Q.quality(kr,at),'관측 지연');
+ assert.equal(Q.quality(kr,Date.parse('2026-11-04T07:00:00Z')),'최근 마감 관측');
+});
