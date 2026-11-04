@@ -9,19 +9,19 @@
     "NASDAQ100": 28180.25976562,
     "SP500": 7568.91992188,
     "VIX": 20.82999992,
-    "DXY": 101.44000244,
-    "USDKRW": 1340.26000977,
-    "USDJPY": 158.26400757,
-    "JPYKRW": 8.44299984,
-    "WTI": 87.73999786,
-    "BRENT": 94.16999817,
-    "NATGAS": 2.96399999,
-    "GOLD": 4079.19995117,
-    "COPPER": 6.4369998,
+    "DXY": 101.87000275,
+    "USDKRW": 1339.88000488,
+    "USDJPY": 158.32000732,
+    "JPYKRW": 8.4460001,
+    "WTI": 96.08999634,
+    "BRENT": 103.59999847,
+    "NATGAS": 2.89499998,
+    "GOLD": 3940.39990234,
+    "COPPER": 6.37849998,
     "US3M": 4.21,
-    "US5Y": 4.68100023,
-    "US10Y": 4.89199972,
-    "US30Y": 5.28499985,
+    "US5Y": 4.73600006,
+    "US10Y": 4.94399977,
+    "US30Y": 5.32200003,
     "KR3Y": 3.714,
     "KR5Y": 3.837,
     "KR10Y": 3.968,
@@ -41,14 +41,14 @@
     "KR_US_10Y": -0.982,
     "BTCUSD": 80355.0,
     "ETHUSD": 2426.45,
-    "FEAR_GREED": 28.2,
+    "FEAR_GREED": 24.1,
     "FEAR_GREED_RATING": "FEAR",
     "KOSPI": 5683.8,
     "KOSDAQ": 714.95,
     "RUSSELL2000": 2812.44995117,
     "DOW": 51786.71875,
     "NASDAQCOMPOSITE": 25372.00976562,
-    "SILVER": 52.43000031
+    "SILVER": 49.5870018
   },
   "series": {
     "NASDAQ100": [
@@ -6065,6 +6065,10 @@
     ],
     "VIX": [
       {
+        "date": "2023-11-03",
+        "value": 14.90999985
+      },
+      {
         "date": "2023-11-06",
         "value": 14.89000034
       },
@@ -9079,6 +9083,10 @@
     ],
     "DXY": [
       {
+        "date": "2023-11-03",
+        "value": 105.01999664
+      },
+      {
         "date": "2023-11-06",
         "value": 105.22000122
       },
@@ -12089,10 +12097,6 @@
       {
         "date": "2026-11-03",
         "value": 101.87000275
-      },
-      {
-        "date": "2026-11-04",
-        "value": 101.44000244
       }
     ],
     "USDKRW": [
@@ -15206,7 +15210,7 @@
       },
       {
         "date": "2026-11-03",
-        "value": 1340.26000977
+        "value": 1339.88000488
       }
     ],
     "USDJPY": [
@@ -18320,7 +18324,7 @@
       },
       {
         "date": "2026-11-03",
-        "value": 158.26400757
+        "value": 158.32000732
       }
     ],
     "JPYKRW": [
@@ -21434,10 +21438,14 @@
       },
       {
         "date": "2026-11-03",
-        "value": 8.44299984
+        "value": 8.4460001
       }
     ],
     "WTI": [
+      {
+        "date": "2023-11-03",
+        "value": 80.51000214
+      },
       {
         "date": "2023-11-06",
         "value": 80.81999969
@@ -24449,13 +24457,13 @@
       {
         "date": "2026-11-03",
         "value": 96.08999634
-      },
-      {
-        "date": "2026-11-04",
-        "value": 87.73999786
       }
     ],
     "BRENT": [
+      {
+        "date": "2023-11-03",
+        "value": 84.88999939
+      },
       {
         "date": "2023-11-06",
         "value": 85.18000031
@@ -27471,13 +27479,13 @@
       {
         "date": "2026-11-03",
         "value": 103.59999847
-      },
-      {
-        "date": "2026-11-04",
-        "value": 94.16999817
       }
     ],
     "NATGAS": [
+      {
+        "date": "2023-11-03",
+        "value": 3.5150001
+      },
       {
         "date": "2023-11-06",
         "value": 3.26399994
@@ -30493,13 +30501,13 @@
       {
         "date": "2026-11-03",
         "value": 2.89499998
-      },
-      {
-        "date": "2026-11-04",
-        "value": 2.96399999
       }
     ],
     "GOLD": [
+      {
+        "date": "2023-11-03",
+        "value": 1999.19995117
+      },
       {
         "date": "2023-11-06",
         "value": 1988.59997559
@@ -33515,13 +33523,13 @@
       {
         "date": "2026-11-03",
         "value": 3940.39990234
-      },
-      {
-        "date": "2026-11-04",
-        "value": 4079.19995117
       }
     ],
     "COPPER": [
+      {
+        "date": "2023-11-03",
+        "value": 3.67449999
+      },
       {
         "date": "2023-11-06",
         "value": 3.70950007
@@ -36537,10 +36545,6 @@
       {
         "date": "2026-11-03",
         "value": 6.37849998
-      },
-      {
-        "date": "2026-11-04",
-        "value": 6.4369998
       }
     ],
     "US3M": [
@@ -40387,6 +40391,34 @@
     ],
     "US5Y": [
       {
+        "date": "2023-10-26",
+        "value": 4.79699993
+      },
+      {
+        "date": "2023-10-27",
+        "value": 4.76999998
+      },
+      {
+        "date": "2023-10-30",
+        "value": 4.8039999
+      },
+      {
+        "date": "2023-10-31",
+        "value": 4.81599998
+      },
+      {
+        "date": "2023-11-01",
+        "value": 4.70499992
+      },
+      {
+        "date": "2023-11-02",
+        "value": 4.63600016
+      },
+      {
+        "date": "2023-11-03",
+        "value": 4.48799992
+      },
+      {
         "date": "2023-11-06",
         "value": 4.60900021
       },
@@ -43392,10 +43424,38 @@
       },
       {
         "date": "2026-11-04",
-        "value": 4.68100023
+        "value": 4.73600006
       }
     ],
     "US10Y": [
+      {
+        "date": "2023-10-26",
+        "value": 4.84499979
+      },
+      {
+        "date": "2023-10-27",
+        "value": 4.84499979
+      },
+      {
+        "date": "2023-10-30",
+        "value": 4.875
+      },
+      {
+        "date": "2023-10-31",
+        "value": 4.875
+      },
+      {
+        "date": "2023-11-01",
+        "value": 4.78900003
+      },
+      {
+        "date": "2023-11-02",
+        "value": 4.66900015
+      },
+      {
+        "date": "2023-11-03",
+        "value": 4.55800009
+      },
       {
         "date": "2023-11-06",
         "value": 4.66200018
@@ -46402,10 +46462,38 @@
       },
       {
         "date": "2026-11-04",
-        "value": 4.89199972
+        "value": 4.94399977
       }
     ],
     "US30Y": [
+      {
+        "date": "2023-10-26",
+        "value": 4.98799992
+      },
+      {
+        "date": "2023-10-27",
+        "value": 5.02299976
+      },
+      {
+        "date": "2023-10-30",
+        "value": 5.03499985
+      },
+      {
+        "date": "2023-10-31",
+        "value": 5.02199984
+      },
+      {
+        "date": "2023-11-01",
+        "value": 4.9749999
+      },
+      {
+        "date": "2023-11-02",
+        "value": 4.8210001
+      },
+      {
+        "date": "2023-11-03",
+        "value": 4.75199986
+      },
       {
         "date": "2023-11-06",
         "value": 4.83199978
@@ -49412,7 +49500,7 @@
       },
       {
         "date": "2026-11-04",
-        "value": 5.28499985
+        "value": 5.32200003
       }
     ],
     "KR3Y": [
@@ -306560,11 +306648,11 @@
       },
       {
         "date": "2026-11-03",
-        "value": 23.5
+        "value": 24.1
       },
       {
         "date": "2026-11-04",
-        "value": 28.2
+        "value": 24.1
       }
     ],
     "KOSPI": [
@@ -316071,6 +316159,10 @@
     ],
     "SILVER": [
       {
+        "date": "2023-11-03",
+        "value": 23.20100021
+      },
+      {
         "date": "2023-11-06",
         "value": 23.14900017
       },
@@ -319081,10 +319173,6 @@
       {
         "date": "2026-11-03",
         "value": 49.5870018
-      },
-      {
-        "date": "2026-11-04",
-        "value": 52.43000031
       }
     ]
   },
@@ -319207,7 +319295,7 @@
     "drawdown_52w_pct": -9.7494396828825,
     "ma250": 27426.45110156272,
     "ndx": 28180.25976562,
-    "observed_at": "2026-11-05T02:55:00+09:00",
+    "observed_at": "2026-11-05T02:55:02+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -10.359344186727204,
     "previous_ma250": 27415.472859375237,
@@ -324338,7 +324426,8 @@
     "KR_EQUITY": "Naver Finance KOSPI/KOSDAQ daily primary; Yahoo Finance fallback",
     "GLOBAL_EQUITY_SUPPLEMENT": "Yahoo Finance completed US cash-session daily (^RUT/^DJI/^IXIC)",
     "SILVER": "Yahoo public daily (SI=F)",
-    "FEAR_GREED": "FearAndGreedGraph public JSON (CNN-derived sentiment reference)"
+    "FEAR_GREED": "FearAndGreedGraph public JSON (CNN-derived sentiment reference)",
+    "JP_JGB_CURRENT": "Japan MOF current JGB yield CSV (jgbcm.csv primary) merged with historical series"
   },
   "crypto_market": {
     "BTCUSD": {
@@ -324444,6 +324533,181 @@
       },
       "failed_series": {},
       "spread_contract": "SAME_DATE_KR10Y_MINUS_KR3Y_NO_INTERPOLATION"
+    },
+    "NASDAQ100": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "SP500": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "VIX": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "RUSSELL2000": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "DOW": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "NASDAQCOMPOSITE": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "DXY": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "USDKRW": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "USDJPY": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "JPYKRW": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "WTI": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "BRENT": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "NATGAS": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "GOLD": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "SILVER": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "COPPER": {
+      "status": "LIVE",
+      "source": "Yahoo public completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03"
+    },
+    "KOSPI": {
+      "status": "LIVE",
+      "source": "Naver Finance index daily",
+      "last_date": "2026-11-04",
+      "source_url": "https://m.stock.naver.com/api/index/KOSPI/price?pageSize=60&page=1"
+    },
+    "KOSDAQ": {
+      "status": "LIVE",
+      "source": "Naver Finance index daily",
+      "last_date": "2026-11-04",
+      "source_url": "https://m.stock.naver.com/api/index/KOSDAQ/price?pageSize=60&page=1"
+    },
+    "FEAR_GREED": {
+      "status": "LIVE",
+      "source": "FearAndGreedGraph public JSON",
+      "last_date": "2026-11-04"
+    },
+    "JP_RATES": {
+      "status": "LAGGING",
+      "source": "Japan MOF current JGB yield CSV",
+      "source_url": "https://www.mof.go.jp/jgbs/reference/interest_rate/jgbcm.csv",
+      "last_date": "2026-11-02",
+      "expected_latest_weekday": "2026-11-03",
+      "timing_note": "Japanese holidays or publication delays can cause a nonfatal LAGGING warning"
+    },
+    "US2Y": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03",
+      "status": "LIVE"
+    },
+    "US3M": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03",
+      "status": "LIVE"
+    },
+    "US5Y_OFFICIAL": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03",
+      "status": "LIVE"
+    },
+    "US10Y_OFFICIAL": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03",
+      "status": "LIVE"
+    },
+    "US30Y_OFFICIAL": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03",
+      "status": "LIVE"
+    },
+    "US5Y": {
+      "source": "Cboe / Yahoo completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03",
+      "status": "LIVE"
+    },
+    "US10Y": {
+      "source": "Cboe / Yahoo completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03",
+      "status": "LIVE"
+    },
+    "US30Y": {
+      "source": "Cboe / Yahoo completed daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03",
+      "status": "LIVE"
+    },
+    "US_2S10S": {
+      "source": "US Treasury official daily",
+      "last_date": "2026-11-03",
+      "target_session": "2026-11-03",
+      "status": "LIVE"
     }
   },
   "kr_rates_refreshed_kst": "2026-11-05T02:54:53+09:00",
@@ -324482,7 +324746,7 @@
       "vix10_risk_on_limit": 28.0,
       "drawdown_52w_pct": -9.7494396828825,
       "risk_on_drawdown_limit_pct": -9.0,
-      "fear_greed": 28.2,
+      "fear_greed": 24.1,
       "market_pulse_risk": "RISK_ON"
     },
     "pulse_aligned": true,
@@ -324512,48 +324776,43 @@
       "status": "LIVE",
       "source": "Naver Finance index daily",
       "last_date": "2026-11-04",
-      "fetch_error": null,
-      "date_basis": "Asia/Seoul trading date"
+      "source_url": "https://m.stock.naver.com/api/index/KOSPI/price?pageSize=60&page=1"
     },
     "KOSDAQ": {
       "status": "LIVE",
       "source": "Naver Finance index daily",
       "last_date": "2026-11-04",
-      "fetch_error": null,
-      "date_basis": "Asia/Seoul trading date"
+      "source_url": "https://m.stock.naver.com/api/index/KOSDAQ/price?pageSize=60&page=1"
     },
     "RUSSELL2000": {
       "status": "LIVE",
-      "source": "Yahoo Finance completed cash-session daily",
+      "source": "Yahoo public completed daily",
       "last_date": "2026-11-03",
-      "target_session": "2026-11-03",
-      "fetch_error": null,
-      "date_basis": "America/New_York"
+      "target_session": "2026-11-03"
     },
     "DOW": {
       "status": "LIVE",
-      "source": "Yahoo Finance completed cash-session daily",
+      "source": "Yahoo public completed daily",
       "last_date": "2026-11-03",
-      "target_session": "2026-11-03",
-      "fetch_error": null,
-      "date_basis": "America/New_York"
+      "target_session": "2026-11-03"
     },
     "NASDAQCOMPOSITE": {
       "status": "LIVE",
-      "source": "Yahoo Finance completed cash-session daily",
+      "source": "Yahoo public completed daily",
       "last_date": "2026-11-03",
-      "target_session": "2026-11-03",
-      "fetch_error": null,
-      "date_basis": "America/New_York"
+      "target_session": "2026-11-03"
     },
     "SILVER": {
       "status": "LIVE",
       "source": "Yahoo Finance SI=F",
-      "last_date": "2026-11-04"
+      "last_date": "2026-11-03"
     }
   },
   "equity_enrichment_contract": "KOSPI_KOSDAQ_DAILY_REFERENCE_V1",
   "equity_session_contract": "KR_TRADING_DATE_NAVER_PRIMARY_YAHOO_FALLBACK_V2",
   "market_supplement_contract": "US_SUPPLEMENT_MATCH_COMPLETED_CORE_SESSION_V3",
-  "equity_enriched_kst": "2026-11-05T02:54:59+09:00"
+  "equity_enriched_kst": "2026-11-05T02:54:59+09:00",
+  "supplemental_refreshed_kst": "2026-11-04T18:33:53+09:00",
+  "supplemental_refresh_contract": "ALL_MARKET_FAMILIES_COMPLETED_SESSION_PLUS_24X7_CRYPTO_V1",
+  "us_rates_refreshed_kst": "2026-11-04T18:33:50+09:00"
 }
