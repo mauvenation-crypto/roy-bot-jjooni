@@ -48,8 +48,7 @@
     "RUSSELL2000": 2856.94970703,
     "DOW": 53356.12109375,
     "NASDAQCOMPOSITE": 25736.51367188,
-    "SILVER": 52.36000061,
-    "JP20Y": 3.669
+    "SILVER": 52.36000061
   },
   "series": {
     "NASDAQ100": [
@@ -319219,12 +319218,6 @@
         "date": "2026-11-04",
         "value": 52.36000061
       }
-    ],
-    "JP20Y": [
-      {
-        "date": "2026-11-02",
-        "value": 3.669
-      }
     ]
   },
   "curves": {
@@ -319346,7 +319339,7 @@
     "drawdown_52w_pct": -8.926667529456278,
     "ma250": 27437.71964843768,
     "ndx": 28437.16601562,
-    "observed_at": "2026-11-05T08:50:10+09:00",
+    "observed_at": "2026-11-05T08:50:14+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -9.7494396828825,
     "previous_ma250": 27426.45110156272,
@@ -324751,14 +324744,6 @@
       "last_date": "2026-11-04",
       "target_session": "2026-11-04"
     },
-    "JP_RATES": {
-      "status": "LAGGING",
-      "source": "Japan MOF current JGB yield CSV",
-      "source_url": "https://www.mof.go.jp/jgbs/reference/interest_rate/jgbcm.csv",
-      "last_date": "2026-11-02",
-      "expected_latest_weekday": "2026-11-03",
-      "timing_note": "Japanese holidays or publication delays can cause a nonfatal LAGGING warning"
-    },
     "KOSPI": {
       "status": "LIVE",
       "source": "Naver Finance index daily",
@@ -324775,6 +324760,14 @@
       "status": "LIVE",
       "source": "FearAndGreedGraph public JSON",
       "last_date": "2026-11-04"
+    },
+    "JP_RATES": {
+      "status": "LAGGING",
+      "source": "Japan MOF current JGB yield CSV",
+      "source_url": "https://www.mof.go.jp/jgbs/reference/interest_rate/jgbcm.csv",
+      "last_date": "2026-11-02",
+      "expected_latest_weekday": "2026-11-03",
+      "timing_note": "Japanese holidays or publication delays can cause a nonfatal LAGGING warning"
     }
   },
   "kr_rates_refreshed_kst": "2026-11-05T08:49:56+09:00",
