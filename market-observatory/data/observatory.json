@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_MARKET_OBSERVATORY_V1",
-  "generated_kst": "2026-11-05T05:05:41+09:00",
+  "generated_kst": "2026-11-05T05:28:58+09:00",
   "read_only": true,
   "contains_account_data": false,
   "us_market_session_contract": "COMMON_LAST_COMPLETED_US_SESSION_V1",
@@ -319295,7 +319295,7 @@
     "drawdown_52w_pct": -9.7494396828825,
     "ma250": 27426.45110156272,
     "ndx": 28180.25976562,
-    "observed_at": "2026-11-05T05:29:27+09:00",
+    "observed_at": "2026-11-05T05:29:30+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -10.359344186727204,
     "previous_ma250": 27415.472859375237,
@@ -324436,9 +324436,9 @@
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
       "price": 80135.0,
       "quote_as_of_kst": "2026-11-05T05:28:55+09:00",
-      "captured_kst": "2026-11-05T05:29:08+09:00",
+      "captured_kst": "2026-11-05T05:29:10+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 13,
+      "quote_age_seconds": 15,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     },
@@ -324448,9 +324448,9 @@
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
       "price": 2414.86,
       "quote_as_of_kst": "2026-11-05T05:28:55+09:00",
-      "captured_kst": "2026-11-05T05:29:08+09:00",
+      "captured_kst": "2026-11-05T05:29:10+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 13,
+      "quote_age_seconds": 15,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     }
@@ -324720,7 +324720,7 @@
     "fear_greed": {
       "state": "LIVE",
       "source": "CNN_FEAR_GREED_PUBLIC",
-      "observed_at": "2026-11-04T19:59:42+00:00",
+      "observed_at": "2026-11-04T20:23:45+00:00",
       "rating": "FEAR",
       "error": null,
       "history_source": "DAILY_MARKET_PULSE_HISTORY",
@@ -324746,7 +324746,7 @@
       "vix10_risk_on_limit": 28.0,
       "drawdown_52w_pct": -9.7494396828825,
       "risk_on_drawdown_limit_pct": -9.0,
-      "fear_greed": 27.6,
+      "fear_greed": 27.8,
       "market_pulse_risk": "RISK_ON"
     },
     "pulse_aligned": true,
@@ -324757,7 +324757,7 @@
   "today_strategy_contract": "TRIPOD_CANONICAL_DECISION_SUPPORT_V1",
   "freshness": {
     "status": "LIVE",
-    "checked_kst": "2026-11-05T05:05:40+09:00",
+    "checked_kst": "2026-11-05T05:28:58+09:00",
     "market_date_us": "2026-11-03",
     "us_close_refresh_contract": "US_REGULAR_CLOSE_PLUS_10M_DST_AWARE",
     "scheduled_kst": "05:10_OR_06:10_DST_DEPENDENT",
@@ -324770,7 +324770,7 @@
   "history_base_generated_kst": "2026-09-13T00:12:30+09:00",
   "history_base_path": "./data/history-30y.json",
   "crypto_contract": "SPOT_QUOTE_WITH_UTC_DAILY_COMPARISON_V1",
-  "crypto_enriched_kst": "2026-11-05T05:29:09+09:00",
+  "crypto_enriched_kst": "2026-11-05T05:29:10+09:00",
   "market_supplement_quality": {
     "KOSPI": {
       "status": "LIVE",
@@ -324811,7 +324811,7 @@
   "equity_enrichment_contract": "KOSPI_KOSDAQ_DAILY_REFERENCE_V1",
   "equity_session_contract": "KR_TRADING_DATE_NAVER_PRIMARY_YAHOO_FALLBACK_V2",
   "market_supplement_contract": "US_SUPPLEMENT_MATCH_COMPLETED_CORE_SESSION_V3",
-  "equity_enriched_kst": "2026-11-05T05:05:46+09:00",
+  "equity_enriched_kst": "2026-11-05T05:29:11+09:00",
   "supplemental_refreshed_kst": "2026-11-05T05:29:09+09:00",
   "supplemental_refresh_contract": "ALL_MARKET_FAMILIES_COMPLETED_SESSION_PLUS_24X7_CRYPTO_V1",
   "us_rates_refreshed_kst": "2026-11-05T05:29:06+09:00"
