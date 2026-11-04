@@ -87,9 +87,9 @@ async function refresh(force=false){
   finally{pending=null}
  })();return pending;
 }
-// Reuse the public, server-coalesced read when a mobile tab returns. Hidden
-// tabs do not fetch; lifecycle bursts share one flight and a 60-second gate.
-// No polling timer or scheduler is added; the explicit button bypasses the gate.
+// Reuse the server-coalesced public read while visible, with a bounded cadence.
+// Hidden tabs do not fetch; lifecycle bursts share one flight and a 60-second gate.
+// Manual refresh remains available and bypasses the lifecycle gate.
 function resume(){return refresh(false).catch(()=>{})}
 if(typeof root.setInterval==='function')root.setInterval(()=>{
  if(document.hidden)return;
@@ -103,6 +103,7 @@ if(typeof root.setInterval==='function')root.setInterval(()=>{
  }
  paintSummary();
 },60000);
+if(typeof root.setInterval==='function')root.setInterval(resume,120000);
 document.addEventListener?.('visibilitychange',resume);
 root.addEventListener?.('pageshow',resume);
 resume();
