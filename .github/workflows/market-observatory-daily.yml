@@ -9,6 +9,8 @@ on:
       - tools/tripod_rules.py
       - tools/observatory_session.py
       - tools/crypto_heartbeat_gate.py
+      - tools/sector_heartbeat_gate.py
+      - tests/test_sector_heartbeat_gate.py
       - tests/test_crypto_heartbeat_gate.py
       - tests/test_observatory_session.py
       - tools/publish_observatory_data.py
@@ -86,6 +88,7 @@ jobs:
       should_refresh: ${{ steps.fresh.outputs.should_refresh }}
       age_min: ${{ steps.fresh.outputs.age_min }}
       crypto_should_refresh: ${{ steps.fresh.outputs.crypto_should_refresh }}
+      sector_should_refresh: ${{ steps.fresh.outputs.sector_should_refresh }}
     steps:
       - uses: actions/checkout@v4
       - id: fresh
@@ -111,6 +114,7 @@ jobs:
           # Quote freshness is independent of the last completed US cash session.
           # Reuse this existing heartbeat: no new cron or Scheduler resource.
           python tools/crypto_heartbeat_gate.py >> "$GITHUB_OUTPUT"
+          python tools/sector_heartbeat_gate.py >> "$GITHUB_OUTPUT"
 
   crypto_recovery:
     # Only recover stale quotes, and recheck after checkout to avoid racing
@@ -150,6 +154,39 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           python tools/publish_observatory_data.py --message 'data(observatory): recover stale BTC ETH spot quotes' market-observatory/data/observatory.json
+
+  sector_recovery:
+    needs: hourly_gate
+    if: ${{ needs.hourly_gate.result == 'success' && needs.hourly_gate.outputs.sector_should_refresh == 'true' }}
+    concurrency:
+      group: economic-calendar-canonical-writer
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - id: recheck
+        name: Recheck sector freshness after writer lock
+        run: python tools/sector_heartbeat_gate.py >> "$GITHUB_OUTPUT"
+      - name: Rebuild sector snapshots
+        if: ${{ steps.recheck.outputs.sector_should_refresh == 'true' }}
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -p 'test_sector_heartbeat_gate.py' -v
+          python tools/build_observatory_sector_etf.py
+      - name: Publish sector snapshots
+        if: ${{ steps.recheck.outputs.sector_should_refresh == 'true' }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python tools/publish_observatory_data.py --message 'data(observatory): recover sector snapshots' market-observatory/data/sector-etf.json
 
   hourly_refresh:
     concurrency:
