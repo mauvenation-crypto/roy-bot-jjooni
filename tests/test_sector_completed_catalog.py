@@ -25,6 +25,17 @@ class SectorContractTests(unittest.TestCase):
         winter = datetime.fromisoformat('2026-12-02T05:10:00+09:00')
         self.assertEqual(sector.completed_cutoff('US', winter), '2026-11-30')
 
+    def test_calendar_return_uses_prior_trading_date_and_preserves_missing_history(self):
+        rows = [{'date': '2025-11-03', 'value': 100},
+                {'date': '2026-10-02', 'value': 110},
+                {'date': '2026-11-03', 'value': 121}]
+        result = sector.calendar_return(rows, 1)
+        self.assertEqual(result['base_date'], '2026-10-02')
+        self.assertEqual(result['end_date'], '2026-11-03')
+        self.assertAlmostEqual(result['pct'], 10.0)
+        self.assertAlmostEqual(sector.calendar_return(rows, 12)['pct'], 21.0)
+        self.assertIsNone(sector.calendar_return(rows[1:], 12))
+
     def test_kr_cutoff_and_weekend(self):
         pre = datetime.fromisoformat('2026-10-01T15:39:00+09:00')
         post = datetime.fromisoformat('2026-10-01T15:40:00+09:00')

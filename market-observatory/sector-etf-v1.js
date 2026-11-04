@@ -57,6 +57,11 @@ function ensureStyle(){
  #sectors .obsSectorChart{position:relative;width:100%;max-width:100%;min-width:0;height:330px;margin-top:8px;overflow:hidden}
  #sectors .obsSectorChart canvas{display:block;width:100%!important;max-width:100%!important;min-width:0!important}
  #sectors .obsSectorLoading{padding:40px 14px;text-align:center;color:#718096;font-size:11px}
+
+ #sectors .sectorRanking{margin-bottom:12px;padding:18px;border-top:5px solid #171717}
+ #sectors .sectorRankTop{display:flex;justify-content:space-between;gap:8px;align-items:start}#sectors .sectorRankTop h3{font-size:20px}#sectors .sectorRankTop p,#sectors .sectorRankTop span,#sectors .sectorRankNote{font-size:12px;color:#667085;line-height:1.5}
+ #sectors .sectorRankControls{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}#sectors .sectorRankControls button{min-height:44px;padding:8px 14px;border-radius:9px;border:1px solid #d8e1ed;background:#fff;color:#344054;font-weight:750}#sectors .sectorRankControls button[aria-pressed=true]{background:#17233a;border-color:#17233a;color:#fff}
+ #sectors .sectorRankRows{display:grid;gap:3px}#sectors .sectorRankRow{display:grid;grid-template-columns:minmax(95px,150px) minmax(30px,1fr) 86px;align-items:center;gap:10px;width:100%;min-height:48px;background:#fff;border:0;border-bottom:1px solid #eef1f5;text-align:left;cursor:pointer;padding:6px}#sectors .sectorRankRow:focus-visible{outline:3px solid #497ad2}#sectors .sectorRankLabel b{font-size:14px;display:block}#sectors .sectorRankLabel small{font-size:11px;color:#667085}#sectors .sectorRankTrack{background:#f1f4f8;height:12px;border-radius:8px;overflow:hidden}#sectors .sectorRankTrack i{display:block;height:100%;border-radius:8px}#sectors .sectorRankTrack i.up{background:#d92d20}#sectors .sectorRankTrack i.down{background:#175cd3}#sectors .sectorRankRow strong{text-align:right;font-size:15px;white-space:nowrap}#sectors .sectorRankDetail{margin-top:12px;border:1px solid #e4eaf1;border-radius:10px;padding:12px;background:#f9fbff}#sectors .sectorRankDetail p{font-size:12px;color:#526071;line-height:1.5;margin:8px 0}
  @media(max-width:1100px){
   #sectors .obsSectorHead{align-items:flex-start;flex-wrap:wrap}
   #sectors .obsSectorBadge{max-width:100%;white-space:normal;overflow-wrap:anywhere}
@@ -145,14 +150,57 @@ function drawRsChart(rows){
  return true;
 }
 
+const SECTOR_KO={XLK:'기술',XLC:'커뮤니케이션',XLY:'경기소비재',XLF:'금융',XLI:'산업재',XLE:'에너지',XLB:'소재',XLV:'헬스케어',XLP:'필수소비재',XLU:'유틸리티',XLRE:'부동산'};
+const PERIODS=[['1d','1일'],['5d','1주'],['1m','1개월'],['3m','3개월'],['1y','1년']];
+let rankPeriod='1d',rankScope='classic',rankSelected=null;
+function periodInfo(row,key){
+ const xs=DATA?.series?.[row.ticker]||[], end=xs.at(-1), marketEnd=row.observed_date;
+ if(!end||end.date!==marketEnd||end.date!==DATA?.completed_cutoffs?.[row.market])return null;
+ let base=null;
+ if(key==='1d'||key==='5d'){const days=key==='1d'?1:5;base=xs.at(-1-days)}
+ else {
+  const months=key==='1m'?1:key==='3m'?3:12, cached=row.calendar_returns?.[String(months)];
+  if(cached?.end_date===end.date&&n(cached.pct)!=null)return {value:n(cached.pct),base:cached.base_date,end:end.date};
+  const ed=new Date(end.date+'T00:00:00Z'),target=new Date(Date.UTC(ed.getUTCFullYear(),ed.getUTCMonth()-months,1));
+  const lastDay=new Date(Date.UTC(target.getUTCFullYear(),target.getUTCMonth()+1,0)).getUTCDate();target.setUTCDate(Math.min(ed.getUTCDate(),lastDay));
+  const cutoff=target.toISOString().slice(0,10);base=xs.filter(p=>p.date<=cutoff).at(-1);
+  if(!base||(target-new Date(base.date+'T00:00:00Z'))/86400000>7)return null;
+ }
+ const a=n(end.value),b=n(base?.value);return a!=null&&b>0?{value:(a/b-1)*100,base:base.date,end:end.date}:null;
+}
+function rankRows(){
+ if(rankScope==='classic')return classicRows();
+ const wanted=['SMH','SOXX','IGV','SKYY','HACK','XBI','KRE','ITA','XAR','PAVE','XOP','BOTZ','ROBO'];
+ return (DATA?.groups||[]).flatMap(g=>g.rows||[]).filter(r=>wanted.includes(r.ticker));
+}
+function rankView(){
+ const rows=rankRows().map(r=>({r,info:periodInfo(r,rankPeriod)})).sort((a,b)=>a.info&&b.info?b.info.value-a.info.value:a.info?-1:b.info?1:0);
+ const scale=Math.max(1,...rows.map(x=>Math.abs(x.info?.value||0)));
+ const current=rows.find(x=>x.r.ticker===rankSelected);
+ return `<section class="obsSectorCard sectorRanking" aria-label="기간별 섹터 등락"><div class="sectorRankTop"><div><h3>시장의 방향 · 섹터별 등락</h3><p>완료 종가 기준 · 선택 기간의 상승률 순</p></div><span>미국 ${esc(DATA.completed_cutoffs?.US||'—')}</span></div><div class="sectorRankControls" role="group" aria-label="비교 기간">${PERIODS.map(([k,v])=>`<button type="button" data-rank-period="${k}" aria-pressed="${rankPeriod===k}">${v}</button>`).join('')}</div><div class="sectorRankControls" role="group" aria-label="섹터 종류"><button type="button" data-rank-scope="classic" aria-pressed="${rankScope==='classic'}">미국 11개 섹터</button><button type="button" data-rank-scope="theme" aria-pressed="${rankScope==='theme'}">주요 테마 ETF</button></div><p class="sectorRankNote">1일=전 거래일 · 1주=5거래일 · 1개월/3개월/1년=같은 날짜 이전 최근 거래일 · 배당 제외 가격수익률. 종가 지연 또는 이력 부족은 확인 대기로 표시합니다.</p><div class="sectorRankRows">${rows.map(({r,info})=>`<button type="button" class="sectorRankRow" data-rank-ticker="${esc(r.ticker)}" aria-expanded="${rankSelected===r.ticker}"><span class="sectorRankLabel"><b>${esc(SECTOR_KO[r.ticker]||r.name||r.ticker)}</b><small>${esc(r.ticker)}</small></span><span class="sectorRankTrack"><i class="${cls(info?.value)}" style="width:${info?Math.max(2,Math.abs(info.value)/scale*100):0}%"></i></span><strong class="${cls(info?.value)}">${info?pct(info.value):'확인 대기'}</strong></button>`).join('')}</div>${current?`<div class="sectorRankDetail"><b>${esc(SECTOR_KO[current.r.ticker]||current.r.name)} · ${esc(current.r.ticker)}</b><p>${current.info?`${esc(current.info.base)} → ${esc(current.info.end)} · ${pct(current.info.value)}`:'해당 기간의 완료 종가 이력이 충분하지 않습니다.'}</p><p>최근 100거래일 추이 · ${esc(current.r.source||'원천 미확인')}</p>${sparkline(current.r)}<p>ETF 가격 변동이며 분배금은 반영하지 않습니다. 테마 ETF는 해당 산업 전체와 다를 수 있습니다.</p></div>`:''}</section>`;
+}
+function attachRank(panel){
+ const host=q('#sectorRankHost',panel);if(!host)return;
+ host.innerHTML=rankView();
+ host.onclick=e=>{const btn=e.target.closest('button');if(!btn)return;
+  if(btn.dataset.rankPeriod)rankPeriod=btn.dataset.rankPeriod;
+  if(btn.dataset.rankScope){rankScope=btn.dataset.rankScope;rankSelected=null}
+  if(btn.dataset.rankTicker)rankSelected=rankSelected===btn.dataset.rankTicker?null:btn.dataset.rankTicker;
+  const attr=btn.dataset.rankPeriod?'rankPeriod':btn.dataset.rankScope?'rankScope':'rankTicker',val=btn.dataset[attr];
+  host.innerHTML=rankView();host.querySelector(`[data-${attr.replace(/[A-Z]/g,c=>'-'+c.toLowerCase())}="${val}"]`)?.focus();
+ };
+}
+
 function render(){
  const panel=q('#sectors');if(!panel||!DATA)return;
  if(!panel.dataset.themeToggleBound){panel.dataset.themeToggleBound='1';panel.addEventListener('toggle',e=>{if(!e.target.matches?.('details[data-theme]'))return;const key=e.target.dataset.theme;if(e.target.open)openThemes.add(key);else openThemes.delete(key)},true)}
  const s=DATA.summary||{},rows=classicRows(),rank=ranked20(rows),leaders=rank.slice(0,3),laggards=rank.slice(-3).reverse(),quality=DATA.quality||{};
  const spread20=n(s.growth_defense_spread_20d_pct)??growthDefense20(rows),warning=n(quality.fetch_error_count)>0;
  panel.innerHTML=`<div class="obsSectorHead"><div><div class="obsSectorTitle">송팀장 Sector Observatory</div><div class="meta">완료 일봉 기준 · 수익률 구간을 1일·5일·10일·20일·50일·100일로 통일</div></div><div class="obsSectorBadge">국내·해외 ETF · 완료 일봉</div></div>
+ <div id="sectorRankHost"></div>
  <div class="obsSectorKpis"><div class="obsSectorKpi"><span>기준일</span><b>${esc(DATA.completed_cutoffs?'KR '+DATA.completed_cutoffs.KR+' / US '+DATA.completed_cutoffs.US:DATA.as_of_date||'—')}</b></div><div class="obsSectorKpi"><span>MA20 상회 · 11개 섹터</span><b>${esc(s.classic_above_ma20??'—')} / ${esc(s.classic_count??11)}</b></div><div class="obsSectorKpi"><span>20일 RS 강세</span><b>${esc(leaders[0]?.ticker||'—')} ${pct(leaders[0]?.value)}</b></div><div class="obsSectorKpi"><span>20일 RS 약세</span><b>${esc(laggards[0]?.ticker||'—')} ${pct(laggards[0]?.value)}</b></div><div class="obsSectorKpi"><span>성장-방어 20일</span><b class="${cls(spread20)}">${pct(spread20)}</b></div></div>
  <div class="obsSectorGrid"><div><section class="obsSectorCard"><h3>S&P 500 섹터 상대강도</h3><div class="meta">1·5·10·20·50·100 거래일 수익률 · 20일 SPY 대비 상대강도 순 정렬</div>${classicTable(rows)}</section><section class="obsSectorCard" style="margin-top:12px"><h3>테마·업종·국가 ETF</h3><div class="meta">6개 기간 수익률 + 최근 100거래일 스파크라인으로 테마·업종·국가별 방향과 속도를 함께 확인합니다.</div>${themeHtml()}</section></div><div><section class="obsSectorCard"><h3>20일 RS Ranking</h3><div class="meta">SPY 20거래일 성과 대비 상대강도 · 섹터 회전 확인</div><div class="obsSectorChart"><canvas id="sectorRsChart"></canvas></div></section><section class="obsSectorCard" style="margin-top:12px"><h3>리더 / 래거드</h3><div class="obsSectorLeader"><span><span class="obsSectorRank">L</span>강세 TOP3</span><b class="up">${esc(leaderText(leaders))}</b></div><div class="obsSectorLeader"><span><span class="obsSectorRank">W</span>약세 TOP3</span><b class="down">${esc(leaderText(laggards))}</b></div><div class="obsSectorLeader"><span>SPY 20일</span><b class="${cls(benchRet('SPY',20))}">${pct(benchRet('SPY',20))}</b></div><div class="obsSectorLeader"><span>QQQ 20일</span><b class="${cls(benchRet('QQQ',20))}">${pct(benchRet('QQQ',20))}</b></div><div class="obsSectorQuality ${warning?'warn':''}">${warning?'일부 Yahoo 일봉 수집 실패가 있어 직전 검증값으로 대체된 ETF가 있습니다.':'전체 섹터 ETF가 최신 완료 일봉으로 수집되었습니다.'}<br>가격 확인 ${esc(s.priced_count??0)}/${esc(s.total_count??0)} · fetch error ${esc(quality.fetch_error_count??0)} · source: ${esc(DATA.source_contract||'Yahoo public daily')}</div></section></div></div>`;
+ attachRank(panel);
  try{drawRsChart(rows)}catch(e){STATE.chart_error=String(e);STATE.status='ACTIVE_DEGRADED';console.warn('sector RS chart render failed',e);const host=q('#sectorRsChart')?.parentElement;if(host)host.innerHTML='<div class="obsSectorLoading" style="padding:22px 8px">RS 차트만 표시하지 못했습니다. 표·ETF 데이터는 정상입니다.</div>'}
  if(STATE.status!=='ACTIVE_DEGRADED')STATE.status='ACTIVE';STATE.loaded=true;STATE.error=null;STATE.rendered_at=new Date().toISOString();
 }

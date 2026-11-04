@@ -2,11 +2,12 @@
 from __future__ import annotations
 
 import json
+import calendar
 import math
 import time
 import urllib.parse
 import urllib.request
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -182,6 +183,26 @@ def pct_from_points(points, sessions):
     return (a / b - 1.0) * 100.0
 
 
+def calendar_return(points, months):
+    """Last completed close compared with last close on/before calendar date."""
+    if not points:
+        return None
+    end = date.fromisoformat(points[-1]['date'])
+    month_index = end.year * 12 + end.month - 1 - months
+    year, month = divmod(month_index, 12)
+    month += 1
+    target = date(year, month, min(end.day, calendar.monthrange(year, month)[1]))
+    candidates = [p for p in points if date.fromisoformat(p['date']) <= target]
+    if not candidates:
+        return None
+    base = candidates[-1]
+    base_date = date.fromisoformat(base['date'])
+    if (target - base_date).days > 7 or not base.get('value'):
+        return None
+    return {'pct': rounded((points[-1]['value'] / base['value'] - 1) * 100),
+            'base_date': base['date'], 'end_date': points[-1]['date']}
+
+
 def ytd_return(points):
     if not points:
         return None
@@ -224,6 +245,7 @@ def metrics(points):
     }
     for d in HORIZONS:
         out[f'ret_{d}d_pct'] = rounded(pct_from_points(points, d))
+    out['calendar_returns'] = {str(m): calendar_return(points, m) for m in (1, 3, 12)}
     # Legacy fields retained for existing consumers/QA.
     out['ret_1m_pct'] = rounded(pct_from_points(points, 21))
     out['ret_3m_pct'] = rounded(pct_from_points(points, 63))
@@ -250,7 +272,7 @@ def build(now=None):
     for ticker in dict.fromkeys(tickers):
         try:
             symbol = ticker + '.KS' if market_of(ticker) == 'KR' else ticker
-            series[ticker] = yahoo_series(symbol, '1y', now)
+            series[ticker] = yahoo_series(symbol, '2y', now)
             time.sleep(0.12)
         except Exception as exc:
             # Legacy fallback may itself contain a provisional bar. Filter by
@@ -356,7 +378,7 @@ def build(now=None):
             'growth_defense_spread_1m_pct': rounded(growth_defense_spread_1m),
         },
         'groups': group_payload,
-        'series': {ticker: (points[-130:] if points else []) for ticker, points in series.items()},
+        'series': {ticker: (points[-400:] if points else []) for ticker, points in series.items()},
         'quality': {
             'fetch_error_count': len(fetch_errors),
             'fetch_errors': fetch_errors,
