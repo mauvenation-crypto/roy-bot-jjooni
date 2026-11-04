@@ -51,7 +51,7 @@ function paintSummary(){
   const q=state.get(key);if(!q||!value)continue;
   const text=q.value.toLocaleString('ko-KR',{maximumFractionDigits:2});
   if(value.textContent!==text)value.textContent=text;
-  const title=key+' · '+q.display_status+' · '+q.age_label;if(label.textContent!==title)label.textContent=title;
+  const title=key+' · '+(q.refresh_status==='RETAINED'?'이전 관측':'최근 시세')+' · '+q.display_status+' · '+q.age_label;if(label.textContent!==title)label.textContent=title;
  }
 }
 async function refresh(force=false){
@@ -87,7 +87,18 @@ async function refresh(force=false){
 // tabs do not fetch; lifecycle bursts share one flight and a 60-second gate.
 // No polling timer or scheduler is added; the explicit button bypasses the gate.
 function resume(){return refresh(false).catch(()=>{})}
-if(typeof root.setInterval==='function')root.setInterval(()=>{if(!document.hidden){root.__JJOONI_LATEST_BOARD?.render?.();paintSummary()}},60000);
+if(typeof root.setInterval==='function')root.setInterval(()=>{
+ if(document.hidden)return;
+ for(const tile of document.querySelectorAll?.('.latestTile[data-metric]')||[]){
+  const context=tile.querySelector('.latestQuoteContext[data-live-quote]'),q=state.get(tile.dataset.metric);
+  if(!context||!q)continue;
+  const label=context.querySelector('b'),source=context.querySelector('[data-quote-age]');
+  if(label)label.textContent=q.display_status;
+  if(source)source.textContent=(q.source||'원천 미확인')+' · '+q.age_label+' · 관측 시각 위 표시';
+  context.classList.toggle('quoteWarning',/유지|지연$/.test(q.display_status));
+ }
+ paintSummary();
+},60000);
 document.addEventListener?.('visibilitychange',resume);
 root.addEventListener?.('pageshow',resume);
 resume();
