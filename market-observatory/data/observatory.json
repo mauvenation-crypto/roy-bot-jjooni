@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_MARKET_OBSERVATORY_V1",
-  "generated_kst": "2026-11-05T11:21:27+09:00",
+  "generated_kst": "2026-11-05T12:29:23+09:00",
   "read_only": true,
   "contains_account_data": false,
   "us_market_session_contract": "COMMON_LAST_COMPLETED_US_SESSION_V1",
@@ -319377,7 +319377,7 @@
     "drawdown_52w_pct": -8.926667529456278,
     "ma250": 27437.71964843768,
     "ndx": 28437.16601562,
-    "observed_at": "2026-11-05T11:21:36+09:00",
+    "observed_at": "2026-11-05T12:29:29+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -9.7494396828825,
     "previous_ma250": 27426.45110156272,
@@ -324534,9 +324534,9 @@
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
       "price": 80639.0,
       "quote_as_of_kst": "2026-11-05T12:28:03+09:00",
-      "captured_kst": "2026-11-05T12:28:56+09:00",
+      "captured_kst": "2026-11-05T12:29:26+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 53,
+      "quote_age_seconds": 83,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     },
@@ -324546,69 +324546,74 @@
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
       "price": 2430.93,
       "quote_as_of_kst": "2026-11-05T12:28:03+09:00",
-      "captured_kst": "2026-11-05T12:28:56+09:00",
+      "captured_kst": "2026-11-05T12:29:26+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 53,
+      "quote_age_seconds": 83,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     }
   },
   "cross_market_freshness_quality": {
     "KR3Y": {
-      "status": "STALE",
+      "status": "LIVE",
       "source": "BOK ECOS 817Y002 daily market rates",
       "stat_code": "817Y002",
       "item_code": "010200000",
       "last_date": "2026-11-04",
+      "age_days": 1,
+      "verified_rows": 10,
       "api_mode": "registered",
-      "fetch_succeeded": false,
-      "fetch_error": "RuntimeError:ECOS_TRANSPORT_FAILED_AFTER_3_ATTEMPTS;ECOS_CURL_FALLBACK_Timeout;ECOS_NETWORK_TCP_OR_TLS_TIMEOUT"
+      "fetch_succeeded": true
     },
     "KR5Y": {
-      "status": "STALE",
+      "status": "LIVE",
       "source": "BOK ECOS 817Y002 daily market rates",
       "stat_code": "817Y002",
       "item_code": "010200001",
       "last_date": "2026-11-04",
+      "age_days": 1,
+      "verified_rows": 10,
       "api_mode": "registered",
-      "fetch_succeeded": false,
-      "fetch_error": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN"
+      "fetch_succeeded": true
     },
     "KR10Y": {
-      "status": "STALE",
+      "status": "LIVE",
       "source": "BOK ECOS 817Y002 daily market rates",
       "stat_code": "817Y002",
       "item_code": "010210000",
       "last_date": "2026-11-04",
+      "age_days": 1,
+      "verified_rows": 10,
       "api_mode": "registered",
-      "fetch_succeeded": false,
-      "fetch_error": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN"
+      "fetch_succeeded": true
     },
     "KR20Y": {
-      "status": "STALE",
+      "status": "LIVE",
       "source": "BOK ECOS 817Y002 daily market rates",
       "stat_code": "817Y002",
       "item_code": "010220000",
       "last_date": "2026-11-04",
+      "age_days": 1,
+      "verified_rows": 10,
       "api_mode": "registered",
-      "fetch_succeeded": false,
-      "fetch_error": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN"
+      "fetch_succeeded": true
     },
     "KR30Y": {
-      "status": "STALE",
+      "status": "LIVE",
       "source": "BOK ECOS 817Y002 daily market rates",
       "stat_code": "817Y002",
       "item_code": "010230000",
       "last_date": "2026-11-04",
+      "age_days": 1,
+      "verified_rows": 10,
       "api_mode": "registered",
-      "fetch_succeeded": false,
-      "fetch_error": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN"
+      "fetch_succeeded": true
     },
     "KR_RATES": {
-      "status": "LAGGING",
+      "status": "LIVE",
       "source": "BOK ECOS 817Y002 daily market rates",
       "api_mode": "registered",
-      "fetch_succeeded": false,
+      "fetch_succeeded": true,
       "last_dates": {
         "KR3Y": "2026-11-04",
         "KR5Y": "2026-11-04",
@@ -324618,19 +324623,13 @@
         "KR_3S10S": "2026-11-04"
       },
       "refreshed_status": {
-        "KR3Y": "STALE",
-        "KR5Y": "STALE",
-        "KR10Y": "STALE",
-        "KR20Y": "STALE",
-        "KR30Y": "STALE"
+        "KR3Y": "LIVE",
+        "KR5Y": "LIVE",
+        "KR10Y": "LIVE",
+        "KR20Y": "LIVE",
+        "KR30Y": "LIVE"
       },
-      "failed_series": {
-        "KR3Y": "RuntimeError:ECOS_TRANSPORT_FAILED_AFTER_3_ATTEMPTS;ECOS_CURL_FALLBACK_Timeout;ECOS_NETWORK_TCP_OR_TLS_TIMEOUT",
-        "KR5Y": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN",
-        "KR10Y": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN",
-        "KR20Y": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN",
-        "KR30Y": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN"
-      },
+      "failed_series": {},
       "spread_contract": "SAME_DATE_KR10Y_MINUS_KR3Y_NO_INTERPOLATION"
     },
     "NASDAQ100": {
@@ -324808,18 +324807,12 @@
       "status": "LIVE"
     }
   },
-  "kr_rates_refreshed_kst": "2026-11-05T11:21:26+09:00",
+  "kr_rates_refreshed_kst": "2026-11-05T12:29:22+09:00",
   "quality": {
     "kr_rates": {
-      "state": "STALE",
+      "state": "PASS",
       "source": "BOK_ECOS",
-      "errors": {
-        "KR3Y": "RuntimeError:ECOS_TRANSPORT_FAILED_AFTER_3_ATTEMPTS;ECOS_CURL_FALLBACK_Timeout;ECOS_NETWORK_TCP_OR_TLS_TIMEOUT",
-        "KR5Y": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN",
-        "KR10Y": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN",
-        "KR20Y": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN",
-        "KR30Y": "RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN"
-      }
+      "errors": {}
     },
     "fear_greed": {
       "state": "LIVE",
@@ -324861,7 +324854,7 @@
   "today_strategy_contract": "TRIPOD_CANONICAL_DECISION_SUPPORT_V1",
   "freshness": {
     "status": "LIVE",
-    "checked_kst": "2026-11-05T11:21:27+09:00",
+    "checked_kst": "2026-11-05T12:29:22+09:00",
     "market_date_us": "2026-11-04",
     "us_close_refresh_contract": "US_REGULAR_CLOSE_PLUS_10M_DST_AWARE",
     "scheduled_kst": "05:10_OR_06:10_DST_DEPENDENT",
@@ -324874,7 +324867,7 @@
   "history_base_generated_kst": "2026-09-13T00:12:30+09:00",
   "history_base_path": "./data/history-30y.json",
   "crypto_contract": "SPOT_QUOTE_WITH_UTC_DAILY_COMPARISON_V1",
-  "crypto_enriched_kst": "2026-11-05T12:28:56+09:00",
+  "crypto_enriched_kst": "2026-11-05T12:29:27+09:00",
   "market_supplement_quality": {
     "KOSPI": {
       "status": "LIVE",
@@ -324915,7 +324908,7 @@
   "equity_enrichment_contract": "KOSPI_KOSDAQ_DAILY_REFERENCE_V1",
   "equity_session_contract": "KR_TRADING_DATE_NAVER_PRIMARY_YAHOO_FALLBACK_V2",
   "market_supplement_contract": "US_SUPPLEMENT_MATCH_COMPLETED_CORE_SESSION_V3",
-  "equity_enriched_kst": "2026-11-05T11:21:31+09:00",
+  "equity_enriched_kst": "2026-11-05T12:29:28+09:00",
   "supplemental_refreshed_kst": "2026-11-05T08:49:52+09:00",
   "supplemental_refresh_contract": "ALL_MARKET_FAMILIES_COMPLETED_SESSION_PLUS_24X7_CRYPTO_V1",
   "us_rates_refreshed_kst": "2026-11-05T08:49:45+09:00"
