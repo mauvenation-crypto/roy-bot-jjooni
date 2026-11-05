@@ -85,7 +85,7 @@
   "contract": "ROLLING_3650D_EVENT_AND_METRIC_HISTORY_PRESERVE_V2",
   "coverage_scope": "ARCHIVE_BOUNDARY_AND_FETCH_ERRORS_ONLY",
   "coverage_status": "FULL",
-  "generated_kst": "2026-11-06T02:54:06+09:00",
+  "generated_kst": "2026-11-06T07:26:49+09:00",
   "missing_policy": "Historical consensus/actual is shown only when captured or verified; values are never synthesized.",
   "row_count": 37788,
   "schema": "JJOONI_CALENDAR_HISTORY_INDEX_V1",
@@ -12536,51 +12536,6 @@
       "ref": "KR::2026년-3분기-실질-gdp::gdp_qoq",
       "sha256": "76bafd2c8e9ec0674f8ef765770e9082c1d886eabbb9581afb3664833a6e39ea"
     },
-    "KR::2026년-4분기-실질-gdp": {
-      "available_from": null,
-      "available_to": null,
-      "category": "GDP",
-      "count": 0,
-      "country": "KR",
-      "event_title": "2026년 3/4분기 실질 GDP(속보)",
-      "kind": "event",
-      "label": "2026년 3/4분기 실질 GDP(속보)",
-      "path": "./calendar-history/series/ac6b5918f258f7520469ba3343b09758893b4e852a27f1907aac5a663e1d88a6.json",
-      "quality": {
-        "actual_count": 0,
-        "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 0,
-        "frequency_validation": "NOT_VALIDATED",
-        "max_observed_gap_days": 0,
-        "rows_by_year": {},
-        "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
-      },
-      "ref": "KR::2026년-4분기-실질-gdp",
-      "sha256": "ac6b5918f258f7520469ba3343b09758893b4e852a27f1907aac5a663e1d88a6"
-    },
-    "KR::2026년-4분기-실질-gdp::gdp_qoq": {
-      "available_from": null,
-      "available_to": null,
-      "category": "GDP",
-      "count": 0,
-      "country": "KR",
-      "event_title": "2026년 3/4분기 실질 GDP(속보)",
-      "kind": "metric",
-      "label": "GDP QoQ",
-      "metric_key": "gdp_qoq",
-      "path": "./calendar-history/series/b5197cfa7ce32eef7dcb27f878225920fc6c68ccc1ebc7e5f99f26ab768a5a3d.json",
-      "quality": {
-        "actual_count": 0,
-        "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 0,
-        "frequency_validation": "NOT_VALIDATED",
-        "max_observed_gap_days": 0,
-        "rows_by_year": {},
-        "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
-      },
-      "ref": "KR::2026년-4분기-실질-gdp::gdp_qoq",
-      "sha256": "b5197cfa7ce32eef7dcb27f878225920fc6c68ccc1ebc7e5f99f26ab768a5a3d"
-    },
     "KR::고용동향": {
       "available_from": "2026-09-09",
       "available_to": "2026-10-16",
@@ -13402,7 +13357,7 @@
       "event_title": "Employment Situation",
       "kind": "event",
       "label": "Employment Situation",
-      "path": "./calendar-history/series/4e77d40b72400fffebdb16448266f8333b48d9c00145dba8c72211309a51382c.json",
+      "path": "./calendar-history/series/3ddedf26faf787e6abccaa8a66206dfa55aad9b61d7a06fa997a7db12efd020e.json",
       "quality": {
         "actual_count": 10,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13415,7 +13370,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::employment-situation",
-      "sha256": "4e77d40b72400fffebdb16448266f8333b48d9c00145dba8c72211309a51382c"
+      "sha256": "3ddedf26faf787e6abccaa8a66206dfa55aad9b61d7a06fa997a7db12efd020e"
     },
     "US::employment-situation-of-veterans": {
       "available_from": "2026-04-28",
@@ -13476,7 +13431,7 @@
       "kind": "metric",
       "label": "Average Hourly Earnings MoM",
       "metric_key": "avg_hourly_mom",
-      "path": "./calendar-history/series/1d37b8136aa04e9d615e4c20ef09938e789cd6dc77eb612533e46da9b238e922.json",
+      "path": "./calendar-history/series/a1d2f7045dc40705641c6dd2b3833a5b115ad16bc12ba459e97f56ab742b2aff.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13499,7 +13454,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::employment-situation::avg_hourly_mom",
-      "sha256": "1d37b8136aa04e9d615e4c20ef09938e789cd6dc77eb612533e46da9b238e922"
+      "sha256": "a1d2f7045dc40705641c6dd2b3833a5b115ad16bc12ba459e97f56ab742b2aff"
     },
     "US::employment-situation::avg_hourly_yoy": {
       "available_from": "2026-01-09",
@@ -13511,7 +13466,7 @@
       "kind": "metric",
       "label": "Average Hourly Earnings YoY",
       "metric_key": "avg_hourly_yoy",
-      "path": "./calendar-history/series/c3b5ce966af5b083da8f1c556dac0afdd66ddff01ff782dcc27cbbad834df2f6.json",
+      "path": "./calendar-history/series/349474d4fcb2ebf23fd8e634f35dc8cefbfd7cf87c7af0e0e843f23cc9cb5616.json",
       "quality": {
         "actual_count": 10,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13524,7 +13479,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::employment-situation::avg_hourly_yoy",
-      "sha256": "c3b5ce966af5b083da8f1c556dac0afdd66ddff01ff782dcc27cbbad834df2f6"
+      "sha256": "349474d4fcb2ebf23fd8e634f35dc8cefbfd7cf87c7af0e0e843f23cc9cb5616"
     },
     "US::employment-situation::nfp": {
       "available_from": "2016-12-02",
@@ -13536,7 +13491,7 @@
       "kind": "metric",
       "label": "Nonfarm Payrolls",
       "metric_key": "nfp",
-      "path": "./calendar-history/series/ce00a252f24c29e160c95bcc3eba717de2cfae72e484cfdedc6e98094a03cc89.json",
+      "path": "./calendar-history/series/3dd77391b01a6af7cac0504722c8054087dfe8ab9c4fb7de46e53039d26d8ad5.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13559,7 +13514,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::employment-situation::nfp",
-      "sha256": "ce00a252f24c29e160c95bcc3eba717de2cfae72e484cfdedc6e98094a03cc89"
+      "sha256": "3dd77391b01a6af7cac0504722c8054087dfe8ab9c4fb7de46e53039d26d8ad5"
     },
     "US::employment-situation::unemployment": {
       "available_from": "2016-12-02",
@@ -13571,7 +13526,7 @@
       "kind": "metric",
       "label": "Unemployment Rate",
       "metric_key": "unemployment",
-      "path": "./calendar-history/series/ea158544299db11f95a6ce53b37e340f1fa8c0ba57935c57dfa4358ac3ca6ff4.json",
+      "path": "./calendar-history/series/50e36088aaa245f4bf44b54a77e2f27f29fefadcd634b64e7bd3667a0f9c9686.json",
       "quality": {
         "actual_count": 118,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13594,7 +13549,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::employment-situation::unemployment",
-      "sha256": "ea158544299db11f95a6ce53b37e340f1fa8c0ba57935c57dfa4358ac3ca6ff4"
+      "sha256": "50e36088aaa245f4bf44b54a77e2f27f29fefadcd634b64e7bd3667a0f9c9686"
     },
     "US::fomc-정책결정": {
       "available_from": "2026-01-29",
@@ -14854,9 +14809,9 @@
     }
   },
   "series_completeness_status": "NOT_VALIDATED",
-  "series_count": 439,
-  "snapshot_id": "cf96bb7143a2b3d7414775d4c4f50e66ed590e2c5a7be5971de11b698e2db46d",
-  "source_sha256": "cf96bb7143a2b3d7414775d4c4f50e66ed590e2c5a7be5971de11b698e2db46d",
+  "series_count": 437,
+  "snapshot_id": "4a317209d3a953dba11b81de46d07c807fae07ae97e81fd905382dce18692896",
+  "source_sha256": "4a317209d3a953dba11b81de46d07c807fae07ae97e81fd905382dce18692896",
   "timezone": "Asia/Seoul",
   "window_days": 3650,
   "window_end": "2026-11-06",
