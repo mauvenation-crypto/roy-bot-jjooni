@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_DAILY_MARKET_PULSE_V1",
-  "generated_kst": "2026-11-05T09:57:43+09:00",
+  "generated_kst": "2026-11-05T10:26:26+09:00",
   "market_date_us": "2026-11-04",
   "snapshot_status": "FINAL",
   "session_gate": {
@@ -183,70 +183,70 @@
       "top10": [
         {
           "rank": 1,
-          "ticker": "NVDA",
-          "name": "Nvidia Corp",
-          "weight_pct": 12.45
+          "ticker": "AAPL",
+          "name": "Apple Inc.",
+          "weight_pct": 12.56
         },
         {
           "rank": 2,
-          "ticker": "AAPL",
-          "name": "Apple Inc.",
-          "weight_pct": 12.08
+          "ticker": "NVDA",
+          "name": "Nvidia Corp",
+          "weight_pct": 11.9
         },
         {
           "rank": 3,
           "ticker": "MSFT",
           "name": "Microsoft Corp",
-          "weight_pct": 9.65
+          "weight_pct": 10.16
         },
         {
           "rank": 4,
           "ticker": "AMZN",
           "name": "Amazon.Com Inc",
-          "weight_pct": 6.76
+          "weight_pct": 7.08
         },
         {
           "rank": 5,
           "ticker": "SPCX",
           "name": "Space Exploration Technologies Corp. Class A Common Stock",
-          "weight_pct": 4.79
+          "weight_pct": 4.55
         },
         {
           "rank": 6,
           "ticker": "GOOGL",
           "name": "Alphabet Inc. Class A Common Stock",
-          "weight_pct": 4.41
+          "weight_pct": 4.49
         },
         {
           "rank": 7,
           "ticker": "GOOG",
           "name": "Alphabet Inc. Class C Capital Stock",
-          "weight_pct": 4.15
+          "weight_pct": 4.23
         },
         {
           "rank": 8,
           "ticker": "META",
           "name": "Meta Platforms, Inc. Class A Common Stock",
-          "weight_pct": 4.03
+          "weight_pct": 4.04
         },
         {
           "rank": 9,
           "ticker": "AVGO",
           "name": "Broadcom Inc. Common Stock",
-          "weight_pct": 3.95
+          "weight_pct": 3.83
         },
         {
           "rank": 10,
           "ticker": "TSLA",
           "name": "Tesla, Inc. Common Stock",
-          "weight_pct": 3.93
+          "weight_pct": 3.75
         }
       ],
-      "top3_weight_pct": 34.18,
-      "top10_weight_pct": 66.2,
+      "top3_weight_pct": 34.62,
+      "top10_weight_pct": 66.59,
       "source": "slickcharts_nasdaq100",
       "status": "LIVE",
-      "observed_at_kst": "2026-11-04T10:15:00+09:00"
+      "observed_at_kst": "2026-11-05T10:26:23+09:00"
     },
     "fear_greed": {
       "score": 27.3,
@@ -740,7 +740,7 @@
     },
     {
       "market_date_us": "2026-11-04",
-      "generated_kst": "2026-11-05T09:57:43+09:00",
+      "generated_kst": "2026-11-05T10:26:26+09:00",
       "snapshot_status": "FINAL",
       "ndx": 28437.16601562,
       "dxy": 101.49199677,
@@ -750,7 +750,7 @@
       "vix": 16.61000061,
       "breadth_ratio": null,
       "breadth_proxy_ratio": 0.7272727272727273,
-      "top10_weight_pct": 66.2,
+      "top10_weight_pct": 66.59,
       "fear_greed": 27.3,
       "risk": "RISK_ON"
     }
@@ -777,27 +777,27 @@
     "finviz_sp500_map": {
       "url": "https://finviz.com/map?t=sec",
       "status": "WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-05T09:57:43+09:00"
+      "observed_at_kst": "2026-11-05T10:26:26+09:00"
     },
     "finviz_calendar": {
       "url": "https://finviz.com/calendar.ashx",
       "status": "OBSERVATORY_CALENDAR_AVAILABLE_WEB_CROSSCHECK_REQUIRED",
-      "observed_at_kst": "2026-11-05T09:57:43+09:00"
+      "observed_at_kst": "2026-11-05T10:26:26+09:00"
     },
     "tradingview": {
       "url": "https://kr.tradingview.com/",
       "status": "OBSERVATORY_FALLBACK_WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-05T09:57:43+09:00"
+      "observed_at_kst": "2026-11-05T10:26:26+09:00"
     },
     "slickcharts_nasdaq100": {
       "url": "https://www.slickcharts.com/nasdaq100",
       "status": "LIVE",
-      "observed_at_kst": "2026-11-05T09:57:43+09:00"
+      "observed_at_kst": "2026-11-05T10:26:26+09:00"
     },
     "cnn_fear_greed": {
       "url": "https://edition.cnn.com/markets/fear-and-greed",
       "status": "OBSERVATORY_CANONICAL",
-      "observed_at_kst": "2026-11-05T09:57:43+09:00"
+      "observed_at_kst": "2026-11-05T10:26:26+09:00"
     }
   },
   "usage_contract": {
