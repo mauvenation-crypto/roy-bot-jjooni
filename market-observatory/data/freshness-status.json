@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-05T21:47:29+09:00",
+  "generated_kst": "2026-11-05T21:47:30+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
@@ -115,7 +115,7 @@
       "state": "STALE",
       "generated_kst": "2026-11-05T20:38:37+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=4152s · ETHUSD age=4152s",
+      "detail": "BTCUSD age=4153s · ETHUSD age=4153s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
@@ -214,7 +214,7 @@
     "audit": {
       "label": "Full Data Audit",
       "state": "WARN",
-      "generated_kst": "2026-11-05T21:47:29+09:00",
+      "generated_kst": "2026-11-05T21:47:30+09:00",
       "as_of": "2026-11-04",
       "detail": "critical=0 · warnings=3",
       "source": "data-audit.json",
