@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_DAILY_MARKET_PULSE_V1",
-  "generated_kst": "2026-11-05T20:38:39+09:00",
+  "generated_kst": "2026-11-05T20:38:42+09:00",
   "market_date_us": "2026-11-04",
   "snapshot_status": "FINAL",
   "session_gate": {
@@ -156,16 +156,16 @@
         "source": "OBSERVATORY_CANONICAL"
       },
       "dxy": {
-        "value": 101.56199646,
-        "market_date": "2026-11-05",
-        "change_pct": 0.05122088356208643,
+        "value": 101.51000214,
+        "market_date": "2026-11-04",
+        "change_pct": -0.3533921667632445,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
       "usdkrw": {
-        "value": 1343.18005371,
+        "value": 1340.44995117,
         "market_date": "2026-11-04",
-        "change_pct": 0.020852579857755238,
+        "change_pct": -0.1824464364781231,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
@@ -249,7 +249,7 @@
       "observed_at_kst": "2026-11-05T10:26:23+09:00"
     },
     "fear_greed": {
-      "score": 34.8,
+      "score": 27.3,
       "status": "OBSERVATORY_CANONICAL",
       "market_date": "2026-11-05"
     },
@@ -311,7 +311,7 @@
     "breadth": "BROAD",
     "breadth_basis": "SECTOR_MA20_PROXY",
     "rates_pressure": "STABLE",
-    "usd_pressure": "STABLE",
+    "usd_pressure": "EASING",
     "score": 3,
     "inputs_used": [
       "NDX_D1",
@@ -740,18 +740,18 @@
     },
     {
       "market_date_us": "2026-11-04",
-      "generated_kst": "2026-11-05T20:38:39+09:00",
+      "generated_kst": "2026-11-05T20:38:42+09:00",
       "snapshot_status": "FINAL",
       "ndx": 28437.16992188,
-      "dxy": 101.56199646,
-      "usdkrw": 1343.18005371,
+      "dxy": 101.51000214,
+      "usdkrw": 1340.44995117,
       "us10y": 4.9,
       "sp500": 7688.62011719,
       "vix": 16.61000061,
       "breadth_ratio": null,
       "breadth_proxy_ratio": 0.7272727272727273,
       "top10_weight_pct": 66.59,
-      "fear_greed": 34.8,
+      "fear_greed": 27.3,
       "risk": "RISK_ON"
     }
   ],
@@ -777,27 +777,27 @@
     "finviz_sp500_map": {
       "url": "https://finviz.com/map?t=sec",
       "status": "WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-05T20:38:39+09:00"
+      "observed_at_kst": "2026-11-05T20:38:42+09:00"
     },
     "finviz_calendar": {
       "url": "https://finviz.com/calendar.ashx",
       "status": "OBSERVATORY_CALENDAR_AVAILABLE_WEB_CROSSCHECK_REQUIRED",
-      "observed_at_kst": "2026-11-05T20:38:39+09:00"
+      "observed_at_kst": "2026-11-05T20:38:42+09:00"
     },
     "tradingview": {
       "url": "https://kr.tradingview.com/",
       "status": "OBSERVATORY_FALLBACK_WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-05T20:38:39+09:00"
+      "observed_at_kst": "2026-11-05T20:38:42+09:00"
     },
     "slickcharts_nasdaq100": {
       "url": "https://www.slickcharts.com/nasdaq100",
       "status": "LIVE",
-      "observed_at_kst": "2026-11-05T20:38:39+09:00"
+      "observed_at_kst": "2026-11-05T20:38:42+09:00"
     },
     "cnn_fear_greed": {
       "url": "https://edition.cnn.com/markets/fear-and-greed",
       "status": "OBSERVATORY_CANONICAL",
-      "observed_at_kst": "2026-11-05T20:38:39+09:00"
+      "observed_at_kst": "2026-11-05T20:38:42+09:00"
     }
   },
   "usage_contract": {
