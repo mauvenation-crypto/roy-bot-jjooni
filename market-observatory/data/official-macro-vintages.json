@@ -5067,7 +5067,16 @@
         "series_identity": "301Y013/M/000000",
         "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/301Y013/M/202609/202609/000000"
       }
+    ],
+    "US_FED_FUNDS|2026-11-05": [
+      {
+        "version": "baseline_import",
+        "value": 3.875,
+        "captured_kst": "2026-11-06T05:17:48+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
+      }
     ]
   },
-  "updated_kst": "2026-11-05T21:46:36+09:00"
+  "updated_kst": "2026-11-06T05:17:48+09:00"
 }
