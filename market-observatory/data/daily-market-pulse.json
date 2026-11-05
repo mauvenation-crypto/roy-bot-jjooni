@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_DAILY_MARKET_PULSE_V1",
-  "generated_kst": "2026-11-05T21:48:04+09:00",
+  "generated_kst": "2026-11-06T00:27:43+09:00",
   "market_date_us": "2026-11-04",
   "snapshot_status": "FINAL",
   "session_gate": {
@@ -156,16 +156,16 @@
         "source": "OBSERVATORY_CANONICAL"
       },
       "dxy": {
-        "value": 101.51000214,
-        "market_date": "2026-11-04",
-        "change_pct": -0.3533921667632445,
+        "value": 101.60500336,
+        "market_date": "2026-11-05",
+        "change_pct": 0.09358803861414522,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
       "usdkrw": {
-        "value": 1340.44995117,
+        "value": 1351.88000488,
         "market_date": "2026-11-04",
-        "change_pct": -0.1824464364781231,
+        "change_pct": 0.6687005962298098,
         "change_bp": null,
         "source": "OBSERVATORY_CANONICAL"
       },
@@ -249,33 +249,11 @@
       "observed_at_kst": "2026-11-05T10:26:23+09:00"
     },
     "fear_greed": {
-      "score": 27.3,
+      "score": 25.0,
       "status": "OBSERVATORY_CANONICAL",
       "market_date": "2026-11-05"
     },
     "calendar": [
-      {
-        "datetime_kst": "2026-11-05T22:30+09:00",
-        "country": "US",
-        "title": "Productivity and Costs",
-        "importance": 2,
-        "previous": "1.4%",
-        "consensus": "2.8%",
-        "actual": null,
-        "source": "BLS",
-        "source_url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
-      },
-      {
-        "datetime_kst": "2026-11-05T22:30+09:00",
-        "country": "US",
-        "title": "U.S. Initial Jobless Claims",
-        "importance": 2,
-        "previous": "194K",
-        "consensus": "197K",
-        "actual": null,
-        "source": "U.S. Department of Labor",
-        "source_url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
-      },
       {
         "datetime_kst": "2026-11-06T22:30+09:00",
         "country": "US",
@@ -311,7 +289,7 @@
     "breadth": "BROAD",
     "breadth_basis": "SECTOR_MA20_PROXY",
     "rates_pressure": "STABLE",
-    "usd_pressure": "EASING",
+    "usd_pressure": "STABLE",
     "score": 3,
     "inputs_used": [
       "NDX_D1",
@@ -740,18 +718,18 @@
     },
     {
       "market_date_us": "2026-11-04",
-      "generated_kst": "2026-11-05T21:48:04+09:00",
+      "generated_kst": "2026-11-06T00:27:43+09:00",
       "snapshot_status": "FINAL",
       "ndx": 28437.16992188,
-      "dxy": 101.51000214,
-      "usdkrw": 1340.44995117,
+      "dxy": 101.60500336,
+      "usdkrw": 1351.88000488,
       "us10y": 4.9,
       "sp500": 7688.62011719,
       "vix": 16.61000061,
       "breadth_ratio": null,
       "breadth_proxy_ratio": 0.7272727272727273,
       "top10_weight_pct": 66.59,
-      "fear_greed": 27.3,
+      "fear_greed": 25.0,
       "risk": "RISK_ON"
     }
   ],
@@ -777,27 +755,27 @@
     "finviz_sp500_map": {
       "url": "https://finviz.com/map?t=sec",
       "status": "WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-05T21:48:04+09:00"
+      "observed_at_kst": "2026-11-06T00:27:43+09:00"
     },
     "finviz_calendar": {
       "url": "https://finviz.com/calendar.ashx",
       "status": "OBSERVATORY_CALENDAR_AVAILABLE_WEB_CROSSCHECK_REQUIRED",
-      "observed_at_kst": "2026-11-05T21:48:04+09:00"
+      "observed_at_kst": "2026-11-06T00:27:43+09:00"
     },
     "tradingview": {
       "url": "https://kr.tradingview.com/",
       "status": "OBSERVATORY_FALLBACK_WEB_VERIFICATION_REQUIRED",
-      "observed_at_kst": "2026-11-05T21:48:04+09:00"
+      "observed_at_kst": "2026-11-06T00:27:43+09:00"
     },
     "slickcharts_nasdaq100": {
       "url": "https://www.slickcharts.com/nasdaq100",
       "status": "LIVE",
-      "observed_at_kst": "2026-11-05T21:48:04+09:00"
+      "observed_at_kst": "2026-11-06T00:27:43+09:00"
     },
     "cnn_fear_greed": {
       "url": "https://edition.cnn.com/markets/fear-and-greed",
       "status": "OBSERVATORY_CANONICAL",
-      "observed_at_kst": "2026-11-05T21:48:04+09:00"
+      "observed_at_kst": "2026-11-06T00:27:43+09:00"
     }
   },
   "usage_contract": {
