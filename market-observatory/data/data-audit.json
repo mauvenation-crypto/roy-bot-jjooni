@@ -1,9 +1,9 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-05T12:28:52+09:00",
+  "generated_kst": "2026-11-05T12:28:57+09:00",
   "overall": "WARN",
   "critical_count": 0,
-  "warning_count": 4,
+  "warning_count": 1,
   "observatory_session": "2026-11-04",
   "file_status": {
     "observatory": {
@@ -68,12 +68,11 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-05T12:28:51+09:00",
+      "generated_kst": "2026-11-05T11:45:26+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
         "kr_rates",
-        "crypto",
         "calendar",
         "audit"
       ]
@@ -466,7 +465,7 @@
       "published_source_status": "LIVE"
     },
     "crypto": {
-      "state": "STALE",
+      "state": "LIVE",
       "anchor": null,
       "allow_lag_days": 0,
       "critical": false,
@@ -474,17 +473,17 @@
         "BTCUSD": {
           "count": 1101,
           "last_date": "2026-11-05",
-          "last_value": 80649.0,
+          "last_value": 80639.0,
           "group": "crypto",
-          "latest_value": 80649.0,
+          "latest_value": 80639.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1101,
           "last_date": "2026-11-05",
-          "last_value": 2428.51,
+          "last_value": 2430.93,
           "group": "crypto",
-          "latest_value": 2428.51,
+          "latest_value": 2430.93,
           "latest_matches": true
         }
       },
@@ -526,18 +525,18 @@
   },
   "crypto_status": {
     "BTCUSD": {
-      "status": "STALE",
+      "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-05T11:21:29+09:00",
-      "current_quote_age_seconds": 4043,
-      "captured_quote_age_seconds": 2
+      "quote_as_of_kst": "2026-11-05T12:28:03+09:00",
+      "current_quote_age_seconds": 54,
+      "captured_quote_age_seconds": 53
     },
     "ETHUSD": {
-      "status": "STALE",
+      "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-05T11:21:09+09:00",
-      "current_quote_age_seconds": 4063,
-      "captured_quote_age_seconds": 22
+      "quote_as_of_kst": "2026-11-05T12:28:03+09:00",
+      "current_quote_age_seconds": 54,
+      "captured_quote_age_seconds": 53
     }
   },
   "issues": [
@@ -545,21 +544,6 @@
       "code": "GROUP_KR_RATES_STALE",
       "severity": "WARN",
       "detail": "anchor=2026-11-05 dates=KR3Y:2026-11-04,KR5Y:2026-11-04,KR10Y:2026-11-04,KR20Y:2026-11-04,KR30Y:2026-11-04,KR_3S10S:2026-11-04"
-    },
-    {
-      "code": "GROUP_CRYPTO_STALE",
-      "severity": "WARN",
-      "detail": "anchor=None dates=BTCUSD:2026-11-05,ETHUSD:2026-11-05"
-    },
-    {
-      "code": "CRYPTO_BTCUSD_STALE",
-      "severity": "WARN",
-      "detail": "{'status': 'STALE', 'producer_status': 'LIVE', 'quote_as_of_kst': '2026-11-05T11:21:29+09:00', 'current_quote_age_seconds': 4043, 'captured_quote_age_seconds': 2}"
-    },
-    {
-      "code": "CRYPTO_ETHUSD_STALE",
-      "severity": "WARN",
-      "detail": "{'status': 'STALE', 'producer_status': 'LIVE', 'quote_as_of_kst': '2026-11-05T11:21:09+09:00', 'current_quote_age_seconds': 4063, 'captured_quote_age_seconds': 22}"
     }
   ],
   "contracts": {
