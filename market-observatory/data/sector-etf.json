@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_SECTOR_ETF_V1",
-  "generated_kst": "2026-11-06T00:41:09+09:00",
+  "generated_kst": "2026-11-06T07:06:35+09:00",
   "as_of_date": "2026-11-05",
   "read_only": true,
   "contains_account_data": false,
@@ -10,7 +10,7 @@
   "daily_bar_contract": "PER_MARKET_COMPLETED_CUTOFF_V1",
   "completed_cutoffs": {
     "KR": "2026-11-05",
-    "US": "2026-11-04"
+    "US": "2026-11-05"
   },
   "source_contract": "YAHOO_PUBLIC_COMPLETED_DAILY_REFERENCE",
   "horizons_sessions": [
@@ -25,81 +25,81 @@
     "SPY": {
       "ticker": "SPY",
       "name": "SPDR S&P 500 ETF Trust",
-      "price": 766.81,
-      "ytd_pct": 12.2429,
-      "ma20": 767.574,
-      "ma60": 767.4412,
-      "vs_ma20_pct": -0.0995,
-      "vs_ma60_pct": -0.0822,
-      "high20_gap_pct": -1.5105,
+      "price": 733.0,
+      "ytd_pct": 7.2939,
+      "ma20": 765.5275,
+      "ma60": 766.783,
+      "vs_ma20_pct": -4.249,
+      "vs_ma60_pct": -4.4058,
+      "high20_gap_pct": -5.853,
       "above_ma20": false,
       "above_ma60": false,
-      "observed_date": "2026-11-04",
-      "ret_1d_pct": 1.6518,
-      "ret_5d_pct": -0.7121,
-      "ret_10d_pct": -0.8123,
-      "ret_20d_pct": -1.3394,
-      "ret_50d_pct": 0.1175,
-      "ret_100d_pct": 3.3785,
+      "observed_date": "2026-11-05",
+      "ret_1d_pct": -4.4092,
+      "ret_5d_pct": -4.726,
+      "ret_10d_pct": -4.0526,
+      "ret_20d_pct": -5.2886,
+      "ret_50d_pct": -4.3181,
+      "ret_100d_pct": -2.892,
       "calendar_returns": {
         "1": {
-          "pct": -0.3677,
-          "base_date": "2026-10-02",
-          "end_date": "2026-11-04"
+          "pct": -5.3986,
+          "base_date": "2026-10-05",
+          "end_date": "2026-11-05"
         },
         "3": {
-          "pct": -0.586,
-          "base_date": "2026-08-04",
-          "end_date": "2026-11-04"
+          "pct": -4.7792,
+          "base_date": "2026-08-05",
+          "end_date": "2026-11-05"
         },
         "12": {
-          "pct": 13.5611,
-          "base_date": "2025-11-04",
-          "end_date": "2026-11-04"
+          "pct": 8.1791,
+          "base_date": "2025-11-05",
+          "end_date": "2026-11-05"
         }
       },
-      "ret_1m_pct": -1.5762,
-      "ret_3m_pct": -0.2277,
+      "ret_1m_pct": -5.6895,
+      "ret_3m_pct": -5.2065,
       "source": "Yahoo public daily"
     },
     "QQQ": {
       "ticker": "QQQ",
       "name": "Invesco QQQ Trust",
-      "price": 691.95,
-      "ytd_pct": 12.8572,
-      "ma20": 717.424,
-      "ma60": 722.8265,
-      "vs_ma20_pct": -3.5508,
-      "vs_ma60_pct": -4.2716,
-      "high20_gap_pct": -7.896,
+      "price": 647.05,
+      "ytd_pct": 5.534,
+      "ma20": 712.3975,
+      "ma60": 721.549,
+      "vs_ma20_pct": -9.1729,
+      "vs_ma60_pct": -10.3249,
+      "high20_gap_pct": -13.8725,
       "above_ma20": false,
       "above_ma60": false,
-      "observed_date": "2026-11-04",
-      "ret_1d_pct": 0.9733,
-      "ret_5d_pct": -4.6389,
-      "ret_10d_pct": -4.5849,
-      "ret_20d_pct": -8.6812,
-      "ret_50d_pct": -2.641,
-      "ret_100d_pct": -4.0744,
+      "observed_date": "2026-11-05",
+      "ret_1d_pct": -6.4889,
+      "ret_5d_pct": -9.5465,
+      "ret_10d_pct": -8.1508,
+      "ret_20d_pct": -13.4474,
+      "ret_50d_pct": -9.0417,
+      "ret_100d_pct": -13.0309,
       "calendar_returns": {
         "1": {
-          "pct": -7.6883,
-          "base_date": "2026-10-02",
-          "end_date": "2026-11-04"
+          "pct": -14.434,
+          "base_date": "2026-10-05",
+          "end_date": "2026-11-05"
         },
         "3": {
-          "pct": -4.407,
-          "base_date": "2026-08-04",
-          "end_date": "2026-11-04"
+          "pct": -9.7937,
+          "base_date": "2026-08-05",
+          "end_date": "2026-11-05"
         },
         "12": {
-          "pct": 11.74,
-          "base_date": "2025-11-04",
-          "end_date": "2026-11-04"
+          "pct": 3.8137,
+          "base_date": "2025-11-05",
+          "end_date": "2026-11-05"
         }
       },
-      "ret_1m_pct": -8.9132,
-      "ret_3m_pct": -3.1764,
+      "ret_1m_pct": -14.6068,
+      "ret_3m_pct": -10.5086,
       "source": "Yahoo public daily"
     }
   },
@@ -107,65 +107,65 @@
     "classic_count": 11,
     "priced_count": 46,
     "total_count": 46,
-    "classic_above_ma20": 8,
+    "classic_above_ma20": 7,
     "leaders_20d_rs_spy": [
       {
-        "ticker": "XLP",
-        "value": 13.8731
+        "ticker": "XLV",
+        "value": 15.2494
       },
       {
-        "ticker": "XLV",
-        "value": 13.6906
+        "ticker": "XLP",
+        "value": 14.6748
       },
       {
         "ticker": "XLRE",
-        "value": 12.5546
+        "value": 13.7341
       }
     ],
     "laggards_20d_rs_spy": [
       {
         "ticker": "XLK",
-        "value": -11.0197
+        "value": -12.6101
       },
       {
         "ticker": "XLC",
-        "value": -4.323
+        "value": -1.6089
       },
       {
         "ticker": "XLE",
-        "value": 1.5919
+        "value": -0.2448
       }
     ],
-    "growth_defense_spread_20d_pct": -13.0112,
+    "growth_defense_spread_20d_pct": -14.7549,
     "leaders_1m_rs_spy": [
       {
-        "ticker": "XLV",
-        "value": 15.0839
+        "ticker": "XLP",
+        "value": 17.3786
       },
       {
-        "ticker": "XLP",
-        "value": 13.9723
+        "ticker": "XLV",
+        "value": 15.2269
       },
       {
         "ticker": "XLRE",
-        "value": 11.3572
+        "value": 14.8835
       }
     ],
     "laggards_1m_rs_spy": [
       {
         "ticker": "XLK",
-        "value": -11.0476
+        "value": -13.6809
       },
       {
         "ticker": "XLC",
-        "value": -4.4157
+        "value": -0.5302
       },
       {
         "ticker": "XLI",
-        "value": 0.3406
+        "value": 2.49
       }
     ],
-    "growth_defense_spread_1m_pct": -13.6583
+    "growth_defense_spread_1m_pct": -15.4673
   },
   "groups": [
     {
@@ -965,41 +965,41 @@
       "label": "미국 벤치마크 노출",
       "rows": [
         {
-          "price": 691.95,
-          "ytd_pct": 12.8572,
-          "ma20": 717.424,
-          "ma60": 722.8265,
-          "vs_ma20_pct": -3.5508,
-          "vs_ma60_pct": -4.2716,
-          "high20_gap_pct": -7.896,
+          "price": 647.05,
+          "ytd_pct": 5.534,
+          "ma20": 712.3975,
+          "ma60": 721.549,
+          "vs_ma20_pct": -9.1729,
+          "vs_ma60_pct": -10.3249,
+          "high20_gap_pct": -13.8725,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 0.9733,
-          "ret_5d_pct": -4.6389,
-          "ret_10d_pct": -4.5849,
-          "ret_20d_pct": -8.6812,
-          "ret_50d_pct": -2.641,
-          "ret_100d_pct": -4.0744,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -6.4889,
+          "ret_5d_pct": -9.5465,
+          "ret_10d_pct": -8.1508,
+          "ret_20d_pct": -13.4474,
+          "ret_50d_pct": -9.0417,
+          "ret_100d_pct": -13.0309,
           "calendar_returns": {
             "1": {
-              "pct": -7.6883,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -14.434,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -4.407,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -9.7937,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 11.74,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 3.8137,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -8.9132,
-          "ret_3m_pct": -3.1764,
+          "ret_1m_pct": -14.6068,
+          "ret_3m_pct": -10.5086,
           "ticker": "QQQ",
           "name": "Invesco QQQ Trust",
           "group": "미국 벤치마크 노출",
@@ -1008,20 +1008,20 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -0.6785,
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -2.0797,
           "rs_qqq_1d_pct": 0.0,
-          "rs_spy_5d_pct": -3.9268,
+          "rs_spy_5d_pct": -4.8205,
           "rs_qqq_5d_pct": 0.0,
-          "rs_spy_10d_pct": -3.7726,
+          "rs_spy_10d_pct": -4.0982,
           "rs_qqq_10d_pct": 0.0,
-          "rs_spy_20d_pct": -7.3418,
+          "rs_spy_20d_pct": -8.1588,
           "rs_qqq_20d_pct": 0.0,
-          "rs_spy_50d_pct": -2.7585,
+          "rs_spy_50d_pct": -4.7236,
           "rs_qqq_50d_pct": 0.0,
-          "rs_spy_100d_pct": -7.4529,
+          "rs_spy_100d_pct": -10.1389,
           "rs_qqq_100d_pct": 0.0,
-          "rs_spy_1m_pct": -7.337,
+          "rs_spy_1m_pct": -8.9173,
           "rs_qqq_1m_pct": 0.0
         }
       ]
@@ -1031,41 +1031,41 @@
       "label": "S&P 500 섹터",
       "rows": [
         {
-          "price": 176.5,
-          "ytd_pct": 22.3146,
-          "ma20": 187.0045,
-          "ma60": 188.734,
-          "vs_ma20_pct": -5.6172,
-          "vs_ma60_pct": -6.4821,
-          "high20_gap_pct": -11.2084,
+          "price": 162.38,
+          "ytd_pct": 12.5295,
+          "ma20": 185.2345,
+          "ma60": 188.2927,
+          "vs_ma20_pct": -12.3381,
+          "vs_ma60_pct": -13.7619,
+          "high20_gap_pct": -18.3117,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -0.0057,
-          "ret_5d_pct": -7.5916,
-          "ret_10d_pct": -6.3859,
-          "ret_20d_pct": -12.3591,
-          "ret_50d_pct": -2.8832,
-          "ret_100d_pct": -4.4913,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -8.0,
+          "ret_5d_pct": -13.9663,
+          "ret_10d_pct": -10.9466,
+          "ret_20d_pct": -17.8987,
+          "ret_50d_pct": -11.1901,
+          "ret_100d_pct": -15.3345,
           "calendar_returns": {
             "1": {
-              "pct": -11.6661,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -19.1858,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -5.5645,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -12.6567,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 20.0925,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 10.0546,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -12.6238,
-          "ret_3m_pct": -4.7645,
+          "ret_1m_pct": -19.3704,
+          "ret_3m_pct": -13.6139,
           "ticker": "XLK",
           "name": "Technology",
           "group": "S&P 500 섹터",
@@ -1074,58 +1074,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -1.6575,
-          "rs_qqq_1d_pct": -0.979,
-          "rs_spy_5d_pct": -6.8795,
-          "rs_qqq_5d_pct": -2.9527,
-          "rs_spy_10d_pct": -5.5736,
-          "rs_qqq_10d_pct": -1.801,
-          "rs_spy_20d_pct": -11.0197,
-          "rs_qqq_20d_pct": -3.6779,
-          "rs_spy_50d_pct": -3.0007,
-          "rs_qqq_50d_pct": -0.2422,
-          "rs_spy_100d_pct": -7.8698,
-          "rs_qqq_100d_pct": -0.4169,
-          "rs_spy_1m_pct": -11.0476,
-          "rs_qqq_1m_pct": -3.7106
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -3.5908,
+          "rs_qqq_1d_pct": -1.5111,
+          "rs_spy_5d_pct": -9.2403,
+          "rs_qqq_5d_pct": -4.4198,
+          "rs_spy_10d_pct": -6.894,
+          "rs_qqq_10d_pct": -2.7958,
+          "rs_spy_20d_pct": -12.6101,
+          "rs_qqq_20d_pct": -4.4513,
+          "rs_spy_50d_pct": -6.872,
+          "rs_qqq_50d_pct": -2.1484,
+          "rs_spy_100d_pct": -12.4425,
+          "rs_qqq_100d_pct": -2.3036,
+          "rs_spy_1m_pct": -13.6809,
+          "rs_qqq_1m_pct": -4.7636
         },
         {
-          "price": 104.96,
-          "ytd_pct": -10.2139,
-          "ma20": 107.014,
-          "ma60": 110.3555,
-          "vs_ma20_pct": -1.9194,
-          "vs_ma60_pct": -4.8892,
-          "high20_gap_pct": -6.6524,
+          "price": 104.34,
+          "ytd_pct": -10.7442,
+          "ma20": 106.6275,
+          "ma60": 110.2567,
+          "vs_ma20_pct": -2.1453,
+          "vs_ma60_pct": -5.3663,
+          "high20_gap_pct": -7.2038,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 3.47,
-          "ret_5d_pct": 1.7646,
-          "ret_10d_pct": -3.6799,
-          "ret_20d_pct": -5.6624,
-          "ret_50d_pct": -7.2628,
-          "ret_100d_pct": -5.9919,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -0.5907,
+          "ret_5d_pct": 3.0926,
+          "ret_10d_pct": -2.8673,
+          "ret_20d_pct": -6.8975,
+          "ret_50d_pct": -7.3439,
+          "ret_100d_pct": -6.9971,
           "calendar_returns": {
             "1": {
-              "pct": -4.8586,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -6.5138,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -6.3192,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -5.8898,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": -6.9586,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": -8.0056,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -5.9919,
-          "ret_3m_pct": -5.5945,
+          "ret_1m_pct": -6.2197,
+          "ret_3m_pct": -6.2112,
           "ticker": "XLC",
           "name": "Communication Services",
           "group": "S&P 500 섹터",
@@ -1134,58 +1134,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 1.8182,
-          "rs_qqq_1d_pct": 2.4967,
-          "rs_spy_5d_pct": 2.4767,
-          "rs_qqq_5d_pct": 6.4035,
-          "rs_spy_10d_pct": -2.8676,
-          "rs_qqq_10d_pct": 0.905,
-          "rs_spy_20d_pct": -4.323,
-          "rs_qqq_20d_pct": 3.0188,
-          "rs_spy_50d_pct": -7.3803,
-          "rs_qqq_50d_pct": -4.6218,
-          "rs_spy_100d_pct": -9.3704,
-          "rs_qqq_100d_pct": -1.9175,
-          "rs_spy_1m_pct": -4.4157,
-          "rs_qqq_1m_pct": 2.9213
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 3.8185,
+          "rs_qqq_1d_pct": 5.8982,
+          "rs_spy_5d_pct": 7.8186,
+          "rs_qqq_5d_pct": 12.6391,
+          "rs_spy_10d_pct": 1.1853,
+          "rs_qqq_10d_pct": 5.2835,
+          "rs_spy_20d_pct": -1.6089,
+          "rs_qqq_20d_pct": 6.5499,
+          "rs_spy_50d_pct": -3.0258,
+          "rs_qqq_50d_pct": 1.6978,
+          "rs_spy_100d_pct": -4.1051,
+          "rs_qqq_100d_pct": 6.0338,
+          "rs_spy_1m_pct": -0.5302,
+          "rs_qqq_1m_pct": 8.3871
         },
         {
-          "price": 122.33,
-          "ytd_pct": 3.3629,
-          "ma20": 114.73,
-          "ma60": 114.043,
-          "vs_ma20_pct": 6.6242,
-          "vs_ma60_pct": 7.2666,
-          "high20_gap_pct": 0.0,
+          "price": 117.64,
+          "ytd_pct": -0.5999,
+          "ma20": 115.0265,
+          "ma60": 114.0388,
+          "vs_ma20_pct": 2.2721,
+          "vs_ma60_pct": 3.1578,
+          "high20_gap_pct": -3.8339,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 4.2615,
-          "ret_5d_pct": 6.0695,
-          "ret_10d_pct": 5.8859,
-          "ret_20d_pct": 9.8509,
-          "ret_50d_pct": 3.7134,
-          "ret_100d_pct": 4.9142,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -3.8339,
+          "ret_5d_pct": 1.2392,
+          "ret_10d_pct": 2.2868,
+          "ret_20d_pct": 5.3084,
+          "ret_50d_pct": 0.4097,
+          "ret_100d_pct": -0.7843,
           "calendar_returns": {
             "1": {
-              "pct": 11.1687,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": 6.5387,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": 3.4153,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -0.8429,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 2.7293,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": -2.3977,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 9.497,
-          "ret_3m_pct": 3.5817,
+          "ret_1m_pct": 5.6394,
+          "ret_3m_pct": -1.8522,
           "ticker": "XLY",
           "name": "Consumer Discretionary",
           "group": "S&P 500 섹터",
@@ -1194,58 +1194,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 2.6097,
-          "rs_qqq_1d_pct": 3.2882,
-          "rs_spy_5d_pct": 6.7816,
-          "rs_qqq_5d_pct": 10.7084,
-          "rs_spy_10d_pct": 6.6982,
-          "rs_qqq_10d_pct": 10.4708,
-          "rs_spy_20d_pct": 11.1903,
-          "rs_qqq_20d_pct": 18.5321,
-          "rs_spy_50d_pct": 3.5959,
-          "rs_qqq_50d_pct": 6.3544,
-          "rs_spy_100d_pct": 1.5357,
-          "rs_qqq_100d_pct": 8.9886,
-          "rs_spy_1m_pct": 11.0732,
-          "rs_qqq_1m_pct": 18.4102
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 0.5753,
+          "rs_qqq_1d_pct": 2.655,
+          "rs_spy_5d_pct": 5.9652,
+          "rs_qqq_5d_pct": 10.7857,
+          "rs_spy_10d_pct": 6.3394,
+          "rs_qqq_10d_pct": 10.4376,
+          "rs_spy_20d_pct": 10.597,
+          "rs_qqq_20d_pct": 18.7558,
+          "rs_spy_50d_pct": 4.7278,
+          "rs_qqq_50d_pct": 9.4514,
+          "rs_spy_100d_pct": 2.1077,
+          "rs_qqq_100d_pct": 12.2466,
+          "rs_spy_1m_pct": 11.3289,
+          "rs_qqq_1m_pct": 20.2462
         },
         {
-          "price": 59.2,
-          "ytd_pct": 7.7735,
-          "ma20": 55.947,
-          "ma60": 56.2573,
-          "vs_ma20_pct": 5.8144,
-          "vs_ma60_pct": 5.2307,
-          "high20_gap_pct": 0.0,
+          "price": 57.5,
+          "ytd_pct": 4.6787,
+          "ma20": 56.1105,
+          "ma60": 56.2503,
+          "vs_ma20_pct": 2.4764,
+          "vs_ma60_pct": 2.2216,
+          "high20_gap_pct": -2.8716,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 3.5146,
-          "ret_5d_pct": 5.4694,
-          "ret_10d_pct": 5.6388,
-          "ret_20d_pct": 10.1395,
-          "ret_50d_pct": 1.5263,
-          "ret_100d_pct": 10.9861,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -2.8716,
+          "ret_5d_pct": 0.9835,
+          "ret_10d_pct": 1.5004,
+          "ret_20d_pct": 6.0299,
+          "ret_50d_pct": -1.3045,
+          "ret_100d_pct": 7.3562,
           "calendar_returns": {
             "1": {
-              "pct": 10.6749,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": 6.7186,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": 2.2806,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -0.8621,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 12.934,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 9.3156,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 9.6093,
-          "ret_3m_pct": 2.4044,
+          "ret_1m_pct": 6.9767,
+          "ret_3m_pct": -0.1736,
           "ticker": "XLF",
           "name": "Financials",
           "group": "S&P 500 섹터",
@@ -1254,58 +1254,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 1.8628,
-          "rs_qqq_1d_pct": 2.5413,
-          "rs_spy_5d_pct": 6.1815,
-          "rs_qqq_5d_pct": 10.1083,
-          "rs_spy_10d_pct": 6.4511,
-          "rs_qqq_10d_pct": 10.2237,
-          "rs_spy_20d_pct": 11.4789,
-          "rs_qqq_20d_pct": 18.8207,
-          "rs_spy_50d_pct": 1.4088,
-          "rs_qqq_50d_pct": 4.1673,
-          "rs_spy_100d_pct": 7.6076,
-          "rs_qqq_100d_pct": 15.0605,
-          "rs_spy_1m_pct": 11.1855,
-          "rs_qqq_1m_pct": 18.5225
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 1.5376,
+          "rs_qqq_1d_pct": 3.6173,
+          "rs_spy_5d_pct": 5.7095,
+          "rs_qqq_5d_pct": 10.53,
+          "rs_spy_10d_pct": 5.553,
+          "rs_qqq_10d_pct": 9.6512,
+          "rs_spy_20d_pct": 11.3185,
+          "rs_qqq_20d_pct": 19.4773,
+          "rs_spy_50d_pct": 3.0136,
+          "rs_qqq_50d_pct": 7.7372,
+          "rs_spy_100d_pct": 10.2482,
+          "rs_qqq_100d_pct": 20.3871,
+          "rs_spy_1m_pct": 12.6662,
+          "rs_qqq_1m_pct": 21.5835
         },
         {
-          "price": 169.46,
-          "ytd_pct": 7.2667,
-          "ma20": 168.1345,
-          "ma60": 172.2478,
-          "vs_ma20_pct": 0.7884,
-          "vs_ma60_pct": -1.6185,
-          "high20_gap_pct": -1.0857,
-          "above_ma20": true,
+          "price": 162.47,
+          "ytd_pct": 2.8421,
+          "ma20": 167.838,
+          "ma60": 171.8577,
+          "vs_ma20_pct": -3.1983,
+          "vs_ma60_pct": -5.4625,
+          "high20_gap_pct": -5.1658,
+          "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -1.0857,
-          "ret_5d_pct": 0.5757,
-          "ret_10d_pct": 0.6833,
-          "ret_20d_pct": 0.9652,
-          "ret_50d_pct": -5.0112,
-          "ret_100d_pct": -3.8143,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -4.1249,
+          "ret_5d_pct": -4.5024,
+          "ret_10d_pct": -2.555,
+          "ret_20d_pct": -3.5214,
+          "ret_50d_pct": -9.9091,
+          "ret_100d_pct": -9.0721,
           "calendar_returns": {
             "1": {
-              "pct": -0.2883,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -4.4856,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -9.088,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -12.8146,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 11.0412,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 6.0509,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -1.2356,
-          "ret_3m_pct": -8.281,
+          "ret_1m_pct": -3.1995,
+          "ret_3m_pct": -12.2637,
           "ticker": "XLI",
           "name": "Industrials",
           "group": "S&P 500 섹터",
@@ -1314,58 +1314,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -2.7375,
-          "rs_qqq_1d_pct": -2.059,
-          "rs_spy_5d_pct": 1.2878,
-          "rs_qqq_5d_pct": 5.2146,
-          "rs_spy_10d_pct": 1.4956,
-          "rs_qqq_10d_pct": 5.2682,
-          "rs_spy_20d_pct": 2.3046,
-          "rs_qqq_20d_pct": 9.6464,
-          "rs_spy_50d_pct": -5.1287,
-          "rs_qqq_50d_pct": -2.3702,
-          "rs_spy_100d_pct": -7.1928,
-          "rs_qqq_100d_pct": 0.2601,
-          "rs_spy_1m_pct": 0.3406,
-          "rs_qqq_1m_pct": 7.6776
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 0.2843,
+          "rs_qqq_1d_pct": 2.364,
+          "rs_spy_5d_pct": 0.2236,
+          "rs_qqq_5d_pct": 5.0441,
+          "rs_spy_10d_pct": 1.4976,
+          "rs_qqq_10d_pct": 5.5958,
+          "rs_spy_20d_pct": 1.7672,
+          "rs_qqq_20d_pct": 9.926,
+          "rs_spy_50d_pct": -5.591,
+          "rs_qqq_50d_pct": -0.8674,
+          "rs_spy_100d_pct": -6.1801,
+          "rs_qqq_100d_pct": 3.9588,
+          "rs_spy_1m_pct": 2.49,
+          "rs_qqq_1m_pct": 11.4073
         },
         {
-          "price": 63.52,
-          "ytd_pct": 39.1457,
-          "ma20": 67.4635,
-          "ma60": 64.6913,
-          "vs_ma20_pct": -5.8454,
-          "vs_ma60_pct": -1.8106,
-          "high20_gap_pct": -9.2831,
+          "price": 61.63,
+          "ytd_pct": 35.0055,
+          "ma20": 67.283,
+          "ma60": 64.7013,
+          "vs_ma20_pct": -8.4018,
+          "vs_ma60_pct": -4.7469,
+          "high20_gap_pct": -11.9823,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -4.7391,
-          "ret_5d_pct": -7.2023,
-          "ret_10d_pct": -6.8075,
-          "ret_20d_pct": 0.2525,
-          "ret_50d_pct": 2.3526,
-          "ret_100d_pct": 10.3736,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -2.9754,
+          "ret_5d_pct": -10.3042,
+          "ret_10d_pct": -8.7909,
+          "ret_20d_pct": -5.5334,
+          "ret_50d_pct": -1.2814,
+          "ret_100d_pct": 10.9451,
           "calendar_returns": {
             "1": {
-              "pct": 1.1143,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -2.8684,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": 8.5441,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": 7.538,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 45.7048,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 40.9975,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -0.3608,
-          "ret_3m_pct": 9.216,
+          "ret_1m_pct": -2.7304,
+          "ret_3m_pct": 7.1826,
           "ticker": "XLE",
           "name": "Energy",
           "group": "S&P 500 섹터",
@@ -1374,58 +1374,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -6.3909,
-          "rs_qqq_1d_pct": -5.7124,
-          "rs_spy_5d_pct": -6.4902,
-          "rs_qqq_5d_pct": -2.5634,
-          "rs_spy_10d_pct": -5.9952,
-          "rs_qqq_10d_pct": -2.2226,
-          "rs_spy_20d_pct": 1.5919,
-          "rs_qqq_20d_pct": 8.9337,
-          "rs_spy_50d_pct": 2.2351,
-          "rs_qqq_50d_pct": 4.9936,
-          "rs_spy_100d_pct": 6.9951,
-          "rs_qqq_100d_pct": 14.448,
-          "rs_spy_1m_pct": 1.2154,
-          "rs_qqq_1m_pct": 8.5524
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 1.4338,
+          "rs_qqq_1d_pct": 3.5135,
+          "rs_spy_5d_pct": -5.5782,
+          "rs_qqq_5d_pct": -0.7577,
+          "rs_spy_10d_pct": -4.7383,
+          "rs_qqq_10d_pct": -0.6401,
+          "rs_spy_20d_pct": -0.2448,
+          "rs_qqq_20d_pct": 7.914,
+          "rs_spy_50d_pct": 3.0367,
+          "rs_qqq_50d_pct": 7.7603,
+          "rs_spy_100d_pct": 13.8371,
+          "rs_qqq_100d_pct": 23.976,
+          "rs_spy_1m_pct": 2.9591,
+          "rs_qqq_1m_pct": 11.8764
         },
         {
-          "price": 53.9,
-          "ytd_pct": 16.869,
-          "ma20": 51.298,
-          "ma60": 51.2683,
-          "vs_ma20_pct": 5.0723,
-          "vs_ma60_pct": 5.1331,
-          "high20_gap_pct": 0.0,
+          "price": 52.33,
+          "ytd_pct": 13.4649,
+          "ma20": 51.451,
+          "ma60": 51.2642,
+          "vs_ma20_pct": 1.7084,
+          "vs_ma60_pct": 2.0791,
+          "high20_gap_pct": -2.9128,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 2.491,
-          "ret_5d_pct": 3.9337,
-          "ret_10d_pct": 5.0273,
-          "ret_20d_pct": 10.0449,
-          "ret_50d_pct": 0.5972,
-          "ret_100d_pct": 3.2963,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -2.9128,
+          "ret_5d_pct": -0.3807,
+          "ret_10d_pct": 1.2382,
+          "ret_20d_pct": 6.2107,
+          "ret_50d_pct": -2.4967,
+          "ret_100d_pct": -0.3238,
           "calendar_returns": {
             "1": {
-              "pct": 10.3152,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": 5.7172,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": 3.6538,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -0.5889,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 27.2427,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 22.8115,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 8.3853,
-          "ret_3m_pct": 3.3161,
+          "ret_1m_pct": 6.8395,
+          "ret_3m_pct": -1.0026,
           "ticker": "XLB",
           "name": "Materials",
           "group": "S&P 500 섹터",
@@ -1434,58 +1434,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 0.8392,
-          "rs_qqq_1d_pct": 1.5177,
-          "rs_spy_5d_pct": 4.6458,
-          "rs_qqq_5d_pct": 8.5726,
-          "rs_spy_10d_pct": 5.8396,
-          "rs_qqq_10d_pct": 9.6122,
-          "rs_spy_20d_pct": 11.3843,
-          "rs_qqq_20d_pct": 18.7261,
-          "rs_spy_50d_pct": 0.4797,
-          "rs_qqq_50d_pct": 3.2382,
-          "rs_spy_100d_pct": -0.0822,
-          "rs_qqq_100d_pct": 7.3707,
-          "rs_spy_1m_pct": 9.9615,
-          "rs_qqq_1m_pct": 17.2985
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 1.4964,
+          "rs_qqq_1d_pct": 3.5761,
+          "rs_spy_5d_pct": 4.3453,
+          "rs_qqq_5d_pct": 9.1658,
+          "rs_spy_10d_pct": 5.2908,
+          "rs_qqq_10d_pct": 9.389,
+          "rs_spy_20d_pct": 11.4993,
+          "rs_qqq_20d_pct": 19.6581,
+          "rs_spy_50d_pct": 1.8214,
+          "rs_qqq_50d_pct": 6.545,
+          "rs_spy_100d_pct": 2.5682,
+          "rs_qqq_100d_pct": 12.7071,
+          "rs_spy_1m_pct": 12.529,
+          "rs_qqq_1m_pct": 21.4463
         },
         {
-          "price": 189.66,
-          "ytd_pct": 21.96,
-          "ma20": 178.442,
-          "ma60": 172.6347,
-          "vs_ma20_pct": 6.2866,
-          "vs_ma60_pct": 9.8621,
-          "high20_gap_pct": 0.0,
+          "price": 184.91,
+          "ytd_pct": 18.9055,
+          "ma20": 179.2795,
+          "ma60": 172.9092,
+          "vs_ma20_pct": 3.1406,
+          "vs_ma60_pct": 6.9405,
+          "high20_gap_pct": -2.5045,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 3.0649,
-          "ret_5d_pct": 5.5308,
-          "ret_10d_pct": 5.9908,
-          "ret_20d_pct": 12.3512,
-          "ret_50d_pct": 8.1978,
-          "ret_100d_pct": 23.308,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -2.5045,
+          "ret_5d_pct": 0.4727,
+          "ret_10d_pct": 1.9912,
+          "ret_20d_pct": 9.9608,
+          "ret_50d_pct": 6.5518,
+          "ret_100d_pct": 20.9432,
           "calendar_returns": {
             "1": {
-              "pct": 14.1293,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": 10.4798,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": 17.0018,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": 12.6401,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 30.7099,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 26.9463,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 13.5077,
-          "ret_3m_pct": 15.3299,
+          "ret_1m_pct": 9.5374,
+          "ret_3m_pct": 11.6067,
           "ticker": "XLV",
           "name": "Health Care",
           "group": "S&P 500 섹터",
@@ -1494,58 +1494,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 1.4131,
-          "rs_qqq_1d_pct": 2.0916,
-          "rs_spy_5d_pct": 6.2429,
-          "rs_qqq_5d_pct": 10.1697,
-          "rs_spy_10d_pct": 6.8031,
-          "rs_qqq_10d_pct": 10.5757,
-          "rs_spy_20d_pct": 13.6906,
-          "rs_qqq_20d_pct": 21.0324,
-          "rs_spy_50d_pct": 8.0803,
-          "rs_qqq_50d_pct": 10.8388,
-          "rs_spy_100d_pct": 19.9295,
-          "rs_qqq_100d_pct": 27.3824,
-          "rs_spy_1m_pct": 15.0839,
-          "rs_qqq_1m_pct": 22.4209
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 1.9047,
+          "rs_qqq_1d_pct": 3.9844,
+          "rs_spy_5d_pct": 5.1987,
+          "rs_qqq_5d_pct": 10.0192,
+          "rs_spy_10d_pct": 6.0438,
+          "rs_qqq_10d_pct": 10.142,
+          "rs_spy_20d_pct": 15.2494,
+          "rs_qqq_20d_pct": 23.4082,
+          "rs_spy_50d_pct": 10.8699,
+          "rs_qqq_50d_pct": 15.5935,
+          "rs_spy_100d_pct": 23.8352,
+          "rs_qqq_100d_pct": 33.9741,
+          "rs_spy_1m_pct": 15.2269,
+          "rs_qqq_1m_pct": 24.1442
         },
         {
-          "price": 91.94,
-          "ytd_pct": 18.3421,
-          "ma20": 87.37,
-          "ma60": 85.0222,
-          "vs_ma20_pct": 5.2306,
-          "vs_ma60_pct": 8.1365,
-          "high20_gap_pct": 0.0,
+          "price": 91.25,
+          "ytd_pct": 17.454,
+          "ma20": 87.7615,
+          "ma60": 85.125,
+          "vs_ma20_pct": 3.975,
+          "vs_ma60_pct": 7.1953,
+          "high20_gap_pct": -0.7505,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 3.3614,
-          "ret_5d_pct": 5.8729,
-          "ret_10d_pct": 5.5447,
-          "ret_20d_pct": 12.5337,
-          "ret_50d_pct": 6.2645,
-          "ret_100d_pct": 7.1312,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -0.7505,
+          "ret_5d_pct": 3.4815,
+          "ret_10d_pct": 1.4002,
+          "ret_20d_pct": 9.3862,
+          "ret_50d_pct": 5.7726,
+          "ret_100d_pct": 6.7501,
           "calendar_returns": {
             "1": {
-              "pct": 14.1686,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": 12.5987,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": 7.6959,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": 6.9378,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 20.9896,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 20.1606,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 12.3961,
-          "ret_3m_pct": 8.0249,
+          "ret_1m_pct": 11.6891,
+          "ret_3m_pct": 7.2016,
           "ticker": "XLP",
           "name": "Consumer Staples",
           "group": "S&P 500 섹터",
@@ -1554,58 +1554,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 1.7096,
-          "rs_qqq_1d_pct": 2.3881,
-          "rs_spy_5d_pct": 6.585,
-          "rs_qqq_5d_pct": 10.5118,
-          "rs_spy_10d_pct": 6.357,
-          "rs_qqq_10d_pct": 10.1296,
-          "rs_spy_20d_pct": 13.8731,
-          "rs_qqq_20d_pct": 21.2149,
-          "rs_spy_50d_pct": 6.147,
-          "rs_qqq_50d_pct": 8.9055,
-          "rs_spy_100d_pct": 3.7527,
-          "rs_qqq_100d_pct": 11.2056,
-          "rs_spy_1m_pct": 13.9723,
-          "rs_qqq_1m_pct": 21.3093
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 3.6587,
+          "rs_qqq_1d_pct": 5.7384,
+          "rs_spy_5d_pct": 8.2075,
+          "rs_qqq_5d_pct": 13.028,
+          "rs_spy_10d_pct": 5.4528,
+          "rs_qqq_10d_pct": 9.551,
+          "rs_spy_20d_pct": 14.6748,
+          "rs_qqq_20d_pct": 22.8336,
+          "rs_spy_50d_pct": 10.0907,
+          "rs_qqq_50d_pct": 14.8143,
+          "rs_spy_100d_pct": 9.6421,
+          "rs_qqq_100d_pct": 19.781,
+          "rs_spy_1m_pct": 17.3786,
+          "rs_qqq_1m_pct": 26.2959
         },
         {
-          "price": 43.61,
-          "ytd_pct": 0.9958,
-          "ma20": 42.3695,
-          "ma60": 42.1068,
-          "vs_ma20_pct": 2.9278,
-          "vs_ma60_pct": 3.5699,
-          "high20_gap_pct": -0.1374,
+          "price": 43.3,
+          "ytd_pct": 0.2779,
+          "ma20": 42.481,
+          "ma60": 42.0978,
+          "vs_ma20_pct": 1.9279,
+          "vs_ma60_pct": 2.8556,
+          "high20_gap_pct": -0.8473,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 0.4376,
-          "ret_5d_pct": 2.6359,
-          "ret_10d_pct": 3.8333,
-          "ret_20d_pct": 5.9781,
-          "ret_50d_pct": 0.6927,
-          "ret_100d_pct": -2.066,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -0.7108,
+          "ret_5d_pct": 0.3709,
+          "ret_10d_pct": 1.003,
+          "ret_20d_pct": 5.4298,
+          "ret_50d_pct": -0.4826,
+          "ret_100d_pct": -3.2186,
           "calendar_returns": {
             "1": {
-              "pct": 9.4903,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": 8.3312,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -1.1335,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -0.8246,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": -1.8125,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": -2.5324,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 5.9524,
-          "ret_3m_pct": 0.5302,
+          "ret_1m_pct": 5.2248,
+          "ret_3m_pct": -0.7108,
           "ticker": "XLU",
           "name": "Utilities",
           "group": "S&P 500 섹터",
@@ -1614,58 +1614,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -1.2142,
-          "rs_qqq_1d_pct": -0.5357,
-          "rs_spy_5d_pct": 3.348,
-          "rs_qqq_5d_pct": 7.2748,
-          "rs_spy_10d_pct": 4.6456,
-          "rs_qqq_10d_pct": 8.4182,
-          "rs_spy_20d_pct": 7.3175,
-          "rs_qqq_20d_pct": 14.6593,
-          "rs_spy_50d_pct": 0.5752,
-          "rs_qqq_50d_pct": 3.3337,
-          "rs_spy_100d_pct": -5.4445,
-          "rs_qqq_100d_pct": 2.0084,
-          "rs_spy_1m_pct": 7.5286,
-          "rs_qqq_1m_pct": 14.8656
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 3.6984,
+          "rs_qqq_1d_pct": 5.7781,
+          "rs_spy_5d_pct": 5.0969,
+          "rs_qqq_5d_pct": 9.9174,
+          "rs_spy_10d_pct": 5.0556,
+          "rs_qqq_10d_pct": 9.1538,
+          "rs_spy_20d_pct": 10.7184,
+          "rs_qqq_20d_pct": 18.8772,
+          "rs_spy_50d_pct": 3.8355,
+          "rs_qqq_50d_pct": 8.5591,
+          "rs_spy_100d_pct": -0.3266,
+          "rs_qqq_100d_pct": 9.8123,
+          "rs_spy_1m_pct": 10.9143,
+          "rs_qqq_1m_pct": 19.8316
         },
         {
-          "price": 45.12,
-          "ytd_pct": 11.7385,
-          "ma20": 42.454,
-          "ma60": 42.9895,
-          "vs_ma20_pct": 6.2797,
-          "vs_ma60_pct": 4.9559,
-          "high20_gap_pct": 0.0,
+          "price": 44.3,
+          "ytd_pct": 9.7078,
+          "ma20": 42.6265,
+          "ma60": 42.9863,
+          "vs_ma20_pct": 3.926,
+          "vs_ma60_pct": 3.056,
+          "high20_gap_pct": -1.8174,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 3.3204,
-          "ret_5d_pct": 7.0971,
-          "ret_10d_pct": 7.2753,
-          "ret_20d_pct": 11.2152,
-          "ret_50d_pct": -0.5291,
-          "ret_100d_pct": -0.5291,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -1.8174,
+          "ret_5d_pct": 2.8797,
+          "ret_10d_pct": 4.1863,
+          "ret_20d_pct": 8.4455,
+          "ret_50d_pct": -1.7521,
+          "ret_100d_pct": -1.5337,
           "calendar_returns": {
             "1": {
-              "pct": 10.5611,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": 8.9255,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -0.1107,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -1.9912,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 10.2101,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 8.2336,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 9.781,
-          "ret_3m_pct": 0.6918,
+          "ret_1m_pct": 9.194,
+          "ret_3m_pct": -1.5118,
           "ticker": "XLRE",
           "name": "Real Estate",
           "group": "S&P 500 섹터",
@@ -1674,21 +1674,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 1.6686,
-          "rs_qqq_1d_pct": 2.3471,
-          "rs_spy_5d_pct": 7.8092,
-          "rs_qqq_5d_pct": 11.736,
-          "rs_spy_10d_pct": 8.0876,
-          "rs_qqq_10d_pct": 11.8602,
-          "rs_spy_20d_pct": 12.5546,
-          "rs_qqq_20d_pct": 19.8964,
-          "rs_spy_50d_pct": -0.6466,
-          "rs_qqq_50d_pct": 2.1119,
-          "rs_spy_100d_pct": -3.9076,
-          "rs_qqq_100d_pct": 3.5453,
-          "rs_spy_1m_pct": 11.3572,
-          "rs_qqq_1m_pct": 18.6942
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 2.5918,
+          "rs_qqq_1d_pct": 4.6715,
+          "rs_spy_5d_pct": 7.6057,
+          "rs_qqq_5d_pct": 12.4262,
+          "rs_spy_10d_pct": 8.2389,
+          "rs_qqq_10d_pct": 12.3371,
+          "rs_spy_20d_pct": 13.7341,
+          "rs_qqq_20d_pct": 21.8929,
+          "rs_spy_50d_pct": 2.566,
+          "rs_qqq_50d_pct": 7.2896,
+          "rs_spy_100d_pct": 1.3583,
+          "rs_qqq_100d_pct": 11.4972,
+          "rs_spy_1m_pct": 14.8835,
+          "rs_qqq_1m_pct": 23.8008
         }
       ]
     },
@@ -1697,41 +1697,41 @@
       "label": "반도체·메모리",
       "rows": [
         {
-          "price": 504.27,
-          "ytd_pct": 35.0844,
-          "ma20": 551.884,
-          "ma60": 570.1843,
-          "vs_ma20_pct": -8.6275,
-          "vs_ma60_pct": -11.5602,
-          "high20_gap_pct": -16.9612,
+          "price": 447.73,
+          "ytd_pct": 19.9384,
+          "ma20": 543.907,
+          "ma60": 567.8993,
+          "vs_ma20_pct": -17.6826,
+          "vs_ma60_pct": -21.1603,
+          "high20_gap_pct": -25.7902,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -2.7482,
-          "ret_5d_pct": -11.1685,
-          "ret_10d_pct": -9.418,
-          "ret_20d_pct": -19.3207,
-          "ret_50d_pct": -9.2746,
-          "ret_100d_pct": -18.6609,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -11.2122,
+          "ret_5d_pct": -20.2859,
+          "ret_10d_pct": -14.4492,
+          "ret_20d_pct": -26.2717,
+          "ret_50d_pct": -19.4397,
+          "ret_100d_pct": -30.8098,
           "calendar_returns": {
             "1": {
-              "pct": -20.0333,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -29.369,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -12.409,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -21.4095,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 42.9499,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 24.5424,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -20.2735,
-          "ret_3m_pct": -11.7607,
+          "ret_1m_pct": -28.3666,
+          "ret_3m_pct": -23.1629,
           "ticker": "SMH",
           "name": "VanEck Semiconductor ETF",
           "group": "반도체·메모리",
@@ -1740,58 +1740,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -4.4,
-          "rs_qqq_1d_pct": -3.7215,
-          "rs_spy_5d_pct": -10.4564,
-          "rs_qqq_5d_pct": -6.5296,
-          "rs_spy_10d_pct": -8.6057,
-          "rs_qqq_10d_pct": -4.8331,
-          "rs_spy_20d_pct": -17.9813,
-          "rs_qqq_20d_pct": -10.6395,
-          "rs_spy_50d_pct": -9.3921,
-          "rs_qqq_50d_pct": -6.6336,
-          "rs_spy_100d_pct": -22.0394,
-          "rs_qqq_100d_pct": -14.5865,
-          "rs_spy_1m_pct": -18.6973,
-          "rs_qqq_1m_pct": -11.3603
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -6.803,
+          "rs_qqq_1d_pct": -4.7233,
+          "rs_spy_5d_pct": -15.5599,
+          "rs_qqq_5d_pct": -10.7394,
+          "rs_spy_10d_pct": -10.3966,
+          "rs_qqq_10d_pct": -6.2984,
+          "rs_spy_20d_pct": -20.9831,
+          "rs_qqq_20d_pct": -12.8243,
+          "rs_spy_50d_pct": -15.1216,
+          "rs_qqq_50d_pct": -10.398,
+          "rs_spy_100d_pct": -27.9178,
+          "rs_qqq_100d_pct": -17.7789,
+          "rs_spy_1m_pct": -22.6771,
+          "rs_qqq_1m_pct": -13.7598
         },
         {
-          "price": 450.41,
-          "ytd_pct": 43.5844,
-          "ma20": 504.22,
-          "ma60": 526.7523,
-          "vs_ma20_pct": -10.6719,
-          "vs_ma60_pct": -14.493,
-          "high20_gap_pct": -20.038,
+          "price": 131.9,
+          "ytd_pct": 26.1436,
+          "ma20": 210.9157,
+          "ma60": 189.9575,
+          "vs_ma20_pct": -37.4632,
+          "vs_ma60_pct": -30.5634,
+          "high20_gap_pct": -71.6344,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -3.1376,
-          "ret_5d_pct": -13.7046,
-          "ret_10d_pct": -11.7466,
-          "ret_20d_pct": -22.7189,
-          "ret_50d_pct": -12.3818,
-          "ret_100d_pct": -24.4595,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -70.7156,
+          "ret_5d_pct": -22.9946,
+          "ret_10d_pct": -16.8156,
+          "ret_20d_pct": -29.7507,
+          "ret_50d_pct": -23.2247,
+          "ret_100d_pct": -37.0356,
           "calendar_returns": {
             "1": {
-              "pct": -23.5167,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -32.8765,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -16.9307,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -25.4381,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 52.032,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 29.5381,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -23.5881,
-          "ret_3m_pct": -15.4191,
+          "ret_1m_pct": -32.106,
+          "ret_3m_pct": -27.1633,
           "ticker": "SOXX",
           "name": "iShares Semiconductor ETF",
           "group": "반도체·메모리",
@@ -1800,21 +1800,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -4.7894,
-          "rs_qqq_1d_pct": -4.1109,
-          "rs_spy_5d_pct": -12.9925,
-          "rs_qqq_5d_pct": -9.0657,
-          "rs_spy_10d_pct": -10.9343,
-          "rs_qqq_10d_pct": -7.1617,
-          "rs_spy_20d_pct": -21.3795,
-          "rs_qqq_20d_pct": -14.0377,
-          "rs_spy_50d_pct": -12.4993,
-          "rs_qqq_50d_pct": -9.7408,
-          "rs_spy_100d_pct": -27.838,
-          "rs_qqq_100d_pct": -20.3851,
-          "rs_spy_1m_pct": -22.0119,
-          "rs_qqq_1m_pct": -14.6749
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -66.3064,
+          "rs_qqq_1d_pct": -64.2267,
+          "rs_spy_5d_pct": -18.2686,
+          "rs_qqq_5d_pct": -13.4481,
+          "rs_spy_10d_pct": -12.763,
+          "rs_qqq_10d_pct": -8.6648,
+          "rs_spy_20d_pct": -24.4621,
+          "rs_qqq_20d_pct": -16.3033,
+          "rs_spy_50d_pct": -18.9066,
+          "rs_qqq_50d_pct": -14.183,
+          "rs_spy_100d_pct": -34.1436,
+          "rs_qqq_100d_pct": -24.0047,
+          "rs_spy_1m_pct": -26.4165,
+          "rs_qqq_1m_pct": -17.4992
         }
       ]
     },
@@ -1823,41 +1823,41 @@
       "label": "소프트웨어·클라우드·사이버",
       "rows": [
         {
-          "price": 103.56,
-          "ytd_pct": 0.916,
-          "ma20": 108.131,
-          "ma60": 106.3308,
-          "vs_ma20_pct": -4.2273,
-          "vs_ma60_pct": -2.6059,
-          "high20_gap_pct": -8.0856,
+          "price": 99.01,
+          "ytd_pct": -3.5178,
+          "ma20": 107.602,
+          "ma60": 106.263,
+          "vs_ma20_pct": -7.985,
+          "vs_ma60_pct": -6.8255,
+          "high20_gap_pct": -12.1239,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 0.8767,
-          "ret_5d_pct": -7.4614,
-          "ret_10d_pct": -4.8337,
-          "ret_20d_pct": -5.7174,
-          "ret_50d_pct": 1.6789,
-          "ret_100d_pct": 14.1786,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -4.3936,
+          "ret_5d_pct": -8.2986,
+          "ret_10d_pct": -8.9312,
+          "ret_20d_pct": -9.6542,
+          "ret_50d_pct": -3.3011,
+          "ret_100d_pct": 6.83,
           "calendar_returns": {
             "1": {
-              "pct": -4.4914,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -9.7612,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": 1.5294,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -2.2703,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": -7.5357,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": -11.4004,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -6.837,
-          "ret_3m_pct": 4.1642,
+          "ret_1m_pct": -9.8598,
+          "ret_3m_pct": -3.5836,
           "ticker": "IGV",
           "name": "iShares Expanded Tech-Software Sector ETF",
           "group": "소프트웨어·클라우드·사이버",
@@ -1866,58 +1866,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -0.7751,
-          "rs_qqq_1d_pct": -0.0966,
-          "rs_spy_5d_pct": -6.7493,
-          "rs_qqq_5d_pct": -2.8225,
-          "rs_spy_10d_pct": -4.0214,
-          "rs_qqq_10d_pct": -0.2488,
-          "rs_spy_20d_pct": -4.378,
-          "rs_qqq_20d_pct": 2.9638,
-          "rs_spy_50d_pct": 1.5614,
-          "rs_qqq_50d_pct": 4.3199,
-          "rs_spy_100d_pct": 10.8001,
-          "rs_qqq_100d_pct": 18.253,
-          "rs_spy_1m_pct": -5.2608,
-          "rs_qqq_1m_pct": 2.0762
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 0.0156,
+          "rs_qqq_1d_pct": 2.0953,
+          "rs_spy_5d_pct": -3.5726,
+          "rs_qqq_5d_pct": 1.2479,
+          "rs_spy_10d_pct": -4.8786,
+          "rs_qqq_10d_pct": -0.7804,
+          "rs_spy_20d_pct": -4.3656,
+          "rs_qqq_20d_pct": 3.7932,
+          "rs_spy_50d_pct": 1.017,
+          "rs_qqq_50d_pct": 5.7406,
+          "rs_spy_100d_pct": 9.722,
+          "rs_qqq_100d_pct": 19.8609,
+          "rs_spy_1m_pct": -4.1703,
+          "rs_qqq_1m_pct": 4.747
         },
         {
-          "price": 156.69,
-          "ytd_pct": 22.6344,
-          "ma20": 165.449,
-          "ma60": 164.1363,
-          "vs_ma20_pct": -5.2941,
-          "vs_ma60_pct": -4.5367,
-          "high20_gap_pct": -10.4065,
+          "price": 147.17,
+          "ytd_pct": 15.1835,
+          "ma20": 164.3005,
+          "ma60": 163.8798,
+          "vs_ma20_pct": -10.4263,
+          "vs_ma60_pct": -10.1964,
+          "high20_gap_pct": -15.85,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 0.4552,
-          "ret_5d_pct": -9.0651,
-          "ret_10d_pct": -5.9653,
-          "ret_20d_pct": -8.2504,
-          "ret_50d_pct": -1.2043,
-          "ret_100d_pct": 16.9154,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -6.0757,
+          "ret_5d_pct": -12.0953,
+          "ret_10d_pct": -10.437,
+          "ret_20d_pct": -13.5006,
+          "ret_50d_pct": -7.944,
+          "ret_100d_pct": 7.6355,
           "calendar_returns": {
             "1": {
-              "pct": -6.8098,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -13.3479,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": 2.1248,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -4.1113,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 13.4859,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 6.2676,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -8.3738,
-          "ret_3m_pct": 4.0507,
+          "ret_1m_pct": -13.8248,
+          "ret_3m_pct": -5.763,
           "ticker": "SKYY",
           "name": "First Trust Cloud Computing ETF",
           "group": "소프트웨어·클라우드·사이버",
@@ -1926,58 +1926,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -1.1966,
-          "rs_qqq_1d_pct": -0.5181,
-          "rs_spy_5d_pct": -8.353,
-          "rs_qqq_5d_pct": -4.4262,
-          "rs_spy_10d_pct": -5.153,
-          "rs_qqq_10d_pct": -1.3804,
-          "rs_spy_20d_pct": -6.911,
-          "rs_qqq_20d_pct": 0.4308,
-          "rs_spy_50d_pct": -1.3218,
-          "rs_qqq_50d_pct": 1.4367,
-          "rs_spy_100d_pct": 13.5369,
-          "rs_qqq_100d_pct": 20.9898,
-          "rs_spy_1m_pct": -6.7976,
-          "rs_qqq_1m_pct": 0.5394
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -1.6665,
+          "rs_qqq_1d_pct": 0.4132,
+          "rs_spy_5d_pct": -7.3693,
+          "rs_qqq_5d_pct": -2.5488,
+          "rs_spy_10d_pct": -6.3844,
+          "rs_qqq_10d_pct": -2.2862,
+          "rs_spy_20d_pct": -8.212,
+          "rs_qqq_20d_pct": -0.0532,
+          "rs_spy_50d_pct": -3.6259,
+          "rs_qqq_50d_pct": 1.0977,
+          "rs_spy_100d_pct": 10.5275,
+          "rs_qqq_100d_pct": 20.6664,
+          "rs_spy_1m_pct": -8.1353,
+          "rs_qqq_1m_pct": 0.782
         },
         {
-          "price": 119.63,
-          "ytd_pct": 50.8765,
-          "ma20": 124.486,
-          "ma60": 119.4618,
-          "vs_ma20_pct": -3.9008,
-          "vs_ma60_pct": 0.1408,
-          "high20_gap_pct": -10.4029,
+          "price": 111.4,
+          "ytd_pct": 40.4969,
+          "ma20": 123.7885,
+          "ma60": 119.3375,
+          "vs_ma20_pct": -10.0078,
+          "vs_ma60_pct": -6.6513,
+          "high20_gap_pct": -16.5668,
           "above_ma20": false,
-          "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -0.1669,
-          "ret_5d_pct": -8.8603,
-          "ret_10d_pct": -2.1111,
-          "ret_20d_pct": -4.9122,
-          "ret_50d_pct": 10.6763,
-          "ret_100d_pct": 24.5497,
+          "above_ma60": false,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -6.8795,
+          "ret_5d_pct": -14.0233,
+          "ret_10d_pct": -9.2242,
+          "ret_20d_pct": -11.1288,
+          "ret_50d_pct": 1.6331,
+          "ret_100d_pct": 14.3972,
           "calendar_returns": {
             "1": {
-              "pct": -2.8031,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -10.8657,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": 4.8742,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -2.8347,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 40.4932,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 30.7205,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -6.2902,
-          "ret_3m_pct": 5.6895,
+          "ret_1m_pct": -11.4538,
+          "ret_3m_pct": -3.4829,
           "ticker": "HACK",
           "name": "ETFMG Prime Cyber Security ETF",
           "group": "소프트웨어·클라우드·사이버",
@@ -1986,21 +1986,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -1.8187,
-          "rs_qqq_1d_pct": -1.1402,
-          "rs_spy_5d_pct": -8.1482,
-          "rs_qqq_5d_pct": -4.2214,
-          "rs_spy_10d_pct": -1.2988,
-          "rs_qqq_10d_pct": 2.4738,
-          "rs_spy_20d_pct": -3.5728,
-          "rs_qqq_20d_pct": 3.769,
-          "rs_spy_50d_pct": 10.5588,
-          "rs_qqq_50d_pct": 13.3173,
-          "rs_spy_100d_pct": 21.1712,
-          "rs_qqq_100d_pct": 28.6241,
-          "rs_spy_1m_pct": -4.714,
-          "rs_qqq_1m_pct": 2.623
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -2.4703,
+          "rs_qqq_1d_pct": -0.3906,
+          "rs_spy_5d_pct": -9.2973,
+          "rs_qqq_5d_pct": -4.4768,
+          "rs_spy_10d_pct": -5.1716,
+          "rs_qqq_10d_pct": -1.0734,
+          "rs_spy_20d_pct": -5.8402,
+          "rs_qqq_20d_pct": 2.3186,
+          "rs_spy_50d_pct": 5.9512,
+          "rs_qqq_50d_pct": 10.6748,
+          "rs_spy_100d_pct": 17.2892,
+          "rs_qqq_100d_pct": 27.4281,
+          "rs_spy_1m_pct": -5.7643,
+          "rs_qqq_1m_pct": 3.153
         }
       ]
     },
@@ -2009,41 +2009,41 @@
       "label": "바이오",
       "rows": [
         {
-          "price": 159.1,
-          "ytd_pct": 30.925,
-          "ma20": 151.995,
-          "ma60": 157.0407,
-          "vs_ma20_pct": 4.6745,
-          "vs_ma60_pct": 1.3113,
-          "high20_gap_pct": 0.0,
-          "above_ma20": true,
-          "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 2.665,
-          "ret_5d_pct": 1.0095,
-          "ret_10d_pct": 4.1367,
-          "ret_20d_pct": 5.9043,
-          "ret_50d_pct": -5.9137,
-          "ret_100d_pct": 18.9177,
+          "price": 148.4,
+          "ytd_pct": 22.1198,
+          "ma20": 151.9505,
+          "ma60": 156.8575,
+          "vs_ma20_pct": -2.3366,
+          "vs_ma60_pct": -5.3918,
+          "high20_gap_pct": -6.7253,
+          "above_ma20": false,
+          "above_ma60": false,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -6.7253,
+          "ret_5d_pct": -5.9509,
+          "ret_10d_pct": -2.1366,
+          "ret_20d_pct": -0.5962,
+          "ret_50d_pct": -11.8713,
+          "ret_100d_pct": 8.7977,
           "calendar_returns": {
             "1": {
-              "pct": 3.024,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -4.9875,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": 4.7538,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -3.0129,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 47.2603,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 35.885,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 5.4341,
-          "ret_3m_pct": 2.9774,
+          "ret_1m_pct": -1.2181,
+          "ret_3m_pct": -5.6999,
           "ticker": "XBI",
           "name": "SPDR S&P Biotech ETF",
           "group": "바이오",
@@ -2052,21 +2052,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 1.0132,
-          "rs_qqq_1d_pct": 1.6917,
-          "rs_spy_5d_pct": 1.7216,
-          "rs_qqq_5d_pct": 5.6484,
-          "rs_spy_10d_pct": 4.949,
-          "rs_qqq_10d_pct": 8.7216,
-          "rs_spy_20d_pct": 7.2437,
-          "rs_qqq_20d_pct": 14.5855,
-          "rs_spy_50d_pct": -6.0312,
-          "rs_qqq_50d_pct": -3.2727,
-          "rs_spy_100d_pct": 15.5392,
-          "rs_qqq_100d_pct": 22.9921,
-          "rs_spy_1m_pct": 7.0103,
-          "rs_qqq_1m_pct": 14.3473
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -2.3161,
+          "rs_qqq_1d_pct": -0.2364,
+          "rs_spy_5d_pct": -1.2249,
+          "rs_qqq_5d_pct": 3.5956,
+          "rs_spy_10d_pct": 1.916,
+          "rs_qqq_10d_pct": 6.0142,
+          "rs_spy_20d_pct": 4.6924,
+          "rs_qqq_20d_pct": 12.8512,
+          "rs_spy_50d_pct": -7.5532,
+          "rs_qqq_50d_pct": -2.8296,
+          "rs_spy_100d_pct": 11.6897,
+          "rs_qqq_100d_pct": 21.8286,
+          "rs_spy_1m_pct": 4.4714,
+          "rs_qqq_1m_pct": 13.3887
         }
       ]
     },
@@ -2075,41 +2075,41 @@
       "label": "지역은행",
       "rows": [
         {
-          "price": 74.13,
-          "ytd_pct": 13.6266,
-          "ma20": 71.186,
-          "ma60": 72.6047,
-          "vs_ma20_pct": 4.1356,
-          "vs_ma60_pct": 2.1009,
-          "high20_gap_pct": 0.0,
+          "price": 72.31,
+          "ytd_pct": 10.8369,
+          "ma20": 71.322,
+          "ma60": 72.5202,
+          "vs_ma20_pct": 1.3853,
+          "vs_ma60_pct": -0.2898,
+          "high20_gap_pct": -2.4551,
           "above_ma20": true,
-          "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 1.7151,
-          "ret_5d_pct": 2.8013,
-          "ret_10d_pct": 4.9703,
-          "ret_20d_pct": 7.6063,
-          "ret_50d_pct": -0.2691,
-          "ret_100d_pct": 0.9808,
+          "above_ma60": false,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -2.4551,
+          "ret_5d_pct": -0.7549,
+          "ret_10d_pct": -0.1381,
+          "ret_20d_pct": 3.9086,
+          "ret_50d_pct": -3.0437,
+          "ret_100d_pct": 0.1107,
           "calendar_returns": {
             "1": {
-              "pct": 4.733,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": 2.7277,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -4.7662,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -6.5037,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 23.9218,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 19.4022,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 5.7942,
-          "ret_3m_pct": -3.0854,
+          "ret_1m_pct": 4.9644,
+          "ret_3m_pct": -5.1174,
           "ticker": "KRE",
           "name": "SPDR S&P Regional Banking ETF",
           "group": "지역은행",
@@ -2118,21 +2118,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 0.0633,
-          "rs_qqq_1d_pct": 0.7418,
-          "rs_spy_5d_pct": 3.5134,
-          "rs_qqq_5d_pct": 7.4402,
-          "rs_spy_10d_pct": 5.7826,
-          "rs_qqq_10d_pct": 9.5552,
-          "rs_spy_20d_pct": 8.9457,
-          "rs_qqq_20d_pct": 16.2875,
-          "rs_spy_50d_pct": -0.3866,
-          "rs_qqq_50d_pct": 2.3719,
-          "rs_spy_100d_pct": -2.3977,
-          "rs_qqq_100d_pct": 5.0552,
-          "rs_spy_1m_pct": 7.3704,
-          "rs_qqq_1m_pct": 14.7074
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 1.9541,
+          "rs_qqq_1d_pct": 4.0338,
+          "rs_spy_5d_pct": 3.9711,
+          "rs_qqq_5d_pct": 8.7916,
+          "rs_spy_10d_pct": 3.9145,
+          "rs_qqq_10d_pct": 8.0127,
+          "rs_spy_20d_pct": 9.1972,
+          "rs_qqq_20d_pct": 17.356,
+          "rs_spy_50d_pct": 1.2744,
+          "rs_qqq_50d_pct": 5.998,
+          "rs_spy_100d_pct": 3.0027,
+          "rs_qqq_100d_pct": 13.1416,
+          "rs_spy_1m_pct": 10.6539,
+          "rs_qqq_1m_pct": 19.5712
         }
       ]
     },
@@ -2141,41 +2141,41 @@
       "label": "방산·인프라·에너지",
       "rows": [
         {
-          "price": 212.84,
-          "ytd_pct": -4.1304,
-          "ma20": 207.8525,
-          "ma60": 218.6838,
-          "vs_ma20_pct": 2.3995,
-          "vs_ma60_pct": -2.6723,
-          "high20_gap_pct": -1.5405,
-          "above_ma20": true,
+          "price": 68.11,
+          "ytd_pct": -69.3212,
+          "ma20": 201.014,
+          "ma60": 215.6253,
+          "vs_ma20_pct": -66.1168,
+          "vs_ma60_pct": -68.4128,
+          "high20_gap_pct": -68.4924,
+          "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -1.5405,
-          "ret_5d_pct": 2.455,
-          "ret_10d_pct": 3.4258,
-          "ret_20d_pct": 4.5383,
-          "ret_50d_pct": -9.1592,
-          "ret_100d_pct": -8.961,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -67.9994,
+          "ret_5d_pct": -68.2175,
+          "ret_10d_pct": -66.6911,
+          "ret_20d_pct": -66.7562,
+          "ret_50d_pct": -71.1862,
+          "ret_100d_pct": -71.31,
           "calendar_returns": {
             "1": {
-              "pct": 2.4303,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -67.0934,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -15.0848,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -73.0022,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 0.51,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": -67.4846,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 2.1992,
-          "ret_3m_pct": -14.8606,
+          "ret_1m_pct": -66.5472,
+          "ret_3m_pct": -72.8375,
           "ticker": "ITA",
           "name": "iShares U.S. Aerospace & Defense ETF",
           "group": "방산·인프라·에너지",
@@ -2184,58 +2184,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -3.1923,
-          "rs_qqq_1d_pct": -2.5138,
-          "rs_spy_5d_pct": 3.1671,
-          "rs_qqq_5d_pct": 7.0939,
-          "rs_spy_10d_pct": 4.2381,
-          "rs_qqq_10d_pct": 8.0107,
-          "rs_spy_20d_pct": 5.8777,
-          "rs_qqq_20d_pct": 13.2195,
-          "rs_spy_50d_pct": -9.2767,
-          "rs_qqq_50d_pct": -6.5182,
-          "rs_spy_100d_pct": -12.3395,
-          "rs_qqq_100d_pct": -4.8866,
-          "rs_spy_1m_pct": 3.7754,
-          "rs_qqq_1m_pct": 11.1124
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -63.5902,
+          "rs_qqq_1d_pct": -61.5105,
+          "rs_spy_5d_pct": -63.4915,
+          "rs_qqq_5d_pct": -58.671,
+          "rs_spy_10d_pct": -62.6385,
+          "rs_qqq_10d_pct": -58.5403,
+          "rs_spy_20d_pct": -61.4676,
+          "rs_qqq_20d_pct": -53.3088,
+          "rs_spy_50d_pct": -66.8681,
+          "rs_qqq_50d_pct": -62.1445,
+          "rs_spy_100d_pct": -68.418,
+          "rs_qqq_100d_pct": -58.2791,
+          "rs_spy_1m_pct": -60.8577,
+          "rs_qqq_1m_pct": -51.9404
         },
         {
-          "price": 225.53,
-          "ytd_pct": -9.9321,
-          "ma20": 225.194,
-          "ma60": 244.119,
-          "vs_ma20_pct": 0.1492,
-          "vs_ma60_pct": -7.6147,
-          "high20_gap_pct": -4.1481,
-          "above_ma20": true,
+          "price": 214.23,
+          "ytd_pct": -14.4449,
+          "ma20": 224.5625,
+          "ma60": 242.8005,
+          "vs_ma20_pct": -4.6012,
+          "vs_ma60_pct": -11.7671,
+          "high20_gap_pct": -8.9507,
+          "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -3.6485,
-          "ret_5d_pct": 0.2445,
-          "ret_10d_pct": 1.2981,
-          "ret_20d_pct": -0.4898,
-          "ret_50d_pct": -14.8461,
-          "ret_100d_pct": -19.4449,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -5.0104,
+          "ret_5d_pct": -8.9507,
+          "ret_10d_pct": -1.8689,
+          "ret_20d_pct": -5.5673,
+          "ret_50d_pct": -19.6587,
+          "ret_100d_pct": -24.2441,
           "calendar_returns": {
             "1": {
-              "pct": -3.2434,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -7.372,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -20.0503,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -24.0535,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": -6.7942,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": -10.1874,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -3.4629,
-          "ret_3m_pct": -20.2821,
+          "ret_1m_pct": -5.4756,
+          "ret_3m_pct": -25.3112,
           "ticker": "XAR",
           "name": "SPDR S&P Aerospace & Defense ETF",
           "group": "방산·인프라·에너지",
@@ -2244,58 +2244,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -5.3003,
-          "rs_qqq_1d_pct": -4.6218,
-          "rs_spy_5d_pct": 0.9566,
-          "rs_qqq_5d_pct": 4.8834,
-          "rs_spy_10d_pct": 2.1104,
-          "rs_qqq_10d_pct": 5.883,
-          "rs_spy_20d_pct": 0.8496,
-          "rs_qqq_20d_pct": 8.1914,
-          "rs_spy_50d_pct": -14.9636,
-          "rs_qqq_50d_pct": -12.2051,
-          "rs_spy_100d_pct": -22.8234,
-          "rs_qqq_100d_pct": -15.3705,
-          "rs_spy_1m_pct": -1.8867,
-          "rs_qqq_1m_pct": 5.4503
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -0.6012,
+          "rs_qqq_1d_pct": 1.4785,
+          "rs_spy_5d_pct": -4.2247,
+          "rs_qqq_5d_pct": 0.5958,
+          "rs_spy_10d_pct": 2.1837,
+          "rs_qqq_10d_pct": 6.2819,
+          "rs_spy_20d_pct": -0.2787,
+          "rs_qqq_20d_pct": 7.8801,
+          "rs_spy_50d_pct": -15.3406,
+          "rs_qqq_50d_pct": -10.617,
+          "rs_spy_100d_pct": -21.3521,
+          "rs_qqq_100d_pct": -11.2132,
+          "rs_spy_1m_pct": 0.2139,
+          "rs_qqq_1m_pct": 9.1312
         },
         {
-          "price": 53.91,
-          "ytd_pct": 10.3582,
-          "ma20": 53.201,
-          "ma60": 54.1917,
-          "vs_ma20_pct": 1.3327,
-          "vs_ma60_pct": -0.5198,
-          "high20_gap_pct": -1.6779,
-          "above_ma20": true,
+          "price": 50.73,
+          "ytd_pct": 3.8485,
+          "ma20": 53.075,
+          "ma60": 54.0623,
+          "vs_ma20_pct": -4.4183,
+          "vs_ma60_pct": -6.1639,
+          "high20_gap_pct": -7.4777,
+          "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -1.6779,
-          "ret_5d_pct": 1.0686,
-          "ret_10d_pct": 1.449,
-          "ret_20d_pct": 1.1634,
-          "ret_50d_pct": -3.0919,
-          "ret_100d_pct": -6.6655,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -5.8987,
+          "ret_5d_pct": -6.9004,
+          "ret_10d_pct": -2.5735,
+          "ret_20d_pct": -4.7324,
+          "ret_50d_pct": -9.7492,
+          "ret_100d_pct": -12.7901,
           "calendar_returns": {
             "1": {
-              "pct": 0.0557,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -6.2465,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -7.972,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -13.5038,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 13.185,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 5.9081,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -1.3541,
-          "ret_3m_pct": -7.6093,
+          "ret_1m_pct": -4.8039,
+          "ret_3m_pct": -13.5628,
           "ticker": "PAVE",
           "name": "Global X U.S. Infrastructure Development ETF",
           "group": "방산·인프라·에너지",
@@ -2304,58 +2304,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -3.3297,
-          "rs_qqq_1d_pct": -2.6512,
-          "rs_spy_5d_pct": 1.7807,
-          "rs_qqq_5d_pct": 5.7075,
-          "rs_spy_10d_pct": 2.2613,
-          "rs_qqq_10d_pct": 6.0339,
-          "rs_spy_20d_pct": 2.5028,
-          "rs_qqq_20d_pct": 9.8446,
-          "rs_spy_50d_pct": -3.2094,
-          "rs_qqq_50d_pct": -0.4509,
-          "rs_spy_100d_pct": -10.044,
-          "rs_qqq_100d_pct": -2.5911,
-          "rs_spy_1m_pct": 0.2221,
-          "rs_qqq_1m_pct": 7.5591
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -1.4895,
+          "rs_qqq_1d_pct": 0.5902,
+          "rs_spy_5d_pct": -2.1744,
+          "rs_qqq_5d_pct": 2.6461,
+          "rs_spy_10d_pct": 1.4791,
+          "rs_qqq_10d_pct": 5.5773,
+          "rs_spy_20d_pct": 0.5562,
+          "rs_qqq_20d_pct": 8.715,
+          "rs_spy_50d_pct": -5.4311,
+          "rs_qqq_50d_pct": -0.7075,
+          "rs_spy_100d_pct": -9.8981,
+          "rs_qqq_100d_pct": 0.2408,
+          "rs_spy_1m_pct": 0.8856,
+          "rs_qqq_1m_pct": 9.8029
         },
         {
-          "price": 179.29,
-          "ytd_pct": 39.0276,
-          "ma20": 197.111,
-          "ma60": 190.4918,
-          "vs_ma20_pct": -9.0411,
-          "vs_ma60_pct": -5.8805,
-          "high20_gap_pct": -12.4817,
+          "price": 174.1,
+          "ytd_pct": 35.0031,
+          "ma20": 196.1415,
+          "ma60": 190.4172,
+          "vs_ma20_pct": -11.2375,
+          "vs_ma60_pct": -8.5692,
+          "high20_gap_pct": -15.0151,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -6.3858,
-          "ret_5d_pct": -10.5205,
-          "ret_10d_pct": -9.9136,
-          "ret_20d_pct": -4.7546,
-          "ret_50d_pct": -1.8826,
-          "ret_100d_pct": 8.4372,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -2.8947,
+          "ret_5d_pct": -12.7406,
+          "ret_10d_pct": -11.566,
+          "ret_20d_pct": -10.0212,
+          "ret_50d_pct": -5.6164,
+          "ret_100d_pct": 9.9394,
           "calendar_returns": {
             "1": {
-              "pct": -3.0498,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -7.1169,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": 4.2687,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": 5.3938,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 42.3727,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 39.5703,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -4.8658,
-          "ret_3m_pct": 7.3271,
+          "ret_1m_pct": -7.5117,
+          "ret_3m_pct": 4.6274,
           "ticker": "XOP",
           "name": "SPDR S&P Oil & Gas Exploration & Production ETF",
           "group": "방산·인프라·에너지",
@@ -2364,21 +2364,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -8.0376,
-          "rs_qqq_1d_pct": -7.3591,
-          "rs_spy_5d_pct": -9.8084,
-          "rs_qqq_5d_pct": -5.8816,
-          "rs_spy_10d_pct": -9.1013,
-          "rs_qqq_10d_pct": -5.3287,
-          "rs_spy_20d_pct": -3.4152,
-          "rs_qqq_20d_pct": 3.9266,
-          "rs_spy_50d_pct": -2.0001,
-          "rs_qqq_50d_pct": 0.7584,
-          "rs_spy_100d_pct": 5.0587,
-          "rs_qqq_100d_pct": 12.5116,
-          "rs_spy_1m_pct": -3.2896,
-          "rs_qqq_1m_pct": 4.0474
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 1.5145,
+          "rs_qqq_1d_pct": 3.5942,
+          "rs_spy_5d_pct": -8.0146,
+          "rs_qqq_5d_pct": -3.1941,
+          "rs_spy_10d_pct": -7.5134,
+          "rs_qqq_10d_pct": -3.4152,
+          "rs_spy_20d_pct": -4.7326,
+          "rs_qqq_20d_pct": 3.4262,
+          "rs_spy_50d_pct": -1.2983,
+          "rs_qqq_50d_pct": 3.4253,
+          "rs_spy_100d_pct": 12.8314,
+          "rs_qqq_100d_pct": 22.9703,
+          "rs_spy_1m_pct": -1.8222,
+          "rs_qqq_1m_pct": 7.0951
         }
       ]
     },
@@ -2387,41 +2387,41 @@
       "label": "로봇·자동화",
       "rows": [
         {
-          "price": 32.81,
-          "ytd_pct": -10.6238,
-          "ma20": 33.548,
-          "ma60": 35.0258,
-          "vs_ma20_pct": -2.1998,
-          "vs_ma60_pct": -6.3261,
-          "high20_gap_pct": -7.5254,
+          "price": 30.64,
+          "ytd_pct": -16.535,
+          "ma20": 33.3385,
+          "ma60": 34.9063,
+          "vs_ma20_pct": -8.0942,
+          "vs_ma60_pct": -12.222,
+          "high20_gap_pct": -13.6415,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 1.5161,
-          "ret_5d_pct": -3.5851,
-          "ret_10d_pct": -2.3221,
-          "ret_20d_pct": -8.0179,
-          "ret_50d_pct": -8.4798,
-          "ret_100d_pct": -11.611,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -6.6138,
+          "ret_5d_pct": -8.3184,
+          "ret_10d_pct": -6.2424,
+          "ret_20d_pct": -12.0299,
+          "ret_50d_pct": -14.0051,
+          "ret_100d_pct": -19.8954,
           "calendar_returns": {
             "1": {
-              "pct": -8.937,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -15.3591,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -11.5395,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -17.8552,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": -12.0847,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": -17.1892,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -9.2895,
-          "ret_3m_pct": -11.1803,
+          "ret_1m_pct": -14.1015,
+          "ret_3m_pct": -18.5323,
           "ticker": "BOTZ",
           "name": "Global X Robotics & Artificial Intelligence ETF",
           "group": "로봇·자동화",
@@ -2430,58 +2430,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -0.1357,
-          "rs_qqq_1d_pct": 0.5428,
-          "rs_spy_5d_pct": -2.873,
-          "rs_qqq_5d_pct": 1.0538,
-          "rs_spy_10d_pct": -1.5098,
-          "rs_qqq_10d_pct": 2.2628,
-          "rs_spy_20d_pct": -6.6785,
-          "rs_qqq_20d_pct": 0.6633,
-          "rs_spy_50d_pct": -8.5973,
-          "rs_qqq_50d_pct": -5.8388,
-          "rs_spy_100d_pct": -14.9895,
-          "rs_qqq_100d_pct": -7.5366,
-          "rs_spy_1m_pct": -7.7133,
-          "rs_qqq_1m_pct": -0.3763
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -2.2046,
+          "rs_qqq_1d_pct": -0.1249,
+          "rs_spy_5d_pct": -3.5924,
+          "rs_qqq_5d_pct": 1.2281,
+          "rs_spy_10d_pct": -2.1898,
+          "rs_qqq_10d_pct": 1.9084,
+          "rs_spy_20d_pct": -6.7413,
+          "rs_qqq_20d_pct": 1.4175,
+          "rs_spy_50d_pct": -9.687,
+          "rs_qqq_50d_pct": -4.9634,
+          "rs_spy_100d_pct": -17.0034,
+          "rs_qqq_100d_pct": -6.8645,
+          "rs_spy_1m_pct": -8.412,
+          "rs_qqq_1m_pct": 0.5053
         },
         {
-          "price": 74.72,
-          "ytd_pct": 5.6711,
-          "ma20": 76.9465,
-          "ma60": 79.489,
-          "vs_ma20_pct": -2.8936,
-          "vs_ma60_pct": -5.9996,
-          "high20_gap_pct": -8.0482,
+          "price": 68.82,
+          "ytd_pct": -2.6729,
+          "ma20": 76.3835,
+          "ma60": 79.2233,
+          "vs_ma20_pct": -9.902,
+          "vs_ma60_pct": -13.1317,
+          "high20_gap_pct": -15.3089,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 0.3357,
-          "ret_5d_pct": -4.3278,
-          "ret_10d_pct": -3.6493,
-          "ret_20d_pct": -8.6776,
-          "ret_50d_pct": -7.6733,
-          "ret_100d_pct": -9.9759,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -7.8961,
+          "ret_5d_pct": -11.6446,
+          "ret_10d_pct": -8.0438,
+          "ret_20d_pct": -14.0609,
+          "ret_50d_pct": -15.2254,
+          "ret_100d_pct": -19.2348,
           "calendar_returns": {
             "1": {
-              "pct": -9.7802,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -17.4226,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -11.4062,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -18.4307,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 9.5441,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": -0.2464,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -10.4077,
-          "ret_3m_pct": -10.0518,
+          "ret_1m_pct": -15.8885,
+          "ret_3m_pct": -18.4983,
           "ticker": "ROBO",
           "name": "ROBO Global Robotics and Automation Index ETF",
           "group": "로봇·자동화",
@@ -2490,21 +2490,21 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -1.3161,
-          "rs_qqq_1d_pct": -0.6376,
-          "rs_spy_5d_pct": -3.6157,
-          "rs_qqq_5d_pct": 0.3111,
-          "rs_spy_10d_pct": -2.837,
-          "rs_qqq_10d_pct": 0.9356,
-          "rs_spy_20d_pct": -7.3382,
-          "rs_qqq_20d_pct": 0.0036,
-          "rs_spy_50d_pct": -7.7908,
-          "rs_qqq_50d_pct": -5.0323,
-          "rs_spy_100d_pct": -13.3544,
-          "rs_qqq_100d_pct": -5.9015,
-          "rs_spy_1m_pct": -8.8315,
-          "rs_qqq_1m_pct": -1.4945
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -3.4869,
+          "rs_qqq_1d_pct": -1.4072,
+          "rs_spy_5d_pct": -6.9186,
+          "rs_qqq_5d_pct": -2.0981,
+          "rs_spy_10d_pct": -3.9912,
+          "rs_qqq_10d_pct": 0.107,
+          "rs_spy_20d_pct": -8.7723,
+          "rs_qqq_20d_pct": -0.6135,
+          "rs_spy_50d_pct": -10.9073,
+          "rs_qqq_50d_pct": -6.1837,
+          "rs_spy_100d_pct": -16.3428,
+          "rs_qqq_100d_pct": -6.2039,
+          "rs_spy_1m_pct": -10.199,
+          "rs_qqq_1m_pct": -1.2817
         }
       ]
     },
@@ -2513,41 +2513,41 @@
       "label": "국가별 대표 ETF",
       "rows": [
         {
-          "price": 766.81,
-          "ytd_pct": 12.2429,
-          "ma20": 767.574,
-          "ma60": 767.4412,
-          "vs_ma20_pct": -0.0995,
-          "vs_ma60_pct": -0.0822,
-          "high20_gap_pct": -1.5105,
+          "price": 733.0,
+          "ytd_pct": 7.2939,
+          "ma20": 765.5275,
+          "ma60": 766.783,
+          "vs_ma20_pct": -4.249,
+          "vs_ma60_pct": -4.4058,
+          "high20_gap_pct": -5.853,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 1.6518,
-          "ret_5d_pct": -0.7121,
-          "ret_10d_pct": -0.8123,
-          "ret_20d_pct": -1.3394,
-          "ret_50d_pct": 0.1175,
-          "ret_100d_pct": 3.3785,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -4.4092,
+          "ret_5d_pct": -4.726,
+          "ret_10d_pct": -4.0526,
+          "ret_20d_pct": -5.2886,
+          "ret_50d_pct": -4.3181,
+          "ret_100d_pct": -2.892,
           "calendar_returns": {
             "1": {
-              "pct": -0.3677,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -5.3986,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -0.586,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -4.7792,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 13.5611,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 8.1791,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -1.5762,
-          "ret_3m_pct": -0.2277,
+          "ret_1m_pct": -5.6895,
+          "ret_3m_pct": -5.2065,
           "ticker": "SPY",
           "name": "미국 · SPDR S&P 500 ETF Trust",
           "group": "국가별 대표 ETF",
@@ -2556,58 +2556,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
+          "completed_cutoff": "2026-11-05",
           "rs_spy_1d_pct": 0.0,
-          "rs_qqq_1d_pct": 0.6785,
+          "rs_qqq_1d_pct": 2.0797,
           "rs_spy_5d_pct": 0.0,
-          "rs_qqq_5d_pct": 3.9268,
+          "rs_qqq_5d_pct": 4.8205,
           "rs_spy_10d_pct": 0.0,
-          "rs_qqq_10d_pct": 3.7726,
+          "rs_qqq_10d_pct": 4.0982,
           "rs_spy_20d_pct": 0.0,
-          "rs_qqq_20d_pct": 7.3418,
+          "rs_qqq_20d_pct": 8.1588,
           "rs_spy_50d_pct": 0.0,
-          "rs_qqq_50d_pct": 2.7585,
+          "rs_qqq_50d_pct": 4.7236,
           "rs_spy_100d_pct": 0.0,
-          "rs_qqq_100d_pct": 7.4529,
+          "rs_qqq_100d_pct": 10.1389,
           "rs_spy_1m_pct": 0.0,
-          "rs_qqq_1m_pct": 7.337
+          "rs_qqq_1m_pct": 8.9173
         },
         {
-          "price": 152.12,
-          "ytd_pct": 48.8163,
-          "ma20": 158.7035,
-          "ma60": 174.482,
-          "vs_ma20_pct": -4.1483,
-          "vs_ma60_pct": -12.8162,
-          "high20_gap_pct": -14.1729,
+          "price": 131.65,
+          "ytd_pct": 28.7908,
+          "ma20": 156.4715,
+          "ma60": 173.745,
+          "vs_ma20_pct": -15.8633,
+          "vs_ma60_pct": -24.228,
+          "high20_gap_pct": -25.7222,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -1.896,
-          "ret_5d_pct": -8.3117,
-          "ret_10d_pct": -3.0342,
-          "ret_20d_pct": -17.1866,
-          "ret_50d_pct": -15.5593,
-          "ret_100d_pct": -22.9577,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -13.4565,
+          "ret_5d_pct": -18.6492,
+          "ret_10d_pct": -11.6799,
+          "ret_20d_pct": -25.3219,
+          "ret_50d_pct": -26.5264,
+          "ret_100d_pct": -37.7394,
           "calendar_returns": {
             "1": {
-              "pct": -20.7213,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -31.2389,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -11.1137,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -22.1651,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 58.8555,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 36.2554,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -18.3906,
-          "ret_3m_pct": -7.3117,
+          "ret_1m_pct": -28.3303,
+          "ret_3m_pct": -20.7357,
           "ticker": "EWY",
           "name": "한국 · iShares MSCI South Korea ETF",
           "group": "국가별 대표 ETF",
@@ -2616,58 +2616,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -3.5478,
-          "rs_qqq_1d_pct": -2.8693,
-          "rs_spy_5d_pct": -7.5996,
-          "rs_qqq_5d_pct": -3.6728,
-          "rs_spy_10d_pct": -2.2219,
-          "rs_qqq_10d_pct": 1.5507,
-          "rs_spy_20d_pct": -15.8472,
-          "rs_qqq_20d_pct": -8.5054,
-          "rs_spy_50d_pct": -15.6768,
-          "rs_qqq_50d_pct": -12.9183,
-          "rs_spy_100d_pct": -26.3362,
-          "rs_qqq_100d_pct": -18.8833,
-          "rs_spy_1m_pct": -16.8144,
-          "rs_qqq_1m_pct": -9.4774
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -9.0473,
+          "rs_qqq_1d_pct": -6.9676,
+          "rs_spy_5d_pct": -13.9232,
+          "rs_qqq_5d_pct": -9.1027,
+          "rs_spy_10d_pct": -7.6273,
+          "rs_qqq_10d_pct": -3.5291,
+          "rs_spy_20d_pct": -20.0333,
+          "rs_qqq_20d_pct": -11.8745,
+          "rs_spy_50d_pct": -22.2083,
+          "rs_qqq_50d_pct": -17.4847,
+          "rs_spy_100d_pct": -34.8474,
+          "rs_qqq_100d_pct": -24.7085,
+          "rs_spy_1m_pct": -22.6408,
+          "rs_qqq_1m_pct": -13.7235
         },
         {
-          "price": 93.86,
-          "ytd_pct": 15.4064,
-          "ma20": 95.1235,
-          "ma60": 96.3932,
-          "vs_ma20_pct": -1.3283,
-          "vs_ma60_pct": -2.628,
-          "high20_gap_pct": -4.0875,
+          "price": 88.26,
+          "ytd_pct": 8.5208,
+          "ma20": 94.6705,
+          "ma60": 96.2343,
+          "vs_ma20_pct": -6.7714,
+          "vs_ma60_pct": -8.2864,
+          "high20_gap_pct": -9.8099,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 1.3716,
-          "ret_5d_pct": -1.1896,
-          "ret_10d_pct": -1.9432,
-          "ret_20d_pct": -4.5362,
-          "ret_50d_pct": -1.8509,
-          "ret_100d_pct": 1.2404,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -5.9663,
+          "ret_5d_pct": -7.036,
+          "ret_10d_pct": -6.7019,
+          "ret_20d_pct": -9.3095,
+          "ret_50d_pct": -7.5134,
+          "ret_100d_pct": -6.1663,
           "calendar_returns": {
             "1": {
-              "pct": -5.1152,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -11.1178,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -0.7927,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -7.2509,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 13.3164,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 6.5942,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -5.4974,
-          "ret_3m_pct": -1.3558,
+          "ret_1m_pct": -10.2319,
+          "ret_3m_pct": -8.9164,
           "ticker": "EWJ",
           "name": "일본 · iShares MSCI Japan ETF",
           "group": "국가별 대표 ETF",
@@ -2676,58 +2676,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -0.2802,
-          "rs_qqq_1d_pct": 0.3983,
-          "rs_spy_5d_pct": -0.4775,
-          "rs_qqq_5d_pct": 3.4493,
-          "rs_spy_10d_pct": -1.1309,
-          "rs_qqq_10d_pct": 2.6417,
-          "rs_spy_20d_pct": -3.1968,
-          "rs_qqq_20d_pct": 4.145,
-          "rs_spy_50d_pct": -1.9684,
-          "rs_qqq_50d_pct": 0.7901,
-          "rs_spy_100d_pct": -2.1381,
-          "rs_qqq_100d_pct": 5.3148,
-          "rs_spy_1m_pct": -3.9212,
-          "rs_qqq_1m_pct": 3.4158
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -1.5571,
+          "rs_qqq_1d_pct": 0.5226,
+          "rs_spy_5d_pct": -2.31,
+          "rs_qqq_5d_pct": 2.5105,
+          "rs_spy_10d_pct": -2.6493,
+          "rs_qqq_10d_pct": 1.4489,
+          "rs_spy_20d_pct": -4.0209,
+          "rs_qqq_20d_pct": 4.1379,
+          "rs_spy_50d_pct": -3.1953,
+          "rs_qqq_50d_pct": 1.5283,
+          "rs_spy_100d_pct": -3.2743,
+          "rs_qqq_100d_pct": 6.8646,
+          "rs_spy_1m_pct": -4.5424,
+          "rs_qqq_1m_pct": 4.3749
         },
         {
-          "price": 51.56,
-          "ytd_pct": -17.1594,
-          "ma20": 50.4125,
-          "ma60": 52.6273,
-          "vs_ma20_pct": 2.2762,
-          "vs_ma60_pct": -2.0281,
-          "high20_gap_pct": -1.8839,
+          "price": 52.04,
+          "ytd_pct": -16.3882,
+          "ma20": 50.4465,
+          "ma60": 52.5767,
+          "vs_ma20_pct": 3.1588,
+          "vs_ma60_pct": -1.0207,
+          "high20_gap_pct": -0.9705,
           "above_ma20": true,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 4.3725,
-          "ret_5d_pct": 5.1387,
-          "ret_10d_pct": 3.017,
-          "ret_20d_pct": -0.1549,
-          "ret_50d_pct": -6.4586,
-          "ret_100d_pct": -5.9639,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": 0.931,
+          "ret_5d_pct": 6.2909,
+          "ret_10d_pct": 6.1608,
+          "ret_20d_pct": 1.324,
+          "ret_50d_pct": -5.5535,
+          "ret_100d_pct": -5.2612,
           "calendar_returns": {
             "1": {
-              "pct": 0.6245,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -0.4591,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -8.0763,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -7.088,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": -17.8065,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": -17.8662,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -1.2639,
-          "ret_3m_pct": -7.7804,
+          "ret_1m_pct": 0.7746,
+          "ret_3m_pct": -8.0078,
           "ticker": "MCHI",
           "name": "중국 · iShares MSCI China ETF",
           "group": "국가별 대표 ETF",
@@ -2736,58 +2736,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 2.7207,
-          "rs_qqq_1d_pct": 3.3992,
-          "rs_spy_5d_pct": 5.8508,
-          "rs_qqq_5d_pct": 9.7776,
-          "rs_spy_10d_pct": 3.8293,
-          "rs_qqq_10d_pct": 7.6019,
-          "rs_spy_20d_pct": 1.1845,
-          "rs_qqq_20d_pct": 8.5263,
-          "rs_spy_50d_pct": -6.5761,
-          "rs_qqq_50d_pct": -3.8176,
-          "rs_spy_100d_pct": -9.3424,
-          "rs_qqq_100d_pct": -1.8895,
-          "rs_spy_1m_pct": 0.3123,
-          "rs_qqq_1m_pct": 7.6493
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 5.3402,
+          "rs_qqq_1d_pct": 7.4199,
+          "rs_spy_5d_pct": 11.0169,
+          "rs_qqq_5d_pct": 15.8374,
+          "rs_spy_10d_pct": 10.2134,
+          "rs_qqq_10d_pct": 14.3116,
+          "rs_spy_20d_pct": 6.6126,
+          "rs_qqq_20d_pct": 14.7714,
+          "rs_spy_50d_pct": -1.2354,
+          "rs_qqq_50d_pct": 3.4882,
+          "rs_spy_100d_pct": -2.3692,
+          "rs_qqq_100d_pct": 7.7697,
+          "rs_spy_1m_pct": 6.4641,
+          "rs_qqq_1m_pct": 15.3814
         },
         {
-          "price": 97.08,
-          "ytd_pct": 49.8842,
-          "ma20": 106.955,
-          "ma60": 109.1202,
-          "vs_ma20_pct": -9.2329,
-          "vs_ma60_pct": -11.0339,
-          "high20_gap_pct": -15.073,
+          "price": 85.88,
+          "ytd_pct": 32.5923,
+          "ma20": 105.582,
+          "ma60": 108.7818,
+          "vs_ma20_pct": -18.6604,
+          "vs_ma60_pct": -21.053,
+          "high20_gap_pct": -24.871,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": -1.2109,
-          "ret_5d_pct": -10.8867,
-          "ret_10d_pct": -10.9276,
-          "ret_20d_pct": -16.4831,
-          "ret_50d_pct": -7.8937,
-          "ret_100d_pct": -5.3986,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -11.5369,
+          "ret_5d_pct": -18.9735,
+          "ret_10d_pct": -17.4151,
+          "ret_20d_pct": -24.228,
+          "ret_50d_pct": -19.2781,
+          "ret_100d_pct": -19.263,
           "calendar_returns": {
             "1": {
-              "pct": -16.5478,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -27.2203,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -5.0191,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -15.5556,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 48.3723,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 30.0621,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -17.456,
-          "ret_3m_pct": -4.8049,
+          "ret_1m_pct": -26.1184,
+          "ret_3m_pct": -16.6942,
           "ticker": "EWT",
           "name": "대만 · iShares MSCI Taiwan ETF",
           "group": "국가별 대표 ETF",
@@ -2796,58 +2796,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -2.8627,
-          "rs_qqq_1d_pct": -2.1842,
-          "rs_spy_5d_pct": -10.1746,
-          "rs_qqq_5d_pct": -6.2478,
-          "rs_spy_10d_pct": -10.1153,
-          "rs_qqq_10d_pct": -6.3427,
-          "rs_spy_20d_pct": -15.1437,
-          "rs_qqq_20d_pct": -7.8019,
-          "rs_spy_50d_pct": -8.0112,
-          "rs_qqq_50d_pct": -5.2527,
-          "rs_spy_100d_pct": -8.7771,
-          "rs_qqq_100d_pct": -1.3242,
-          "rs_spy_1m_pct": -15.8798,
-          "rs_qqq_1m_pct": -8.5428
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": -7.1277,
+          "rs_qqq_1d_pct": -5.048,
+          "rs_spy_5d_pct": -14.2475,
+          "rs_qqq_5d_pct": -9.427,
+          "rs_spy_10d_pct": -13.3625,
+          "rs_qqq_10d_pct": -9.2643,
+          "rs_spy_20d_pct": -18.9394,
+          "rs_qqq_20d_pct": -10.7806,
+          "rs_spy_50d_pct": -14.96,
+          "rs_qqq_50d_pct": -10.2364,
+          "rs_spy_100d_pct": -16.371,
+          "rs_qqq_100d_pct": -6.2321,
+          "rs_spy_1m_pct": -20.4289,
+          "rs_qqq_1m_pct": -11.5116
         },
         {
-          "price": 50.03,
-          "ytd_pct": -8.3028,
-          "ma20": 47.327,
-          "ma60": 48.1442,
-          "vs_ma20_pct": 5.7113,
-          "vs_ma60_pct": 3.9171,
-          "high20_gap_pct": 0.0,
+          "price": 50.02,
+          "ytd_pct": -8.3211,
+          "ma20": 47.55,
+          "ma60": 48.1453,
+          "vs_ma20_pct": 5.1945,
+          "vs_ma60_pct": 3.8938,
+          "high20_gap_pct": -0.02,
           "above_ma20": true,
           "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 2.731,
-          "ret_5d_pct": 6.9246,
-          "ret_10d_pct": 5.8388,
-          "ret_20d_pct": 8.5014,
-          "ret_50d_pct": -0.3982,
-          "ret_100d_pct": 3.5175,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -0.02,
+          "ret_5d_pct": 5.5052,
+          "ret_10d_pct": 5.6166,
+          "ret_20d_pct": 9.7893,
+          "ret_50d_pct": 0.5427,
+          "ret_100d_pct": 1.5428,
           "calendar_returns": {
             "1": {
-              "pct": 7.5451,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": 7.4082,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -0.9895,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -0.5764,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": -7.3862,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": -7.8821,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 7.0618,
-          "ret_3m_pct": -0.1796,
+          "ret_1m_pct": 8.4797,
+          "ret_3m_pct": -0.6949,
           "ticker": "INDA",
           "name": "인도 · iShares MSCI India ETF",
           "group": "국가별 대표 ETF",
@@ -2856,58 +2856,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 1.0792,
-          "rs_qqq_1d_pct": 1.7577,
-          "rs_spy_5d_pct": 7.6367,
-          "rs_qqq_5d_pct": 11.5635,
-          "rs_spy_10d_pct": 6.6511,
-          "rs_qqq_10d_pct": 10.4237,
-          "rs_spy_20d_pct": 9.8408,
-          "rs_qqq_20d_pct": 17.1826,
-          "rs_spy_50d_pct": -0.5157,
-          "rs_qqq_50d_pct": 2.2428,
-          "rs_spy_100d_pct": 0.139,
-          "rs_qqq_100d_pct": 7.5919,
-          "rs_spy_1m_pct": 8.638,
-          "rs_qqq_1m_pct": 15.975
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 4.3892,
+          "rs_qqq_1d_pct": 6.4689,
+          "rs_spy_5d_pct": 10.2312,
+          "rs_qqq_5d_pct": 15.0517,
+          "rs_spy_10d_pct": 9.6692,
+          "rs_qqq_10d_pct": 13.7674,
+          "rs_spy_20d_pct": 15.0779,
+          "rs_qqq_20d_pct": 23.2367,
+          "rs_spy_50d_pct": 4.8608,
+          "rs_qqq_50d_pct": 9.5844,
+          "rs_spy_100d_pct": 4.4348,
+          "rs_qqq_100d_pct": 14.5737,
+          "rs_spy_1m_pct": 14.1692,
+          "rs_qqq_1m_pct": 23.0865
         },
         {
-          "price": 32.25,
-          "ytd_pct": 0.1553,
-          "ma20": 38.709,
-          "ma60": 37.5723,
-          "vs_ma20_pct": -16.686,
-          "vs_ma60_pct": -14.1656,
-          "high20_gap_pct": -25.9302,
+          "price": 31.76,
+          "ytd_pct": -1.3665,
+          "ma20": 38.1675,
+          "ma60": 37.5373,
+          "vs_ma20_pct": -16.7878,
+          "vs_ma60_pct": -15.3909,
+          "high20_gap_pct": -27.0556,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 1.6388,
-          "ret_5d_pct": -4.075,
-          "ret_10d_pct": -24.1355,
-          "ret_20d_pct": -23.8848,
-          "ret_50d_pct": -10.1171,
-          "ret_100d_pct": -8.1197,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -1.5194,
+          "ret_5d_pct": -4.1641,
+          "ret_10d_pct": -24.1099,
+          "ret_20d_pct": -25.4285,
+          "ret_50d_pct": -11.0862,
+          "ret_100d_pct": -8.3141,
           "calendar_returns": {
             "1": {
-              "pct": -15.5538,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": -26.1052,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -10.6401,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -12.0465,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 3.4317,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": -1.0592,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": -25.0,
-          "ret_3m_pct": -9.9414,
+          "ret_1m_pct": -25.0413,
+          "ret_3m_pct": -10.1302,
           "ticker": "EWZ",
           "name": "브라질 · iShares MSCI Brazil ETF",
           "group": "국가별 대표 ETF",
@@ -2916,58 +2916,58 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": -0.013,
-          "rs_qqq_1d_pct": 0.6655,
-          "rs_spy_5d_pct": -3.3629,
-          "rs_qqq_5d_pct": 0.5639,
-          "rs_spy_10d_pct": -23.3232,
-          "rs_qqq_10d_pct": -19.5506,
-          "rs_spy_20d_pct": -22.5454,
-          "rs_qqq_20d_pct": -15.2036,
-          "rs_spy_50d_pct": -10.2346,
-          "rs_qqq_50d_pct": -7.4761,
-          "rs_spy_100d_pct": -11.4982,
-          "rs_qqq_100d_pct": -4.0453,
-          "rs_spy_1m_pct": -23.4238,
-          "rs_qqq_1m_pct": -16.0868
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 2.8898,
+          "rs_qqq_1d_pct": 4.9695,
+          "rs_spy_5d_pct": 0.5619,
+          "rs_qqq_5d_pct": 5.3824,
+          "rs_spy_10d_pct": -20.0573,
+          "rs_qqq_10d_pct": -15.9591,
+          "rs_spy_20d_pct": -20.1399,
+          "rs_qqq_20d_pct": -11.9811,
+          "rs_spy_50d_pct": -6.7681,
+          "rs_qqq_50d_pct": -2.0445,
+          "rs_spy_100d_pct": -5.4221,
+          "rs_qqq_100d_pct": 4.7168,
+          "rs_spy_1m_pct": -19.3518,
+          "rs_qqq_1m_pct": -10.4345
         },
         {
-          "price": 90.24,
-          "ytd_pct": 6.7171,
-          "ma20": 87.037,
-          "ma60": 88.9978,
-          "vs_ma20_pct": 3.68,
-          "vs_ma60_pct": 1.3957,
-          "high20_gap_pct": 0.0,
+          "price": 88.42,
+          "ytd_pct": 4.5648,
+          "ma20": 87.1865,
+          "ma60": 88.934,
+          "vs_ma20_pct": 1.4148,
+          "vs_ma60_pct": -0.578,
+          "high20_gap_pct": -2.0168,
           "above_ma20": true,
-          "above_ma60": true,
-          "observed_date": "2026-11-04",
-          "ret_1d_pct": 3.0843,
-          "ret_5d_pct": 3.3559,
-          "ret_10d_pct": 3.0372,
-          "ret_20d_pct": 5.4698,
-          "ret_50d_pct": -3.1656,
-          "ret_100d_pct": 0.6918,
+          "above_ma60": false,
+          "observed_date": "2026-11-05",
+          "ret_1d_pct": -2.0168,
+          "ret_5d_pct": 0.3177,
+          "ret_10d_pct": 1.8664,
+          "ret_20d_pct": 3.4999,
+          "ret_50d_pct": -4.617,
+          "ret_100d_pct": -1.6134,
           "calendar_returns": {
             "1": {
-              "pct": 4.4686,
-              "base_date": "2026-10-02",
-              "end_date": "2026-11-04"
+              "pct": 2.4803,
+              "base_date": "2026-10-05",
+              "end_date": "2026-11-05"
             },
             "3": {
-              "pct": -1.7422,
-              "base_date": "2026-08-04",
-              "end_date": "2026-11-04"
+              "pct": -3.7343,
+              "base_date": "2026-08-05",
+              "end_date": "2026-11-05"
             },
             "12": {
-              "pct": 13.7814,
-              "base_date": "2025-11-04",
-              "end_date": "2026-11-04"
+              "pct": 10.5665,
+              "base_date": "2025-11-05",
+              "end_date": "2026-11-05"
             }
           },
-          "ret_1m_pct": 4.2273,
-          "ret_3m_pct": -1.7315,
+          "ret_1m_pct": 3.3427,
+          "ret_3m_pct": -4.514,
           "ticker": "VGK",
           "name": "유럽 · Vanguard FTSE Europe ETF",
           "group": "국가별 대표 ETF",
@@ -2976,31 +2976,27 @@
           "market": "US",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-04",
-          "rs_spy_1d_pct": 1.4325,
-          "rs_qqq_1d_pct": 2.111,
-          "rs_spy_5d_pct": 4.068,
-          "rs_qqq_5d_pct": 7.9948,
-          "rs_spy_10d_pct": 3.8495,
-          "rs_qqq_10d_pct": 7.6221,
-          "rs_spy_20d_pct": 6.8092,
-          "rs_qqq_20d_pct": 14.151,
-          "rs_spy_50d_pct": -3.2831,
-          "rs_qqq_50d_pct": -0.5246,
-          "rs_spy_100d_pct": -2.6867,
-          "rs_qqq_100d_pct": 4.7662,
-          "rs_spy_1m_pct": 5.8035,
-          "rs_qqq_1m_pct": 13.1405
+          "completed_cutoff": "2026-11-05",
+          "rs_spy_1d_pct": 2.3924,
+          "rs_qqq_1d_pct": 4.4721,
+          "rs_spy_5d_pct": 5.0437,
+          "rs_qqq_5d_pct": 9.8642,
+          "rs_spy_10d_pct": 5.919,
+          "rs_qqq_10d_pct": 10.0172,
+          "rs_spy_20d_pct": 8.7885,
+          "rs_qqq_20d_pct": 16.9473,
+          "rs_spy_50d_pct": -0.2989,
+          "rs_qqq_50d_pct": 4.4247,
+          "rs_spy_100d_pct": 1.2786,
+          "rs_qqq_100d_pct": 11.4175,
+          "rs_spy_1m_pct": 9.0322,
+          "rs_qqq_1m_pct": 17.9495
         }
       ]
     }
   ],
   "series": {
     "SPY": [
-      {
-        "date": "2025-04-03",
-        "value": 536.70001221
-      },
       {
         "date": "2025-04-04",
         "value": 505.27999878
@@ -4596,13 +4592,13 @@
       {
         "date": "2026-11-04",
         "value": 766.80999756
+      },
+      {
+        "date": "2026-11-05",
+        "value": 733.0
       }
     ],
     "QQQ": [
-      {
-        "date": "2025-04-03",
-        "value": 450.66000366
-      },
       {
         "date": "2025-04-04",
         "value": 422.67001343
@@ -6198,6 +6194,10 @@
       {
         "date": "2026-11-04",
         "value": 691.95001221
+      },
+      {
+        "date": "2026-11-05",
+        "value": 647.04998779
       }
     ],
     "069500": [
@@ -27028,10 +27028,6 @@
     ],
     "XLK": [
       {
-        "date": "2025-04-03",
-        "value": 97.61499786
-      },
-      {
         "date": "2025-04-04",
         "value": 91.18499756
       },
@@ -28626,13 +28622,13 @@
       {
         "date": "2026-11-04",
         "value": 176.5
+      },
+      {
+        "date": "2026-11-05",
+        "value": 162.38000488
       }
     ],
     "XLC": [
-      {
-        "date": "2025-04-03",
-        "value": 92.52999878
-      },
       {
         "date": "2025-04-04",
         "value": 87.23000336
@@ -30228,13 +30224,13 @@
       {
         "date": "2026-11-04",
         "value": 104.95999908
+      },
+      {
+        "date": "2026-11-05",
+        "value": 104.33999634
       }
     ],
     "XLY": [
-      {
-        "date": "2025-04-03",
-        "value": 95.51499939
-      },
       {
         "date": "2025-04-04",
         "value": 91.39499664
@@ -31830,13 +31826,13 @@
       {
         "date": "2026-11-04",
         "value": 122.33000183
+      },
+      {
+        "date": "2026-11-05",
+        "value": 117.63999939
       }
     ],
     "XLF": [
-      {
-        "date": "2025-04-03",
-        "value": 47.68999863
-      },
       {
         "date": "2025-04-04",
         "value": 44.20000076
@@ -33432,13 +33428,13 @@
       {
         "date": "2026-11-04",
         "value": 59.20000076
+      },
+      {
+        "date": "2026-11-05",
+        "value": 57.5
       }
     ],
     "XLI": [
-      {
-        "date": "2025-04-03",
-        "value": 125.84999847
-      },
       {
         "date": "2025-04-04",
         "value": 117.94000244
@@ -35034,13 +35030,13 @@
       {
         "date": "2026-11-04",
         "value": 169.46000671
+      },
+      {
+        "date": "2026-11-05",
+        "value": 162.47000122
       }
     ],
     "XLE": [
-      {
-        "date": "2025-04-03",
-        "value": 43.36999893
-      },
       {
         "date": "2025-04-04",
         "value": 39.38000107
@@ -36636,13 +36632,13 @@
       {
         "date": "2026-11-04",
         "value": 63.52000046
+      },
+      {
+        "date": "2026-11-05",
+        "value": 61.63000107
       }
     ],
     "XLB": [
-      {
-        "date": "2025-04-03",
-        "value": 41.54000092
-      },
       {
         "date": "2025-04-04",
         "value": 38.93999863
@@ -38238,13 +38234,13 @@
       {
         "date": "2026-11-04",
         "value": 53.90000153
+      },
+      {
+        "date": "2026-11-05",
+        "value": 52.33000183
       }
     ],
     "XLV": [
-      {
-        "date": "2025-04-03",
-        "value": 143.13000488
-      },
       {
         "date": "2025-04-04",
         "value": 135.27999878
@@ -39840,13 +39836,13 @@
       {
         "date": "2026-11-04",
         "value": 189.66000366
+      },
+      {
+        "date": "2026-11-05",
+        "value": 184.91000366
       }
     ],
     "XLP": [
-      {
-        "date": "2025-04-03",
-        "value": 82.01999664
-      },
       {
         "date": "2025-04-04",
         "value": 78.45999908
@@ -41442,13 +41438,13 @@
       {
         "date": "2026-11-04",
         "value": 91.94000244
+      },
+      {
+        "date": "2026-11-05",
+        "value": 91.25
       }
     ],
     "XLU": [
-      {
-        "date": "2025-04-03",
-        "value": 39.45999908
-      },
       {
         "date": "2025-04-04",
         "value": 37.26499939
@@ -43044,13 +43040,13 @@
       {
         "date": "2026-11-04",
         "value": 43.61000061
+      },
+      {
+        "date": "2026-11-05",
+        "value": 43.29999924
       }
     ],
     "XLRE": [
-      {
-        "date": "2025-04-03",
-        "value": 40.81999969
-      },
       {
         "date": "2025-04-04",
         "value": 38.95999908
@@ -44646,13 +44642,13 @@
       {
         "date": "2026-11-04",
         "value": 45.11999893
+      },
+      {
+        "date": "2026-11-05",
+        "value": 44.29999924
       }
     ],
     "SMH": [
-      {
-        "date": "2025-04-03",
-        "value": 195.57000732
-      },
       {
         "date": "2025-04-04",
         "value": 180.80000305
@@ -46248,1596 +46244,1596 @@
       {
         "date": "2026-11-04",
         "value": 504.26998901
+      },
+      {
+        "date": "2026-11-05",
+        "value": 447.73001099
       }
     ],
     "SOXX": [
       {
-        "date": "2025-04-03",
-        "value": 170.36000061
-      },
-      {
         "date": "2025-04-04",
-        "value": 157.63000488
+        "value": 52.54333115
       },
       {
         "date": "2025-04-07",
-        "value": 161.27000427
+        "value": 53.75666809
       },
       {
         "date": "2025-04-08",
-        "value": 154.86000061
+        "value": 51.61999893
       },
       {
         "date": "2025-04-09",
-        "value": 183.61999512
+        "value": 61.20666885
       },
       {
         "date": "2025-04-10",
-        "value": 168.61000061
+        "value": 56.20333481
       },
       {
         "date": "2025-04-11",
-        "value": 172.25999451
+        "value": 57.41999817
       },
       {
         "date": "2025-04-14",
-        "value": 173.3999939
+        "value": 57.79999924
       },
       {
         "date": "2025-04-15",
-        "value": 174.11000061
+        "value": 58.03666687
       },
       {
         "date": "2025-04-16",
-        "value": 167.38999939
+        "value": 55.79666519
       },
       {
         "date": "2025-04-17",
-        "value": 166.55000305
+        "value": 55.51666641
       },
       {
         "date": "2025-04-21",
-        "value": 163.63999939
+        "value": 54.54666519
       },
       {
         "date": "2025-04-22",
-        "value": 166.82000732
+        "value": 55.60666656
       },
       {
         "date": "2025-04-23",
-        "value": 173.07000732
+        "value": 57.68999863
       },
       {
         "date": "2025-04-24",
-        "value": 183.02999878
+        "value": 61.00999832
       },
       {
         "date": "2025-04-25",
-        "value": 184.80999756
+        "value": 61.60333252
       },
       {
         "date": "2025-04-28",
-        "value": 184.47999573
+        "value": 61.49333191
       },
       {
         "date": "2025-04-29",
-        "value": 182.50999451
+        "value": 60.83666611
       },
       {
         "date": "2025-04-30",
-        "value": 183.83999634
+        "value": 61.27999878
       },
       {
         "date": "2025-05-01",
-        "value": 183.58999634
+        "value": 61.19666672
       },
       {
         "date": "2025-05-02",
-        "value": 190.02999878
+        "value": 63.3433342
       },
       {
         "date": "2025-05-05",
-        "value": 188.57000732
+        "value": 62.85666656
       },
       {
         "date": "2025-05-06",
-        "value": 186.77000427
+        "value": 62.25666809
       },
       {
         "date": "2025-05-07",
-        "value": 190.03999329
+        "value": 63.34666824
       },
       {
         "date": "2025-05-08",
-        "value": 191.74000549
+        "value": 63.91333389
       },
       {
         "date": "2025-05-09",
-        "value": 193.94000244
+        "value": 64.64666748
       },
       {
         "date": "2025-05-12",
-        "value": 207.86999512
+        "value": 69.29000092
       },
       {
         "date": "2025-05-13",
-        "value": 213.75999451
+        "value": 71.25333405
       },
       {
         "date": "2025-05-14",
-        "value": 214.78999329
+        "value": 71.59666443
       },
       {
         "date": "2025-05-15",
-        "value": 213.41000366
+        "value": 71.13666534
       },
       {
         "date": "2025-05-16",
-        "value": 213.13000488
+        "value": 71.04333496
       },
       {
         "date": "2025-05-19",
-        "value": 211.8500061
+        "value": 70.6166687
       },
       {
         "date": "2025-05-20",
-        "value": 211.53999329
+        "value": 70.51333618
       },
       {
         "date": "2025-05-21",
-        "value": 207.66999817
+        "value": 69.22333527
       },
       {
         "date": "2025-05-22",
-        "value": 205.75
+        "value": 68.58333588
       },
       {
         "date": "2025-05-23",
-        "value": 202.55999756
+        "value": 67.51999664
       },
       {
         "date": "2025-05-27",
-        "value": 209.28999329
+        "value": 69.76333618
       },
       {
         "date": "2025-05-28",
-        "value": 208.24000549
+        "value": 69.41333008
       },
       {
         "date": "2025-05-29",
-        "value": 209.08999634
+        "value": 69.69667053
       },
       {
         "date": "2025-05-30",
-        "value": 204.94000244
+        "value": 68.3133316
       },
       {
         "date": "2025-06-02",
-        "value": 208.02999878
+        "value": 69.34333038
       },
       {
         "date": "2025-06-03",
-        "value": 213.61999512
+        "value": 71.20666504
       },
       {
         "date": "2025-06-04",
-        "value": 216.80000305
+        "value": 72.26667023
       },
       {
         "date": "2025-06-05",
-        "value": 215.88999939
+        "value": 71.96333313
       },
       {
         "date": "2025-06-06",
-        "value": 217.33999634
+        "value": 72.44667053
       },
       {
         "date": "2025-06-09",
-        "value": 222.46000671
+        "value": 74.15333557
       },
       {
         "date": "2025-06-10",
-        "value": 227.32000732
+        "value": 75.77333069
       },
       {
         "date": "2025-06-11",
-        "value": 226.55999756
+        "value": 75.51999664
       },
       {
         "date": "2025-06-12",
-        "value": 226.86999512
+        "value": 75.62333679
       },
       {
         "date": "2025-06-13",
-        "value": 220.96000671
+        "value": 73.65333557
       },
       {
         "date": "2025-06-16",
-        "value": 227.44000244
+        "value": 75.8133316
       },
       {
         "date": "2025-06-17",
-        "value": 225.63999939
+        "value": 75.21333313
       },
       {
         "date": "2025-06-18",
-        "value": 226.55999756
+        "value": 75.51999664
       },
       {
         "date": "2025-06-20",
-        "value": 225.11000061
+        "value": 75.03666687
       },
       {
         "date": "2025-06-23",
-        "value": 226.50999451
+        "value": 75.50333405
       },
       {
         "date": "2025-06-24",
-        "value": 235.1000061
+        "value": 78.3666687
       },
       {
         "date": "2025-06-25",
-        "value": 237.21000671
+        "value": 79.06999969
       },
       {
         "date": "2025-06-26",
-        "value": 239.07000732
+        "value": 79.69000244
       },
       {
         "date": "2025-06-27",
-        "value": 238.86000061
+        "value": 79.62000275
       },
       {
         "date": "2025-06-30",
-        "value": 238.69999695
+        "value": 79.56666565
       },
       {
         "date": "2025-07-01",
-        "value": 237.61999512
+        "value": 79.20666504
       },
       {
         "date": "2025-07-02",
-        "value": 242.13999939
+        "value": 80.71333313
       },
       {
         "date": "2025-07-03",
-        "value": 243.33999634
+        "value": 81.11333466
       },
       {
         "date": "2025-07-07",
-        "value": 238.77999878
+        "value": 79.59333038
       },
       {
         "date": "2025-07-08",
-        "value": 243.33999634
+        "value": 81.11333466
       },
       {
         "date": "2025-07-09",
-        "value": 244.11999512
+        "value": 81.37333679
       },
       {
         "date": "2025-07-10",
-        "value": 246.55000305
+        "value": 82.18333435
       },
       {
         "date": "2025-07-11",
-        "value": 246.16999817
+        "value": 82.05666351
       },
       {
         "date": "2025-07-14",
-        "value": 243.83000183
+        "value": 81.27666473
       },
       {
         "date": "2025-07-15",
-        "value": 246.25999451
+        "value": 82.08666992
       },
       {
         "date": "2025-07-16",
-        "value": 245.58999634
+        "value": 81.86333466
       },
       {
         "date": "2025-07-17",
-        "value": 246.52999878
+        "value": 82.17666626
       },
       {
         "date": "2025-07-18",
-        "value": 246.72999573
+        "value": 82.24333191
       },
       {
         "date": "2025-07-21",
-        "value": 246.94999695
+        "value": 82.31666565
       },
       {
         "date": "2025-07-22",
-        "value": 243.53999329
+        "value": 81.18000031
       },
       {
         "date": "2025-07-23",
-        "value": 242.05999756
+        "value": 80.6866684
       },
       {
         "date": "2025-07-24",
-        "value": 241.55999756
+        "value": 80.51999664
       },
       {
         "date": "2025-07-25",
-        "value": 241.53999329
+        "value": 80.51333618
       },
       {
         "date": "2025-07-28",
-        "value": 245.75
+        "value": 81.91666412
       },
       {
         "date": "2025-07-29",
-        "value": 246.19000244
+        "value": 82.0633316
       },
       {
         "date": "2025-07-30",
-        "value": 247.94999695
+        "value": 82.65000153
       },
       {
         "date": "2025-07-31",
-        "value": 240.02999878
+        "value": 80.01000214
       },
       {
         "date": "2025-08-01",
-        "value": 237.24000549
+        "value": 79.08000183
       },
       {
         "date": "2025-08-04",
-        "value": 240.3999939
+        "value": 80.1333313
       },
       {
         "date": "2025-08-05",
-        "value": 238.72999573
+        "value": 79.57666779
       },
       {
         "date": "2025-08-06",
-        "value": 236.92999268
+        "value": 78.97666931
       },
       {
         "date": "2025-08-07",
-        "value": 240.83999634
+        "value": 80.27999878
       },
       {
         "date": "2025-08-08",
-        "value": 242.86999512
+        "value": 80.95666504
       },
       {
         "date": "2025-08-11",
-        "value": 242.41000366
+        "value": 80.80332947
       },
       {
         "date": "2025-08-12",
-        "value": 250.16000366
+        "value": 83.38666534
       },
       {
         "date": "2025-08-13",
-        "value": 253.88000488
+        "value": 84.62666321
       },
       {
         "date": "2025-08-14",
-        "value": 254.13999939
+        "value": 84.71333313
       },
       {
         "date": "2025-08-15",
-        "value": 248.32000732
+        "value": 82.77333069
       },
       {
         "date": "2025-08-18",
-        "value": 249.05000305
+        "value": 83.01667023
       },
       {
         "date": "2025-08-19",
-        "value": 245.1499939
+        "value": 81.71666718
       },
       {
         "date": "2025-08-20",
-        "value": 243.74000549
+        "value": 81.24666595
       },
       {
         "date": "2025-08-21",
-        "value": 242.36000061
+        "value": 80.78666687
       },
       {
         "date": "2025-08-22",
-        "value": 249.08999634
+        "value": 83.02999878
       },
       {
         "date": "2025-08-25",
-        "value": 248.50999451
+        "value": 82.83666992
       },
       {
         "date": "2025-08-26",
-        "value": 250.8500061
+        "value": 83.6166687
       },
       {
         "date": "2025-08-27",
-        "value": 251.33999634
+        "value": 83.77999878
       },
       {
         "date": "2025-08-28",
-        "value": 252.55000305
+        "value": 84.18333435
       },
       {
         "date": "2025-08-29",
-        "value": 245.32000732
+        "value": 81.77333069
       },
       {
         "date": "2025-09-02",
-        "value": 242.83000183
+        "value": 80.94333649
       },
       {
         "date": "2025-09-03",
-        "value": 241.67999268
+        "value": 80.55999756
       },
       {
         "date": "2025-09-04",
-        "value": 244.16999817
+        "value": 81.38999939
       },
       {
         "date": "2025-09-05",
-        "value": 247.05000305
+        "value": 82.34999847
       },
       {
         "date": "2025-09-08",
-        "value": 248.8500061
+        "value": 82.94999695
       },
       {
         "date": "2025-09-09",
-        "value": 249.05999756
+        "value": 83.01999664
       },
       {
         "date": "2025-09-10",
-        "value": 253.44999695
+        "value": 84.48332977
       },
       {
         "date": "2025-09-11",
-        "value": 255.19000244
+        "value": 85.0633316
       },
       {
         "date": "2025-09-12",
-        "value": 255.63999939
+        "value": 85.21333313
       },
       {
         "date": "2025-09-15",
-        "value": 257.79998779
+        "value": 85.93333435
       },
       {
         "date": "2025-09-16",
-        "value": 258.57998657
+        "value": 86.19333649
       },
       {
         "date": "2025-09-17",
-        "value": 258.52999878
+        "value": 86.17666626
       },
       {
         "date": "2025-09-18",
-        "value": 267.57000732
+        "value": 89.19000244
       },
       {
         "date": "2025-09-19",
-        "value": 265.85998535
+        "value": 88.62000275
       },
       {
         "date": "2025-09-22",
-        "value": 269.82998657
+        "value": 89.94333649
       },
       {
         "date": "2025-09-23",
-        "value": 269.51000977
+        "value": 89.83666992
       },
       {
         "date": "2025-09-24",
-        "value": 269.1000061
+        "value": 89.69999695
       },
       {
         "date": "2025-09-25",
-        "value": 268.23999023
+        "value": 89.41333008
       },
       {
         "date": "2025-09-26",
-        "value": 268.82998657
+        "value": 89.61000061
       },
       {
         "date": "2025-09-29",
-        "value": 268.92999268
+        "value": 89.64333344
       },
       {
         "date": "2025-09-30",
-        "value": 271.11999512
+        "value": 90.37333679
       },
       {
         "date": "2025-10-01",
-        "value": 276.33999634
+        "value": 92.11333466
       },
       {
         "date": "2025-10-02",
-        "value": 281.69000244
+        "value": 93.89666748
       },
       {
         "date": "2025-10-03",
-        "value": 279.95999146
+        "value": 93.31999969
       },
       {
         "date": "2025-10-06",
-        "value": 288.35998535
+        "value": 96.12000275
       },
       {
         "date": "2025-10-07",
-        "value": 281.91000366
+        "value": 93.97000122
       },
       {
         "date": "2025-10-08",
-        "value": 291.54000854
+        "value": 97.18000031
       },
       {
         "date": "2025-10-09",
-        "value": 290.19000244
+        "value": 96.73000336
       },
       {
         "date": "2025-10-10",
-        "value": 271.98999023
+        "value": 90.66333008
       },
       {
         "date": "2025-10-13",
-        "value": 284.86999512
+        "value": 94.95666504
       },
       {
         "date": "2025-10-14",
-        "value": 279.02999878
+        "value": 93.01000214
       },
       {
         "date": "2025-10-15",
-        "value": 287.64001465
+        "value": 95.87999725
       },
       {
         "date": "2025-10-16",
-        "value": 288.98001099
+        "value": 96.32666779
       },
       {
         "date": "2025-10-17",
-        "value": 288.17001343
+        "value": 96.05666351
       },
       {
         "date": "2025-10-20",
-        "value": 292.97000122
+        "value": 97.65666962
       },
       {
         "date": "2025-10-21",
-        "value": 291.32998657
+        "value": 97.11000061
       },
       {
         "date": "2025-10-22",
-        "value": 284.13000488
+        "value": 94.70999908
       },
       {
         "date": "2025-10-23",
-        "value": 291.05999756
+        "value": 97.01999664
       },
       {
         "date": "2025-10-24",
-        "value": 295.85998535
+        "value": 98.62000275
       },
       {
         "date": "2025-10-27",
-        "value": 304.07998657
+        "value": 101.36000061
       },
       {
         "date": "2025-10-28",
-        "value": 304.45001221
+        "value": 101.48332977
       },
       {
         "date": "2025-10-29",
-        "value": 309.6000061
+        "value": 103.19999695
       },
       {
         "date": "2025-10-30",
-        "value": 305.41000366
+        "value": 101.80332947
       },
       {
         "date": "2025-10-31",
-        "value": 306.54998779
+        "value": 102.18333435
       },
       {
         "date": "2025-11-03",
-        "value": 308.38000488
+        "value": 102.79333496
       },
       {
         "date": "2025-11-04",
-        "value": 296.26000977
+        "value": 98.75333405
       },
       {
         "date": "2025-11-05",
-        "value": 305.47000122
+        "value": 101.82333374
       },
       {
         "date": "2025-11-06",
-        "value": 297.5
+        "value": 99.16666412
       },
       {
         "date": "2025-11-07",
-        "value": 294.38000488
+        "value": 98.12666321
       },
       {
         "date": "2025-11-10",
-        "value": 302.0
+        "value": 100.66666412
       },
       {
         "date": "2025-11-11",
-        "value": 295.1499939
+        "value": 98.3833313
       },
       {
         "date": "2025-11-12",
-        "value": 299.67001343
+        "value": 99.88999939
       },
       {
         "date": "2025-11-13",
-        "value": 289.38000488
+        "value": 96.45999908
       },
       {
         "date": "2025-11-14",
-        "value": 288.51998901
+        "value": 96.17333221
       },
       {
         "date": "2025-11-17",
-        "value": 283.55999756
+        "value": 94.51999664
       },
       {
         "date": "2025-11-18",
-        "value": 276.98001099
+        "value": 92.32666779
       },
       {
         "date": "2025-11-19",
-        "value": 281.60998535
+        "value": 93.87000275
       },
       {
         "date": "2025-11-20",
-        "value": 268.1000061
+        "value": 89.3666687
       },
       {
         "date": "2025-11-21",
-        "value": 270.82998657
+        "value": 90.27666473
       },
       {
         "date": "2025-11-24",
-        "value": 282.70001221
+        "value": 94.23332977
       },
       {
         "date": "2025-11-25",
-        "value": 283.57998657
+        "value": 94.52666473
       },
       {
         "date": "2025-11-26",
-        "value": 291.39001465
+        "value": 97.12999725
       },
       {
         "date": "2025-11-28",
-        "value": 296.73999023
+        "value": 98.91333008
       },
       {
         "date": "2025-12-01",
-        "value": 296.92001343
+        "value": 98.97333527
       },
       {
         "date": "2025-12-02",
-        "value": 302.83999634
+        "value": 100.94667053
       },
       {
         "date": "2025-12-03",
-        "value": 309.35998535
+        "value": 103.12000275
       },
       {
         "date": "2025-12-04",
-        "value": 306.27999878
+        "value": 102.09333038
       },
       {
         "date": "2025-12-05",
-        "value": 309.3999939
+        "value": 103.1333313
       },
       {
         "date": "2025-12-08",
-        "value": 312.76000977
+        "value": 104.25333405
       },
       {
         "date": "2025-12-09",
-        "value": 312.17999268
+        "value": 104.05999756
       },
       {
         "date": "2025-12-10",
-        "value": 316.32998657
+        "value": 105.44333649
       },
       {
         "date": "2025-12-11",
-        "value": 314.51998901
+        "value": 104.83999634
       },
       {
         "date": "2025-12-12",
-        "value": 299.48001099
+        "value": 99.82666779
       },
       {
         "date": "2025-12-15",
-        "value": 298.01000977
+        "value": 99.33666992
       },
       {
         "date": "2025-12-16",
-        "value": 296.20001221
+        "value": 98.73332977
       },
       {
         "date": "2025-12-17",
-        "value": 285.23001099
+        "value": 95.07666779
       },
       {
         "date": "2025-12-18",
-        "value": 292.04000854
+        "value": 97.34666443
       },
       {
         "date": "2025-12-19",
-        "value": 299.80999756
+        "value": 99.9366684
       },
       {
         "date": "2025-12-22",
-        "value": 303.83999634
+        "value": 101.27999878
       },
       {
         "date": "2025-12-23",
-        "value": 304.95999146
+        "value": 101.65333557
       },
       {
         "date": "2025-12-24",
-        "value": 306.14001465
+        "value": 102.04666901
       },
       {
         "date": "2025-12-26",
-        "value": 306.04000854
+        "value": 102.01333618
       },
       {
         "date": "2025-12-29",
-        "value": 305.32000732
+        "value": 101.77333069
       },
       {
         "date": "2025-12-30",
-        "value": 304.92001343
+        "value": 101.63999939
       },
       {
         "date": "2025-12-31",
-        "value": 301.1499939
+        "value": 100.3833313
       },
       {
         "date": "2026-01-02",
-        "value": 313.69000244
+        "value": 104.5633316
       },
       {
         "date": "2026-01-05",
-        "value": 318.05999756
+        "value": 106.01999664
       },
       {
         "date": "2026-01-06",
-        "value": 328.3500061
+        "value": 109.44999695
       },
       {
         "date": "2026-01-07",
-        "value": 324.89001465
+        "value": 108.29666901
       },
       {
         "date": "2026-01-08",
-        "value": 319.57998657
+        "value": 106.52666473
       },
       {
         "date": "2026-01-09",
-        "value": 328.77999878
+        "value": 109.59333038
       },
       {
         "date": "2026-01-12",
-        "value": 330.3500061
+        "value": 110.1166687
       },
       {
         "date": "2026-01-13",
-        "value": 333.29998779
+        "value": 111.09999847
       },
       {
         "date": "2026-01-14",
-        "value": 331.8999939
+        "value": 110.6333313
       },
       {
         "date": "2026-01-15",
-        "value": 337.22000122
+        "value": 112.40666962
       },
       {
         "date": "2026-01-16",
-        "value": 342.47000122
+        "value": 114.15666962
       },
       {
         "date": "2026-01-20",
-        "value": 337.3500061
+        "value": 112.44999695
       },
       {
         "date": "2026-01-21",
-        "value": 348.14001465
+        "value": 116.04666901
       },
       {
         "date": "2026-01-22",
-        "value": 348.67001343
+        "value": 116.22333527
       },
       {
         "date": "2026-01-23",
-        "value": 344.70999146
+        "value": 114.90333557
       },
       {
         "date": "2026-01-26",
-        "value": 343.07000732
+        "value": 114.35666656
       },
       {
         "date": "2026-01-27",
-        "value": 351.07998657
+        "value": 117.02666473
       },
       {
         "date": "2026-01-28",
-        "value": 360.45999146
+        "value": 120.15333557
       },
       {
         "date": "2026-01-29",
-        "value": 361.13000488
+        "value": 120.37666321
       },
       {
         "date": "2026-01-30",
-        "value": 346.29998779
+        "value": 115.43333435
       },
       {
         "date": "2026-02-02",
-        "value": 352.69000244
+        "value": 117.5633316
       },
       {
         "date": "2026-02-03",
-        "value": 345.64001465
+        "value": 115.21333313
       },
       {
         "date": "2026-02-04",
-        "value": 330.38000488
+        "value": 110.12666321
       },
       {
         "date": "2026-02-05",
-        "value": 330.82998657
+        "value": 110.27666473
       },
       {
         "date": "2026-02-06",
-        "value": 348.51000977
+        "value": 116.16999817
       },
       {
         "date": "2026-02-09",
-        "value": 352.76998901
+        "value": 117.58999634
       },
       {
         "date": "2026-02-10",
-        "value": 351.42999268
+        "value": 117.14333344
       },
       {
         "date": "2026-02-11",
-        "value": 360.20001221
+        "value": 120.06666565
       },
       {
         "date": "2026-02-12",
-        "value": 351.5
+        "value": 117.16666412
       },
       {
         "date": "2026-02-13",
-        "value": 354.66000366
+        "value": 118.22000122
       },
       {
         "date": "2026-02-17",
-        "value": 354.1000061
+        "value": 118.03333282
       },
       {
         "date": "2026-02-18",
-        "value": 357.92001343
+        "value": 119.30666351
       },
       {
         "date": "2026-02-19",
-        "value": 355.83999634
+        "value": 118.61333466
       },
       {
         "date": "2026-02-20",
-        "value": 359.42999268
+        "value": 119.80999756
       },
       {
         "date": "2026-02-23",
-        "value": 356.82000732
+        "value": 118.94000244
       },
       {
         "date": "2026-02-24",
-        "value": 362.04000854
+        "value": 120.68000031
       },
       {
         "date": "2026-02-25",
-        "value": 368.0
+        "value": 122.66666412
       },
       {
         "date": "2026-02-26",
-        "value": 356.79998779
+        "value": 118.93333435
       },
       {
         "date": "2026-02-27",
-        "value": 352.29000854
+        "value": 117.43000031
       },
       {
         "date": "2026-03-02",
-        "value": 352.04998779
+        "value": 117.34999847
       },
       {
         "date": "2026-03-03",
-        "value": 334.77999878
+        "value": 111.59333038
       },
       {
         "date": "2026-03-04",
-        "value": 341.54000854
+        "value": 113.84666443
       },
       {
         "date": "2026-03-05",
-        "value": 337.76000977
+        "value": 112.58666992
       },
       {
         "date": "2026-03-06",
-        "value": 323.51000977
+        "value": 107.83666992
       },
       {
         "date": "2026-03-09",
-        "value": 336.36999512
+        "value": 112.12333679
       },
       {
         "date": "2026-03-10",
-        "value": 338.80999756
+        "value": 112.9366684
       },
       {
         "date": "2026-03-11",
-        "value": 342.08999634
+        "value": 114.02999878
       },
       {
         "date": "2026-03-12",
-        "value": 330.19000244
+        "value": 110.0633316
       },
       {
         "date": "2026-03-13",
-        "value": 331.32000732
+        "value": 110.44000244
       },
       {
         "date": "2026-03-16",
-        "value": 337.82998657
+        "value": 112.61000061
       },
       {
         "date": "2026-03-17",
-        "value": 340.25
+        "value": 113.41666412
       },
       {
         "date": "2026-03-18",
-        "value": 338.29000854
+        "value": 112.76333618
       },
       {
         "date": "2026-03-19",
-        "value": 340.20001221
+        "value": 113.40000153
       },
       {
         "date": "2026-03-20",
-        "value": 332.51000977
+        "value": 110.83666992
       },
       {
         "date": "2026-03-23",
-        "value": 336.58999634
+        "value": 112.19667053
       },
       {
         "date": "2026-03-24",
-        "value": 341.01998901
+        "value": 113.67333221
       },
       {
         "date": "2026-03-25",
-        "value": 345.25
+        "value": 115.08333588
       },
       {
         "date": "2026-03-26",
-        "value": 328.8500061
+        "value": 109.6166687
       },
       {
         "date": "2026-03-27",
-        "value": 323.48001099
+        "value": 107.82666779
       },
       {
         "date": "2026-03-30",
-        "value": 309.79000854
+        "value": 103.26333618
       },
       {
         "date": "2026-03-31",
-        "value": 328.66000366
+        "value": 109.55332947
       },
       {
         "date": "2026-04-01",
-        "value": 338.54000854
+        "value": 112.84666443
       },
       {
         "date": "2026-04-02",
-        "value": 339.60998535
+        "value": 113.20333099
       },
       {
         "date": "2026-04-06",
-        "value": 344.1000061
+        "value": 114.69999695
       },
       {
         "date": "2026-04-07",
-        "value": 347.76000977
+        "value": 115.91999817
       },
       {
         "date": "2026-04-08",
-        "value": 370.3999939
+        "value": 123.46666718
       },
       {
         "date": "2026-04-09",
-        "value": 378.63000488
+        "value": 126.20999908
       },
       {
         "date": "2026-04-10",
-        "value": 386.6000061
+        "value": 128.8666687
       },
       {
         "date": "2026-04-13",
-        "value": 393.33999634
+        "value": 131.11332703
       },
       {
         "date": "2026-04-14",
-        "value": 401.23999023
+        "value": 133.74667358
       },
       {
         "date": "2026-04-15",
-        "value": 401.85998535
+        "value": 133.95333862
       },
       {
         "date": "2026-04-16",
-        "value": 405.95001221
+        "value": 135.31666565
       },
       {
         "date": "2026-04-17",
-        "value": 415.70999146
+        "value": 138.57000732
       },
       {
         "date": "2026-04-20",
-        "value": 417.54998779
+        "value": 139.18333435
       },
       {
         "date": "2026-04-21",
-        "value": 420.70001221
+        "value": 140.2333374
       },
       {
         "date": "2026-04-22",
-        "value": 431.76998901
+        "value": 143.92333984
       },
       {
         "date": "2026-04-23",
-        "value": 441.0
+        "value": 147.0
       },
       {
         "date": "2026-04-24",
-        "value": 461.6000061
+        "value": 153.8666687
       },
       {
         "date": "2026-04-27",
-        "value": 455.41000366
+        "value": 151.80332947
       },
       {
         "date": "2026-04-28",
-        "value": 438.70999146
+        "value": 146.23666382
       },
       {
         "date": "2026-04-29",
-        "value": 449.98999023
+        "value": 149.99667358
       },
       {
         "date": "2026-04-30",
-        "value": 461.44000244
+        "value": 153.81333923
       },
       {
         "date": "2026-05-01",
-        "value": 465.75
+        "value": 155.25
       },
       {
         "date": "2026-05-04",
-        "value": 462.05999756
+        "value": 154.02000427
       },
       {
         "date": "2026-05-05",
-        "value": 482.73001099
+        "value": 160.91000366
       },
       {
         "date": "2026-05-06",
-        "value": 506.86999512
+        "value": 168.95666504
       },
       {
         "date": "2026-05-07",
-        "value": 492.35998535
+        "value": 164.11999512
       },
       {
         "date": "2026-05-08",
-        "value": 520.29998779
+        "value": 173.43333435
       },
       {
         "date": "2026-05-11",
-        "value": 532.76000977
+        "value": 177.58666992
       },
       {
         "date": "2026-05-12",
-        "value": 515.98999023
+        "value": 171.99667358
       },
       {
         "date": "2026-05-13",
-        "value": 528.28997803
+        "value": 176.09666443
       },
       {
         "date": "2026-05-14",
-        "value": 530.0300293
+        "value": 176.67666626
       },
       {
         "date": "2026-05-15",
-        "value": 508.51998901
+        "value": 169.50666809
       },
       {
         "date": "2026-05-18",
-        "value": 495.86999512
+        "value": 165.28999329
       },
       {
         "date": "2026-05-19",
-        "value": 496.73999023
+        "value": 165.58000183
       },
       {
         "date": "2026-05-20",
-        "value": 520.30999756
+        "value": 173.43666077
       },
       {
         "date": "2026-05-21",
-        "value": 524.71002197
+        "value": 174.90333557
       },
       {
         "date": "2026-05-22",
-        "value": 537.33001709
+        "value": 179.11000061
       },
       {
         "date": "2026-05-26",
-        "value": 570.09002686
+        "value": 190.02999878
       },
       {
         "date": "2026-05-27",
-        "value": 563.97998047
+        "value": 187.99333191
       },
       {
         "date": "2026-05-28",
-        "value": 569.4699707
+        "value": 189.82333374
       },
       {
         "date": "2026-05-29",
-        "value": 569.08001709
+        "value": 189.69332886
       },
       {
         "date": "2026-06-01",
-        "value": 571.92999268
+        "value": 190.64332581
       },
       {
         "date": "2026-06-02",
-        "value": 605.02001953
+        "value": 201.67333984
       },
       {
         "date": "2026-06-03",
-        "value": 615.67999268
+        "value": 205.22666931
       },
       {
         "date": "2026-06-04",
-        "value": 602.7199707
+        "value": 200.90666199
       },
       {
         "date": "2026-06-05",
-        "value": 539.77001953
+        "value": 179.92333984
       },
       {
         "date": "2026-06-08",
-        "value": 571.45001221
+        "value": 190.4833374
       },
       {
         "date": "2026-06-09",
-        "value": 562.14001465
+        "value": 187.38000488
       },
       {
         "date": "2026-06-10",
-        "value": 541.51000977
+        "value": 180.50332642
       },
       {
         "date": "2026-06-11",
-        "value": 586.92999268
+        "value": 195.64332581
       },
       {
         "date": "2026-06-12",
-        "value": 596.25
+        "value": 198.75
       },
       {
         "date": "2026-06-15",
-        "value": 628.45001221
+        "value": 209.4833374
       },
       {
         "date": "2026-06-16",
-        "value": 591.23999023
+        "value": 197.08000183
       },
       {
         "date": "2026-06-17",
-        "value": 599.72998047
+        "value": 199.91000366
       },
       {
         "date": "2026-06-18",
-        "value": 639.45001221
+        "value": 213.1499939
       },
       {
         "date": "2026-06-22",
-        "value": 655.01000977
+        "value": 218.33666992
       },
       {
         "date": "2026-06-23",
-        "value": 603.39001465
+        "value": 201.13000488
       },
       {
         "date": "2026-06-24",
-        "value": 601.5
+        "value": 200.5
       },
       {
         "date": "2026-06-25",
-        "value": 625.20001221
+        "value": 208.3999939
       },
       {
         "date": "2026-06-26",
-        "value": 589.94000244
+        "value": 196.64666748
       },
       {
         "date": "2026-06-29",
-        "value": 614.34997559
+        "value": 204.78334045
       },
       {
         "date": "2026-06-30",
-        "value": 640.76000977
+        "value": 213.58666992
       },
       {
         "date": "2026-07-01",
-        "value": 599.70001221
+        "value": 199.8999939
       },
       {
         "date": "2026-07-02",
-        "value": 566.32000732
+        "value": 188.77333069
       },
       {
         "date": "2026-07-06",
-        "value": 581.51000977
+        "value": 193.83666992
       },
       {
         "date": "2026-07-07",
-        "value": 551.69000244
+        "value": 183.89666748
       },
       {
         "date": "2026-07-08",
-        "value": 562.0300293
+        "value": 187.34333801
       },
       {
         "date": "2026-07-09",
-        "value": 581.70001221
+        "value": 193.8999939
       },
       {
         "date": "2026-07-10",
-        "value": 581.34002686
+        "value": 193.77999878
       },
       {
         "date": "2026-07-13",
-        "value": 553.60998535
+        "value": 184.53666687
       },
       {
         "date": "2026-07-14",
-        "value": 567.91998291
+        "value": 189.30667114
       },
       {
         "date": "2026-07-15",
-        "value": 555.27001953
+        "value": 185.08999634
       },
       {
         "date": "2026-07-16",
-        "value": 530.5
+        "value": 176.83332825
       },
       {
         "date": "2026-07-17",
-        "value": 521.80999756
+        "value": 173.93666077
       },
       {
         "date": "2026-07-20",
-        "value": 524.14001465
+        "value": 174.71333313
       },
       {
         "date": "2026-07-21",
-        "value": 552.69000244
+        "value": 184.22999573
       },
       {
         "date": "2026-07-22",
-        "value": 555.52001953
+        "value": 185.17333984
       },
       {
         "date": "2026-07-23",
-        "value": 551.23999023
+        "value": 183.74667358
       },
       {
         "date": "2026-07-24",
-        "value": 527.01000977
+        "value": 175.66999817
       },
       {
         "date": "2026-07-27",
-        "value": 516.22998047
+        "value": 172.07666016
       },
       {
         "date": "2026-07-28",
-        "value": 491.45999146
+        "value": 163.82000732
       },
       {
         "date": "2026-07-29",
-        "value": 465.0
+        "value": 155.0
       },
       {
         "date": "2026-07-30",
-        "value": 504.52999878
+        "value": 168.17666626
       },
       {
         "date": "2026-07-31",
-        "value": 504.89001465
+        "value": 168.29666138
       },
       {
         "date": "2026-08-03",
-        "value": 507.67999268
+        "value": 169.22666931
       },
       {
         "date": "2026-08-04",
-        "value": 542.21002197
+        "value": 180.73666382
       },
       {
         "date": "2026-08-05",
-        "value": 530.70001221
+        "value": 176.8999939
       },
       {
         "date": "2026-08-06",
-        "value": 532.52001953
+        "value": 177.50666809
       },
       {
         "date": "2026-08-07",
-        "value": 543.27001953
+        "value": 181.08999634
       },
       {
         "date": "2026-08-10",
-        "value": 529.39001465
+        "value": 176.46333313
       },
       {
         "date": "2026-08-11",
-        "value": 534.20001221
+        "value": 178.06666565
       },
       {
         "date": "2026-08-12",
-        "value": 546.60998535
+        "value": 182.20333862
       },
       {
         "date": "2026-08-13",
-        "value": 550.73999023
+        "value": 183.58000183
       },
       {
         "date": "2026-08-14",
-        "value": 550.41998291
+        "value": 183.47332764
       },
       {
         "date": "2026-08-17",
-        "value": 559.11999512
+        "value": 186.37333679
       },
       {
         "date": "2026-08-18",
-        "value": 531.39001465
+        "value": 177.13000488
       },
       {
         "date": "2026-08-19",
-        "value": 519.66998291
+        "value": 173.22332764
       },
       {
         "date": "2026-08-20",
-        "value": 522.34997559
+        "value": 174.1166687
       },
       {
         "date": "2026-08-21",
-        "value": 520.04998779
+        "value": 173.3500061
       },
       {
         "date": "2026-08-24",
-        "value": 506.17999268
+        "value": 168.72666931
       },
       {
         "date": "2026-08-25",
-        "value": 514.05999756
+        "value": 171.35333252
       },
       {
         "date": "2026-08-26",
-        "value": 515.40002441
+        "value": 171.80000305
       },
       {
         "date": "2026-08-27",
-        "value": 525.42999268
+        "value": 175.14332581
       },
       {
         "date": "2026-08-28",
-        "value": 508.61999512
+        "value": 169.53999329
       },
       {
         "date": "2026-08-31",
-        "value": 511.04000854
+        "value": 170.34666443
       },
       {
         "date": "2026-09-01",
-        "value": 500.30999756
+        "value": 166.77000427
       },
       {
         "date": "2026-09-02",
-        "value": 501.44000244
+        "value": 167.14666748
       },
       {
         "date": "2026-09-03",
-        "value": 502.20001221
+        "value": 167.3999939
       },
       {
         "date": "2026-09-04",
-        "value": 519.85998535
+        "value": 173.28666687
       },
       {
         "date": "2026-09-08",
-        "value": 528.40002441
+        "value": 176.1333313
       },
       {
         "date": "2026-09-09",
-        "value": 532.0
+        "value": 177.33332825
       },
       {
         "date": "2026-09-10",
-        "value": 517.42999268
+        "value": 172.47666931
       },
       {
         "date": "2026-09-11",
-        "value": 527.07000732
+        "value": 175.69000244
       },
       {
         "date": "2026-09-14",
-        "value": 497.3999939
+        "value": 165.80000305
       },
       {
         "date": "2026-09-15",
-        "value": 498.8500061
+        "value": 166.28334045
       },
       {
         "date": "2026-09-16",
-        "value": 502.05999756
+        "value": 167.35333252
       },
       {
         "date": "2026-09-17",
-        "value": 519.09997559
+        "value": 173.03334045
       },
       {
         "date": "2026-09-18",
-        "value": 533.07000732
+        "value": 177.69000244
       },
       {
         "date": "2026-09-21",
-        "value": 559.34002686
+        "value": 186.44667053
       },
       {
         "date": "2026-09-22",
-        "value": 572.7800293
+        "value": 190.92666626
       },
       {
         "date": "2026-09-23",
-        "value": 565.7199707
+        "value": 188.57333374
       },
       {
         "date": "2026-09-24",
-        "value": 566.07000732
+        "value": 188.69000244
       },
       {
         "date": "2026-09-25",
-        "value": 572.67999268
+        "value": 190.89332581
       },
       {
         "date": "2026-09-28",
-        "value": 560.78997803
+        "value": 186.92999268
       },
       {
         "date": "2026-09-29",
-        "value": 567.44000244
+        "value": 189.14666748
       },
       {
         "date": "2026-09-30",
-        "value": 568.64001465
+        "value": 189.54666138
       },
       {
         "date": "2026-10-01",
-        "value": 576.33001709
+        "value": 192.11000061
       },
       {
         "date": "2026-10-02",
-        "value": 588.90002441
+        "value": 196.30000305
       },
       {
         "date": "2026-10-05",
-        "value": 589.51000977
+        "value": 196.50332642
       },
       {
         "date": "2026-10-06",
-        "value": 589.45001221
+        "value": 196.4833374
       },
       {
         "date": "2026-10-07",
-        "value": 582.82000732
+        "value": 194.27333069
       },
       {
         "date": "2026-10-08",
-        "value": 563.2800293
+        "value": 187.75999451
       },
       {
         "date": "2026-10-09",
-        "value": 559.40002441
+        "value": 186.46665955
       },
       {
         "date": "2026-10-12",
-        "value": 544.84997559
+        "value": 181.6166687
       },
       {
         "date": "2026-10-13",
-        "value": 543.90002441
+        "value": 181.30000305
       },
       {
         "date": "2026-10-14",
-        "value": 519.41998291
+        "value": 173.13999939
       },
       {
         "date": "2026-10-15",
-        "value": 514.71002197
+        "value": 171.57000732
       },
       {
         "date": "2026-10-16",
-        "value": 493.39001465
+        "value": 164.46333313
       },
       {
         "date": "2026-10-19",
-        "value": 501.92999268
+        "value": 167.30999756
       },
       {
         "date": "2026-10-20",
-        "value": 500.01000977
+        "value": 166.66999817
       },
       {
         "date": "2026-10-21",
-        "value": 510.35998535
+        "value": 170.11999512
       },
       {
         "date": "2026-10-22",
-        "value": 475.69000244
+        "value": 158.56333923
       },
       {
         "date": "2026-10-23",
-        "value": 478.20001221
+        "value": 159.3999939
       },
       {
         "date": "2026-10-26",
-        "value": 491.82998657
+        "value": 163.94332886
       },
       {
         "date": "2026-10-27",
-        "value": 511.05999756
+        "value": 170.35333252
       },
       {
         "date": "2026-10-28",
-        "value": 521.94000244
+        "value": 173.97999573
       },
       {
         "date": "2026-10-29",
-        "value": 513.85998535
+        "value": 171.28666687
       },
       {
         "date": "2026-10-30",
-        "value": 471.51000977
+        "value": 157.16999817
       },
       {
         "date": "2026-11-02",
@@ -47850,13 +47846,13 @@
       {
         "date": "2026-11-04",
         "value": 450.41000366
+      },
+      {
+        "date": "2026-11-05",
+        "value": 131.8999939
       }
     ],
     "IGV": [
-      {
-        "date": "2025-04-03",
-        "value": 86.62999725
-      },
       {
         "date": "2025-04-04",
         "value": 81.30000305
@@ -49452,13 +49448,13 @@
       {
         "date": "2026-11-04",
         "value": 103.55999756
+      },
+      {
+        "date": "2026-11-05",
+        "value": 99.01000214
       }
     ],
     "SKYY": [
-      {
-        "date": "2025-04-03",
-        "value": 96.80000305
-      },
       {
         "date": "2025-04-04",
         "value": 90.72000122
@@ -51054,13 +51050,13 @@
       {
         "date": "2026-11-04",
         "value": 156.69000244
+      },
+      {
+        "date": "2026-11-05",
+        "value": 147.16999817
       }
     ],
     "HACK": [
-      {
-        "date": "2025-04-03",
-        "value": 69.08999634
-      },
       {
         "date": "2025-04-04",
         "value": 64.68000031
@@ -52656,13 +52652,13 @@
       {
         "date": "2026-11-04",
         "value": 119.62999725
+      },
+      {
+        "date": "2026-11-05",
+        "value": 111.40000153
       }
     ],
     "XBI": [
-      {
-        "date": "2025-04-03",
-        "value": 78.13999939
-      },
       {
         "date": "2025-04-04",
         "value": 73.66000366
@@ -54258,13 +54254,13 @@
       {
         "date": "2026-11-04",
         "value": 159.1000061
+      },
+      {
+        "date": "2026-11-05",
+        "value": 148.3999939
       }
     ],
     "KRE": [
-      {
-        "date": "2025-04-03",
-        "value": 51.31000137
-      },
       {
         "date": "2025-04-04",
         "value": 49.25999832
@@ -55860,13 +55856,13 @@
       {
         "date": "2026-11-04",
         "value": 74.12999725
+      },
+      {
+        "date": "2026-11-05",
+        "value": 72.30999756
       }
     ],
     "ITA": [
-      {
-        "date": "2025-04-03",
-        "value": 147.77999878
-      },
       {
         "date": "2025-04-04",
         "value": 135.30999756
@@ -57462,13 +57458,13 @@
       {
         "date": "2026-11-04",
         "value": 212.83999634
+      },
+      {
+        "date": "2026-11-05",
+        "value": 68.11000061
       }
     ],
     "XAR": [
-      {
-        "date": "2025-04-03",
-        "value": 156.94000244
-      },
       {
         "date": "2025-04-04",
         "value": 144.94000244
@@ -59064,13 +59060,13 @@
       {
         "date": "2026-11-04",
         "value": 225.52999878
+      },
+      {
+        "date": "2026-11-05",
+        "value": 214.22999573
       }
     ],
     "PAVE": [
-      {
-        "date": "2025-04-03",
-        "value": 36.06999969
-      },
       {
         "date": "2025-04-04",
         "value": 34.40000153
@@ -60666,13 +60662,13 @@
       {
         "date": "2026-11-04",
         "value": 53.90999985
+      },
+      {
+        "date": "2026-11-05",
+        "value": 50.72999954
       }
     ],
     "XOP": [
-      {
-        "date": "2025-04-03",
-        "value": 119.45999908
-      },
       {
         "date": "2025-04-04",
         "value": 106.70999908
@@ -62268,13 +62264,13 @@
       {
         "date": "2026-11-04",
         "value": 179.28999329
+      },
+      {
+        "date": "2026-11-05",
+        "value": 174.1000061
       }
     ],
     "BOTZ": [
-      {
-        "date": "2025-04-03",
-        "value": 27.23999977
-      },
       {
         "date": "2025-04-04",
         "value": 25.37999916
@@ -63870,13 +63866,13 @@
       {
         "date": "2026-11-04",
         "value": 32.81000137
+      },
+      {
+        "date": "2026-11-05",
+        "value": 30.63999939
       }
     ],
     "ROBO": [
-      {
-        "date": "2025-04-03",
-        "value": 48.70000076
-      },
       {
         "date": "2025-04-04",
         "value": 45.45000076
@@ -65472,13 +65468,13 @@
       {
         "date": "2026-11-04",
         "value": 74.72000122
+      },
+      {
+        "date": "2026-11-05",
+        "value": 68.81999969
       }
     ],
     "EWY": [
-      {
-        "date": "2025-04-03",
-        "value": 53.13999939
-      },
       {
         "date": "2025-04-04",
         "value": 51.25
@@ -67074,13 +67070,13 @@
       {
         "date": "2026-11-04",
         "value": 152.11999512
+      },
+      {
+        "date": "2026-11-05",
+        "value": 131.6499939
       }
     ],
     "EWJ": [
-      {
-        "date": "2025-04-03",
-        "value": 65.41000366
-      },
       {
         "date": "2025-04-04",
         "value": 61.50999832
@@ -68676,13 +68672,13 @@
       {
         "date": "2026-11-04",
         "value": 93.86000061
+      },
+      {
+        "date": "2026-11-05",
+        "value": 88.26000214
       }
     ],
     "MCHI": [
-      {
-        "date": "2025-04-03",
-        "value": 53.66999817
-      },
       {
         "date": "2025-04-04",
         "value": 50.0
@@ -70278,13 +70274,13 @@
       {
         "date": "2026-11-04",
         "value": 51.56000137
+      },
+      {
+        "date": "2026-11-05",
+        "value": 52.04000092
       }
     ],
     "EWT": [
-      {
-        "date": "2025-04-03",
-        "value": 46.04999924
-      },
       {
         "date": "2025-04-04",
         "value": 43.81999969
@@ -71880,13 +71876,13 @@
       {
         "date": "2026-11-04",
         "value": 97.08000183
+      },
+      {
+        "date": "2026-11-05",
+        "value": 85.87999725
       }
     ],
     "INDA": [
-      {
-        "date": "2025-04-03",
-        "value": 51.18000031
-      },
       {
         "date": "2025-04-04",
         "value": 49.18999863
@@ -73482,13 +73478,13 @@
       {
         "date": "2026-11-04",
         "value": 50.02999878
+      },
+      {
+        "date": "2026-11-05",
+        "value": 50.02000046
       }
     ],
     "EWZ": [
-      {
-        "date": "2025-04-03",
-        "value": 26.32999992
-      },
       {
         "date": "2025-04-04",
         "value": 24.5
@@ -75084,13 +75080,13 @@
       {
         "date": "2026-11-04",
         "value": 32.25
+      },
+      {
+        "date": "2026-11-05",
+        "value": 31.76000023
       }
     ],
     "VGK": [
-      {
-        "date": "2025-04-03",
-        "value": 69.61000061
-      },
       {
         "date": "2025-04-04",
         "value": 65.01999664
@@ -76686,6 +76682,10 @@
       {
         "date": "2026-11-04",
         "value": 90.23999786
+      },
+      {
+        "date": "2026-11-05",
+        "value": 88.41999817
       }
     ]
   },
