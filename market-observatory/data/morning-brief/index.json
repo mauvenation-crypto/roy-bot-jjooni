@@ -1,7 +1,15 @@
 {
   "schema": "JJOONI_MORNING_BRIEF_INDEX_V1",
-  "updated_kst": "2026-11-05T08:14:28+09:00",
+  "updated_kst": "2026-11-06T06:36:10+09:00",
   "entries": [
+    {
+      "report_date_kst": "2026-11-06",
+      "market_date_us": "2026-11-05",
+      "title": "AI 매도가 9% 경계를 다시 무너뜨렸다 — BIPOD 복귀 후보인가",
+      "generated_kst": "2026-11-06T06:36:10+09:00",
+      "published_kst": "2026-11-06T06:36:10+09:00",
+      "path": "20261106.json"
+    },
     {
       "report_date_kst": "2026-11-05",
       "market_date_us": "2026-11-04",
