@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-05T10:27:26+09:00",
+  "generated_kst": "2026-11-05T10:27:29+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
@@ -113,7 +113,7 @@
       "state": "LIVE",
       "generated_kst": "2026-11-05T09:57:20+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=1846s · ETHUSD age=1839s",
+      "detail": "BTCUSD age=1849s · ETHUSD age=1842s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
@@ -185,8 +185,8 @@
     "calendar": {
       "label": "Economic Calendar",
       "state": "DEGRADED",
-      "generated_kst": "2026-11-05T09:57:12+09:00",
-      "as_of": "2026-11-05T09:57:12+09:00",
+      "generated_kst": "2026-11-05T10:26:17+09:00",
+      "as_of": "2026-11-05T10:26:17+09:00",
       "detail": "events=189 · overdue=0 · pending=0 · source_failures=0 · official_probe_blocked=1 · 기존 공식 검증 97건 · 이번 원천 조회 DEGRADED",
       "source": "economic-calendar.json",
       "critical": false,
@@ -212,7 +212,7 @@
     "audit": {
       "label": "Full Data Audit",
       "state": "PASS",
-      "generated_kst": "2026-11-05T10:27:26+09:00",
+      "generated_kst": "2026-11-05T10:27:29+09:00",
       "as_of": "2026-11-04",
       "detail": "critical=0 · warnings=0",
       "source": "data-audit.json",
