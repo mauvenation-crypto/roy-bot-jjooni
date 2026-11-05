@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test tests/strategy-books.test.cjs
+      - run: node --test tests/strategy-books.test.cjs tests/strategy-allocations.test.cjs
       - run: npm install --no-save --package-lock=false playwright@1.62.1
       - run: npx playwright install --with-deps chromium
       - run: node tests/strategy-books-e2e.cjs
@@ -27,3 +27,4 @@ jobs:
           path: |
             strategy-books-*.png
             /tmp/irp-readability-*.png
+
