@@ -5058,7 +5058,16 @@
         "series_identity": null,
         "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
       }
+    ],
+    "KR_CURRENT_ACCOUNT|301Y013/M/000000|2026-09-01": [
+      {
+        "version": "baseline_import",
+        "value": 61457.5,
+        "captured_kst": "2026-11-05T12:28:00+09:00",
+        "series_identity": "301Y013/M/000000",
+        "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/301Y013/M/202609/202609/000000"
+      }
     ]
   },
-  "updated_kst": "2026-11-05T05:33:56+09:00"
+  "updated_kst": "2026-11-05T12:28:00+09:00"
 }
