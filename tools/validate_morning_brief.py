@@ -4,7 +4,8 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, time
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from urllib.parse import urlparse
 from observatory_session import expected_completed_session
@@ -32,7 +33,34 @@ def validate_editorial(d, created):
     assert {x.get('symbol') for x in checks} == {'NDX', 'SOX'}, 'CORE_CLOSE_COVERAGE'
     for check in checks:
         assert check.get('session_date') == d['market_date_us'], 'CLOSE_SESSION_MISMATCH'
-        assert check.get('status') in {'VERIFIED', 'MISSING', 'CONFLICT'}, 'CLOSE_STATUS'
+        assert check.get('status') in {'VERIFIED', 'MISSING', 'CONFLICT', 'CROSS_CHECKED'}, 'CLOSE_STATUS'
+        if check['status'] == 'CROSS_CHECKED':
+            assert check.get('reason') and check.get('official_status') == 'NOT_CHECKED', 'CROSS_CHECK_DISCLOSURE'
+            close, previous = check.get('close'), check.get('previous_close')
+            assert all(isinstance(v, (int, float)) and 0 < v < float('inf') for v in (close, previous)), 'CLOSE_VALUE'
+            assert abs((close / previous - 1) * 100 - check['change_pct']) < .01, 'CLOSE_RETURN_ARITHMETIC'
+            observations = check.get('source_observations') or []
+            valid = []
+            postclose = False
+            for obs in observations:
+                url = obs.get('url') or ''
+                host = urlparse(url).hostname if urlparse(url).scheme == 'https' else None
+                if not host or url not in (check.get('source_urls') or []): continue
+                if obs.get('session_date') != check['session_date'] or obs.get('close') != close: continue
+                if obs.get('observation_type') not in ('COMPLETED_DAILY_BAR','POST_CLOSE_QUOTE'): continue
+                observed = obs.get('observed_at')
+                if observed:
+                    stamp = datetime.fromisoformat(observed)
+                    assert stamp.tzinfo and stamp <= checked, 'CROSS_CHECK_CLOCK'
+                    ny = stamp.astimezone(ZoneInfo('America/New_York'))
+                    if ny.date().isoformat() != check['session_date'] or ny.time() < time(16,0):
+                        continue
+                    postclose = True
+                elif obs.get('observation_type') != 'COMPLETED_DAILY_BAR':
+                    continue
+                valid.append(host)
+            assert len(set(valid)) >= 2 and postclose, 'CROSS_CHECK_SOURCES_OR_SESSION'
+            continue
         if check['status'] != 'VERIFIED':
             assert check.get('reason'), 'UNVERIFIED_CLOSE_REASON'
             continue

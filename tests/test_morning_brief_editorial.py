@@ -47,4 +47,28 @@ class EditorialAcceptanceTests(unittest.TestCase):
         self.report['editorial_contract']['close_checks'][1]['session_date']='2026-10-30'
         with self.assertRaisesRegex(AssertionError,'SESSION_MISMATCH'):validate_report(self.report)
 
+    def cross_checked(self):
+        c=self.report['editorial_contract']['close_checks'][0]
+        c.update(status='CROSS_CHECKED',reason='official close not yet checked',official_status='NOT_CHECKED',source_urls=['https://provider-a.example/close','https://provider-b.example/close'])
+        c['source_observations']=[
+            dict(url=c['source_urls'][0],close=c['close'],session_date=c['session_date'],observed_at=None,observation_type='COMPLETED_DAILY_BAR'),
+            dict(url=c['source_urls'][1],close=c['close'],session_date=c['session_date'],observed_at='2026-11-02T16:05:00-05:00',observation_type='POST_CLOSE_QUOTE')]
+        return c
+
+    def test_cross_checked_reference_does_not_claim_official(self):
+        self.cross_checked()
+        validate_report(self.report)
+
+    def test_cross_check_rejects_intraday_or_same_provider(self):
+        c=self.cross_checked();c['source_observations'][1]['observed_at']='2026-11-02T15:05:00-05:00'
+        with self.assertRaisesRegex(AssertionError,'CROSS_CHECK_SOURCES'):validate_report(self.report)
+        c=self.cross_checked();c['source_observations'][1]['url']=c['source_observations'][0]['url']
+        with self.assertRaisesRegex(AssertionError,'CROSS_CHECK_SOURCES'):validate_report(self.report)
+
+    def test_cross_check_rejects_conflicting_values_and_false_official_status(self):
+        c=self.cross_checked();c['source_observations'][1]['close']+=1
+        with self.assertRaisesRegex(AssertionError,'CROSS_CHECK_SOURCES'):validate_report(self.report)
+        c=self.cross_checked();c['official_status']='VERIFIED'
+        with self.assertRaisesRegex(AssertionError,'CROSS_CHECK_DISCLOSURE'):validate_report(self.report)
+
 if __name__=='__main__':unittest.main()
