@@ -169,6 +169,20 @@
     ddChart = $('#tcShowDD').checked ? draw($('#tcDD'), true) : null;
   }
 
+  async function readComparison(expected) {
+    const reader = window.JjooniDataReads;
+    const local = await reader.read('./data/tripod-comparison.json').catch(() => null);
+    if (local && (!expected || local.session >= expected)) return local;
+    // Market-only data is committed independently and can reach main before Pages.
+    try {
+      const published = await reader.read('https://raw.githubusercontent.com/mauveplace/jjooni-control-tower/main/market-observatory/data/tripod-comparison.json');
+      return !local || published.session > local.session ? published : local;
+    } catch (error) {
+      if (local) return local;
+      throw error;
+    }
+  }
+
   function load() {
     const data = typeof DATA !== 'undefined' ? DATA : null;
     if (history && (!data?.us_completed_session_date || loadedAt >= data.us_completed_session_date)) {
@@ -176,7 +190,7 @@
       return;
     }
     if (pending || Date.now() < retryAfter) return;
-    pending = window.JjooniDataReads.read('./data/tripod-comparison.json').then(payload => {
+    pending = readComparison(data?.us_completed_session_date).then(payload => {
       if (payload.session === loadedAt) return;
       const rows = core.simulate(payload, window.JjooniTripodCore);
       if (rows.length < 2) throw Error('비교 가능한 완료 거래일이 부족합니다.');
