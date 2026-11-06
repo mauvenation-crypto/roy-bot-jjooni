@@ -319591,7 +319591,7 @@
     "drawdown_52w_pct": -14.714933681104469,
     "ma250": 27443.71875000024,
     "ndx": 26629.81054688,
-    "observed_at": "2026-11-07T02:17:03+09:00",
+    "observed_at": "2026-11-07T02:17:07+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -8.926655019204189,
     "previous_ma250": 27437.71966406272,
@@ -325064,7 +325064,9 @@
     "action_code": "REBALANCE_CHECK",
     "headline": "목표 노출 변경 — 리밸런싱 조건 확인",
     "action": "완료 일봉 기준 목표 노출이 바뀌었습니다. 목표비중을 재점검하되 장 초반 추격 주문은 피하고 조건 충족 여부를 먼저 확인합니다.",
-    "risk_flags": [],
+    "risk_flags": [
+      "Fear & Greed가 극단적 공포 구간이므로 변동성 확대 가능성 점검"
+    ],
     "guardrails": {
       "ma250_regime": "상승",
       "target": "QQQ 50% + QLD 50%",
@@ -325072,7 +325074,7 @@
       "vix10_risk_on_limit": 28.0,
       "drawdown_52w_pct": -14.714933681104469,
       "risk_on_drawdown_limit_pct": -9.0,
-      "fear_greed": 24.4,
+      "fear_greed": 20.1,
       "market_pulse_risk": "NEUTRAL"
     },
     "pulse_aligned": true,
