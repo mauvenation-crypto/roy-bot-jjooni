@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-06T18:38:17+09:00",
+  "generated_kst": "2026-11-06T18:50:29+09:00",
   "overall": "PASS",
   "critical_count": 0,
   "warning_count": 0,
@@ -68,15 +68,11 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-06T18:38:14+09:00",
+      "generated_kst": "2026-11-06T18:38:17+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
-        "energy",
-        "fx",
-        "metals",
-        "calendar",
-        "audit"
+        "calendar"
       ]
     },
     "watchdog": {
@@ -467,17 +463,17 @@
         "BTCUSD": {
           "count": 1102,
           "last_date": "2026-11-06",
-          "last_value": 76139.0,
+          "last_value": 76008.0,
           "group": "crypto",
-          "latest_value": 76139.0,
+          "latest_value": 76008.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1102,
           "last_date": "2026-11-06",
-          "last_value": 2242.43,
+          "last_value": 2236.38,
           "group": "crypto",
-          "latest_value": 2242.43,
+          "latest_value": 2236.38,
           "latest_matches": true
         }
       },
@@ -521,16 +517,16 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-06T18:36:54+09:00",
-      "current_quote_age_seconds": 83,
-      "captured_quote_age_seconds": 62
+      "quote_as_of_kst": "2026-11-06T18:49:16+09:00",
+      "current_quote_age_seconds": 73,
+      "captured_quote_age_seconds": 72
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-06T18:36:54+09:00",
-      "current_quote_age_seconds": 83,
-      "captured_quote_age_seconds": 62
+      "quote_as_of_kst": "2026-11-06T18:49:16+09:00",
+      "current_quote_age_seconds": 73,
+      "captured_quote_age_seconds": 72
     }
   },
   "issues": [],
