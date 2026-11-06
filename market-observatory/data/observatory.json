@@ -319591,7 +319591,7 @@
     "drawdown_52w_pct": -14.714933681104469,
     "ma250": 27443.71875000024,
     "ndx": 26629.81054688,
-    "observed_at": "2026-11-07T04:44:51+09:00",
+    "observed_at": "2026-11-07T04:44:54+09:00",
     "ok": true,
     "previous_drawdown_52w_pct": -8.926655019204189,
     "previous_ma250": 27437.71966406272,
@@ -325074,7 +325074,7 @@
       "vix10_risk_on_limit": 28.0,
       "drawdown_52w_pct": -14.714933681104469,
       "risk_on_drawdown_limit_pct": -9.0,
-      "fear_greed": 23.6,
+      "fear_greed": 22.0,
       "market_pulse_risk": "NEUTRAL"
     },
     "pulse_aligned": true,
