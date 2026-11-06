@@ -102,7 +102,7 @@ async function boot(){ensureBootShield();document.documentElement.dataset.ctBoot
 ['ctDecisionImpactV5Script','decision-impact-v5.js?v=5.2','decision-impact'],
 ['ctRealizedLedgerV7Script','realized-ledger-v7.js?v=7.3','realized-ledger'],
 ['ctTradeMoneyV6Script','trade-money-v6.js?v=6.2','trade-money'],
-['ctTradeOutcomeV26Script','trade-review-outcomes-v26.js?v=26.8','trade-outcomes'],
+['ctTradeOutcomeV26Script','trade-review-outcomes-v26.js?v=26.9-broker-recent','trade-outcomes'],
 ['ctAccountSourceTruthV22Script','account-source-truth-v22.js?v=22.4-pnl-scope','account-source-truth'],
 ['ctHumanUiV6Script','human-ui-v6.js?v=6.6-price-proof','human-ui'],
 ['ctViewportBottomGuardV5Script','viewport-bottom-guard-v5.js?v=5','viewport-guard'],
