@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-07T00:14:23+09:00",
+  "generated_kst": "2026-11-07T02:15:01+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
@@ -9,6 +9,7 @@
   "overall": "LIVE_WITH_WARNINGS",
   "critical_bad": [],
   "warnings": [
+    "crypto",
     "calendar",
     "audit"
   ],
@@ -111,19 +112,19 @@
     },
     "crypto": {
       "label": "Crypto",
-      "state": "LIVE",
+      "state": "STALE",
       "generated_kst": "2026-11-06T23:59:36+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=899s · ETHUSD age=907s",
+      "detail": "BTCUSD age=8137s · ETHUSD age=8145s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
         "BTCUSD": {
-          "status": "LIVE",
+          "status": "STALE",
           "quote_as_of_kst": "2026-11-06T23:59:24+09:00"
         },
         "ETHUSD": {
-          "status": "LIVE",
+          "status": "STALE",
           "quote_as_of_kst": "2026-11-06T23:59:16+09:00"
         }
       },
@@ -186,8 +187,8 @@
     "calendar": {
       "label": "Economic Calendar",
       "state": "DEGRADED",
-      "generated_kst": "2026-11-07T00:13:41+09:00",
-      "as_of": "2026-11-07T00:13:41+09:00",
+      "generated_kst": "2026-11-07T02:14:54+09:00",
+      "as_of": "2026-11-07T02:14:54+09:00",
       "detail": "events=189 · overdue=1 · pending=0 · source_failures=0 · official_probe_blocked=3 · 기존 공식 검증 98건 · 이번 원천 조회 DEGRADED",
       "source": "economic-calendar.json",
       "critical": false,
@@ -217,9 +218,9 @@
     "audit": {
       "label": "Full Data Audit",
       "state": "WARN",
-      "generated_kst": "2026-11-07T00:14:23+09:00",
+      "generated_kst": "2026-11-07T02:15:01+09:00",
       "as_of": "2026-11-05",
-      "detail": "critical=0 · warnings=1",
+      "detail": "critical=0 · warnings=4",
       "source": "data-audit.json",
       "critical": true
     },
