@@ -5,6 +5,19 @@
   "date_basis": "CME_SOURCE_OBSERVATION_DATE",
   "entries": [
     {
+      "market_data_as_of": "2026-11-06",
+      "path": "fedwatch-history/2026-11-06/e45f126a1a1fc7047f71c912bb8a17528b0c5e99dc5ea196dcc7cac8d0b38d5c.json",
+      "generated_kst": "2026-11-07T08:21:15+09:00",
+      "revisions": [
+        {
+          "path": "fedwatch-history/2026-11-06/e45f126a1a1fc7047f71c912bb8a17528b0c5e99dc5ea196dcc7cac8d0b38d5c.json",
+          "sha256": "e45f126a1a1fc7047f71c912bb8a17528b0c5e99dc5ea196dcc7cac8d0b38d5c",
+          "generated_kst": "2026-11-07T08:21:15+09:00",
+          "source_kind": "CME_OFFICIAL_PUBLIC_TABLE"
+        }
+      ]
+    },
+    {
       "market_data_as_of": "2026-11-05",
       "path": "fedwatch-history/2026-11-05/59e2f426554ceb45e0675ebe2d82743ae3d32bf4e2a9f3e030f6d4b46198cd3c.json",
       "generated_kst": "2026-11-06T07:06:19+09:00",
