@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 
-const RT={state:'ACTIVE',render_state:'WAITING_FOR_PANEL',version:'26.8',rendered_at:null,trade_count:0,buy_count:0,sell_count:0,realized_known:0,opportunity_known:0,missing_realized:0,missing_opportunity:0,sort:'RECENT_DESC',formula:'BUY=(basis-trade)*qty;SELL=(trade-basis)*qty',horizon:'now',horizon_label:'현재'};
+const RT={state:'ACTIVE',render_state:'WAITING_FOR_PANEL',version:'26.9',rendered_at:null,trade_count:0,buy_count:0,sell_count:0,realized_known:0,opportunity_known:0,missing_realized:0,missing_opportunity:0,sort:'RECENT_DESC',formula:'BUY=(basis-trade)*qty;SELL=(trade-basis)*qty',horizon:'now',horizon_label:'현재'};
 window.__JJOONI_TRADE_OUTCOMES_V26=RT;
 const q=(s,r=document)=>{try{return r.querySelector(s)}catch(_){return null}};
 const n=v=>{if(v===null||v===undefined||v==='')return null;const x=Number(String(v).replace(/,/g,''));return Number.isFinite(x)?x:null};
@@ -106,7 +106,7 @@ function collectTrades(){
  // The human ledger and the broker's recent fills are independent feeds.
  // Display only broker-confirmed TOSS orders, without writing a synthetic fill
  // into the immutable Master ledger or altering any account NAV/cost basis.
- const orderId=t=>String(t?.order_id||t?.broker_trade_id||t?.trade_key||t?.order_no||'').trim().replace(/^TOSS\\|/i,'');
+ const orderId=t=>String(t?.order_id||t?.broker_trade_id||t?.trade_key||t?.order_no||'').trim().replace(/^TOSS\|/i,'');
  const signature=t=>[acct(t),tradeTs(t),ticker(t),side(t),qty(t),px(t)].join('|');
  const knownOrders=new Set(out.map(t=>acct(t)+'|'+orderId(t)).filter(k=>!k.endsWith('|')));
  const knownExecutions=new Set(out.map(signature));
