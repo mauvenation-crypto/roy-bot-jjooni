@@ -324710,9 +324710,9 @@
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
       "price": 76060.0,
       "quote_as_of_kst": "2026-11-06T11:19:57+09:00",
-      "captured_kst": "2026-11-06T11:20:02+09:00",
+      "captured_kst": "2026-11-06T11:20:15+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 5,
+      "quote_age_seconds": 18,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     },
@@ -324722,9 +324722,9 @@
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
       "price": 2237.61,
       "quote_as_of_kst": "2026-11-06T11:19:47+09:00",
-      "captured_kst": "2026-11-06T11:20:02+09:00",
+      "captured_kst": "2026-11-06T11:20:15+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 15,
+      "quote_age_seconds": 28,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     }
@@ -325043,7 +325043,7 @@
   "history_base_generated_kst": "2026-09-13T00:12:30+09:00",
   "history_base_path": "./data/history-30y.json",
   "crypto_contract": "SPOT_QUOTE_WITH_UTC_DAILY_COMPARISON_V1",
-  "crypto_enriched_kst": "2026-11-06T11:20:04+09:00",
+  "crypto_enriched_kst": "2026-11-06T11:20:16+09:00",
   "market_supplement_quality": {
     "KOSPI": {
       "status": "LIVE",
