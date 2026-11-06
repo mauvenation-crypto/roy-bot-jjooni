@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - tools/build_daily_market_pulse.py
+      - tools/build_tripod_comparison.py
+      - market-observatory/tripod-comparison-core.js
+      - tests/observatory-tripod-comparison.test.cjs
       - tools/build_public_market_daily.py
       - tools/tripod_rules.py
       - tools/publish_observatory_data.py
@@ -19,6 +22,9 @@ on:
   pull_request:
     paths:
       - tools/build_daily_market_pulse.py
+      - tools/build_tripod_comparison.py
+      - market-observatory/tripod-comparison-core.js
+      - tests/observatory-tripod-comparison.test.cjs
       - market-observatory/data/daily-market-pulse.json
       - market-observatory/data/morning-brief-contract.json
       - market-observatory/data/ai-read-contract.json
@@ -194,3 +200,37 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           python tools/publish_observatory_data.py --message 'data(observatory): refresh daily market pulse and TRI-POD' market-observatory/data/daily-market-pulse.json public-market-daily.json
+
+  tripod-comparison:
+    needs: pulse
+    if: always() && !cancelled() && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'pull_request' && github.ref || 'main' }}
+      - name: Check comparison contract
+        run: |
+          python3 -m py_compile tools/build_tripod_comparison.py
+          node --test tests/observatory-tripod-comparison.test.cjs
+      - name: Build and verify completed ETF bars
+        run: |
+          python3 tools/build_tripod_comparison.py
+          node - <<'JS'
+          const core = require('./market-observatory/tripod-comparison-core.js');
+          const official = require('./market-observatory/jjooni-tripod-v1.js');
+          const payload = require('./market-observatory/data/tripod-comparison.json');
+          const rows = core.simulate(payload, official);
+          if (rows.length < 2 || rows.at(-1).date !== payload.session) throw Error('Invalid comparison coverage');
+          console.log('TRIPOD_COMPARISON_ACCEPTANCE=PASS', rows[0].date, payload.session, rows.length);
+          JS
+      - name: Publish completed ETF bars
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 tools/publish_observatory_data.py --message 'data(observatory): refresh TRI-POD ETF comparison' market-observatory/data/tripod-comparison.json
