@@ -1,9 +1,9 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-06T09:08:21+09:00",
-  "overall": "PASS",
+  "generated_kst": "2026-11-06T09:58:27+09:00",
+  "overall": "WARN",
   "critical_count": 0,
-  "warning_count": 0,
+  "warning_count": 1,
   "observatory_session": "2026-11-05",
   "file_status": {
     "observatory": {
@@ -68,15 +68,17 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-06T09:08:18+09:00",
+      "generated_kst": "2026-11-06T09:58:24+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
-        "calendar"
+        "jp_rates",
+        "calendar",
+        "audit"
       ]
     },
     "watchdog": {
-      "checked_kst": "2026-11-05T09:52:00+09:00",
+      "checked_kst": "2026-11-06T09:57:48+09:00",
       "result": "HEALTHY_NOOP",
       "decision": "NOOP"
     }
@@ -403,7 +405,7 @@
       "latest_mismatch": []
     },
     "jp_rates": {
-      "state": "LIVE",
+      "state": "LAGGING",
       "anchor": "2026-11-06",
       "allow_lag_days": 5,
       "critical": false,
@@ -451,7 +453,7 @@
       },
       "missing": [],
       "latest_mismatch": [],
-      "expected_latest_weekday": "2026-11-04",
+      "expected_latest_weekday": "2026-11-05",
       "published_source_status": "LIVE"
     },
     "crypto": {
@@ -518,18 +520,24 @@
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-06T09:08:00+09:00",
-      "current_quote_age_seconds": 21,
+      "current_quote_age_seconds": 3027,
       "captured_quote_age_seconds": 15
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-06T09:08:00+09:00",
-      "current_quote_age_seconds": 21,
+      "current_quote_age_seconds": 3027,
       "captured_quote_age_seconds": 15
     }
   },
-  "issues": [],
+  "issues": [
+    {
+      "code": "GROUP_JP_RATES_LAGGING",
+      "severity": "WARN",
+      "detail": "anchor=2026-11-06 dates=JP2Y:2026-11-04,JP5Y:2026-11-04,JP10Y:2026-11-04,JP30Y:2026-11-04,JP_2S10S:2026-11-04"
+    }
+  ],
   "contracts": {
     "completed_session": "CORE_US_AND_US_SUPPLEMENT_MUST_MATCH_OBSERVATORY_SESSION",
     "continuous_daily": "FX_ENERGY_METALS_MAY_LAG_CORE_BY_AT_MOST_1_CALENDAR_DAY",
