@@ -23,6 +23,7 @@ jobs:
       - run: npm install --no-save playwright@1.55.0 && npx playwright install --with-deps chromium
       - run: python3 -m http.server 8123 >/tmp/obs-http.log 2>&1 &
       - run: node --test tests/observatory-display-contract.test.cjs tests/observatory-tripod-next.test.cjs tests/observatory-us-yield-source.test.cjs
+      - run: node --check market-observatory/jjooni-tripod-v1.js && node --test tests/observatory-jjooni-tripod.test.cjs
       - run: node --test tests/observatory-quotes.test.cjs
       - run: node tests/observatory-force-refresh-e2e.cjs
       - run: node tests/observatory-status-e2e.cjs
