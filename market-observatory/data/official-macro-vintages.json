@@ -5076,7 +5076,16 @@
         "series_identity": null,
         "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
       }
+    ],
+    "KR_BASE_RATE|722Y001/M/0101000|2026-10-01": [
+      {
+        "version": "baseline_import",
+        "value": 3.0,
+        "captured_kst": "2026-11-06T15:54:49+09:00",
+        "series_identity": "722Y001/M/0101000",
+        "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/722Y001/M/202610/202610/0101000"
+      }
     ]
   },
-  "updated_kst": "2026-11-06T12:23:58+09:00"
+  "updated_kst": "2026-11-06T15:54:49+09:00"
 }
