@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OFFICIAL_MACRO_V1",
-  "generated_kst": "2026-11-06T21:31:20+09:00",
+  "generated_kst": "2026-11-07T04:43:21+09:00",
   "read_only": true,
   "contains_account_data": false,
   "scope": "OFFICIAL_MACRO_ONLY_MARKET_INDICATORS_EXCLUDED",
@@ -27,8 +27,8 @@
         },
         "labor": {
           "regime": {
-            "color": "GREEN",
-            "regime": "COOLING",
+            "color": "ORANGE",
+            "regime": "BALANCING",
             "why": "NFP 3개월/6개월 평균과 실업률"
           },
           "metrics": [
@@ -94,7 +94,7 @@
         "exports": {
           "regime": {
             "color": "GRAY",
-            "regime": "SOURCE_PENDING",
+            "regime": "LIVE",
             "why": "관세청/산업부 공식 수출 시계열"
           },
           "metrics": [
@@ -106,7 +106,7 @@
         "semiconductor": {
           "regime": {
             "color": "GRAY",
-            "regime": "SOURCE_PENDING",
+            "regime": "LIVE",
             "why": "관세청/산업부 반도체 수출 시계열"
           },
           "metrics": [
@@ -1361,8 +1361,8 @@
         }
       ],
       "status": "LIVE",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "US_CORE_CPI": {
       "key": "US_CORE_CPI",
@@ -2608,8 +2608,8 @@
         }
       ],
       "status": "LIVE",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "US_PCE": {
       "key": "US_PCE",
@@ -3864,8 +3864,8 @@
         }
       ],
       "status": "LIVE",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "US_CORE_PCE": {
       "key": "US_CORE_PCE",
@@ -5120,8 +5120,8 @@
         }
       ],
       "status": "LIVE",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "US_NFP": {
       "key": "US_NFP",
@@ -5140,44 +5140,44 @@
         "url": "https://fred.stlouisfed.org/series/PAYEMS"
       },
       "latest": {
-        "period": "2026-09-01",
-        "raw": 159044.0,
-        "value": 29.0,
-        "avg_3m": 50.6667,
-        "avg_6m": 65.6667
+        "period": "2026-10-01",
+        "raw": 159293.0,
+        "value": 165.0,
+        "avg_3m": 137.0,
+        "avg_6m": 82.5
       },
       "previous_period": {
-        "period": "2026-08-01",
-        "raw": 159015.0,
-        "value": 133.0,
-        "avg_3m": 51.3333,
-        "avg_6m": 96.5
+        "period": "2026-09-01",
+        "raw": 159128.0,
+        "value": 60.0,
+        "avg_3m": 78.6667,
+        "avg_6m": 79.6667
       },
       "release": {
-        "actual": 29.0,
+        "actual": 165.0,
         "measure": "K",
-        "previous": 133.0,
-        "consensus": 89.0,
-        "surprise": -60.0,
+        "previous": 60.0,
+        "consensus": 65.0,
+        "surprise": 100.0,
         "consensus_source": {
           "provider": "FairEconomy/ForexFactory",
           "event": "Employment Situation",
-          "event_kst": "2026-10-02T21:30+09:00",
+          "event_kst": "2026-11-06T22:30+09:00",
           "market_metric_key": "nfp",
           "contract": "MARKET_CONSENSUS_SEPARATE_FROM_OFFICIAL_ACTUAL"
         },
         "vintage": {
           "version": "baseline_import",
-          "value": 29.0,
-          "captured_kst": "2026-10-03T03:03:15+09:00",
+          "value": 165.0,
+          "captured_kst": "2026-11-07T04:43:21+09:00",
           "series_identity": null,
           "source_url": "https://fred.stlouisfed.org/series/PAYEMS"
         },
         "vintage_history": [
           {
             "version": "baseline_import",
-            "value": 29.0,
-            "captured_kst": "2026-10-03T03:03:15+09:00",
+            "value": 165.0,
+            "captured_kst": "2026-11-07T04:43:21+09:00",
             "series_identity": null,
             "source_url": "https://fred.stlouisfed.org/series/PAYEMS"
           }
@@ -5185,10 +5185,10 @@
       },
       "target": null,
       "historical_position": {
-        "avg_1y": 44.0,
-        "avg_5y": 192.2951,
+        "avg_1y": 57.3077,
+        "avg_5y": 188.8852,
         "pre_covid_avg": 184.3,
-        "latest_percentile_10y": 11.4504
+        "latest_percentile_10y": 43.9394
       },
       "history": [
         {
@@ -6096,22 +6096,29 @@
         },
         {
           "period": "2026-08-01",
-          "raw": 159015.0,
-          "value": 133.0,
-          "avg_3m": 51.3333,
-          "avg_6m": 96.5
+          "raw": 159068.0,
+          "value": 186.0,
+          "avg_3m": 69.0,
+          "avg_6m": 105.3333
         },
         {
           "period": "2026-09-01",
-          "raw": 159044.0,
-          "value": 29.0,
-          "avg_3m": 50.6667,
-          "avg_6m": 65.6667
+          "raw": 159128.0,
+          "value": 60.0,
+          "avg_3m": 78.6667,
+          "avg_6m": 79.6667
+        },
+        {
+          "period": "2026-10-01",
+          "raw": 159293.0,
+          "value": 165.0,
+          "avg_3m": 137.0,
+          "avg_6m": 82.5
         }
       ],
       "status": "LIVE",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "US_UNEMPLOYMENT": {
       "key": "US_UNEMPLOYMENT",
@@ -6130,6 +6137,14 @@
         "url": "https://fred.stlouisfed.org/series/UNRATE"
       },
       "latest": {
+        "period": "2026-10-01",
+        "raw": 4.1,
+        "value": 4.1,
+        "avg_3m": 4.1333,
+        "avg_6m": 4.1667,
+        "yoy_change": -0.3
+      },
+      "previous_period": {
         "period": "2026-09-01",
         "raw": 4.2,
         "value": 4.2,
@@ -6137,39 +6152,31 @@
         "avg_6m": 4.2,
         "yoy_change": -0.1
       },
-      "previous_period": {
-        "period": "2026-08-01",
-        "raw": 4.1,
-        "value": 4.1,
-        "avg_3m": 4.1333,
-        "avg_6m": 4.2167,
-        "yoy_change": -0.2
-      },
       "release": {
-        "actual": 4.2,
+        "actual": 4.1,
         "measure": "%",
-        "previous": 4.1,
-        "consensus": 4.1,
-        "surprise": 0.1,
+        "previous": 4.2,
+        "consensus": 4.2,
+        "surprise": -0.1,
         "consensus_source": {
           "provider": "FairEconomy/ForexFactory",
           "event": "Employment Situation",
-          "event_kst": "2026-10-02T21:30+09:00",
+          "event_kst": "2026-11-06T22:30+09:00",
           "market_metric_key": "unemployment",
           "contract": "MARKET_CONSENSUS_SEPARATE_FROM_OFFICIAL_ACTUAL"
         },
         "vintage": {
           "version": "baseline_import",
-          "value": 4.2,
-          "captured_kst": "2026-10-03T03:03:15+09:00",
+          "value": 4.1,
+          "captured_kst": "2026-11-07T04:43:21+09:00",
           "series_identity": null,
           "source_url": "https://fred.stlouisfed.org/series/UNRATE"
         },
         "vintage_history": [
           {
             "version": "baseline_import",
-            "value": 4.2,
-            "captured_kst": "2026-10-03T03:03:15+09:00",
+            "value": 4.1,
+            "captured_kst": "2026-11-07T04:43:21+09:00",
             "series_identity": null,
             "source_url": "https://fred.stlouisfed.org/series/UNRATE"
           }
@@ -6177,10 +6184,10 @@
       },
       "target": null,
       "historical_position": {
-        "avg_1y": 4.2917,
-        "avg_5y": 3.965,
+        "avg_1y": 4.2667,
+        "avg_5y": 3.955,
         "pre_covid_avg": 4.234,
-        "latest_percentile_10y": 58.4615
+        "latest_percentile_10y": 51.145
       },
       "history": [
         {
@@ -7222,11 +7229,19 @@
           "avg_3m": 4.1333,
           "avg_6m": 4.2,
           "yoy_change": -0.1
+        },
+        {
+          "period": "2026-10-01",
+          "raw": 4.1,
+          "value": 4.1,
+          "avg_3m": 4.1333,
+          "avg_6m": 4.1667,
+          "yoy_change": -0.3
         }
       ],
       "status": "LIVE",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "US_AHE": {
       "key": "US_AHE",
@@ -7245,48 +7260,48 @@
         "url": "https://fred.stlouisfed.org/series/CES0500000003"
       },
       "latest": {
-        "period": "2026-09-01",
-        "raw": 37.81,
-        "value": 3.0245,
-        "yoy": 3.0245,
-        "mom": 0.1324,
-        "ann_3m": 2.3617,
-        "ann_6m": 2.4784
+        "period": "2026-10-01",
+        "raw": 38.0,
+        "value": 3.1208,
+        "yoy": 3.1208,
+        "mom": 0.3698,
+        "ann_3m": 3.881,
+        "ann_6m": 3.1791
       },
       "previous_period": {
-        "period": "2026-08-01",
-        "raw": 37.76,
-        "value": 3.1131,
-        "yoy": 3.1131,
-        "mom": 0.3188,
-        "ann_3m": 2.912,
-        "ann_6m": 2.6467
+        "period": "2026-09-01",
+        "raw": 37.86,
+        "value": 3.1608,
+        "yoy": 3.1608,
+        "mom": 0.2648,
+        "ann_3m": 2.9042,
+        "ann_6m": 2.7496
       },
       "release": {
-        "actual": 0.1324,
+        "actual": 0.3698,
         "measure": "MoM %",
-        "previous": 0.3188,
+        "previous": 0.2648,
         "consensus": 0.3,
-        "surprise": -0.1676,
+        "surprise": 0.0698,
         "consensus_source": {
           "provider": "FairEconomy/ForexFactory",
           "event": "Employment Situation",
-          "event_kst": "2026-10-02T21:30+09:00",
+          "event_kst": "2026-11-06T22:30+09:00",
           "market_metric_key": "avg_hourly_mom",
           "contract": "MARKET_CONSENSUS_SEPARATE_FROM_OFFICIAL_ACTUAL"
         },
         "vintage": {
           "version": "baseline_import",
-          "value": 37.81,
-          "captured_kst": "2026-10-03T03:03:15+09:00",
+          "value": 38.0,
+          "captured_kst": "2026-11-07T04:43:21+09:00",
           "series_identity": null,
           "source_url": "https://fred.stlouisfed.org/series/CES0500000003"
         },
         "vintage_history": [
           {
             "version": "baseline_import",
-            "value": 37.81,
-            "captured_kst": "2026-10-03T03:03:15+09:00",
+            "value": 38.0,
+            "captured_kst": "2026-11-07T04:43:21+09:00",
             "series_identity": null,
             "source_url": "https://fred.stlouisfed.org/series/CES0500000003"
           }
@@ -7294,10 +7309,10 @@
       },
       "target": null,
       "historical_position": {
-        "avg_1y": 3.5271,
-        "avg_5y": 4.3457,
+        "avg_1y": 3.4816,
+        "avg_5y": 4.3174,
         "pre_covid_avg": 2.9066,
-        "latest_percentile_10y": 24.1935
+        "latest_percentile_10y": 27.2
       },
       "history": [
         {
@@ -8472,17 +8487,26 @@
         },
         {
           "period": "2026-09-01",
-          "raw": 37.81,
-          "value": 3.0245,
-          "yoy": 3.0245,
-          "mom": 0.1324,
-          "ann_3m": 2.3617,
-          "ann_6m": 2.4784
+          "raw": 37.86,
+          "value": 3.1608,
+          "yoy": 3.1608,
+          "mom": 0.2648,
+          "ann_3m": 2.9042,
+          "ann_6m": 2.7496
+        },
+        {
+          "period": "2026-10-01",
+          "raw": 38.0,
+          "value": 3.1208,
+          "yoy": 3.1208,
+          "mom": 0.3698,
+          "ann_3m": 3.881,
+          "ann_6m": 3.1791
         }
       ],
       "status": "LIVE",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "US_JOLTS": {
       "key": "US_JOLTS",
@@ -9604,8 +9628,8 @@
         }
       ],
       "status": "LIVE",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "US_ECI": {
       "key": "US_ECI",
@@ -9979,8 +10003,8 @@
       ],
       "status": "LIVE",
       "series_identity": "ECIALLCIV",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "US_GDP": {
       "key": "US_GDP",
@@ -10263,8 +10287,8 @@
         }
       ],
       "status": "LIVE",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "US_FED_FUNDS": {
       "key": "US_FED_FUNDS",
@@ -39344,10 +39368,17 @@
           "upper": 4.0,
           "value": 3.875,
           "raw": 3.875
+        },
+        {
+          "period": "2026-11-06",
+          "lower": 3.75,
+          "upper": 4.0,
+          "value": 3.875,
+          "raw": 3.875
         }
       ],
       "latest": {
-        "period": "2026-11-05",
+        "period": "2026-11-06",
         "lower": 3.75,
         "upper": 4.0,
         "value": 3.875,
@@ -39368,7 +39399,7 @@
         "vintage": {
           "version": "baseline_import",
           "value": 3.875,
-          "captured_kst": "2026-11-06T05:17:48+09:00",
+          "captured_kst": "2026-11-07T04:43:21+09:00",
           "series_identity": null,
           "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
         },
@@ -39376,7 +39407,7 @@
           {
             "version": "baseline_import",
             "value": 3.875,
-            "captured_kst": "2026-11-06T05:17:48+09:00",
+            "captured_kst": "2026-11-07T04:43:21+09:00",
             "series_identity": null,
             "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
           }
@@ -39392,8 +39423,8 @@
         "url": "https://fred.stlouisfed.org/series/DFEDTARU"
       },
       "status": "LIVE",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "KR_BASE_RATE": {
       "key": "KR_BASE_RATE",
@@ -40576,7 +40607,7 @@
         },
         "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/722Y001/M/202610/202610/0101000",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T21:30:38+09:00",
+        "checked_kst": "2026-11-07T04:42:57+09:00",
         "reference_period": "2026-10-01",
         "vintage": {
           "version": "baseline_import",
@@ -40611,8 +40642,8 @@
       "source_tier": "OFFICIAL",
       "verification_status": "OFFICIAL_SERIES_IDENTITY_VERIFIED",
       "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/722Y001/M/202610/202610/0101000",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "KR_CPI": {
       "key": "KR_CPI",
@@ -41939,7 +41970,7 @@
         },
         "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y009/M/202610/202610/0",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T21:30:39+09:00",
+        "checked_kst": "2026-11-07T04:42:58+09:00",
         "reference_period": "2026-10-01",
         "vintage": {
           "version": "baseline_import",
@@ -41974,8 +42005,8 @@
       "source_tier": "OFFICIAL",
       "verification_status": "OFFICIAL_SERIES_IDENTITY_VERIFIED",
       "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y009/M/202610/202610/0",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "KR_GDP": {
       "key": "KR_GDP",
@@ -42251,7 +42282,7 @@
         },
         "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/200Y102/Q/2026Q3/2026Q3/10111",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T21:30:40+09:00",
+        "checked_kst": "2026-11-07T04:42:59+09:00",
         "reference_period": "2026-07-01",
         "vintage": {
           "version": "baseline_import",
@@ -42286,8 +42317,8 @@
       "source_tier": "OFFICIAL",
       "verification_status": "OFFICIAL_SERIES_IDENTITY_VERIFIED",
       "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/200Y102/Q/2026Q3/2026Q3/10111",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "KR_CORE_CPI": {
       "key": "KR_CORE_CPI",
@@ -43614,7 +43645,7 @@
         },
         "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y010/M/202610/202610/DB",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T21:30:40+09:00",
+        "checked_kst": "2026-11-07T04:43:00+09:00",
         "reference_period": "2026-10-01",
         "vintage": {
           "version": "baseline_import",
@@ -43649,8 +43680,8 @@
       "source_tier": "OFFICIAL",
       "verification_status": "OFFICIAL_SERIES_IDENTITY_VERIFIED",
       "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y010/M/202610/202610/DB",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "KR_CURRENT_ACCOUNT": {
       "key": "KR_CURRENT_ACCOUNT",
@@ -44825,7 +44856,7 @@
         },
         "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/301Y013/M/202609/202609/000000",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T21:30:41+09:00",
+        "checked_kst": "2026-11-07T04:43:01+09:00",
         "reference_period": "2026-09-01",
         "vintage": {
           "version": "baseline_import",
@@ -44860,8 +44891,8 @@
       "source_tier": "OFFICIAL",
       "verification_status": "OFFICIAL_SERIES_IDENTITY_VERIFIED",
       "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/301Y013/M/202609/202609/000000",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "KR_EXPORT_YOY": {
       "key": "KR_EXPORT_YOY",
@@ -44870,13 +44901,14 @@
       "group": "exports",
       "frequency": "monthly",
       "unit": "%",
-      "target": null,
-      "historical_position": {
-        "avg_1y": 41.3787,
-        "avg_5y": 12.0121,
-        "pre_covid_avg": 1.4765,
-        "latest_percentile_10y": 100.0
-      },
+      "status": "LIVE",
+      "value_role": "released_actual",
+      "actual_expected": true,
+      "source_tier": "OFFICIAL",
+      "verification_status": "OFFICIAL_RELEASE_PARSED",
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
+      "published_date": "2026-10-15",
       "history": [
         {
           "period": "2015-01-01",
@@ -46141,66 +46173,72 @@
         {
           "period": "2026-09-01",
           "raw": 121050082.0,
-          "value": 83.6761,
+          "value": 83.7,
           "yoy": 83.6761,
           "mom": 23.0513,
           "ann_3m": 98.6871,
-          "ann_6m": 91.9858
+          "ann_6m": 91.9858,
+          "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
+          "published_date": "2026-10-15",
+          "source_tier": "OFFICIAL",
+          "checked_kst": "2026-11-07T04:43:19+09:00"
         }
       ],
       "latest": {
         "period": "2026-09-01",
         "raw": 121050082.0,
-        "value": 83.6761,
+        "value": 83.7,
         "yoy": 83.6761,
         "mom": 23.0513,
         "ann_3m": 98.6871,
-        "ann_6m": 91.9858
-      },
-      "previous_period": {
-        "period": "2026-08-01",
-        "raw": 98373699.0,
-        "value": 68.8548,
-        "yoy": 68.8548,
-        "mom": -0.8379,
-        "ann_3m": 59.3914,
-        "ann_6m": 111.5195
-      },
-      "release": {
-        "actual": 83.6761,
-        "measure": "YoY %",
-        "previous": 68.8548,
-        "consensus": null,
-        "surprise": null,
-        "consensus_source": {
-          "provider": null,
-          "event": null,
-          "contract": "MARKET_CONSENSUS_SEPARATE_FROM_OFFICIAL_ACTUAL"
-        },
-        "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y118/M/202609/202609/T002",
+        "ann_6m": 91.9858,
+        "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
+        "published_date": "2026-10-15",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T21:30:42+09:00",
-        "reference_period": "2026-09-01"
+        "checked_kst": "2026-11-07T04:43:19+09:00"
       },
       "primary_source": {
         "institution": "KCS",
-        "name": "KCS"
+        "name": "KCS",
+        "url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
       },
       "transport_source": {
-        "provider": "BOK ECOS official API",
-        "note": null,
-        "series_id": "901Y118/M/T002",
-        "url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y118/M/202609/202609/T002"
+        "provider": "Official release",
+        "url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
       },
-      "status": "DEGRADED",
+      "release": {
+        "actual": 83.7,
+        "forecast": null,
+        "consensus": null,
+        "surprise": null,
+        "previous": null,
+        "measure": "%",
+        "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
+        "source_tier": "OFFICIAL",
+        "checked_kst": "2026-11-07T04:43:19+09:00",
+        "reference_period": "2026-09-01",
+        "published_date": "2026-10-15",
+        "vintage": {
+          "version": "baseline_import",
+          "value": 83.7,
+          "captured_kst": "2026-10-25T20:37:07+09:00",
+          "series_identity": "901Y118/M/T002",
+          "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
+        },
+        "vintage_history": [
+          {
+            "version": "baseline_import",
+            "value": 83.7,
+            "captured_kst": "2026-10-25T20:37:07+09:00",
+            "series_identity": "901Y118/M/T002",
+            "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
+          }
+        ]
+      },
+      "revision_status": "MONTHLY_CONFIRMED",
       "series_identity": "901Y118/M/T002",
       "raw_unit": "천불",
-      "source_tier": "OFFICIAL",
-      "verification_status": "OFFICIAL_SERIES_IDENTITY_VERIFIED",
-      "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y118/M/202609/202609/T002",
-      "release_source_error": "URLError:<urlopen error timed out>",
-      "error": "URLError:<urlopen error timed out>",
-      "checked_kst": "2026-11-06T21:31:20+09:00"
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "KR_INDUSTRIAL_PRODUCTION": {
       "key": "KR_INDUSTRIAL_PRODUCTION",
@@ -47518,7 +47556,7 @@
         },
         "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y033/M/202609/202609/A00/2",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T21:30:43+09:00",
+        "checked_kst": "2026-11-07T04:43:02+09:00",
         "reference_period": "2026-09-01",
         "vintage": {
           "version": "baseline_import",
@@ -47553,8 +47591,8 @@
       "source_tier": "OFFICIAL",
       "verification_status": "OFFICIAL_SERIES_IDENTITY_VERIFIED",
       "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y033/M/202609/202609/A00/2",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "checked_kst": "2026-11-07T04:43:21+09:00",
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "US_SEP_DOT_PLOT": {
       "key": "US_SEP_DOT_PLOT",
@@ -47568,7 +47606,7 @@
       "actual_expected": false,
       "source_tier": "OFFICIAL",
       "verification_status": "OFFICIAL_RELEASE_PARSED",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
+      "checked_kst": "2026-11-07T04:43:21+09:00",
       "source_url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
       "published_date": "2026-09-16",
       "history": [
@@ -47578,7 +47616,7 @@
           "source_url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
           "published_date": "2026-09-16",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T21:30:44+09:00",
+          "checked_kst": "2026-11-07T04:43:03+09:00",
           "forecast_horizon": "2026",
           "projections": {
             "gdp": {
@@ -47624,7 +47662,7 @@
         "source_url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
         "published_date": "2026-09-16",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T21:30:44+09:00",
+        "checked_kst": "2026-11-07T04:43:03+09:00",
         "forecast_horizon": "2026",
         "projections": {
           "gdp": {
@@ -47681,7 +47719,7 @@
         "measure": "%",
         "source_url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T21:30:44+09:00",
+        "checked_kst": "2026-11-07T04:43:03+09:00",
         "reference_period": "2026-09-16",
         "published_date": "2026-09-16",
         "vintage": {
@@ -47739,7 +47777,7 @@
         }
       },
       "note": "FOMC 참여자 전망 중앙값. 확정 정책금리나 시장 컨센서스가 아닙니다. 연도별 전망은 projections에 보존합니다.",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "KR_BOK_OUTLOOK": {
       "key": "KR_BOK_OUTLOOK",
@@ -47753,7 +47791,7 @@
       "actual_expected": false,
       "source_tier": "OFFICIAL",
       "verification_status": "OFFICIAL_RELEASE_PARSED",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
+      "checked_kst": "2026-11-07T04:43:21+09:00",
       "source_url": "https://www.bok.or.kr/portal/bbs/P0002359/view.do?nttId=11064210&menuNo=200066",
       "published_date": "2026-08-27",
       "history": [
@@ -47763,7 +47801,7 @@
           "source_url": "https://www.bok.or.kr/portal/bbs/P0002359/view.do?nttId=11064210&menuNo=200066",
           "published_date": "2026-08-27",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T21:30:51+09:00",
+          "checked_kst": "2026-11-07T04:43:10+09:00",
           "forecast_horizon": "2026",
           "projections": {
             "gdp": {
@@ -47787,7 +47825,7 @@
         "source_url": "https://www.bok.or.kr/portal/bbs/P0002359/view.do?nttId=11064210&menuNo=200066",
         "published_date": "2026-08-27",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T21:30:51+09:00",
+        "checked_kst": "2026-11-07T04:43:10+09:00",
         "forecast_horizon": "2026",
         "projections": {
           "gdp": {
@@ -47822,7 +47860,7 @@
         "measure": "%",
         "source_url": "https://www.bok.or.kr/portal/bbs/P0002359/view.do?nttId=11064210&menuNo=200066",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T21:30:51+09:00",
+        "checked_kst": "2026-11-07T04:43:10+09:00",
         "reference_period": "2026-08-27",
         "published_date": "2026-08-27",
         "vintage": {
@@ -47859,7 +47897,7 @@
       },
       "note": "한국은행 공식 전망. GDP 실제 발표치와 구분하며 연도별 GDP·CPI·근원 CPI 전망을 보존합니다.",
       "attachment_url": "https://www.bok.or.kr/fileSrc/portal/dfe965a8e38a4e4b9fd1a6989a7ee18e/1/3aa17ed0ffd64f55b9c74755d3c622ae.pdf",
-      "last_success_kst": "2026-11-06T21:31:20+09:00"
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "KR_EMPLOYMENT": {
       "key": "KR_EMPLOYMENT",
@@ -47868,12 +47906,12 @@
       "group": "labor",
       "frequency": "monthly",
       "unit": "K YoY",
-      "status": "DEGRADED",
+      "status": "LIVE",
       "value_role": "released_actual",
       "actual_expected": true,
       "source_tier": "OFFICIAL",
       "verification_status": "OFFICIAL_RELEASE_PARSED",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
+      "checked_kst": "2026-11-07T04:43:21+09:00",
       "source_url": "https://mods.go.kr/board.es?mid=a10301030200&bid=210&act=view&list_no=447479",
       "published_date": "2026-10-16",
       "history": [
@@ -47891,7 +47929,7 @@
           "source_url": "https://mods.go.kr/board.es?mid=a10301030200&bid=210&act=view&list_no=447479",
           "published_date": "2026-10-16",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T15:54:34+09:00"
+          "checked_kst": "2026-11-07T04:43:08+09:00"
         }
       ],
       "latest": {
@@ -47900,7 +47938,7 @@
         "source_url": "https://mods.go.kr/board.es?mid=a10301030200&bid=210&act=view&list_no=447479",
         "published_date": "2026-10-16",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T15:54:34+09:00"
+        "checked_kst": "2026-11-07T04:43:08+09:00"
       },
       "primary_source": {
         "institution": "KOSTAT",
@@ -47920,7 +47958,7 @@
         "measure": "K YoY",
         "source_url": "https://mods.go.kr/board.es?mid=a10301030200&bid=210&act=view&list_no=447479",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T15:54:34+09:00",
+        "checked_kst": "2026-11-07T04:43:08+09:00",
         "reference_period": "2026-09-01",
         "published_date": "2026-10-16",
         "vintage": {
@@ -47945,9 +47983,7 @@
         "employment_rate_15_64": 70.6,
         "unemployment_rate_sa": 2.6
       },
-      "last_success_kst": "2026-11-06T15:54:49+09:00",
-      "error": "URLError:<urlopen error timed out>",
-      "retained_previous_observation": true
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "KR_SEMICON_EXPORT_YOY": {
       "key": "KR_SEMICON_EXPORT_YOY",
@@ -47956,12 +47992,12 @@
       "group": "exports",
       "frequency": "monthly",
       "unit": "%",
-      "status": "DEGRADED",
+      "status": "LIVE",
       "value_role": "released_actual",
       "actual_expected": true,
       "source_tier": "OFFICIAL",
       "verification_status": "OFFICIAL_RELEASE_PARSED",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
+      "checked_kst": "2026-11-07T04:43:21+09:00",
       "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
       "published_date": "2026-10-15",
       "history": [
@@ -47971,7 +48007,7 @@
           "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
           "published_date": "2026-10-15",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T15:54:46+09:00"
+          "checked_kst": "2026-11-07T04:43:19+09:00"
         },
         {
           "period": "2026-02-01",
@@ -47979,7 +48015,7 @@
           "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
           "published_date": "2026-10-15",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T15:54:46+09:00"
+          "checked_kst": "2026-11-07T04:43:19+09:00"
         },
         {
           "period": "2026-03-01",
@@ -47987,7 +48023,7 @@
           "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
           "published_date": "2026-10-15",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T15:54:46+09:00"
+          "checked_kst": "2026-11-07T04:43:19+09:00"
         },
         {
           "period": "2026-04-01",
@@ -47995,7 +48031,7 @@
           "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
           "published_date": "2026-10-15",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T15:54:46+09:00"
+          "checked_kst": "2026-11-07T04:43:19+09:00"
         },
         {
           "period": "2026-05-01",
@@ -48003,7 +48039,7 @@
           "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
           "published_date": "2026-10-15",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T15:54:46+09:00"
+          "checked_kst": "2026-11-07T04:43:19+09:00"
         },
         {
           "period": "2026-06-01",
@@ -48011,7 +48047,7 @@
           "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
           "published_date": "2026-10-15",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T15:54:46+09:00"
+          "checked_kst": "2026-11-07T04:43:19+09:00"
         },
         {
           "period": "2026-07-01",
@@ -48019,7 +48055,7 @@
           "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
           "published_date": "2026-10-15",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T15:54:46+09:00"
+          "checked_kst": "2026-11-07T04:43:19+09:00"
         },
         {
           "period": "2026-08-01",
@@ -48027,7 +48063,7 @@
           "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
           "published_date": "2026-10-15",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T15:54:46+09:00"
+          "checked_kst": "2026-11-07T04:43:19+09:00"
         },
         {
           "period": "2026-09-01",
@@ -48035,7 +48071,7 @@
           "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
           "published_date": "2026-10-15",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T15:54:46+09:00"
+          "checked_kst": "2026-11-07T04:43:19+09:00"
         }
       ],
       "latest": {
@@ -48044,7 +48080,7 @@
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
         "published_date": "2026-10-15",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T15:54:46+09:00"
+        "checked_kst": "2026-11-07T04:43:19+09:00"
       },
       "primary_source": {
         "institution": "KCS",
@@ -48064,7 +48100,7 @@
         "measure": "%",
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T15:54:46+09:00",
+        "checked_kst": "2026-11-07T04:43:19+09:00",
         "reference_period": "2026-09-01",
         "published_date": "2026-10-15",
         "vintage": {
@@ -48086,9 +48122,7 @@
       },
       "revision_status": "MONTHLY_CONFIRMED",
       "attachment_url": "https://www.customs.go.kr/common/nttFileDownload.do?fileKey=525c28fb98304bd4a171d639a41ed008",
-      "last_success_kst": "2026-11-06T15:54:49+09:00",
-      "error": "URLError:<urlopen error timed out>",
-      "retained_previous_observation": true
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     },
     "KR_EXPORT_1_20": {
       "key": "KR_EXPORT_1_20",
@@ -48097,12 +48131,12 @@
       "group": "exports",
       "frequency": "monthly",
       "unit": "%",
-      "status": "DEGRADED",
+      "status": "LIVE",
       "value_role": "released_actual",
       "actual_expected": true,
       "source_tier": "OFFICIAL",
       "verification_status": "OFFICIAL_RELEASE_PARSED",
-      "checked_kst": "2026-11-06T21:31:20+09:00",
+      "checked_kst": "2026-11-07T04:43:21+09:00",
       "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10180465&nttSnUrl=3b279b0d8ae0387ac138c4741fb65b67",
       "published_date": "2026-10-21",
       "history": [
@@ -48120,7 +48154,7 @@
           "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10180465&nttSnUrl=3b279b0d8ae0387ac138c4741fb65b67",
           "published_date": "2026-10-21",
           "source_tier": "OFFICIAL",
-          "checked_kst": "2026-11-06T15:54:49+09:00"
+          "checked_kst": "2026-11-07T04:43:21+09:00"
         }
       ],
       "latest": {
@@ -48129,7 +48163,7 @@
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10180465&nttSnUrl=3b279b0d8ae0387ac138c4741fb65b67",
         "published_date": "2026-10-21",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T15:54:49+09:00"
+        "checked_kst": "2026-11-07T04:43:21+09:00"
       },
       "primary_source": {
         "institution": "KCS",
@@ -48149,7 +48183,7 @@
         "measure": "%",
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10180465&nttSnUrl=3b279b0d8ae0387ac138c4741fb65b67",
         "source_tier": "OFFICIAL",
-        "checked_kst": "2026-11-06T15:54:49+09:00",
+        "checked_kst": "2026-11-07T04:43:21+09:00",
         "reference_period": "2026-10-01",
         "published_date": "2026-10-21",
         "vintage": {
@@ -48171,9 +48205,7 @@
       },
       "window": "DAY_1_TO_20",
       "revision_status": "PRELIMINARY",
-      "last_success_kst": "2026-11-06T15:54:49+09:00",
-      "error": "URLError:<urlopen error timed out>",
-      "retained_previous_observation": true
+      "last_success_kst": "2026-11-07T04:43:21+09:00"
     }
   },
   "regimes": {
@@ -48184,8 +48216,8 @@
         "why": "Core PCE YoY와 최근 3개월 연율 비교"
       },
       "labor": {
-        "color": "GREEN",
-        "regime": "COOLING",
+        "color": "ORANGE",
+        "regime": "BALANCING",
         "why": "NFP 3개월/6개월 평균과 실업률"
       },
       "growth": {
@@ -48212,12 +48244,12 @@
       },
       "exports": {
         "color": "GRAY",
-        "regime": "SOURCE_PENDING",
+        "regime": "LIVE",
         "why": "관세청/산업부 공식 수출 시계열"
       },
       "semiconductor": {
         "color": "GRAY",
-        "regime": "SOURCE_PENDING",
+        "regime": "LIVE",
         "why": "관세청/산업부 반도체 수출 시계열"
       }
     }
@@ -48257,22 +48289,12 @@
     }
   ],
   "quality": {
-    "status": "DEGRADED",
+    "status": "LIVE",
     "us_errors": {},
-    "kr_errors": {
-      "KR_EMPLOYMENT": "URLError:<urlopen error timed out>",
-      "KR_EXPORT_YOY": "URLError:<urlopen error timed out>",
-      "KR_SEMICON_EXPORT_YOY": "URLError:<urlopen error timed out>",
-      "KR_EXPORT_1_20": "URLError:<urlopen error timed out>"
-    },
-    "live_metrics": 19,
+    "kr_errors": {},
+    "live_metrics": 23,
     "pending_metrics": [],
-    "degraded_metrics": [
-      "KR_EXPORT_YOY",
-      "KR_EMPLOYMENT",
-      "KR_SEMICON_EXPORT_YOY",
-      "KR_EXPORT_1_20"
-    ],
-    "vintage_keys": 559
+    "degraded_metrics": [],
+    "vintage_keys": 563
   }
 }

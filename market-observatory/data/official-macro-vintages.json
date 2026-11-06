@@ -896,6 +896,13 @@
         "captured_kst": "2026-10-03T03:03:15+09:00",
         "series_identity": null,
         "source_url": "https://fred.stlouisfed.org/series/PAYEMS"
+      },
+      {
+        "version": "revision_2",
+        "value": 186.0,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/PAYEMS"
       }
     ],
     "US_UNEMPLOYMENT|2025-02-01": [
@@ -3924,6 +3931,13 @@
         "captured_kst": "2026-10-25T20:37:07+09:00",
         "series_identity": "901Y118/M/T002",
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
+      },
+      {
+        "version": "revision_2",
+        "value": 33.8909,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
+        "series_identity": "901Y118/M/T002",
+        "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
       }
     ],
     "KR_EXPORT_YOY|901Y118/M/T002|2026-02-01": [
@@ -3938,6 +3952,13 @@
         "version": "revision_1",
         "value": 29.3581,
         "captured_kst": "2026-10-25T20:37:07+09:00",
+        "series_identity": "901Y118/M/T002",
+        "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
+      },
+      {
+        "version": "revision_2",
+        "value": 29.3499,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
         "series_identity": "901Y118/M/T002",
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
       }
@@ -3956,6 +3977,13 @@
         "captured_kst": "2026-10-25T20:37:07+09:00",
         "series_identity": "901Y118/M/T002",
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
+      },
+      {
+        "version": "revision_2",
+        "value": 50.4594,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
+        "series_identity": "901Y118/M/T002",
+        "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
       }
     ],
     "KR_EXPORT_YOY|901Y118/M/T002|2026-04-01": [
@@ -3970,6 +3998,13 @@
         "version": "revision_1",
         "value": 47.7548,
         "captured_kst": "2026-10-25T20:37:07+09:00",
+        "series_identity": "901Y118/M/T002",
+        "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
+      },
+      {
+        "version": "revision_2",
+        "value": 47.7332,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
         "series_identity": "901Y118/M/T002",
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
       }
@@ -3988,6 +4023,13 @@
         "captured_kst": "2026-10-25T20:37:07+09:00",
         "series_identity": "901Y118/M/T002",
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
+      },
+      {
+        "version": "revision_2",
+        "value": 52.8985,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
+        "series_identity": "901Y118/M/T002",
+        "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
       }
     ],
     "KR_EXPORT_YOY|901Y118/M/T002|2026-06-01": [
@@ -4002,6 +4044,13 @@
         "version": "revision_1",
         "value": 70.405,
         "captured_kst": "2026-10-25T20:37:07+09:00",
+        "series_identity": "901Y118/M/T002",
+        "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
+      },
+      {
+        "version": "revision_2",
+        "value": 70.4026,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
         "series_identity": "901Y118/M/T002",
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
       }
@@ -4020,6 +4069,13 @@
         "captured_kst": "2026-10-25T20:37:07+09:00",
         "series_identity": "901Y118/M/T002",
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
+      },
+      {
+        "version": "revision_2",
+        "value": 63.3693,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
+        "series_identity": "901Y118/M/T002",
+        "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
       }
     ],
     "KR_EXPORT_YOY|901Y118/M/T002|2026-08-01": [
@@ -4034,6 +4090,13 @@
         "version": "revision_1",
         "value": 68.6982,
         "captured_kst": "2026-10-25T20:37:07+09:00",
+        "series_identity": "901Y118/M/T002",
+        "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
+      },
+      {
+        "version": "revision_2",
+        "value": 68.8548,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
         "series_identity": "901Y118/M/T002",
         "source_url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?bbsId=1362&mi=2891&nttSn=10179763&nttSnUrl=94e483116f9b898190458b9bf79546a3"
       }
@@ -4400,6 +4463,13 @@
         "captured_kst": "2026-10-03T03:03:15+09:00",
         "series_identity": null,
         "source_url": "https://fred.stlouisfed.org/series/PAYEMS"
+      },
+      {
+        "version": "revision_1",
+        "value": 60.0,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/PAYEMS"
       }
     ],
     "US_UNEMPLOYMENT|2026-09-01": [
@@ -4416,6 +4486,13 @@
         "version": "baseline_import",
         "value": 37.81,
         "captured_kst": "2026-10-03T03:03:15+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/CES0500000003"
+      },
+      {
+        "version": "revision_1",
+        "value": 37.86,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
         "series_identity": null,
         "source_url": "https://fred.stlouisfed.org/series/CES0500000003"
       }
@@ -5085,7 +5162,43 @@
         "series_identity": "722Y001/M/0101000",
         "source_url": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/722Y001/M/202610/202610/0101000"
       }
+    ],
+    "US_NFP|2026-10-01": [
+      {
+        "version": "baseline_import",
+        "value": 165.0,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/PAYEMS"
+      }
+    ],
+    "US_UNEMPLOYMENT|2026-10-01": [
+      {
+        "version": "baseline_import",
+        "value": 4.1,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/UNRATE"
+      }
+    ],
+    "US_AHE|2026-10-01": [
+      {
+        "version": "baseline_import",
+        "value": 38.0,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/CES0500000003"
+      }
+    ],
+    "US_FED_FUNDS|2026-11-06": [
+      {
+        "version": "baseline_import",
+        "value": 3.875,
+        "captured_kst": "2026-11-07T04:43:21+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
+      }
     ]
   },
-  "updated_kst": "2026-11-06T21:31:20+09:00"
+  "updated_kst": "2026-11-07T04:43:21+09:00"
 }
