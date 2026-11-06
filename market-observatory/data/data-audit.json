@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-06T15:55:49+09:00",
+  "generated_kst": "2026-11-06T16:43:36+09:00",
   "overall": "PASS",
   "critical_count": 0,
   "warning_count": 0,
@@ -43,8 +43,8 @@
       "failed_sources": []
     },
     "sector": {
-      "generated_kst": "2026-11-06T11:38:55+09:00",
-      "as_of_date": "2026-11-05",
+      "generated_kst": "2026-11-06T15:55:43+09:00",
+      "as_of_date": "2026-11-06",
       "priced_count": 46
     },
     "official_macro": {
@@ -68,7 +68,7 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-06T15:55:47+09:00",
+      "generated_kst": "2026-11-06T15:55:49+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
@@ -463,17 +463,17 @@
         "BTCUSD": {
           "count": 1102,
           "last_date": "2026-11-06",
-          "last_value": 75591.0,
+          "last_value": 75631.0,
           "group": "crypto",
-          "latest_value": 75591.0,
+          "latest_value": 75631.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1102,
           "last_date": "2026-11-06",
-          "last_value": 2225.65,
+          "last_value": 2229.42,
           "group": "crypto",
-          "latest_value": 2225.65,
+          "latest_value": 2229.42,
           "latest_matches": true
         }
       },
@@ -517,16 +517,16 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-06T15:31:57+09:00",
-      "current_quote_age_seconds": 1432,
-      "captured_quote_age_seconds": 8
+      "quote_as_of_kst": "2026-11-06T16:43:14+09:00",
+      "current_quote_age_seconds": 22,
+      "captured_quote_age_seconds": 21
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-06T15:32:01+09:00",
-      "current_quote_age_seconds": 1428,
-      "captured_quote_age_seconds": 4
+      "quote_as_of_kst": "2026-11-06T16:43:14+09:00",
+      "current_quote_age_seconds": 22,
+      "captured_quote_age_seconds": 21
     }
   },
   "issues": [],
