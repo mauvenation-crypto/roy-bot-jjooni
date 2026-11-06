@@ -1,7 +1,15 @@
 {
   "schema": "JJOONI_MORNING_BRIEF_INDEX_V1",
-  "updated_kst": "2026-11-06T06:57:00+09:00",
+  "updated_kst": "2026-11-07T06:40:00+09:00",
   "entries": [
+    {
+      "report_date_kst": "2026-11-07",
+      "market_date_us": "2026-11-06",
+      "title": "반도체는 반등했지만 9% 경계는 멀다 — BIPOD로 월요일을 준비한다",
+      "generated_kst": "2026-11-07T06:40:00+09:00",
+      "published_kst": "2026-11-07T06:40:00+09:00",
+      "path": "20261107.json"
+    },
     {
       "report_date_kst": "2026-11-06",
       "market_date_us": "2026-11-05",

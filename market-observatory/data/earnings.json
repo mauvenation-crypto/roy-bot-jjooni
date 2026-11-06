@@ -1,6 +1,6 @@
 {
   "schema": "OBS_EARNINGS_V1",
-  "updated_kst": "2026-11-03T06:42:43+09:00",
+  "updated_kst": "2026-11-07T06:40:00+09:00",
   "universe": [
     {
       "symbol": "005930",
@@ -224,6 +224,20 @@
       "name": "onsemi",
       "market": "US",
       "theme": "AI전력반도체",
+      "scope": "US_CORE_AND_SUPPLY_CHAIN"
+    },
+    {
+      "symbol": "MCHP",
+      "name": "Microchip Technology",
+      "market": "US",
+      "theme": "반도체·데이터센터연결",
+      "scope": "US_CORE_AND_SUPPLY_CHAIN"
+    },
+    {
+      "symbol": "ABNB",
+      "name": "Airbnb",
+      "market": "US",
+      "theme": "AI생산성·플랫폼",
       "scope": "US_CORE_AND_SUPPLY_CHAIN"
     }
   ],
@@ -689,6 +703,148 @@
         "컨퍼런스콜 Q&A 및 다음 분기 가이던스"
       ],
       "updated_kst": "2026-11-03T06:42:43+09:00"
+    },
+    {
+      "id": "MCHP:FY2027Q2",
+      "symbol": "MCHP",
+      "fiscal_period": "FY2027Q2",
+      "status": "RELEASED",
+      "date_kst": "2026-11-06",
+      "time_status": "CONFIRMED",
+      "release_at_kst": "2026-11-06T06:15:00+09:00",
+      "call_at_kst": "2026-11-06T07:00:00+09:00",
+      "sources": [
+        {
+          "url": "https://ir.microchip.com/news-events/press-releases/detail/1426/microchip-technology-announces-financial-results-for-second-quarter-of-fiscal-year-2027",
+          "kind": "OFFICIAL",
+          "checked_kst": "2026-11-07T06:40:00+09:00"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "매출",
+          "actual": 1.6215,
+          "unit": "USD_BILLION",
+          "basis": "REPORTED",
+          "yoy_pct": 42.2,
+          "consensus": null,
+          "consensus_basis": null
+        },
+        {
+          "label": "EPS",
+          "actual": 0.68,
+          "unit": "USD_PER_SHARE",
+          "basis": "GAAP",
+          "yoy_pct": null,
+          "consensus": null,
+          "consensus_basis": null
+        },
+        {
+          "label": "EPS",
+          "actual": 0.97,
+          "unit": "USD_PER_SHARE",
+          "basis": "NON_GAAP",
+          "yoy_pct": null,
+          "consensus": null,
+          "consensus_basis": null
+        },
+        {
+          "label": "FCF",
+          "actual": 0.3961,
+          "unit": "USD_BILLION",
+          "basis": "NON_GAAP",
+          "yoy_pct": null,
+          "consensus": null,
+          "consensus_basis": null
+        }
+      ],
+      "facts": [
+        "데이터센터 PCIe Gen6 스위치·리타이머 디자인윈이 전분기 12개에서 24개로 늘었다고 발표했습니다.",
+        "다음 분기 매출 가이던스는 15.73억~16.38억 달러입니다."
+      ],
+      "analysis": [
+        "해석: 데이터센터 투자가 연결 반도체 매출로 확산되고 있으나 비반복 매출 소멸과 계절성을 함께 봐야 합니다."
+      ],
+      "risks": [
+        "컨퍼런스콜 오디오는 공개됐지만 이번 회차 직접 청취·전사하지 못했습니다.",
+        "9월 분기에 약 5,300만 달러의 비반복 매출이 포함됐습니다."
+      ],
+      "next_checks": [
+        "디자인윈 매출 전환",
+        "웨이퍼 배정·리드타임",
+        "총마진과 FCF"
+      ],
+      "updated_kst": "2026-11-07T06:40:00+09:00"
+    },
+    {
+      "id": "ABNB:2026Q3",
+      "symbol": "ABNB",
+      "fiscal_period": "2026Q3",
+      "status": "RELEASED",
+      "date_kst": "2026-11-06",
+      "time_status": "CONFIRMED",
+      "release_at_kst": "2026-11-06T06:03:00+09:00",
+      "call_at_kst": "2026-11-06T07:00:00+09:00",
+      "sources": [
+        {
+          "url": "https://news.airbnb.com/airbnb-q3-2026-financial-results",
+          "kind": "OFFICIAL",
+          "checked_kst": "2026-11-07T06:40:00+09:00"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "매출",
+          "actual": 4.9,
+          "unit": "USD_BILLION",
+          "basis": "REPORTED",
+          "yoy_pct": 19,
+          "consensus": null,
+          "consensus_basis": null
+        },
+        {
+          "label": "GBV",
+          "actual": 27.7,
+          "unit": "USD_BILLION",
+          "basis": "REPORTED",
+          "yoy_pct": 21,
+          "consensus": null,
+          "consensus_basis": null
+        },
+        {
+          "label": "순이익",
+          "actual": 1.9,
+          "unit": "USD_BILLION",
+          "basis": "REPORTED",
+          "yoy_pct": null,
+          "consensus": null,
+          "consensus_basis": null
+        },
+        {
+          "label": "조정 EBITDA",
+          "actual": 2.5,
+          "unit": "USD_BILLION",
+          "basis": "NON_GAAP",
+          "yoy_pct": 22,
+          "consensus": null,
+          "consensus_basis": null
+        }
+      ],
+      "facts": [
+        "Nights and Seats Booked가 전년 대비 16% 증가했다고 발표했습니다.",
+        "120억 달러 추가 자사주 매입을 승인했습니다."
+      ],
+      "analysis": [
+        "해석: AI를 활용한 제품·운영 개선이 성장과 마진에 연결되는 사례지만 Q4 성장 둔화 가능성을 함께 봐야 합니다."
+      ],
+      "risks": [
+        "컨퍼런스콜은 이번 회차 직접 확인하지 못했습니다."
+      ],
+      "next_checks": [
+        "AI 여행 에이전트 출시",
+        "예약 성장·마케팅비·FCF"
+      ],
+      "updated_kst": "2026-11-07T06:40:00+09:00"
     }
   ],
   "coverage_note": "공식 확인된 일정만 게시합니다. 목록에 없는 일정은 미확인이며 예정 없음으로 해석하지 않습니다.",
