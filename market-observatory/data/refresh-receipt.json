@@ -1,8 +1,8 @@
 {
   "schema": "JJOONI_OBSERVATORY_REFRESH_RECEIPT_V1",
-  "run_id": "42151533594",
+  "run_id": "42208736967",
   "event": "schedule",
-  "generated_kst": "2026-11-06T11:39:19+09:00",
+  "generated_kst": "2026-11-06T20:15:30+09:00",
   "sources": {
     "market": "success",
     "kr_rates": "success",
