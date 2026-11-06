@@ -5,10 +5,11 @@
     triggerDailyPct: -1.5,
     tranchePct: 5,
     capPct: 25,
-    stopFromNoPodEntryPct: -12,
+    stopFromNoPodThresholdPct: -12,
+    noPodLineFactor: 0.95,
     instrument: 'QLD',
     execution: 'NEXT_COMPLETED_SESSION_CLOSE',
-    version: 'JJOONI_NOPOD_QLD_V1'
+    version: 'JJOONI_NOPOD_QLD_V2'
   });
   const finite = v => v === null || v === undefined || v === '' || !Number.isFinite(Number(v)) ? null : Number(v);
   const cashTarget = row => String(row && row.target || '') === '현금 100%';
@@ -29,16 +30,19 @@
       latestIndex !== null && latestIndex > 0 && finite(t.ma250) > 0 &&
       finite(t.vix10) !== null && Number(t.vix_window_count) === 10 &&
       ['상승', '하락'].includes(t.regime) && stage(t) !== 'UNKNOWN';
+    const prospectiveNoPodLine = valid ? finite(t.ma250) * POLICY.noPodLineFactor : null;
     const basic = {policy: POLICY, session, date, officialTarget: t.target || null,
-      officialStage: stage(t), valid: !!valid, events: []};
+      officialStage: stage(t), valid: !!valid, events: [],
+      prospectiveNoPodLine,
+      prospectiveStopNdx: prospectiveNoPodLine === null ? null : prospectiveNoPodLine * 0.88};
     if (!valid) return Object.assign(basic, {status: 'UNCERTIFIED'});
     const rows = (Array.isArray(data.tripod_history) ? data.tripod_history : [])
       .filter(x => /^\d{4}-\d{2}-\d{2}$/.test(String(x && x.date || '')) &&
         x.date <= session && finite(x.ndx) > 0 && stage(x) !== 'UNKNOWN')
-      .map(x => ({date: x.date, ndx: Number(x.ndx), target: x.target}))
+      .map(x => ({date: x.date, ndx: Number(x.ndx), ma250: finite(x.ma250), target: x.target}))
       .sort((a,b) => a.date.localeCompare(b.date));
     // Published certified signal overrides any older copy at the same date.
-    const latest = {date, ndx: latestIndex, target: t.target};
+    const latest = {date, ndx: latestIndex, ma250: finite(t.ma250), target: t.target};
     const ix = rows.findIndex(x => x.date === date);
     if (ix >= 0) rows[ix] = latest; else rows.push(latest);
     rows.sort((a,b) => a.date.localeCompare(b.date));
@@ -65,13 +69,20 @@
         continue;
       }
       if (!cycle) {
-        // If historical data begins in cash, the true entry anchor is unknowable.
-        const anchored = Boolean(previous && !cashTarget(previous));
+        // Anchor to the *official NO-POD transition price*, not the index
+        // closing price on the day the account enters cash. Freeze it for
+        // this entire NO-POD cycle: MA250(entry session) × 0.95 × 0.88.
+        const anchored = Boolean(previous && !cashTarget(previous) &&
+          row.ma250 !== null && row.ma250 > 0);
+        const noPodLine = anchored ? row.ma250 * POLICY.noPodLineFactor : null;
         cycle = {entryDate: row.date, entryNdx: anchored ? row.ndx : null,
-          anchorVerified: anchored, stopNdx: anchored ? row.ndx * 0.88 : null,
+          entryMa250: anchored ? row.ma250 : null, noPodLine,
+          anchorVerified: anchored, stopNdx: anchored ? noPodLine * 0.88 : null,
           boughtPct: 0, buyCount: 0, pending: null, stopped: false,
           stopDate: null, triggers: 0};
-        if (anchored) record(row.date, 'ENTER', 'NO-POD 진입 · NDX 종가 ' + row.ndx.toFixed(2) + ' 기준 고정');
+        if (anchored) record(row.date, 'ENTER', 'NO-POD 전환선 ' +
+          noPodLine.toFixed(2) + 'pt 고정 · 손절선 ' + cycle.stopNdx.toFixed(2) +
+          'pt (공식 노팟 전환가격 × 0.88)');
       }
       if (cycle.anchorVerified && !cycle.stopped) {
         // Stop before executing yesterday's pending buy; stop cancels it.
@@ -80,7 +91,7 @@
           cycle.stopDate = row.date;
           cycle.boughtPct = 0;
           cycle.pending = null;
-          record(row.date, 'STOP', 'NDX 진입 기준 -12% 이탈 · QLD 전량 정리 가정, 사이클 재매수 금지');
+          record(row.date, 'STOP', 'NDX가 고정 노팟 전환가격 × 0.88 미만 · QLD 전량 정리 가정, 사이클 재매수 금지');
         } else {
           if (cycle.pending && cycle.pending.signalDate < row.date) {
             cycle.boughtPct = Math.min(POLICY.capPct, cycle.boughtPct + POLICY.tranchePct);
@@ -107,7 +118,7 @@
       active: Boolean(cycle), cycle, lastCycle, events: events.slice(-16),
       latestNdx: today.ndx, dailyPct,
       nextAction: !cycle ? '기존 송팀장 TRI-POD 목표 유지' :
-        !cycle.anchorVerified ? 'NO-POD 최초 진입일 데이터 확보 전 판정 보류' :
+        !cycle.anchorVerified ? 'NO-POD 최초 전환일과 MA250 확인 전 판정 보류' :
         cycle.stopped ? 'NO-POD 종료 전 추가매수 금지' :
         cycle.pending ? '다음 미국 거래일 종가 QLD 5%p 매수 가정 (자동주문 아님)' :
         cycle.boughtPct >= POLICY.capPct ? '누적 25% 한도 도달 · 추가매수 없음' :
@@ -153,7 +164,7 @@
     const c = m.cycle;
     const label = m.status === 'UNCERTIFIED' ? '완료세션 검증 대기' :
       m.status === 'INSUFFICIENT_HISTORY' ? '히스토리 부족' :
-      m.status === 'UNVERIFIED_ANCHOR' ? '노팟 진입일 미확인' :
+      m.status === 'UNVERIFIED_ANCHOR' ? '노팟 전환가격 미확인' :
       m.status === 'STOPPED' ? '손절 후 재진입 금지' :
       m.status === 'ACTIVE' ? '쭈니 보조전략 가동 구간' : '공식 TRI-POD 유지';
     const pods = ['TRIPOD','BIPOD','MONOPOD','NOPOD']
@@ -166,22 +177,24 @@
       card('나스닥100 일간 변화', safe && m.dailyPct !== null ? (m.dailyPct > 0 ? '+' : '')+fmt(m.dailyPct)+'%' : '—', '하락 트리거 ≤ -1.5%'),
       card('QLD 누적 투입 가정',safe && c ? String(c.boughtPct)+'%' : (safe ? '0%' : '—'),'기준원금 대비 · 최대 25%'),
       card('다음 거래일 매수 대기',safe && c && c.pending ? '5%' : (safe ? '없음' : '—'),'신호 다음 완료거래일 종가 가정'),
-      card('NO-POD 진입일',safe && c ? c.entryDate : '—', '진입일 NDX 종가 고정'),
-      card('NO-POD 기준 NDX',safe && c ? fmt(c.entryNdx) : '—','종가 기준'),
-      card('손절 판정선',safe && c ? fmt(c.stopNdx) : '—','NDX < 진입 종가 × 0.88'),
+      card('NO-POD 진입일',safe && c ? c.entryDate : '—', '공식 전환선 계산 기준일'),
+      card('공식 노팟 전환가격',safe ? fmt(c ? c.noPodLine : m.prospectiveNoPodLine) : '—',
+        c ? '진입일 MA250 × 0.95 · 사이클 내 고정' : '예상 · 현재 MA250 × 0.95'),
+      card('손절 판정선',safe ? fmt(c ? c.stopNdx : m.prospectiveStopNdx) : '—',
+        c ? '확정 · NDX < 고정 전환가격 × 0.88' : '예상 · 노팟 미진입, 전환 시 재확정'),
       card('QLD 누적 분할 횟수',safe && c ? String(c.buyCount)+'회' : (safe ? '0회' : '—'),'매회 기준원금 5%p')
     ].join('');
     const flags = !safe ?
       '<div class="jtNote jtDisabled">확정 일봉·전환 이력이 검증되지 않아 매수/손절 가격을 임의 생성하지 않습니다.</div>' :
       '<div class="jtNote"><b>다음 행동:</b> '+esc(m.nextAction)+
-      '<div>판정은 NDX 미국 완료 일봉 기준 · 손절은 진입일 종가 대비 -12% 미만 · 손절 후 같은 NO-POD 사이클 재매수 금지</div></div>';
+      '<div>판정은 NDX 미국 완료 일봉 기준 · 손절은 진입일 공식 노팟 전환가격(MA250 × 0.95) × 0.88 미만 · 손절 후 같은 NO-POD 사이클 재매수 금지</div></div>';
     const log = (m.events || []).slice().reverse().map(e =>
       '<div class="jtEvent"><b>'+esc(e.date)+'</b><em>'+esc(e.type)+'</em><span>'+esc(e.text)+'</span></div>').join('');
     host.innerHTML = '<div class="card"><div class="jtHead"><h3>쭈니 스타일 TRI-POD · NO-POD 바이더딥</h3><span class="jtPill">'+esc(label)+'</span></div>'
       + foot + '<div class="jtPod">'+pods+'</div><div class="jtGrid">'+metrics+'</div>'
       + flags + '<div class="jtLog"><h3>시뮬레이션 신호 이력</h3>'
       + (log || '<p class="meta">현재 조회 가능한 전환·분할매수 이벤트가 없습니다.</p>') + '</div>'
-      + '<p class="meta">전략 v1 · QLD 5%p × 최대 5회 · NDX 일간 ≤ -1.5% · 다음 완료세션 종가 매수 가정 · NO-POD 종료 즉시 공식 목표로 복귀. '
+      + '<p class="meta">전략 v2 · 손절선 = 진입일 MA250 × 0.95 × 0.88 · QLD 5%p × 최대 5회 · NDX 일간 ≤ -1.5% · 다음 완료세션 종가 매수 가정 · NO-POD 종료 즉시 공식 목표로 복귀. '
       + 'QLD 실거래 종가 및 수수료·세금·환율은 반영하지 않으므로 이 화면은 수익률 백테스트가 아닙니다. 자동주문·계좌 변경 없음.</p></div>';
   }
   const style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
