@@ -103,9 +103,26 @@ function collectTrades(){
  let d=null;
  try{d=(typeof D!=='undefined'&&D)?D:window.D}catch(_){d=window.D||null}
  try{if(d?.human&&Array.isArray(d.human.trades))out.push(...d.human.trades.filter(t=>!['AI','AIBOT','AI_BOT'].includes(acct(t))))}catch(_){}
+ // The human ledger and the broker's recent fills are independent feeds.
+ // Display only broker-confirmed TOSS orders, without writing a synthetic fill
+ // into the immutable Master ledger or altering any account NAV/cost basis.
+ const orderId=t=>String(t?.order_id||t?.broker_trade_id||t?.trade_key||t?.order_no||'').trim().replace(/^TOSS\\|/i,'');
+ const signature=t=>[acct(t),tradeTs(t),ticker(t),side(t),qty(t),px(t)].join('|');
+ const knownOrders=new Set(out.map(t=>acct(t)+'|'+orderId(t)).filter(k=>!k.endsWith('|')));
+ const knownExecutions=new Set(out.map(signature));
+ const recent=window.__JJOONI_LIVE_PAYLOAD?.recent_trades;
+ let accepted=0,duplicate=0,rejected=0;
+ if(Array.isArray(recent))for(const t of recent){
+  const src=String(t?.source||''),id=orderId(t);
+  if(!['BROKER_DIRECT_TOSS_API','BROKER_DIRECT_TOSS_API_FAST'].includes(src)||acct(t)!=='TOSS'||!id||!ticker(t)||!['BUY','SELL'].includes(side(t))||!(qty(t)>0)||!(px(t)>0)||!(tradeTs(t)>0)){rejected++;continue}
+  const key='TOSS|'+id,sig=signature(t);
+  if(knownOrders.has(key)||knownExecutions.has(sig)){duplicate++;continue}
+  out.push({...t,account:'TOSS',order_id:id});knownOrders.add(key);knownExecutions.add(sig);accepted++;
+ }
+ RT.broker_trade_bridge={state:Array.isArray(recent)?'CHECKED':'SOURCE_UNAVAILABLE',source_rows:Array.isArray(recent)?recent.length:null,accepted,duplicate,rejected,checked_at:new Date().toISOString()};
  const seen=new Set(),dedup=[];
  out.forEach((t,i)=>{
-  const oid=String(t?.order_id||t?.order_no||'').trim();
+  const oid=orderId(t);
   const key=oid?'OID|'+acct(t)+'|'+oid:['SIG',acct(t),String(t?.trade_date||''),ticker(t),side(t),qty(t),px(t)].join('|');
   if(seen.has(key))return;seen.add(key);dedup.push({...t,__seq:i});
  });
