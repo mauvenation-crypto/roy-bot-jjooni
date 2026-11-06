@@ -37,7 +37,7 @@ const smoke=process.env.OBS_PUBLIC_SMOKE==='1';
    }
    await page.locator('.obsRange[data-for="marketChart"] [data-range="5Y"]').click();
   }
-  for(const tab of ['overview','morning-brief','official-macro','indices','fx','energy','analysis-lab','sectors','regime','tripod','rates','calendar']){
+  for(const tab of ['overview','morning-brief','official-macro','indices','fx','energy','analysis-lab','sectors','regime','tripod','jjooni-tripod','rates','calendar']){
    await page.locator(`#tabs [data-tab="${tab}"]`).click();
    if(tab==='overview'){
     const card=page.locator('#latestMarketBoard .latestChangeFirst[data-metric="NASDAQ100"]');await card.waitFor();
@@ -45,6 +45,12 @@ const smoke=process.env.OBS_PUBLIC_SMOKE==='1';
     assert(layout.primary>=26&&layout.primary>layout.level,'change must dominate level '+JSON.stringify(layout));
     assert(layout.first&&!layout.clipped,'primary change must fit and precede level '+JSON.stringify(layout));
     assert(['일간 대비','전일 종가 대비'].includes(layout.label),layout.label);
+   }
+   if(tab==='jjooni-tripod'){
+    const overlay=page.locator('#jjooniTripodRoot');
+    await overlay.waitFor();
+    await page.waitForFunction(()=>document.querySelector('#jjooniTripodRoot')?.textContent.includes('쭈니 스타일 TRI-POD'));
+    assert.match(await overlay.innerText(),/QLD/,'new tab must render Jjooni QLD overlay');
    }
    if(tab==='analysis-lab')await page.waitForFunction(()=>window.__JJOONI_ANALYSIS_LAB.loaded);
    if(tab==='sectors')await page.waitForFunction(()=>window.__JJOONI_OBSERVATORY_SECTOR_ETF_V1.loaded);
@@ -60,7 +66,12 @@ const smoke=process.env.OBS_PUBLIC_SMOKE==='1';
      textMin:Math.min(...[...panel.querySelectorAll('.meta,.obsCoverage,.obsMacroCell span')].filter(visible).map(e=>parseFloat(getComputedStyle(e).fontSize))) };
    });
    console.log('DEVICE_AUDIT '+JSON.stringify(result));
-   assert(result.scroll<=width+1&&result.bodyScroll<=width+1,'page overflow '+JSON.stringify(result));
+   // The scrollingElement is the authoritative horizontal-scroll viewport.
+   // body.scrollWidth may include overflow from a deliberately scrollable,
+   // clipped header chip row even though the page itself never scrolls sideways.
+   const scrollingWidth=await page.evaluate(()=>document.scrollingElement.scrollWidth);
+   assert(scrollingWidth<=width+1&&result.scroll<=width+1,
+     'page viewport overflow '+JSON.stringify({...result,scrollingWidth}));
    if(await page.locator('body.obsDeviceUI').count()){
     assert.equal(result.smallTargets,0,'small touch targets '+JSON.stringify(result));
     assert(result.textMin>=11||result.textMin===null,'small text '+JSON.stringify(result));
