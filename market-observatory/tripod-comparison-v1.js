@@ -18,6 +18,7 @@
   const hidden = new Set();
   let history, loadedAt, pending, retryAfter = 0, priceChart, ddChart;
 
+  // These charts use the shared comparison period selector and their own data.
   host.innerHTML = `
     <style>
     #tripodComparison .tc-controls{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:12px 0}
@@ -45,13 +46,14 @@
         <label><input id="tcShowDD" type="checkbox" checked> 드로우다운</label>
         <label><input id="tcShowPods" type="checkbox" checked> 상태 띠</label>
       </div>
+      <p class="meta" id="tcCoverage"></p>
       <div class="tc-legend" id="tcLegend" aria-label="차트 범례"></div>
-      <div class="tc-chart"><canvas id="tcPrice" role="img" aria-label="두 TRI-POD 전략과 Nasdaq-100 및 ETF 3종의 누적 성과"></canvas></div>
+      <div class="tc-chart"><canvas id="tcPrice" data-range-ready="1" role="img" aria-label="두 TRI-POD 전략과 Nasdaq-100 및 ETF 3종의 누적 성과"></canvas></div>
       <div id="tcPods">
         <h3>포지션 히스토리</h3>
         <div id="tcStrips"></div><div class="meta" id="tcDay">차트를 가리키거나 터치하면 해당 거래일의 포지션을 표시합니다.</div>
       </div>
-      <div id="tcDrawdown"><h3>드로우다운 비교</h3><div class="tc-chart tc-dd"><canvas id="tcDD" role="img" aria-label="선택 기간 고점 대비 낙폭"></canvas></div></div>
+      <div id="tcDrawdown"><h3>드로우다운 비교</h3><div class="tc-chart tc-dd"><canvas id="tcDD" data-range-ready="1" role="img" aria-label="선택 기간 고점 대비 낙폭"></canvas></div></div>
       <h3>전략 vs ETF 성과비교</h3>
       <div class="tc-overflow"><table><thead><tr><th scope="col">시리즈</th><th scope="col">기간 수익률</th><th scope="col">CAGR</th><th scope="col">MDD</th><th scope="col">변동성</th><th scope="col">샤프</th><th scope="col">표준 대비</th><th scope="col">쭈니 대비</th></tr></thead><tbody id="tcMetrics"></tbody></table></div>
       <p class="meta">Yahoo Finance 미국 완료 일봉 · NDX 가격지수 · ETF 배당·분할 조정 종가 · USD 기준. 실제 가격 모드는 ETF 종가(USD), NDX(pt), 전략 모의 NAV(시작값 100)를 각 축에 표시합니다.</p>
@@ -124,6 +126,8 @@
     $('#tcStatus').textContent = rows[0].date + ' ~ ' + loadedAt + ' · ' + rows.length.toLocaleString('ko-KR') + ' 거래일'
       + (short ? ' · 3년 요청 중 공통 데이터가 확보된 기간 표시' : '')
       + (expected && expected > loadedAt ? ' · ETF 비교 데이터 갱신 대기 (공식 완료세션 ' + expected + ')' : '');
+    $('#tcCoverage').textContent = '전체 공통 일봉 ' + history[0].date + ' ~ ' + loadedAt
+      + ' · ' + history.length.toLocaleString('ko-KR') + ' 거래일 · MAX에서 전체 보기';
     $('#tcBody').hidden = false;
     $('#tcDrawdown').hidden = !$('#tcShowDD').checked;
     $('#tcPods').hidden = !$('#tcShowPods').checked;
