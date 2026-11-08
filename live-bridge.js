@@ -270,9 +270,10 @@ function patchAllFiveAccountTotalSurfaces(){
 }
 
 function updateOverviewTotalNav(){
- if(!CANON||!CANON.total||n(CANON.total.nav)==null)return;
+ // Only one verified NAV authority for the entire overview patch pass.
+ const truth=authoritativeFiveAccountNav();if(!CANON||!truth)return;
  const root=document.getElementById('panel-overview')||document;
- const total=n(CANON.total.nav),fmt=won(total);
+ const total=truth.nav,fmt=won(total),heading='현재 총자산 (4계좌 NAV)';
  const labels=[...root.querySelectorAll('.ctOvLabel,.label,div,span,small,b,strong')].filter(e=>{
    if(e.children&&e.children.length)return false;
    if(e.closest&&e.closest('.ctAcct'))return false;
@@ -287,7 +288,7 @@ function updateOverviewTotalNav(){
      const direct=box.querySelector&&box.querySelector('.ctOvValue,.value,.v2Value,[class*="Value"],[class*="value"]');
      if(direct&&direct!==label){
        if(String(direct.textContent||'').trim()!==fmt)direct.textContent=fmt;
-       label.textContent='현재 총자산 (4계좌 NAV)';
+       if(String(label.textContent||'')!==heading)label.textContent=heading;
        direct.dataset.ctFiveAccountNav='1';
        patched++;break;
      }
@@ -296,7 +297,7 @@ function updateOverviewTotalNav(){
        leaves.sort((a,b)=>(parseFloat(getComputedStyle(b).fontSize)||0)-(parseFloat(getComputedStyle(a).fontSize)||0));
        const v=leaves[0];
        if(String(v.textContent||'').trim()!==fmt)v.textContent=fmt;
-       label.textContent='현재 총자산 (4계좌 NAV)';
+       if(String(label.textContent||'')!==heading)label.textContent=heading;
        v.dataset.ctFiveAccountNav='1';
        patched++;break;
      }
