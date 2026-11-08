@@ -18,6 +18,9 @@ on:
 permissions:
   contents: read
   actions: write
+  # Stale-data alert = one GitHub issue per episode (owner gets one email),
+  # closed automatically with a comment when the data recovers.
+  issues: write
 
 concurrency:
   group: observatory-heartbeat-relay
@@ -50,6 +53,21 @@ jobs:
                   --jq '[.[]|select(.status=="queued" or .status=="in_progress" or .status=="waiting" or .status=="pending")]|length' 2>/dev/null || echo 1)
             [ "${n:-1}" != "0" ]
           }
+          gh label create stale-data --color B60205 --description 'Observatory data stale for users (heartbeat alert)' >/dev/null 2>&1 || true
+          alert_open() {  # $1=kind -> prints open issue number or nothing
+            gh issue list --label stale-data --state open --search "in:title [$1]" --json number,title \
+              --jq ".[]|select(.title|startswith(\"[STALE][$1]\"))|.number" 2>/dev/null | head -1
+          }
+          alert_sync() {  # $1=kind $2=1 if stale now, $3=detail
+            local n; n=$(alert_open "$1")
+            if [ "$2" = 1 ] && [ -z "$n" ]; then
+              gh issue create --label stale-data --title "[STALE][$1] Observatory $1 data stale" \
+                --body "Heartbeat $(date -u +%FT%TZ): $3"$'\n\n'"Writers were dispatched by the relay; this issue closes itself when the data is fresh again. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+                && echo "  ALERT opened for $1"
+            elif [ "$2" = 0 ] && [ -n "$n" ]; then
+              gh issue close "$n" --comment "Recovered $(date -u +%FT%TZ): $3" && echo "  ALERT closed for $1"
+            fi
+          }
           start=$(date +%s)
           while [ $(( $(date +%s) - start )) -lt "$LOOP_SECONDS" ]; do
             if git fetch -q --depth 1 origin main && git checkout -q FETCH_HEAD -- market-observatory/data tools; then
@@ -59,6 +77,11 @@ jobs:
                 if active observatory-crypto-refresh.yml; then echo "  crypto writer already queued/running";
                 else gh workflow run observatory-crypto-refresh.yml --ref main && echo "  dispatched BTC/ETH refresh"; fi
               fi
+              alerts=$(sed -n 's/.*alert=\([a-z,]*\).*/\1/p' <<<"$gate")
+              for kind in crypto market; do
+                if grep -q '^error' <<<"$gate"; then continue; fi
+                case ",$alerts," in *",$kind,"*) alert_sync "$kind" 1 "$gate";; *) alert_sync "$kind" 0 "$gate";; esac
+              done
               if grep -q 'market=refresh' <<<"$gate"; then
                 if active market-observatory-daily.yml; then echo "  daily already queued/running";
                 else gh workflow run market-observatory-daily.yml --ref main -f heartbeat=true && echo "  dispatched hourly market refresh"; fi

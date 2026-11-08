@@ -27,17 +27,31 @@ class HeartbeatDecisionTest(unittest.TestCase):
             return hb.decide(NOW)
 
     def test_stale_quote_requests_crypto_refresh(self):
-        self.assertEqual(self.run_decide(obs(77))['crypto'], 'refresh')
+        d = self.run_decide(obs(77))
+        self.assertEqual((d['crypto'], d['alert']), ('refresh', 'crypto'))
+
+    def test_due_but_not_yet_stale_does_not_alert(self):
+        d = self.run_decide(obs(50))
+        self.assertEqual((d['crypto'], d['alert']), ('refresh', 'none'))
+
+    def test_market_behind_session_alerts_after_90_min(self):
+        files = {'observatory.json': obs(10)}
+        with mock.patch.object(hb, 'load', side_effect=lambda p: files.get(pathlib.Path(p).name, {})), \
+             mock.patch.object(hb, 'refresh_decision', return_value={'should_refresh': True, 'healthy': False, 'age_min': 95}), \
+             mock.patch.object(hb.sector_heartbeat_gate, 'should_refresh', return_value=False):
+            self.assertEqual(hb.decide(NOW)['alert'], 'market')
 
     def test_fresh_quote_requests_nothing(self):
         d = self.run_decide(obs(10))
-        self.assertEqual((d['crypto'], d['market']), ('ok', 'ok'))
+        self.assertEqual((d['crypto'], d['market'], d['alert']), ('ok', 'ok', 'none'))
 
 
 class HeartbeatWorkflowContractTest(unittest.TestCase):
     def test_relay_never_writes_and_hands_over(self):
         wf = yaml.safe_load((ROOT / '.github/workflows/observatory-heartbeat.yml').read_text())
-        self.assertEqual(wf['permissions'], {'contents': 'read', 'actions': 'write'})
+        self.assertEqual(wf['permissions'], {'contents': 'read', 'actions': 'write', 'issues': 'write'})
+        self.assertIn('gh issue close', steps_text := wf['jobs']['relay']['steps'][2]['run'])
+        self.assertIn('[STALE]', steps_text)
         steps = wf['jobs']['relay']['steps']
         self.assertIn('gh workflow run observatory-heartbeat.yml', steps[-1]['run'])
         self.assertLess(int(wf['jobs']['relay']['env']['LOOP_SECONDS']) / 60, wf['jobs']['relay']['timeout-minutes'])

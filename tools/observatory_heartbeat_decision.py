@@ -5,6 +5,10 @@ Read-only. Uses exactly the gates the Daily hourly watchdog uses, so the relay
 never refreshes anything the existing schedule would not have refreshed:
   crypto=refresh  BTC/ETH quote older than the crypto gate threshold (45 min)
   market=refresh  market snapshot or sector board stale (Daily hourly path)
+  alert=...       data is actually stale for users, not just due a refresh:
+                  crypto  BTC/ETH quote >= 60 min old (or unreadable)
+                  market  market snapshot behind the expected session for
+                          >= 90 min after collection
 """
 import json
 import sys
@@ -18,6 +22,8 @@ from observatory_session import refresh_decision  # noqa: E402
 import sector_heartbeat_gate  # noqa: E402
 
 DATA = ROOT / 'market-observatory' / 'data'
+CRYPTO_ALERT_MIN = 60
+MARKET_ALERT_MIN = 90
 
 
 def load(path):
@@ -37,11 +43,19 @@ def decide(now=None):
     except Exception:
         sector = False
     ages = [v['age_seconds'] for v in crypto['details'].values() if v['age_seconds'] is not None]
+    crypto_age = max(ages) / 60 if len(ages) == len(crypto['details']) else None
+    alerts = []
+    if crypto_age is None or crypto_age >= CRYPTO_ALERT_MIN:
+        alerts.append('crypto')
+    market_age = market.get('age_min')
+    if not market.get('healthy', True) and (market_age is None or market_age >= MARKET_ALERT_MIN):
+        alerts.append('market')
     return {
         'crypto': 'refresh' if crypto['should_refresh'] else 'ok',
         'market': 'refresh' if (market['should_refresh'] or sector) else 'ok',
         'crypto_max_age_min': round(max(ages) / 60, 1) if ages else None,
-        'market_age_min': market.get('age_min'),
+        'market_age_min': None if market_age is None else round(market_age, 1),
+        'alert': ','.join(alerts) or 'none',
     }
 
 
