@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-08T20:13:30+09:00",
+  "generated_kst": "2026-11-08T20:15:25+09:00",
   "overall": "PASS",
   "critical_count": 0,
   "warning_count": 0,
@@ -33,7 +33,7 @@
       "audit_state": "LIVE"
     },
     "calendar": {
-      "generated_kst": "2026-11-08T20:13:16+09:00",
+      "generated_kst": "2026-11-08T20:14:22+09:00",
       "events": 190,
       "actual_freshness": "LIVE",
       "overdue_count": 0,
@@ -68,7 +68,7 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-08T20:13:21+09:00",
+      "generated_kst": "2026-11-08T20:15:23+09:00",
       "overall": "LIVE",
       "critical_bad": [],
       "warnings": []
@@ -558,14 +558,14 @@
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T19:47:13+09:00",
-      "current_quote_age_seconds": 1577,
+      "current_quote_age_seconds": 1692,
       "captured_quote_age_seconds": 16
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T19:47:22+09:00",
-      "current_quote_age_seconds": 1568,
+      "current_quote_age_seconds": 1683,
       "captured_quote_age_seconds": 7
     }
   },
