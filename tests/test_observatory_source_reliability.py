@@ -106,5 +106,45 @@ class CryptoWorkflowContractTest(unittest.TestCase):
         self.assertIn('test "$COLLECTION_OUTCOME" = success', text)
 
 
+class BlsApiReferencePeriodTest(unittest.TestCase):
+    def setUp(self):
+        import official_bls_api
+        self.api = official_bls_api
+        official_bls_api.fetch_series.cache_clear()
+
+    def _values(self, last):
+        y, m = last
+        out = {}
+        for i in range(24):
+            o = y * 12 + m - 1 - i
+            out[(o // 12, o % 12 + 1)] = __import__('decimal').Decimal('100')
+        return out
+
+    def test_recent_release_uses_newest_published_period(self):
+        event = {'title': 'Employment Situation', 'datetime_kst': '2026-11-06T22:30:00+09:00'}
+        with patch.object(self.api, 'fetch_series', return_value=(self._values((2026, 10)), 'u')):
+            self.assertEqual(self.api.latest_published_period(event, 'empsit', at('2026-11-08T14:00')), (2026, 10))
+
+    def test_old_event_is_never_assigned_a_later_period(self):
+        event = {'title': 'Employment Situation', 'datetime_kst': '2026-10-02T21:30:00+09:00'}
+        with patch.object(self.api, 'fetch_series', side_effect=AssertionError('no lookup')):
+            self.assertIsNone(self.api.latest_published_period(event, 'empsit', at('2026-11-08T14:00')))
+
+    def test_implausible_lag_is_rejected(self):
+        event = {'title': 'Employment Situation', 'datetime_kst': '2026-11-06T22:30:00+09:00'}
+        with patch.object(self.api, 'fetch_series', return_value=(self._values((2026, 11)), 'u')):
+            self.assertIsNone(self.api.latest_published_period(event, 'empsit', at('2026-11-08T14:00')))
+        with patch.object(self.api, 'fetch_series', return_value=(self._values((2026, 5)), 'u')):
+            self.assertIsNone(self.api.latest_published_period(event, 'empsit', at('2026-11-08T14:00')))
+
+    def test_collect_api_fills_missing_reference_period(self):
+        event = {'title': 'Employment Situation', 'datetime_kst': '2026-11-06T22:30:00+09:00'}
+        checks = []
+        with patch.object(self.api, 'fetch_series', return_value=(self._values((2026, 10)), 'u')):
+            rows, _ = self.api.collect_api(event, 'empsit', checks, at('2026-11-08T14:00'))
+        self.assertEqual({r['reference_period'] for r in rows}, {'2026-10'})
+        self.assertEqual(checks[0]['result'], 'REFERENCE_PERIOD_FROM_API')
+
+
 if __name__ == '__main__':
     unittest.main()

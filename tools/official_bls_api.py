@@ -1,7 +1,10 @@
 """Official series fallback, explicitly distinguished from release-vintage data.
 
-A reference month must come from the official schedule/release. Never infer it
-from the announcement month: shutdowns and postponements break that assumption.
+A reference month must come from the official schedule/release or from the
+newest period the BLS API itself has published (latest_published_period).
+Never infer it from the announcement month: shutdowns and postponements break
+that assumption. BLS release pages reject GitHub-hosted runners with HTTP 403,
+so the API path is the only official route available to scheduled jobs.
 """
 import calendar
 import json
@@ -69,8 +72,52 @@ def calculate(values, year, month, lag, unit):
     return f'{value.quantize(Decimal("0.1"), rounding=ROUND_HALF_UP):f}{unit}'
 
 
-def collect_api(event, code, checks):
+def latest_published_period(event, code, now=None):
+    """Reference month as published by the BLS API itself, not inferred.
+
+    Right after a monthly release (and before the next one) the newest period
+    in the official series IS the released reference month. Guarded so a
+    later release can never be attributed to an older event: only events
+    released within 25 days qualify, and the period must sit 1-4 months
+    before the release (covers shutdown postponements).
+    """
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    if code not in SERIES:
+        return None
+    try:
+        released = datetime.fromisoformat(str(event.get('datetime_kst')))
+    except ValueError:
+        return None
+    if released.tzinfo is None:
+        released = released.replace(tzinfo=ZoneInfo('Asia/Seoul'))
+    now = now or datetime.now(ZoneInfo('Asia/Seoul'))
+    age_days = (now - released).total_seconds() / 86400
+    if not 0 <= age_days <= 25:
+        return None
+    release_et = released.astimezone(ZoneInfo('America/New_York'))
+    series = next(iter(SERIES[code].values()))[0]
+    values, _ = fetch_series(series, release_et.year)
+    if not values:
+        return None
+    year, month = max(values)
+    lag = (release_et.year * 12 + release_et.month) - (year * 12 + month)
+    return (year, month) if 1 <= lag <= 4 else None
+
+
+def collect_api(event, code, checks, now=None):
     period = reference_month(event.get('reference_period'))
+    if not period and code in SERIES:
+        try:
+            period = latest_published_period(event, code, now)
+        except Exception as exc:
+            checks.append({'adapter': 'BLS_API', 'title': event['title'],
+                           'result': 'LATEST_PERIOD_LOOKUP_FAILED', 'error': str(exc)[:200]})
+            period = None
+        if period:
+            checks.append({'adapter': 'BLS_API', 'title': event['title'],
+                           'result': 'REFERENCE_PERIOD_FROM_API',
+                           'reference_period': f'{period[0]}-{period[1]:02d}'})
     if not period or code not in SERIES:
         checks.append({'adapter': 'BLS_API', 'title': event['title'],
                        'result': 'REFERENCE_PERIOD_MISSING' if not period else 'SERIES_NOT_CONFIGURED'})
