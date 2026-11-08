@@ -25,6 +25,22 @@ def latest_actual(bucket,before_day):
     return rows[-1] if rows else None
 
 
+HISTORY_SOURCE='CALENDAR_HISTORY_LAST_ACTUAL'
+
+
+def refreshable(holder,row):
+    """May a history-derived previous be (re)written from ``row``?
+
+    Empty previous: yes. A previous this tool wrote earlier: only when the
+    history now holds a newer release (the event was scheduled before the
+    latest release, so its first fill went stale). Previous values from any
+    other source (official release, ForexFactory) are never overwritten.
+    """
+    if clean(holder.get('previous')) is None:return True
+    if holder.get('previous_source')!=HISTORY_SOURCE or not row:return False
+    return str(row.get('date') or '')[:10]>str(holder.get('previous_observed_date') or '')[:10]
+
+
 def history_source(row):
     return clean((row or {}).get('source')) or 'Calendar history / captured prior actual'
 
@@ -42,10 +58,9 @@ def main():
         if not day:continue
         for m in e.get('market_metrics') or []:
             if not isinstance(m,dict) or m.get('metric_type')=='market_probability_snapshot':continue
-            if clean(m.get('previous')) is not None:continue
             ref=m.get('history_ref')
             row=latest_actual(series.get(ref),day) if ref else None
-            if row:
+            if row and refreshable(m,row):
                 src=history_source(row)
                 m['previous']=row['actual']
                 m['previous_source']='CALENDAR_HISTORY_LAST_ACTUAL'
@@ -55,7 +70,8 @@ def main():
                 m.setdefault('source',src)
                 if m.get('market_value_status')=='NOT_PUBLISHED':m['market_value_status']='PREVIOUS_ONLY'
                 filled_metric+=1
-        if clean(e.get('previous')) is None:
+        stale_event=(e.get('previous_source')==HISTORY_SOURCE or e.get('previous_source')=='METRIC_REPRESENTATIVE') and clean(e.get('actual')) is None
+        if clean(e.get('previous')) is None or stale_event:
             primary=next((m for m in (e.get('market_metrics') or []) if isinstance(m,dict) and clean(m.get('previous')) is not None),None)
             if primary:
                 e['previous']=primary['previous']
@@ -66,7 +82,7 @@ def main():
                 filled_event+=1
             else:
                 ref=e.get('history_ref');row=latest_actual(series.get(ref),day) if ref else None
-                if row:
+                if row and refreshable(e,row):
                     src=history_source(row)
                     e['previous']=row['actual']
                     e['previous_source']='CALENDAR_HISTORY_LAST_ACTUAL'
