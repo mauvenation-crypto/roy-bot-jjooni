@@ -22,6 +22,7 @@ EXPECTED_SERIES={
   'core_us':['NASDAQ100','SP500','VIX'],
   'us_supplement':['RUSSELL2000','DOW','NASDAQCOMPOSITE'],
   'kr_equity':['KOSPI','KOSDAQ'],
+  'asia_equity':['NIKKEI225','HANGSENG','SHCOMP'],
   'fx':['DXY','USDKRW','USDJPY','JPYKRW'],
   'energy':['WTI','BRENT','NATGAS'],
   'metals':['GOLD','SILVER','COPPER'],
@@ -79,6 +80,8 @@ def build():
     make_group('core_us',EXPECTED_SERIES['core_us'],expected_completed_session(now_et),0,True)
     make_group('us_supplement',EXPECTED_SERIES['us_supplement'],session,0,False)
     make_group('kr_equity',EXPECTED_SERIES['kr_equity'],today,4,True)
+    # Reference only (regional comparison): never critical; local holidays differ.
+    make_group('asia_equity',EXPECTED_SERIES['asia_equity'],today,4,False)
     make_group('fx',EXPECTED_SERIES['fx'],session,1,False)
     make_group('energy',EXPECTED_SERIES['energy'],session,1,False)
     make_group('metals',EXPECTED_SERIES['metals'],session,1,False)

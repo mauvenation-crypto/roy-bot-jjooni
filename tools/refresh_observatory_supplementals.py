@@ -267,13 +267,14 @@ def refresh_jgb(data):
         print('JGB_CURRENT_REFRESH=WARN',quality['JP_RATES'])
 
 def refresh_kr_and_sentiment_and_crypto(data):
-    from add_observatory_equities import naver_index_recent, merge_rows as eq_merge, fear_greed_series, enrich_crypto
+    from add_observatory_equities import naver_index_recent, merge_rows as eq_merge, fear_greed_series, enrich_crypto, refresh_asia_indexes
     sm=data.setdefault('series',{});latest=data.setdefault('latest',{});quality=data.setdefault('cross_market_freshness_quality',{});legacy=data.setdefault('market_supplement_quality',{})
     for key in ('KOSPI','KOSDAQ'):
         try:
             fresh,url=naver_index_recent(key);rows=eq_merge(sm.get(key),fresh);sm[key]=rows;latest[key]=rows[-1]['value'];quality[key]={'status':'LIVE','source':'Naver Finance index daily','last_date':rows[-1]['date'],'source_url':url}
         except Exception as exc:quality[key]={'status':'STALE' if sm.get(key) else 'UNAVAILABLE','source':'Naver Finance index daily','last_date':(sm.get(key) or [{}])[-1].get('date'),'fetch_error':f'{type(exc).__name__}: {exc}'}
         legacy[key]=dict(quality[key])
+    refresh_asia_indexes(data)
     try:
         fg=fear_greed_series();sm['FEAR_GREED']=fg;latest['FEAR_GREED']=fg[-1]['value'] if fg else None;quality['FEAR_GREED']={'status':'LIVE' if fg else 'UNAVAILABLE','source':'FearAndGreedGraph public JSON','last_date':fg[-1]['date'] if fg else None}
     except Exception as exc:quality['FEAR_GREED']={'status':'STALE' if sm.get('FEAR_GREED') else 'UNAVAILABLE','fetch_error':f'{type(exc).__name__}: {exc}'}

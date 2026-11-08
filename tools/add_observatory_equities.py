@@ -19,6 +19,15 @@ SYMBOLS={
     'DOW':'^DJI','NASDAQCOMPOSITE':'^IXIC','SILVER':'SI=F',
 }
 KR_KEYS=('KOSPI','KOSDAQ')
+# Asian benchmarks for "Korea-only or region-wide?" reads (2026-11-05/06 KOSPI
+# -11% in two sessions could not be compared with anything). Dated in each
+# exchange's own time zone; a session counts once its close + 30 min passed.
+ASIA_INDEXES={
+    'NIKKEI225':('^N225','Asia/Tokyo',time(15,30)),
+    'HANGSENG':('^HSI','Asia/Hong_Kong',time(16,10)),
+    # Yahoo returns a single row for 000300.SS (CSI300); Shanghai Composite has full history.
+    'SHCOMP':('000001.SS','Asia/Shanghai',time(15,0)),
+}
 US_CASH_KEYS=('RUSSELL2000','DOW','NASDAQCOMPOSITE')
 
 
@@ -84,6 +93,33 @@ def completed_us_rows(rows,target_session=None):
 CRYPTO_SYMBOLS={'BTCUSD':'BTC-USD','ETHUSD':'ETH-USD'}
 COINGECKO_IDS={'BTCUSD':'bitcoin','ETHUSD':'ethereum'}
 COINGECKO_SPOT='https://api.coingecko.com/api/v3/simple/price'
+
+
+def completed_local_rows(rows,zone,close,now=None):
+    now=(now or datetime.now(UTC)).astimezone(zone)
+    done=now.date().isoformat() if now.time()>=(datetime.combine(now.date(),close)+timedelta(minutes=30)).time() else (now.date()-timedelta(days=1)).isoformat()
+    return [r for r in rows if r['date']<=done]
+
+
+def refresh_asia_indexes(data,previous=None,fetch=None,now=None):
+    """NIKKEI225 / HANGSENG / SHCOMP completed daily closes (Yahoo)."""
+    fetch=fetch or yahoo_series
+    sm=data.setdefault('series',{});latest=data.setdefault('latest',{})
+    quality=data.setdefault('cross_market_freshness_quality',{})
+    previous=previous if previous is not None else dict(sm)
+    for key,(symbol,zone_name,close) in ASIA_INDEXES.items():
+        zone=ZoneInfo(zone_name)
+        try:
+            fresh=completed_local_rows(fetch(symbol,zone),zone,close,now)
+            if not fresh:raise ValueError('NO_COMPLETED_ROWS')
+            rows=merge_rows(previous.get(key,[]),fresh);state='LIVE';err=None
+        except Exception as e:
+            rows=previous.get(key,[]);state='STALE' if rows else 'UNAVAILABLE';err=f'{type(e).__name__}: {e}'
+        if rows:
+            sm[key]=rows;latest[key]=rows[-1]['value']
+        quality[key]={'status':state,'source':f'Yahoo Finance {symbol} completed daily','last_date':rows[-1]['date'] if rows else None,
+                      'date_basis':f'{zone_name} trading date','fetch_error':err}
+    data.setdefault('sources',{})['ASIA_EQUITY']='Yahoo Finance completed daily (^N225/^HSI/000001.SS), exchange-local dates'
 
 
 def coingecko_spot_observations(now=None):
@@ -240,6 +276,8 @@ def main():
             xs=completed_us_rows(prev.get(key,[]),us_session);state='STALE' if xs else 'UNAVAILABLE';err=f'{type(e).__name__}: {e}'
         sm[key]=xs;latest[key]=xs[-1]['value'] if xs else None
         quality[key]={'status':state,'source':'Yahoo Finance completed cash-session daily','last_date':xs[-1]['date'] if xs else None,'target_session':us_session,'fetch_error':err,'date_basis':'America/New_York'}
+
+    refresh_asia_indexes(data,prev)
 
     try:xs=yahoo_series(SYMBOLS['SILVER'],ET);silver_state='LIVE'
     except Exception as e:print(f'SILVER_FETCH_WARN={e}');xs=prev.get('SILVER',[]);silver_state='STALE' if xs else 'UNAVAILABLE'

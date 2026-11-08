@@ -3,6 +3,9 @@
 const ITEMS=[
   {k:'KOSPI',label:'KOSPI',kind:'pct',digits:2,group:'한국'},
   {k:'KOSDAQ',label:'KOSDAQ',kind:'pct',digits:2,group:'한국'},
+  {k:'NIKKEI225',label:'닛케이 225',kind:'pct',digits:2,group:'아시아'},
+  {k:'HANGSENG',label:'항셍',kind:'pct',digits:2,group:'아시아'},
+  {k:'SHCOMP',label:'상해종합',kind:'pct',digits:2,group:'아시아'},
   {k:'RUSSELL2000',label:'Russell 2000',kind:'pct',digits:2,group:'미국'},
   {k:'DOW',label:'Dow',kind:'pct',digits:2,group:'미국'},
   {k:'SP500',label:'S&P 500',kind:'pct',digits:2,group:'미국'},
@@ -36,9 +39,9 @@ const ITEMS=[
   {k:'COPPER',label:'Copper',kind:'pct',digits:3,prefix:'$',group:'금속'}
 ];
 const BY_KEY=Object.fromEntries(ITEMS.map(x=>[x.k,x]));
-const INDEX_KEYS=['KOSPI','KOSDAQ','SP500','NASDAQCOMPOSITE','NASDAQ100','DOW','RUSSELL2000'];
+const INDEX_KEYS=['KOSPI','KOSDAQ','NIKKEI225','HANGSENG','SHCOMP','SP500','NASDAQCOMPOSITE','NASDAQ100','DOW','RUSSELL2000'];
 const OVERVIEW_GROUPS=[
-  {key:'indices',label:'① 지수 점검',sub:'미국 주요 지수 → VIX → 국내 지수·투자심리',keys:['RUSSELL2000','DOW','SP500','NASDAQCOMPOSITE','NASDAQ100','VIX','KOSPI','KOSDAQ','FEAR_GREED']},
+  {key:'indices',label:'① 지수 점검',sub:'미국 주요 지수 → VIX → 국내·아시아 지수 → 투자심리',keys:['RUSSELL2000','DOW','SP500','NASDAQCOMPOSITE','NASDAQ100','VIX','KOSPI','KOSDAQ','NIKKEI225','HANGSENG','SHCOMP','FEAR_GREED']},
   {key:'tripod',label:'② TRI-POD',sub:'현재 전략 상태와 핵심 위험입력',special:'tripod'},
   {key:'macro',label:'③ 매크로 점검',sub:'원자재 · 금리 · 암호화폐 · 환율',special:'macro'},
   {key:'week',label:'④ 이번 주 관전 포인트',sub:'이번 주 월요일~일요일 · KST 기준',special:'week'}
@@ -329,5 +332,5 @@ const st=document.createElement('style');st.textContent=`
 .latestTile[data-metric="TRIPOD_TARGET"]>strong,.latestTile[data-metric="TRIPOD_TREND"]>strong{white-space:normal;text-overflow:clip;overflow:visible;line-height:1.35;font-size:clamp(16px,2vw,24px);overflow-wrap:anywhere}.latestTile[data-metric^="TRIPOD_"] .latestTileFoot>span{white-space:normal;overflow:visible;text-overflow:clip;line-height:1.5}.tripodStageLegend{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.tripodStageLegend span{padding:6px 9px;border:1px solid #dce5ef;border-radius:8px;font-size:12px;color:#526071;background:#fff}.tripodStageLegend span.active{color:#153b65;background:#eaf3ff;border-color:#8fb2dc;font-weight:800}
 `;document.head.appendChild(st);
 let tries=0;const id=setInterval(()=>{tries++;ensureIndexShell();ensureOfficialMacroRuntime();hookRender();hookCalendar();bindTabs();if(renderBoard()&&tries>10&&window.__JJOONI_OFFICIAL_MACRO_V1)clearInterval(id);if(tries>120)clearInterval(id)},100);
-window.__JJOONI_LATEST_BOARD={version:'20261104-quote-freshness',items:ITEMS,render:renderBoard,getSeries:seriesOf,getComparison:()=>({key:compareKey,...COMPARES[compareKey]}),getTripodDisplay:()=>tripodDisplayModel(typeof DATA==='undefined'?{}:DATA?.tripod_latest||{},typeof DATA==='undefined'?null:DATA?.us_completed_session_date,typeof DATA==='undefined'?[]:DATA?.tripod_history||[]),contract:'GROUPED_MARKET_BOARD_WITH_INDEX_TAB_PERIOD_COMPARISON_AND_SOURCE_BASIS',tabs:Object.keys(TAB_CONFIG),comparisons:Object.keys(COMPARES)};
+window.__JJOONI_LATEST_BOARD={version:'20261108-asia-indexes',items:ITEMS,render:renderBoard,getSeries:seriesOf,getComparison:()=>({key:compareKey,...COMPARES[compareKey]}),getTripodDisplay:()=>tripodDisplayModel(typeof DATA==='undefined'?{}:DATA?.tripod_latest||{},typeof DATA==='undefined'?null:DATA?.us_completed_session_date,typeof DATA==='undefined'?[]:DATA?.tripod_history||[]),contract:'GROUPED_MARKET_BOARD_WITH_INDEX_TAB_PERIOD_COMPARISON_AND_SOURCE_BASIS',tabs:Object.keys(TAB_CONFIG),comparisons:Object.keys(COMPARES)};
 })();
