@@ -17,7 +17,8 @@ concurrency:
 jobs:
   production:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
-    runs-on: ubuntu-latest
+    # Playwright 1.55.0 Chromium is unsupported on ubuntu26.04; pin a supported runner.
+    runs-on: ubuntu-24.04
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
