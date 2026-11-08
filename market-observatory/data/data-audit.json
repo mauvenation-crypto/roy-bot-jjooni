@@ -1,9 +1,9 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-08T17:36:35+09:00",
-  "overall": "PASS",
+  "generated_kst": "2026-11-08T17:39:08+09:00",
+  "overall": "WARN",
   "critical_count": 0,
-  "warning_count": 0,
+  "warning_count": 1,
   "observatory_session": "2026-11-06",
   "file_status": {
     "observatory": {
@@ -12,12 +12,12 @@
       "schema": "JJOONI_MARKET_OBSERVATORY_V1"
     },
     "daily_pulse": {
-      "generated_kst": "2026-11-08T17:34:47+09:00",
+      "generated_kst": "2026-11-08T17:39:07+09:00",
       "session": "2026-11-06",
       "snapshot_status": "FINAL"
     },
     "public_tripod": {
-      "generated_kst": "2026-11-08T17:34:47+09:00",
+      "generated_kst": "2026-11-08T17:39:07+09:00",
       "session": "2026-11-06",
       "ok": true,
       "target": "QQQ 50% + QLD 50%"
@@ -68,10 +68,12 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-08T17:36:34+09:00",
-      "overall": "LIVE",
+      "generated_kst": "2026-11-08T17:39:05+09:00",
+      "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
-      "warnings": []
+      "warnings": [
+        "audit"
+      ]
     },
     "watchdog": {
       "checked_kst": "2026-11-07T09:04:24+09:00",
@@ -172,6 +174,44 @@
         }
       },
       "missing": [],
+      "latest_mismatch": []
+    },
+    "asia_equity": {
+      "state": "UNAVAILABLE",
+      "anchor": "2026-11-08",
+      "allow_lag_days": 4,
+      "critical": false,
+      "items": {
+        "NIKKEI225": {
+          "count": 0,
+          "last_date": null,
+          "last_value": null,
+          "group": "asia_equity",
+          "latest_value": null,
+          "latest_matches": false
+        },
+        "HANGSENG": {
+          "count": 0,
+          "last_date": null,
+          "last_value": null,
+          "group": "asia_equity",
+          "latest_value": null,
+          "latest_matches": false
+        },
+        "SHCOMP": {
+          "count": 0,
+          "last_date": null,
+          "last_value": null,
+          "group": "asia_equity",
+          "latest_value": null,
+          "latest_matches": false
+        }
+      },
+      "missing": [
+        "NIKKEI225",
+        "HANGSENG",
+        "SHCOMP"
+      ],
       "latest_mismatch": []
     },
     "fx": {
@@ -524,18 +564,24 @@
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T17:34:23+09:00",
-      "current_quote_age_seconds": 132,
+      "current_quote_age_seconds": 285,
       "captured_quote_age_seconds": 6
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T17:34:12+09:00",
-      "current_quote_age_seconds": 143,
+      "current_quote_age_seconds": 296,
       "captured_quote_age_seconds": 17
     }
   },
-  "issues": [],
+  "issues": [
+    {
+      "code": "GROUP_ASIA_EQUITY_UNAVAILABLE",
+      "severity": "WARN",
+      "detail": "anchor=2026-11-08 dates=NIKKEI225:None,HANGSENG:None,SHCOMP:None"
+    }
+  ],
   "contracts": {
     "completed_session": "CORE_US_AND_US_SUPPLEMENT_MUST_MATCH_OBSERVATORY_SESSION",
     "continuous_daily": "FX_ENERGY_METALS_MAY_LAG_CORE_BY_AT_MOST_1_CALENDAR_DAY",

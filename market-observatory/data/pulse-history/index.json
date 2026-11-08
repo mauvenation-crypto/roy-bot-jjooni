@@ -7750,6 +7750,20 @@
       "path": "./observations/9be28b41350764f2f36054f0971ca4d636dc04b380885357df70cc97c8c508e5.json",
       "quality": "LIVE",
       "snapshot_id": "9be28b41350764f2f36054f0971ca4d636dc04b380885357df70cc97c8c508e5"
+    },
+    {
+      "generated_kst": "2026-11-08T17:39:04+09:00",
+      "market_date_us": "2026-11-06",
+      "path": "./observations/c8c375bad87c2918e5b60c929b0e1776d7c5cc486a7a3f0feb05844ec3883381.json",
+      "quality": "LIVE",
+      "snapshot_id": "c8c375bad87c2918e5b60c929b0e1776d7c5cc486a7a3f0feb05844ec3883381"
+    },
+    {
+      "generated_kst": "2026-11-08T17:39:07+09:00",
+      "market_date_us": "2026-11-06",
+      "path": "./observations/60e7cdcff442949bd3a076ee0ba43315f6572105bf5602199c68540342c3a473.json",
+      "quality": "LIVE",
+      "snapshot_id": "60e7cdcff442949bd3a076ee0ba43315f6572105bf5602199c68540342c3a473"
     }
   ],
   "retention": "NO_AUTOMATIC_EXPIRY",
