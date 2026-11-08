@@ -5198,7 +5198,16 @@
         "series_identity": null,
         "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
       }
+    ],
+    "US_FED_FUNDS|2026-11-07": [
+      {
+        "version": "baseline_import",
+        "value": 3.875,
+        "captured_kst": "2026-11-08T15:11:26+09:00",
+        "series_identity": null,
+        "source_url": "https://fred.stlouisfed.org/series/DFEDTARU"
+      }
     ]
   },
-  "updated_kst": "2026-11-07T05:06:35+09:00"
+  "updated_kst": "2026-11-08T15:11:26+09:00"
 }
