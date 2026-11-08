@@ -151,7 +151,7 @@ def parse_bls(raw,code,dt):
    vals={'state_jolts_annual_publication':year+' annual dataset released'}
  return [dict(key=k,label=LABELS.get(k,k),actual=v) for k,v in vals.items() if v is not None],t[:4000]
 
-def collect_bls(e,kind,checks):
+def collect_bls(e,kind,checks,release_calendar=None):
  from official_calendar_collectors import raw_fetch,text_fetch
  from calendar_actual_contract import release_time
  code=kind.removeprefix('BLS_');dt=release_time(e).astimezone(ZoneInfo('America/New_York'))
@@ -190,4 +190,6 @@ def collect_bls(e,kind,checks):
   result=collect_eci_fred(e,checks)
   if result:return result
  from official_bls_api import collect_api
+ # Existing BLS API adapter already uses a guarded official latest-published reference.
+ # Release-calendar crosswalk is not implemented here; preserve its own API contract.
  return collect_api(e,code,checks)

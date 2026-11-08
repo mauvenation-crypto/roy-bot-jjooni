@@ -101,6 +101,34 @@ def add_series(series, ref, meta, row):
         bucket['rows'].append(row)
 
 
+def apply_quarantine(series, calendar):
+    """Drop history copies of values the calendar quarantined as cross-metric copies.
+
+    The history merge never erases facts, so a quarantined calendar value would
+    otherwise live on here and be propagated back as the next release's prior.
+    Official observations are never touched.
+    """
+    cleared = 0
+    for e in calendar.get('events') or []:
+        for m in e.get('market_metrics') or []:
+            bad = (m.get('quarantined_values') or {}) if isinstance(m, dict) else {}
+            if not bad:
+                continue
+            bucket = series.get(metric_ref(e, m)) or {}
+            for row in bucket.get('rows') or []:
+                if row.get('date') != event_date(e):
+                    continue
+                for field, info in bad.items():
+                    if field == 'actual' and row.get('source_tier') == 'OFFICIAL':
+                        continue
+                    if clean(row.get(field)) is not None and clean(row.get(field)) == clean(info.get('value')):
+                        row[field] = None
+                        cleared += 1
+            if bucket.get('rows'):
+                bucket['rows'] = [r for r in bucket['rows'] if has_values(r)]
+    return cleared
+
+
 def source_events(calendar, overrides):
     seen = set()
     for e in calendar.get('events') or []:
@@ -192,6 +220,10 @@ def main():
         for m in e.get('market_metrics') or []:
             if isinstance(m, dict) and m.get('metric_type') != 'market_probability_snapshot':
                 m['history_ref'] = metric_ref(e, m)
+
+    quarantined = apply_quarantine(series, calendar)
+    if quarantined:
+        print(f'CALENDAR_HISTORY_QUARANTINE cleared_fields={quarantined}')
 
     total_rows = 0
     earliest = None

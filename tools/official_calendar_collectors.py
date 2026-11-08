@@ -283,6 +283,7 @@ def adapter_id(e):
     from official_bls_actuals import DEFS
     if c=='US' and t in DEFS: return 'BLS_'+DEFS[t][0]
     if c=='US' and 'Initial Jobless Claims' in t: return 'DOL'
+    if c=='US' and re.match(r'^Personal Income and Outlays,\s+[A-Za-z]+\s+\d{4}$',t): return 'BEA_PIO'
     if c=='KR' and t=='한국은행 통화정책방향 결정회의': return 'BOK_RATE'
     if c=='KR' and re.fullmatch(r'\d{4}년\s*[1-4]/4분기\s*실질\s*GDP\(속보\)',t): return 'BOK_GDP'
     if c=='KR' and '생산자물가' in t: return 'BOK'
@@ -300,6 +301,8 @@ REGISTRY['BOK_RATE']=('bok_base_rate',)
 REGISTRY['BOK_CCSI']=('kr_ccsi',)
 REGISTRY['BOK_GDP']=('gdp_qoq',)
 REGISTRY['KOSTAT_EMPLOYMENT']=('kr_unemployment_sa',)
+from official_bea_fred import KEYS as BEA_PIO_KEYS
+REGISTRY['BEA_PIO']=BEA_PIO_KEYS
 
 def discover_bok(e):
     period=re.search(r'(\d{4})년\s*(\d+)월',e['title'])
@@ -312,7 +315,7 @@ def discover_bok(e):
     if not match: raise ValueError('BOK_RELEASE_LINK_NOT_FOUND')
     return urllib.parse.urljoin(url,html.unescape(match)),y,m
 
-def collect(e,kind,checks):
+def collect(e,kind,checks,release_calendar=None):
     dt=release_time(e)
     if kind=='KOSTAT_EMPLOYMENT':
         return collect_kr_employment(e,checks)
@@ -323,9 +326,12 @@ def collect(e,kind,checks):
     if kind=='BOK_RATE':
         from official_bok_policy import collect_policy
         return collect_policy(e,checks)
+    if kind=='BEA_PIO':
+        from official_bea_fred import collect_pio
+        return collect_pio(e,checks)
     if kind.startswith('BLS_'):
         from official_bls_actuals import collect_bls
-        return collect_bls(e,kind,checks)
+        return collect_bls(e,kind,checks,release_calendar)
     if kind=='DOL':
         urls=[f'https://oui.doleta.gov/press/{dt.year}/{dt:%m%d%y}.pdf',f'https://www.dol.gov/sites/dolgov/files/OPA/newsreleases/ui-claims/{dt.year}/ui-claims-{dt:%Y%m%d}.pdf','https://www.dol.gov/ui/data.pdf']
         parser=lambda t:parse_claims(t,dt)
@@ -362,6 +368,11 @@ def collect(e,kind,checks):
 
 def apply_official_actuals(calendar,now):
     checks=[]; updates=0; candidates=[]; historical_attempts=0
+    # Copied market values make a release look complete and block re-collection.
+    from calendar_metric_quarantine import quarantine_cross_metric_copies
+    quarantined=quarantine_cross_metric_copies(calendar,now.isoformat(timespec='seconds'))
+    for row in quarantined:
+        print(f"CALENDAR_QUARANTINE {row['datetime_kst'][:10]} {row['key']}.{row['field']}={row['value']} copied_from={row['copied_from']}")
     historical_limit=int(os.getenv('CALENDAR_HISTORICAL_BATCH','12'))
     stop_at=time.monotonic()+float(os.getenv('CALENDAR_OFFICIAL_BUDGET_SECONDS','120'))
     def priority(event):
@@ -440,7 +451,7 @@ def apply_official_actuals(calendar,now):
         if historical and not cached: historical_attempts+=1
         e['actual_backfill_checked_kst']=now.isoformat(timespec='seconds')
         try:
-            result=collect(e,kind,checks)
+            result=collect(e,kind,checks,calendar)
         except Exception as exc:
             checks.append(dict(adapter=kind,title=e['title'],result='ADAPTER_FAILED',error=str(exc)[:200]))
             continue
@@ -466,5 +477,5 @@ def apply_official_actuals(calendar,now):
             if clean(representative.get(f)) is None and clean(e.get(f)) is not None: representative[f]=e[f]
         e.update(merge_observation(e,patch)); e['market_data_source']=source_label
         updates+=1
-    calendar['actual_backfill']={'lookback_days':14,'unresolved_candidates':candidates,'checks':checks,'checked_kst':now.isoformat(timespec='seconds')}
+    calendar['actual_backfill']={'lookback_days':14,'unresolved_candidates':candidates,'checks':checks,'checked_kst':now.isoformat(timespec='seconds'),'quarantined':quarantined}
     return updates,checks
