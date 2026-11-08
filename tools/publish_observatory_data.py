@@ -13,8 +13,10 @@ workflow, and other non-generated dirty files still fail closed.
 """
 import argparse
 import json
+import random
 import subprocess
 import sys
+import time
 from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
@@ -24,6 +26,7 @@ from calendar_history_integrity import merge_history_documents
 from calendar_actual_contract import KST, build_freshness, merge_observation, retain_calendar
 
 ROOT = Path(__file__).resolve().parents[1]
+PUBLISH_ATTEMPTS = 6
 DATA = 'market-observatory/data/'
 MARKET_BUNDLE = (DATA + 'observatory.json', DATA + 'daily-market-pulse.json', 'public-market-daily.json')
 
@@ -320,7 +323,12 @@ def publish(paths, message):
     git('commit', '-m', message)
     clean_unselected_generated(paths)
 
-    for attempt in range(3):
+    # A code push to main starts ~10 writers at once; three back-to-back
+    # attempts lost the race (10Y backfill, 2026-11-08). Retry longer with
+    # jittered backoff so contending publishers spread out.
+    for attempt in range(PUBLISH_ATTEMPTS):
+        if attempt:
+            time.sleep(min(30, 2 ** attempt) + random.uniform(0, 3))
         git('fetch', 'origin', 'main')
         payloads = {}
         for path in paths:
@@ -370,7 +378,7 @@ def publish(paths, message):
             print('OBSERVATORY_PUBLISH=PASS commit=' + git('rev-parse', 'HEAD').stdout.strip())
             return
         print(f'OBSERVATORY_PUBLISH_RETRY={attempt+1}')
-    raise RuntimeError('Publication failed after three concurrent-update retries')
+    raise RuntimeError(f'Publication failed after {PUBLISH_ATTEMPTS} concurrent-update attempts')
 
 
 if __name__ == '__main__':
