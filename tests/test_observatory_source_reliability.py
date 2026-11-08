@@ -146,5 +146,85 @@ class BlsApiReferencePeriodTest(unittest.TestCase):
         self.assertEqual(checks[0]['result'], 'REFERENCE_PERIOD_FROM_API')
 
 
+class BlsQuarterlyRecoveryTest(unittest.TestCase):
+    def setUp(self):
+        import official_bls_api
+        self.api = official_bls_api
+        self.api.fetch_series.cache_clear()
+
+    def test_quarterly_api_period_and_published_rate(self):
+        import json
+        from decimal import Decimal
+        payload = {'status': 'REQUEST_SUCCEEDED',
+                   'Results': {'series': [{'seriesID': 'PRS85006092',
+                                          'data': [{'year': '2026', 'period': 'Q03',
+                                                    'value': '3.6'},
+                                                   {'year': '2026', 'period': 'Q02',
+                                                    'value': '2.1'}]}]}}
+        with patch.object(official, 'raw_fetch', return_value=json.dumps(payload).encode()):
+            values, _ = self.api.fetch_series('PRS85006092', 2026)
+        self.assertEqual(values[(2026, 3)], Decimal('3.6'))
+        self.assertEqual(self.api.calculate(values, 2026, 3, 0, '%'), '3.6%')
+        self.assertEqual(self.api.reference_quarter('Third Quarter 2026, Preliminary'), (2026, 3))
+        self.assertEqual(self.api.reference_quarter('2026 Q3'), (2026, 3))
+        self.assertIsNone(self.api.reference_quarter('November 2026'))
+
+    def test_quarterly_reference_date_is_read_from_api_not_guessed(self):
+        from decimal import Decimal
+        event = {'title': 'Productivity and Costs', 'datetime_kst': '2026-11-05T22:30:00+09:00'}
+        with patch.object(self.api, 'fetch_series', return_value=({(2026, 3): Decimal('3.6')}, 'api')):
+            self.assertEqual(self.api.latest_published_period(event, 'prod2',
+                                                                at('2026-11-08T14:00')), (2026, 3))
+        with patch.object(self.api, 'fetch_series', return_value=({(2026, 4): Decimal('3.6')}, 'api')):
+            self.assertIsNone(self.api.latest_published_period(event, 'prod2',
+                                                               at('2026-11-08T14:00')))
+
+    def test_quarterly_api_recovers_both_metrics_with_revision_provenance(self):
+        from decimal import Decimal
+        event = {'title': 'Productivity and Costs', 'datetime_kst': '2026-11-05T22:30:00+09:00'}
+        def response(series, year):
+            if series == 'PRS85006092':
+                return {(2026, 3): Decimal('3.6')}, 'api'
+            if series == 'PRS85006112':
+                return {(2026, 3): Decimal('-0.7')}, 'api'
+            raise AssertionError(series)
+        checks = []
+        with patch.object(self.api, 'fetch_series', side_effect=response):
+            rows, _ = self.api.collect_api(event, 'prod2', checks, at('2026-11-08T14:00'))
+        self.assertEqual({r['key']: r['actual'] for r in rows},
+                         {'productivity': '3.6%', 'unit_labor': '-0.7%'})
+        self.assertEqual({r['reference_period'] for r in rows}, {'2026-Q3'})
+        self.assertTrue(all(r['verification_status'] == 'VERIFIED_OFFICIAL_REVISED'
+                            and r['value_vintage'] == 'LATEST_REVISION' for r in rows))
+        self.assertEqual(len([c for c in checks if c['result'] == 'PARSED_REVISED_SERIES']), 2)
+
+    def test_probe_clears_only_with_both_official_api_rows(self):
+        from build_observatory_freshness import calendar_probe_health
+        event = {'title': 'Productivity and Costs',
+                 'datetime_kst': '2026-11-05T22:30:00+09:00', 'source_tier': 'OFFICIAL',
+                 'market_metrics': []}
+        checks = [{'title': event['title'], 'adapter': 'BLS_prod2',
+                   'result': 'HTTP_403',
+                   'url': 'https://www.bls.gov/news.release/archives/prod2_11052026.htm'}]
+        for key, series_id, actual in (('productivity', 'PRS85006092', '3.6%'),
+                                       ('unit_labor', 'PRS85006112', '-0.7%')):
+            event['market_metrics'].append({
+                'key': key, 'series_id': series_id, 'actual': actual,
+                'source_tier': 'OFFICIAL', 'verification_status': 'VERIFIED_OFFICIAL_REVISED',
+                'value_vintage': 'LATEST_REVISION', 'reference_period': '2026-Q3'})
+            checks.append({'adapter': 'BLS_API', 'result': 'PARSED_REVISED_SERIES',
+                           'title': event['title'], 'event_kst': event['datetime_kst'],
+                           'reference_period': '2026-Q3', 'key': key})
+        healthy = calendar_probe_health(checks, [event])
+        self.assertEqual(healthy['state'], 'PASS_WITH_TRANSPORT_WARNINGS')
+        self.assertEqual(healthy['blocked_releases'], [])
+        self.assertIn('Productivity and Costs', healthy['verified_fallback_releases'])
+        partial = calendar_probe_health(checks[:-1], [event])
+        self.assertIn('Productivity and Costs', partial['blocked_releases'])
+        market_only = dict(event, source_tier='MARKET_FEED')
+        self.assertIn('Productivity and Costs',
+                      calendar_probe_health(checks, [market_only])['blocked_releases'])
+
+
 if __name__ == '__main__':
     unittest.main()
