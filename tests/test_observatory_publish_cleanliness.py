@@ -88,3 +88,22 @@ class ObservatoryPublisherCleanlinessTest(unittest.TestCase):
 
 if __name__=='__main__':
     unittest.main()
+
+
+class CanonicalCalendarSerializationTest(__import__('unittest').TestCase):
+    def test_calendar_files_ignore_key_order_but_keep_arrays(self):
+        import sys
+        from pathlib import Path
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
+        from publish_observatory_data import serialize
+        a = {'series': {'x': {'rows': [{'date': '1', 'source_tier': 'OFFICIAL', 'value_vintage': 'AS_RELEASED'},
+                                       {'date': '2'}]}}, 'schema': 'S'}
+        b = {'schema': 'S', 'series': {'x': {'rows': [{'value_vintage': 'AS_RELEASED', 'date': '1', 'source_tier': 'OFFICIAL'},
+                                                      {'date': '2'}]}}}
+        for path in ('market-observatory/data/economic-calendar-history.json', 'market-observatory/data/economic-calendar.json'):
+            self.assertEqual(serialize(path, a), serialize(path, b))
+        self.assertLess(serialize('market-observatory/data/economic-calendar.json', a).index('"1"'),
+                        serialize('market-observatory/data/economic-calendar.json', a).index('"2"'))
+        # Other files keep writer order.
+        self.assertNotEqual(serialize('market-observatory/data/observatory.json', a),
+                            serialize('market-observatory/data/observatory.json', b))

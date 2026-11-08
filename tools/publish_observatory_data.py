@@ -58,6 +58,18 @@ def git(*args, check=True):
     return subprocess.run(['git', *args], cwd=ROOT, text=True, capture_output=True, check=check)
 
 
+# Writers build calendar rows by dict merges in different orders, so the same
+# values flipped key order on every publication: 76,000-line diffs of the
+# 35 MB history (18 rewrites on 2026-11-08) and ~1,800 lines of the calendar,
+# with zero value changes. Canonical key order makes a commit carry only real
+# changes (same comparison: 0 and 18 lines). Arrays keep their order.
+CANONICAL_JSON = ('/economic-calendar-history.json', '/economic-calendar.json')
+
+
+def serialize(path, doc):
+    return json.dumps(doc, ensure_ascii=False, indent=2, sort_keys=path.endswith(CANONICAL_JSON)) + '\n'
+
+
 def merge_generated(path, local, remote):
     if path.endswith('/observatory.json'):
         result = deepcopy(max((remote, local), key=lambda doc: (str(doc.get('us_completed_session_date') or ''), str(doc.get('generated_kst') or ''))))
@@ -343,7 +355,7 @@ def publish(paths, message):
             remote = git('show', 'origin/main:' + path, check=False)
             local = json.loads((ROOT / path).read_text(encoding='utf-8'))
             merged = merge_generated(path, local, json.loads(remote.stdout)) if remote.returncode == 0 else local
-            payloads[path] = json.dumps(merged, ensure_ascii=False, indent=2) + '\n'
+            payloads[path] = serialize(path, merged)
         result = git('rebase', 'origin/main', check=False)
         while result.returncode:
             conflicts = git('diff', '--name-only', '--diff-filter=U').stdout.splitlines()
