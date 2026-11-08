@@ -86,7 +86,7 @@
   "contract": "ROLLING_3650D_EVENT_AND_METRIC_HISTORY_PRESERVE_V2",
   "coverage_scope": "ARCHIVE_BOUNDARY_AND_FETCH_ERRORS_ONLY",
   "coverage_status": "FULL",
-  "generated_kst": "2026-11-08T14:09:10+09:00",
+  "generated_kst": "2026-11-08T14:11:47+09:00",
   "missing_policy": "Historical consensus/actual is shown only when captured or verified; values are never synthesized.",
   "row_count": 37819,
   "schema": "JJOONI_CALENDAR_HISTORY_INDEX_V1",
@@ -12537,51 +12537,6 @@
       "ref": "KR::2026년-3분기-실질-gdp::gdp_qoq",
       "sha256": "76bafd2c8e9ec0674f8ef765770e9082c1d886eabbb9581afb3664833a6e39ea"
     },
-    "KR::2026년-4분기-실질-gdp": {
-      "available_from": null,
-      "available_to": null,
-      "category": "GDP",
-      "count": 0,
-      "country": "KR",
-      "event_title": "2026년 3/4분기 실질 GDP(속보)",
-      "kind": "event",
-      "label": "2026년 3/4분기 실질 GDP(속보)",
-      "path": "./calendar-history/series/ac6b5918f258f7520469ba3343b09758893b4e852a27f1907aac5a663e1d88a6.json",
-      "quality": {
-        "actual_count": 0,
-        "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 0,
-        "frequency_validation": "NOT_VALIDATED",
-        "max_observed_gap_days": 0,
-        "rows_by_year": {},
-        "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
-      },
-      "ref": "KR::2026년-4분기-실질-gdp",
-      "sha256": "ac6b5918f258f7520469ba3343b09758893b4e852a27f1907aac5a663e1d88a6"
-    },
-    "KR::2026년-4분기-실질-gdp::gdp_qoq": {
-      "available_from": null,
-      "available_to": null,
-      "category": "GDP",
-      "count": 0,
-      "country": "KR",
-      "event_title": "2026년 3/4분기 실질 GDP(속보)",
-      "kind": "metric",
-      "label": "GDP QoQ",
-      "metric_key": "gdp_qoq",
-      "path": "./calendar-history/series/b5197cfa7ce32eef7dcb27f878225920fc6c68ccc1ebc7e5f99f26ab768a5a3d.json",
-      "quality": {
-        "actual_count": 0,
-        "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
-        "consensus_count": 0,
-        "frequency_validation": "NOT_VALIDATED",
-        "max_observed_gap_days": 0,
-        "rows_by_year": {},
-        "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
-      },
-      "ref": "KR::2026년-4분기-실질-gdp::gdp_qoq",
-      "sha256": "b5197cfa7ce32eef7dcb27f878225920fc6c68ccc1ebc7e5f99f26ab768a5a3d"
-    },
     "KR::고용동향": {
       "available_from": "2026-09-09",
       "available_to": "2026-10-16",
@@ -13403,7 +13358,7 @@
       "event_title": "Employment Situation",
       "kind": "event",
       "label": "Employment Situation",
-      "path": "./calendar-history/series/43c6ab5a138081e1c85b810d6c3e82304be9db5727f2c03428d9a8fea409a720.json",
+      "path": "./calendar-history/series/7aa345889b4545a319eae0198a89c0d120c553cdb27ae84370a3f5543b88e106.json",
       "quality": {
         "actual_count": 11,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13416,7 +13371,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::employment-situation",
-      "sha256": "43c6ab5a138081e1c85b810d6c3e82304be9db5727f2c03428d9a8fea409a720"
+      "sha256": "7aa345889b4545a319eae0198a89c0d120c553cdb27ae84370a3f5543b88e106"
     },
     "US::employment-situation-of-veterans": {
       "available_from": "2026-04-28",
@@ -13477,7 +13432,7 @@
       "kind": "metric",
       "label": "Average Hourly Earnings MoM",
       "metric_key": "avg_hourly_mom",
-      "path": "./calendar-history/series/5f45651ae55d5f0f04a5a2c3d44745545dd8d7bb0d54e64dfa7d4c35db8c4f3c.json",
+      "path": "./calendar-history/series/21d923017dd0e5bab7055cc09aadb6619e045b4bc540350025debcfaa4fbb151.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13500,7 +13455,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::employment-situation::avg_hourly_mom",
-      "sha256": "5f45651ae55d5f0f04a5a2c3d44745545dd8d7bb0d54e64dfa7d4c35db8c4f3c"
+      "sha256": "21d923017dd0e5bab7055cc09aadb6619e045b4bc540350025debcfaa4fbb151"
     },
     "US::employment-situation::avg_hourly_yoy": {
       "available_from": "2026-01-09",
@@ -13512,7 +13467,7 @@
       "kind": "metric",
       "label": "Average Hourly Earnings YoY",
       "metric_key": "avg_hourly_yoy",
-      "path": "./calendar-history/series/48ca8dbc305717090b7b216532ab40204f1145d044b2f968149fd830f10332db.json",
+      "path": "./calendar-history/series/ccc8ccf4dd40272df63af086309e9cb137afff0c0eb3ace087ab50099b83a01d.json",
       "quality": {
         "actual_count": 10,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13525,7 +13480,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::employment-situation::avg_hourly_yoy",
-      "sha256": "48ca8dbc305717090b7b216532ab40204f1145d044b2f968149fd830f10332db"
+      "sha256": "ccc8ccf4dd40272df63af086309e9cb137afff0c0eb3ace087ab50099b83a01d"
     },
     "US::employment-situation::nfp": {
       "available_from": "2016-12-02",
@@ -13537,7 +13492,7 @@
       "kind": "metric",
       "label": "Nonfarm Payrolls",
       "metric_key": "nfp",
-      "path": "./calendar-history/series/9be5eb661e6dca86eba0b24d9c5047a1198386a261fe7f94941a3705e4b61cb0.json",
+      "path": "./calendar-history/series/ca93899a310e92c24cec1a693a99d7838e2b304d53393a3d357791d782bcb738.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13560,7 +13515,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::employment-situation::nfp",
-      "sha256": "9be5eb661e6dca86eba0b24d9c5047a1198386a261fe7f94941a3705e4b61cb0"
+      "sha256": "ca93899a310e92c24cec1a693a99d7838e2b304d53393a3d357791d782bcb738"
     },
     "US::employment-situation::unemployment": {
       "available_from": "2016-12-02",
@@ -13572,7 +13527,7 @@
       "kind": "metric",
       "label": "Unemployment Rate",
       "metric_key": "unemployment",
-      "path": "./calendar-history/series/5723c99ef8de70340fb9359c509d1909b28e75de03ce641b5d85f05596329713.json",
+      "path": "./calendar-history/series/d921f7a1a68006619c4d907d80979a24a89672a6ba0d8b41d2e1c837ace271c9.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13595,7 +13550,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::employment-situation::unemployment",
-      "sha256": "5723c99ef8de70340fb9359c509d1909b28e75de03ce641b5d85f05596329713"
+      "sha256": "d921f7a1a68006619c4d907d80979a24a89672a6ba0d8b41d2e1c837ace271c9"
     },
     "US::fomc-정책결정": {
       "available_from": "2026-01-29",
@@ -13763,7 +13718,7 @@
       "event_title": "Job Openings and Labor Turnover Survey",
       "kind": "event",
       "label": "Job Openings and Labor Turnover Survey",
-      "path": "./calendar-history/series/a9b2f74d62dd1180670f96e23a5c9e26e3e57cc6ed4b5eefa63414679e7f9f8b.json",
+      "path": "./calendar-history/series/fe982a0f31220bbd739474e9805b4779b373b944d5bd59eae8df7dd3012ca18a.json",
       "quality": {
         "actual_count": 11,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13776,7 +13731,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::job-openings-and-labor-turnover",
-      "sha256": "a9b2f74d62dd1180670f96e23a5c9e26e3e57cc6ed4b5eefa63414679e7f9f8b"
+      "sha256": "fe982a0f31220bbd739474e9805b4779b373b944d5bd59eae8df7dd3012ca18a"
     },
     "US::job-openings-and-labor-turnover::jolts": {
       "available_from": "2016-12-08",
@@ -13788,7 +13743,7 @@
       "kind": "metric",
       "label": "JOLTS Job Openings",
       "metric_key": "jolts",
-      "path": "./calendar-history/series/c22d4068d2d11a83073356c8a415bb7167b7aa135a7eed50952aeb62f966fccb.json",
+      "path": "./calendar-history/series/49944a9bc941e1d1d03a6c1c38a2bf4b336141a1d3c9edb1e742b5ee785cc9d5.json",
       "quality": {
         "actual_count": 122,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13811,7 +13766,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::job-openings-and-labor-turnover::jolts",
-      "sha256": "c22d4068d2d11a83073356c8a415bb7167b7aa135a7eed50952aeb62f966fccb"
+      "sha256": "49944a9bc941e1d1d03a6c1c38a2bf4b336141a1d3c9edb1e742b5ee785cc9d5"
     },
     "US::micron-fy2026-q4-실적-컨퍼런스콜": {
       "available_from": null,
@@ -14142,7 +14097,7 @@
       "event_title": "Productivity and Costs",
       "kind": "event",
       "label": "Productivity and Costs",
-      "path": "./calendar-history/series/2ec62a1dd5317c722689f958430618cd8b0fc7407300ccb9d471e395ccab600c.json",
+      "path": "./calendar-history/series/ce806e396f21b60d4191d01c86bab2f5255b8fa3f877f8c0899398686f337cd4.json",
       "quality": {
         "actual_count": 9,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14155,7 +14110,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::productivity-and-costs",
-      "sha256": "2ec62a1dd5317c722689f958430618cd8b0fc7407300ccb9d471e395ccab600c"
+      "sha256": "ce806e396f21b60d4191d01c86bab2f5255b8fa3f877f8c0899398686f337cd4"
     },
     "US::productivity-and-costs-by-industry-manufacturing-and-mining-industries": {
       "available_from": "2026-06-24",
@@ -14290,7 +14245,7 @@
       "kind": "metric",
       "label": "Nonfarm Productivity",
       "metric_key": "productivity",
-      "path": "./calendar-history/series/c5cf71b5ceac1dbf767375ccc332473070ec5078551c9555ea38f07439c2b15e.json",
+      "path": "./calendar-history/series/88d0c3191d9086fbb6d626dbe81ad5d452ad0a5d66c128a56faf2658fa290bcc.json",
       "quality": {
         "actual_count": 79,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14313,7 +14268,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::productivity-and-costs::productivity",
-      "sha256": "c5cf71b5ceac1dbf767375ccc332473070ec5078551c9555ea38f07439c2b15e"
+      "sha256": "88d0c3191d9086fbb6d626dbe81ad5d452ad0a5d66c128a56faf2658fa290bcc"
     },
     "US::productivity-and-costs::unit_labor": {
       "available_from": "2016-12-06",
@@ -14325,7 +14280,7 @@
       "kind": "metric",
       "label": "Unit Labor Costs",
       "metric_key": "unit_labor",
-      "path": "./calendar-history/series/514d37d6fb011ec68bd067a0198d18346e99683431856e5092398e1a9fa41024.json",
+      "path": "./calendar-history/series/fb3029ca947a3d7bec2f01b74e2c6f8e6c7624a0cf1997834f96cd720f1f0f67.json",
       "quality": {
         "actual_count": 79,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14348,7 +14303,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::productivity-and-costs::unit_labor",
-      "sha256": "514d37d6fb011ec68bd067a0198d18346e99683431856e5092398e1a9fa41024"
+      "sha256": "fb3029ca947a3d7bec2f01b74e2c6f8e6c7624a0cf1997834f96cd720f1f0f67"
     },
     "US::s-p-global-us-manufacturing-pmi": {
       "available_from": "2026-08-03",
@@ -14359,7 +14314,7 @@
       "event_title": "S&P Global US Manufacturing PMI",
       "kind": "event",
       "label": "S&P Global US Manufacturing PMI",
-      "path": "./calendar-history/series/bd184beb006dd3f1b15fa57286b022d6f3d6e8297fc26dd9c6c0503446ae3b42.json",
+      "path": "./calendar-history/series/f08e5e122c240e50d784f4d221096b610aae3099fa40647d2855c1610e77b0e5.json",
       "quality": {
         "actual_count": 4,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14372,7 +14327,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::s-p-global-us-manufacturing-pmi",
-      "sha256": "bd184beb006dd3f1b15fa57286b022d6f3d6e8297fc26dd9c6c0503446ae3b42"
+      "sha256": "f08e5e122c240e50d784f4d221096b610aae3099fa40647d2855c1610e77b0e5"
     },
     "US::s-p-global-us-manufacturing-pmi::sp_us_manufacturing_pmi": {
       "available_from": "2016-11-22",
@@ -14384,7 +14339,7 @@
       "kind": "metric",
       "label": "S&P Global US Manufacturing PMI",
       "metric_key": "sp_us_manufacturing_pmi",
-      "path": "./calendar-history/series/c738f3f6158ce0f548e3614d08a03495aef0ab92d878d2bc252719a1c2717586.json",
+      "path": "./calendar-history/series/abf5d07ca2b2a18f22dc9b3ea1fe905195e9f5086048e5386b7aef0db533d376.json",
       "quality": {
         "actual_count": 387,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14407,7 +14362,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::s-p-global-us-manufacturing-pmi::sp_us_manufacturing_pmi",
-      "sha256": "c738f3f6158ce0f548e3614d08a03495aef0ab92d878d2bc252719a1c2717586"
+      "sha256": "abf5d07ca2b2a18f22dc9b3ea1fe905195e9f5086048e5386b7aef0db533d376"
     },
     "US::s-p-global-us-services-composite-pmi": {
       "available_from": "2026-08-05",
@@ -14418,7 +14373,7 @@
       "event_title": "S&P Global US Services & Composite PMI",
       "kind": "event",
       "label": "S&P Global US Services & Composite PMI",
-      "path": "./calendar-history/series/68d3eb8ed01e64785483637a92cc23a99efe609eb94b6f7c29ab36c07182af43.json",
+      "path": "./calendar-history/series/bd04bd2dc3f68ed07b0f1c7f87f92eb57f4d0ed656bf7b1c3f49d5d7554a86db.json",
       "quality": {
         "actual_count": 4,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14431,7 +14386,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::s-p-global-us-services-composite-pmi",
-      "sha256": "68d3eb8ed01e64785483637a92cc23a99efe609eb94b6f7c29ab36c07182af43"
+      "sha256": "bd04bd2dc3f68ed07b0f1c7f87f92eb57f4d0ed656bf7b1c3f49d5d7554a86db"
     },
     "US::s-p-global-us-services-composite-pmi::sp_us_composite_pmi": {
       "available_from": "2026-08-05",
@@ -14443,7 +14398,7 @@
       "kind": "metric",
       "label": "S&P Global US Composite PMI",
       "metric_key": "sp_us_composite_pmi",
-      "path": "./calendar-history/series/9d329071d789d9845c19f51adb31ed0ff3148dd675b69ed8beff3e5969d45898.json",
+      "path": "./calendar-history/series/3541d2a7742c8eee84ab0c0bb324bb2d615b5a9a7ea8e79832e4eaa279735ec3.json",
       "quality": {
         "actual_count": 4,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14456,7 +14411,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::s-p-global-us-services-composite-pmi::sp_us_composite_pmi",
-      "sha256": "9d329071d789d9845c19f51adb31ed0ff3148dd675b69ed8beff3e5969d45898"
+      "sha256": "3541d2a7742c8eee84ab0c0bb324bb2d615b5a9a7ea8e79832e4eaa279735ec3"
     },
     "US::s-p-global-us-services-composite-pmi::sp_us_services_pmi": {
       "available_from": "2016-11-25",
@@ -14468,7 +14423,7 @@
       "kind": "metric",
       "label": "S&P Global US Services PMI",
       "metric_key": "sp_us_services_pmi",
-      "path": "./calendar-history/series/e68c4ef2338a07af2e3c3c2514af412b688afe333a768c449be7e570b3b46033.json",
+      "path": "./calendar-history/series/f86126c5d8415f14168946c265f5bc1218b4189d0b27ff112d403d8b74e08801.json",
       "quality": {
         "actual_count": 287,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14491,7 +14446,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::s-p-global-us-services-composite-pmi::sp_us_services_pmi",
-      "sha256": "e68c4ef2338a07af2e3c3c2514af412b688afe333a768c449be7e570b3b46033"
+      "sha256": "f86126c5d8415f14168946c265f5bc1218b4189d0b27ff112d403d8b74e08801"
     },
     "US::state-job-openings-and-labor-turnover": {
       "available_from": "2026-01-28",
@@ -14719,7 +14674,7 @@
       "event_title": "U.S. International Trade in Goods and Services, August 2026",
       "kind": "event",
       "label": "U.S. International Trade in Goods and Services, August 2026",
-      "path": "./calendar-history/series/3ed74a862de6e8ffe2edbe6341b17d85e4ef0402d33944a88b9435b9111cf9a5.json",
+      "path": "./calendar-history/series/e7642b09489bad58a585d73bfd9b70471f08b937069eba98e45781c809777d82.json",
       "quality": {
         "actual_count": 2,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -14732,7 +14687,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::u-s-international-trade-in-goods-and-services",
-      "sha256": "3ed74a862de6e8ffe2edbe6341b17d85e4ef0402d33944a88b9435b9111cf9a5"
+      "sha256": "e7642b09489bad58a585d73bfd9b70471f08b937069eba98e45781c809777d82"
     },
     "US::university-of-michigan-consumer-sentiment": {
       "available_from": "2026-09-11",
@@ -14855,9 +14810,9 @@
     }
   },
   "series_completeness_status": "NOT_VALIDATED",
-  "series_count": 439,
-  "snapshot_id": "583b4767ebd637db5f0e640003eb90b59917627f643a84d686bd8ac995e79985",
-  "source_sha256": "583b4767ebd637db5f0e640003eb90b59917627f643a84d686bd8ac995e79985",
+  "series_count": 437,
+  "snapshot_id": "e2a212ae14f2c428f29ff1b5bc1f2c0717e33eb4c4c00b32956b4718e42be348",
+  "source_sha256": "e2a212ae14f2c428f29ff1b5bc1f2c0717e33eb4c4c00b32956b4718e42be348",
   "timezone": "Asia/Seoul",
   "window_days": 3650,
   "window_end": "2026-11-08",
