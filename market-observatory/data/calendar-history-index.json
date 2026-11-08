@@ -3,12 +3,12 @@
   "available_to": "2026-11-09",
   "backfill": {
     "canonical_rows_matched": 0,
-    "checked_kst": "2026-11-09T06:34:34+09:00",
+    "checked_kst": "2026-11-08T17:33:15+09:00",
     "coverage_scope": "FETCHED_WEEKS_NOT_PER_SERIES_COMPLETENESS",
     "errors": [],
     "failed_weeks": [],
-    "generic_rows_retained": 10,
-    "previous_available_from": "2016-11-11",
+    "generic_rows_retained": 0,
+    "previous_available_from": "2016-11-10",
     "recent_completed_weeks": [
       "2016-10-16",
       "2025-09-21",
@@ -71,9 +71,9 @@
       "2026-10-25",
       "2026-11-01"
     ],
-    "requested_window_start": "2016-11-11",
+    "requested_window_start": "2016-11-10",
     "resumable": true,
-    "rows_inserted": 10,
+    "rows_inserted": 0,
     "rows_merged": 0,
     "rows_parsed": 63,
     "source_count": 1,
@@ -86,7 +86,7 @@
   "contract": "ROLLING_3650D_EVENT_AND_METRIC_HISTORY_PRESERVE_V2",
   "coverage_scope": "ARCHIVE_BOUNDARY_AND_FETCH_ERRORS_ONLY",
   "coverage_status": "FULL",
-  "generated_kst": "2026-11-09T06:34:35+09:00",
+  "generated_kst": "2026-11-09T06:34:42+09:00",
   "missing_policy": "Historical consensus/actual is shown only when captured or verified; values are never synthesized.",
   "row_count": 37813,
   "schema": "JJOONI_CALENDAR_HISTORY_INDEX_V1",
@@ -13842,7 +13842,7 @@
       "event_title": "Personal Income and Outlays, August 2026",
       "kind": "event",
       "label": "Personal Income and Outlays, August 2026",
-      "path": "./calendar-history/series/f3459c1184ac24d54048974316c1be6b3fe8150ec762886b8e135fadcf696fc5.json",
+      "path": "./calendar-history/series/77a933e5ea071ce9c90651e297632ccb818d998ae8930eedde0caf5a8016d2ca.json",
       "quality": {
         "actual_count": 2,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13855,7 +13855,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::personal-income-and-outlays",
-      "sha256": "f3459c1184ac24d54048974316c1be6b3fe8150ec762886b8e135fadcf696fc5"
+      "sha256": "77a933e5ea071ce9c90651e297632ccb818d998ae8930eedde0caf5a8016d2ca"
     },
     "US::personal-income-and-outlays::core_pce_mom": {
       "available_from": "2016-11-30",
@@ -13867,7 +13867,7 @@
       "kind": "metric",
       "label": "Core PCE MoM",
       "metric_key": "core_pce_mom",
-      "path": "./calendar-history/series/187b0a4f1101745146cc4db23798b33f756601a21c67594ba4dd1ec909cd8dca.json",
+      "path": "./calendar-history/series/10689dbc7559314c30722acf0cb56d2a5f83401b1ab7f70f506035fdfda710b6.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13890,7 +13890,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::personal-income-and-outlays::core_pce_mom",
-      "sha256": "187b0a4f1101745146cc4db23798b33f756601a21c67594ba4dd1ec909cd8dca"
+      "sha256": "10689dbc7559314c30722acf0cb56d2a5f83401b1ab7f70f506035fdfda710b6"
     },
     "US::personal-income-and-outlays::pce_yoy": {
       "available_from": "2026-09-30",
@@ -13902,7 +13902,7 @@
       "kind": "metric",
       "label": "PCE Price Index YoY",
       "metric_key": "pce_yoy",
-      "path": "./calendar-history/series/713c02d54abecc62a172c0a303203fff51403c94a3cd670fdbc91d5e3819b855.json",
+      "path": "./calendar-history/series/4b854188f35533504611b1d570ff2b60eb068fa502d4a357a6c10d47a109950a.json",
       "quality": {
         "actual_count": 2,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13915,7 +13915,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::personal-income-and-outlays::pce_yoy",
-      "sha256": "713c02d54abecc62a172c0a303203fff51403c94a3cd670fdbc91d5e3819b855"
+      "sha256": "4b854188f35533504611b1d570ff2b60eb068fa502d4a357a6c10d47a109950a"
     },
     "US::personal-income-and-outlays::personal_income": {
       "available_from": "2016-11-30",
@@ -13927,7 +13927,7 @@
       "kind": "metric",
       "label": "Personal Income MoM",
       "metric_key": "personal_income",
-      "path": "./calendar-history/series/b119ab204acd8b658a161ca1adc1066e57c8ebff42e53812ba43b91d745db2b8.json",
+      "path": "./calendar-history/series/2362550afb046a608c8c9d00b74c8ad167e5b28f79f61fe8f5234e20481a1784.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13950,7 +13950,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::personal-income-and-outlays::personal_income",
-      "sha256": "b119ab204acd8b658a161ca1adc1066e57c8ebff42e53812ba43b91d745db2b8"
+      "sha256": "2362550afb046a608c8c9d00b74c8ad167e5b28f79f61fe8f5234e20481a1784"
     },
     "US::personal-income-and-outlays::personal_spending": {
       "available_from": "2016-11-30",
@@ -13962,7 +13962,7 @@
       "kind": "metric",
       "label": "Personal Spending MoM",
       "metric_key": "personal_spending",
-      "path": "./calendar-history/series/74e65afb50c0be50e7524c7c65ca0f741254882d05ff441a09d2d543a5568851.json",
+      "path": "./calendar-history/series/c02e3066aa37cfc0f318ccf089bc72bf559db150fdc6fff667ddfd908461177f.json",
       "quality": {
         "actual_count": 235,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -13985,7 +13985,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "US::personal-income-and-outlays::personal_spending",
-      "sha256": "74e65afb50c0be50e7524c7c65ca0f741254882d05ff441a09d2d543a5568851"
+      "sha256": "c02e3066aa37cfc0f318ccf089bc72bf559db150fdc6fff667ddfd908461177f"
     },
     "US::producer-price-index": {
       "available_from": "2026-01-14",
@@ -14854,8 +14854,8 @@
   },
   "series_completeness_status": "NOT_VALIDATED",
   "series_count": 439,
-  "snapshot_id": "02ffcbd48a2deb27023ece22a321aa7afd287f982ac600fa92d9f77904d763e4",
-  "source_sha256": "02ffcbd48a2deb27023ece22a321aa7afd287f982ac600fa92d9f77904d763e4",
+  "snapshot_id": "40b7885943aff1458f4b8168e05f3822f6a5bdff418f19d8d87f7172b9562a88",
+  "source_sha256": "40b7885943aff1458f4b8168e05f3822f6a5bdff418f19d8d87f7172b9562a88",
   "timezone": "Asia/Seoul",
   "window_days": 3650,
   "window_end": "2026-11-09",

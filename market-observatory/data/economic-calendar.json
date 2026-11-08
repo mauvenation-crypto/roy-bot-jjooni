@@ -1,9 +1,150 @@
 {
   "actual_backfill": {
-    "checked_kst": "2026-11-09T06:28:41+09:00",
-    "checks": [],
+    "checked_kst": "2026-11-09T06:34:34+09:00",
+    "checks": [
+      {
+        "adapter": "BEA_FRED",
+        "key": "core_pce_mom",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "pce_yoy",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "personal_income",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PI&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "personal_spending",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCE&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "core_pce_mom",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "pce_yoy",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "personal_income",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PI&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "personal_spending",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCE&cosd=2023-01-01"
+      }
+    ],
     "lookback_days": 14,
+    "quarantined": [
+      {
+        "copied_from": "avg_hourly_mom",
+        "datetime_kst": "2026-08-07T21:30+09:00",
+        "field": "consensus",
+        "key": "avg_hourly_yoy",
+        "title": "Employment Situation",
+        "value": "0.3%"
+      },
+      {
+        "copied_from": "avg_hourly_mom",
+        "datetime_kst": "2026-09-04T21:30+09:00",
+        "field": "consensus",
+        "key": "avg_hourly_yoy",
+        "title": "Employment Situation",
+        "value": "0.3%"
+      },
+      {
+        "copied_from": "core_pce_mom",
+        "datetime_kst": "2026-09-30T21:30+09:00",
+        "field": "actual",
+        "key": "pce_yoy",
+        "title": "Personal Income and Outlays, August 2026",
+        "value": "0.2%"
+      },
+      {
+        "copied_from": "personal_spending",
+        "datetime_kst": "2026-09-30T21:30+09:00",
+        "field": "previous",
+        "key": "pce_yoy",
+        "title": "Personal Income and Outlays, August 2026",
+        "value": "0.1%"
+      },
+      {
+        "copied_from": "avg_hourly_mom",
+        "datetime_kst": "2026-10-02T21:30+09:00",
+        "field": "consensus",
+        "key": "avg_hourly_yoy",
+        "title": "Employment Situation",
+        "value": "0.3%"
+      },
+      {
+        "copied_from": "us_import_price_mom",
+        "datetime_kst": "2026-10-16T21:30+09:00",
+        "field": "consensus",
+        "key": "us_export_price_mom",
+        "title": "U.S. Import and Export Price Indexes",
+        "value": "0.9%"
+      },
+      {
+        "copied_from": "us_import_price_mom",
+        "datetime_kst": "2026-10-16T21:30+09:00",
+        "field": "previous",
+        "key": "us_export_price_mom",
+        "title": "U.S. Import and Export Price Indexes",
+        "value": "0.5%"
+      },
+      {
+        "copied_from": "core_pce_mom",
+        "datetime_kst": "2026-10-29T21:30+09:00",
+        "field": "actual",
+        "key": "pce_yoy",
+        "title": "Personal Income and Outlays, September 2026",
+        "value": "0.3%"
+      },
+      {
+        "copied_from": "core_pce_mom",
+        "datetime_kst": "2026-10-29T21:30+09:00",
+        "field": "consensus",
+        "key": "pce_yoy",
+        "title": "Personal Income and Outlays, September 2026",
+        "value": "0.3%"
+      },
+      {
+        "copied_from": "core_pce_mom",
+        "datetime_kst": "2026-10-29T21:30+09:00",
+        "field": "previous",
+        "key": "pce_yoy",
+        "title": "Personal Income and Outlays, September 2026",
+        "value": "0.3%"
+      }
+    ],
     "unresolved_candidates": [
+      {
+        "adapter": "BEA_PIO",
+        "date": "2026-10-29",
+        "fallback_tiers": [
+          "SECONDARY",
+          "MARKET_FEED"
+        ],
+        "official_adapter_status": "REGISTERED",
+        "title": "Personal Income and Outlays, September 2026"
+      },
       {
         "adapter": null,
         "date": "2026-09-29",
@@ -13,13 +154,72 @@
         ],
         "official_adapter_status": "NOT_REGISTERED",
         "title": "2026년 9월 기업경기조사 및 ESI"
+      },
+      {
+        "adapter": "BEA_PIO",
+        "date": "2026-09-30",
+        "fallback_tiers": [
+          "SECONDARY",
+          "MARKET_FEED"
+        ],
+        "official_adapter_status": "REGISTERED",
+        "title": "Personal Income and Outlays, August 2026"
       }
     ]
   },
   "actual_freshness": {
-    "checked_kst": "2026-11-09T06:28:50+09:00",
+    "checked_kst": "2026-11-09T06:35:02+09:00",
     "grace_minutes": 45,
-    "official_checks": [],
+    "official_checks": [
+      {
+        "adapter": "BEA_FRED",
+        "key": "core_pce_mom",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "pce_yoy",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "personal_income",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PI&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "personal_spending",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCE&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "core_pce_mom",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "pce_yoy",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "personal_income",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PI&cosd=2023-01-01"
+      },
+      {
+        "adapter": "BEA_FRED",
+        "key": "personal_spending",
+        "result": "PARSED_REVISED_SERIES",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCE&cosd=2023-01-01"
+      }
+    ],
     "overdue_count": 0,
     "overdue_events": [],
     "pending_count": 0,
@@ -28,7 +228,7 @@
     "unresolved_expiry": null
   },
   "all_event_enrichment": {
-    "checked_kst": "2026-11-09T06:28:43+09:00",
+    "checked_kst": "2026-11-09T06:34:38+09:00",
     "eligible_events": 190,
     "field_updates": 0,
     "matched_events": 3,
@@ -39,7 +239,7 @@
   },
   "all_event_enrichment_contract": "ALL_CALENDAR_EVENTS_GENERIC_MARKET_MATCH_V1",
   "collection_health": {
-    "checked_kst": "2026-11-09T06:28:44+09:00",
+    "checked_kst": "2026-11-09T06:34:39+09:00",
     "contract": "PRIMARY_SOURCE_FAILURES_SEPARATE_FROM_OPTIONAL_OVERLAY_AVAILABILITY_V2",
     "failed_sources": [],
     "optional_source_warnings": [
@@ -626,7 +826,7 @@
       "official_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=f514048c945f4e19ba9688a0a3ecb105&fileSn=2",
       "previous": null,
       "reference_period": "",
-      "schedule_checked_kst": "2026-11-09T06:28:41+09:00",
+      "schedule_checked_kst": "2026-11-09T06:34:34+09:00",
       "schedule_source_url": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A",
       "source": "BOK_RATE official release",
       "source_tier": "OFFICIAL",
@@ -1574,7 +1774,7 @@
       "previous_value_source": "BOK_RATE official release",
       "reference_period": "",
       "release_date": "2026-02-26",
-      "schedule_checked_kst": "2026-11-09T06:28:41+09:00",
+      "schedule_checked_kst": "2026-11-09T06:34:34+09:00",
       "schedule_corrected_from": "2026-02-12T10:00+09:00",
       "schedule_source_url": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A",
       "source": "BOK_RATE official release",
@@ -2729,7 +2929,7 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_value_source": "BOK_RATE official release",
       "reference_period": "",
-      "schedule_checked_kst": "2026-11-09T06:28:41+09:00",
+      "schedule_checked_kst": "2026-11-09T06:34:34+09:00",
       "schedule_source_url": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A",
       "source": "BOK_RATE official release",
       "source_tier": "OFFICIAL",
@@ -3864,7 +4064,7 @@
       "previous_value_source": "BOK_RATE official release",
       "reference_period": "",
       "release_date": "2026-05-28",
-      "schedule_checked_kst": "2026-11-09T06:28:41+09:00",
+      "schedule_checked_kst": "2026-11-09T06:34:34+09:00",
       "schedule_corrected_from": "2026-05-14T10:00+09:00",
       "schedule_source_url": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A",
       "source": "BOK_RATE official release",
@@ -5109,7 +5309,7 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_value_source": "BOK_RATE official release",
       "reference_period": "",
-      "schedule_checked_kst": "2026-11-09T06:28:41+09:00",
+      "schedule_checked_kst": "2026-11-09T06:34:34+09:00",
       "schedule_source_url": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A",
       "source": "BOK_RATE official release",
       "source_tier": "OFFICIAL",
@@ -5738,6 +5938,14 @@
           "previous_observed_date": "2026-07-02",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "BLS_empsit official release",
+          "quarantined_values": {
+            "consensus": {
+              "copied_from": "avg_hourly_mom",
+              "quarantined_kst": "2026-11-09T06:34:34+09:00",
+              "reason": "CROSS_METRIC_COPY_BEFORE_IDENTITY_GUARD",
+              "value": "0.3%"
+            }
+          },
           "source": "BLS_empsit official release",
           "source_tier": "OFFICIAL",
           "source_url": "https://www.bls.gov/news.release/archives/empsit_08072026.htm",
@@ -6133,7 +6341,7 @@
       "previous_value_source": "BOK_RATE official release",
       "reference_period": "",
       "release_date": "2026-08-27",
-      "schedule_checked_kst": "2026-11-09T06:28:41+09:00",
+      "schedule_checked_kst": "2026-11-09T06:34:34+09:00",
       "schedule_corrected_from": "2026-08-13T10:00+09:00",
       "schedule_source_url": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A",
       "source": "BOK_RATE official release",
@@ -6639,6 +6847,14 @@
           "previous_observed_date": "2026-08-07",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "BLS_empsit official release",
+          "quarantined_values": {
+            "consensus": {
+              "copied_from": "avg_hourly_mom",
+              "quarantined_kst": "2026-11-09T06:34:34+09:00",
+              "reason": "CROSS_METRIC_COPY_BEFORE_IDENTITY_GUARD",
+              "value": "0.3%"
+            }
+          },
           "source": "BLS_empsit official release",
           "source_tier": "OFFICIAL",
           "source_url": "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
@@ -7800,25 +8016,27 @@
     },
     {
       "_verified_override": true,
-      "actual": "0.2%",
+      "actual": "0.3%",
+      "actual_backfill_checked_kst": "2026-11-09T06:34:34+09:00",
       "actual_due_kst": "2026-09-30T22:15:00+09:00",
       "actual_due_policy": "RELEASE_PLUS_GRACE",
-      "actual_source": "FairEconomy/ForexFactory",
+      "actual_expected": true,
+      "actual_source": "BEA via FRED",
       "actual_status": "RELEASED",
+      "actual_watch": true,
       "category": "GDP/PCE/무역",
-      "checked_kst": "2026-10-13T08:53:44+09:00",
+      "checked_kst": "2026-11-09T06:34:34+09:00",
       "consensus": "0.5%",
       "country": "US",
       "datetime_kst": "2026-09-30T21:30+09:00",
       "ff_match_score": 40,
       "history_ref": "US::personal-income-and-outlays",
       "importance": 3,
-      "market_data_source": "FairEconomy/ForexFactory",
+      "market_data_source": "BEA via FRED + FairEconomy/ForexFactory",
       "market_metrics": [
         {
-          "actual": "0.2%",
-          "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-10-13T08:53:44+09:00",
+          "actual": "0.3%",
+          "checked_kst": "2026-11-09T06:34:34+09:00",
           "consensus": "0.5%",
           "datetime_source": "2026-09-30T08:30:00-04:00",
           "event_title": "Core PCE Price Index m/m",
@@ -7829,33 +8047,53 @@
           "label": "Core PCE MoM",
           "market_value_source": "FairEconomy/ForexFactory",
           "market_value_status": "ACTUAL_AVAILABLE",
+          "official_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01",
           "previous": "0.3%",
-          "source": "FairEconomy/ForexFactory",
-          "source_tier": "MARKET_FEED",
-          "source_url": "https://www.forexfactory.com/calendar?week=sep27.2026",
-          "verification_status": "MARKET_REPORTED"
+          "reference_period": "2026-08",
+          "series_id": "PCEPILFE",
+          "source": "BEA via FRED",
+          "source_tier": "OFFICIAL",
+          "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01",
+          "value_vintage": "LATEST_REVISION",
+          "verification_status": "VERIFIED_OFFICIAL_REVISED"
         },
         {
-          "actual": "0.2%",
-          "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-10-13T08:53:44+09:00",
+          "actual": "3.4%",
+          "checked_kst": "2026-11-09T06:34:34+09:00",
           "consensus": "0.3%",
           "generic_match_score": 58.34,
           "history_ref": "US::personal-income-and-outlays::pce_yoy",
           "key": "pce_yoy",
           "label": "PCE Price Index YoY",
           "market_value_source": "FairEconomy/ForexFactory",
-          "market_value_status": "ACTUAL_AVAILABLE",
+          "market_value_status": "QUARANTINED",
+          "official_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI&cosd=2023-01-01",
           "previous": "0.1%",
-          "source": "FairEconomy/ForexFactory",
-          "source_tier": "MARKET_FEED",
-          "source_url": "https://www.forexfactory.com/calendar?week=sep27.2026",
-          "verification_status": "MARKET_REPORTED"
+          "quarantined_values": {
+            "actual": {
+              "copied_from": "core_pce_mom",
+              "quarantined_kst": "2026-11-09T06:34:34+09:00",
+              "reason": "CROSS_METRIC_COPY_BEFORE_IDENTITY_GUARD",
+              "value": "0.2%"
+            },
+            "previous": {
+              "copied_from": "personal_spending",
+              "quarantined_kst": "2026-11-09T06:34:34+09:00",
+              "reason": "CROSS_METRIC_COPY_BEFORE_IDENTITY_GUARD",
+              "value": "0.1%"
+            }
+          },
+          "reference_period": "2026-08",
+          "series_id": "PCEPI",
+          "source": "BEA via FRED",
+          "source_tier": "OFFICIAL",
+          "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI&cosd=2023-01-01",
+          "value_vintage": "LATEST_REVISION",
+          "verification_status": "VERIFIED_OFFICIAL_REVISED"
         },
         {
-          "actual": "0.2%",
-          "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-10-13T08:53:44+09:00",
+          "actual": "0.3%",
+          "checked_kst": "2026-11-09T06:34:34+09:00",
           "consensus": "0.5%",
           "datetime_source": "2026-09-30T08:30:00-04:00",
           "event_title": "Personal Income m/m",
@@ -7866,16 +8104,19 @@
           "label": "Personal Income MoM",
           "market_value_source": "FairEconomy/ForexFactory",
           "market_value_status": "ACTUAL_AVAILABLE",
+          "official_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PI&cosd=2023-01-01",
           "previous": "0.3%",
-          "source": "FairEconomy/ForexFactory",
-          "source_tier": "MARKET_FEED",
-          "source_url": "https://www.forexfactory.com/calendar?week=sep27.2026",
-          "verification_status": "MARKET_REPORTED"
+          "reference_period": "2026-08",
+          "series_id": "PI",
+          "source": "BEA via FRED",
+          "source_tier": "OFFICIAL",
+          "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PI&cosd=2023-01-01",
+          "value_vintage": "LATEST_REVISION",
+          "verification_status": "VERIFIED_OFFICIAL_REVISED"
         },
         {
           "actual": "0.9%",
-          "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-10-13T08:53:44+09:00",
+          "checked_kst": "2026-11-09T06:34:34+09:00",
           "consensus": "0.8%",
           "datetime_source": "2026-09-30T08:30:00-04:00",
           "event_title": "Personal Spending m/m",
@@ -7886,24 +8127,31 @@
           "label": "Personal Spending MoM",
           "market_value_source": "FairEconomy/ForexFactory",
           "market_value_status": "ACTUAL_AVAILABLE",
+          "official_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCE&cosd=2023-01-01",
           "previous": "0.1%",
-          "source": "FairEconomy/ForexFactory",
-          "source_tier": "MARKET_FEED",
-          "source_url": "https://www.forexfactory.com/calendar?week=sep27.2026",
-          "verification_status": "MARKET_REPORTED"
+          "reference_period": "2026-08",
+          "series_id": "PCE",
+          "source": "BEA via FRED",
+          "source_tier": "OFFICIAL",
+          "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCE&cosd=2023-01-01",
+          "value_vintage": "LATEST_REVISION",
+          "verification_status": "VERIFIED_OFFICIAL_REVISED"
         }
       ],
       "market_value_status": "ACTUAL_AVAILABLE",
+      "official_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01",
       "previous": "0.3%",
       "reference_period": "",
       "representative_metric_key": "core_pce_mom",
-      "source": "BEA",
-      "source_tier": "MARKET_FEED",
-      "source_url": "https://www.forexfactory.com/calendar?week=sep27.2026",
+      "series_id": "PCEPILFE",
+      "source": "BEA via FRED",
+      "source_tier": "OFFICIAL",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01",
       "surprise": "actual_vs_consensus",
       "te_forecast": null,
       "title": "Personal Income and Outlays, August 2026",
-      "verification_status": "MARKET_REPORTED"
+      "value_vintage": "LATEST_REVISION",
+      "verification_status": "VERIFIED_OFFICIAL_REVISED"
     },
     {
       "actual": null,
@@ -8182,6 +8430,14 @@
           "previous_observed_date": "2026-09-04",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "FairEconomy/ForexFactory",
+          "quarantined_values": {
+            "consensus": {
+              "copied_from": "avg_hourly_mom",
+              "quarantined_kst": "2026-11-09T06:34:34+09:00",
+              "reason": "CROSS_METRIC_COPY_BEFORE_IDENTITY_GUARD",
+              "value": "0.3%"
+            }
+          },
           "reference_period": "2026-09",
           "series_id": "CES0500000003",
           "source": "BLS_API official series (reconciled)",
@@ -8867,6 +9123,20 @@
           "market_value_status": "ACTUAL_AVAILABLE",
           "official_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/EIUIQ?startyear=2025&endyear=2026",
           "previous": "0.5%",
+          "quarantined_values": {
+            "consensus": {
+              "copied_from": "us_import_price_mom",
+              "quarantined_kst": "2026-11-09T06:34:34+09:00",
+              "reason": "CROSS_METRIC_COPY_BEFORE_IDENTITY_GUARD",
+              "value": "0.9%"
+            },
+            "previous": {
+              "copied_from": "us_import_price_mom",
+              "quarantined_kst": "2026-11-09T06:34:34+09:00",
+              "reason": "CROSS_METRIC_COPY_BEFORE_IDENTITY_GUARD",
+              "value": "0.5%"
+            }
+          },
           "reference_period": "2026-09",
           "series_id": "EIUIQ",
           "source": "BLS_API official series (reconciled)",
@@ -8944,7 +9214,7 @@
       "previous_value_source": "BOK_RATE official release",
       "reference_period": "",
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
-      "schedule_checked_kst": "2026-11-09T06:28:41+09:00",
+      "schedule_checked_kst": "2026-11-09T06:34:34+09:00",
       "schedule_source_url": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A",
       "source": "BOK_RATE official release",
       "source_tier": "OFFICIAL",
@@ -9253,24 +9523,26 @@
     {
       "_verified_override": true,
       "actual": "0.3%",
+      "actual_backfill_checked_kst": "2026-11-09T06:34:34+09:00",
       "actual_due_kst": "2026-10-29T22:15:00+09:00",
       "actual_due_policy": "RELEASE_PLUS_GRACE",
-      "actual_source": "FairEconomy/ForexFactory",
+      "actual_expected": true,
+      "actual_source": "BEA via FRED",
       "actual_status": "RELEASED",
+      "actual_watch": true,
       "category": "GDP/PCE/무역",
-      "checked_kst": "2026-11-01T22:42:29+09:00",
+      "checked_kst": "2026-11-09T06:34:34+09:00",
       "consensus": "0.3%",
       "country": "US",
       "datetime_kst": "2026-10-29T21:30+09:00",
       "ff_match_score": 40,
       "history_ref": "US::personal-income-and-outlays",
       "importance": 3,
-      "market_data_source": "ForexFactory historical calendar + FairEconomy/ForexFactory",
+      "market_data_source": "BEA via FRED + ForexFactory historical calendar + FairEconomy/ForexFactory",
       "market_metrics": [
         {
           "actual": "0.3%",
-          "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-11-01T22:42:29+09:00",
+          "checked_kst": "2026-11-09T06:34:34+09:00",
           "consensus": "0.3%",
           "datetime_source": "2026-10-29T08:30:00-04:00",
           "event_title": "Core PCE Price Index m/m",
@@ -9281,39 +9553,65 @@
           "label": "Core PCE MoM",
           "market_value_source": "FairEconomy/ForexFactory",
           "market_value_status": "ACTUAL_AVAILABLE",
-          "previous": "0.2%",
+          "official_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01",
+          "previous": "0.3%",
           "previous_observed_date": "2026-09-30",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "FairEconomy/ForexFactory",
-          "source": "FairEconomy/ForexFactory",
-          "source_tier": "MARKET_FEED",
-          "source_url": "https://www.forexfactory.com/calendar?week=oct25.2026",
-          "verification_status": "MARKET_REPORTED"
+          "reference_period": "2026-09",
+          "series_id": "PCEPILFE",
+          "source": "BEA via FRED",
+          "source_tier": "OFFICIAL",
+          "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01",
+          "value_vintage": "LATEST_REVISION",
+          "verification_status": "VERIFIED_OFFICIAL_REVISED"
         },
         {
-          "actual": "0.3%",
-          "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-10-29T23:30:31+09:00",
+          "actual": "3.6%",
+          "checked_kst": "2026-11-09T06:34:34+09:00",
           "consensus": "0.3%",
           "generic_match_score": 58.34,
           "history_ref": "US::personal-income-and-outlays::pce_yoy",
           "key": "pce_yoy",
           "label": "PCE Price Index YoY",
           "market_value_source": "FairEconomy/ForexFactory",
-          "market_value_status": "ACTUAL_AVAILABLE",
-          "previous": "0.2%",
+          "market_value_status": "QUARANTINED",
+          "official_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI&cosd=2023-01-01",
+          "previous": "3.4%",
           "previous_observed_date": "2026-09-30",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "FairEconomy/ForexFactory",
-          "source": "FairEconomy/ForexFactory",
-          "source_tier": "MARKET_FEED",
-          "source_url": "https://www.forexfactory.com/calendar?week=oct25.2026",
-          "verification_status": "MARKET_REPORTED"
+          "quarantined_values": {
+            "actual": {
+              "copied_from": "core_pce_mom",
+              "quarantined_kst": "2026-11-09T06:34:34+09:00",
+              "reason": "CROSS_METRIC_COPY_BEFORE_IDENTITY_GUARD",
+              "value": "0.3%"
+            },
+            "consensus": {
+              "copied_from": "core_pce_mom",
+              "quarantined_kst": "2026-11-09T06:34:34+09:00",
+              "reason": "CROSS_METRIC_COPY_BEFORE_IDENTITY_GUARD",
+              "value": "0.3%"
+            },
+            "previous": {
+              "copied_from": "core_pce_mom",
+              "quarantined_kst": "2026-11-09T06:34:34+09:00",
+              "reason": "CROSS_METRIC_COPY_BEFORE_IDENTITY_GUARD",
+              "value": "0.3%"
+            }
+          },
+          "reference_period": "2026-09",
+          "series_id": "PCEPI",
+          "source": "BEA via FRED",
+          "source_tier": "OFFICIAL",
+          "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI&cosd=2023-01-01",
+          "value_vintage": "LATEST_REVISION",
+          "verification_status": "VERIFIED_OFFICIAL_REVISED"
         },
         {
           "actual": "0.2%",
-          "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-11-01T22:42:29+09:00",
+          "checked_kst": "2026-11-09T06:34:34+09:00",
           "consensus": "0.3%",
           "datetime_source": "2026-10-29T08:30:00-04:00",
           "event_title": "Personal Income m/m",
@@ -9324,19 +9622,22 @@
           "label": "Personal Income MoM",
           "market_value_source": "FairEconomy/ForexFactory",
           "market_value_status": "ACTUAL_AVAILABLE",
-          "previous": "0.2%",
+          "official_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PI&cosd=2023-01-01",
+          "previous": "0.3%",
           "previous_observed_date": "2026-09-30",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "FairEconomy/ForexFactory",
-          "source": "FairEconomy/ForexFactory",
-          "source_tier": "MARKET_FEED",
-          "source_url": "https://www.forexfactory.com/calendar?week=oct25.2026",
-          "verification_status": "MARKET_REPORTED"
+          "reference_period": "2026-09",
+          "series_id": "PI",
+          "source": "BEA via FRED",
+          "source_tier": "OFFICIAL",
+          "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PI&cosd=2023-01-01",
+          "value_vintage": "LATEST_REVISION",
+          "verification_status": "VERIFIED_OFFICIAL_REVISED"
         },
         {
           "actual": "0.5%",
-          "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-11-01T22:42:29+09:00",
+          "checked_kst": "2026-11-09T06:34:34+09:00",
           "consensus": "0.6%",
           "datetime_source": "2026-10-29T08:30:00-04:00",
           "event_title": "Personal Spending m/m",
@@ -9347,31 +9648,38 @@
           "label": "Personal Spending MoM",
           "market_value_source": "FairEconomy/ForexFactory",
           "market_value_status": "ACTUAL_AVAILABLE",
+          "official_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCE&cosd=2023-01-01",
           "previous": "0.9%",
           "previous_observed_date": "2026-10-01",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "ForexFactory historical calendar",
-          "source": "FairEconomy/ForexFactory",
-          "source_tier": "MARKET_FEED",
-          "source_url": "https://www.forexfactory.com/calendar?week=oct25.2026",
-          "verification_status": "MARKET_REPORTED"
+          "reference_period": "2026-09",
+          "series_id": "PCE",
+          "source": "BEA via FRED",
+          "source_tier": "OFFICIAL",
+          "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCE&cosd=2023-01-01",
+          "value_vintage": "LATEST_REVISION",
+          "verification_status": "VERIFIED_OFFICIAL_REVISED"
         }
       ],
       "market_value_status": "ACTUAL_AVAILABLE",
-      "previous": "0.2%",
+      "official_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01",
+      "previous": "0.3%",
       "previous_observed_date": "2026-09-30",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_value_source": "FairEconomy/ForexFactory",
       "reference_period": "",
       "representative_metric_key": "core_pce_mom",
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
-      "source": "BEA",
-      "source_tier": "MARKET_FEED",
-      "source_url": "https://www.forexfactory.com/calendar?week=oct25.2026",
+      "series_id": "PCEPILFE",
+      "source": "BEA via FRED",
+      "source_tier": "OFFICIAL",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2023-01-01",
       "surprise": "actual_vs_consensus",
       "te_forecast": null,
       "title": "Personal Income and Outlays, September 2026",
-      "verification_status": "MARKET_REPORTED"
+      "value_vintage": "LATEST_REVISION",
+      "verification_status": "VERIFIED_OFFICIAL_REVISED"
     },
     {
       "_verified_override": true,
@@ -10047,7 +10355,7 @@
       "actual_status": "SCHEDULED",
       "actual_watch": true,
       "category": "물가/고용",
-      "checked_kst": "2026-11-09T06:28:41+09:00",
+      "checked_kst": "2026-11-09T06:34:34+09:00",
       "consensus": null,
       "country": "US",
       "datetime_kst": "2026-11-10T22:30+09:00",
@@ -10073,7 +10381,7 @@
         {
           "actual": null,
           "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-11-09T06:28:43+09:00",
+          "checked_kst": "2026-11-09T06:34:38+09:00",
           "consensus": "0.3%",
           "datetime_source": "2026-11-10T08:30:00-05:00",
           "event_title": "CPI m/m",
@@ -10110,7 +10418,7 @@
         {
           "actual": null,
           "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-11-09T06:28:43+09:00",
+          "checked_kst": "2026-11-09T06:34:38+09:00",
           "consensus": "0.2%",
           "datetime_source": "2026-11-10T08:30:00-05:00",
           "event_title": "Core CPI m/m",
@@ -10197,7 +10505,7 @@
       "actual_status": "SCHEDULED",
       "actual_watch": true,
       "category": "고용",
-      "checked_kst": "2026-11-09T06:28:41+09:00",
+      "checked_kst": "2026-11-09T06:34:34+09:00",
       "consensus": "194K",
       "country": "US",
       "datetime_kst": "2026-11-12T22:30+09:00",
@@ -10209,7 +10517,7 @@
         {
           "actual": null,
           "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-11-09T06:28:43+09:00",
+          "checked_kst": "2026-11-09T06:34:38+09:00",
           "consensus": "194K",
           "datetime_source": "2026-11-12T08:30:00-05:00",
           "event_title": "Unemployment Claims",
@@ -10254,7 +10562,7 @@
       "actual_status": "SCHEDULED",
       "actual_watch": true,
       "category": "물가/고용",
-      "checked_kst": "2026-11-09T06:28:41+09:00",
+      "checked_kst": "2026-11-09T06:34:34+09:00",
       "consensus": "0.4%",
       "country": "US",
       "datetime_kst": "2026-11-13T22:30+09:00",
@@ -10266,7 +10574,7 @@
         {
           "actual": null,
           "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-11-09T06:28:43+09:00",
+          "checked_kst": "2026-11-09T06:34:38+09:00",
           "consensus": "0.4%",
           "datetime_source": "2026-11-13T08:30:00-05:00",
           "event_title": "PPI m/m",
@@ -10303,7 +10611,7 @@
         {
           "actual": null,
           "actual_source": "FairEconomy/ForexFactory",
-          "checked_kst": "2026-11-09T06:28:43+09:00",
+          "checked_kst": "2026-11-09T06:34:38+09:00",
           "consensus": "0.3%",
           "datetime_source": "2026-11-13T08:30:00-05:00",
           "event_title": "Core PPI m/m",
@@ -10488,7 +10796,9 @@
       "actual": null,
       "actual_due_kst": "2026-11-25T23:15:00+09:00",
       "actual_due_policy": "RELEASE_PLUS_GRACE",
+      "actual_expected": true,
       "actual_status": "SCHEDULED",
+      "actual_watch": true,
       "category": "GDP/PCE/무역",
       "consensus": null,
       "country": "US",
@@ -10519,7 +10829,7 @@
           "label": "PCE Price Index YoY",
           "market_value_source": "FairEconomy/ForexFactory",
           "market_value_status": "PREVIOUS_ONLY",
-          "previous": "0.3%",
+          "previous": "3.6%",
           "previous_observed_date": "2026-10-29",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "FairEconomy/ForexFactory",
@@ -10644,7 +10954,7 @@
       "reference_period": "",
       "release_date": "2026-11-26",
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
-      "schedule_checked_kst": "2026-11-09T06:28:41+09:00",
+      "schedule_checked_kst": "2026-11-09T06:34:34+09:00",
       "schedule_corrected_from": "2026-11-12T10:00+09:00",
       "schedule_source_url": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A",
       "source": "BOK",
@@ -11514,7 +11824,9 @@
       "actual": null,
       "actual_due_kst": "2026-12-23T23:15:00+09:00",
       "actual_due_policy": "RELEASE_PLUS_GRACE",
+      "actual_expected": true,
       "actual_status": "SCHEDULED",
+      "actual_watch": true,
       "category": "GDP/PCE/무역",
       "consensus": null,
       "country": "US",
@@ -11545,7 +11857,7 @@
           "label": "PCE Price Index YoY",
           "market_value_source": "FairEconomy/ForexFactory",
           "market_value_status": "PREVIOUS_ONLY",
-          "previous": "0.3%",
+          "previous": "3.6%",
           "previous_observed_date": "2026-10-29",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "FairEconomy/ForexFactory",
@@ -12901,7 +13213,7 @@
       "title": "U.S. Initial Jobless Claims"
     }
   ],
-  "generated_kst": "2026-11-09T06:28:45+09:00",
+  "generated_kst": "2026-11-09T06:34:39+09:00",
   "importance_contract": "3=market_moving,2=major,1=reference",
   "key_event_contract": "VERIFIED_KST_POLICY_AND_SENTIMENT_CALENDAR_V1",
   "key_event_seeded_kst": "2026-11-09T06:28:41+09:00",
@@ -12909,15 +13221,15 @@
     "dynamic_metric_matches": 1,
     "faireconomy_rows": 101,
     "fedwatch_forecast_applied": true,
-    "refreshed_kst": "2026-11-09T06:28:44+09:00",
+    "refreshed_kst": "2026-11-09T06:34:39+09:00",
     "representative_values_synced": 1,
     "verified_overrides_applied": 131
   },
   "note": "All displayed times are KST. Official schedules may change; builder refreshes automatically.",
   "official_actual_contract": "OFFICIAL_REGISTRY_BACKFILL_V2",
-  "official_actual_updated_kst": "2026-11-09T06:28:45+09:00",
+  "official_actual_updated_kst": "2026-11-09T06:34:39+09:00",
   "official_macro_calendar_bridge": {
-    "checked_kst": "2026-11-09T06:28:44+09:00",
+    "checked_kst": "2026-11-09T06:34:39+09:00",
     "checks": [
       {
         "metric": "KR_CPI",
@@ -13001,7 +13313,7 @@
     }
   },
   "recent_historical_recovery": {
-    "checked_kst": "2026-11-09T06:28:44+09:00",
+    "checked_kst": "2026-11-09T06:34:39+09:00",
     "contract": "MARKET_FEED_RECOVERY_NEVER_OVERRIDES_HIGHER_TIER_ACTUALS",
     "fetch_errors": [],
     "fetched_weeks": [],
@@ -13018,11 +13330,11 @@
   },
   "representative_value_contract": "PRIMARY_NON_PROBABILITY_METRIC_AFTER_MERGE_V1",
   "representative_value_sync": {
-    "events_changed": 9,
+    "events_changed": 8,
     "probability_overlay_events_guarded": 2
   },
   "retention_contract": "PERSIST_RELEASED_VALUES_ACROSS_ROLLING_FEEDS_V1",
-  "retention_kst": "2026-11-09T06:28:45+09:00",
+  "retention_kst": "2026-11-09T06:34:39+09:00",
   "retention_note": "Previously captured previous/consensus/actual values are carried forward when short-horizon market feeds roll off; official observations take precedence over lower-tier updates.",
   "retention_preserved": {
     "event_fields": 0,
