@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-08T18:28:44+09:00",
+  "generated_kst": "2026-11-08T18:36:50+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
@@ -28,7 +28,7 @@
     "market": {
       "label": "Market SSOT",
       "state": "LIVE",
-      "generated_kst": "2026-11-08T17:46:02+09:00",
+      "generated_kst": "2026-11-08T18:36:41+09:00",
       "as_of": "2026-11-06",
       "detail": "미국 핵심 완료세션 NDX/SPX/VIX",
       "source": "observatory.json",
@@ -82,7 +82,7 @@
     "us_rates": {
       "label": "US Rates",
       "state": "LIVE",
-      "generated_kst": "2026-11-08T17:46:02+09:00",
+      "generated_kst": "2026-11-08T18:36:41+09:00",
       "as_of": "2026-11-06",
       "detail": "US3M 2026-11-06 · US2Y 2026-11-06 · US5Y_OFFICIAL 2026-11-06 · US10Y_OFFICIAL 2026-11-06 · US30Y_OFFICIAL 2026-11-06 · US_2S10S 2026-11-06",
       "source": "U.S. Treasury official",
@@ -91,7 +91,7 @@
     "kr_rates": {
       "label": "KR Rates",
       "state": "LIVE",
-      "generated_kst": "2026-11-08T17:46:01+09:00",
+      "generated_kst": "2026-11-08T18:36:41+09:00",
       "as_of": "2026-11-06",
       "detail": "KR3Y 2026-11-06 · KR5Y 2026-11-06 · KR10Y 2026-11-06 · KR20Y 2026-11-06 · KR30Y 2026-11-06 · KR_3S10S 2026-11-06",
       "source": "BOK ECOS",
@@ -109,19 +109,19 @@
     "crypto": {
       "label": "Crypto",
       "state": "LIVE",
-      "generated_kst": "2026-11-08T18:28:42+09:00",
+      "generated_kst": "2026-11-08T18:36:45+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=37s · ETHUSD age=19s",
+      "detail": "BTCUSD age=71s · ETHUSD age=80s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
         "BTCUSD": {
           "status": "LIVE",
-          "quote_as_of_kst": "2026-11-08T18:28:07+09:00"
+          "quote_as_of_kst": "2026-11-08T18:35:39+09:00"
         },
         "ETHUSD": {
           "status": "LIVE",
-          "quote_as_of_kst": "2026-11-08T18:28:25+09:00"
+          "quote_as_of_kst": "2026-11-08T18:35:30+09:00"
         }
       },
       "max_age_seconds": 3600
@@ -129,7 +129,7 @@
     "pulse": {
       "label": "Daily Pulse",
       "state": "LIVE",
-      "generated_kst": "2026-11-08T17:46:34+09:00",
+      "generated_kst": "2026-11-08T18:36:49+09:00",
       "as_of": "2026-11-06",
       "detail": "snapshot=FINAL · Observatory session=2026-11-06",
       "source": "daily-market-pulse.json",
@@ -156,7 +156,7 @@
     "tripod": {
       "label": "TRI-POD",
       "state": "LIVE",
-      "generated_kst": "2026-11-08T17:46:34+09:00",
+      "generated_kst": "2026-11-08T18:36:49+09:00",
       "as_of": "2026-11-06",
       "detail": "상승 · QQQ 50% + QLD 50%",
       "source": "public-market-daily.json + observatory.json",
@@ -206,7 +206,7 @@
     "audit": {
       "label": "Full Data Audit",
       "state": "PASS",
-      "generated_kst": "2026-11-08T18:28:44+09:00",
+      "generated_kst": "2026-11-08T18:36:50+09:00",
       "as_of": "2026-11-06",
       "detail": "critical=0 · warnings=0",
       "source": "data-audit.json",
