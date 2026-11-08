@@ -56,9 +56,9 @@ def _count_field(obj,count_key,list_key):
 def calendar_probe_health(checks: list[dict], events: list[dict]) -> dict:
     """Keep BLS transport failures visible without hiding a verified official fallback.
 
-    Only a same-release, same-value ECIALLCIV observation with official
-    provenance can resolve a BLS ECI transport failure. Other releases and
-    failed fallback attempts remain blocked.
+    An ECI table-matched FRED fallback or a *fully verified* BLS quarterly
+    productivity API fallback may resolve the corresponding release alert.
+    Unverified market quotes never clear official transport warnings.
     """
     failures = [c for c in checks if
                 str(c.get('result') or '').startswith('HTTP_') or
@@ -66,10 +66,52 @@ def calendar_probe_health(checks: list[dict], events: list[dict]) -> dict:
                 str(c.get('result') or '').endswith('Error')]
 
     def release_id(url):
-        match = re.search(r'eci_(\d{8})\.(?:htm|pdf|txt)(?:$|\?)', str(url or ''), re.I)
+        match = re.search(r'(?:eci|prod2)_(\d{8})\.(?:htm|pdf|txt)(?:$|\?)', str(url or ''), re.I)
         return match.group(1) if match else None
 
     verified = set()
+    # Quarterly Productivity and Costs: only suppress this release's transport
+    # warning when BOTH public BLS API series are successfully retrieved and
+    # persisted as official revised observations for the same exact quarter.
+    # Do not count a market feed, a lone series, or a stale different release.
+    expected_prod2 = {'productivity': 'PRS85006092',
+                      'unit_labor': 'PRS85006112'}
+    for event in events:
+        if not isinstance(event, dict) or event.get('title') != 'Productivity and Costs':
+            continue
+        if event.get('source_tier') != 'OFFICIAL':
+            continue
+        event_kst = event.get('datetime_kst')
+        try:
+            event_dt = datetime.fromisoformat(str(event_kst))
+            if event_dt.tzinfo is None:
+                continue
+            release = event_dt.astimezone(ZoneInfo('America/New_York')).strftime('%m%d%Y')
+        except ValueError:
+            continue
+        rows = {m.get('key'): m for m in event.get('market_metrics') or []
+                if isinstance(m, dict)}
+        period = rows.get('productivity', {}).get('reference_period')
+        if not re.fullmatch(r'20\d{2}-Q[1-4]', str(period or '')):
+            continue
+        if not all(
+            rows.get(key, {}).get('actual') not in (None, '', '—') and
+            rows[key].get('source_tier') == 'OFFICIAL' and
+            rows[key].get('verification_status') == 'VERIFIED_OFFICIAL_REVISED' and
+            rows[key].get('value_vintage') == 'LATEST_REVISION' and
+            rows[key].get('series_id') == series_id and
+            rows[key].get('reference_period') == period and
+            any(c.get('adapter') == 'BLS_API' and
+                c.get('result') == 'PARSED_REVISED_SERIES' and
+                c.get('title') == event['title'] and
+                c.get('event_kst') == event_kst and
+                c.get('reference_period') == period and
+                c.get('key') == key
+                for c in checks)
+            for key, series_id in expected_prod2.items()
+        ):
+            continue
+        verified.add((event['title'], release))
     for check in checks:
         if check.get('adapter') != 'ECI_FRED' or check.get('result') != 'VERIFIED_BLS_TABLE1_FRED_MATCH':
             continue
