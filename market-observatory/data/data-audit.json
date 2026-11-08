@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-08T14:15:32+09:00",
+  "generated_kst": "2026-11-08T14:19:55+09:00",
   "overall": "PASS",
   "critical_count": 0,
   "warning_count": 0,
@@ -68,7 +68,7 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-08T14:15:31+09:00",
+      "generated_kst": "2026-11-08T14:19:52+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
@@ -432,6 +432,14 @@
           "latest_value": 2.806,
           "latest_matches": true
         },
+        "JP20Y": {
+          "count": 9859,
+          "last_date": "2026-11-05",
+          "last_value": 3.64,
+          "group": "jp_rates",
+          "latest_value": 3.64,
+          "latest_matches": true
+        },
         "JP30Y": {
           "count": 6656,
           "last_date": "2026-11-05",
@@ -518,14 +526,14 @@
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T13:59:48+09:00",
-      "current_quote_age_seconds": 944,
+      "current_quote_age_seconds": 1207,
       "captured_quote_age_seconds": 42
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T13:59:36+09:00",
-      "current_quote_age_seconds": 956,
+      "current_quote_age_seconds": 1219,
       "captured_quote_age_seconds": 54
     }
   },
