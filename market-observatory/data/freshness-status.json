@@ -1,14 +1,17 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-09T04:39:17+09:00",
+  "generated_kst": "2026-11-09T05:01:51+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
     "watchdog_scope": "US_CLOSE_RECOVERY_ONLY"
   },
-  "overall": "LIVE",
+  "overall": "LIVE_WITH_WARNINGS",
   "critical_bad": [],
-  "warnings": [],
+  "warnings": [
+    "kr_rates",
+    "audit"
+  ],
   "watchdog_required": false,
   "session_alignment": {
     "expected_session": "2026-11-06",
@@ -28,7 +31,7 @@
     "market": {
       "label": "Market SSOT",
       "state": "LIVE",
-      "generated_kst": "2026-11-09T04:10:25+09:00",
+      "generated_kst": "2026-11-09T05:01:41+09:00",
       "as_of": "2026-11-06",
       "detail": "미국 핵심 완료세션 NDX/SPX/VIX",
       "source": "observatory.json",
@@ -82,7 +85,7 @@
     "us_rates": {
       "label": "US Rates",
       "state": "LIVE",
-      "generated_kst": "2026-11-09T04:10:25+09:00",
+      "generated_kst": "2026-11-09T05:01:41+09:00",
       "as_of": "2026-11-06",
       "detail": "US3M 2026-11-06 · US2Y 2026-11-06 · US5Y_OFFICIAL 2026-11-06 · US10Y_OFFICIAL 2026-11-06 · US30Y_OFFICIAL 2026-11-06 · US_2S10S 2026-11-06",
       "source": "U.S. Treasury official",
@@ -90,10 +93,10 @@
     },
     "kr_rates": {
       "label": "KR Rates",
-      "state": "LIVE",
-      "generated_kst": "2026-11-09T04:10:24+09:00",
+      "state": "STALE",
+      "generated_kst": "2026-11-09T05:01:41+09:00",
       "as_of": "2026-11-06",
-      "detail": "KR3Y 2026-11-06 · KR5Y 2026-11-06 · KR10Y 2026-11-06 · KR20Y 2026-11-06 · KR30Y 2026-11-06 · KR_3S10S 2026-11-06",
+      "detail": "KR3Y 2026-11-06 · KR5Y 2026-11-06 · KR10Y 2026-11-06 · KR20Y 2026-11-06 · KR30Y 2026-11-06 · KR_3S10S 2026-11-06 · 수집 실패: KR3Y (RuntimeError:ECOS_TRANSPORT_FAILED_AFTER_3_ATTEMPTS;ECOS_CURL_FALLBACK_Timeout;ECOS_NETWORK_TCP_OR_TLS_TIMEOUT), KR5Y (RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN), KR10Y (RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN), KR20Y (RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN), KR30Y (RuntimeError:ECOS_TRANSPORT_CIRCUIT_OPEN_THIS_RUN)",
       "source": "BOK ECOS",
       "critical": false
     },
@@ -109,19 +112,19 @@
     "crypto": {
       "label": "Crypto",
       "state": "LIVE",
-      "generated_kst": "2026-11-09T04:39:15+09:00",
+      "generated_kst": "2026-11-09T05:01:46+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=22s · ETHUSD age=26s",
+      "detail": "BTCUSD age=28s · ETHUSD age=13s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
         "BTCUSD": {
           "status": "LIVE",
-          "quote_as_of_kst": "2026-11-09T04:38:55+09:00"
+          "quote_as_of_kst": "2026-11-09T05:01:23+09:00"
         },
         "ETHUSD": {
           "status": "LIVE",
-          "quote_as_of_kst": "2026-11-09T04:38:51+09:00"
+          "quote_as_of_kst": "2026-11-09T05:01:38+09:00"
         }
       },
       "max_age_seconds": 3600
@@ -129,7 +132,7 @@
     "pulse": {
       "label": "Daily Pulse",
       "state": "LIVE",
-      "generated_kst": "2026-11-09T04:10:34+09:00",
+      "generated_kst": "2026-11-09T05:01:51+09:00",
       "as_of": "2026-11-06",
       "detail": "snapshot=FINAL · Observatory session=2026-11-06",
       "source": "daily-market-pulse.json",
@@ -156,7 +159,7 @@
     "tripod": {
       "label": "TRI-POD",
       "state": "LIVE",
-      "generated_kst": "2026-11-09T04:10:34+09:00",
+      "generated_kst": "2026-11-09T05:01:51+09:00",
       "as_of": "2026-11-06",
       "detail": "상승 · QQQ 50% + QLD 50%",
       "source": "public-market-daily.json + observatory.json",
@@ -205,10 +208,10 @@
     },
     "audit": {
       "label": "Full Data Audit",
-      "state": "PASS",
-      "generated_kst": "2026-11-09T04:39:17+09:00",
+      "state": "WARN",
+      "generated_kst": "2026-11-09T05:01:51+09:00",
       "as_of": "2026-11-06",
-      "detail": "critical=0 · warnings=0",
+      "detail": "critical=0 · warnings=1",
       "source": "data-audit.json",
       "critical": true
     },
