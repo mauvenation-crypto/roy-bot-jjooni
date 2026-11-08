@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-09T06:35:12+09:00",
+  "generated_kst": "2026-11-09T06:37:28+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
@@ -111,7 +111,7 @@
       "state": "LIVE",
       "generated_kst": "2026-11-09T06:22:25+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=798s · ETHUSD age=798s",
+      "detail": "BTCUSD age=933s · ETHUSD age=933s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
@@ -183,9 +183,9 @@
     "calendar": {
       "label": "Economic Calendar",
       "state": "LIVE",
-      "generated_kst": "2026-11-09T06:34:39+09:00",
-      "as_of": "2026-11-09T06:34:39+09:00",
-      "detail": "events=190 · overdue=0 · pending=0 · source_failures=0 · official_probe_blocked=0 · 기존 공식 검증 98건 · 이번 원천 조회 PASS",
+      "generated_kst": "2026-11-09T06:36:26+09:00",
+      "as_of": "2026-11-09T06:36:26+09:00",
+      "detail": "events=190 · overdue=0 · pending=0 · source_failures=0 · official_probe_blocked=0 · 기존 공식 검증 98건 · 이번 원천 조회 NOT_CHECKED",
       "source": "economic-calendar.json",
       "critical": false,
       "official_probe_scope": "LATEST_COLLECTION_ATTEMPTS_ONLY",
@@ -196,7 +196,7 @@
         "note": "기존 공식 검증 이력 · 이번 실행의 원천 접속 성공을 뜻하지 않습니다."
       },
       "actual_completeness_state": "LIVE",
-      "official_probe_state": "PASS",
+      "official_probe_state": "NOT_CHECKED",
       "official_probe_failure_count": 0,
       "official_probe_unresolved_failure_count": 0,
       "official_probe_blocked_releases": [],
@@ -206,7 +206,7 @@
     "audit": {
       "label": "Full Data Audit",
       "state": "PASS",
-      "generated_kst": "2026-11-09T06:35:12+09:00",
+      "generated_kst": "2026-11-09T06:37:27+09:00",
       "as_of": "2026-11-06",
       "detail": "critical=0 · warnings=0",
       "source": "data-audit.json",
