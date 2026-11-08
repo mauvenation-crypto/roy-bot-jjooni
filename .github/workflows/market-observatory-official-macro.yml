@@ -37,7 +37,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # Playwright Chromium unsupported on ubuntu-latest (26.04)
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -185,7 +185,7 @@ jobs:
   production-qa:
     if: github.event_name != 'schedule'
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # Playwright Chromium unsupported on ubuntu-latest (26.04)
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4

@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   public-responsive:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # Playwright Chromium unsupported on ubuntu-latest (26.04)
     # Public Pages publication can lag the source push by several minutes.
     timeout-minutes: 12
     steps:

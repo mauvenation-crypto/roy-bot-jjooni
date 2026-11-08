@@ -93,7 +93,9 @@ jobs:
             tools/refresh_official_central_bank_actuals.py
           python tools/refresh_calendar_pipeline.py
           python - <<'PY'
-          import json
+          import json, sys
+          sys.path.insert(0, 'tools')
+          from calendar_market_events import representative_metric
           c=json.load(open('market-observatory/data/economic-calendar.json'))
           h=json.load(open('market-observatory/data/economic-calendar-history.json'))
           assert str(c.get('enrichment_contract','')).startswith('OFFICIAL_SCHEDULE_PLUS_MARKET_CONSENSUS_ACTUAL')
@@ -115,8 +117,8 @@ jobs:
               for m in metrics:
                   if m.get('metric_type')!='market_probability_snapshot':
                       assert m.get('history_ref'),(e.get('title'),m)
-              primary=next((m for m in metrics if m.get('metric_type')!='market_probability_snapshot' and
-                            any(str(m.get(k) or '').strip() not in ('','-','—','None','null','N/A') for k in ['previous','consensus','actual'])),None)
+              # Same representative rule as sync_calendar_representative_values.
+              primary=representative_metric(e)
               if primary:
                   for k in ['previous','consensus','actual']:
                       pv=str(primary.get(k) or '').strip()
