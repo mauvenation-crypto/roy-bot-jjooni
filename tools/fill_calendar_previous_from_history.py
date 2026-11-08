@@ -38,7 +38,10 @@ def refreshable(holder,row):
     """
     if clean(holder.get('previous')) is None:return True
     if holder.get('previous_source')!=HISTORY_SOURCE or not row:return False
-    return str(row.get('date') or '')[:10]>str(holder.get('previous_observed_date') or '')[:10]
+    newer=str(row.get('date') or '')[:10]>str(holder.get('previous_observed_date') or '')[:10]
+    # Same release, corrected value (e.g. market feed replaced by official BLS).
+    corrected=str(row.get('date') or '')[:10]==str(holder.get('previous_observed_date') or '')[:10] and clean(row.get('actual'))!=clean(holder.get('previous'))
+    return newer or corrected
 
 
 def history_source(row):

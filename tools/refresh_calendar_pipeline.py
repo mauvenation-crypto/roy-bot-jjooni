@@ -69,6 +69,10 @@ def refresh(previous=None, seed=False):
         run('tools/sync_calendar_representative_values.py')
         run('tools/refresh_official_central_bank_actuals.py', '--health-only')
         run('tools/archive_calendar_actuals.py')
+        # Market-feed values on past BLS releases are replaced by the official
+        # BLS API series (anchored reference month) before they become the
+        # "previous" of the next release.
+        run('tools/reconcile_bls_official_history.py')
         # Preserve/extend the 10-year SSOT from all observations already captured.
         # Deep historical source crawling is handled by the dedicated backfill job.
         run('tools/build_calendar_history.py')

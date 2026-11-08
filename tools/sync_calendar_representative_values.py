@@ -11,7 +11,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from calendar_market_events import sync_representative_values
+from calendar_market_events import representative_metric, sync_representative_values
 
 ROOT = Path(__file__).resolve().parents[1]
 CAL = ROOT / 'market-observatory' / 'data' / 'economic-calendar.json'
@@ -25,10 +25,7 @@ def clean(v):
 
 
 def primary_metric(event):
-    return next((m for m in (event.get('market_metrics') or []) if
-                 isinstance(m, dict) and
-                 m.get('metric_type') != 'market_probability_snapshot' and
-                 any(clean(m.get(k)) is not None for k in ('previous', 'consensus', 'actual'))), None)
+    return representative_metric(event)
 
 
 def main():

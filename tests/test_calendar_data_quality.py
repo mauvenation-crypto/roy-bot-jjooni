@@ -5,6 +5,9 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
+from calendar_market_events import representative_metric  # noqa: E402
 
 ROOT=Path(__file__).resolve().parents[1]
 CAL=ROOT/'market-observatory'/'data'/'economic-calendar.json'
@@ -34,7 +37,9 @@ for e in events:
                               m.get('metric_type')=='market_probability_snapshot' and clean(m.get('actual')))
     parts=[x.strip() for x in str(e.get('market_data_source') or '').split(' + ') if x.strip()]
     if len(parts)!=len(set(parts)):duplicate_sources.append(e.get('title'))
-    primary=next((m for m in official if any(clean(m.get(k)) for k in ['previous','consensus','actual'])),None)
+    # Same rule as the sync step: the card follows ONE representative metric
+    # (first with a consensus), so previous and consensus share a measure.
+    primary=representative_metric(e)
     if primary:
         assert clean(e.get('market_data_source')),('missing market_data_source',e.get('title'),primary)
         for key in ['previous','consensus','actual']:

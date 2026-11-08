@@ -266,13 +266,37 @@ def apply_fedwatch_metric(calendar, fedwatch=None):
     return True
 
 
+def representative_metric(event):
+    """The one metric whose previous/consensus/actual the event card shows.
+
+    Prefer the first metric that has a consensus, so the card's surprise is
+    always actual-vs-consensus of the SAME measure (CPI: previous 3.7% YoY
+    must never sit next to a 0.2% MoM consensus).
+    """
+    metrics = [m for m in event.get('market_metrics') or [] if isinstance(m, dict) and
+               m.get('metric_type') != 'market_probability_snapshot' and
+               any(clean(m.get(k)) is not None for k in ['previous','consensus','actual'])]
+    return next((m for m in metrics if clean(m.get('consensus')) is not None), metrics[0] if metrics else None)
+
+
 def sync_representative_values(event):
-    primary = next((m for m in event.get('market_metrics') or [] if
-                    m.get('metric_type') != 'market_probability_snapshot' and
-                    any(clean(m.get(k)) is not None for k in ['previous','consensus','actual'])), None)
+    primary = representative_metric(event)
     if not primary:
         return False
     changed = False
+    multi = sum(1 for m in event.get('market_metrics') or [] if isinstance(m, dict) and
+                m.get('metric_type') != 'market_probability_snapshot') > 1
+    if multi:
+        # previous/consensus come from the representative metric only, even when
+        # it has none: a value left over from a sibling measure is worse than a blank.
+        for key in ['previous','consensus']:
+            value = clean(primary.get(key))
+            if clean(event.get(key)) != value:
+                event[key] = primary.get(key) if value is not None else None
+                changed = True
+        if event.get('representative_metric_key') != primary.get('key'):
+            event['representative_metric_key'] = primary.get('key')
+            changed = True
     for key in ['previous','consensus','actual']:
         value = clean(primary.get(key))
         if value is not None and clean(event.get(key)) != value:
@@ -282,6 +306,13 @@ def sync_representative_values(event):
             else:
                 event[key] = primary[key]
             changed = True
+    if clean(event.get('previous')) is not None and clean(event.get('previous')) == clean(primary.get('previous')):
+        # Same value, same provenance: the card's "previous" observed date must
+        # be the metric's, not a stale one from an earlier fill.
+        for key in ['previous_source','previous_observed_date','previous_value_source']:
+            if key in primary and event.get(key) != primary.get(key):
+                event[key] = primary.get(key)
+                changed = True
     source = clean(primary.get('source'))
     merged_source = merge_sources(event.get('market_data_source'), source)
     if merged_source != clean(event.get('market_data_source')):

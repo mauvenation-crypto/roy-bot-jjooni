@@ -8,6 +8,7 @@ so the API path is the only official route available to scheduled jobs.
 """
 import calendar
 import json
+import os
 import re
 from decimal import Decimal, ROUND_HALF_UP
 from functools import lru_cache
@@ -59,7 +60,11 @@ def reference_quarter(value):
 def fetch_series(series, year):
     from official_calendar_collectors import raw_fetch
     url = f'{API}{series}?startyear={year-1}&endyear={year}'
-    data = json.loads(raw_fetch(url))
+    # Keyless v2 allows 25 requests/day per IP (shared by GitHub runners); a
+    # free registration key (secret BLS_API_KEY) raises it to 500. The key is
+    # sent in the query only, never stored in the published source_url.
+    key = os.environ.get('BLS_API_KEY', '').strip()
+    data = json.loads(raw_fetch(url + (f'&registrationkey={key}' if key else '')))
     if data.get('status') != 'REQUEST_SUCCEEDED':
         raise ValueError('BLS_API_REQUEST_FAILED: ' + str(data.get('message')))
     results = data.get('Results', {})

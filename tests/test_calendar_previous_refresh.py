@@ -45,6 +45,10 @@ class CalendarPreviousRefreshTest(unittest.TestCase):
         self.assertEqual(e['market_metrics'][0]['previous'], '3.6%')
         self.assertEqual(e['previous'], '3.6%')
 
+    def test_same_release_corrected_value_is_refreshed(self):
+        e = self.run_filler(self.scheduled('3.4%', filler.HISTORY_SOURCE, '2026-10-14'))
+        self.assertEqual(e['market_metrics'][0]['previous'], '3.7%')
+
     def test_empty_previous_still_filled(self):
         e = self.run_filler(self.scheduled(None, None, None))
         self.assertEqual(e['previous'], '3.7%')

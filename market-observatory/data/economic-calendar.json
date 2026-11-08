@@ -58,7 +58,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/jolts_01072026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/jolts_01072026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-01-08T22:30+09:00",
@@ -136,7 +137,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/prod2_01082026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/prod2_01082026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "productivity",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-01-09T22:30+09:00",
@@ -243,7 +246,7 @@
       "market_value_status": "ACTUAL_AVAILABLE",
       "history_ref": "US::employment-situation",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2025-12-16",
+      "previous_observed_date": "2025-12-17",
       "value_vintage": "AS_RELEASED",
       "checked_kst": "2026-09-22T05:35:30+09:00",
       "actual_source": "BLS_empsit official release",
@@ -252,7 +255,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/empsit_01092026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/empsit_01092026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "nfp",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-01-13T22:30+09:00",
@@ -372,7 +377,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/cpi_01132026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/cpi_01132026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "cpi_yoy",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-01-14T22:30+09:00",
@@ -484,7 +491,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ppi_01142026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ppi_01142026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "ppi_mom",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-01-15T10:00+09:00",
@@ -605,7 +614,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ximpim_01152026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ximpim_01152026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "us_import_price_mom",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-01-28T00:00+09:00",
@@ -705,7 +716,7 @@
       "market_value_status": "ACTUAL_AVAILABLE",
       "history_ref": "US::fomc-정책결정",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2025-12-10",
+      "previous_observed_date": "2025-12-11",
       "checked_kst": "2026-09-21T18:54:13+09:00",
       "official_actual_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm",
       "official_actual_checked_kst": "2026-09-21T18:54:13+09:00",
@@ -714,7 +725,8 @@
       "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm",
       "official_actual_source": "Federal Reserve official FOMC statement",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-01-29T22:30+09:00",
@@ -792,7 +804,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/prod2_01292026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/prod2_01292026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "productivity",
+      "previous_value_source": "BLS_prod2 official release"
     },
     {
       "datetime_kst": "2026-01-30T22:30+09:00",
@@ -802,7 +816,7 @@
       "importance": 2,
       "source": "BLS_ppi official release",
       "reference_period": "December 2025 Producer Price Index",
-      "previous": "0.2%",
+      "previous": "0.1%",
       "consensus": null,
       "actual": "0.5%",
       "te_forecast": null,
@@ -813,7 +827,7 @@
           "key": "ppi_mom",
           "label": "PPI MoM",
           "source": "BLS_ppi official release",
-          "previous": "0.2%",
+          "previous": "0.1%",
           "consensus": null,
           "actual": "0.5%",
           "market_value_status": "ACTUAL_AVAILABLE",
@@ -855,7 +869,7 @@
           "key": "core_ppi_mom",
           "label": "Core PPI MoM",
           "source": "BLS_ppi official release",
-          "previous": "0.0%",
+          "previous": "0.3%",
           "consensus": null,
           "actual": "0.7%",
           "market_value_status": "ACTUAL_AVAILABLE",
@@ -903,7 +917,7 @@
       "market_value_status": "ACTUAL_AVAILABLE",
       "history_ref": "US::producer-price-index",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-01-14",
+      "previous_observed_date": "2026-01-15",
       "value_vintage": "AS_RELEASED",
       "checked_kst": "2026-09-22T05:35:30+09:00",
       "actual_source": "BLS_ppi official release",
@@ -912,7 +926,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ppi_01302026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ppi_01302026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "ppi_mom",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-02-06T00:00+09:00",
@@ -969,7 +985,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/jolts_02052026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/jolts_02052026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BLS_jolts official release"
     },
     {
       "datetime_kst": "2026-02-10T22:30+09:00",
@@ -1047,7 +1064,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ximpim_02102026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ximpim_02102026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "us_import_price_mom",
+      "previous_value_source": "BLS_ximpim official release"
     },
     {
       "datetime_kst": "2026-02-10T22:30+09:00",
@@ -1104,7 +1123,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/eci_02102026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/eci_02102026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-02-11T22:30+09:00",
@@ -1224,7 +1244,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/empsit_02112026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/empsit_02112026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "nfp",
+      "previous_value_source": "BLS_empsit official release"
     },
     {
       "datetime_kst": "2026-02-13T22:30+09:00",
@@ -1344,7 +1366,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/cpi_02132026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/cpi_02132026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "cpi_yoy",
+      "previous_value_source": "BLS_cpi official release"
     },
     {
       "datetime_kst": "2026-02-20T00:00+09:00",
@@ -1407,7 +1431,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/jltst_02192026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/jltst_02192026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BLS_jltst official release"
     },
     {
       "datetime_kst": "2026-02-26T10:00+09:00",
@@ -1463,7 +1488,8 @@
       "source_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=c8d9eed3100140ba91842ab52723870e&fileSn=2",
       "official_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=c8d9eed3100140ba91842ab52723870e&fileSn=2",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BOK_RATE official release"
     },
     {
       "datetime_kst": "2026-02-27T22:30+09:00",
@@ -1583,7 +1609,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ppi_02272026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ppi_02272026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "ppi_mom",
+      "previous_value_source": "BLS_ppi official release"
     },
     {
       "datetime_kst": "2026-03-05T22:30+09:00",
@@ -1661,7 +1689,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ximpim_03052026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ximpim_03052026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "us_import_price_mom",
+      "previous_value_source": "BLS_ximpim official release"
     },
     {
       "datetime_kst": "2026-03-05T22:30+09:00",
@@ -1739,7 +1769,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/prod2_03052026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/prod2_03052026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "productivity",
+      "previous_value_source": "BLS_prod2 official release"
     },
     {
       "datetime_kst": "2026-03-06T22:30+09:00",
@@ -1859,7 +1891,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/empsit_03062026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/empsit_03062026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "nfp",
+      "previous_value_source": "BLS_empsit official release"
     },
     {
       "datetime_kst": "2026-03-11T21:30+09:00",
@@ -1979,7 +2013,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/cpi_03112026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/cpi_03112026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "cpi_yoy",
+      "previous_value_source": "BLS_cpi official release"
     },
     {
       "datetime_kst": "2026-03-13T23:00+09:00",
@@ -2036,7 +2072,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/jolts_03132026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/jolts_03132026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BLS_jolts official release"
     },
     {
       "datetime_kst": "2026-03-18T21:30+09:00",
@@ -2156,7 +2193,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ppi_03182026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ppi_03182026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "ppi_mom",
+      "previous_value_source": "BLS_ppi official release"
     },
     {
       "datetime_kst": "2026-03-19T03:00+09:00",
@@ -2208,7 +2247,8 @@
       "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm",
       "official_actual_source": "Federal Reserve official FOMC statement",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "Federal Reserve official FOMC statement"
     },
     {
       "datetime_kst": "2026-03-24T21:30+09:00",
@@ -2286,7 +2326,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/prod2_03242026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/prod2_03242026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "productivity",
+      "previous_value_source": "BLS_prod2 official release"
     },
     {
       "datetime_kst": "2026-03-25T21:30+09:00",
@@ -2364,7 +2406,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ximpim_03252026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ximpim_03252026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "us_import_price_mom",
+      "previous_value_source": "BLS_ximpim official release"
     },
     {
       "datetime_kst": "2026-03-31T23:00+09:00",
@@ -2421,7 +2465,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/jolts_03312026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/jolts_03312026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BLS_jolts official release"
     },
     {
       "datetime_kst": "2026-04-03T21:30+09:00",
@@ -2541,7 +2586,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/empsit_04032026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/empsit_04032026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "nfp",
+      "previous_value_source": "BLS_empsit official release"
     },
     {
       "datetime_kst": "2026-04-10T10:00+09:00",
@@ -2595,7 +2642,8 @@
       "source_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=67c5323a73fb4b4583fc0db39562aaf3&fileSn=2",
       "official_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=67c5323a73fb4b4583fc0db39562aaf3&fileSn=2",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BOK_RATE official release"
     },
     {
       "datetime_kst": "2026-04-10T21:30+09:00",
@@ -2715,7 +2763,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/cpi_04102026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/cpi_04102026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "cpi_yoy",
+      "previous_value_source": "BLS_cpi official release"
     },
     {
       "datetime_kst": "2026-04-14T21:30+09:00",
@@ -2835,7 +2885,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ppi_04142026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ppi_04142026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "ppi_mom",
+      "previous_value_source": "BLS_ppi official release"
     },
     {
       "datetime_kst": "2026-04-15T21:30+09:00",
@@ -2913,7 +2965,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ximpim_04152026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ximpim_04152026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "us_import_price_mom",
+      "previous_value_source": "BLS_ximpim official release"
     },
     {
       "datetime_kst": "2026-04-28T23:00+09:00",
@@ -3025,7 +3079,8 @@
       "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
       "official_actual_source": "Federal Reserve official FOMC statement",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "Federal Reserve official FOMC statement"
     },
     {
       "datetime_kst": "2026-04-30T21:30+09:00",
@@ -3082,7 +3137,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/eci_04302026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/eci_04302026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BLS_eci official release"
     },
     {
       "datetime_kst": "2026-05-05T23:00+09:00",
@@ -3139,7 +3195,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/jolts_05052026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/jolts_05052026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BLS_jolts official release"
     },
     {
       "datetime_kst": "2026-05-07T21:30+09:00",
@@ -3217,7 +3274,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/prod2_05072026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/prod2_05072026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "productivity",
+      "previous_value_source": "BLS_prod2 official release"
     },
     {
       "datetime_kst": "2026-05-08T21:30+09:00",
@@ -3337,7 +3396,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/empsit_05082026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/empsit_05082026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "nfp",
+      "previous_value_source": "BLS_empsit official release"
     },
     {
       "datetime_kst": "2026-05-12T21:30+09:00",
@@ -3457,7 +3518,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/cpi_05122026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/cpi_05122026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "cpi_yoy",
+      "previous_value_source": "BLS_cpi official release"
     },
     {
       "datetime_kst": "2026-05-13T21:30+09:00",
@@ -3577,7 +3640,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ppi_05132026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ppi_05132026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "ppi_mom",
+      "previous_value_source": "BLS_ppi official release"
     },
     {
       "datetime_kst": "2026-05-14T21:30+09:00",
@@ -3655,7 +3720,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ximpim_05142026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ximpim_05142026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "us_import_price_mom",
+      "previous_value_source": "BLS_ximpim official release"
     },
     {
       "datetime_kst": "2026-05-28T10:00+09:00",
@@ -3711,7 +3778,8 @@
       "source_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=075c50ad6b6a4bf287f56189695ac18f&fileSn=2",
       "official_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=075c50ad6b6a4bf287f56189695ac18f&fileSn=2",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BOK_RATE official release"
     },
     {
       "datetime_kst": "2026-05-28T23:00+09:00",
@@ -3782,7 +3850,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/prin1_05282026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/prin1_05282026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "wholesale_productivity"
     },
     {
       "datetime_kst": "2026-06-02T23:00+09:00",
@@ -3839,7 +3908,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/jolts_06022026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/jolts_06022026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BLS_jolts official release"
     },
     {
       "datetime_kst": "2026-06-04T21:30+09:00",
@@ -3917,7 +3987,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/prod2_06042026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/prod2_06042026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "productivity",
+      "previous_value_source": "BLS_prod2 official release"
     },
     {
       "datetime_kst": "2026-06-05T21:30+09:00",
@@ -4037,7 +4109,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/empsit_06052026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/empsit_06052026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "nfp",
+      "previous_value_source": "BLS_empsit official release"
     },
     {
       "datetime_kst": "2026-06-10T21:30+09:00",
@@ -4157,7 +4231,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/cpi_06102026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/cpi_06102026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "cpi_yoy",
+      "previous_value_source": "BLS_cpi official release"
     },
     {
       "datetime_kst": "2026-06-11T21:30+09:00",
@@ -4277,7 +4353,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ppi_06112026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ppi_06112026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "ppi_mom",
+      "previous_value_source": "BLS_ppi official release"
     },
     {
       "datetime_kst": "2026-06-16T21:30+09:00",
@@ -4355,7 +4433,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ximpim_06162026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ximpim_06162026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "us_import_price_mom",
+      "previous_value_source": "BLS_ximpim official release"
     },
     {
       "datetime_kst": "2026-06-18T03:00+09:00",
@@ -4407,7 +4487,8 @@
       "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
       "official_actual_source": "Federal Reserve official FOMC statement",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "Federal Reserve official FOMC statement"
     },
     {
       "datetime_kst": "2026-06-24T23:00+09:00",
@@ -4520,7 +4601,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/jolts_06302026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/jolts_06302026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BLS_jolts official release"
     },
     {
       "datetime_kst": "2026-07-02T21:30+09:00",
@@ -4640,7 +4722,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "nfp",
+      "previous_value_source": "BLS_empsit official release"
     },
     {
       "datetime_kst": "2026-07-14T21:30+09:00",
@@ -4760,7 +4844,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "cpi_yoy",
+      "previous_value_source": "BLS_cpi official release"
     },
     {
       "datetime_kst": "2026-07-15T21:30+09:00",
@@ -4880,7 +4966,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ppi_07152026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ppi_07152026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "ppi_mom",
+      "previous_value_source": "BLS_ppi official release"
     },
     {
       "datetime_kst": "2026-07-16T10:00+09:00",
@@ -4934,7 +5022,8 @@
       "source_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=17f5a7b898ce4a92b3715cb6a3bd7051&fileSn=2",
       "official_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=17f5a7b898ce4a92b3715cb6a3bd7051&fileSn=2",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BOK_RATE official release"
     },
     {
       "datetime_kst": "2026-07-17T21:30+09:00",
@@ -5012,7 +5101,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ximpim_07172026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ximpim_07172026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "us_import_price_mom",
+      "previous_value_source": "BLS_ximpim official release"
     },
     {
       "datetime_kst": "2026-07-22T23:00+09:00",
@@ -5125,7 +5216,8 @@
       "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
       "official_actual_source": "Federal Reserve official FOMC statement",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "Federal Reserve official FOMC statement"
     },
     {
       "datetime_kst": "2026-07-31T21:30+09:00",
@@ -5182,7 +5274,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/eci_07312026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/eci_07312026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BLS_eci official release"
     },
     {
       "datetime_kst": "2026-08-03T22:45+09:00",
@@ -5205,7 +5298,7 @@
           "actual": "53.9",
           "market_value_status": "ACTUAL_AVAILABLE",
           "history_ref": "US::s-p-global-us-manufacturing-pmi::sp_us_manufacturing_pmi",
-          "previous": "53.8",
+          "previous": "5",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "ForexFactory historical calendar",
           "previous_observed_date": "2026-07-28",
@@ -5223,9 +5316,9 @@
       "market_value_status": "ACTUAL_AVAILABLE",
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
       "history_ref": "US::s-p-global-us-manufacturing-pmi",
-      "previous": "53.8",
+      "previous": "5",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-01-05",
+      "previous_observed_date": "2026-07-28",
       "market_data_source": "ForexFactory historical calendar",
       "consensus": "53.8",
       "surprise": "actual_vs_consensus",
@@ -5235,7 +5328,8 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=aug2.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-08-04T23:00+09:00",
@@ -5293,7 +5387,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/jolts_08042026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/jolts_08042026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BLS_jolts official release"
     },
     {
       "datetime_kst": "2026-08-05T22:45+09:00",
@@ -5352,7 +5447,7 @@
       "history_ref": "US::s-p-global-us-services-composite-pmi",
       "previous": "53.6",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-01-07",
+      "previous_observed_date": "2026-07-24",
       "market_data_source": "ForexFactory historical calendar",
       "consensus": "53.6",
       "surprise": "actual_vs_consensus",
@@ -5362,7 +5457,9 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=aug2.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "sp_us_services_pmi",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-08-06T21:30+09:00",
@@ -5442,7 +5539,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/prod2_08062026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/prod2_08062026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "productivity",
+      "previous_value_source": "BLS_prod2 official release"
     },
     {
       "datetime_kst": "2026-08-07T21:30+09:00",
@@ -5566,7 +5665,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/empsit_08072026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/empsit_08072026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "nfp",
+      "previous_value_source": "BLS_empsit official release"
     },
     {
       "datetime_kst": "2026-08-12T21:30+09:00",
@@ -5686,7 +5787,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/cpi_08122026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/cpi_08122026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "cpi_yoy",
+      "previous_value_source": "BLS_cpi official release"
     },
     {
       "datetime_kst": "2026-08-13T21:30+09:00",
@@ -5806,7 +5909,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ppi_08132026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ppi_08132026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "ppi_mom",
+      "previous_value_source": "BLS_ppi official release"
     },
     {
       "datetime_kst": "2026-08-18T21:30+09:00",
@@ -5884,7 +5989,9 @@
       "source_url": "https://www.bls.gov/news.release/archives/ximpim_08182026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ximpim_08182026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "us_import_price_mom",
+      "previous_value_source": "BLS_ximpim official release"
     },
     {
       "datetime_kst": "2026-08-27T10:00+09:00",
@@ -5940,7 +6047,8 @@
       "source_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=57a2f420e26141f39682fdb4696208b2&fileSn=2",
       "official_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=57a2f420e26141f39682fdb4696208b2&fileSn=2",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BOK_RATE official release"
     },
     {
       "datetime_kst": "2026-08-27T21:30+09:00",
@@ -5967,7 +6075,7 @@
           "source": "DOL official release",
           "market_value_status": "ACTUAL_AVAILABLE",
           "history_ref": "US::u-s-initial-jobless-claims::initial_claims",
-          "previous": "199K",
+          "previous": "206K",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "ForexFactory historical calendar",
           "previous_observed_date": "2026-08-20",
@@ -5982,16 +6090,17 @@
       "_verified_override": true,
       "market_value_status": "ACTUAL_AVAILABLE",
       "history_ref": "US::u-s-initial-jobless-claims",
-      "previous": "199K",
+      "previous": "206K",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2025-12-31",
+      "previous_observed_date": "2026-08-20",
       "checked_kst": "2026-09-27T19:52:49+09:00",
       "actual_source": "DOL official release",
       "source_tier": "OFFICIAL",
       "source_url": "https://oui.doleta.gov/press/2026/082726.pdf",
       "official_url": "https://oui.doleta.gov/press/2026/082726.pdf",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-09-01T22:45+09:00",
@@ -6014,7 +6123,7 @@
           "actual": "53.9",
           "market_value_status": "ACTUAL_AVAILABLE",
           "history_ref": "US::s-p-global-us-manufacturing-pmi::sp_us_manufacturing_pmi",
-          "previous": "53.2",
+          "previous": "4",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "ForexFactory historical calendar",
           "previous_observed_date": "2026-08-25",
@@ -6032,9 +6141,9 @@
       "market_value_status": "ACTUAL_AVAILABLE",
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
       "history_ref": "US::s-p-global-us-manufacturing-pmi",
-      "previous": "53.2",
+      "previous": "4",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-01-05",
+      "previous_observed_date": "2026-08-25",
       "market_data_source": "ForexFactory historical calendar",
       "consensus": "53.3",
       "surprise": "actual_vs_consensus",
@@ -6044,7 +6153,8 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=aug30.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-09-01T23:00+09:00",
@@ -6134,7 +6244,8 @@
       "actual": "3.1%",
       "market_value_status": "ACTUAL_AVAILABLE",
       "history_ref": "KR::소비자물가동향",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "kr_cpi_yoy"
     },
     {
       "datetime_kst": "2026-09-03T21:30+09:00",
@@ -6198,7 +6309,8 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=aug30.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "productivity"
     },
     {
       "datetime_kst": "2026-09-03T21:30+09:00",
@@ -6253,7 +6365,8 @@
       "source_url": "https://oui.doleta.gov/press/2026/090326.pdf",
       "official_url": "https://oui.doleta.gov/press/2026/090326.pdf",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "DOL official release"
     },
     {
       "datetime_kst": "2026-09-03T22:45+09:00",
@@ -6312,7 +6425,7 @@
       "history_ref": "US::s-p-global-us-services-composite-pmi",
       "previous": "56.8",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-01-07",
+      "previous_observed_date": "2026-08-21",
       "market_data_source": "ForexFactory historical calendar",
       "consensus": "56.8",
       "surprise": "actual_vs_consensus",
@@ -6322,7 +6435,9 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=aug30.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "sp_us_services_pmi",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-09-04T21:30+09:00",
@@ -6435,7 +6550,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "nfp"
     },
     {
       "datetime_kst": "2026-09-09T08:00+09:00",
@@ -6480,7 +6596,8 @@
       "history_ref": "KR::고용동향",
       "actual_watch": true,
       "actual_expected": true,
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "kr_unemployment_sa"
     },
     {
       "datetime_kst": "2026-09-10T21:30+09:00",
@@ -6592,7 +6709,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/ppi_09102026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ppi_09102026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "ppi_mom"
     },
     {
       "datetime_kst": "2026-09-10T21:30+09:00",
@@ -6643,7 +6761,8 @@
       "source_url": "https://oui.doleta.gov/press/2026/091026.pdf",
       "official_url": "https://oui.doleta.gov/press/2026/091026.pdf",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "DOL official release"
     },
     {
       "datetime_kst": "2026-09-11T21:30+09:00",
@@ -6757,7 +6876,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/cpi_09112026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/cpi_09112026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "cpi_yoy"
     },
     {
       "datetime_kst": "2026-09-11T23:00+09:00",
@@ -6810,7 +6930,8 @@
       "market_data_source": "University of Michigan official + Reuters/Investing consensus cross-check + University of Michigan / Reuters",
       "market_value_status": "ACTUAL_AVAILABLE",
       "history_ref": "US::university-of-michigan-consumer-sentiment",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "umich_sentiment"
     },
     {
       "datetime_kst": "2026-09-15T06:00+09:00",
@@ -6883,7 +7004,8 @@
       "market_data_source": "한국은행 2026년 8월 수출입물가지수 및 무역지수(잠정)",
       "market_value_status": "ACTUAL_AVAILABLE",
       "history_ref": "KR::수출입물가지수-및-무역지수",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "kr_export_price_mom"
     },
     {
       "datetime_kst": "2026-09-16T21:30+09:00",
@@ -6958,7 +7080,8 @@
       "source_url": "https://www.bls.gov/news.release/archives/ximpim_09162026.htm",
       "official_url": "https://www.bls.gov/news.release/archives/ximpim_09162026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "us_import_price_mom"
     },
     {
       "datetime_kst": "2026-09-17T03:00+09:00",
@@ -7074,7 +7197,8 @@
       "source_url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
       "official_url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "boe_bank_rate"
     },
     {
       "datetime_kst": "2026-09-17T21:30+09:00",
@@ -7183,7 +7307,8 @@
       "source_url": "https://www.bok.or.kr/fileSrc/portal/a24407c9b85f48a9b30e961a5c3be058/1/3a0bcf6e213a41acb0d591e10cf99de1.pdf",
       "official_url": "https://www.bok.or.kr/fileSrc/portal/a24407c9b85f48a9b30e961a5c3be058/1/3a0bcf6e213a41acb0d591e10cf99de1.pdf",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "kr_ppi_mom"
     },
     {
       "datetime_kst": "2026-09-18T12:00+09:00",
@@ -7194,7 +7319,7 @@
       "source": "BOJ official release",
       "reference_period": "Sep 17-18, 2026 meeting",
       "time_status": "TBD",
-      "previous": "<0.75%",
+      "previous": "<1.00%",
       "consensus": null,
       "actual": "1.25%",
       "te_forecast": null,
@@ -7208,7 +7333,7 @@
           "source": "BOJ official release",
           "market_value_status": "ACTUAL_AVAILABLE",
           "history_ref": "JP::boj-금융정책결정회의-결과::boj_policy_rate",
-          "previous": "<0.75%",
+          "previous": "<1.00%",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "ForexFactory historical calendar",
           "previous_observed_date": "2026-07-31",
@@ -7230,14 +7355,15 @@
       "market_value_status": "ACTUAL_AVAILABLE",
       "history_ref": "JP::boj-금융정책결정회의-결과",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2025-12-19",
+      "previous_observed_date": "2026-07-31",
       "checked_kst": "2026-09-21T18:34:01+09:00",
       "actual_source": "BOJ official release",
       "source_tier": "OFFICIAL",
       "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
       "official_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-09-23T06:00+09:00",
@@ -7337,7 +7463,8 @@
       "source_url": "https://oui.doleta.gov/press/2026/092426.pdf",
       "official_url": "https://oui.doleta.gov/press/2026/092426.pdf",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "DOL official release"
     },
     {
       "datetime_kst": "2026-09-25T23:00+09:00",
@@ -7405,7 +7532,8 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=sep20.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "umich_sentiment"
     },
     {
       "datetime_kst": "2026-09-29T06:00+09:00",
@@ -7665,7 +7793,8 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=sep27.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "core_pce_mom"
     },
     {
       "datetime_kst": "2026-10-01T05:30+09:00",
@@ -7912,13 +8041,13 @@
           "key": "avg_hourly_yoy",
           "label": "Average Hourly Earnings YoY",
           "source": "FairEconomy/ForexFactory",
-          "previous": "0.3%",
+          "previous": "3.1%",
           "consensus": "0.3%",
           "actual": "0.1%",
           "market_value_status": "ACTUAL_AVAILABLE",
           "history_ref": "US::employment-situation::avg_hourly_yoy",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-          "previous_value_source": "BLS_empsit official release",
+          "previous_value_source": "FairEconomy/ForexFactory",
           "previous_observed_date": "2026-09-04",
           "market_value_source": "FairEconomy/ForexFactory",
           "generic_match_score": 62.52,
@@ -7943,7 +8072,8 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=sep27.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "nfp"
     },
     {
       "datetime_kst": "2026-10-05T22:45+09:00",
@@ -8010,7 +8140,8 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=oct4.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "sp_us_services_pmi"
     },
     {
       "datetime_kst": "2026-10-06T21:30+09:00",
@@ -8206,7 +8337,8 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=oct11.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "cpi_yoy"
     },
     {
       "datetime_kst": "2026-10-15T21:30+09:00",
@@ -8312,7 +8444,8 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=oct11.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "ppi_mom"
     },
     {
       "datetime_kst": "2026-10-15T21:30+09:00",
@@ -8477,7 +8610,8 @@
       "official_url": "https://mods.go.kr/board.es?act=view&bid=210&list_no=447479&mid=a10301030200",
       "official_actual_source": "국가데이터처 공식 보도자료",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "kr_unemployment_sa"
     },
     {
       "datetime_kst": "2026-10-16T21:30+09:00",
@@ -8546,7 +8680,8 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=oct11.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "us_import_price_mom"
     },
     {
       "datetime_kst": "2026-10-22T10:00+09:00",
@@ -8601,7 +8736,8 @@
       "source_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=a371bacfa6d14a20948d8d1c8629a246&fileSn=2",
       "official_url": "https://www.bok.or.kr/portal/cmmn/file/fileDown.do?menuNo=200755&atchFileId=a371bacfa6d14a20948d8d1c8629a246&fileSn=2",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BOK_RATE official release"
     },
     {
       "datetime_kst": "2026-10-22T21:30+09:00",
@@ -8648,7 +8784,7 @@
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
       "history_ref": "US::u-s-initial-jobless-claims",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-10-08",
+      "previous_observed_date": "2026-10-15",
       "market_data_source": "DOL official release + FairEconomy/ForexFactory",
       "consensus": "200K",
       "ff_match_score": 37,
@@ -8661,7 +8797,8 @@
       "source_url": "https://oui.doleta.gov/press/2026/102226.pdf",
       "official_url": "https://oui.doleta.gov/press/2026/102226.pdf",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-10-27T08:00+09:00",
@@ -8782,7 +8919,10 @@
       "official_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
       "official_actual_source": "Federal Reserve official FOMC statement",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
+      "previous_observed_date": "2026-09-17",
+      "previous_value_source": "Federal Reserve official FOMC statement"
     },
     {
       "datetime_kst": "2026-10-29T21:30+09:00",
@@ -8829,7 +8969,7 @@
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
       "history_ref": "US::u-s-initial-jobless-claims",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-10-08",
+      "previous_observed_date": "2026-10-22",
       "market_data_source": "DOL official release + FairEconomy/ForexFactory",
       "consensus": "198K",
       "ff_match_score": 37,
@@ -8842,7 +8982,8 @@
       "source_url": "https://oui.doleta.gov/press/2026/102926.pdf",
       "official_url": "https://oui.doleta.gov/press/2026/102926.pdf",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-10-29T21:30+09:00",
@@ -8902,7 +9043,7 @@
       "importance": 3,
       "source": "BEA",
       "reference_period": "",
-      "previous": "0.3%",
+      "previous": "0.2%",
       "consensus": "0.3%",
       "actual": "0.3%",
       "te_forecast": null,
@@ -8913,7 +9054,7 @@
           "key": "core_pce_mom",
           "label": "Core PCE MoM",
           "source": "FairEconomy/ForexFactory",
-          "previous": "0.3%",
+          "previous": "0.2%",
           "consensus": "0.3%",
           "actual": "0.3%",
           "market_value_status": "ACTUAL_AVAILABLE",
@@ -8936,7 +9077,7 @@
           "key": "pce_yoy",
           "label": "PCE Price Index YoY",
           "source": "FairEconomy/ForexFactory",
-          "previous": "0.3%",
+          "previous": "0.2%",
           "consensus": "0.3%",
           "actual": "0.3%",
           "market_value_status": "ACTUAL_AVAILABLE",
@@ -8956,7 +9097,7 @@
           "key": "personal_income",
           "label": "Personal Income MoM",
           "source": "FairEconomy/ForexFactory",
-          "previous": "0.3%",
+          "previous": "0.2%",
           "consensus": "0.3%",
           "actual": "0.2%",
           "market_value_status": "ACTUAL_AVAILABLE",
@@ -9005,7 +9146,7 @@
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
       "history_ref": "US::personal-income-and-outlays",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2025-12-05",
+      "previous_observed_date": "2026-09-30",
       "ff_match_score": 40,
       "_verified_override": true,
       "checked_kst": "2026-11-01T22:42:29+09:00",
@@ -9013,7 +9154,9 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=oct25.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "core_pce_mom",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-10-30T08:00+09:00",
@@ -9113,7 +9256,8 @@
       "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=ECIALLCIV&cosd=2026-04-01",
       "official_url": "https://www.bls.gov/news.release/archives/eci_10302026.htm",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "BLS_eci official release"
     },
     {
       "datetime_kst": "2026-11-02T23:45+09:00",
@@ -9136,7 +9280,7 @@
           "actual": "54.9",
           "market_value_status": "ACTUAL_AVAILABLE",
           "history_ref": "US::s-p-global-us-manufacturing-pmi::sp_us_manufacturing_pmi",
-          "previous": "56.0",
+          "previous": "-2",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "ForexFactory historical calendar",
           "previous_observed_date": "2026-10-27",
@@ -9157,9 +9301,9 @@
       "market_value_status": "ACTUAL_AVAILABLE",
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
       "history_ref": "US::s-p-global-us-manufacturing-pmi",
-      "previous": "56.0",
+      "previous": "-2",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-01-05",
+      "previous_observed_date": "2026-10-27",
       "market_data_source": "ForexFactory historical calendar + FairEconomy/ForexFactory",
       "consensus": "56.0",
       "ff_match_score": 57,
@@ -9170,7 +9314,8 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=nov1.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-11-03T08:00+09:00",
@@ -9216,7 +9361,7 @@
       "importance": 2,
       "source": "BLS_jolts official release",
       "reference_period": "",
-      "previous": "7.19M",
+      "previous": "7.52M",
       "consensus": "7.15M",
       "actual": "7.5M",
       "te_forecast": null,
@@ -9227,7 +9372,7 @@
           "key": "jolts",
           "label": "JOLTS Job Openings",
           "source": "BLS_jolts official release",
-          "previous": "7.19M",
+          "previous": "7.52M",
           "consensus": "7.15M",
           "actual": "7.5M",
           "market_value_status": "ACTUAL_AVAILABLE",
@@ -9258,7 +9403,7 @@
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
       "history_ref": "US::job-openings-and-labor-turnover",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-09-01",
+      "previous_observed_date": "2026-11-03",
       "ff_match_score": 57,
       "actual_backfill_checked_kst": "2026-11-08T14:13:07+09:00",
       "_verified_override": true,
@@ -9270,7 +9415,8 @@
       "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/JTS000000000000000JOL?startyear=2025&endyear=2026",
       "official_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/JTS000000000000000JOL?startyear=2025&endyear=2026",
       "verification_status": "VERIFIED_OFFICIAL_REVISED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-11-04T22:30+09:00",
@@ -9349,7 +9495,7 @@
           "actual": "56.1",
           "market_value_status": "ACTUAL_AVAILABLE",
           "history_ref": "US::s-p-global-us-services-composite-pmi::sp_us_composite_pmi",
-          "previous": "57.9",
+          "previous": "58.8",
           "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
           "previous_value_source": "FairEconomy/ForexFactory",
           "previous_observed_date": "2026-10-05",
@@ -9369,7 +9515,7 @@
       "history_ref": "US::s-p-global-us-services-composite-pmi",
       "previous": "57.9",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-01-07",
+      "previous_observed_date": "2026-10-23",
       "market_data_source": "ForexFactory historical calendar + FairEconomy/ForexFactory",
       "consensus": "57.9",
       "ff_match_score": 57,
@@ -9380,7 +9526,9 @@
       "source_tier": "MARKET_FEED",
       "source_url": "https://www.forexfactory.com/calendar?week=nov1.2026",
       "verification_status": "MARKET_REPORTED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "sp_us_services_pmi",
+      "previous_value_source": "ForexFactory historical calendar"
     },
     {
       "datetime_kst": "2026-11-05T22:30+09:00",
@@ -9390,7 +9538,7 @@
       "importance": 2,
       "source": "BLS_prod2 official release",
       "reference_period": "",
-      "previous": "2.1%",
+      "previous": "1.4%",
       "consensus": "2.8%",
       "actual": "3.6%",
       "te_forecast": null,
@@ -9401,7 +9549,7 @@
           "key": "productivity",
           "label": "Nonfarm Productivity",
           "source": "BLS_prod2 official release",
-          "previous": "2.1%",
+          "previous": "1.4%",
           "consensus": "2.8%",
           "actual": "3.6%",
           "market_value_status": "ACTUAL_AVAILABLE",
@@ -9470,7 +9618,9 @@
       "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/PRS85006092?startyear=2025&endyear=2026",
       "official_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/PRS85006092?startyear=2025&endyear=2026",
       "verification_status": "VERIFIED_OFFICIAL_REVISED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "productivity",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-11-05T22:30+09:00",
@@ -9517,7 +9667,7 @@
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
       "history_ref": "US::u-s-initial-jobless-claims",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-10-08",
+      "previous_observed_date": "2026-10-29",
       "market_data_source": "DOL official release + FairEconomy/ForexFactory",
       "consensus": "197K",
       "ff_match_score": 37,
@@ -9530,7 +9680,8 @@
       "source_url": "https://oui.doleta.gov/press/2026/110526.pdf",
       "official_url": "https://oui.doleta.gov/press/2026/110526.pdf",
       "verification_status": "VERIFIED_OFFICIAL",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-11-06T22:30+09:00",
@@ -9540,7 +9691,7 @@
       "importance": 3,
       "source": "BLS_empsit official release",
       "reference_period": "",
-      "previous": "60K",
+      "previous": "29K",
       "consensus": "65K",
       "actual": "165K",
       "te_forecast": null,
@@ -9551,7 +9702,7 @@
           "key": "nfp",
           "label": "Nonfarm Payrolls",
           "source": "BLS_empsit official release",
-          "previous": "60K",
+          "previous": "29K",
           "consensus": "65K",
           "actual": "165K",
           "market_value_status": "ACTUAL_AVAILABLE",
@@ -9603,7 +9754,7 @@
           "key": "avg_hourly_mom",
           "label": "Average Hourly Earnings MoM",
           "source": "BLS_empsit official release",
-          "previous": "0.3%",
+          "previous": "0.1%",
           "consensus": "0.3%",
           "actual": "0.4%",
           "market_value_status": "ACTUAL_AVAILABLE",
@@ -9629,7 +9780,7 @@
           "key": "avg_hourly_yoy",
           "label": "Average Hourly Earnings YoY",
           "source": "BLS_empsit official release",
-          "previous": "3.1%",
+          "previous": "0.1%",
           "consensus": null,
           "actual": "3.1%",
           "market_value_status": "PREVIOUS_ONLY",
@@ -9656,7 +9807,7 @@
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
       "history_ref": "US::employment-situation",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_observed_date": "2026-09-04",
+      "previous_observed_date": "2026-10-02",
       "ff_match_score": 40,
       "actual_backfill_checked_kst": "2026-11-08T14:13:07+09:00",
       "_verified_override": true,
@@ -9668,7 +9819,9 @@
       "source_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CES0000000001?startyear=2025&endyear=2026",
       "official_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/CES0000000001?startyear=2025&endyear=2026",
       "verification_status": "VERIFIED_OFFICIAL_REVISED",
-      "actual_status": "RELEASED"
+      "actual_status": "RELEASED",
+      "representative_metric_key": "nfp",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-11-10T22:30+09:00",
@@ -9678,8 +9831,8 @@
       "importance": 3,
       "source": "BLS",
       "reference_period": "",
-      "previous": "3.7%",
-      "consensus": "0.2%",
+      "previous": "0.6%",
+      "consensus": "0.3%",
       "actual": null,
       "te_forecast": null,
       "surprise": null,
@@ -9775,7 +9928,9 @@
       "actual_source": "FairEconomy/ForexFactory",
       "verification_status": "MARKET_REPORTED",
       "checked_kst": "2026-11-08T14:53:12+09:00",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "cpi_mom",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-11-11T08:00+09:00",
@@ -9812,7 +9967,7 @@
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
       "history_ref": "KR::고용동향",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_value_source": "KOSTAT",
+      "previous_value_source": "국가데이터처 2026년 9월 고용동향",
       "previous_observed_date": "2026-10-16",
       "actual_watch": true,
       "actual_expected": true,
@@ -9872,7 +10027,8 @@
       "actual_source": "FairEconomy/ForexFactory",
       "verification_status": "MARKET_REPORTED",
       "checked_kst": "2026-11-08T14:53:12+09:00",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-11-13T22:30+09:00",
@@ -9979,7 +10135,9 @@
       "actual_source": "FairEconomy/ForexFactory",
       "verification_status": "MARKET_REPORTED",
       "checked_kst": "2026-11-08T14:53:12+09:00",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "ppi_mom",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-11-17T22:30+09:00",
@@ -10034,7 +10192,9 @@
       "history_ref": "US::u-s-import-and-export-price-indexes",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-10-16",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "us_import_price_mom",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-11-19T22:30+09:00",
@@ -10073,7 +10233,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-11-25T22:30+09:00",
@@ -10187,7 +10348,9 @@
       "history_ref": "US::personal-income-and-outlays",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-10-29",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "core_pce_mom",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-11-25T22:30+09:00",
@@ -10226,7 +10389,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-11-26T10:00+09:00",
@@ -10270,7 +10434,8 @@
       "history_ref": "KR::한국은행-통화정책방향-결정회의",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-10-22",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "BOK_RATE official release"
     },
     {
       "datetime_kst": "2026-11-30T08:00+09:00",
@@ -10333,7 +10498,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-02",
       "market_data_source": "ForexFactory historical calendar",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-02T00:00+09:00",
@@ -10374,7 +10540,8 @@
       "history_ref": "US::job-openings-and-labor-turnover",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-04",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-02T08:00+09:00",
@@ -10471,7 +10638,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-03T23:45+09:00",
@@ -10522,7 +10690,9 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-04",
       "market_data_source": "ForexFactory historical calendar",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "sp_us_services_pmi",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-04T22:30+09:00",
@@ -10605,7 +10775,9 @@
       "history_ref": "US::employment-situation",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-06",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "nfp",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-08T22:30+09:00",
@@ -10660,7 +10832,9 @@
       "history_ref": "US::productivity-and-costs",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "productivity",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-08T22:30+09:00",
@@ -10737,7 +10911,8 @@
       "previous_observed_date": "2026-10-29",
       "fedwatch_as_of": "2026-11-06",
       "representative_metric_key": "fed_rate",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-10T22:30+09:00",
@@ -10820,7 +10995,9 @@
       "history_ref": "US::consumer-price-index",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-10-14",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "cpi_yoy",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-10T22:30+09:00",
@@ -10859,7 +11036,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-15T22:30+09:00",
@@ -10942,7 +11120,9 @@
       "history_ref": "US::producer-price-index",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-10-15",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "ppi_mom",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-16T08:00+09:00",
@@ -10979,7 +11159,7 @@
       "representative_value_contract": "EVENT_LEVEL_VALUE_V1",
       "history_ref": "KR::고용동향",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
-      "previous_value_source": "KOSTAT",
+      "previous_value_source": "국가데이터처 2026년 9월 고용동향",
       "previous_observed_date": "2026-10-16",
       "actual_watch": true,
       "actual_expected": true,
@@ -11038,7 +11218,9 @@
       "history_ref": "US::u-s-import-and-export-price-indexes",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-10-16",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "us_import_price_mom",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-17T22:30+09:00",
@@ -11077,7 +11259,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-23T22:30+09:00",
@@ -11191,7 +11374,9 @@
       "history_ref": "US::personal-income-and-outlays",
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-10-29",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "core_pce_mom",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-24T22:30+09:00",
@@ -11230,7 +11415,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2026-12-30T08:00+09:00",
@@ -11316,7 +11502,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-01-04T23:45+09:00",
@@ -11354,7 +11541,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-02",
       "market_data_source": "ForexFactory historical calendar",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-01-06T23:45+09:00",
@@ -11405,7 +11593,9 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-04",
       "market_data_source": "ForexFactory historical calendar",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "sp_us_services_pmi",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-01-07T22:30+09:00",
@@ -11444,7 +11634,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-01-14T22:30+09:00",
@@ -11483,7 +11674,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-01-21T22:30+09:00",
@@ -11522,7 +11714,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-01-28T22:30+09:00",
@@ -11561,7 +11754,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-02-01T23:45+09:00",
@@ -11599,7 +11793,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-02",
       "market_data_source": "ForexFactory historical calendar",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-02-03T23:45+09:00",
@@ -11650,7 +11845,9 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-04",
       "market_data_source": "ForexFactory historical calendar",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "sp_us_services_pmi",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-02-04T22:30+09:00",
@@ -11689,7 +11886,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-02-11T22:30+09:00",
@@ -11728,7 +11926,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-02-18T22:30+09:00",
@@ -11767,7 +11966,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-02-25T22:30+09:00",
@@ -11806,7 +12006,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-03-01T23:45+09:00",
@@ -11844,7 +12045,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-02",
       "market_data_source": "ForexFactory historical calendar",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-03-03T23:45+09:00",
@@ -11895,7 +12097,9 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-04",
       "market_data_source": "ForexFactory historical calendar",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "sp_us_services_pmi",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-03-04T22:30+09:00",
@@ -11934,7 +12138,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-03-11T22:30+09:00",
@@ -11973,7 +12178,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-03-18T21:30+09:00",
@@ -12012,7 +12218,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-03-25T21:30+09:00",
@@ -12051,7 +12258,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-04-01T21:30+09:00",
@@ -12090,7 +12298,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-04-01T22:45+09:00",
@@ -12128,7 +12337,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-02",
       "market_data_source": "ForexFactory historical calendar",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-04-05T22:45+09:00",
@@ -12179,7 +12389,9 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-04",
       "market_data_source": "ForexFactory historical calendar",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "sp_us_services_pmi",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-04-08T21:30+09:00",
@@ -12218,7 +12430,8 @@
       "previous_source": "CALENDAR_HISTORY_LAST_ACTUAL",
       "previous_observed_date": "2026-11-05",
       "market_data_source": "DOL official release",
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-04-15T21:30+09:00",
@@ -12257,7 +12470,8 @@
           "actual": null
         }
       ],
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-04-22T21:30+09:00",
@@ -12296,7 +12510,8 @@
           "actual": null
         }
       ],
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-04-29T21:30+09:00",
@@ -12335,7 +12550,8 @@
           "actual": null
         }
       ],
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-05-03T22:45+09:00",
@@ -12373,7 +12589,8 @@
           "actual": null
         }
       ],
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-05-05T22:45+09:00",
@@ -12424,7 +12641,9 @@
           "actual": null
         }
       ],
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "representative_metric_key": "sp_us_services_pmi",
+      "previous_value_source": "FairEconomy/ForexFactory"
     },
     {
       "datetime_kst": "2027-05-06T21:30+09:00",
@@ -12463,7 +12682,8 @@
           "actual": null
         }
       ],
-      "actual_status": "SCHEDULED"
+      "actual_status": "SCHEDULED",
+      "previous_value_source": "FairEconomy/ForexFactory"
     }
   ],
   "sources": [
@@ -12702,14 +12922,14 @@
   },
   "representative_value_contract": "PRIMARY_NON_PROBABILITY_METRIC_AFTER_MERGE_V1",
   "representative_value_sync": {
-    "events_changed": 0,
+    "events_changed": 11,
     "probability_overlay_events_guarded": 2
   },
   "official_actual_updated_kst": "2026-11-08T14:53:16+09:00",
   "previous_value_contract": "LATEST_PRIOR_VERIFIED_ACTUAL_AS_PREVIOUS_FALLBACK_V1",
   "previous_value_fill": {
     "event_rows": 53,
-    "metric_rows": 0,
+    "metric_rows": 17,
     "provenance": "SOURCE_OF_PRIOR_ACTUAL_PROPAGATED"
   },
   "stockchild_gap_review": {
