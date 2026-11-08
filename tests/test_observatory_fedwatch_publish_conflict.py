@@ -34,4 +34,7 @@ class FedWatchPublicationConflictTest(unittest.TestCase):
          assert '2026-10-13T12:00:00+09:00' in (local/'market-observatory/data/fedwatch-history/brief.md').read_text()
          assert '2026-10-13T12:00:00+09:00' in (local/'market-observatory/data/fedwatch-history/probabilities.csv').read_text()
          assert not git(local,'status','--porcelain')
+         # One publication = one commit; the post-rebase re-derivation is folded in.
+         subjects=git(bare,'log','main','--format=%s').splitlines()
+         assert subjects==['daily after concurrent market refresh','concurrent market refresh','base'],subjects
          print('FEDWATCH_REAL_GIT_CONFLICT_RECOVERY=PASS revisions=3 newer_snapshot_preserved views_regenerated clean_worktree')

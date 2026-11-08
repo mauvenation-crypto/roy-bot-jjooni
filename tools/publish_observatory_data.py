@@ -355,7 +355,17 @@ def publish(paths, message):
         paths = materialize_publication(paths)
         git('add', '--', *paths)
         if git('diff', '--cached', '--quiet', check=False).returncode:
-            git('commit', '-m', 'data(observatory): preserve concurrent official observations')
+            # Fold the post-rebase re-derivation into our own unpushed commit:
+            # one consistent commit per publication. A separate follow-up
+            # commit doubled the history (79 of 168 commits on 2026-11-08) and
+            # briefly exposed a tip whose freshness/audit predated the merge.
+            # Amend only our own commit; if rebase dropped it (remote already
+            # had our changes), HEAD is someone else's pushed commit.
+            ahead = git('rev-list', '--count', 'origin/main..HEAD').stdout.strip()
+            if ahead and ahead != '0':
+                git('commit', '--amend', '--no-edit')
+            else:
+                git('commit', '-m', message)
         if git('push', 'origin', 'HEAD:main', check=False).returncode == 0:
             print('OBSERVATORY_PUBLISH=PASS commit=' + git('rev-parse', 'HEAD').stdout.strip())
             return

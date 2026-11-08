@@ -123,8 +123,18 @@ jobs:
           PY
           git diff --exit-code -- market-observatory/index.html
 
-      - name: Publish freshness and full-data audit SSOT
+      # Publishers already embed fresh health files in their own commits; this
+      # panel commits only on a reader-visible state change or every 30 min.
+      - name: Skip commit when nothing a reader acts on changed
+        id: gate
         if: ${{ github.event_name != 'pull_request' }}
+        shell: bash
+        run: |
+          git fetch -q origin main || true
+          python tools/freshness_publish_gate.py | tee -a "$GITHUB_OUTPUT"
+
+      - name: Publish freshness and full-data audit SSOT
+        if: ${{ github.event_name != 'pull_request' && steps.gate.outputs.publish == 'true' }}
         shell: bash
         run: |
           set -euo pipefail
