@@ -3,12 +3,12 @@
   "available_to": "2026-11-09",
   "backfill": {
     "canonical_rows_matched": 0,
-    "checked_kst": "2026-11-08T17:33:15+09:00",
+    "checked_kst": "2026-11-09T07:28:49+09:00",
     "coverage_scope": "FETCHED_WEEKS_NOT_PER_SERIES_COMPLETENESS",
     "errors": [],
     "failed_weeks": [],
-    "generic_rows_retained": 0,
-    "previous_available_from": "2016-11-10",
+    "generic_rows_retained": 10,
+    "previous_available_from": "2016-11-11",
     "recent_completed_weeks": [
       "2016-10-16",
       "2025-09-21",
@@ -71,10 +71,10 @@
       "2026-10-25",
       "2026-11-01"
     ],
-    "requested_window_start": "2016-11-10",
+    "requested_window_start": "2016-11-11",
     "resumable": true,
     "rows_inserted": 0,
-    "rows_merged": 0,
+    "rows_merged": 10,
     "rows_parsed": 63,
     "source_count": 1,
     "source_pattern": "https://www.forexfactory.com/calendar?week=<week>",
@@ -86,7 +86,7 @@
   "contract": "ROLLING_3650D_EVENT_AND_METRIC_HISTORY_PRESERVE_V2",
   "coverage_scope": "ARCHIVE_BOUNDARY_AND_FETCH_ERRORS_ONLY",
   "coverage_status": "FULL",
-  "generated_kst": "2026-11-09T06:34:42+09:00",
+  "generated_kst": "2026-11-09T07:28:50+09:00",
   "missing_policy": "Historical consensus/actual is shown only when captured or verified; values are never synthesized.",
   "row_count": 37813,
   "schema": "JJOONI_CALENDAR_HISTORY_INDEX_V1",
@@ -2927,7 +2927,7 @@
       "kind": "event",
       "label": "CPI y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/08b2b57eaa650b51deb287c8222d9e8e7730eb7563be9cf9e1bcc3d155c8a9d6.json",
+      "path": "./calendar-history/series/589fde13627ff03586b6e6777a0114137c17b0a9f62985898ffce812a2583b03.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -2950,7 +2950,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CN::cpi-y-y",
-      "sha256": "08b2b57eaa650b51deb287c8222d9e8e7730eb7563be9cf9e1bcc3d155c8a9d6"
+      "sha256": "589fde13627ff03586b6e6777a0114137c17b0a9f62985898ffce812a2583b03"
     },
     "FF::CN::fixed-asset-investment-ytd-y": {
       "available_from": "2016-11-14",
@@ -3106,7 +3106,7 @@
       "kind": "event",
       "label": "M2 Money Supply y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/0b050d2f9eb4e466ccb86b3164d20dd236a7898723f648ed1a70f28e56e26ad2.json",
+      "path": "./calendar-history/series/1b6566a1bdf1d40f88fc7bfcc194996e8dfc3633815db9b55bfcea718c520bd8.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -3129,7 +3129,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CN::m2-money-supply-y-y",
-      "sha256": "0b050d2f9eb4e466ccb86b3164d20dd236a7898723f648ed1a70f28e56e26ad2"
+      "sha256": "1b6566a1bdf1d40f88fc7bfcc194996e8dfc3633815db9b55bfcea718c520bd8"
     },
     "FF::CN::manufacturing-pmi": {
       "available_from": "2016-12-01",
@@ -3212,7 +3212,7 @@
       "kind": "event",
       "label": "New Loans",
       "metric_key": null,
-      "path": "./calendar-history/series/4e38a1df9deb14f58791d280b1eac5123e4052210e04eab64ee85d5709e97b54.json",
+      "path": "./calendar-history/series/5b57105951069f50785a9772a5d2a665a64386490e342c5c04d254535ba93a1f.json",
       "quality": {
         "actual_count": 120,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -3235,7 +3235,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CN::new-loans",
-      "sha256": "4e38a1df9deb14f58791d280b1eac5123e4052210e04eab64ee85d5709e97b54"
+      "sha256": "5b57105951069f50785a9772a5d2a665a64386490e342c5c04d254535ba93a1f"
     },
     "FF::CN::non-manufacturing-pmi": {
       "available_from": "2016-12-01",
@@ -3284,7 +3284,7 @@
       "kind": "event",
       "label": "PPI y/y",
       "metric_key": null,
-      "path": "./calendar-history/series/7f3e7e8ffe4cf1ee85ef085497efbd2b471b4b41504aa0fea25fc18c141c4062.json",
+      "path": "./calendar-history/series/6cd17de17eff674ecc925ef82d9cf7fca9744fd31aa3d14653bc6d83be84ebd4.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -3307,7 +3307,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CN::ppi-y-y",
-      "sha256": "7f3e7e8ffe4cf1ee85ef085497efbd2b471b4b41504aa0fea25fc18c141c4062"
+      "sha256": "6cd17de17eff674ecc925ef82d9cf7fca9744fd31aa3d14653bc6d83be84ebd4"
     },
     "FF::CN::ratingdog-manufacturing-pmi": {
       "available_from": "2016-12-01",
@@ -3428,7 +3428,7 @@
       "kind": "event",
       "label": "Trade Balance",
       "metric_key": null,
-      "path": "./calendar-history/series/e8306c1062b41cf2e362ca17bac61ddad1381d01cc36f42e61bc3b2362160875.json",
+      "path": "./calendar-history/series/1224160ac3fb93d29144d296de15caeee158c7bffebd4108091fdb2868836483.json",
       "quality": {
         "actual_count": 112,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -3451,7 +3451,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CN::trade-balance",
-      "sha256": "e8306c1062b41cf2e362ca17bac61ddad1381d01cc36f42e61bc3b2362160875"
+      "sha256": "1224160ac3fb93d29144d296de15caeee158c7bffebd4108091fdb2868836483"
     },
     "FF::CN::unemployment-rate": {
       "available_from": "2018-04-17",
@@ -3498,7 +3498,7 @@
       "kind": "event",
       "label": "USD-Denominated Trade Balance",
       "metric_key": null,
-      "path": "./calendar-history/series/3a85b61e8fe4d8f28e979ff402565ce5f449219cb7fb64e475351dde34d8972d.json",
+      "path": "./calendar-history/series/754581324b36975a82b57083072a1cf160776ded25a90f3ff6ec8ade0dccb757.json",
       "quality": {
         "actual_count": 112,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -3521,7 +3521,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::CN::usd-denominated-trade-balance",
-      "sha256": "3a85b61e8fe4d8f28e979ff402565ce5f449219cb7fb64e475351dde34d8972d"
+      "sha256": "754581324b36975a82b57083072a1cf160776ded25a90f3ff6ec8ade0dccb757"
     },
     "FF::EU::belgian-nbb-business-climate": {
       "available_from": "2016-11-24",
@@ -5184,7 +5184,7 @@
       "kind": "event",
       "label": "German Trade Balance",
       "metric_key": null,
-      "path": "./calendar-history/series/9ae1c808e2d38c8adec1f27892420a909ef9774564d790ea4baa8e4d11c1e4d7.json",
+      "path": "./calendar-history/series/1ac62a4e2e42ef106005441b174b2785dad517bfad6ab3e17eab761009d42a08.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -5207,7 +5207,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::german-trade-balance",
-      "sha256": "9ae1c808e2d38c8adec1f27892420a909ef9774564d790ea4baa8e4d11c1e4d7"
+      "sha256": "1ac62a4e2e42ef106005441b174b2785dad517bfad6ab3e17eab761009d42a08"
     },
     "FF::EU::german-unemployment-change": {
       "available_from": "2016-11-30",
@@ -6056,7 +6056,7 @@
       "kind": "event",
       "label": "Sentix Investor Confidence",
       "metric_key": null,
-      "path": "./calendar-history/series/7cedc00ba35a437ea474d2dfd2e68cdbc99dd85f6f25b4c0d37131b86231cfaf.json",
+      "path": "./calendar-history/series/ecd94f826520e57d41fb786a6e1776db06a403cbe83a449d8642fd122970d7fd.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -6079,7 +6079,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::EU::sentix-investor-confidence",
-      "sha256": "7cedc00ba35a437ea474d2dfd2e68cdbc99dd85f6f25b4c0d37131b86231cfaf"
+      "sha256": "ecd94f826520e57d41fb786a6e1776db06a403cbe83a449d8642fd122970d7fd"
     },
     "FF::EU::spanish-10-y-bond-auction": {
       "available_from": "2016-11-17",
@@ -8886,7 +8886,7 @@
       "kind": "event",
       "label": "Leading Indicators",
       "metric_key": null,
-      "path": "./calendar-history/series/8503d3588fdfd6e5dcb9a672867961cfc6af870ea603df86c68afb2b2d241d09.json",
+      "path": "./calendar-history/series/b004fbba573438236d19bc9ffc0e8d27357417b5f809c41e5f73bee29ed388b1.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -8909,7 +8909,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::JP::leading-indicators",
-      "sha256": "8503d3588fdfd6e5dcb9a672867961cfc6af870ea603df86c68afb2b2d241d09"
+      "sha256": "b004fbba573438236d19bc9ffc0e8d27357417b5f809c41e5f73bee29ed388b1"
     },
     "FF::JP::m2-money-stock-y-y": {
       "available_from": "2016-12-09",
@@ -11435,7 +11435,7 @@
       "kind": "event",
       "label": "Final Wholesale Inventories m/m",
       "metric_key": null,
-      "path": "./calendar-history/series/c7b03644d29f51136572137dc3d2b2d7b3fa1016d3c1d2d60fd64930b8051f0b.json",
+      "path": "./calendar-history/series/25fc8df5f60b1ef9d79d27a1a95423eaf36e6b3f640033d8e12853abafcfb9f9.json",
       "quality": {
         "actual_count": 119,
         "backtest_policy": "AS_RELEASED_VINTAGE_REQUIRED",
@@ -11458,7 +11458,7 @@
         "status": "OBSERVED_ONLY_NOT_VALIDATED_COMPLETE"
       },
       "ref": "FF::US::final-wholesale-inventories-m-m",
-      "sha256": "c7b03644d29f51136572137dc3d2b2d7b3fa1016d3c1d2d60fd64930b8051f0b"
+      "sha256": "25fc8df5f60b1ef9d79d27a1a95423eaf36e6b3f640033d8e12853abafcfb9f9"
     },
     "FF::US::goods-trade-balance": {
       "available_from": "2016-11-25",
@@ -14854,8 +14854,8 @@
   },
   "series_completeness_status": "NOT_VALIDATED",
   "series_count": 439,
-  "snapshot_id": "40b7885943aff1458f4b8168e05f3822f6a5bdff418f19d8d87f7172b9562a88",
-  "source_sha256": "40b7885943aff1458f4b8168e05f3822f6a5bdff418f19d8d87f7172b9562a88",
+  "snapshot_id": "bb22787d164eef45f132b8fad51f1018918f36bd1a72e331cea51a189ac15177",
+  "source_sha256": "bb22787d164eef45f132b8fad51f1018918f36bd1a72e331cea51a189ac15177",
   "timezone": "Asia/Seoul",
   "window_days": 3650,
   "window_end": "2026-11-09",
