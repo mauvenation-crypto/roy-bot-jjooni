@@ -4,6 +4,7 @@ import csv, io, json, math, urllib.parse, urllib.request
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from yahoo_bar_date import bar_date
 
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'market-observatory'/'data';OBS=DATA/'observatory.json';ARCH=DATA/'history-30y.json'
@@ -28,7 +29,7 @@ def yahoo_max(symbol):
         if v is None:continue
         try:v=float(v)
         except:continue
-        if math.isfinite(v):out.append({'date':datetime.fromtimestamp(int(t),ET).date().isoformat(),'value':round(v,8)})
+        if math.isfinite(v):out.append({'date':bar_date(t,b,ET),'value':round(v,8)})
     return merge([],out)
 def treasury_year(year):
     url=f'https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/{year}/all?type=daily_treasury_yield_curve&field_tdr_date_value={year}&page&_format=csv';rows=[]

@@ -9,6 +9,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from calendar_actual_contract import merge_observation, retain_calendar, PROVENANCE
 from observatory_session import expected_completed_session
+from yahoo_bar_date import bar_date
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT_DIR=ROOT/'market-observatory'/'data'; OUT_DIR.mkdir(parents=True,exist_ok=True)
@@ -54,7 +55,7 @@ def yahoo_series(symbol,range_='3y'):
         try:v=float(v)
         except:continue
         if not math.isfinite(v):continue
-        d=datetime.fromtimestamp(int(t),ET).date().isoformat()
+        d=bar_date(t,b,ET)
         out.append({'date':d,'value':round(v,8)})
     ded={x['date']:x for x in out}; return [ded[k] for k in sorted(ded)]
 

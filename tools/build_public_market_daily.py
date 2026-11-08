@@ -11,6 +11,7 @@ from datetime import datetime, date
 from pathlib import Path
 from zoneinfo import ZoneInfo
 from tripod_rules import regime_for, target_for
+from yahoo_bar_date import bar_date
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'public-market-daily.json'
@@ -61,7 +62,7 @@ def daily_rows(symbol: str, range_: str = '1mo') -> list[tuple[str, float]]:
             continue
         if not math.isfinite(v) or v <= 0:
             continue
-        d = datetime.fromtimestamp(int(t), ET).date().isoformat()
+        d = bar_date(t, block, ET)
         if d in seen:
             continue
         seen.add(d)

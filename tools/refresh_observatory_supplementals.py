@@ -16,9 +16,10 @@ import math
 import re
 import urllib.parse
 import urllib.request
-from datetime import datetime, timedelta, time
+from datetime import date, datetime, timedelta, time
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from yahoo_bar_date import bar_date
 
 ROOT=Path(__file__).resolve().parents[1]
 OBS=ROOT/'market-observatory'/'data'/'observatory.json'
@@ -62,7 +63,7 @@ def yahoo_series(symbol):
         try:value=float(value)
         except Exception:continue
         if not math.isfinite(value) or value<=0:continue
-        out.append({'date':datetime.fromtimestamp(int(stamp),ET).date().isoformat(),'value':round(value,8)})
+        out.append({'date':bar_date(stamp,result,ET),'value':round(value,8)})
     ded={x['date']:x for x in out};return [ded[k] for k in sorted(ded)]
 
 def merge_rows(old,new):
@@ -108,7 +109,13 @@ def refresh_yahoo(data):
 
     for key in CONTINUOUS:
         fresh=[x for x in fetched.get(key,[]) if not common or x['date']<=common]
-        rows=merge_rows(previous[key],fresh)
+        # Inside the freshly fetched window the fetch is authoritative: rows
+        # stored under an older date convention (FX was labelled one day early)
+        # must be replaced, not merged, or one close would sit on two dates.
+        # The 3-day margin drops a shifted boundary row just before the window.
+        edge=(date.fromisoformat(fresh[0]['date'])-timedelta(days=3)).isoformat() if fresh else ''
+        kept=[x for x in previous[key] if str(x.get('date') or '')<edge] if fresh else previous[key]
+        rows=merge_rows(kept,fresh)
         if common:rows=[x for x in rows if x['date']<=common]
         sm[key]=rows;latest[key]=rows[-1]['value'] if rows else None
         last=rows[-1]['date'] if rows else None
