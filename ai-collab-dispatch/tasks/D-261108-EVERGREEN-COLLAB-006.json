@@ -1,0 +1,31 @@
+{
+  "schema": "JJOONI_COLLAB_V4",
+  "task_id": "D-261108-EVERGREEN-COLLAB-006",
+  "repository": "mauveplace/jjooni-control-tower",
+  "base_branch": "main",
+  "source_sha": null,
+  "objective": "Independently audit the PR-agnostic JJOONI/ROY two-agent collaboration V4 protocol and deterministic coordinator; identify misrouting, missing SHA checks, incorrect trigger assumptions, and unsafe write/deploy paths. Do not edit source on this task.",
+  "mode": "SYSTEM_REVIEW_ONLY",
+  "privacy": "PUBLIC_DATA_ONLY",
+  "required_reviewers": [
+    "ROY"
+  ],
+  "optional_reviewers": [
+    "JJANGGU"
+  ],
+  "acceptance": [
+    "Demonstrate no PR number, old HEAD, or specific date is hardcoded in the runtime or webhook prompts; identify any violations",
+    "Verify required_reviewers can be ROY alone and optional JJANGGU never blocks",
+    "Review response-marker parser for different PR HEADs, duplicates, stale role claims and external event provenance caveats",
+    "Review ROY PR.opened/labeled/synchronize and JJOONI Work PR/comment event limitations; distinguish supported features from configured features",
+    "Check no task file or PR comment can authorize automatic main merges, deployments or broker orders",
+    "Provide source-backed verdict and one review comment with actual Claude session provenance and complete current PR HEAD SHA"
+  ],
+  "release_gate": "USER_APPROVAL_REQUIRED",
+  "owner_approval_evidence": null,
+  "forbidden": [
+    "No secrets or non-public company/account/customer data",
+    "No automated production deploy, merge or trade",
+    "No paid model API or new cloud infrastructure without explicit authorization"
+  ]
+}

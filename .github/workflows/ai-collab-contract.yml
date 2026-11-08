@@ -1,0 +1,45 @@
+name: AI Collaboration Read-Only Contract
+
+on:
+  pull_request:
+    paths:
+      - 'ai-collab/**'
+      - 'ai-collab-dispatch/**'
+      - 'tests/test_ai_collab_v4_suite.py'
+      - 'tests/ai-collab-dashboard.test.cjs'
+      - '.github/workflows/ai-collab-contract.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ai-collab/**'
+      - 'ai-collab-dispatch/**'
+      - 'tests/test_ai_collab_v4_suite.py'
+      - 'tests/ai-collab-dashboard.test.cjs'
+      - '.github/workflows/ai-collab-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-collab-contract-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Explicitly discover collaboration Python contract tests
+        run: python -m unittest discover -s ai-collab/tests -p 'test_*.py' -v
+      - name: Check root-discovery bridge
+        run: python -m unittest discover -s tests -p 'test_ai_collab_v4_suite.py' -v
+      - name: Validate static dashboard behavior
+        run: node --test tests/ai-collab-dashboard.test.cjs

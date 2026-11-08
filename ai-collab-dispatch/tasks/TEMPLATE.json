@@ -1,0 +1,30 @@
+{
+  "schema": "JJOONI_COLLAB_V4",
+  "task_id": "REPLACE-WITH-UNIQUE-TASK-ID",
+  "repository": "mauveplace/jjooni-control-tower",
+  "base_branch": "main",
+  "source_sha": null,
+  "objective": "Replace with an actionable public-source-only objective and complete acceptance criteria",
+  "mode": "SYSTEM_REVIEW_ONLY",
+  "privacy": "PUBLIC_DATA_ONLY",
+  "required_reviewers": [
+    "ROY"
+  ],
+  "optional_reviewers": [
+    "JJANGGU"
+  ],
+  "acceptance": [
+    "Independently verify code or documents with file and line evidence",
+    "Explain remaining risks and tests before requesting a user-approved merge"
+  ],
+  "release_gate": "USER_APPROVAL_REQUIRED",
+  "owner_approval_evidence": null,
+  "forbidden": [
+    "No secrets or non-public company/account/customer data",
+    "No automated production deploy, merge or trade",
+    "No paid model API or new cloud infrastructure without explicit authorization"
+  ],
+  "origin": "USER_TO_JJOONI",
+  "work_type": "general",
+  "coordination_notes": "Entry origin may be USER_TO_JJOONI, USER_TO_ROY, or GITHUB_EVENT. Work type chooses the specialist, not merge authority. Capacity/running/usage is UNKNOWN unless proven by actual source."
+}

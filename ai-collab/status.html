@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JJOONI × ROY | 협업 현황판</title>
+<meta name="description" content="공개 GitHub PR의 쭈니·로이 협업 활동을 검증 가능한 범위에서 조회하는 읽기 전용 현황판">
+<style>
+:root{font-family:system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:#15263b;background:#f5f7fa;font-synthesis:none}
+*{box-sizing:border-box} body{margin:0} a{color:#1558af;text-decoration:none}a:hover{text-decoration:underline}
+header{background:#fff;border-bottom:1px solid #dce3eb;padding:20px clamp(16px,4vw,52px)}
+.wrap{max-width:1360px;margin:auto}h1{font-size:clamp(22px,3vw,32px);margin:6px 0 5px;letter-spacing:-.04em}
+.subtitle,.muted{color:#667689}.subtitle{font-size:14px;line-height:1.6}
+main{max-width:1360px;padding:23px clamp(14px,4vw,52px) 55px;margin:auto}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-bottom:16px}
+.panel,.stat{background:#fff;border:1px solid #dfe6ed;border-radius:13px;padding:17px;box-shadow:0 2px 10px #12294408}
+.stat .num{font-size:27px;font-weight:750;letter-spacing:-.05em;margin-top:6px}.stat .label{font-size:12px;color:#64748b}
+.notice{font-size:13px;line-height:1.6;background:#f0f5fd;border:1px solid #d7e5f9;border-radius:11px;padding:12px 15px;margin-bottom:17px;color:#254b76}
+.toolbar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:15px}
+button,input,select{font:inherit;border:1px solid #cbd5e1;border-radius:9px;padding:10px 11px;background:#fff;color:#15263b}
+button{cursor:pointer;font-weight:650}button.primary{background:#184b8a;border-color:#184b8a;color:#fff}button:hover:not(:disabled){filter:brightness(.96)}
+button:disabled{opacity:.5;cursor:not-allowed}input{flex:1;min-width:175px}
+.grid{display:grid;grid-template-columns:minmax(290px,390px) minmax(0,1fr);gap:16px;align-items:start}
+.section-title{margin:0 0 12px;font-size:15px;font-weight:750}
+.pr-list{display:grid;gap:7px;max-height:700px;overflow:auto}
+.pr{border:1px solid #dfe6ed;padding:11px 12px;text-align:left;border-radius:10px;cursor:pointer;background:#fff;width:100%;display:block}
+.pr.selected{border-color:#407ed4;background:#f0f6ff}.pr-title{font-size:13px;font-weight:650;line-height:1.42;word-break:break-word}
+.pr-meta,.tiny{font-size:12px;color:#667689;line-height:1.6;margin-top:6px}
+.tag{display:inline-flex;align-items:center;padding:3px 7px;border:1px solid #e1e7ee;border-radius:20px;font-size:11px;font-weight:650;color:#5d697c;background:#f6f8fb;white-space:nowrap}
+.tag.ok{background:#ecf8f1;border-color:#c8ebd4;color:#216b3e}.tag.wait{background:#fff7e8;border-color:#f6e4b7;color:#84571c}
+.tag.bad{background:#fff1f1;border-color:#ffd7d5;color:#b43333}
+.row{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:14px}
+.role{border:1px solid #e0e7ee;border-radius:10px;padding:12px;min-width:0}
+.role strong{font-size:15px}.role .small{font-size:12px;color:#6b778a;line-height:1.6;margin-top:7px}
+.role .status{font-weight:700;margin-top:10px;display:block;font-size:13px}
+h2{font-size:16px;margin:22px 0 10px}.event{border-top:1px solid #e5eaf0;padding:13px 0}
+.event:first-child{border-top:none}.event p{margin:5px 0 0;color:#48566a;font-size:12px;white-space:pre-wrap;word-break:break-word;line-height:1.5}
+.event-title{font-weight:680;font-size:13px;word-break:break-word}
+.detail{min-height:410px}.empty{padding:50px 15px;text-align:center;color:#64748b;font-size:14px}
+.foot{font-size:12px;color:#667689;margin-top:15px;line-height:1.65}
+.error{color:#b42318;font-size:13px;margin:8px 0}
+@media(max-width:850px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.pr-list{max-height:380px}}
+@media(max-width:430px){.stats{gap:8px}.stat{padding:12px}.roles{grid-template-columns:1fr}.toolbar select{max-width:100%}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="tiny">JJOONI INVESTMENT CONTROL TOWER · AI COLLABORATION</div><h1>쭈니 × 로이 협업 현황판</h1>
+<div class="subtitle">누가 어떤 PR을 검토했는지, 현재 HEAD에 대한 회신이 있는지, 어디에서 다음 검토가 필요한지 확인합니다. 별도 서버·API 키 없음.</div></div></header>
+<main>
+<div class="notice">읽기 전용 · 이 화면은 <strong>공개 GitHub 기록</strong>만 조회합니다. AI의 실시간 실행 여부, 남은 구독 사용량, Work/Claude 내부 세션은 GitHub만으로 확인할 수 없습니다. 댓글에 표시된 역할과 Claude 세션 링크도 독립 인증 전에는 <strong>검증되지 않은 주장</strong>입니다.</div>
+<div class="stats">
+ <div class="stat"><div class="label">표시된 열린 PR</div><div id="countAll" class="num">—</div></div>
+ <div class="stat"><div class="label">협업 표시 PR</div><div id="countCollab" class="num">—</div></div>
+ <div class="stat"><div class="label">현재 HEAD의 로이 회신</div><div id="countRoy" class="num">—</div></div>
+ <div class="stat"><div class="label">마지막 GitHub 조회</div><div id="checked" class="num" style="font-size:18px">—</div></div>
+</div>
+<div class="toolbar"><button id="reload" class="primary">↻ GitHub 최신 조회</button><input id="search" type="search" placeholder="PR 번호·제목 검색" aria-label="PR 검색"><select id="filter" aria-label="PR 필터"><option value="all">열린 PR 전체</option><option value="collab">AI 협업 PR만</option></select></div>
+<div id="error" class="error" role="alert"></div>
+<div class="grid">
+ <section class="panel"><h2 class="section-title">GitHub 작업 목록</h2><div id="prs" class="pr-list"><div class="empty">공개 GitHub 데이터 조회 전</div></div><div class="foot">최근 업데이트된 열린 PR 최대 30개 · 자동 새로고침 없음 · GitHub 비인증 요청 한도에 따라 조회가 제한될 수 있습니다.</div></section>
+ <section class="panel detail"><div id="details" class="empty">왼쪽에서 PR을 선택하면 역할별 회신과 활동 이력이 나타납니다.</div></section>
+</div>
+<section class="panel" style="margin-top:16px"><div class="row"><h2 class="section-title">로이 후속 검토 요청 이슈</h2><span class="tag">GitHub Issues · 실행 상태 아님</span></div><div id="followups" class="pr-list"><div class="empty">요청 이슈 조회 전</div></div><div class="foot">이슈가 열려 있어도 실제 Claude 세션이 시작됐다는 뜻은 아닙니다. 원본 이슈와 대상 PR의 현재 HEAD를 반드시 대조합니다.</div></section>
+<div class="foot">데이터 원천: <a href="https://github.com/mauveplace/jjooni-control-tower/pulls" target="_blank" rel="noopener noreferrer">mauveplace/jjooni-control-tower</a>. 모든 링크는 원문 GitHub 또는 Claude 세션으로 연결합니다. 이 현황판은 검토 승인, 모델 실행, 커밋, 배포, 거래를 수행하지 않습니다.</div>
+</main>
+<script>
+"use strict";
+(function(){
+ const API="https://api.github.com/repos/mauveplace/jjooni-control-tower";
+ const BASE="https://github.com/mauveplace/jjooni-control-tower";
+ const $$=id=>document.getElementById(id);
+ const state={prs:[],issues:[],selected:null,details:new Map(),lastReload:0,loadToken:0};
+ const short=s=>typeof s==="string"?s.slice(0,8):"—";
+ const dt=s=>s?new Date(s).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"}):"—";
+ const e=(tag,cls,text)=>{const x=document.createElement(tag);if(cls)x.className=cls;if(text!=null)x.textContent=String(text);return x;};
+ const safeLink=(url,label)=>{const a=e("a","",label);try{const u=new URL(url);if(!["github.com","claude.ai"].includes(u.hostname)||u.protocol!=="https:")throw 1;a.href=u.href;a.target="_blank";a.rel="noopener noreferrer";}catch(_){return e("span","muted",label);}return a;};
+ function tag(label,kind){return e("span","tag "+(kind||""),label);}
+ function isCollab(pr){return (pr.title||"").includes("[AI-COLLAB]")||/ai-collab-dispatch\/tasks\//.test(pr.body||"");}
+ function setError(text){ $$("error").textContent=text||""; }
+ async function read(path){const ctl=new AbortController();const timer=setTimeout(()=>ctl.abort(),12000);try{const res=await fetch(API+path,{headers:{"Accept":"application/vnd.github+json"},signal:ctl.signal,cache:"no-store"});if(!res.ok){const reset=res.headers.get("x-ratelimit-reset");throw new Error("GitHub "+res.status+(res.status===403?" · 요청 한도 초과 또는 접근 제한"+(reset?" (reset Unix: "+reset+")":""):""));}return await res.json();}finally{clearTimeout(timer);}}
+ function renderFollowups(){
+  const target=$("followups");target.replaceChildren();
+  if(state.issues===null){target.append(e("div","empty","GitHub 이슈 조회 실패 · 사용량이나 ROY 실행 상태를 추정하지 않습니다."));return;}
+  const tickets=state.issues.filter(x=>!x.pull_request&&(x.title||"").startsWith("[AI-COLLAB][ROY-REQUEST] "));
+  if(!tickets.length){target.append(e("div","empty","열려 있는 후속 검토 요청 이슈가 없습니다."));return;}
+  for(const item of tickets){
+   const entry=e("div","pr");const hdr=e("div","row");hdr.append(tag("#"+item.number),tag("요청됨 · 실행 미확인","wait"));entry.append(hdr);
+   const label=e("div","pr-title");label.append(safeLink(item.html_url,item.title||"Follow-up request"));entry.append(label);
+   const m=(item.body||"").match(/(?:^|\n)Target-PR:[ \t]*([1-9][0-9]*)/);
+   const sh=(item.body||"").match(/(?:^|\n)Expected-HEAD:[ \t]*([a-f0-9]{40})/);
+   const foot=e("div","pr-meta","등록 "+dt(item.created_at)+" · 대상 PR "+(m?"#"+m[1]:"미확인")+" · 요청 SHA "+(sh?short(sh[1]):"미확인"));
+   entry.append(foot);target.append(entry);
+  }
+ }
+ function renderList(){
+  const needle=$$("search").value.trim().toLowerCase();const filter=$$("filter").value;
+  const shown=state.prs.filter(pr=>(filter!=="collab"||isCollab(pr))&&(!needle||String(pr.number).includes(needle)||(pr.title||"").toLowerCase().includes(needle)));
+  const list=$$("prs");list.replaceChildren();
+  if(!shown.length){list.append(e("div","empty","표시할 PR이 없습니다."));return;}
+  for(const pr of shown){
+   const b=e("button","pr"+(state.selected===pr.number?" selected":""),"");
+   b.type="button";b.setAttribute("aria-label","PR "+pr.number+" 상세 보기");
+   const rr=e("div","row");rr.append(tag("#"+pr.number));if(isCollab(pr))rr.append(tag("AI 협업","ok"));if(pr.draft)rr.append(tag("Draft"));
+   b.append(rr,e("div","pr-title",pr.title),e("div","pr-meta","변경 "+dt(pr.updated_at)+" · "+short(pr.head&&pr.head.sha)));
+   b.addEventListener("click",()=>selectPR(pr.number));list.append(b);
+  }
+ }
+ function parseReview(body){
+   if(typeof body!=="string")return null;
+   const first=body.split(/\r?\n/,1)[0];
+   const v4=first.match(/^<!-- JJOONI-COLLAB-V4 task=([A-Za-z0-9._-]+) actor=(ROY|JJOONI|JJANGGU) stage=(review|independent-review) head=([a-f0-9]{40}) -->$/);
+   const v3=first.match(/^<!-- JJOONI-COLLAB-V3 task=([A-Za-z0-9._-]+) actor=(ROY|JJOONI|JJANGGU) snapshot=([a-f0-9]{40}) -->$/);
+   const v2=first.match(/^<!-- JJOONI-COLLAB-V2 task=([A-Za-z0-9._-]+) actor=(ROY|JJANGGU) kind=review head=([a-f0-9]{40}) -->$/);
+   let claim=null;if(v4)claim={actor:v4[2],task:v4[1],head:v4[4]};else if(v3)claim={actor:v3[2],task:v3[1],head:v3[3]};else if(v2)claim={actor:v2[2],task:v2[1],head:v2[3]};
+   const verdict=(body.match(/\b(PASS|NEEDS_CHANGES|BLOCKED|NEEDS_DATA)\b/)||[])[1]||null;
+   const session=(body.match(/https:\/\/claude\.ai\/code\/session_[a-zA-Z0-9_-]+/)||[])[0]||null;
+   return {claim,verdict,session,body};
+ }
+ async function selectPR(number){
+  state.selected=number;renderList();
+  const token=++state.loadToken;const pr=state.prs.find(x=>x.number===number);
+  const box=$$("details");box.replaceChildren(e("div","empty","PR 댓글·리뷰 기록을 확인하는 중…"));
+  try{
+   let data=state.details.get(number);
+   if(!data||Date.now()-data.time>45000){
+    const vals=await Promise.all([
+     read("/issues/"+number+"/comments?per_page=100"),
+     read("/pulls/"+number+"/reviews?per_page=60"),
+     read("/pulls/"+number+"/comments?per_page=60")
+    ]);
+    data={time:Date.now(),items:[...vals[0],...vals[1],...vals[2]]};
+    state.details.set(number,data);
+   }
+   if(token!==state.loadToken)return;
+   renderDetail(pr,data.items);
+  }catch(err){if(token!==state.loadToken)return;box.replaceChildren(e("div","empty","기록 조회 실패: "+String(err.message||err)));setError("선택한 PR의 상세 기록을 불러오지 못했습니다. GitHub 요청 한도를 확인해주세요.");}
+ }
+ function renderDetail(pr,items){
+  const box=$$("details");box.replaceChildren();
+  const head=pr.head&&pr.head.sha||"";
+  const line=e("div","row");const h=e("h2","", "#"+pr.number+" · "+pr.title);h.style.margin="0";line.append(h,safeLink(pr.html_url||BASE+"/pull/"+pr.number,"PR 원문 보기"));box.append(line);
+  box.append(e("div","tiny","현재 HEAD "+head+" · 마지막 변경 "+dt(pr.updated_at)+" · "+(pr.draft?"Draft":"Open")));
+  const candidates=items.map(x=>({obj:x,parsed:parseReview(x.body),date:x.submitted_at||x.created_at||x.updated_at||""}))
+    .sort((a,b)=>new Date(b.date)-new Date(a.date));
+  const latest={ROY:null,JJOONI:null};for(const item of candidates){
+   const actor=item.parsed&&item.parsed.claim&&item.parsed.claim.actor;
+   if((actor==="ROY"||actor==="JJOONI")&&!latest[actor])latest[actor]=item;
+  }
+  const roles=e("div","roles");
+  for(const actor of ["JJOONI","ROY"]){
+   const card=e("div","role");card.append(e("strong","",actor==="ROY"?"로이 · Claude":"쭈니 · ChatGPT"));
+   const x=latest[actor];const match=!!(x&&x.parsed.claim.head===head);
+   card.append(e("div","status",match?"현재 HEAD 회신 확인":x?"과거 HEAD 회신만 있음":"구조화된 회신 미확인"));
+   card.append(e("div","small",x?"마지막 댓글: "+dt(x.date)+" · 판정 "+(x.parsed.verdict||"표기 없음"):"GitHub에서 역할 검토 댓글을 확인하지 못했습니다."));
+   if(x){card.append(tag(match?"현재 변경 검토 기록":"이전 변경 검토 기록",match?"ok":"wait"));card.append(e("div","small","역할 표시는 댓글 작성자의 주장입니다. 실제 AI 실행·사용량·세션은 별도 확인해야 합니다."));if(x.parsed.session){const k=e("div","small");k.append(safeLink(x.parsed.session,"댓글에 기재된 Claude 세션"));card.append(k);}}
+   else card.append(e("div","small","사용량·실행 상태: 확인 불가"));
+   roles.append(card);
+  }
+  box.append(roles);
+  const progress=e("div","notice");progress.style.marginTop="14px";progress.style.marginBottom="4px";
+  const royCurrent=latest.ROY&&latest.ROY.parsed.claim.head===head, jCurrent=latest.JJOONI&&latest.JJOONI.parsed.claim.head===head;
+  progress.textContent=royCurrent&&jCurrent?"현재 HEAD에 양측 회신 기록이 있습니다. 진위와 독립 검토는 별도 확인 필요":royCurrent?"로이 회신 기록이 있습니다. 쭈니의 동일 HEAD 독립 검토는 GitHub에서 미확인":jCurrent?"쭈니 회신 기록이 있습니다. 로이의 동일 HEAD 회신은 GitHub에서 미확인":"현재 HEAD에 양측 구조화된 회신이 없습니다. 실행 중·사용량 소진이라고 단정할 수 없습니다.";
+  box.append(progress);
+  box.append(e("h2","","최근 공개 활동 · "+candidates.length+"건"));
+  if(!candidates.length){box.append(e("div","empty","댓글이나 리뷰 기록이 없습니다."));return;}
+  for(const {obj,parsed,date} of candidates.slice(0,18)){
+   const ev=e("div","event");const hdr=e("div","row");
+   const author=obj.user&&obj.user.login||"Unknown";const actor=parsed&&parsed.claim&&parsed.claim.actor;
+   hdr.append(e("span","event-title",(actor?actor+" (표기) · ":"")+author));
+   hdr.append(e("span","tiny",dt(date)));ev.append(hdr);
+   if(parsed&&parsed.claim){const s=e("div","row");s.append(tag("Task "+parsed.claim.task));s.append(tag(parsed.claim.head===head?"현재 HEAD":"과거 HEAD",parsed.claim.head===head?"ok":"wait"));if(parsed.verdict)s.append(tag(parsed.verdict,parsed.verdict==="PASS"?"ok":parsed.verdict==="BLOCKED"?"bad":"wait"));ev.append(s);}
+   const body=parsed&&parsed.body||obj.body||"";ev.append(e("p","",body.slice(0,450)+(body.length>450?"…":"")));
+   const url=obj.html_url;const links=e("div","tiny");if(url)links.append(safeLink(url,"GitHub 원문"));if(parsed&&parsed.session){links.append(document.createTextNode(" · "));links.append(safeLink(parsed.session,"Claude 세션(미인증)"));}ev.append(links);
+   box.append(ev);
+  }
+  $$("countRoy").textContent=royCurrent?"1":"0";
+ }
+ async function reload(){
+  if(Date.now()-state.lastReload<20000){setError("연속 API 조회를 줄이기 위해 20초 뒤 다시 시도해주세요.");return;}
+  state.lastReload=Date.now();$$("reload").disabled=true;setError("");
+  try{
+   const [list,issues]=await Promise.all([read("/pulls?state=open&sort=updated&direction=desc&per_page=30"),read("/issues?state=open&sort=created&direction=desc&per_page=50").catch(()=>null)]);
+   state.prs=list;state.issues=issues;state.details.clear();
+   $$("countAll").textContent=String(list.length);
+   $$("countCollab").textContent=String(list.filter(isCollab).length);
+   $$("countRoy").textContent="—";
+   $$("checked").textContent=dt(new Date().toISOString());
+   renderList();renderFollowups();
+   const prev=list.find(x=>x.number===state.selected);
+   const pick=prev||list.find(isCollab)||list[0];
+   if(pick)await selectPR(pick.number);
+   else $$("details").replaceChildren(e("div","empty","현재 열린 PR이 없습니다."));
+  }catch(err){
+   setError("GitHub 연결 실패: "+String(err.message||err)+" · 공개 저장소/요청 한도를 확인하세요.");
+   if(!state.prs.length)$$("prs").replaceChildren(e("div","empty","GitHub 정보를 가져오지 못했습니다."));
+  }finally{$$("reload").disabled=false;}
+ }
+ $$("reload").addEventListener("click",reload);
+ $$("search").addEventListener("input",renderList);
+ $$("filter").addEventListener("change",renderList);
+ reload();
+})();
+</script>
+</body>
+</html>
