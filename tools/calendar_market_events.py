@@ -269,13 +269,18 @@ def apply_fedwatch_metric(calendar, fedwatch=None):
 def representative_metric(event):
     """The one metric whose previous/consensus/actual the event card shows.
 
-    Prefer the first metric that has a consensus, so the card's surprise is
-    always actual-vs-consensus of the SAME measure (CPI: previous 3.7% YoY
-    must never sit next to a 0.2% MoM consensus).
+    Prefer CPI headline YoY when present. If only the monthly forecast is
+    published, leave the YoY consensus blank rather than silently switching
+    the whole CPI card to a different metric. For other releases, prefer a
+    forecast-bearing measure; never mix YoY previous with MoM consensus.
     """
     metrics = [m for m in event.get('market_metrics') or [] if isinstance(m, dict) and
                m.get('metric_type') != 'market_probability_snapshot' and
                any(clean(m.get(k)) is not None for k in ['previous','consensus','actual'])]
+    if event.get('country') == 'US' and event.get('title') == 'Consumer Price Index':
+        headline = next((m for m in metrics if m.get('key') == 'cpi_yoy'), None)
+        if headline is not None:
+            return headline
     return next((m for m in metrics if clean(m.get('consensus')) is not None), metrics[0] if metrics else None)
 
 
