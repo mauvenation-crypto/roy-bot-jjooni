@@ -5,7 +5,7 @@
   const core = window.JjooniTripodComparisonCore;
   const meta = {
     standard: ['표준 TRI-POD', '#174ea6'], jjooni: ['쭈니 TRI-POD', '#d33779'],
-    ndx: ['Nasdaq-100', '#657184'], qqq: ['QQQ', '#008473'],
+    ndx: ['Nasdaq-100 (배당 제외)', '#657184'], qqq: ['QQQ', '#008473'],
     qld: ['QLD', '#ae6208'], tqqq: ['TQQQ', '#7952b3']
   };
   const pod = {TRIPOD: ['TRI', '#7d50bf'], BIPOD: ['BI', '#2965bc'],
