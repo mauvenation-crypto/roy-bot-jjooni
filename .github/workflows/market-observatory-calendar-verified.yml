@@ -23,6 +23,10 @@ on:
 permissions:
   contents: write
 
+env:
+  # Contact for official agencies (BLS) that reject anonymous scripted clients.
+  OFFICIAL_SOURCE_CONTACT: ${{ secrets.OFFICIAL_SOURCE_CONTACT }}
+
 jobs:
   verify-calendar:
     concurrency:

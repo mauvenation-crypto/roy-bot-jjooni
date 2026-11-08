@@ -79,8 +79,8 @@ def merge_generated(path, local, remote):
         if supplemental.get('supplemental_refreshed_kst') and supplemental.get('us_completed_session_date') == result.get('us_completed_session_date'):
             result['supplemental_refreshed_kst']=supplemental['supplemental_refreshed_kst']
             result['supplemental_refresh_contract']=supplemental.get('supplemental_refresh_contract')
-            owned=('NASDAQ100','SP500','VIX','RUSSELL2000','DOW','NASDAQCOMPOSITE','DXY','USDKRW','USDJPY','JPYKRW','WTI','BRENT','NATGAS','GOLD','SILVER','COPPER','KOSPI','KOSDAQ','FEAR_GREED','JP2Y','JP5Y','JP10Y','JP30Y','JP_2S10S')
-            jp_owned={'JP2Y','JP5Y','JP10Y','JP30Y','JP_2S10S'}
+            owned=('NASDAQ100','SP500','VIX','RUSSELL2000','DOW','NASDAQCOMPOSITE','DXY','USDKRW','USDJPY','JPYKRW','WTI','BRENT','NATGAS','GOLD','SILVER','COPPER','KOSPI','KOSDAQ','FEAR_GREED','JP2Y','JP5Y','JP10Y','JP20Y','JP30Y','JP_2S10S')
+            jp_owned={'JP2Y','JP5Y','JP10Y','JP20Y','JP30Y','JP_2S10S'}
             for key in owned:
                 if key in jp_owned:
                     # An older supplemental attempt must not erase a newly

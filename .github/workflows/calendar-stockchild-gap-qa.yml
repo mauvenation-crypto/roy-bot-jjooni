@@ -21,6 +21,10 @@ on:
 permissions:
   contents: read
 
+env:
+  # Contact for official agencies (BLS) that reject anonymous scripted clients.
+  OFFICIAL_SOURCE_CONTACT: ${{ secrets.OFFICIAL_SOURCE_CONTACT }}
+
 jobs:
   optional-source-safety:
     runs-on: ubuntu-latest

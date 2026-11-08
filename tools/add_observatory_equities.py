@@ -131,8 +131,8 @@ def coingecko_spot_observations(now=None):
             print('COINGECKO_QUOTE=WARN',key,type(exc).__name__,str(exc))
     return observations
 
-def crypto_observation(symbol, now=None):
-    qs=urllib.parse.urlencode({'interval':'1d','range':'3y','includePrePost':'false'})
+def crypto_observation(symbol, now=None, history_range='3y'):
+    qs=urllib.parse.urlencode({'interval':'1d','range':history_range,'includePrePost':'false'})
     url=YAHOO+urllib.parse.quote(symbol,safe='')+'?'+qs
     obj=get_json(url);now=now or datetime.now(UTC)
     rs=((obj.get('chart') or {}).get('result') or [])
@@ -183,7 +183,10 @@ def enrich_crypto(data):
                 previous_day=(datetime.fromisoformat(fresh[0]['date']).date()-timedelta(days=1)).isoformat()
                 history_ready=any(r.get('date')==previous_day and r.get('session_status')=='COMPLETED' for r in rows)
                 try:
-                    yahoo_rows=[] if history_ready else crypto_observation(symbol)[0]
+                    # Stored history only needs the recent gap repaired; a full
+                    # 3y pull is reserved for an empty/short series.
+                    repair_range='3y' if len(rows)<30 else '1mo'
+                    yahoo_rows=[] if history_ready else crypto_observation(symbol,history_range=repair_range)[0]
                     completed=[r for r in yahoo_rows if r.get('date','')<fresh[0]['date']
                                and r.get('session_status')=='COMPLETED']
                     rows=merge_rows(rows,completed)

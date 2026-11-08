@@ -50,6 +50,10 @@ concurrency:
   group: economic-calendar-canonical-writer
   cancel-in-progress: false
 
+env:
+  # Contact for official agencies (BLS) that reject anonymous scripted clients.
+  OFFICIAL_SOURCE_CONTACT: ${{ secrets.OFFICIAL_SOURCE_CONTACT }}
+
 jobs:
   refresh:
     runs-on: ubuntu-latest

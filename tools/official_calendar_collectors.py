@@ -11,7 +11,16 @@ from datetime import timedelta
 from html.parser import HTMLParser
 from calendar_actual_contract import KST, release_time, merge_observation, clean, actual_expected
 
-UA = 'Mozilla/5.0 JJOONI-Official-Calendar/2.0'
+def official_user_agent(contact=None):
+    """Identify this collector honestly; agencies such as BLS reject anonymous
+    browser-like scripted user agents. The contact comes from the repository
+    secret OFFICIAL_SOURCE_CONTACT and is never hard-coded here."""
+    contact = (os.environ.get('OFFICIAL_SOURCE_CONTACT') if contact is None else contact) or ''
+    contact = ' '.join(contact.split())[:120]
+    base = 'jjooni-control-tower/2.0 (+https://github.com/mauveplace/jjooni-control-tower'
+    return base + (f'; {contact})' if contact else ')')
+
+UA = official_user_agent()
 
 class Links(HTMLParser):
     def __init__(self, raw):

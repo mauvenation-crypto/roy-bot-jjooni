@@ -161,8 +161,8 @@ def _decode_csv(blob):
 
 def _normalize_tenor(raw):
     s=str(raw or '').strip().lower().replace('years','y').replace('year','y').replace('年','y').replace(' ','').replace('-','')
-    for n in (1,2,3,5,10,20,30,40):
-        if s in {str(n),f'{n}y',f'{n}yr'} or s.startswith(f'{n}y'):return f'{n}Y'
+    m=re.fullmatch(r'(\d{1,2})(?:y|yr)?',s) or re.match(r'(\d{1,2})y',s)
+    if m:return f'{int(m.group(1))}Y'
     return str(raw or '').strip()
 
 def _parse_jgb_date(raw):
@@ -211,6 +211,13 @@ def fetch_current_jgb_rows():
             if last>=expected:break
         except Exception as exc:errors.append(f'{url}:{type(exc).__name__}:{exc}')
     if best:return best[1],best[2]
+    # The current CSV only carries the current month. Right after a month
+    # rollover it can be an empty template: that is "no new rows yet", not a
+    # collection failure. Stored rows are then graded by date against the
+    # business-day calendar instead of being forced to STALE.
+    if errors and all('JGB_CURRENT_CSV_NO_ROWS' in e for e in errors):
+        print('JGB_CURRENT_REFRESH=EMPTY_MONTH_FILE '+JGB_CURRENT_URLS[0])
+        return [],JGB_CURRENT_URLS[0]
     raise RuntimeError('JGB_CURRENT_ALL_SOURCES_FAILED|'+'|'.join(errors))
 
 def expected_jgb_business_date(now=None):
@@ -221,16 +228,14 @@ def expected_jgb_business_date(now=None):
     not be required after the Tokyo market closes. Holidays and exceptional
     publication delays remain nonfatal source warnings, not proxy prices.
     """
+    # Business days follow the Tokyo JGB market calendar (national holidays
+    # and Dec 31-Jan 3 closed), validated against MOF history since 2022.
+    from japan_business_calendar import is_jgb_business_day, previous_jgb_business_day
     local=(now or datetime.now(KST)).astimezone(KST)
     release_day=local.date()
-    if local.time()<time(9,30) or release_day.weekday()>=5:
-        release_day-=timedelta(days=1)
-    while release_day.weekday()>=5:
-        release_day-=timedelta(days=1)
-    observation_day=release_day-timedelta(days=1)
-    while observation_day.weekday()>=5:
-        observation_day-=timedelta(days=1)
-    return observation_day.isoformat()
+    if local.time()<time(9,30) or not is_jgb_business_day(release_day):
+        release_day=previous_jgb_business_day(release_day)
+    return previous_jgb_business_day(release_day).isoformat()
 
 
 def refresh_jgb(data):

@@ -58,6 +58,10 @@ on:
 permissions:
   contents: write
 
+env:
+  # Contact for official agencies (BLS) that reject anonymous scripted clients.
+  OFFICIAL_SOURCE_CONTACT: ${{ secrets.OFFICIAL_SOURCE_CONTACT }}
+
 jobs:
   us_close_gate:
     if: ${{ github.event_name == 'schedule' && github.event.schedule == '20 20,21 * * 0-5' }}

@@ -15,7 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CAL = ROOT / 'market-observatory' / 'data' / 'economic-calendar.json'
 KST = ZoneInfo('Asia/Seoul')
 ET = ZoneInfo('America/New_York')
-UA = 'Mozilla/5.0 JJOONI-Market-Observatory-Official-Actual/1.0'
+from official_calendar_collectors import official_user_agent
+UA = official_user_agent()
 GRACE_MINUTES = 45
 # Unresolved actuals have no expiry.
 from calendar_actual_contract import build_freshness

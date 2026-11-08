@@ -86,8 +86,17 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           python tools/publish_observatory_data.py --message 'data(observatory): refresh BTC ETH spot quotes' market-observatory/data/observatory.json
-      - name: Verify public API and actual deployed Pages observations
+      # Deployment visibility is monitored, not a collection failure. With many
+      # data writers pushing to main, GitHub Pages builds are queued/superseded
+      # and routinely exceed the probe's 150s budget even though the quotes were
+      # committed. A red run (and email) must mean "BTC/ETH were not collected".
+      - name: Verify public API and actual deployed Pages observations (advisory)
+        id: runtime_probe
+        continue-on-error: true
         run: python tools/probe_observatory_runtime.py
+      - name: Report deployment lag as a warning
+        if: steps.runtime_probe.outcome == 'failure'
+        run: echo "::warning title=Pages deployment lag::BTC/ETH quotes were committed; the deployed Pages copy or quotes API did not confirm them within the probe budget."
       - name: Require both symbols healthy after publishing isolated results
         if: always()
         env:
