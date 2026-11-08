@@ -1,9 +1,9 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-08T14:54:59+09:00",
-  "overall": "WARN",
+  "generated_kst": "2026-11-08T14:55:01+09:00",
+  "overall": "PASS",
   "critical_count": 0,
-  "warning_count": 1,
+  "warning_count": 0,
   "observatory_session": "2026-11-06",
   "file_status": {
     "observatory": {
@@ -12,12 +12,12 @@
       "schema": "JJOONI_MARKET_OBSERVATORY_V1"
     },
     "daily_pulse": {
-      "generated_kst": "2026-11-08T14:54:58+09:00",
+      "generated_kst": "2026-11-08T14:55:00+09:00",
       "session": "2026-11-06",
       "snapshot_status": "FINAL"
     },
     "public_tripod": {
-      "generated_kst": "2026-11-08T14:54:58+09:00",
+      "generated_kst": "2026-11-08T14:55:00+09:00",
       "session": "2026-11-06",
       "ok": true,
       "target": "QQQ 50% + QLD 50%"
@@ -68,10 +68,13 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-08T14:53:50+09:00",
-      "overall": "LIVE",
+      "generated_kst": "2026-11-08T14:54:59+09:00",
+      "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
-      "warnings": []
+      "warnings": [
+        "fx",
+        "audit"
+      ]
     },
     "watchdog": {
       "checked_kst": "2026-11-07T09:04:24+09:00",
@@ -87,7 +90,7 @@
       "critical": true,
       "items": {
         "NASDAQ100": {
-          "count": 753,
+          "count": 754,
           "last_date": "2026-11-06",
           "last_value": 26989.99023438,
           "group": "core_us",
@@ -95,7 +98,7 @@
           "latest_matches": true
         },
         "SP500": {
-          "count": 753,
+          "count": 754,
           "last_date": "2026-11-06",
           "last_value": 7376.85986328,
           "group": "core_us",
@@ -121,7 +124,7 @@
       "critical": false,
       "items": {
         "RUSSELL2000": {
-          "count": 753,
+          "count": 754,
           "last_date": "2026-11-06",
           "last_value": 2754.11010742,
           "group": "us_supplement",
@@ -129,7 +132,7 @@
           "latest_matches": true
         },
         "DOW": {
-          "count": 753,
+          "count": 754,
           "last_date": "2026-11-06",
           "last_value": 51285.73046875,
           "group": "us_supplement",
@@ -137,7 +140,7 @@
           "latest_matches": true
         },
         "NASDAQCOMPOSITE": {
-          "count": 753,
+          "count": 754,
           "last_date": "2026-11-06",
           "last_value": 24579.4296875,
           "group": "us_supplement",
@@ -155,7 +158,7 @@
       "critical": true,
       "items": {
         "KOSPI": {
-          "count": 60,
+          "count": 61,
           "last_date": "2026-11-06",
           "last_value": 5059.69,
           "group": "kr_equity",
@@ -163,7 +166,7 @@
           "latest_matches": true
         },
         "KOSDAQ": {
-          "count": 60,
+          "count": 61,
           "last_date": "2026-11-06",
           "last_value": 644.27,
           "group": "kr_equity",
@@ -175,7 +178,7 @@
       "latest_mismatch": []
     },
     "fx": {
-      "state": "AHEAD_OF_ANCHOR",
+      "state": "LIVE",
       "anchor": "2026-11-06",
       "allow_lag_days": 1,
       "critical": false,
@@ -197,11 +200,11 @@
           "latest_matches": true
         },
         "USDJPY": {
-          "count": 781,
-          "last_date": "2026-11-08",
-          "last_value": 158.42500305,
+          "count": 780,
+          "last_date": "2026-11-06",
+          "last_value": 157.4980011,
           "group": "fx",
-          "latest_value": 158.42500305,
+          "latest_value": 157.4980011,
           "latest_matches": true
         },
         "JPYKRW": {
@@ -458,7 +461,7 @@
       "missing": [],
       "latest_mismatch": [],
       "expected_latest_weekday": "2026-11-05",
-      "published_source_status": null
+      "published_source_status": "LIVE"
     },
     "crypto": {
       "state": "LIVE",
@@ -524,24 +527,18 @@
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T14:54:43+09:00",
-      "current_quote_age_seconds": 16,
+      "current_quote_age_seconds": 18,
       "captured_quote_age_seconds": 13
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T14:54:32+09:00",
-      "current_quote_age_seconds": 27,
+      "current_quote_age_seconds": 29,
       "captured_quote_age_seconds": 24
     }
   },
-  "issues": [
-    {
-      "code": "GROUP_FX_AHEAD_OF_ANCHOR",
-      "severity": "WARN",
-      "detail": "anchor=2026-11-06 dates=DXY:2026-11-06,USDKRW:2026-11-06,USDJPY:2026-11-08,JPYKRW:2026-11-06"
-    }
-  ],
+  "issues": [],
   "contracts": {
     "completed_session": "CORE_US_AND_US_SUPPLEMENT_MUST_MATCH_OBSERVATORY_SESSION",
     "continuous_daily": "FX_ENERGY_METALS_MAY_LAG_CORE_BY_AT_MOST_1_CALENDAR_DAY",
