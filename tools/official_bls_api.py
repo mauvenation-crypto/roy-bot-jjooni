@@ -29,6 +29,9 @@ SERIES = {
     'ximpim': {'us_import_price_mom': ('EIUIR', 1, '%'),
                'us_export_price_mom': ('EIUIQ', 1, '%')},
     'jolts': {'jolts': ('JTS000000000000000JOL', 0, 'M')},
+    # Published BLS quarterly SAAR changes; do NOT compute these as month-on-month.
+    'prod2': {'productivity': ('PRS85006092', 0, '%'),
+              'unit_labor': ('PRS85006112', 0, '%')},
 }
 
 
@@ -40,6 +43,16 @@ def reference_month(value):
         return int(match[2]), month
     match = re.fullmatch(r'(20\d{2})-(0[1-9]|1[0-2])', str(value).strip())
     return tuple(map(int, match.groups())) if match else None
+
+
+def reference_quarter(value):
+    """Only parse an explicit quarter (never infer it from a release date)."""
+    s = str(value or '').strip()
+    m = re.search(r'\b(First|Second|Third|Fourth)\s+Quarter\s+(20\d{2})\b', s, re.I)
+    if m:
+        return int(m[2]), ('first', 'second', 'third', 'fourth').index(m[1].lower()) + 1
+    m = re.search(r'\b(20\d{2})[ -]?Q0?([1-4])\b', s, re.I)
+    return (int(m[1]), int(m[2])) if m else None
 
 
 @lru_cache(maxsize=32)
@@ -54,7 +67,7 @@ def fetch_series(series, year):
         results = results[0] if results else {}
     rows = next((x['data'] for x in results.get('series', []) if x.get('seriesID') == series), [])
     values = {(int(x['year']), int(x['period'][1:])): Decimal(x['value'])
-              for x in rows if re.fullmatch(r'M(?:0[1-9]|1[0-2])', x['period'])
+              for x in rows if re.fullmatch(r'(?:M(?:0[1-9]|1[0-2])|Q0[1-4])', x['period'])
               and re.fullmatch(r'-?\d+(?:\.\d+)?', x['value'])}
     return values, url
 
@@ -100,13 +113,18 @@ def latest_published_period(event, code, now=None):
     values, _ = fetch_series(series, release_et.year)
     if not values:
         return None
-    year, month = max(values)
-    lag = (release_et.year * 12 + release_et.month) - (year * 12 + month)
-    return (year, month) if 1 <= lag <= 4 else None
+    year, period = max(values)
+    # For prod2 the BLS API period is Q01-Q04, where 3*quarter is the
+    # reference quarter's final month. The 25-day age gate prevents attaching
+    # a later revision to an older release.
+    reference_end_month = period * 3 if code == 'prod2' else period
+    lag = (release_et.year * 12 + release_et.month) - (year * 12 + reference_end_month)
+    return (year, period) if 1 <= lag <= 4 else None
 
 
 def collect_api(event, code, checks, now=None):
-    period = reference_month(event.get('reference_period'))
+    period = (reference_quarter(event.get('reference_period')) if code == 'prod2'
+              else reference_month(event.get('reference_period')))
     if not period and code in SERIES:
         try:
             period = latest_published_period(event, code, now)
@@ -117,12 +135,14 @@ def collect_api(event, code, checks, now=None):
         if period:
             checks.append({'adapter': 'BLS_API', 'title': event['title'],
                            'result': 'REFERENCE_PERIOD_FROM_API',
-                           'reference_period': f'{period[0]}-{period[1]:02d}'})
+                           'reference_period': (f'{period[0]}-Q{period[1]}' if code == 'prod2'
+                                                else f'{period[0]}-{period[1]:02d}')})
     if not period or code not in SERIES:
         checks.append({'adapter': 'BLS_API', 'title': event['title'],
                        'result': 'REFERENCE_PERIOD_MISSING' if not period else 'SERIES_NOT_CONFIGURED'})
         return None
     year, month = period
+    period_text = f'{year}-Q{month}' if code == 'prod2' else f'{year}-{month:02d}'
     rows = []
     for key, (series, lag, unit) in SERIES[code].items():
         try:
@@ -132,8 +152,10 @@ def collect_api(event, code, checks, now=None):
                              official_url=url, source_tier='OFFICIAL',
                              verification_status='VERIFIED_OFFICIAL_REVISED',
                              value_vintage='LATEST_REVISION',
-                             reference_period=f'{year}-{month:02d}', series_id=series))
-            checks.append(dict(adapter='BLS_API', url=url, result='PARSED_REVISED_SERIES', key=key))
+                             reference_period=period_text, series_id=series))
+            checks.append(dict(adapter='BLS_API', title=event.get('title'),
+                               event_kst=event.get('datetime_kst'), reference_period=period_text,
+                               url=url, result='PARSED_REVISED_SERIES', key=key))
         except Exception as exc:
             checks.append(dict(adapter='BLS_API', series_id=series, key=key,
                                result=type(exc).__name__, error=str(exc)[:200]))
