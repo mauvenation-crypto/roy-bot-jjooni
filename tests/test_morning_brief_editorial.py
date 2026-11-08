@@ -71,4 +71,23 @@ class EditorialAcceptanceTests(unittest.TestCase):
         c=self.cross_checked();c['official_status']='VERIFIED'
         with self.assertRaisesRegex(AssertionError,'CROSS_CHECK_DISCLOSURE'):validate_report(self.report)
 
+    def test_verified_post_publication_close_requires_append_only_audit(self):
+        revised=json.loads((ROOT/'market-observatory/data/morning-brief/20261107.json').read_text())
+        validate_report(revised)
+        close=revised['editorial_contract']['close_checks'][0]
+        self.assertEqual((close['status'],close['close'],close['change_pct']),('VERIFIED',26989.99,1.35))
+        self.assertEqual(revised['editorial_contract']['close_checks'][1]['close'],9390.25)
+        self.assertEqual(revised['editorial_contract']['interpretation_status'],
+                         'HISTORIC_NARRATIVE_NOT_RECALCULATED_AFTER_EOD_CORRECTION')
+        revised['revisions']=[r for r in revised['revisions'] if r.get('field')!='editorial_contract.close_checks[NDX]']
+        with self.assertRaisesRegex(AssertionError,'POST_PUBLICATION_PROOF_TRAIL'):
+            validate_report(revised)
+
+    def test_audit_proof_timestamp_cannot_be_backdated_to_original_publication(self):
+        revised=json.loads((ROOT/'market-observatory/data/morning-brief/20261107.json').read_text())
+        close=revised['editorial_contract']['close_checks'][0]
+        close['post_publication_verified_at_kst']='2026-11-07T06:30:00+09:00'
+        with self.assertRaisesRegex(AssertionError,'POST_PUBLICATION_CLOCK'):
+            validate_report(revised)
+
 if __name__=='__main__':unittest.main()

@@ -8,6 +8,7 @@ on:
       - market-observatory/data/morning-brief/**
       - tools/validate_morning_brief.py
       - tests/test_morning_brief_editorial.py
+      - tests/morning-brief-ui-contract.test.cjs
       - tools/observatory_session.py
       - docs/song-daily-editorial-contract.md
       - .github/workflows/morning-brief-contract.yml
@@ -42,4 +43,6 @@ jobs:
       - name: Verify editorial and completed-session regression cases
         run: python -m unittest discover -s tests -p test_morning_brief_editorial.py
       - name: Validate reader runtime
-        run: node --check market-observatory/morning-brief-v1.js
+        run: |
+          node --check market-observatory/morning-brief-v1.js
+          node --test tests/morning-brief-ui-contract.test.cjs

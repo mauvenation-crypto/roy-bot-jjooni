@@ -33,6 +33,16 @@ def validate_editorial(d, created):
     assert {x.get('symbol') for x in checks} == {'NDX', 'SOX'}, 'CORE_CLOSE_COVERAGE'
     for check in checks:
         assert check.get('session_date') == d['market_date_us'], 'CLOSE_SESSION_MISMATCH'
+        post_audit=check.get('post_publication_verified_at_kst')
+        if post_audit:
+            revised=datetime.fromisoformat(post_audit)
+            assert revised.utcoffset() == timedelta(hours=9) and revised > created, 'POST_PUBLICATION_CLOCK'
+            assert contract.get('verification_updated_kst') == post_audit, 'POST_PUBLICATION_VERSION'
+            matching=[r for r in d.get('revisions', []) if
+                      r.get('field') == 'editorial_contract.close_checks['+check['symbol']+']' and
+                      r.get('revised_at_kst') == post_audit and
+                      len(set(r.get('source_urls') or [])) >= 2]
+            assert matching, 'POST_PUBLICATION_PROOF_TRAIL'
         assert check.get('status') in {'VERIFIED', 'MISSING', 'CONFLICT', 'CROSS_CHECKED'}, 'CLOSE_STATUS'
         if check['status'] == 'CROSS_CHECKED':
             assert check.get('reason') and check.get('official_status') == 'NOT_CHECKED', 'CROSS_CHECK_DISCLOSURE'

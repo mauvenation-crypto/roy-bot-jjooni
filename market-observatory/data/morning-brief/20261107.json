@@ -7,7 +7,7 @@
   "published_kst": "2026-11-07T06:40:00+09:00",
   "author": "송팀장 아침 시황 · ChatGPT",
   "content_status": "WEB_VERIFIED_WITH_DISCLOSED_GAPS",
-  "verification_note": "[2026-11-09 사후검증 정정] 11/6 NDX 종가·등락률은 같은 세션의 독립 완료 일봉 교차검증을 통과하지 못했습니다. 기존 장후 수치는 출처 관측 기록으로만 남기며 현재 정규장 종가로 사용하지 않습니다. NDX는 Nasdaq 동적 장후값과 별도 제공자 값이 사실상 일치해 CROSS_CHECKED로 기록했으나 Nasdaq 공식 과거표와 Yahoo EOD 갱신은 지연됐습니다. SOX·VIX는 제공자별 범위, MA250은 단일 시계열 재계산, CT는 LIVE/FRESH이나 LIMITED/REFERENCE입니다.",
+  "verification_note": "2026-11-09 공식 자료 사후검증: 2026-11-06 NDX 26,989.99(+1.35%; 전일 26,629.81), SOX 9,390.25(+4.21%; 전일 9,011.14)로 Nasdaq 공식 지수 페이지와 Yahoo Finance 완료 일봉이 일치합니다. SOX는 FRED(NASDAQSOX)에서도 일치합니다. 11/7 발행 원문에 남은 NDX 27,154.71(+1.97%)과 SOX 제공자 추정값 및 기존 TRI-POD 경계선 계산은 사후 검증 전 기록이므로 매매 판단에 사용하면 안 됩니다. 변경 전후 및 근거 링크는 revisions[]와 close_checks[].source_observations에 보존했습니다.",
   "read_only": true,
   "contains_account_data": false,
   "editorial_contract": {
@@ -17,18 +17,17 @@
       {
         "symbol": "NDX",
         "session_date": "2026-11-06",
-        "status": "CONFLICT",
-        "reason": "11/6 Nasdaq 동적 장후 표시(27,154.71)와 별도 일봉(27,154.78)은 정확히 같은 종가도 아니고 모두 정규장 확정 EOD 검증이 아니었습니다. 공개 canonical sidecar에는 26,989.99가 있어 관측 출처·세션/vintage 불일치 상태입니다. 어떤 수치도 공식 정규장 종가로 확정하지 않습니다.",
-        "observation_type": "DYNAMIC_POST_CLOSE_UNVERIFIED",
+        "status": "VERIFIED",
+        "reason": "2026-11-09 post-publication source reconciliation: Nasdaq official NDX index DATA AS OF 11/6/2026 26,989.99, and Yahoo historical Nov 6 2026 26,989.99. Original 2026-11-07 published narrative not recomputed.",
+        "observation_type": "REGULAR_SESSION_CLOSE",
         "source_urls": [
-          "https://indexes.nasdaq.com/Index/Breakdown/NDX",
-          "https://stockq.cn/m/index/NDX.php",
+          "https://indexes.nasdaq.com/Index/Overview/NDX",
           "https://finance.yahoo.com/quote/%5ENDX/history/"
         ],
-        "close": null,
+        "close": 26989.99,
         "previous_close": 26629.81,
-        "change_pct": null,
-        "official_status": "NOT_VERIFIED",
+        "change_pct": 1.35,
+        "official_status": "VERIFIED",
         "source_observations": [
           {
             "url": "https://indexes.nasdaq.com/Index/Breakdown/NDX",
@@ -45,23 +44,45 @@
             "observed_at": "2026-11-06T16:30:00-05:00",
             "observation_type": "POST_CLOSE_DAILY",
             "time_note": "독립 제공자 일봉"
+          },
+          {
+            "url": "https://indexes.nasdaq.com/Index/Overview/NDX",
+            "session_date": "2026-11-06",
+            "close": 26989.99,
+            "observation_type": "COMPLETED_DAILY_BAR",
+            "observed_at": "2026-11-09T06:43:47.852+09:00",
+            "verified_at_kst": "2026-11-09T06:43:47.852+09:00",
+            "source_tier": "OFFICIAL",
+            "time_note": "Rechecked on 2026-11-09 against completed Nov 6 regular-session EOD"
+          },
+          {
+            "url": "https://finance.yahoo.com/quote/%5ENDX/history/",
+            "session_date": "2026-11-06",
+            "close": 26989.99,
+            "observation_type": "COMPLETED_DAILY_BAR",
+            "observed_at": "2026-11-09T06:43:47.852+09:00",
+            "verified_at_kst": "2026-11-09T06:43:47.852+09:00",
+            "source_tier": "INDEPENDENT_PROVIDER",
+            "time_note": "Rechecked on 2026-11-09 against completed Nov 6 regular-session EOD"
           }
-        ]
+        ],
+        "post_publication_verified_at_kst": "2026-11-09T06:43:47.852+09:00"
       },
       {
         "symbol": "SOX",
         "session_date": "2026-11-06",
-        "status": "CONFLICT",
-        "reason": "Nasdaq 9,400.91과 Investing 9,387.7로 완료값 불일치. 4%대 반등 방향만 사용.",
-        "observation_type": "POST_CLOSE_PROVIDER_RANGE",
+        "status": "VERIFIED",
+        "reason": "2026-11-09 post-publication source reconciliation: Nasdaq official SOX DATA AS OF 11/6/2026 9,390.25, Yahoo completed daily Nov 6 9,390.25 and FRED NASDAQSOX 2026-11-06 9,390.25. Original 2026-11-07 published narrative not recomputed.",
+        "observation_type": "REGULAR_SESSION_CLOSE",
         "source_urls": [
           "https://indexes.nasdaq.com/Index/Overview/SOX",
-          "https://www.investing.com/indices/phlx-semiconductor-historical-data"
+          "https://finance.yahoo.com/quote/%5ESOX/history/",
+          "https://fred.stlouisfed.org/series/NASDAQSOX"
         ],
-        "close": null,
+        "close": 9390.25,
         "previous_close": 9011.14,
-        "change_pct": null,
-        "official_status": "CONFLICT",
+        "change_pct": 4.21,
+        "official_status": "VERIFIED",
         "source_observations": [
           {
             "url": "https://indexes.nasdaq.com/Index/Overview/SOX",
@@ -78,12 +99,45 @@
             "observed_at": "2026-11-06T16:30:00-05:00",
             "observation_type": "POST_CLOSE_DAILY",
             "time_note": "독립 제공자 일봉"
+          },
+          {
+            "url": "https://indexes.nasdaq.com/Index/Overview/SOX",
+            "session_date": "2026-11-06",
+            "close": 9390.25,
+            "observation_type": "COMPLETED_DAILY_BAR",
+            "observed_at": "2026-11-09T06:43:47.852+09:00",
+            "verified_at_kst": "2026-11-09T06:43:47.852+09:00",
+            "source_tier": "OFFICIAL",
+            "time_note": "Rechecked on 2026-11-09 against completed Nov 6 regular-session EOD"
+          },
+          {
+            "url": "https://finance.yahoo.com/quote/%5ESOX/history/",
+            "session_date": "2026-11-06",
+            "close": 9390.25,
+            "observation_type": "COMPLETED_DAILY_BAR",
+            "observed_at": "2026-11-09T06:43:47.852+09:00",
+            "verified_at_kst": "2026-11-09T06:43:47.852+09:00",
+            "source_tier": "INDEPENDENT_PROVIDER",
+            "time_note": "Rechecked on 2026-11-09 against completed Nov 6 regular-session EOD"
+          },
+          {
+            "url": "https://fred.stlouisfed.org/series/NASDAQSOX",
+            "session_date": "2026-11-06",
+            "close": 9390.25,
+            "observation_type": "COMPLETED_DAILY_BAR",
+            "observed_at": "2026-11-09T06:43:47.852+09:00",
+            "verified_at_kst": "2026-11-09T06:43:47.852+09:00",
+            "source_tier": "INDEPENDENT_PROVIDER",
+            "time_note": "Rechecked on 2026-11-09 against completed Nov 6 regular-session EOD"
           }
-        ]
+        ],
+        "post_publication_verified_at_kst": "2026-11-09T06:43:47.852+09:00"
       }
-    ]
+    ],
+    "verification_updated_kst": "2026-11-09T06:43:47.852+09:00",
+    "interpretation_status": "HISTORIC_NARRATIVE_NOT_RECALCULATED_AFTER_EOD_CORRECTION"
   },
-  "body_markdown": "> **⚠️ 사후 검증 정정(2026-11-09):** 이 보고서의 2026-11-06 NDX 27,154.71(+1.97%)은 정규장 확정 종가로 검증되지 않았습니다. 당시 장후 동적 관측값을 사용한 아래의 수익률·전략선 설명은 **원문 기록용이며 투자·주문 판단에 사용하면 안 됩니다.** 다른 계층에서는 26,989.99가 기록돼 있어 정확한 동시점 정규장 종가 확인 전까지 NDX 상태는 **CONFLICT(미확정)** 입니다. 원문 수치와 본문은 감사 추적을 위해 유지했습니다.\\n\\n🚨 TRI-POD 상태: BIPOD 유지 | 미국 정규장 거래일 2026-11-06 | NDX 27,154.71·+1.97%(Nasdaq 동적 마감·독립 제공자 일치, 공식 EOD 표 지연) | 52주 고점 대비 DD -13.03%(최고 종가 기준; 장중고가 기준 -13.41%) | VIX10 20.04~20.10(최종 제공자 범위) | MA250 레짐 UP 유지(히스테리시스) | CT LIVE/FRESH·decision_gate LIMITED·tripod REFERENCE\n🟠 전환 이벤트 없음: TRI-POD 복귀선 28,414.27보다 1,259.56pt(-4.43%) 아래, NOPOD 하단 26,079.49보다 1,075.22pt 위입니다. 계좌 주문용 공식 신호는 미검증입니다.\n\n# 반도체는 반등했지만 9% 경계는 멀다 — BIPOD로 월요일을 준비한다\n\n작성일: 2026-11-07 KST · 생성시각: 2026-11-07 06:40 KST · 미국 완료 대상 세션: 2026-11-06 정규장 · **NO_TRADE_REVIEW_ONLY**\n\n- NDX는 전일 -6.36% 급락 뒤 +1.97% 반등했지만 TRI-POD 복귀선까지 4.64% 추가 상승이 필요합니다.\n- SOX는 +4.18~4.33% 반등했으나 제공자 최종값이 달라 범위로 표시합니다.\n- 미국 주간 수익률은 S&P500 -2.7%, Nasdaq Composite -3.4%, Dow -0.9%, Russell2000 -2.1%였습니다.\n- 한국은 11/6 KOSPI -6.02%, KOSPI200 -6.51%, 외국인 KOSPI 약 -2.7조원으로 디레버리징이 이어졌습니다.\n- DXY 102.18(+0.61%), 미국 10년물 약 4.87%로 달러·금리가 동시에 강했습니다.\n- CNN Fear & Greed 미러는 19, Extreme Fear입니다. 반등에도 심리 훼손은 끝나지 않았습니다.\n- AI반도체·전력 일부는 되돌림이 나왔지만 11/5까지의 1주·1개월 추세와 5·20일선은 약했습니다.\n- 월요일 KRX는 정상 개장 예정입니다. 외국인 선물·현물, USD/KRW, 삼성전자·SK하이닉스 저점 회복을 먼저 봅니다.\n\n## ① 오늘의 시장 이야기\n\n형님, 오늘의 질문은 **급락 다음 날 반등이 전략상 복귀인가, 위험 축소 상태 안의 되돌림인가**입니다. 답은 아직 후자입니다. Nasdaq 지수 화면과 별도 제공자가 11월 6일 NDX를 각각 27,154.71과 27,154.78로 표시해 장후 동일 세션 값은 사실상 일치했습니다. 반면 Nasdaq 공식 과거표와 Yahoo 당일 일봉은 갱신이 늦거나 서로 다른 중간값을 남겼습니다. 따라서 수치는 CROSS_CHECKED, 공식 EOD는 지연으로 구분합니다.\n\n송팀장 9월 2일 원문 규칙을 적용하면 MA250은 약 27,452.10, 상단은 27,726.62, 하단은 26,079.49입니다. NDX는 밴드 안이므로 전일 UP 레짐을 유지합니다. 그러나 최고 종가 31,224.47 대비 낙폭은 -13.03%로 9%를 넘고 VIX10도 20.04~20.10입니다. **UP 레짐 + DD>9% + VIX10<28 = BIPOD**입니다. NOPOD는 NDX가 하단을 깨고 VIX10이 18 이상이어야 하므로 아직 아닙니다.\n\n새 Plaud 원문에서도 송팀장은 “지금 단계 바이팟”이라고 설명했습니다. 다만 시장 산식과 방송 발언은 계좌 주문 권위가 아닙니다. 비공개 canonical/Control Tower는 신선하지만 decision gate가 LIMITED이고 tripod source가 REFERENCE이므로 실제 매매·주문·체결은 CIO 승인과 브로커 대사 전까지 금지합니다.\n\n## ② 시장 한눈에\n\n| 항목 | 값·등락 | 세션·기준시각 | 검증 상태·원천 |\n|---|---:|---|---|\n| S&P500 | 7,376.86, +0.31% | 미국 11/6 정규장 | [AP 마감표](https://apnews.com/article/806f71d95105bc7efbc760b194dd8cad) |\n| Nasdaq Composite | 24,579.42, +1.09% | 미국 11/6 정규장 | AP 마감표 |\n| Dow | 51,285.73, -0.46% | 미국 11/6 정규장 | AP 마감표 |\n| Russell2000 | 2,754.11, +0.89% | 미국 11/6 정규장 | AP 마감표 |\n| NDX | **27,154.71, +1.97%** | 미국 11/6 장후 | [Nasdaq](https://indexes.nasdaq.com/Index/Breakdown/NDX) 27,154.71·[StockQ](https://stockq.cn/m/index/NDX.php) 27,154.78 일치. 공식 과거표 지연 |\n| SOX | **9,387.7~9,400.91, +4.18~4.33%** | 미국 11/6 장후 | [Nasdaq](https://indexes.nasdaq.com/Index/Overview/SOX)·[Investing](https://www.investing.com/indices/phlx-semiconductor-historical-data) 범위, CONFLICT |\n| VIX | 24.14~24.77, -14.4~-12.1% | 미국 11/6 장후 갱신 중 | [Yahoo](https://finance.yahoo.com/quote/%5EVIX/history/)·[Investing](https://www.investing.com/indices/volatility-s-p-500-historical-data) 범위 |\n| Fear & Greed | **19, Extreme Fear** | 11/6 미러 최신 | CNN 원문 직접 추출 제한. [FGScore](https://fgscore.com/en/markets/sp500)·[연합인포맥스](https://news.einfomax.co.kr/news/articleView.html?idxno=4443473) 교차 |\n\n[Finviz S&P500 Map](https://finviz.com/map?t=sec)은 반도체·데이터센터 전력 관련 종목의 녹색 반등과 금융·헬스케어 일부 약세가 공존하는 지도를 보였습니다. 전일처럼 전면적 하락은 아니었지만 Dow가 내려 모든 업종으로 확산된 risk-on도 아니었습니다. Finviz 1주·1개월 지도와 S&P500 전용 상승/하락 종목 수의 안정적 수치 추출은 실패해 임의 숫자를 넣지 않습니다.\n\n[Slickcharts Nasdaq100](https://www.slickcharts.com/nasdaq100) 상위 비중은 AAPL 12.87%, NVDA 11.65%, MSFT 10.19%, AMZN 7.29%, SPCX 4.70%, GOOGL 4.64%, GOOG 4.38%, META 4.05%, TSLA 3.66%, AVGO 3.59%이며 합계는 **67.02%**입니다.\n\n## ③ 핵심 이슈 깊이 읽기\n\n### 1. BIPOD 유지: 반등은 복귀가 아니다\n\n**핵심 숫자:** NDX 27,154.71, 복귀선 28,414.27, 거리 -1,259.56pt(-4.43%); MA250 27,452.10, 하단 26,079.49; VIX10 20.04~20.10.\n\n**무슨 일이 있었나:** NDX가 +1.97%, SOX가 4%대 반등했지만 52주 최고 종가 대비 낙폭은 -13.03%로 9% 경계를 회복하지 못했습니다.\n\n**왜 중요한가:** BIPOD은 단순 의견이 아니라 DD·MA250 레짐·VIX10 조합의 결과입니다. 반등 하루로 레버리지를 다시 최대로 올릴 근거가 없습니다.\n\n**반대 해석:** 공식 Nasdaq EOD 과거표가 늦고 VIX 최종치는 제공자별로 다릅니다. 다만 관측 범위 전체에서 BIPOD 결론은 같습니다.\n\n**다음 확인:** NDX 28,414.27 상향 돌파, MA250 상단 위 유지, 확정 VIX10, CT gate CLEAR·tripod source 승격을 봅니다.\n\n### 2. 반도체 반등과 금리 상승이 동시에 나왔다\n\n**핵심 숫자:** SOX +4.18~4.33%, S&P500 +0.31%, DXY 102.18(+0.61%), 2년물 약 4.532%(+5.5bp), 10년물 약 4.87%(+3bp 내외).\n\n**무슨 일이 있었나:** 전일 12%대 폭락했던 SOX가 반등했지만 강한 미국 고용지표 뒤 금리와 달러도 올랐습니다.\n\n**왜 중요한가:** AI 공급망이 추세를 되찾으려면 숏커버를 넘어 실적·수주·CAPEX가 가격에 다시 연결돼야 합니다. 달러·금리 상승은 한국 반도체에 원화·외국인 부담을 더합니다.\n\n**반대 해석:** 금리 상승은 경기침체 우려 완화의 신호일 수도 있습니다.\n\n**다음 확인:** 다음 주 CPI·PPI, SOX/NDX 상대강도, HYG-LQD, USD/KRW 1,360원대 안착을 봅니다.\n\n### 3. 한국은 이미 더 강한 충격을 반영했다\n\n**핵심 숫자:** KOSPI 5,059.69(-6.02%), KOSDAQ 644.27(-5.03%), KOSPI200 783.23(-6.51%), 외국인 KOSPI 약 -2.7조원, TAIEX -4.51%, Nikkei -5.96%.\n\n**무슨 일이 있었나:** 한국·일본·대만 반도체 중심 지수가 급락했고 KOSPI는 장중 서킷브레이커가 발동됐습니다.\n\n**왜 중요한가:** 월요일 진짜 추세 전환은 시초가가 아니라 외국인 수급과 원화, 삼성전자·SK하이닉스의 장중 저점 회복으로 확인해야 합니다.\n\n**반대 해석:** 미국 반도체의 금요일 반등으로 한국 충격의 일부는 선반영됐을 수 있습니다.\n\n**다음 확인:** 09:00~10:00 KST 외국인 현물·선물, KOSPI200 VWAP, 원/달러, 반도체 대형주의 전일 저점 방어를 봅니다.\n\n### 4. 신용은 주식 반등을 확인하지 않았다\n\n**핵심 숫자:** HYG $77.28(-0.31%), LQD $104.66(+0.15%).\n\n**무슨 일이 있었나:** 주식은 반등했지만 고수익채 ETF는 약세, 투자등급채 ETF는 강보합이었습니다.\n\n**왜 중요한가:** 위험자산 반등이 신용으로 번지지 않으면 숏커버 성격이 강할 수 있습니다.\n\n**반대 해석:** ETF 하루 수익률만으로 OAS 확대를 확정할 수 없습니다.\n\n**다음 확인:** FRED HY OAS 공식 갱신과 HYG/LQD 상대비율을 봅니다.\n\n## ④ 글로벌·한국 시장\n\n| 시장·자산 | 값·등락 | 완료 세션 | 원천·상태 |\n|---|---:|---|---|\n| DXY | 102.18, +0.61% | 11/6 마감 인접 | [TradeAlmanac](https://tradealmanac.com/en/markets/us/indices/dxy), 공식 마감표 미확인 |\n| 미국 2년물 | 약 4.532%, +5.5bp | 11/6 뉴욕 | [Reuters](https://www.reuters.com/world/asia-pacific/dollar-holds-yen-gains-equity-rout-saps-risk-appetite-ahead-payrolls-2026-11-06/), 공식 일별 미확인 |\n| 미국 10년물 | 약 4.87%, +3bp 내외 | 11/6 뉴욕 | Reuters·Tradeweb 보도, 공식 일별 미확인 |\n| WTI | 자료 미확인 | 11/6 | 계약월·정산가가 공급자별 불일치 |\n| HYG / LQD | 77.28(-0.31%) / 104.66(+0.15%) | 11/6 정규장 | [시장 메모](https://macrotape.io/posts/2026-11-06-governance.html); OAS 대용 아님 |\n| USD/KRW | 1,356.6원, +14.5원 | 한국 11/6 주간 종가 | [한국 마감](https://www.tradingjournl.io/blog/korea-market-close-2026-11-06/en) |\n| KOSPI | 5,059.69, -6.02% | 한국 11/6 종가 | [Reuters](https://www.reuters.com/world/asia-pacific/south-korea-stocks-plunge-8-circuit-breaker-triggered-chip-shares-tumble-2026-11-06/) |\n| KOSDAQ | 644.27, -5.03% | 한국 11/6 종가 | 같은 마감표 |\n| KOSPI200 현물 | 783.23, -6.51% | 한국 11/6 종가 | [한국경제](https://markets.hankyung.com/indices/kospi200)·[Investing](https://kr.investing.com/indices/kospi-200-historical-data) 교차 |\n| KOSPI 수급 | 외국인 약 -2.7조·기관 +1.7조원 | 한국 11/6 | KRX 기반 2개 집계 범위; 5거래일 누적 자료 미확인 |\n| 야간 KOSPI200 선물 | 자료 미확인 | 11/7 새벽 | 계약월·주간 기준가·종료시각 동시 검증 실패 |\n| EWY | 137.17~139.19 | 미국 11/6 | [StockAnalysis](https://stockanalysis.com/etf/ewy/history/)·[TwelveData](https://twelvedata.com/markets/950427/etf/nyse/ewy/historical-data) CONFLICT |\n| Nikkei225 | 57,434.77, -5.96% | 일본 11/6 종가 | 아시아 마감표 |\n| Hang Seng | 24,481.86, -1.27% | 홍콩 11/6 종가 | [FT](https://markets.ptc.ft.markitdigital.com/data/indices/tearsheet/historical?s=HSI%3AHKG)·[Yahoo](https://finance.yahoo.com/quote/%5EHSI/history/) 교차 |\n| TAIEX | 39,701.64, -4.51% | 대만 11/6 종가 | [Taiwan News](https://www.taiwannews.com.tw/news/6473097) |\n\n### Control Tower 계좌 게이트\n\n비공개 Drive canonical Bootstrap→Brief→Snapshot과 CT SSOT/Health를 교차했습니다. generated 2026-11-07 06:05 KST, stale_after 07:20 KST로 **LIVE/FRESH**였지만 decision_gate는 **LIMITED**, tripod는 **REFERENCE/STRATEGY_SIGNAL_UNVERIFIED**였습니다. toss·KIS·PB SSOT·market_quotes는 OK, 한국 일별 수급은 WAITING이었습니다.\n\n따라서 현재 보유·비중·손익을 주문 근거로 확정하지 않습니다. 공개 보고는 익명화된 미국성장·AI반도체·메모리·전력·로봇 노출만 다루며 직접보유와 ETF 룩스루를 중복 합산하지 않습니다. 실제 주문·체결은 실행계통 원천이 최종 권위입니다.\n\n## ⑤ AI 산업·기업실적\n\n1주=5거래일, 1개월=20거래일입니다. 1W·1M·이동평균은 마지막으로 동일 시계열을 완전히 검증한 11월 5일 기준이며 11월 6일에는 일부 1D만 장후 교차확인됐습니다.\n\n| 산업 | 대리자산 | 11/6 1D | 11/5 기준 1W / 1M | 11/5 5MA / 20MA | 상태 |\n|---|---|---:|---:|---|---|\n| AI반도체 | SMH | +3.52~3.70% | -20.29% / -26.27% | 아래 / 아래 | 반등, 추세 미복구 |\n| 메모리 | MU | 자료 미확인 | -29.74% / -36.63% | 아래 / 아래 | 최종 일봉 미확인 |\n| AI전력 | VRT | 자료 미확인 | -28.14% / -27.49% | 아래 / 아래 | 최종 일봉 미확인 |\n| 광통신 | 적합 대리 미확인 | 자료 미확인 | 자료 미확인 | 자료 미확인 | 임의 대체 금지 |\n| 로봇 | BOTZ | +1.11~1.37% | -8.32% / -12.03% | 아래 / 아래 | 반등, 추세 미복구 |\n| 원전·우라늄 | URA | 약 +4.33% | -13.27% / -19.66% | 아래 / 아래 | 반등, 추세 미복구 |\n| 조선 | 적합 대리 미확인 | 자료 미확인 | 자료 미확인 | 자료 미확인 | 임의 대체 금지 |\n| 방산 | ITA | 자료 미확인 | 자료 미확인 | 자료 미확인 | 최종 일봉 미확인 |\n| 미국성장 | QQQ | 자료 미확인 | -9.55% / -13.45% | 아래 / 아래 | NDX 반등만 확인 |\n\n### 오늘 실적에서 꼭 볼 변화\n\n- **Microchip:** 매출·이익은 회복했지만 다음 분기 매출 가이던스는 계절성과 일회성 매출 소멸을 반영해 전분기 대비 -3~+1%입니다.\n- **Airbnb:** 매출·예약·현금창출이 함께 성장했고 연간 매출 성장 전망을 높였습니다.\n- **Atlassian:** 공식 Q1 FY27 자료는 게시됐지만 수치표·콜을 충분히 검증하지 못해 주가 급락만으로 평가를 만들지 않습니다.\n\n#### Microchip Technology — FY2027 Q2\n\n**숫자 한눈에:** 매출 16.215억달러(+42.2% YoY, +9.2% QoQ), GAAP EPS $0.68, non-GAAP EPS $0.97, FCF 3.961억달러. 다음 분기 매출 가이던스는 15.73~16.38억달러입니다.\n\n**경영진이 새로 밝힌 것:** 데이터센터 PCIe Gen6 디자인윈이 전분기 12개에서 24개로 늘었고 리드타임이 길어져 추가 웨이퍼 배정을 확보 중이라고 밝혔습니다.\n\n**그래서 왜 중요한가:** AI 데이터센터 투자가 연결 반도체·엣지·산업용 MCU 매출로 확산되는 증거입니다.\n\n**반대 해석:** 9월 분기에는 약 5,300만달러 비반복 매출이 있었고 다음 분기에는 사라집니다.\n\n**다음 확인:** 디자인윈의 매출 전환, 웨이퍼 확보, non-GAAP 총마진 64~65%, 재고와 FCF를 봅니다. [공식 발표](https://ir.microchip.com/news-events/press-releases/detail/1426/microchip-technology-announces-financial-results-for-second-quarter-of-fiscal-year-2027) · 콜 오디오는 존재하나 직접 청취/전사 미확인.\n\n#### Airbnb — 2026 Q3\n\n**숫자 한눈에:** 매출 49억달러(+19% YoY), GBV 277억달러(+21%), Nights and Seats +16%, 순이익 19억달러, 조정 EBITDA 25억달러·마진 52%.\n\n**경영진이 새로 밝힌 것:** 핵심 지역 성장 재가속과 AI-native 제품 개발 속도 향상을 설명했고 120억달러 추가 자사주 매입을 승인했습니다.\n\n**그래서 왜 중요한가:** AI가 CAPEX-heavy 인프라뿐 아니라 고객지원 자동화·제품개발 생산성으로 매출과 마진에 연결되는 사례입니다.\n\n**반대 해석:** 자사주 매입은 본업 수요를 대체하지 않으며 Q4 성장률은 Q3보다 둔화할 수 있습니다.\n\n**다음 확인:** AI 여행 에이전트, 예약 성장, 마케팅비, FCF를 봅니다. [공식 뉴스룸](https://news.airbnb.com/airbnb-q3-2026-financial-results) · 콜 미확인.\n\nAtlassian은 [공식 IR](https://investors.atlassian.com/ir-home/default.aspx)에서 FY27 Q1 자료·웹캐스트 공개를 확인했지만 수치와 Q&A를 직접 검증하지 못해 다음 회차로 이월합니다. 자료 확인 마감은 2026-11-07 06:40 KST입니다.\n\n## ⑥ 주요 일정\n\n| KST | 일정 | 확인 포인트 | 원문 |\n|---|---|---|---|\n| 11/9 09:00 | KRX 정상 개장 | 외국인 현물·선물, 원/달러, KOSPI200 저점·VWAP | [KRX](https://global.krx.co.kr/contents/GLB/06/0602/0602010201/GLB0602010201T1.jsp) |\n| 11/9 22:00 | NRG Q3 콜 | 전력수요·데이터센터 계약·CAPEX·FCF | [NRG IR](https://investors.nrg.com/nrg-presentations-and-webcasts) |\n| 11/9 23:00 | Constellation Q3 콜 | 원전 가동·전력계약·데이터센터 수요 | [CEG IR](https://investors.constellationenergy.com/static-files/ec96e639-7e2d-4049-b979-21a286dd16eb) |\n| 11/10 22:30 | 미국 10월 CPI | 금리·DXY·성장주 밸류에이션 | [BLS](https://www.bls.gov/schedule/2026/11_sched_list.htm) |\n| 11/13 22:30 | 미국 10월 PPI | 생산자물가·마진 압력 | [BLS](https://www.bls.gov/schedule/2026/11_sched_list.htm) |\n\nCoreWeave·Nebius 일정은 공식 IR 원문에서 확인하지 못해 예정으로 쓰지 않습니다. [Finviz 캘린더](https://finviz.com/calendar.ashx)는 보조 확인용입니다.\n\n## ⑦ 투자전략·위험점검·복기\n\n1. **전략 상태:** BIPOD 유지. TRI-POD 복귀 후보도 NOPOD 전환 후보도 아닙니다. 상태 변화가 없어 다음 거래일 종가 실행 이벤트도 없습니다.\n2. **한국장:** 월요일 시초가 추격보다 외국인 수급, KOSPI200 전일 저점 758.63과 VWAP, USD/KRW, 삼성전자·SK하이닉스 상대강도를 봅니다.\n3. **미국장:** NDX 27,726.62(MA250 상단), 28,414.27(복귀선), 26,079.49(NOPOD 하단)를 순서대로 봅니다.\n4. **달러·금리:** CPI 전 DXY·2Y 상승이 이어지면 반도체 반등 지속성을 낮게 봅니다. HYG가 LQD 대비 회복하는지도 확인합니다.\n5. **PB R1~R5:** 확정 원문·최신 입력이 완전하지 않아 임의 계산하지 않습니다. 정의 미확인 트리거③에 의존하는 R2/R3는 조건 확인불가입니다. 후보는 주문 지시가 아닙니다.\n\n### 토요일 주간 종합과 복기\n\n미국 주식은 주간 하락으로 끝났고 아시아 반도체 시장은 금요일 미국 반등을 반영하기 전에 크게 밀렸습니다. 시장 폭은 목요일 전면 붕괴에서 금요일 선택적 반등으로 개선됐지만 신용·달러·금리가 완전한 risk-on을 확인하지 않았습니다. 월요일은 반등 여부보다 **반등의 질**이 중요합니다.\n\n- **적중:** 11/5 급락 후 BIPOD 후보, NOPOD 하단 미이탈 판단은 11/6에도 유지됐습니다.\n- **적중:** AI반도체·전력 과매도 반등 가능성은 SOX·SMH·URA 반등으로 확인됐습니다.\n- **한계:** NDX·SOX 공식 EOD 갱신 지연 때문에 CROSS_CHECKED와 공식 최종을 계속 분리합니다.\n- **20거래일 추적:** 일관된 공개 채점표가 아직 없어 누적 적중률을 만들지 않았습니다.\n\n### Control Tower·Plaud 운영 점검\n\n신규 송팀장 녹음 1건을 확인해 SOURCES·EXCERPTS·FACTCHECK에 증분 반영했습니다. 현재 BIPOD 발언은 시장 산식과 일치했습니다. NDX 26,000 이탈 시 올현금은 고정선이 아니라 당일 rolling MA250×0.95 근사치이며 VIX10 조건이 함께 필요하다고 정정했습니다. 계획 데이터센터 최소 10% 취소·CAPEX 고점 2027년 주장은 공식 1차자료를 확보하지 못해 미검증 해석으로 보존했습니다. 로이·짱구에게 공식 EOD·CT gate·브로커 주문/체결 독립 검증을 요청했습니다.\n\n## ⑧ 원천·데이터 감사\n\n| 항목 | 상태 | 감사 메모 |\n|---|---|---|\n| NDX 11/6 종가 | **CROSS_CHECKED / 공식 EOD 지연** | Nasdaq 동적 27,154.71·StockQ 27,154.78 일치. Nasdaq history·Yahoo EOD는 지연 |\n| SOX 11/6 종가 | **CONFLICT** | Nasdaq 9,400.91·Investing 9,387.7. 방향·4%대 반등만 사용 |\n| MA250 | **재계산·단일 시계열** | Yahoo 250개 종가에 CROSS_CHECKED 값을 반영해 27,452.10. 제2 독립 계산 미완료 |\n| VIX10 | **범위 검증** | 당일 VIX 24.14~24.77 차이로 평균 20.04~20.10. 상태 결론 영향 없음 |\n| Observatory | **WARN** | audit critical 0, warning 1; public daily pulse의 일부가 11/5라 11/6 FINAL로 간주하지 않음 |\n| kr-market-flow.json | **자료 미확인** | 실제 구현·검증 파일 미확인 |\n| asia-markets.json | **자료 미확인** | 실제 구현·검증 파일 미확인 |\n| 계좌 사실 | **LIMITED** | canonical은 LIVE/FRESH이나 decision gate CLEAR 아님 |\n| 기업 콜 | **부분 확인** | Microchip·Airbnb 공식 발표 확인, 콜 직접 청취/전사 미확인; Atlassian 이월 |\n\n**바로가기:** [Finviz Map](https://finviz.com/map?t=sec) · [Finviz Calendar](https://finviz.com/calendar.ashx) · [TradingView](https://kr.tradingview.com/) · [Slickcharts Nasdaq100](https://www.slickcharts.com/nasdaq100) · [CNN Fear & Greed](https://edition.cnn.com/markets/fear-and-greed) · [Nasdaq NDX](https://indexes.nasdaq.com/Index/Breakdown/NDX) · [Nasdaq SOX](https://indexes.nasdaq.com/Index/Overview/SOX) · [KRX](https://open.krx.co.kr/) · [BLS](https://www.bls.gov/schedule/2026/11_sched_list.htm)\n\n본 자료는 검토용이며 매수·매도·주문 지시가 아닙니다. 전략 변경과 실제 집행은 CIO 별도 승인, 거래가능 여부, 브로커 주문·체결 대사를 거쳐야 합니다.",
+  "body_markdown": "> **✅ 공식 종가 사후 정정 (2026-11-09) — 기존 원문보다 우선합니다.** 11/6 NDX 확정 종가는 **26,989.99(+1.35%)**, SOX 확정 종가는 **9,390.25(+4.21%)**로 확인했습니다. [Nasdaq NDX](https://indexes.nasdaq.com/Index/Overview/NDX) · [Nasdaq SOX](https://indexes.nasdaq.com/Index/Overview/SOX) · [Yahoo NDX](https://finance.yahoo.com/quote/%5ENDX/history/) · [Yahoo SOX](https://finance.yahoo.com/quote/%5ESOX/history/) · [FRED SOX](https://fred.stlouisfed.org/series/NASDAQSOX).\n> **⚠️ 본문 사용 주의.** 아래의 NDX 27,154.71(+1.97%), SOX 기존 추정값, TRI-POD 전환선 및 해석은 **2026-11-07 최초 발행 당시의 보관 기록**이며 확정 종가 기준으로 재산출되지 않았습니다. 현재 주문·전략 변경의 근거로 사용하지 마세요. 데이터 정정과 전략 백테스트·신호 검증은 별개입니다.\n\n🚨 TRI-POD 상태: BIPOD 유지 | 미국 정규장 거래일 2026-11-06 | NDX 27,154.71·+1.97%(Nasdaq 동적 마감·독립 제공자 일치, 공식 EOD 표 지연) | 52주 고점 대비 DD -13.03%(최고 종가 기준; 장중고가 기준 -13.41%) | VIX10 20.04~20.10(최종 제공자 범위) | MA250 레짐 UP 유지(히스테리시스) | CT LIVE/FRESH·decision_gate LIMITED·tripod REFERENCE\n🟠 전환 이벤트 없음: TRI-POD 복귀선 28,414.27보다 1,259.56pt(-4.43%) 아래, NOPOD 하단 26,079.49보다 1,075.22pt 위입니다. 계좌 주문용 공식 신호는 미검증입니다.\n\n# 반도체는 반등했지만 9% 경계는 멀다 — BIPOD로 월요일을 준비한다\n\n작성일: 2026-11-07 KST · 생성시각: 2026-11-07 06:40 KST · 미국 완료 대상 세션: 2026-11-06 정규장 · **NO_TRADE_REVIEW_ONLY**\n\n- NDX는 전일 -6.36% 급락 뒤 +1.97% 반등했지만 TRI-POD 복귀선까지 4.64% 추가 상승이 필요합니다.\n- SOX는 +4.18~4.33% 반등했으나 제공자 최종값이 달라 범위로 표시합니다.\n- 미국 주간 수익률은 S&P500 -2.7%, Nasdaq Composite -3.4%, Dow -0.9%, Russell2000 -2.1%였습니다.\n- 한국은 11/6 KOSPI -6.02%, KOSPI200 -6.51%, 외국인 KOSPI 약 -2.7조원으로 디레버리징이 이어졌습니다.\n- DXY 102.18(+0.61%), 미국 10년물 약 4.87%로 달러·금리가 동시에 강했습니다.\n- CNN Fear & Greed 미러는 19, Extreme Fear입니다. 반등에도 심리 훼손은 끝나지 않았습니다.\n- AI반도체·전력 일부는 되돌림이 나왔지만 11/5까지의 1주·1개월 추세와 5·20일선은 약했습니다.\n- 월요일 KRX는 정상 개장 예정입니다. 외국인 선물·현물, USD/KRW, 삼성전자·SK하이닉스 저점 회복을 먼저 봅니다.\n\n## ① 오늘의 시장 이야기\n\n형님, 오늘의 질문은 **급락 다음 날 반등이 전략상 복귀인가, 위험 축소 상태 안의 되돌림인가**입니다. 답은 아직 후자입니다. Nasdaq 지수 화면과 별도 제공자가 11월 6일 NDX를 각각 27,154.71과 27,154.78로 표시해 장후 동일 세션 값은 사실상 일치했습니다. 반면 Nasdaq 공식 과거표와 Yahoo 당일 일봉은 갱신이 늦거나 서로 다른 중간값을 남겼습니다. 따라서 수치는 CROSS_CHECKED, 공식 EOD는 지연으로 구분합니다.\n\n송팀장 9월 2일 원문 규칙을 적용하면 MA250은 약 27,452.10, 상단은 27,726.62, 하단은 26,079.49입니다. NDX는 밴드 안이므로 전일 UP 레짐을 유지합니다. 그러나 최고 종가 31,224.47 대비 낙폭은 -13.03%로 9%를 넘고 VIX10도 20.04~20.10입니다. **UP 레짐 + DD>9% + VIX10<28 = BIPOD**입니다. NOPOD는 NDX가 하단을 깨고 VIX10이 18 이상이어야 하므로 아직 아닙니다.\n\n새 Plaud 원문에서도 송팀장은 “지금 단계 바이팟”이라고 설명했습니다. 다만 시장 산식과 방송 발언은 계좌 주문 권위가 아닙니다. 비공개 canonical/Control Tower는 신선하지만 decision gate가 LIMITED이고 tripod source가 REFERENCE이므로 실제 매매·주문·체결은 CIO 승인과 브로커 대사 전까지 금지합니다.\n\n## ② 시장 한눈에\n\n| 항목 | 값·등락 | 세션·기준시각 | 검증 상태·원천 |\n|---|---:|---|---|\n| S&P500 | 7,376.86, +0.31% | 미국 11/6 정규장 | [AP 마감표](https://apnews.com/article/806f71d95105bc7efbc760b194dd8cad) |\n| Nasdaq Composite | 24,579.42, +1.09% | 미국 11/6 정규장 | AP 마감표 |\n| Dow | 51,285.73, -0.46% | 미국 11/6 정규장 | AP 마감표 |\n| Russell2000 | 2,754.11, +0.89% | 미국 11/6 정규장 | AP 마감표 |\n| NDX | **27,154.71, +1.97%** | 미국 11/6 장후 | [Nasdaq](https://indexes.nasdaq.com/Index/Breakdown/NDX) 27,154.71·[StockQ](https://stockq.cn/m/index/NDX.php) 27,154.78 일치. 공식 과거표 지연 |\n| SOX | **9,387.7~9,400.91, +4.18~4.33%** | 미국 11/6 장후 | [Nasdaq](https://indexes.nasdaq.com/Index/Overview/SOX)·[Investing](https://www.investing.com/indices/phlx-semiconductor-historical-data) 범위, CONFLICT |\n| VIX | 24.14~24.77, -14.4~-12.1% | 미국 11/6 장후 갱신 중 | [Yahoo](https://finance.yahoo.com/quote/%5EVIX/history/)·[Investing](https://www.investing.com/indices/volatility-s-p-500-historical-data) 범위 |\n| Fear & Greed | **19, Extreme Fear** | 11/6 미러 최신 | CNN 원문 직접 추출 제한. [FGScore](https://fgscore.com/en/markets/sp500)·[연합인포맥스](https://news.einfomax.co.kr/news/articleView.html?idxno=4443473) 교차 |\n\n[Finviz S&P500 Map](https://finviz.com/map?t=sec)은 반도체·데이터센터 전력 관련 종목의 녹색 반등과 금융·헬스케어 일부 약세가 공존하는 지도를 보였습니다. 전일처럼 전면적 하락은 아니었지만 Dow가 내려 모든 업종으로 확산된 risk-on도 아니었습니다. Finviz 1주·1개월 지도와 S&P500 전용 상승/하락 종목 수의 안정적 수치 추출은 실패해 임의 숫자를 넣지 않습니다.\n\n[Slickcharts Nasdaq100](https://www.slickcharts.com/nasdaq100) 상위 비중은 AAPL 12.87%, NVDA 11.65%, MSFT 10.19%, AMZN 7.29%, SPCX 4.70%, GOOGL 4.64%, GOOG 4.38%, META 4.05%, TSLA 3.66%, AVGO 3.59%이며 합계는 **67.02%**입니다.\n\n## ③ 핵심 이슈 깊이 읽기\n\n### 1. BIPOD 유지: 반등은 복귀가 아니다\n\n**핵심 숫자:** NDX 27,154.71, 복귀선 28,414.27, 거리 -1,259.56pt(-4.43%); MA250 27,452.10, 하단 26,079.49; VIX10 20.04~20.10.\n\n**무슨 일이 있었나:** NDX가 +1.97%, SOX가 4%대 반등했지만 52주 최고 종가 대비 낙폭은 -13.03%로 9% 경계를 회복하지 못했습니다.\n\n**왜 중요한가:** BIPOD은 단순 의견이 아니라 DD·MA250 레짐·VIX10 조합의 결과입니다. 반등 하루로 레버리지를 다시 최대로 올릴 근거가 없습니다.\n\n**반대 해석:** 공식 Nasdaq EOD 과거표가 늦고 VIX 최종치는 제공자별로 다릅니다. 다만 관측 범위 전체에서 BIPOD 결론은 같습니다.\n\n**다음 확인:** NDX 28,414.27 상향 돌파, MA250 상단 위 유지, 확정 VIX10, CT gate CLEAR·tripod source 승격을 봅니다.\n\n### 2. 반도체 반등과 금리 상승이 동시에 나왔다\n\n**핵심 숫자:** SOX +4.18~4.33%, S&P500 +0.31%, DXY 102.18(+0.61%), 2년물 약 4.532%(+5.5bp), 10년물 약 4.87%(+3bp 내외).\n\n**무슨 일이 있었나:** 전일 12%대 폭락했던 SOX가 반등했지만 강한 미국 고용지표 뒤 금리와 달러도 올랐습니다.\n\n**왜 중요한가:** AI 공급망이 추세를 되찾으려면 숏커버를 넘어 실적·수주·CAPEX가 가격에 다시 연결돼야 합니다. 달러·금리 상승은 한국 반도체에 원화·외국인 부담을 더합니다.\n\n**반대 해석:** 금리 상승은 경기침체 우려 완화의 신호일 수도 있습니다.\n\n**다음 확인:** 다음 주 CPI·PPI, SOX/NDX 상대강도, HYG-LQD, USD/KRW 1,360원대 안착을 봅니다.\n\n### 3. 한국은 이미 더 강한 충격을 반영했다\n\n**핵심 숫자:** KOSPI 5,059.69(-6.02%), KOSDAQ 644.27(-5.03%), KOSPI200 783.23(-6.51%), 외국인 KOSPI 약 -2.7조원, TAIEX -4.51%, Nikkei -5.96%.\n\n**무슨 일이 있었나:** 한국·일본·대만 반도체 중심 지수가 급락했고 KOSPI는 장중 서킷브레이커가 발동됐습니다.\n\n**왜 중요한가:** 월요일 진짜 추세 전환은 시초가가 아니라 외국인 수급과 원화, 삼성전자·SK하이닉스의 장중 저점 회복으로 확인해야 합니다.\n\n**반대 해석:** 미국 반도체의 금요일 반등으로 한국 충격의 일부는 선반영됐을 수 있습니다.\n\n**다음 확인:** 09:00~10:00 KST 외국인 현물·선물, KOSPI200 VWAP, 원/달러, 반도체 대형주의 전일 저점 방어를 봅니다.\n\n### 4. 신용은 주식 반등을 확인하지 않았다\n\n**핵심 숫자:** HYG $77.28(-0.31%), LQD $104.66(+0.15%).\n\n**무슨 일이 있었나:** 주식은 반등했지만 고수익채 ETF는 약세, 투자등급채 ETF는 강보합이었습니다.\n\n**왜 중요한가:** 위험자산 반등이 신용으로 번지지 않으면 숏커버 성격이 강할 수 있습니다.\n\n**반대 해석:** ETF 하루 수익률만으로 OAS 확대를 확정할 수 없습니다.\n\n**다음 확인:** FRED HY OAS 공식 갱신과 HYG/LQD 상대비율을 봅니다.\n\n## ④ 글로벌·한국 시장\n\n| 시장·자산 | 값·등락 | 완료 세션 | 원천·상태 |\n|---|---:|---|---|\n| DXY | 102.18, +0.61% | 11/6 마감 인접 | [TradeAlmanac](https://tradealmanac.com/en/markets/us/indices/dxy), 공식 마감표 미확인 |\n| 미국 2년물 | 약 4.532%, +5.5bp | 11/6 뉴욕 | [Reuters](https://www.reuters.com/world/asia-pacific/dollar-holds-yen-gains-equity-rout-saps-risk-appetite-ahead-payrolls-2026-11-06/), 공식 일별 미확인 |\n| 미국 10년물 | 약 4.87%, +3bp 내외 | 11/6 뉴욕 | Reuters·Tradeweb 보도, 공식 일별 미확인 |\n| WTI | 자료 미확인 | 11/6 | 계약월·정산가가 공급자별 불일치 |\n| HYG / LQD | 77.28(-0.31%) / 104.66(+0.15%) | 11/6 정규장 | [시장 메모](https://macrotape.io/posts/2026-11-06-governance.html); OAS 대용 아님 |\n| USD/KRW | 1,356.6원, +14.5원 | 한국 11/6 주간 종가 | [한국 마감](https://www.tradingjournl.io/blog/korea-market-close-2026-11-06/en) |\n| KOSPI | 5,059.69, -6.02% | 한국 11/6 종가 | [Reuters](https://www.reuters.com/world/asia-pacific/south-korea-stocks-plunge-8-circuit-breaker-triggered-chip-shares-tumble-2026-11-06/) |\n| KOSDAQ | 644.27, -5.03% | 한국 11/6 종가 | 같은 마감표 |\n| KOSPI200 현물 | 783.23, -6.51% | 한국 11/6 종가 | [한국경제](https://markets.hankyung.com/indices/kospi200)·[Investing](https://kr.investing.com/indices/kospi-200-historical-data) 교차 |\n| KOSPI 수급 | 외국인 약 -2.7조·기관 +1.7조원 | 한국 11/6 | KRX 기반 2개 집계 범위; 5거래일 누적 자료 미확인 |\n| 야간 KOSPI200 선물 | 자료 미확인 | 11/7 새벽 | 계약월·주간 기준가·종료시각 동시 검증 실패 |\n| EWY | 137.17~139.19 | 미국 11/6 | [StockAnalysis](https://stockanalysis.com/etf/ewy/history/)·[TwelveData](https://twelvedata.com/markets/950427/etf/nyse/ewy/historical-data) CONFLICT |\n| Nikkei225 | 57,434.77, -5.96% | 일본 11/6 종가 | 아시아 마감표 |\n| Hang Seng | 24,481.86, -1.27% | 홍콩 11/6 종가 | [FT](https://markets.ptc.ft.markitdigital.com/data/indices/tearsheet/historical?s=HSI%3AHKG)·[Yahoo](https://finance.yahoo.com/quote/%5EHSI/history/) 교차 |\n| TAIEX | 39,701.64, -4.51% | 대만 11/6 종가 | [Taiwan News](https://www.taiwannews.com.tw/news/6473097) |\n\n### Control Tower 계좌 게이트\n\n비공개 Drive canonical Bootstrap→Brief→Snapshot과 CT SSOT/Health를 교차했습니다. generated 2026-11-07 06:05 KST, stale_after 07:20 KST로 **LIVE/FRESH**였지만 decision_gate는 **LIMITED**, tripod는 **REFERENCE/STRATEGY_SIGNAL_UNVERIFIED**였습니다. toss·KIS·PB SSOT·market_quotes는 OK, 한국 일별 수급은 WAITING이었습니다.\n\n따라서 현재 보유·비중·손익을 주문 근거로 확정하지 않습니다. 공개 보고는 익명화된 미국성장·AI반도체·메모리·전력·로봇 노출만 다루며 직접보유와 ETF 룩스루를 중복 합산하지 않습니다. 실제 주문·체결은 실행계통 원천이 최종 권위입니다.\n\n## ⑤ AI 산업·기업실적\n\n1주=5거래일, 1개월=20거래일입니다. 1W·1M·이동평균은 마지막으로 동일 시계열을 완전히 검증한 11월 5일 기준이며 11월 6일에는 일부 1D만 장후 교차확인됐습니다.\n\n| 산업 | 대리자산 | 11/6 1D | 11/5 기준 1W / 1M | 11/5 5MA / 20MA | 상태 |\n|---|---|---:|---:|---|---|\n| AI반도체 | SMH | +3.52~3.70% | -20.29% / -26.27% | 아래 / 아래 | 반등, 추세 미복구 |\n| 메모리 | MU | 자료 미확인 | -29.74% / -36.63% | 아래 / 아래 | 최종 일봉 미확인 |\n| AI전력 | VRT | 자료 미확인 | -28.14% / -27.49% | 아래 / 아래 | 최종 일봉 미확인 |\n| 광통신 | 적합 대리 미확인 | 자료 미확인 | 자료 미확인 | 자료 미확인 | 임의 대체 금지 |\n| 로봇 | BOTZ | +1.11~1.37% | -8.32% / -12.03% | 아래 / 아래 | 반등, 추세 미복구 |\n| 원전·우라늄 | URA | 약 +4.33% | -13.27% / -19.66% | 아래 / 아래 | 반등, 추세 미복구 |\n| 조선 | 적합 대리 미확인 | 자료 미확인 | 자료 미확인 | 자료 미확인 | 임의 대체 금지 |\n| 방산 | ITA | 자료 미확인 | 자료 미확인 | 자료 미확인 | 최종 일봉 미확인 |\n| 미국성장 | QQQ | 자료 미확인 | -9.55% / -13.45% | 아래 / 아래 | NDX 반등만 확인 |\n\n### 오늘 실적에서 꼭 볼 변화\n\n- **Microchip:** 매출·이익은 회복했지만 다음 분기 매출 가이던스는 계절성과 일회성 매출 소멸을 반영해 전분기 대비 -3~+1%입니다.\n- **Airbnb:** 매출·예약·현금창출이 함께 성장했고 연간 매출 성장 전망을 높였습니다.\n- **Atlassian:** 공식 Q1 FY27 자료는 게시됐지만 수치표·콜을 충분히 검증하지 못해 주가 급락만으로 평가를 만들지 않습니다.\n\n#### Microchip Technology — FY2027 Q2\n\n**숫자 한눈에:** 매출 16.215억달러(+42.2% YoY, +9.2% QoQ), GAAP EPS $0.68, non-GAAP EPS $0.97, FCF 3.961억달러. 다음 분기 매출 가이던스는 15.73~16.38억달러입니다.\n\n**경영진이 새로 밝힌 것:** 데이터센터 PCIe Gen6 디자인윈이 전분기 12개에서 24개로 늘었고 리드타임이 길어져 추가 웨이퍼 배정을 확보 중이라고 밝혔습니다.\n\n**그래서 왜 중요한가:** AI 데이터센터 투자가 연결 반도체·엣지·산업용 MCU 매출로 확산되는 증거입니다.\n\n**반대 해석:** 9월 분기에는 약 5,300만달러 비반복 매출이 있었고 다음 분기에는 사라집니다.\n\n**다음 확인:** 디자인윈의 매출 전환, 웨이퍼 확보, non-GAAP 총마진 64~65%, 재고와 FCF를 봅니다. [공식 발표](https://ir.microchip.com/news-events/press-releases/detail/1426/microchip-technology-announces-financial-results-for-second-quarter-of-fiscal-year-2027) · 콜 오디오는 존재하나 직접 청취/전사 미확인.\n\n#### Airbnb — 2026 Q3\n\n**숫자 한눈에:** 매출 49억달러(+19% YoY), GBV 277억달러(+21%), Nights and Seats +16%, 순이익 19억달러, 조정 EBITDA 25억달러·마진 52%.\n\n**경영진이 새로 밝힌 것:** 핵심 지역 성장 재가속과 AI-native 제품 개발 속도 향상을 설명했고 120억달러 추가 자사주 매입을 승인했습니다.\n\n**그래서 왜 중요한가:** AI가 CAPEX-heavy 인프라뿐 아니라 고객지원 자동화·제품개발 생산성으로 매출과 마진에 연결되는 사례입니다.\n\n**반대 해석:** 자사주 매입은 본업 수요를 대체하지 않으며 Q4 성장률은 Q3보다 둔화할 수 있습니다.\n\n**다음 확인:** AI 여행 에이전트, 예약 성장, 마케팅비, FCF를 봅니다. [공식 뉴스룸](https://news.airbnb.com/airbnb-q3-2026-financial-results) · 콜 미확인.\n\nAtlassian은 [공식 IR](https://investors.atlassian.com/ir-home/default.aspx)에서 FY27 Q1 자료·웹캐스트 공개를 확인했지만 수치와 Q&A를 직접 검증하지 못해 다음 회차로 이월합니다. 자료 확인 마감은 2026-11-07 06:40 KST입니다.\n\n## ⑥ 주요 일정\n\n| KST | 일정 | 확인 포인트 | 원문 |\n|---|---|---|---|\n| 11/9 09:00 | KRX 정상 개장 | 외국인 현물·선물, 원/달러, KOSPI200 저점·VWAP | [KRX](https://global.krx.co.kr/contents/GLB/06/0602/0602010201/GLB0602010201T1.jsp) |\n| 11/9 22:00 | NRG Q3 콜 | 전력수요·데이터센터 계약·CAPEX·FCF | [NRG IR](https://investors.nrg.com/nrg-presentations-and-webcasts) |\n| 11/9 23:00 | Constellation Q3 콜 | 원전 가동·전력계약·데이터센터 수요 | [CEG IR](https://investors.constellationenergy.com/static-files/ec96e639-7e2d-4049-b979-21a286dd16eb) |\n| 11/10 22:30 | 미국 10월 CPI | 금리·DXY·성장주 밸류에이션 | [BLS](https://www.bls.gov/schedule/2026/11_sched_list.htm) |\n| 11/13 22:30 | 미국 10월 PPI | 생산자물가·마진 압력 | [BLS](https://www.bls.gov/schedule/2026/11_sched_list.htm) |\n\nCoreWeave·Nebius 일정은 공식 IR 원문에서 확인하지 못해 예정으로 쓰지 않습니다. [Finviz 캘린더](https://finviz.com/calendar.ashx)는 보조 확인용입니다.\n\n## ⑦ 투자전략·위험점검·복기\n\n1. **전략 상태:** BIPOD 유지. TRI-POD 복귀 후보도 NOPOD 전환 후보도 아닙니다. 상태 변화가 없어 다음 거래일 종가 실행 이벤트도 없습니다.\n2. **한국장:** 월요일 시초가 추격보다 외국인 수급, KOSPI200 전일 저점 758.63과 VWAP, USD/KRW, 삼성전자·SK하이닉스 상대강도를 봅니다.\n3. **미국장:** NDX 27,726.62(MA250 상단), 28,414.27(복귀선), 26,079.49(NOPOD 하단)를 순서대로 봅니다.\n4. **달러·금리:** CPI 전 DXY·2Y 상승이 이어지면 반도체 반등 지속성을 낮게 봅니다. HYG가 LQD 대비 회복하는지도 확인합니다.\n5. **PB R1~R5:** 확정 원문·최신 입력이 완전하지 않아 임의 계산하지 않습니다. 정의 미확인 트리거③에 의존하는 R2/R3는 조건 확인불가입니다. 후보는 주문 지시가 아닙니다.\n\n### 토요일 주간 종합과 복기\n\n미국 주식은 주간 하락으로 끝났고 아시아 반도체 시장은 금요일 미국 반등을 반영하기 전에 크게 밀렸습니다. 시장 폭은 목요일 전면 붕괴에서 금요일 선택적 반등으로 개선됐지만 신용·달러·금리가 완전한 risk-on을 확인하지 않았습니다. 월요일은 반등 여부보다 **반등의 질**이 중요합니다.\n\n- **적중:** 11/5 급락 후 BIPOD 후보, NOPOD 하단 미이탈 판단은 11/6에도 유지됐습니다.\n- **적중:** AI반도체·전력 과매도 반등 가능성은 SOX·SMH·URA 반등으로 확인됐습니다.\n- **한계:** NDX·SOX 공식 EOD 갱신 지연 때문에 CROSS_CHECKED와 공식 최종을 계속 분리합니다.\n- **20거래일 추적:** 일관된 공개 채점표가 아직 없어 누적 적중률을 만들지 않았습니다.\n\n### Control Tower·Plaud 운영 점검\n\n신규 송팀장 녹음 1건을 확인해 SOURCES·EXCERPTS·FACTCHECK에 증분 반영했습니다. 현재 BIPOD 발언은 시장 산식과 일치했습니다. NDX 26,000 이탈 시 올현금은 고정선이 아니라 당일 rolling MA250×0.95 근사치이며 VIX10 조건이 함께 필요하다고 정정했습니다. 계획 데이터센터 최소 10% 취소·CAPEX 고점 2027년 주장은 공식 1차자료를 확보하지 못해 미검증 해석으로 보존했습니다. 로이·짱구에게 공식 EOD·CT gate·브로커 주문/체결 독립 검증을 요청했습니다.\n\n## ⑧ 원천·데이터 감사\n\n| 항목 | 상태 | 감사 메모 |\n|---|---|---|\n| NDX 11/6 종가 | **CROSS_CHECKED / 공식 EOD 지연** | Nasdaq 동적 27,154.71·StockQ 27,154.78 일치. Nasdaq history·Yahoo EOD는 지연 |\n| SOX 11/6 종가 | **CONFLICT** | Nasdaq 9,400.91·Investing 9,387.7. 방향·4%대 반등만 사용 |\n| MA250 | **재계산·단일 시계열** | Yahoo 250개 종가에 CROSS_CHECKED 값을 반영해 27,452.10. 제2 독립 계산 미완료 |\n| VIX10 | **범위 검증** | 당일 VIX 24.14~24.77 차이로 평균 20.04~20.10. 상태 결론 영향 없음 |\n| Observatory | **WARN** | audit critical 0, warning 1; public daily pulse의 일부가 11/5라 11/6 FINAL로 간주하지 않음 |\n| kr-market-flow.json | **자료 미확인** | 실제 구현·검증 파일 미확인 |\n| asia-markets.json | **자료 미확인** | 실제 구현·검증 파일 미확인 |\n| 계좌 사실 | **LIMITED** | canonical은 LIVE/FRESH이나 decision gate CLEAR 아님 |\n| 기업 콜 | **부분 확인** | Microchip·Airbnb 공식 발표 확인, 콜 직접 청취/전사 미확인; Atlassian 이월 |\n\n**바로가기:** [Finviz Map](https://finviz.com/map?t=sec) · [Finviz Calendar](https://finviz.com/calendar.ashx) · [TradingView](https://kr.tradingview.com/) · [Slickcharts Nasdaq100](https://www.slickcharts.com/nasdaq100) · [CNN Fear & Greed](https://edition.cnn.com/markets/fear-and-greed) · [Nasdaq NDX](https://indexes.nasdaq.com/Index/Breakdown/NDX) · [Nasdaq SOX](https://indexes.nasdaq.com/Index/Overview/SOX) · [KRX](https://open.krx.co.kr/) · [BLS](https://www.bls.gov/schedule/2026/11_sched_list.htm)\n\n본 자료는 검토용이며 매수·매도·주문 지시가 아닙니다. 전략 변경과 실제 집행은 CIO 별도 승인, 거래가능 여부, 브로커 주문·체결 대사를 거쳐야 합니다.",
   "revisions": [
     {
       "revised_at_kst": "2026-11-09T06:19:22.376+09:00",
@@ -107,6 +161,68 @@
       "source": "https://github.com/mauveplace/jjooni-control-tower/pull/312#issuecomment-6722447203",
       "vintage": "2026-11-08_ROY_INDEPENDENT_AUDIT",
       "reason": "11/6 Nasdaq 동적 장후 표시(27,154.71)와 별도 일봉(27,154.78)은 정확히 같은 종가도 아니고 모두 정규장 확정 EOD 검증이 아니었습니다. 공개 canonical sidecar에는 26,989.99가 있어 관측 출처·세션/vintage 불일치 상태입니다. 어떤 수치도 공식 정규장 종가로 확정하지 않습니다."
+    },
+    {
+      "revised_at_kst": "2026-11-09T06:43:47.852+09:00",
+      "field": "editorial_contract.close_checks[NDX]",
+      "old": {
+        "status": "CONFLICT",
+        "close": null,
+        "previous_close": 26629.81,
+        "change_pct": null,
+        "official_status": "NOT_VERIFIED",
+        "reason": "11/6 Nasdaq 동적 장후 표시(27,154.71)와 별도 일봉(27,154.78)은 정확히 같은 종가도 아니고 모두 정규장 확정 EOD 검증이 아니었습니다. 공개 canonical sidecar에는 26,989.99가 있어 관측 출처·세션/vintage 불일치 상태입니다. 어떤 수치도 공식 정규장 종가로 확정하지 않습니다.",
+        "observation_type": "DYNAMIC_POST_CLOSE_UNVERIFIED"
+      },
+      "new": {
+        "status": "VERIFIED",
+        "close": 26989.99,
+        "previous_close": 26629.81,
+        "change_pct": 1.35,
+        "official_status": "VERIFIED",
+        "observation_type": "REGULAR_SESSION_CLOSE",
+        "post_publication_verified_at_kst": "2026-11-09T06:43:47.852+09:00"
+      },
+      "source_urls": [
+        "https://indexes.nasdaq.com/Index/Overview/NDX",
+        "https://finance.yahoo.com/quote/%5ENDX/history/"
+      ],
+      "reason": "Post-publication EOD verification; original interpretation not recalculated. Nasdaq official NDX index DATA AS OF 11/6/2026 26,989.99, and Yahoo historical Nov 6 2026 26,989.99"
+    },
+    {
+      "revised_at_kst": "2026-11-09T06:43:47.852+09:00",
+      "field": "editorial_contract.close_checks[SOX]",
+      "old": {
+        "status": "CONFLICT",
+        "close": null,
+        "previous_close": 9011.14,
+        "change_pct": null,
+        "official_status": "CONFLICT",
+        "reason": "Nasdaq 9,400.91과 Investing 9,387.7로 완료값 불일치. 4%대 반등 방향만 사용.",
+        "observation_type": "POST_CLOSE_PROVIDER_RANGE"
+      },
+      "new": {
+        "status": "VERIFIED",
+        "close": 9390.25,
+        "previous_close": 9011.14,
+        "change_pct": 4.21,
+        "official_status": "VERIFIED",
+        "observation_type": "REGULAR_SESSION_CLOSE",
+        "post_publication_verified_at_kst": "2026-11-09T06:43:47.852+09:00"
+      },
+      "source_urls": [
+        "https://indexes.nasdaq.com/Index/Overview/SOX",
+        "https://finance.yahoo.com/quote/%5ESOX/history/",
+        "https://fred.stlouisfed.org/series/NASDAQSOX"
+      ],
+      "reason": "Post-publication EOD verification; original interpretation not recalculated. Nasdaq official SOX DATA AS OF 11/6/2026 9,390.25, Yahoo completed daily Nov 6 9,390.25 and FRED NASDAQSOX 2026-11-06 9,390.25"
+    },
+    {
+      "revised_at_kst": "2026-11-09T06:43:47.852+09:00",
+      "field": "body_markdown.intro",
+      "old": "> **⚠️ 사후 검증 정정(2026-11-09):** 이 보고서의 2026-11-06 NDX 27,154.71(+1.97%)은 정규장 확정 종가로 검증되지 않았습니다. 당시 장후 동적 관측값을 사용한 아래의 수익률·전략선 설명은 **원문 기록용이며 투자·주문 판단에 사용하면 안 됩니다.** 다른 계층에서는 26,989.99가 기록돼 있어 정확한 동시점 정규장 종가 확인 전까지 NDX 상태는 **CONFLICT(미확정)** 입니다. 원문 수치와 본문은 감사 추적을 위해 유지했습니다.\\n\\n",
+      "new": "Official 2026-11-06 closes corrected with archival interpretation warning",
+      "reason": "Earlier CONFLICT hold superseded by verified Nasdaq/Yahoo/FRED EOD evidence"
     }
   ]
 }

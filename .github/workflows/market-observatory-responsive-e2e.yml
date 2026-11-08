@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - market-observatory/index.html
+      - market-observatory/morning-brief-v1.js
+      - tests/morning-brief-mobile-e2e.cjs
       - market-observatory/us-rates-intraday-v1.js
       - market-observatory/observatory-v2.js
       - market-observatory/sector-etf-v1.js
@@ -13,6 +15,8 @@ on:
     branches: [main]
     paths:
       - market-observatory/index.html
+      - market-observatory/morning-brief-v1.js
+      - tests/morning-brief-mobile-e2e.cjs
       - market-observatory/us-rates-intraday-v1.js
       - market-observatory/observatory-v2.js
       - market-observatory/sector-etf-v1.js
@@ -45,6 +49,8 @@ jobs:
           python3 -m http.server 8123 >/tmp/obs-http.log 2>&1 &
           echo $! >/tmp/obs-http.pid
           sleep 2
+      - name: Morning brief verified-close + actual mobile viewport E2E
+        run: node tests/morning-brief-mobile-e2e.cjs
       - name: Phone and tablet layout + history E2E
         run: |
           node <<'JS'
@@ -153,3 +159,10 @@ jobs:
             await browser.close();
           })().catch(e=>{console.error(e);process.exit(1)});
           JS
+      - name: Upload verified morning brief smartphone/tablet screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: morning-brief-mobile-render
+          path: /tmp/brief-*.png
+          if-no-files-found: warn
