@@ -1,0 +1,41 @@
+name: Pages Controlled Deployment
+
+# Staged migration: remains SKIPPED until repository variable
+# PAGES_ACTIONS_ENABLED=true and Settings > Pages > Source = GitHub Actions.
+# Do not replace the existing branch deployment before switching the source.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'jjooni-pages-controlled-deploy'
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: ${{ vars.PAGES_ACTIONS_ENABLED == 'true' }}
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout latest main once for this deployment
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload same root content as current branch build
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
