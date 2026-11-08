@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-08T22:18:06+09:00",
+  "generated_kst": "2026-11-08T23:08:00+09:00",
   "overall": "PASS",
   "critical_count": 0,
   "warning_count": 0,
@@ -68,13 +68,10 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-08T22:18:03+09:00",
-      "overall": "LIVE_WITH_WARNINGS",
+      "generated_kst": "2026-11-08T23:07:57+09:00",
+      "overall": "LIVE",
       "critical_bad": [],
-      "warnings": [
-        "fx",
-        "audit"
-      ]
+      "warnings": []
     },
     "watchdog": {
       "checked_kst": "2026-11-07T09:04:24+09:00",
@@ -506,17 +503,17 @@
         "BTCUSD": {
           "count": 1104,
           "last_date": "2026-11-08",
-          "last_value": 76024.0,
+          "last_value": 75835.0,
           "group": "crypto",
-          "latest_value": 76024.0,
+          "latest_value": 75835.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1104,
           "last_date": "2026-11-08",
-          "last_value": 2240.37,
+          "last_value": 2234.43,
           "group": "crypto",
-          "latest_value": 2240.37,
+          "latest_value": 2234.43,
           "latest_matches": true
         }
       },
@@ -560,16 +557,16 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-08T22:17:15+09:00",
-      "current_quote_age_seconds": 51,
-      "captured_quote_age_seconds": 46
+      "quote_as_of_kst": "2026-11-08T23:06:53+09:00",
+      "current_quote_age_seconds": 67,
+      "captured_quote_age_seconds": 64
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-08T22:17:34+09:00",
-      "current_quote_age_seconds": 32,
-      "captured_quote_age_seconds": 27
+      "quote_as_of_kst": "2026-11-08T23:06:42+09:00",
+      "current_quote_age_seconds": 78,
+      "captured_quote_age_seconds": 75
     }
   },
   "issues": [],
