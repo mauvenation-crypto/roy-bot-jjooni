@@ -8023,6 +8023,20 @@
       "path": "./observations/04083757acab2183d7356cd072938ffe5bd4bf90b882d2d1e9266e374433661e.json",
       "quality": "LIVE",
       "snapshot_id": "04083757acab2183d7356cd072938ffe5bd4bf90b882d2d1e9266e374433661e"
+    },
+    {
+      "generated_kst": "2026-11-09T02:29:55+09:00",
+      "market_date_us": "2026-11-06",
+      "path": "./observations/bd915146d2d101dc75f1a4f6ad53efff146c99113af4c62901e1a6fed0726def.json",
+      "quality": "LIVE",
+      "snapshot_id": "bd915146d2d101dc75f1a4f6ad53efff146c99113af4c62901e1a6fed0726def"
+    },
+    {
+      "generated_kst": "2026-11-09T02:29:59+09:00",
+      "market_date_us": "2026-11-06",
+      "path": "./observations/d5355c8eea9df6a5ab3c761985648ad88fd496febbf97a2ac65a5a3b3698050b.json",
+      "quality": "LIVE",
+      "snapshot_id": "d5355c8eea9df6a5ab3c761985648ad88fd496febbf97a2ac65a5a3b3698050b"
     }
   ],
   "retention": "NO_AUTOMATIC_EXPIRY",
