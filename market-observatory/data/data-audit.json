@@ -1,9 +1,9 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-08T14:12:57+09:00",
-  "overall": "WARN",
+  "generated_kst": "2026-11-08T14:13:17+09:00",
+  "overall": "PASS",
   "critical_count": 0,
-  "warning_count": 1,
+  "warning_count": 0,
   "observatory_session": "2026-11-06",
   "file_status": {
     "observatory": {
@@ -33,10 +33,10 @@
       "audit_state": "LIVE"
     },
     "calendar": {
-      "generated_kst": "2026-11-08T14:11:45+09:00",
+      "generated_kst": "2026-11-08T14:13:11+09:00",
       "events": 190,
-      "actual_freshness": "DEGRADED",
-      "overdue_count": 1,
+      "actual_freshness": "LIVE",
+      "overdue_count": 0,
       "pending_count": 0,
       "collection_health": "LIVE",
       "failed_source_count": 0,
@@ -68,12 +68,11 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-08T14:12:56+09:00",
+      "generated_kst": "2026-11-08T14:13:16+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
-        "calendar",
-        "audit"
+        "calendar"
       ]
     },
     "watchdog": {
@@ -519,24 +518,18 @@
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T13:59:48+09:00",
-      "current_quote_age_seconds": 789,
+      "current_quote_age_seconds": 809,
       "captured_quote_age_seconds": 42
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T13:59:36+09:00",
-      "current_quote_age_seconds": 801,
+      "current_quote_age_seconds": 821,
       "captured_quote_age_seconds": 54
     }
   },
-  "issues": [
-    {
-      "code": "CALENDAR_ACTUAL_DEGRADED",
-      "severity": "WARN",
-      "detail": "overdue_count=1 pending_count=0"
-    }
-  ],
+  "issues": [],
   "contracts": {
     "completed_session": "CORE_US_AND_US_SUPPLEMENT_MUST_MATCH_OBSERVATORY_SESSION",
     "continuous_daily": "FX_ENERGY_METALS_MAY_LAG_CORE_BY_AT_MOST_1_CALENDAR_DAY",

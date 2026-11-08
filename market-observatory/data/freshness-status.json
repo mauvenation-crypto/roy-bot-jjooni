@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-08T14:12:57+09:00",
+  "generated_kst": "2026-11-08T14:13:17+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
@@ -9,8 +9,7 @@
   "overall": "LIVE_WITH_WARNINGS",
   "critical_bad": [],
   "warnings": [
-    "calendar",
-    "audit"
+    "calendar"
   ],
   "watchdog_required": false,
   "session_alignment": {
@@ -114,7 +113,7 @@
       "state": "LIVE",
       "generated_kst": "2026-11-08T14:00:30+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=789s · ETHUSD age=801s",
+      "detail": "BTCUSD age=809s · ETHUSD age=821s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
@@ -186,9 +185,9 @@
     "calendar": {
       "label": "Economic Calendar",
       "state": "DEGRADED",
-      "generated_kst": "2026-11-08T14:11:45+09:00",
-      "as_of": "2026-11-08T14:11:45+09:00",
-      "detail": "events=190 · overdue=1 · pending=0 · source_failures=0 · official_probe_blocked=3 · 기존 공식 검증 98건 · 이번 원천 조회 DEGRADED",
+      "generated_kst": "2026-11-08T14:13:11+09:00",
+      "as_of": "2026-11-08T14:13:11+09:00",
+      "detail": "events=190 · overdue=0 · pending=0 · source_failures=0 · official_probe_blocked=3 · 기존 공식 검증 98건 · 이번 원천 조회 DEGRADED",
       "source": "economic-calendar.json",
       "critical": false,
       "official_probe_scope": "LATEST_COLLECTION_ATTEMPTS_ONLY",
@@ -198,10 +197,10 @@
         "latest_verified_kst": "2026-11-06T00:27:12+09:00",
         "note": "기존 공식 검증 이력 · 이번 실행의 원천 접속 성공을 뜻하지 않습니다."
       },
-      "actual_completeness_state": "DEGRADED",
+      "actual_completeness_state": "LIVE",
       "official_probe_state": "DEGRADED",
-      "official_probe_failure_count": 12,
-      "official_probe_unresolved_failure_count": 12,
+      "official_probe_failure_count": 10,
+      "official_probe_unresolved_failure_count": 10,
       "official_probe_blocked_releases": [
         "Employment Situation",
         "Job Openings and Labor Turnover Survey",
@@ -216,10 +215,10 @@
     },
     "audit": {
       "label": "Full Data Audit",
-      "state": "WARN",
-      "generated_kst": "2026-11-08T14:12:57+09:00",
+      "state": "PASS",
+      "generated_kst": "2026-11-08T14:13:17+09:00",
       "as_of": "2026-11-06",
-      "detail": "critical=0 · warnings=1",
+      "detail": "critical=0 · warnings=0",
       "source": "data-audit.json",
       "critical": true
     },
