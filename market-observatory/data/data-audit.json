@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-09T00:49:12+09:00",
+  "generated_kst": "2026-11-09T01:16:58+09:00",
   "overall": "PASS",
   "critical_count": 0,
   "warning_count": 0,
@@ -68,13 +68,10 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-09T00:49:10+09:00",
-      "overall": "LIVE_WITH_WARNINGS",
+      "generated_kst": "2026-11-09T01:16:57+09:00",
+      "overall": "LIVE",
       "critical_bad": [],
-      "warnings": [
-        "fx",
-        "audit"
-      ]
+      "warnings": []
     },
     "watchdog": {
       "checked_kst": "2026-11-07T09:04:24+09:00",
@@ -506,17 +503,17 @@
         "BTCUSD": {
           "count": 1104,
           "last_date": "2026-11-08",
-          "last_value": 75981.0,
+          "last_value": 75954.0,
           "group": "crypto",
-          "latest_value": 75981.0,
+          "latest_value": 75954.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1104,
           "last_date": "2026-11-08",
-          "last_value": 2238.83,
+          "last_value": 2237.9,
           "group": "crypto",
-          "latest_value": 2238.83,
+          "latest_value": 2237.9,
           "latest_matches": true
         }
       },
@@ -560,16 +557,16 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-09T00:48:48+09:00",
-      "current_quote_age_seconds": 24,
-      "captured_quote_age_seconds": 19
+      "quote_as_of_kst": "2026-11-09T01:16:29+09:00",
+      "current_quote_age_seconds": 29,
+      "captured_quote_age_seconds": 27
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-09T00:48:48+09:00",
-      "current_quote_age_seconds": 24,
-      "captured_quote_age_seconds": 19
+      "quote_as_of_kst": "2026-11-09T01:16:41+09:00",
+      "current_quote_age_seconds": 17,
+      "captured_quote_age_seconds": 15
     }
   },
   "issues": [],
