@@ -1,23 +1,23 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-09T08:31:34+09:00",
+  "generated_kst": "2026-11-09T08:32:02+09:00",
   "overall": "PASS",
   "critical_count": 0,
   "warning_count": 0,
   "observatory_session": "2026-11-06",
   "file_status": {
     "observatory": {
-      "generated_kst": "2026-11-09T07:41:43+09:00",
+      "generated_kst": "2026-11-09T08:31:53+09:00",
       "session": "2026-11-06",
       "schema": "JJOONI_MARKET_OBSERVATORY_V1"
     },
     "daily_pulse": {
-      "generated_kst": "2026-11-09T07:41:52+09:00",
+      "generated_kst": "2026-11-09T08:32:01+09:00",
       "session": "2026-11-06",
       "snapshot_status": "FINAL"
     },
     "public_tripod": {
-      "generated_kst": "2026-11-09T07:41:52+09:00",
+      "generated_kst": "2026-11-09T08:32:01+09:00",
       "session": "2026-11-06",
       "ok": true,
       "target": "QQQ 50% + QLD 50%"
@@ -68,10 +68,15 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-09T08:31:31+09:00",
-      "overall": "LIVE",
+      "generated_kst": "2026-11-09T08:31:59+09:00",
+      "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
-      "warnings": []
+      "warnings": [
+        "energy",
+        "fx",
+        "metals",
+        "audit"
+      ]
     },
     "watchdog": {
       "checked_kst": "2026-11-07T09:04:24+09:00",
@@ -558,15 +563,15 @@
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-09T08:31:19+09:00",
-      "current_quote_age_seconds": 15,
-      "captured_quote_age_seconds": 11
+      "current_quote_age_seconds": 43,
+      "captured_quote_age_seconds": 37
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-09T08:31:19+09:00",
-      "current_quote_age_seconds": 15,
-      "captured_quote_age_seconds": 11
+      "current_quote_age_seconds": 43,
+      "captured_quote_age_seconds": 37
     }
   },
   "issues": [],
