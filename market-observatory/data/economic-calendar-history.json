@@ -3,7 +3,7 @@
   "available_to": "2026-11-06",
   "backfill": {
     "canonical_rows_matched": 0,
-    "checked_kst": "2026-11-08T19:45:21+09:00",
+    "checked_kst": "2026-11-08T17:33:15+09:00",
     "coverage_scope": "FETCHED_WEEKS_NOT_PER_SERIES_COMPLETENESS",
     "errors": [],
     "failed_weeks": [],
@@ -86,7 +86,7 @@
   "contract": "ROLLING_3650D_EVENT_AND_METRIC_HISTORY_PRESERVE_V2",
   "coverage_scope": "ARCHIVE_BOUNDARY_AND_FETCH_ERRORS_ONLY",
   "coverage_status": "FULL",
-  "generated_kst": "2026-11-08T19:45:21+09:00",
+  "generated_kst": "2026-11-08T19:45:46+09:00",
   "missing_policy": "Historical consensus/actual is shown only when captured or verified; values are never synthesized.",
   "row_count": 37819,
   "schema": "JJOONI_ECONOMIC_CALENDAR_HISTORY_V1",
