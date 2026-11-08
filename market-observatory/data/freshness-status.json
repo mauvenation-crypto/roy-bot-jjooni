@@ -1,16 +1,14 @@
 {
   "schema": "JJOONI_OBSERVATORY_FRESHNESS_STATUS_V2",
-  "generated_kst": "2026-11-08T14:23:58+09:00",
+  "generated_kst": "2026-11-08T14:24:00+09:00",
   "freshness_policy": {
     "max_status_age_seconds": 7200,
     "scope": "STATUS_ASSESSMENT_NOT_OBSERVATION_AGE",
     "watchdog_scope": "US_CLOSE_RECOVERY_ONLY"
   },
-  "overall": "LIVE_WITH_WARNINGS",
+  "overall": "LIVE",
   "critical_bad": [],
-  "warnings": [
-    "calendar"
-  ],
+  "warnings": [],
   "watchdog_required": false,
   "session_alignment": {
     "expected_session": "2026-11-06",
@@ -113,7 +111,7 @@
       "state": "LIVE",
       "generated_kst": "2026-11-08T14:19:51+09:00",
       "as_of": null,
-      "detail": "BTCUSD age=327s · ETHUSD age=318s",
+      "detail": "BTCUSD age=329s · ETHUSD age=320s",
       "source": "BTCUSD: CoinGecko public simple/price USD spot · ETHUSD: CoinGecko public simple/price USD spot",
       "critical": false,
       "quotes": {
@@ -184,10 +182,10 @@
     },
     "calendar": {
       "label": "Economic Calendar",
-      "state": "DEGRADED",
-      "generated_kst": "2026-11-08T14:14:34+09:00",
-      "as_of": "2026-11-08T14:14:34+09:00",
-      "detail": "events=190 · overdue=0 · pending=0 · source_failures=0 · official_probe_blocked=1 · 기존 공식 검증 98건 · 이번 원천 조회 DEGRADED",
+      "state": "LIVE",
+      "generated_kst": "2026-11-08T14:23:38+09:00",
+      "as_of": "2026-11-08T14:23:38+09:00",
+      "detail": "events=190 · overdue=0 · pending=0 · source_failures=0 · official_probe_blocked=0 · 기존 공식 검증 98건 · 이번 원천 조회 PASS_WITH_TRANSPORT_WARNINGS",
       "source": "economic-calendar.json",
       "critical": false,
       "official_probe_scope": "LATEST_COLLECTION_ATTEMPTS_ONLY",
@@ -198,21 +196,21 @@
         "note": "기존 공식 검증 이력 · 이번 실행의 원천 접속 성공을 뜻하지 않습니다."
       },
       "actual_completeness_state": "LIVE",
-      "official_probe_state": "DEGRADED",
-      "official_probe_failure_count": 4,
-      "official_probe_unresolved_failure_count": 4,
-      "official_probe_blocked_releases": [
-        "Productivity and Costs"
-      ],
+      "official_probe_state": "PASS_WITH_TRANSPORT_WARNINGS",
+      "official_probe_failure_count": 3,
+      "official_probe_unresolved_failure_count": 0,
+      "official_probe_blocked_releases": [],
       "official_probe_transport_blocked_releases": [
         "Productivity and Costs"
       ],
-      "official_probe_verified_fallback_releases": []
+      "official_probe_verified_fallback_releases": [
+        "Productivity and Costs"
+      ]
     },
     "audit": {
       "label": "Full Data Audit",
       "state": "PASS",
-      "generated_kst": "2026-11-08T14:23:58+09:00",
+      "generated_kst": "2026-11-08T14:24:00+09:00",
       "as_of": "2026-11-06",
       "detail": "critical=0 · warnings=0",
       "source": "data-audit.json",
