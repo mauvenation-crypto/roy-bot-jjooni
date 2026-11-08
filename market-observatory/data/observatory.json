@@ -48,7 +48,8 @@
     "RUSSELL2000": 2754.11010742,
     "DOW": 51285.73046875,
     "NASDAQCOMPOSITE": 24579.4296875,
-    "SILVER": 51.8030014
+    "SILVER": 51.8030014,
+    "JP20Y": 3.64
   },
   "series": {
     "NASDAQ100": [
@@ -319576,6 +319577,20 @@
         "date": "2026-11-06",
         "value": 51.8030014
       }
+    ],
+    "JP20Y": [
+      {
+        "date": "2026-11-02",
+        "value": 3.669
+      },
+      {
+        "date": "2026-11-04",
+        "value": 3.693
+      },
+      {
+        "date": "2026-11-05",
+        "value": 3.64
+      }
     ]
   },
   "curves": {
@@ -324880,9 +324895,9 @@
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
       "price": 75765.0,
       "quote_as_of_kst": "2026-11-08T13:57:09+09:00",
-      "captured_kst": "2026-11-08T13:57:31+09:00",
+      "captured_kst": "2026-11-08T13:57:36+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 22,
+      "quote_age_seconds": 27,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     },
@@ -324892,9 +324907,9 @@
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
       "price": 2232.3,
       "quote_as_of_kst": "2026-11-08T13:57:15+09:00",
-      "captured_kst": "2026-11-08T13:57:31+09:00",
+      "captured_kst": "2026-11-08T13:57:36+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 16,
+      "quote_age_seconds": 21,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     }
@@ -325154,7 +325169,7 @@
       "status": "LIVE"
     }
   },
-  "kr_rates_refreshed_kst": "2026-11-08T10:48:22+09:00",
+  "kr_rates_refreshed_kst": "2026-11-08T13:57:39+09:00",
   "quality": {
     "kr_rates": {
       "state": "PASS",
@@ -325215,7 +325230,7 @@
   "history_base_generated_kst": "2026-09-13T00:12:30+09:00",
   "history_base_path": "./data/history-30y.json",
   "crypto_contract": "SPOT_QUOTE_WITH_UTC_DAILY_COMPARISON_V1",
-  "crypto_enriched_kst": "2026-11-08T13:57:31+09:00",
+  "crypto_enriched_kst": "2026-11-08T13:57:36+09:00",
   "market_supplement_quality": {
     "KOSPI": {
       "status": "LIVE",
@@ -325257,7 +325272,7 @@
   "equity_session_contract": "KR_TRADING_DATE_NAVER_PRIMARY_YAHOO_FALLBACK_V2",
   "market_supplement_contract": "US_SUPPLEMENT_MATCH_COMPLETED_CORE_SESSION_V3",
   "equity_enriched_kst": "2026-11-08T10:48:28+09:00",
-  "supplemental_refreshed_kst": "2026-11-08T09:49:33+09:00",
+  "supplemental_refreshed_kst": "2026-11-08T13:57:36+09:00",
   "supplemental_refresh_contract": "ALL_MARKET_FAMILIES_COMPLETED_SESSION_PLUS_24X7_CRYPTO_V1",
-  "us_rates_refreshed_kst": "2026-11-08T09:49:29+09:00"
+  "us_rates_refreshed_kst": "2026-11-08T13:57:31+09:00"
 }
