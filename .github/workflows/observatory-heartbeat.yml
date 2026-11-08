@@ -1,0 +1,73 @@
+name: Observatory Heartbeat Relay
+
+# GitHub drops most scheduled runs for this repo: on 2026-11-07/08 the Daily
+# '7,22,37,52 * * * *' watchdog fired 4 times in 16 hours and the BTC/ETH
+# '12,42 * * * *' refresh 3 times, so quotes went 77 minutes without an update
+# (14:54 -> 16:11 KST) with nothing failing. This relay does not depend on the
+# scheduler: one run stays alive for ~5h40m, checks the committed data every
+# 5 minutes, dispatches the existing writers only when their own gates say the
+# data is stale, and re-dispatches itself before the job time limit. The cron
+# below is only a backup to restart the relay if a run ever dies.
+# Public repository: standard runner minutes are free. It never writes data.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */2 * * *'
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: observatory-heartbeat-relay
+  cancel-in-progress: false
+
+jobs:
+  relay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      LOOP_SECONDS: '20400'
+      INTERVAL_SECONDS: '300'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check freshness every 5 minutes and dispatch stale writers
+        shell: bash
+        run: |
+          set -uo pipefail
+          active() {
+            local n
+            n=$(gh run list --workflow "$1" --limit 10 --json status \
+                  --jq '[.[]|select(.status=="queued" or .status=="in_progress" or .status=="waiting" or .status=="pending")]|length' 2>/dev/null || echo 1)
+            [ "${n:-1}" != "0" ]
+          }
+          start=$(date +%s)
+          while [ $(( $(date +%s) - start )) -lt "$LOOP_SECONDS" ]; do
+            if git fetch -q --depth 1 origin main && git checkout -q FETCH_HEAD -- market-observatory/data tools; then
+              gate=$(python tools/observatory_heartbeat_decision.py 2>&1) || gate="error $gate"
+              echo "$(date -u +%H:%M:%S) $gate"
+              if grep -q 'crypto=refresh' <<<"$gate"; then
+                if active observatory-crypto-refresh.yml; then echo "  crypto writer already queued/running";
+                else gh workflow run observatory-crypto-refresh.yml --ref main && echo "  dispatched BTC/ETH refresh"; fi
+              fi
+              if grep -q 'market=refresh' <<<"$gate"; then
+                if active market-observatory-daily.yml; then echo "  daily already queued/running";
+                else gh workflow run market-observatory-daily.yml --ref main -f heartbeat=true && echo "  dispatched hourly market refresh"; fi
+              fi
+            else
+              echo "$(date -u +%H:%M:%S) fetch failed; retry next tick"
+            fi
+            sleep "$INTERVAL_SECONDS"
+          done
+      - name: Hand over to the next relay run
+        if: always()
+        run: gh workflow run observatory-heartbeat.yml --ref main

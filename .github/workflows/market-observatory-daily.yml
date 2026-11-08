@@ -54,6 +54,13 @@ on:
     # 16:10 KST: Korea market close refresh for KOSPI/KOSDAQ and KR reference data.
     - cron: '10 7 * * 1-5'
   workflow_dispatch:
+    inputs:
+      heartbeat:
+        # Set by Observatory Heartbeat Relay: run only the hourly gate path
+        # (stale-only refresh), never the full daily build.
+        description: Run only the hourly freshness gate
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -86,7 +93,7 @@ jobs:
           fi
 
   hourly_gate:
-    if: ${{ (github.event_name == 'schedule' && github.event.schedule == '7,22,37,52 * * * *') || (github.event_name == 'workflow_run' && (github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure')) }}
+    if: ${{ (github.event_name == 'schedule' && github.event.schedule == '7,22,37,52 * * * *') || (github.event_name == 'workflow_dispatch' && inputs.heartbeat) || (github.event_name == 'workflow_run' && (github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure')) }}
     runs-on: ubuntu-latest
     outputs:
       should_refresh: ${{ steps.fresh.outputs.should_refresh }}
@@ -265,7 +272,7 @@ jobs:
       group: economic-calendar-canonical-writer
       cancel-in-progress: false
     needs: [us_close_gate]
-    if: ${{ always() && github.event_name != 'workflow_run' && (github.event_name != 'schedule' || github.event.schedule != '7,22,37,52 * * * *') && (github.event_name != 'schedule' || github.event.schedule != '20 20,21 * * 0-5' || needs.us_close_gate.outputs.should_run == 'true') }}
+    if: ${{ always() && github.event_name != 'workflow_run' && !(github.event_name == 'workflow_dispatch' && inputs.heartbeat) && (github.event_name != 'schedule' || github.event.schedule != '7,22,37,52 * * * *') && (github.event_name != 'schedule' || github.event.schedule != '20 20,21 * * 0-5' || needs.us_close_gate.outputs.should_run == 'true') }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
