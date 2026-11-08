@@ -1,9 +1,9 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-08T17:40:02+09:00",
-  "overall": "WARN",
+  "generated_kst": "2026-11-08T17:40:15+09:00",
+  "overall": "PASS",
   "critical_count": 0,
-  "warning_count": 1,
+  "warning_count": 0,
   "observatory_session": "2026-11-06",
   "file_status": {
     "observatory": {
@@ -12,12 +12,12 @@
       "schema": "JJOONI_MARKET_OBSERVATORY_V1"
     },
     "daily_pulse": {
-      "generated_kst": "2026-11-08T17:39:07+09:00",
+      "generated_kst": "2026-11-08T17:40:14+09:00",
       "session": "2026-11-06",
       "snapshot_status": "FINAL"
     },
     "public_tripod": {
-      "generated_kst": "2026-11-08T17:39:07+09:00",
+      "generated_kst": "2026-11-08T17:40:14+09:00",
       "session": "2026-11-06",
       "ok": true,
       "target": "QQQ 50% + QLD 50%"
@@ -43,7 +43,7 @@
       "failed_sources": []
     },
     "sector": {
-      "generated_kst": "2026-11-08T17:34:31+09:00",
+      "generated_kst": "2026-11-08T17:39:59+09:00",
       "as_of_date": "2026-11-06",
       "priced_count": 46
     },
@@ -68,12 +68,10 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-08T17:39:52+09:00",
-      "overall": "LIVE_WITH_WARNINGS",
+      "generated_kst": "2026-11-08T17:40:10+09:00",
+      "overall": "LIVE",
       "critical_bad": [],
-      "warnings": [
-        "audit"
-      ]
+      "warnings": []
     },
     "watchdog": {
       "checked_kst": "2026-11-07T09:04:24+09:00",
@@ -177,41 +175,37 @@
       "latest_mismatch": []
     },
     "asia_equity": {
-      "state": "UNAVAILABLE",
+      "state": "LIVE",
       "anchor": "2026-11-08",
       "allow_lag_days": 4,
       "critical": false,
       "items": {
         "NIKKEI225": {
-          "count": 0,
-          "last_date": null,
-          "last_value": null,
+          "count": 732,
+          "last_date": "2026-11-06",
+          "last_value": 57434.76953125,
           "group": "asia_equity",
-          "latest_value": null,
-          "latest_matches": false
+          "latest_value": 57434.76953125,
+          "latest_matches": true
         },
         "HANGSENG": {
-          "count": 0,
-          "last_date": null,
-          "last_value": null,
+          "count": 739,
+          "last_date": "2026-11-06",
+          "last_value": 24481.859375,
           "group": "asia_equity",
-          "latest_value": null,
-          "latest_matches": false
+          "latest_value": 24481.859375,
+          "latest_matches": true
         },
         "SHCOMP": {
-          "count": 0,
-          "last_date": null,
-          "last_value": null,
+          "count": 728,
+          "last_date": "2026-11-06",
+          "last_value": 3649.17700195,
           "group": "asia_equity",
-          "latest_value": null,
-          "latest_matches": false
+          "latest_value": 3649.17700195,
+          "latest_matches": true
         }
       },
-      "missing": [
-        "NIKKEI225",
-        "HANGSENG",
-        "SHCOMP"
-      ],
+      "missing": [],
       "latest_mismatch": []
     },
     "fx": {
@@ -564,24 +558,18 @@
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T17:39:32+09:00",
-      "current_quote_age_seconds": 30,
-      "captured_quote_age_seconds": 13
+      "current_quote_age_seconds": 43,
+      "captured_quote_age_seconds": 23
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-08T17:39:22+09:00",
-      "current_quote_age_seconds": 40,
-      "captured_quote_age_seconds": 23
+      "current_quote_age_seconds": 53,
+      "captured_quote_age_seconds": 33
     }
   },
-  "issues": [
-    {
-      "code": "GROUP_ASIA_EQUITY_UNAVAILABLE",
-      "severity": "WARN",
-      "detail": "anchor=2026-11-08 dates=NIKKEI225:None,HANGSENG:None,SHCOMP:None"
-    }
-  ],
+  "issues": [],
   "contracts": {
     "completed_session": "CORE_US_AND_US_SUPPLEMENT_MUST_MATCH_OBSERVATORY_SESSION",
     "continuous_daily": "FX_ENERGY_METALS_MAY_LAG_CORE_BY_AT_MOST_1_CALENDAR_DAY",
