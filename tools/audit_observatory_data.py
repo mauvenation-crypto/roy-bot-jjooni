@@ -27,7 +27,7 @@ EXPECTED_SERIES={
   'metals':['GOLD','SILVER','COPPER'],
   'us_rates':['US3M','US2Y','US5Y_OFFICIAL','US10Y_OFFICIAL','US30Y_OFFICIAL','US_2S10S'],
   'kr_rates':['KR3Y','KR5Y','KR10Y','KR20Y','KR30Y','KR_3S10S'],
-  'jp_rates':['JP2Y','JP5Y','JP10Y','JP30Y','JP_2S10S'],
+  'jp_rates':['JP2Y','JP5Y','JP10Y','JP20Y','JP30Y','JP_2S10S'],
   'crypto':['BTCUSD','ETHUSD'],
   'sentiment':['FEAR_GREED'],
 }
