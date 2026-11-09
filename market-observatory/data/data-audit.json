@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-09T11:13:38+09:00",
+  "generated_kst": "2026-11-09T11:45:27+09:00",
   "overall": "PASS",
   "critical_count": 0,
   "warning_count": 0,
@@ -48,7 +48,7 @@
       "priced_count": 46
     },
     "official_macro": {
-      "generated_kst": "2026-11-08T15:11:26+09:00",
+      "generated_kst": "2026-11-09T11:37:56+09:00",
       "schema": "JJOONI_OFFICIAL_MACRO_V1"
     },
     "market_regime": {
@@ -68,15 +68,10 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-09T11:13:35+09:00",
-      "overall": "LIVE_WITH_WARNINGS",
+      "generated_kst": "2026-11-09T11:45:25+09:00",
+      "overall": "LIVE",
       "critical_bad": [],
-      "warnings": [
-        "energy",
-        "fx",
-        "metals",
-        "audit"
-      ]
+      "warnings": []
     },
     "watchdog": {
       "checked_kst": "2026-11-09T08:38:41+09:00",
@@ -508,17 +503,17 @@
         "BTCUSD": {
           "count": 1105,
           "last_date": "2026-11-09",
-          "last_value": 75165.0,
+          "last_value": 75334.0,
           "group": "crypto",
-          "latest_value": 75165.0,
+          "latest_value": 75334.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1105,
           "last_date": "2026-11-09",
-          "last_value": 2143.96,
+          "last_value": 2152.25,
           "group": "crypto",
-          "latest_value": 2143.96,
+          "latest_value": 2152.25,
           "latest_matches": true
         }
       },
@@ -562,16 +557,16 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-09T11:13:09+09:00",
-      "current_quote_age_seconds": 29,
-      "captured_quote_age_seconds": 23
+      "quote_as_of_kst": "2026-11-09T11:44:38+09:00",
+      "current_quote_age_seconds": 49,
+      "captured_quote_age_seconds": 46
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-09T11:13:20+09:00",
-      "current_quote_age_seconds": 18,
-      "captured_quote_age_seconds": 12
+      "quote_as_of_kst": "2026-11-09T11:44:38+09:00",
+      "current_quote_age_seconds": 49,
+      "captured_quote_age_seconds": 46
     }
   },
   "issues": [],
