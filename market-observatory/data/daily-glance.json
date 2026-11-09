@@ -1,0 +1,250 @@
+{
+ "schema": "JJOONI_DAILY_GLANCE_V1",
+ "generated_kst": "2026-11-09T09:43:46+09:00",
+ "us_session": "2026-11-06",
+ "source_generated_kst": "2026-11-09T08:47:41+09:00",
+ "read_only": true,
+ "contains_account_data": false,
+ "no_trade": true,
+ "headline": "BIPOD 유지 · NDX 26,990(+1.35%) · VIX10 20.2 · DD -13.6%",
+ "tripod": {
+  "session": "2026-11-06",
+  "pod": "BIPOD",
+  "target": "QQQ 50% + QLD 50%",
+  "regime": "상승",
+  "changed": false,
+  "ndx": 26989.99,
+  "ma250": 27451.44,
+  "drawdown_52w_pct": -13.56,
+  "vix10": 20.19,
+  "lines": {
+   "tripod_return": 28414.27,
+   "ma250_upper": 27725.95,
+   "ma250_lower": 26078.87
+  },
+  "distance_pct": {
+   "tripod_return": 5.28,
+   "ma250_upper": 2.73,
+   "ma250_lower": -3.38
+  },
+  "next_up": "TRIPOD 복귀선 NDX 28,414 (+5.28%)",
+  "next_down": "하락 레짐 전환선 26,079 (-3.38%), 이탈 시 VIX10 20.19 ≥ 18 → NOPOD"
+ },
+ "consistency": {
+  "status": "OK",
+  "reasons": []
+ },
+ "groups": [
+  {
+   "name": "미국",
+   "items": [
+    {
+     "key": "NASDAQ100",
+     "label": "나스닥100",
+     "date": "2026-11-06",
+     "value": 26989.9902,
+     "d1_pct": 1.35,
+     "w1_pct": -4.91
+    },
+    {
+     "key": "SP500",
+     "label": "S&P500",
+     "date": "2026-11-06",
+     "value": 7376.8599,
+     "d1_pct": 0.31,
+     "w1_pct": -2.68
+    },
+    {
+     "key": "NASDAQCOMPOSITE",
+     "label": "나스닥종합",
+     "date": "2026-11-06",
+     "value": 24579.4297,
+     "d1_pct": 1.09,
+     "w1_pct": -3.37
+    },
+    {
+     "key": "DOW",
+     "label": "다우",
+     "date": "2026-11-06",
+     "value": 51285.7305,
+     "d1_pct": -0.46,
+     "w1_pct": -0.94
+    },
+    {
+     "key": "RUSSELL2000",
+     "label": "러셀2000",
+     "date": "2026-11-06",
+     "value": 2754.1101,
+     "d1_pct": 0.89,
+     "w1_pct": -2.05
+    },
+    {
+     "key": "VIX",
+     "label": "VIX",
+     "date": "2026-11-06",
+     "value": 25.64,
+     "d1_pct": -9.01,
+     "w1_pct": 32.03
+    }
+   ]
+  },
+  {
+   "name": "아시아",
+   "items": [
+    {
+     "key": "KOSPI",
+     "label": "코스피",
+     "date": "2026-11-06",
+     "value": 5059.69,
+     "d1_pct": -6.02,
+     "w1_pct": -11.71
+    },
+    {
+     "key": "KOSDAQ",
+     "label": "코스닥",
+     "date": "2026-11-06",
+     "value": 644.27,
+     "d1_pct": -5.03,
+     "w1_pct": -11.06
+    },
+    {
+     "key": "NIKKEI225",
+     "label": "닛케이225",
+     "date": "2026-11-06",
+     "value": 57434.7695,
+     "d1_pct": -5.96,
+     "w1_pct": -11.17
+    },
+    {
+     "key": "HANGSENG",
+     "label": "항셍",
+     "date": "2026-11-06",
+     "value": 24481.8594,
+     "d1_pct": -1.27,
+     "w1_pct": 5.1
+    },
+    {
+     "key": "SHCOMP",
+     "label": "상하이종합",
+     "date": "2026-11-06",
+     "value": 3649.177,
+     "d1_pct": -1.1,
+     "w1_pct": 1.39
+    }
+   ]
+  },
+  {
+   "name": "환율·금리",
+   "items": [
+    {
+     "key": "USDKRW",
+     "label": "원/달러",
+     "date": "2026-11-06",
+     "value": 1356.34,
+     "d1_pct": 1.21,
+     "w1_pct": 1.37
+    },
+    {
+     "key": "DXY",
+     "label": "달러인덱스",
+     "date": "2026-11-06",
+     "value": 102.3,
+     "d1_pct": 0.74,
+     "w1_pct": 0.41
+    },
+    {
+     "key": "US10Y",
+     "label": "미 10년물",
+     "date": "2026-11-06",
+     "value": 4.859,
+     "d1_bp": 2.2,
+     "w1_bp": -7.0
+    },
+    {
+     "key": "US2Y",
+     "label": "미 2년물",
+     "date": "2026-11-06",
+     "value": 4.51,
+     "d1_bp": 5.0,
+     "w1_bp": -5.0
+    },
+    {
+     "key": "KR3Y",
+     "label": "국고 3년",
+     "date": "2026-11-06",
+     "value": 3.613,
+     "d1_bp": -5.6,
+     "w1_bp": -10.2
+    }
+   ]
+  },
+  {
+   "name": "심리·기타",
+   "items": [
+    {
+     "key": "FEAR_GREED",
+     "label": "공포탐욕",
+     "date": "2026-11-06",
+     "value": 22.1,
+     "d1_pt": 2.1
+    },
+    {
+     "key": "GOLD",
+     "label": "금",
+     "date": "2026-11-06",
+     "value": 4074.8999,
+     "d1_pct": -0.94,
+     "w1_pct": 4.51
+    },
+    {
+     "key": "WTI",
+     "label": "WTI",
+     "date": "2026-11-06",
+     "value": 90.83,
+     "d1_pct": 0.34,
+     "w1_pct": -12.76
+    },
+    {
+     "key": "BTCUSD",
+     "label": "비트코인",
+     "date": "2026-11-07",
+     "value": 75747.5781,
+     "d1_pct": 0.0,
+     "w1_pct": -1.21
+    }
+   ]
+  }
+ ],
+ "cross_read": [
+  {
+   "type": "ASIA_CROSS",
+   "kind": "닛케이225와 동조, 항셍·상하이종합는 상대 선방",
+   "kospi_d1_pct": -6.02,
+   "peer_avg_d1_pct": -2.78,
+   "gap_pp": -3.24,
+   "text": "2026-11-06 코스피 -6.02% vs 닛케이225 -5.96%, 항셍 -1.27%, 상하이종합 -1.10% → 닛케이225와 동조, 항셍·상하이종합는 상대 선방"
+  },
+  {
+   "type": "TIME_LAG",
+   "text": "한국 최근 종가(2026-11-06)는 미국 2026-11-06 장 이전입니다. 나스닥100 +1.35%는 다음 KRX 세션에 반영됩니다."
+  },
+  {
+   "type": "FX",
+   "text": "원/달러 1,356.3원(+1.21%) — 원화 약세와 주가 하락이 동시 — 외국인 이탈형"
+  }
+ ],
+ "brief_check": {
+  "report_date_kst": "2026-11-07",
+  "market_date_us": "2026-11-06",
+  "status": "MATCH",
+  "brief_ndx": 26989.99,
+  "pipeline_ndx": 26989.9902,
+  "diff_pct": -0.0,
+  "text": "아침 시황의 NDX 종가가 파이프라인 확정치와 일치합니다."
+ },
+ "quality": {
+  "missing": [],
+  "number_source": "market-observatory/data/observatory.json only",
+  "note": "카드의 모든 숫자는 저장소 수집 파이프라인 확정치이며 웹 검색·LLM 값을 쓰지 않습니다."
+ }
+}

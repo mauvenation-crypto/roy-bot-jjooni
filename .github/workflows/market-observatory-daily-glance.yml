@@ -1,0 +1,73 @@
+name: Market Observatory Daily Glance
+
+# 30-second market card built only from already-published Observatory data.
+# Runs after the Daily Pulse publishes; no web scraping, LLM, account data or trading.
+on:
+  workflow_run:
+    workflows: ["Market Observatory Daily Pulse"]
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - market-observatory/data/morning-brief/latest.json
+      - tools/build_daily_glance.py
+      - .github/workflows/market-observatory-daily-glance.yml
+  pull_request:
+    paths:
+      - tools/build_daily_glance.py
+      - market-observatory/daily-glance-v1.js
+      - tests/test_daily_glance.py
+      - .github/workflows/market-observatory-daily-glance.yml
+  workflow_dispatch:
+
+# Least privilege by default; only the main-branch publish job can write.
+permissions:
+  contents: read
+
+concurrency:
+  group: market-observatory-daily-glance-${{ github.event_name == 'pull_request' && github.ref || 'main' }}
+  cancel-in-progress: false
+
+jobs:
+  glance:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    permissions:
+      contents: read
+    steps:
+      # workflow_run checks out trusted main source, never the triggering run's artifacts.
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.ref || 'main' }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Contract tests
+        run: python -m unittest tests.test_daily_glance -v
+      - name: Build glance (verification only)
+        run: python tools/build_daily_glance.py
+
+  publish:
+    needs: glance
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build and publish glance from main
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/build_daily_glance.py
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python tools/publish_observatory_data.py --message 'data(observatory): refresh 30-second daily glance' market-observatory/data/daily-glance.json
