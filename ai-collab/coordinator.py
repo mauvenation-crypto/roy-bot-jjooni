@@ -12,7 +12,8 @@ from pathlib import Path
 
 REPO = "mauveplace/jjooni-control-tower"
 ACTORS = frozenset(("ROY", "JJANGGU", "JJOONI"))
-REQUIRED_ACTORS = frozenset(("ROY", "JJANGGU"))
+REQUIRED_ACTORS = frozenset(("ROY", "JJANGGU", "JJOONI"))
+ALLOWED_ORIGINS = frozenset(("USER_TO_JJOONI", "USER_TO_ROY", "GITHUB_EVENT", "UNKNOWN"))
 ALLOWED_MODES = frozenset(("SYSTEM_REVIEW_ONLY",))
 TASK_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$")
 SHA_RE = re.compile(r"^[a-f0-9]{40}$")
@@ -47,6 +48,16 @@ def validate_task(task):
         raise ValueError("Unsupported role")
     if set(required).intersection(optional):
         raise ValueError("Required and optional reviewers overlap")
+    origin = task.get("origin", "USER_TO_JJOONI")  # Legacy tasks predate origin field.
+    if origin not in ALLOWED_ORIGINS:
+        raise ValueError("Unrecognized task origin")
+    if origin == "USER_TO_ROY":
+        if "JJOONI" not in required:
+            raise ValueError("ROY-first work requires an independent JJOONI reviewer")
+        if "ROY" in required + optional:
+            raise ValueError("ROY-first author cannot also review the same work")
+    elif "JJOONI" in required + optional:
+        raise ValueError("JJOONI review role requires authenticated USER_TO_ROY routing")
     if not isinstance(task.get("acceptance"), list) or not task["acceptance"]:
         raise ValueError("Explicit acceptance checks are mandatory")
     if any(not isinstance(x, str) or not x.strip() for x in task["acceptance"]):
@@ -98,6 +109,8 @@ def summarize(task, comments, head_sha):
     owner_login = REPO.split("/", 1)[0]
     trusted = [x for x in relevant if x["github_user"] == owner_login]
     untrusted = [x for x in relevant if x["github_user"] != owner_login]
+    self_claims = [x for x in trusted if task.get("origin") == "USER_TO_ROY" and x["actor_claim"] == "ROY"]
+    trusted = [x for x in trusted if x not in self_claims]
     counts = Counter(x["actor_claim"] for x in trusted)
     missing = [actor for actor in required if not counts[actor]]
     duplicates = {k: v for k, v in counts.items() if v > 1}
@@ -112,6 +125,7 @@ def summarize(task, comments, head_sha):
         "required_reviewers": required, "missing_reviewers": missing,
         "duplicate_claims": duplicates, "state": state,
         "review_claims": trusted, "ignored_untrusted_claims": untrusted,
+        "ignored_self_review_claims": self_claims,
         "authenticated_agent_origin": False,
         "safe_to_merge": False, "safe_to_deploy": False,
         "safe_to_trade": False,

@@ -1,0 +1,34 @@
+{
+  "schema": "JJOONI_COLLAB_V4",
+  "task_id": "D-261109-ROY-FIRST-JJOONI-ROUTING-010",
+  "repository": "mauveplace/jjooni-control-tower",
+  "base_branch": "main",
+  "source_sha": null,
+  "objective": "Independently audit V4.1 origin-aware ROY-first JJOONI required-reviewer routing, PR-diff-only task disambiguation and archival of the completed pilot task, while preserving read-only event/authentication safety and no production deployment.",
+  "mode": "SYSTEM_REVIEW_ONLY",
+  "privacy": "PUBLIC_DATA_ONLY",
+  "required_reviewers": [
+    "ROY"
+  ],
+  "optional_reviewers": [
+    "JJANGGU"
+  ],
+  "acceptance": [
+    "Confirm USER_TO_ROY requires JJOONI as independent reviewer and forbids ROY self review in required/optional list",
+    "Confirm USER_TO_JJOONI and GITHUB_EVENT cannot claim JJOONI self review, legacy tasks still validate, marker identity remains UNVERIFIED_ROLE_CLAIM",
+    "Confirm pull_request.opened on ROY-first returns AWAIT_JJOONI as decision only, does not assert Work webhook delivery or automerge",
+    "Confirm exactly one active task is selected from pinned PR changed files, not all inherited branch files, and archived V4 task no longer pollutes future PRs",
+    "Run ai-collab unittest suite and GitHub AI Collaboration Read-Only Contract CI; report file/line blockers and complete HEAD",
+    "Do not modify this code, merge PR, deploy production or place trades"
+  ],
+  "release_gate": "USER_APPROVAL_REQUIRED",
+  "owner_approval_evidence": null,
+  "forbidden": [
+    "No secrets or non-public company/account/customer data",
+    "No automated production deploy, merge or trade",
+    "No paid model API or new cloud infrastructure without explicit authorization"
+  ],
+  "origin": "USER_TO_JJOONI",
+  "work_type": "testing",
+  "coordination_notes": "A separate isolated fix PR responding to ROY-first probe #319; PR319 remains unmerged as historical failed event-subscription test. Work external subscription cannot be changed by repository code."
+}

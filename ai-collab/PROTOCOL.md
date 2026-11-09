@@ -11,11 +11,18 @@
 
 ## Persistent PR task contract
 
-1. Create **exactly one active task JSON** under `ai-collab-dispatch/tasks/<task_id>.json` on the **PR branch**, using `ai-collab-dispatch/tasks/TEMPLATE.json` as a model. Ignore `TEMPLATE.json` when discovering active tasks, and fail closed on zero or multiple active task files. The current PR number and HEAD are discovered dynamically from the actual event and checked using GitHub, not stored as permanent routine settings.
+1. Each new PR must **add or modify exactly one task JSON in its own GitHub PR changed-file diff** under `ai-collab-dispatch/tasks/<task_id>.json`. The caller must fetch all pages of `/pulls/{number}/files` for the pinned current HEAD and validate the matching file at that HEAD; do **not** count unrelated inherited task files from the base branch. Ignore `TEMPLATE.json`, `archive/`, and PR-diff deleted files. Missing or multiple changed active task files must fail closed. The current PR number/HEAD come from the authenticated GitHub event + fresh PR API, never a hardcoded pilot.
 2. Opt in with PR title containing `[AI-COLLAB]` and target branch `main`. The preferred Claude Routine filters are repo=`mauveplace/jjooni-control-tower`, base=`main`, title contains `[AI-COLLAB]`; optional draft=false. A PR with an explicit task JSON but no title opt-in is not automatically sent to ROY until the event subscription is configured to include it.
 3. In the user's observed Claude Routines UI, `PR 열림` is available for initial ROY reviews, while PR synchronize/labeled/comment events are not offered. For later reviews of an existing PR, configure a **separate** `이슈 열림` Routine with an owner-authored `[AI-COLLAB][ROY-REQUEST]` issue and current full PR HEAD. See `ai-collab/FOLLOWUP_ISSUE_DISPATCH.md`. A PR comment does **not** trigger the PR-opened Routine.
 4. JJOONI Work receives supported PR/comment/review events, validates the true event payload including original ID, reads the current task at PR HEAD, verifies change, and performs a separate read-only audit. A Work event subscription currently scoped to a single PR must also be widened in the Work event UI; **updating a prompt alone cannot prove the webhook subscription changed**.
 5. The subscription-bound GitHub and Work settings live in the external products and **cannot be installed by merely merging this repository documentation**. Actual end-to-end status requires new real event → Claude session → GitHub ROY response → Work independent review.
+
+## Origin-aware required reviewer (V4.1)
+
+- `origin=USER_TO_JJOONI` (or legacy default): `ROY` is the independent reviewer; `JJANGGU` remains optional. `JJOONI` cannot be marked its own required reviewer.
+- `origin=USER_TO_ROY`: **`JJOONI` must be a required reviewer**, and `ROY` must be absent from both required and optional reviewers to prevent self-review. `JJANGGU` may be optional, never a fake required placeholder. GitHub role claims alone remain unverified pending first-party Claude/Work evidence.
+- Completed historical tasks belong in `ai-collab-dispatch/archive/` and must not shadow the next PR. `event_gate.bound_task_from_pr_diff()` checks a proven PR changed-file list, not a branch directory snapshot.
+- On a new ROY-first PR, `event_gate.decide_event()` reports `AWAIT_JJOONI` only as a **decision**. It does not start Work or confirm any GitHub webhook subscription. The owner must check the Work **repository-wide `pull_request.opened`** subscription and verify a true Work run against an actual new PR event; manual reviews are not proof of automation.
 
 ## Idempotency and provenance
 

@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from coordinator import template
-from event_gate import active_task_path, bound_task_path, decide_event
+from event_gate import active_task_path, bound_task_path, bound_task_from_pr_diff, decide_event
 
 SHA_A = "a" * 40
 SHA_B = "b" * 40
@@ -189,6 +189,73 @@ class EventGateTests(unittest.TestCase):
                     ["ai-collab-dispatch/tasks/../../evil.json"]):
             with self.subTest(bad=bad), self.assertRaises(ValueError):
                 active_task_path(bad)
+
+    def test_roy_first_opened_event_is_jjooni_assignment_not_roy_review(self):
+        t=task(origin="USER_TO_ROY", required_reviewers=["JJOONI"],
+               optional_reviewers=["JJANGGU"])
+        outcome=decide_event("pull_request",pull_event("opened"),pr(),t)
+        self.assertEqual(outcome["decision"],"AWAIT_JJOONI")
+        self.assertFalse(outcome["agent_authenticated"])
+        self.assertFalse(outcome["safe_to_merge"])
+
+    def test_roy_first_does_not_reactivate_roy_on_label_event(self):
+        t=task(origin="USER_TO_ROY", required_reviewers=["JJOONI"])
+        e=pull_event("labeled", label={"name":"ai-collab:roy-request"})
+        self.assertEqual(decide_event("pull_request",e,pr(),t)["decision"],"IGNORE")
+
+    def test_old_main_task_does_not_shadow_new_pr_diff_task(self):
+        t=task(task_id="D-NEW-ROY-FIRST",origin="USER_TO_ROY",
+               required_reviewers=["JJOONI"],optional_reviewers=[])
+        old="ai-collab-dispatch/tasks/D-261108-EVERGREEN-COLLAB-006.json"
+        fresh="ai-collab-dispatch/tasks/D-NEW-ROY-FIRST.json"
+        with self.assertRaises(ValueError):
+            bound_task_path([old,fresh],t)
+        rows=[{"filename":fresh,"status":"added"},
+              {"filename":"ai-collab-dispatch/probes/ROY-FIRST.md","status":"added"}]
+        self.assertEqual(bound_task_from_pr_diff(rows,t,expected_changed_files=2),fresh)
+        with self.assertRaises(ValueError):
+            bound_task_from_pr_diff([{"filename":old,"status":"modified"},rows[0]],t,
+                                    expected_changed_files=2)
+        with self.assertRaises(ValueError):
+            bound_task_from_pr_diff([],t,expected_changed_files=1)
+        with self.assertRaises(ValueError):
+            bound_task_from_pr_diff([{"filename":fresh,"status":"removed"}],t,
+                                    expected_changed_files=1)
+
+    def test_incomplete_paginated_pr_diff_must_fail_closed(self):
+        t=task(task_id="D-NEW-ROY-FIRST",origin="USER_TO_ROY",
+               required_reviewers=["JJOONI"])
+        fresh="ai-collab-dispatch/tasks/D-NEW-ROY-FIRST.json"
+        rows=[{"filename":fresh,"status":"added"},
+              {"filename":"ai-collab-dispatch/probes/ROY-FIRST.md","status":"added"}]
+        # PR metadata says three changed files; only page 1 was fetched.
+        # The missing page could contain another competing active task.
+        with self.assertRaisesRegex(ValueError,"Incomplete or mismatched"):
+            bound_task_from_pr_diff(rows,t,expected_changed_files=3)
+        with self.assertRaisesRegex(ValueError,"changed_files"):
+            bound_task_from_pr_diff(rows,t,expected_changed_files=None)
+        with self.assertRaisesRegex(ValueError,"changed_files"):
+            bound_task_from_pr_diff(rows,t,expected_changed_files=3001)
+        with self.assertRaisesRegex(ValueError,"changed_files"):
+            bound_task_from_pr_diff(rows,t,expected_changed_files=True)
+        with self.assertRaisesRegex(ValueError,"Duplicate GitHub"):
+            bound_task_from_pr_diff([rows[0], rows[0]],t,expected_changed_files=2)
+        with self.assertRaisesRegex(ValueError,"Malformed GitHub"):
+            bound_task_from_pr_diff([{"filename":fresh,"status":None}],t,
+                                    expected_changed_files=1)
+
+    def test_roy_first_jjooni_independent_review_claim_reaches_verification(self):
+        t=task(origin="USER_TO_ROY",required_reviewers=["JJOONI"],optional_reviewers=[])
+        e=comment_event("JJOONI")
+        out=decide_event("issue_comment",e,pr(),t)
+        self.assertEqual(out["decision"],"VERIFY_REVIEWER")
+        self.assertFalse(out["agent_authenticated"])
+        self.assertFalse(out["safe_to_merge"])
+        # Even on a ROY-first task, JJOONI's own Work auto-run must avoid
+        # reacting to its *own* comment, via the authenticated caller boundary.
+        self.assertIn("Caller must suppress agent self-event",out["reason"])
+        out2=decide_event("issue_comment",e,pr(),task())
+        self.assertEqual(out2["decision"],"IGNORE")
 
     def test_no_implicit_merge_or_trade_for_any_event(self):
         samples = [

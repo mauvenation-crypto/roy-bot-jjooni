@@ -123,6 +123,41 @@ class EvergreenContractTests(unittest.TestCase):
         self.assertIn("## ROY / REVIEW", template(task(), "ROY", SHA_A))
         self.assertIn("## JJOONI / INDEPENDENT REVIEW", template(task(), "JJOONI", SHA_A))
 
+    def test_roy_first_requires_actual_jjooni_independent_reviewer(self):
+        for x in ({"required_reviewers":["JJANGGU"]},
+                  {"required_reviewers":["ROY"]},
+                  {"required_reviewers":["ROY","JJOONI"]},
+                  {"required_reviewers":["JJOONI"],"optional_reviewers":["ROY"]}):
+            with self.subTest(candidate=x), self.assertRaises(ValueError):
+                validate_task(task(origin="USER_TO_ROY", **x))
+        t=task(origin="USER_TO_ROY",required_reviewers=["JJOONI"],
+               optional_reviewers=["JJANGGU"])
+        self.assertIs(validate_task(t),t)
+
+    def test_non_roy_first_cannot_request_jjooni_self_review(self):
+        for origin in ("USER_TO_JJOONI","GITHUB_EVENT","UNKNOWN"):
+            with self.subTest(origin=origin),self.assertRaises(ValueError):
+                validate_task(task(origin=origin,required_reviewers=["JJOONI"]))
+        with self.assertRaises(ValueError):
+            validate_task(task(origin="UNRECOGNIZED"))
+
+    def test_roy_first_jjooni_claim_never_proves_actual_agent_identity(self):
+        t=task(origin="USER_TO_ROY",required_reviewers=["JJOONI"],
+               optional_reviewers=["JJANGGU"])
+        result=summarize(t,[comment("JJOONI", SHA_A)],SHA_A)
+        self.assertEqual(result["missing_reviewers"],[])
+        self.assertEqual(result["state"],"AWAITING_SOURCE_VERIFICATION")
+        self.assertFalse(result["authenticated_agent_origin"])
+        self.assertFalse(result["safe_to_merge"])
+
+    def test_roy_first_old_review_and_unrelated_shas_do_not_count(self):
+        t=task(origin="USER_TO_ROY",required_reviewers=["JJOONI"])
+        missing=summarize(t,[comment("ROY",SHA_A),comment("JJOONI",SHA_A)],SHA_B)
+        self.assertEqual(missing["missing_reviewers"],["JJOONI"])
+        self.assertEqual(missing["state"],"WAITING_FOR_REQUIRED_REVIEWERS")
+        self.assertEqual(missing["ignored_self_review_claims"],[])
+        self.assertEqual(summarize(t,[comment("ROY",SHA_A)],SHA_A)["ignored_self_review_claims"][0]["actor_claim"],"ROY")
+
     def test_reviewer_list_can_expand_later(self):
         t = task(required_reviewers=["ROY", "JJANGGU"], optional_reviewers=[])
         self.assertEqual(summarize(t, [comment("ROY")], SHA_A)["missing_reviewers"], ["JJANGGU"])

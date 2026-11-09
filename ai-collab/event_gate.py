@@ -35,13 +35,47 @@ def active_task_path(paths):
 
 
 def bound_task_path(paths, task):
-    """Reject task-id/file-name mismatch, including reused stale task JSON."""
+    """Reject task-id/file-name mismatch, including reused stale task JSON.
+
+    paths MUST be GitHub PR diff files, not all files in the branch. The
+    main-branch historical task and independent parallel PRs are not active
+    tasks of this PR. The caller must authenticate the diff API response.
+    """
     validate_task(task)
     path = active_task_path(paths)
     expected = TASK_DIR + task["task_id"] + ".json"
     if path != expected:
         raise ValueError("Task filename does not match declared task_id")
     return path
+
+
+def bound_task_from_pr_diff(pr_files, task, *, expected_changed_files):
+    """Select one task from a COMPLETE GitHub PR changed-file diff.
+
+    A caller must fetch *all pages* of /pulls/{number}/files for a pinned
+    current HEAD, independently read the PR's changed_files count, and
+    confirm the HEAD has not moved. Merely receiving a list of some files
+    is NOT completeness proof. Mismatch fails closed before routing.
+    The PR, task JSON, source marker and GitHub account do not authenticate
+    a model or authorize writes.
+    """
+    if (not isinstance(expected_changed_files, int)
+            or isinstance(expected_changed_files, bool)
+            or not 1 <= expected_changed_files <= 3000):
+        raise ValueError("Verified nonzero PR changed_files count is required")
+    if not isinstance(pr_files, list) or len(pr_files) != expected_changed_files:
+        raise ValueError("Incomplete or mismatched PR file pagination")
+    if any(not isinstance(row, dict) or not isinstance(row.get("filename"), str)
+           or not isinstance(row.get("status"), str) for row in pr_files):
+        raise ValueError("Malformed GitHub PR file evidence")
+    paths = [row["filename"] for row in pr_files]
+    if len(paths) != len(set(paths)):
+        raise ValueError("Duplicate GitHub PR diff filenames")
+    changed = [
+        row["filename"] for row in pr_files
+        if row["status"] in ("added", "modified", "renamed")
+    ]
+    return bound_task_path(changed, task)
 
 
 def get(obj, *keys):
@@ -159,6 +193,10 @@ def decide_event(event_name, event, current_pr, task, *, known_event_keys=(),
 
     if event_name == "pull_request":
         if action == "opened":
+            if task.get("origin") == "USER_TO_ROY" and "JJOONI" in task["required_reviewers"]:
+                return output("AWAIT_JJOONI", event_key=event_key, pr=number, head=head,
+                              reason="ROY-first PR requests independent JJOONI review; "
+                                     "GitHub event subscription and Work run provenance are NOT proven")
             if "ROY" not in task["required_reviewers"]:
                 return output("IGNORE", event_key=event_key, pr=number, head=head,
                               reason="ROY is not a required reviewer for this task")
@@ -194,9 +232,11 @@ def decide_event(event_name, event, current_pr, task, *, known_event_keys=(),
     if not parsed:
         return output("IGNORE", event_key=event_key, pr=number, head=head,
                       reason="No valid versioned review marker")
-    if parsed["actor_claim"] == "JJOONI":
+    if parsed["actor_claim"] == "JJOONI" and not (
+            task.get("origin") == "USER_TO_ROY"
+            and "JJOONI" in task["required_reviewers"]):
         return output("IGNORE", event_key=event_key, pr=number, head=head,
-                      reason="Self-comment must not trigger feedback loop")
+                      reason="Non-required JJOONI comment must not trigger feedback loop")
     if parsed["actor_claim"] not in task["required_reviewers"]:
         return output("IGNORE", event_key=event_key, pr=number, head=head,
                       reason="Actor not required for this task")
@@ -205,4 +245,5 @@ def decide_event(event_name, event, current_pr, task, *, known_event_keys=(),
                       reason="Wrong task ID or obsolete review HEAD")
     return output("VERIFY_ROY" if parsed["actor_claim"] == "ROY" else "VERIFY_REVIEWER",
                   event_key=event_key, pr=number, head=head,
-                  reason="Review claim received; agent session verification REQUIRED")
+                  reason="Required independent reviewer claim; Work/Claude session "
+                         "verification REQUIRED. Caller must suppress agent self-event feedback.")

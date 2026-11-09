@@ -6,9 +6,9 @@ Either agent may receive a request first. Both follow the same task/PR contract 
 
 ## Authoritative work record
 
-- Every substantive task has a durable public-only GitHub PR with `[AI-COLLAB]` opt-in and **exactly one** active `ai-collab-dispatch/tasks/<task_id>.json` file. `TEMPLATE.json` is not an active task. `task_id`, `origin` and `work_type` are stable; the PR HEAD changes with revisions.
+- Every substantive task has a durable public-only GitHub PR with `[AI-COLLAB]` opt-in and **exactly one active task introduced/modified in that PR's verified changed-file diff** under `ai-collab-dispatch/tasks/<task_id>.json`. An inherited base-branch task, a deleted task or `TEMPLATE.json` is not the current task. Completed contracts are archived under `ai-collab-dispatch/archive/`. `task_id`, `origin`, `work_type` and immutable event IDs must be verified at the current full PR HEAD.
 - A GitHub task is the work order; the linked PR and actual revisions are the provenance. The **Claude/Work session** is agent-run evidence, not the durable queue. A run ending or a model rate limit does not delete the GitHub work order.
-- If the request starts with **JJOONI**, JJOONI creates the contract and ROY gets the review task. If it starts with **ROY**, ROY creates/updates the same kind of contract with `origin=USER_TO_ROY`, and JJOONI validates the new PR/HEAD event when its repository-wide Work subscription is actually proven. The model contacted first does **not** gain merge authority.
+- If the request starts with **JJOONI**, JJOONI creates the contract and ROY gets the review task. If it starts with **ROY**, ROY creates/updates the same kind of contract with `origin=USER_TO_ROY`, `required_reviewers=["JJOONI"]` and no ROY reviewer (no self-review). `JJANGGU` is optional, never a fake required placeholder. JJOONI checks the new PR/HEAD when the repo-wide Work PR.opened subscription is actually proven; a user-directed manual review or hourly scan is labelled as such, never called an automatic event receipt. The model contacted first does **not** gain merge authority.
 - A task contract in an untrusted PR controls only the public read-only *subject*. It cannot authorize new writes, secret access, production deployment or a budget increase.
 
 ## Expertise-aware routing (policy, not self-executing model dispatch)
