@@ -40,8 +40,8 @@
     "JP30Y": 3.898,
     "JP_2S10S": 0.964,
     "KR_US_10Y": -1.007,
-    "BTCUSD": 74350.0,
-    "ETHUSD": 2122.7,
+    "BTCUSD": 73953.0,
+    "ETHUSD": 2093.21,
     "FEAR_GREED": 22.1,
     "FEAR_GREED_RATING": "EXTREME FEAR",
     "KOSPI": 5113.31,
@@ -333446,19 +333446,16 @@
       },
       {
         "date": "2026-11-08",
-        "value": 74833.0,
-        "session_status": "IN_PROGRESS",
-        "date_basis": "UTC",
-        "observed_kst": "2026-11-09T08:47:32+09:00",
-        "observation_type": "SPOT_SNAPSHOT",
-        "source": "CoinGecko"
+        "value": 74584.6484375,
+        "session_status": "COMPLETED",
+        "date_basis": "UTC"
       },
       {
         "date": "2026-11-09",
-        "value": 74350.0,
+        "value": 73953.0,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-09T15:24:30+09:00",
+        "observed_kst": "2026-11-09T16:13:48+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -340084,19 +340081,16 @@
       },
       {
         "date": "2026-11-08",
-        "value": 2131.17,
-        "session_status": "IN_PROGRESS",
-        "date_basis": "UTC",
-        "observed_kst": "2026-11-09T08:47:43+09:00",
-        "observation_type": "SPOT_SNAPSHOT",
-        "source": "CoinGecko"
+        "value": 2120.98022461,
+        "session_status": "COMPLETED",
+        "date_basis": "UTC"
       },
       {
         "date": "2026-11-09",
-        "value": 2122.7,
+        "value": 2093.21,
         "session_status": "IN_PROGRESS",
         "date_basis": "UTC",
-        "observed_kst": "2026-11-09T15:24:30+09:00",
+        "observed_kst": "2026-11-09T16:13:48+09:00",
         "observation_type": "SPOT_SNAPSHOT",
         "source": "CoinGecko"
       }
@@ -373075,11 +373069,11 @@
       "symbol": "BTC-USD",
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
-      "price": 74350.0,
-      "quote_as_of_kst": "2026-11-09T15:24:30+09:00",
-      "captured_kst": "2026-11-09T15:25:11+09:00",
+      "price": 73953.0,
+      "quote_as_of_kst": "2026-11-09T16:13:48+09:00",
+      "captured_kst": "2026-11-09T16:14:58+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 41,
+      "quote_age_seconds": 70,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     },
@@ -373087,11 +373081,11 @@
       "symbol": "ETH-USD",
       "source": "CoinGecko public simple/price USD spot",
       "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd&include_last_updated_at=true",
-      "price": 2122.7,
-      "quote_as_of_kst": "2026-11-09T15:24:30+09:00",
-      "captured_kst": "2026-11-09T15:25:11+09:00",
+      "price": 2093.21,
+      "quote_as_of_kst": "2026-11-09T16:13:48+09:00",
+      "captured_kst": "2026-11-09T16:14:58+09:00",
       "status": "LIVE",
-      "quote_age_seconds": 41,
+      "quote_age_seconds": 70,
       "comparison_basis": "UTC_DAILY_CLOSE_NOT_ROLLING_24H",
       "market_hours": "24/7"
     }
@@ -373433,7 +373427,7 @@
   "history_base_generated_kst": "2026-09-13T00:12:30+09:00",
   "history_base_path": "./data/history-30y.json",
   "crypto_contract": "SPOT_QUOTE_WITH_UTC_DAILY_COMPARISON_V1",
-  "crypto_enriched_kst": "2026-11-09T15:25:11+09:00",
+  "crypto_enriched_kst": "2026-11-09T16:14:58+09:00",
   "market_supplement_quality": {
     "KOSPI": {
       "status": "LIVE",

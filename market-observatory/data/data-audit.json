@@ -1,6 +1,6 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-09T15:25:17+09:00",
+  "generated_kst": "2026-11-09T16:15:00+09:00",
   "overall": "PASS",
   "critical_count": 0,
   "warning_count": 0,
@@ -43,12 +43,12 @@
       "failed_sources": []
     },
     "sector": {
-      "generated_kst": "2026-11-09T10:26:17+09:00",
-      "as_of_date": "2026-11-06",
+      "generated_kst": "2026-11-09T15:44:51+09:00",
+      "as_of_date": "2026-11-09",
       "priced_count": 46
     },
     "official_macro": {
-      "generated_kst": "2026-11-09T11:37:56+09:00",
+      "generated_kst": "2026-11-09T15:43:54+09:00",
       "schema": "JJOONI_OFFICIAL_MACRO_V1"
     },
     "market_regime": {
@@ -68,15 +68,10 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-09T15:25:14+09:00",
-      "overall": "LIVE_WITH_WARNINGS",
+      "generated_kst": "2026-11-09T16:14:59+09:00",
+      "overall": "LIVE",
       "critical_bad": [],
-      "warnings": [
-        "energy",
-        "fx",
-        "metals",
-        "audit"
-      ]
+      "warnings": []
     },
     "watchdog": {
       "checked_kst": "2026-11-09T08:38:41+09:00",
@@ -508,17 +503,17 @@
         "BTCUSD": {
           "count": 1105,
           "last_date": "2026-11-09",
-          "last_value": 74350.0,
+          "last_value": 73953.0,
           "group": "crypto",
-          "latest_value": 74350.0,
+          "latest_value": 73953.0,
           "latest_matches": true
         },
         "ETHUSD": {
           "count": 1105,
           "last_date": "2026-11-09",
-          "last_value": 2122.7,
+          "last_value": 2093.21,
           "group": "crypto",
-          "latest_value": 2122.7,
+          "latest_value": 2093.21,
           "latest_matches": true
         }
       },
@@ -562,16 +557,16 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-09T15:24:30+09:00",
-      "current_quote_age_seconds": 47,
-      "captured_quote_age_seconds": 41
+      "quote_as_of_kst": "2026-11-09T16:13:48+09:00",
+      "current_quote_age_seconds": 72,
+      "captured_quote_age_seconds": 70
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-09T15:24:30+09:00",
-      "current_quote_age_seconds": 47,
-      "captured_quote_age_seconds": 41
+      "quote_as_of_kst": "2026-11-09T16:13:48+09:00",
+      "current_quote_age_seconds": 72,
+      "captured_quote_age_seconds": 70
     }
   },
   "issues": [],
