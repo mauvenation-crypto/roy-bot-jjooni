@@ -1,23 +1,23 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-09T09:36:53+09:00",
-  "overall": "WARN",
+  "generated_kst": "2026-11-09T09:37:28+09:00",
+  "overall": "PASS",
   "critical_count": 0,
-  "warning_count": 1,
+  "warning_count": 0,
   "observatory_session": "2026-11-06",
   "file_status": {
     "observatory": {
-      "generated_kst": "2026-11-09T08:47:41+09:00",
+      "generated_kst": "2026-11-09T09:37:19+09:00",
       "session": "2026-11-06",
       "schema": "JJOONI_MARKET_OBSERVATORY_V1"
     },
     "daily_pulse": {
-      "generated_kst": "2026-11-09T08:48:09+09:00",
+      "generated_kst": "2026-11-09T09:37:27+09:00",
       "session": "2026-11-06",
       "snapshot_status": "FINAL"
     },
     "public_tripod": {
-      "generated_kst": "2026-11-09T08:48:09+09:00",
+      "generated_kst": "2026-11-09T09:37:27+09:00",
       "session": "2026-11-06",
       "ok": true,
       "target": "QQQ 50% + QLD 50%"
@@ -68,11 +68,13 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-09T09:36:51+09:00",
+      "generated_kst": "2026-11-09T09:37:25+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
-        "jp_rates",
+        "energy",
+        "fx",
+        "metals",
         "audit"
       ]
     },
@@ -438,57 +440,57 @@
       "latest_mismatch": []
     },
     "jp_rates": {
-      "state": "LAGGING",
+      "state": "LIVE",
       "anchor": "2026-11-09",
       "allow_lag_days": 5,
       "critical": false,
       "items": {
         "JP2Y": {
-          "count": 12972,
-          "last_date": "2026-11-05",
-          "last_value": 1.86,
+          "count": 12973,
+          "last_date": "2026-11-06",
+          "last_value": 1.732,
           "group": "jp_rates",
-          "latest_value": 1.86,
+          "latest_value": 1.732,
           "latest_matches": true
         },
         "JP5Y": {
-          "count": 13333,
-          "last_date": "2026-11-05",
-          "last_value": 2.21,
+          "count": 13334,
+          "last_date": "2026-11-06",
+          "last_value": 2.07,
           "group": "jp_rates",
-          "latest_value": 2.21,
+          "latest_value": 2.07,
           "latest_matches": true
         },
         "JP10Y": {
-          "count": 9972,
-          "last_date": "2026-11-05",
-          "last_value": 2.806,
+          "count": 9973,
+          "last_date": "2026-11-06",
+          "last_value": 2.696,
           "group": "jp_rates",
-          "latest_value": 2.806,
+          "latest_value": 2.696,
           "latest_matches": true
         },
         "JP20Y": {
-          "count": 9859,
-          "last_date": "2026-11-05",
-          "last_value": 3.64,
+          "count": 9860,
+          "last_date": "2026-11-06",
+          "last_value": 3.599,
           "group": "jp_rates",
-          "latest_value": 3.64,
+          "latest_value": 3.599,
           "latest_matches": true
         },
         "JP30Y": {
-          "count": 6656,
-          "last_date": "2026-11-05",
-          "last_value": 3.915,
+          "count": 6657,
+          "last_date": "2026-11-06",
+          "last_value": 3.898,
           "group": "jp_rates",
-          "latest_value": 3.915,
+          "latest_value": 3.898,
           "latest_matches": true
         },
         "JP_2S10S": {
-          "count": 9972,
-          "last_date": "2026-11-05",
-          "last_value": 0.946,
+          "count": 9973,
+          "last_date": "2026-11-06",
+          "last_value": 0.964,
           "group": "jp_rates",
-          "latest_value": 0.946,
+          "latest_value": 0.964,
           "latest_matches": true
         }
       },
@@ -561,24 +563,18 @@
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-09T09:36:31+09:00",
-      "current_quote_age_seconds": 22,
-      "captured_quote_age_seconds": 19
+      "current_quote_age_seconds": 57,
+      "captured_quote_age_seconds": 52
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
       "quote_as_of_kst": "2026-11-09T09:36:31+09:00",
-      "current_quote_age_seconds": 22,
-      "captured_quote_age_seconds": 19
+      "current_quote_age_seconds": 57,
+      "captured_quote_age_seconds": 52
     }
   },
-  "issues": [
-    {
-      "code": "GROUP_JP_RATES_LAGGING",
-      "severity": "WARN",
-      "detail": "anchor=2026-11-09 dates=JP2Y:2026-11-05,JP5Y:2026-11-05,JP10Y:2026-11-05,JP20Y:2026-11-05,JP30Y:2026-11-05,JP_2S10S:2026-11-05"
-    }
-  ],
+  "issues": [],
   "contracts": {
     "completed_session": "CORE_US_AND_US_SUPPLEMENT_MUST_MATCH_OBSERVATORY_SESSION",
     "continuous_daily": "FX_ENERGY_METALS_MAY_LAG_CORE_BY_AT_MOST_1_CALENDAR_DAY",
