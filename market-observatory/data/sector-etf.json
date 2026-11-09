@@ -1,7 +1,7 @@
 {
   "schema": "JJOONI_OBSERVATORY_SECTOR_ETF_V1",
-  "generated_kst": "2026-11-09T10:26:17+09:00",
-  "as_of_date": "2026-11-06",
+  "generated_kst": "2026-11-09T15:44:51+09:00",
+  "as_of_date": "2026-11-09",
   "read_only": true,
   "contains_account_data": false,
   "universe_version": "SONG_SECTOR_UNIVERSE_V2_COUNTRY",
@@ -9,7 +9,7 @@
   "membership_policy": "VERSIONED_INDEX_SECTOR_REGISTRY_NO_RANKING_NO_ACCOUNT_INPUT",
   "daily_bar_contract": "PER_MARKET_COMPLETED_CUTOFF_V1",
   "completed_cutoffs": {
-    "KR": "2026-11-06",
+    "KR": "2026-11-09",
     "US": "2026-11-06"
   },
   "source_contract": "YAHOO_PUBLIC_COMPLETED_DAILY_REFERENCE",
@@ -173,41 +173,41 @@
       "label": "한국 대표 지수",
       "rows": [
         {
-          "price": 79005.0,
-          "ytd_pct": 26.0852,
-          "ma20": 89943.0,
-          "ma60": 101851.9167,
-          "vs_ma20_pct": -12.161,
-          "vs_ma60_pct": -22.4315,
-          "high20_gap_pct": -22.243,
+          "price": 78510.0,
+          "ytd_pct": 25.2952,
+          "ma20": 88788.25,
+          "ma60": 101522.6667,
+          "vs_ma20_pct": -11.5761,
+          "vs_ma60_pct": -22.6675,
+          "high20_gap_pct": -17.9195,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -6.6245,
-          "ret_5d_pct": -12.9901,
-          "ret_10d_pct": -9.2679,
-          "ret_20d_pct": -25.2201,
-          "ret_50d_pct": -25.4635,
-          "ret_100d_pct": -36.2091,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -0.6265,
+          "ret_5d_pct": -15.5307,
+          "ret_10d_pct": -8.704,
+          "ret_20d_pct": -22.7302,
+          "ret_50d_pct": -26.4853,
+          "ret_100d_pct": -39.2667,
           "calendar_returns": {
             "1": {
-              "pct": -28.6604,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -25.6886,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -20.1163,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -19.9613,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": 38.6661,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": 40.3343,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -27.2179,
-          "ret_3m_pct": -21.2549,
+          "ret_1m_pct": -25.6886,
+          "ret_3m_pct": -24.7267,
           "ticker": "069500",
           "name": "KOSPI 200",
           "group": "한국 대표 지수",
@@ -216,7 +216,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -233,41 +233,41 @@
           "rs_qqq_1m_pct": null
         },
         {
-          "price": 10510.0,
-          "ytd_pct": -33.5651,
-          "ma20": 12625.25,
-          "ma60": 13740.3333,
-          "vs_ma20_pct": -16.7541,
-          "vs_ma60_pct": -23.5099,
-          "high20_gap_pct": -26.9378,
+          "price": 10270.0,
+          "ytd_pct": -35.0822,
+          "ma20": 12419.5,
+          "ma60": 13665.1667,
+          "vs_ma20_pct": -17.3075,
+          "vs_ma60_pct": -24.8454,
+          "high20_gap_pct": -27.8032,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -5.2299,
-          "ret_5d_pct": -11.7548,
-          "ret_10d_pct": -15.5145,
-          "ret_20d_pct": -30.6957,
-          "ret_50d_pct": -25.3286,
-          "ret_100d_pct": -40.4026,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -2.2835,
+          "ret_5d_pct": -15.5428,
+          "ret_10d_pct": -14.4523,
+          "ret_20d_pct": -28.6062,
+          "ret_50d_pct": -28.1818,
+          "ret_100d_pct": -42.992,
           "calendar_returns": {
             "1": {
-              "pct": -33.6909,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -32.2783,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -22.6068,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -24.513,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": -32.7145,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": -32.3675,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -31.5086,
-          "ret_3m_pct": -21.1553,
+          "ret_1m_pct": -32.2783,
+          "ret_3m_pct": -24.1787,
           "ticker": "229200",
           "name": "KOSDAQ 150",
           "group": "한국 대표 지수",
@@ -276,7 +276,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -293,41 +293,41 @@
           "rs_qqq_1m_pct": null
         },
         {
-          "price": 161300.0,
-          "ytd_pct": -0.9548,
-          "ma20": 172735.25,
-          "ma60": 177961.5,
-          "vs_ma20_pct": -6.6201,
-          "vs_ma60_pct": -9.3624,
-          "high20_gap_pct": -11.8387,
+          "price": 160935.0,
+          "ytd_pct": -1.179,
+          "ma20": 171634.0,
+          "ma60": 177526.9167,
+          "vs_ma20_pct": -6.2336,
+          "vs_ma60_pct": -9.3461,
+          "high20_gap_pct": -11.1593,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -3.335,
-          "ret_5d_pct": -5.382,
-          "ret_10d_pct": -5.3265,
-          "ret_20d_pct": -12.3798,
-          "ret_50d_pct": -9.3234,
-          "ret_100d_pct": -17.0822,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -0.2263,
+          "ret_5d_pct": -5.4464,
+          "ret_10d_pct": -4.9942,
+          "ret_20d_pct": -12.0382,
+          "ret_50d_pct": -10.1072,
+          "ret_100d_pct": -18.6745,
           "calendar_returns": {
             "1": {
-              "pct": -12.9285,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -12.5781,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -12.9261,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -12.8479,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": -1.6703,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": -1.1911,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -12.9449,
-          "ret_3m_pct": -12.1316,
+          "ret_1m_pct": -12.5781,
+          "ret_3m_pct": -14.4099,
           "ticker": "133690",
           "name": "TIGER 미국나스닥100",
           "group": "한국 대표 지수",
@@ -336,7 +336,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -359,41 +359,41 @@
       "label": "한국 KRX 섹터 지수",
       "rows": [
         {
-          "price": 85400.0,
-          "ytd_pct": 30.4215,
-          "ma20": 111525.0,
-          "ma60": 123812.6667,
-          "vs_ma20_pct": -23.4252,
-          "vs_ma60_pct": -31.0248,
-          "high20_gap_pct": -38.4948,
+          "price": 87000.0,
+          "ytd_pct": 32.865,
+          "ma20": 108932.5,
+          "ma60": 123402.6667,
+          "vs_ma20_pct": -20.134,
+          "vs_ma60_pct": -29.4991,
+          "high20_gap_pct": -34.7582,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -8.2805,
-          "ret_5d_pct": -20.0037,
-          "ret_10d_pct": -20.6246,
-          "ret_20d_pct": -41.5829,
-          "ret_50d_pct": -30.1346,
-          "ret_100d_pct": -45.9494,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": 1.8735,
+          "ret_5d_pct": -20.6639,
+          "ret_10d_pct": -15.6077,
+          "ret_20d_pct": -37.3425,
+          "ret_50d_pct": -30.3526,
+          "ret_100d_pct": -48.4414,
           "calendar_returns": {
             "1": {
-              "pct": -43.4662,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -40.4884,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -23.0942,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -19.2575,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": 44.9669,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": 51.7001,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -40.9875,
-          "ret_3m_pct": -25.4051,
+          "ret_1m_pct": -40.4884,
+          "ret_3m_pct": -27.1418,
           "ticker": "091160",
           "name": "반도체",
           "group": "한국 KRX 섹터 지수",
@@ -402,7 +402,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -419,41 +419,41 @@
           "rs_qqq_1m_pct": null
         },
         {
-          "price": 14310.0,
-          "ytd_pct": 13.3465,
-          "ma20": 14460.25,
-          "ma60": 15655.25,
-          "vs_ma20_pct": -1.0391,
-          "vs_ma60_pct": -8.593,
-          "high20_gap_pct": -6.0099,
+          "price": 14090.0,
+          "ytd_pct": 11.604,
+          "ma20": 14403.5,
+          "ma60": 15621.1667,
+          "vs_ma20_pct": -2.1766,
+          "vs_ma60_pct": -9.8019,
+          "high20_gap_pct": -7.3026,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -1.5141,
-          "ret_5d_pct": -0.3482,
-          "ret_10d_pct": 0.8457,
-          "ret_20d_pct": -6.4706,
-          "ret_50d_pct": -8.2692,
-          "ret_100d_pct": -3.0488,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -1.5374,
+          "ret_5d_pct": -0.3536,
+          "ret_10d_pct": 2.7717,
+          "ret_20d_pct": -7.4548,
+          "ret_50d_pct": -11.0199,
+          "ret_100d_pct": -8.1486,
           "calendar_returns": {
             "1": {
-              "pct": -8.9695,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -7.9085,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -11.5028,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -15.1205,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": 14.5717,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": 14.1815,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -8.9984,
-          "ret_3m_pct": -8.9695,
+          "ret_1m_pct": -7.9085,
+          "ret_3m_pct": -10.7946,
           "ticker": "091170",
           "name": "은행",
           "group": "한국 KRX 섹터 지수",
@@ -462,7 +462,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -479,41 +479,41 @@
           "rs_qqq_1m_pct": null
         },
         {
-          "price": 22365.0,
-          "ytd_pct": -10.3607,
-          "ma20": 23318.0,
-          "ma60": 26008.0,
-          "vs_ma20_pct": -4.087,
-          "vs_ma60_pct": -14.0072,
-          "high20_gap_pct": -10.8431,
+          "price": 21520.0,
+          "ytd_pct": -13.7475,
+          "ma20": 23177.5,
+          "ma60": 25874.1667,
+          "vs_ma20_pct": -7.1513,
+          "vs_ma60_pct": -16.8282,
+          "high20_gap_pct": -14.2117,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -2.9297,
-          "ret_5d_pct": 1.3367,
-          "ret_10d_pct": -3.3909,
-          "ret_20d_pct": -10.0181,
-          "ret_50d_pct": -22.7861,
-          "ret_100d_pct": -36.2548,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -3.7782,
+          "ret_5d_pct": -3.4978,
+          "ret_10d_pct": -5.614,
+          "ret_20d_pct": -11.5495,
+          "ret_50d_pct": -26.6405,
+          "ret_100d_pct": -41.5932,
           "calendar_returns": {
             "1": {
-              "pct": -12.858,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -13.4178,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -23.4731,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -26.3014,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": 5.1481,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": 2.1842,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -11.1619,
-          "ret_3m_pct": -20.9298,
+          "ret_1m_pct": -13.4178,
+          "ret_3m_pct": -26.2256,
           "ticker": "091180",
           "name": "자동차",
           "group": "한국 KRX 섹터 지수",
@@ -522,7 +522,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -539,41 +539,41 @@
           "rs_qqq_1m_pct": null
         },
         {
-          "price": 8735.0,
-          "ytd_pct": -34.6183,
-          "ma20": 10525.0,
-          "ma60": 12552.0,
-          "vs_ma20_pct": -17.0071,
-          "vs_ma60_pct": -30.4095,
-          "high20_gap_pct": -27.3597,
+          "price": 8455.0,
+          "ytd_pct": -36.7141,
+          "ma20": 10346.5,
+          "ma60": 12457.1667,
+          "vs_ma20_pct": -18.2815,
+          "vs_ma60_pct": -32.1274,
+          "high20_gap_pct": -28.83,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -7.4192,
-          "ret_5d_pct": -9.4819,
-          "ret_10d_pct": -15.2764,
-          "ret_20d_pct": -31.8377,
-          "ret_50d_pct": -33.0908,
-          "ret_100d_pct": -46.4603,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -3.2055,
+          "ret_5d_pct": -16.7405,
+          "ret_10d_pct": -15.1956,
+          "ret_20d_pct": -29.6881,
+          "ret_50d_pct": -37.1142,
+          "ret_100d_pct": -49.7175,
           "calendar_returns": {
             "1": {
-              "pct": -36.0073,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -34.0226,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -34.6916,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -37.7851,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": -40.0686,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": -40.4577,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -32.8077,
-          "ret_3m_pct": -31.9704,
+          "ret_1m_pct": -34.0226,
+          "ret_3m_pct": -38.1266,
           "ticker": "102960",
           "name": "KODEX 기계장비",
           "group": "한국 KRX 섹터 지수",
@@ -582,7 +582,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -599,41 +599,41 @@
           "rs_qqq_1m_pct": null
         },
         {
-          "price": 10730.0,
-          "ytd_pct": -13.6071,
-          "ma20": 12412.5,
-          "ma60": 13479.0,
-          "vs_ma20_pct": -13.5549,
-          "vs_ma60_pct": -20.3947,
-          "high20_gap_pct": -24.0623,
+          "price": 10455.0,
+          "ytd_pct": -15.8213,
+          "ma20": 12235.25,
+          "ma60": 13419.4167,
+          "vs_ma20_pct": -14.5502,
+          "vs_ma60_pct": -22.0905,
+          "high20_gap_pct": -26.0085,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -5.1701,
-          "ret_5d_pct": -6.4516,
-          "ret_10d_pct": -10.5088,
-          "ret_20d_pct": -26.982,
-          "ret_50d_pct": -21.6502,
-          "ret_100d_pct": -27.9866,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -2.5629,
+          "ret_5d_pct": -11.8094,
+          "ret_10d_pct": -9.8318,
+          "ret_20d_pct": -25.3214,
+          "ret_50d_pct": -23.125,
+          "ret_100d_pct": -32.1984,
           "calendar_returns": {
             "1": {
-              "pct": -28.0349,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -28.8534,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -17.0468,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -23.6861,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": -22.4991,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": -21.9776,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -27.2049,
-          "ret_3m_pct": -14.8413,
+          "ret_1m_pct": -28.8534,
+          "ret_3m_pct": -19.1415,
           "ticker": "117460",
           "name": "에너지·화학",
           "group": "한국 KRX 섹터 지수",
@@ -642,7 +642,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -659,41 +659,41 @@
           "rs_qqq_1m_pct": null
         },
         {
-          "price": 9920.0,
-          "ytd_pct": -20.1931,
-          "ma20": 10735.5,
-          "ma60": 11880.9167,
-          "vs_ma20_pct": -7.5963,
-          "vs_ma60_pct": -16.5048,
-          "high20_gap_pct": -15.3584,
+          "price": 9710.0,
+          "ytd_pct": -21.8825,
+          "ma20": 10641.25,
+          "ma60": 11834.8333,
+          "vs_ma20_pct": -8.7513,
+          "vs_ma60_pct": -17.9541,
+          "high20_gap_pct": -17.1502,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -3.6893,
-          "ret_5d_pct": -1.4406,
-          "ret_10d_pct": -5.3887,
-          "ret_20d_pct": -16.7086,
-          "ret_50d_pct": -19.8708,
-          "ret_100d_pct": -24.9905,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -2.1169,
+          "ret_5d_pct": -7.9621,
+          "ret_10d_pct": -3.5271,
+          "ret_20d_pct": -16.257,
+          "ret_50d_pct": -25.3077,
+          "ret_100d_pct": -29.6377,
           "calendar_returns": {
             "1": {
-              "pct": -20.8616,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -18.4719,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -16.8134,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -18.9821,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": -11.9005,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": -12.7583,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -16.2869,
-          "ret_3m_pct": -10.1449,
+          "ret_1m_pct": -18.4719,
+          "ret_3m_pct": -16.1123,
           "ticker": "117680",
           "name": "철강",
           "group": "한국 KRX 섹터 지수",
@@ -702,7 +702,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -719,41 +719,41 @@
           "rs_qqq_1m_pct": null
         },
         {
-          "price": 5545.0,
-          "ytd_pct": 35.9069,
-          "ma20": 5932.25,
-          "ma60": 6561.9167,
-          "vs_ma20_pct": -6.5279,
-          "vs_ma60_pct": -15.4973,
-          "high20_gap_pct": -12.4704,
+          "price": 5480.0,
+          "ytd_pct": 34.3137,
+          "ma20": 5900.5,
+          "ma60": 6541.6667,
+          "vs_ma20_pct": -7.1265,
+          "vs_ma60_pct": -16.2293,
+          "high20_gap_pct": -13.4964,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -5.2137,
-          "ret_5d_pct": -3.313,
-          "ret_10d_pct": -9.617,
-          "ret_20d_pct": -13.562,
-          "ret_50d_pct": -11.0666,
-          "ret_100d_pct": -21.0114,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -1.1722,
+          "ret_5d_pct": -8.8186,
+          "ret_10d_pct": -9.6455,
+          "ret_20d_pct": -10.3843,
+          "ret_50d_pct": -18.2699,
+          "ret_100d_pct": -26.1953,
           "calendar_returns": {
             "1": {
-              "pct": -17.1151,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -14.5752,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -16.0484,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -15.6923,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": 41.9974,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": 43.268,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -16.491,
-          "ret_3m_pct": -10.9952,
+          "ret_1m_pct": -14.5752,
+          "ret_3m_pct": -15.9509,
           "ticker": "117700",
           "name": "건설",
           "group": "한국 KRX 섹터 지수",
@@ -762,7 +762,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -779,41 +779,41 @@
           "rs_qqq_1m_pct": null
         },
         {
-          "price": 18150.0,
-          "ytd_pct": 41.9632,
-          "ma20": 19034.0,
-          "ma60": 20182.25,
-          "vs_ma20_pct": -4.6443,
-          "vs_ma60_pct": -10.0695,
-          "high20_gap_pct": -9.7239,
+          "price": 18100.0,
+          "ytd_pct": 41.5722,
+          "ma20": 18933.75,
+          "ma60": 20168.0,
+          "vs_ma20_pct": -4.4035,
+          "vs_ma60_pct": -10.2539,
+          "high20_gap_pct": -9.4774,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -4.4485,
-          "ret_5d_pct": -6.6118,
-          "ret_10d_pct": -2.9931,
-          "ret_20d_pct": -9.0454,
-          "ret_50d_pct": -11.4634,
-          "ret_100d_pct": -6.8036,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -0.2755,
+          "ret_5d_pct": -5.9007,
+          "ret_10d_pct": -1.7372,
+          "ret_20d_pct": -9.9726,
+          "ret_50d_pct": -12.4335,
+          "ret_100d_pct": -9.9726,
           "calendar_returns": {
             "1": {
-              "pct": -9.7688,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -9.2959,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -3.9683,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -4.787,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": 41.9632,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": 44.4533,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -10.6791,
-          "ret_3m_pct": 0.4149,
+          "ret_1m_pct": -9.2959,
+          "ret_3m_pct": -2.5572,
           "ticker": "140700",
           "name": "보험",
           "group": "한국 KRX 섹터 지수",
@@ -822,7 +822,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -839,41 +839,41 @@
           "rs_qqq_1m_pct": null
         },
         {
-          "price": 9245.0,
-          "ytd_pct": -31.6956,
-          "ma20": 8885.5,
-          "ma60": 9445.5833,
-          "vs_ma20_pct": 4.0459,
-          "vs_ma60_pct": -2.1236,
-          "high20_gap_pct": -0.8047,
+          "price": 9145.0,
+          "ytd_pct": -32.4344,
+          "ma20": 8898.25,
+          "ma60": 9425.4167,
+          "vs_ma20_pct": 2.773,
+          "vs_ma60_pct": -2.9751,
+          "high20_gap_pct": -1.8777,
           "above_ma20": true,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": 0.38,
-          "ret_5d_pct": 7.0023,
-          "ret_10d_pct": 4.4633,
-          "ret_20d_pct": 1.9294,
-          "ret_50d_pct": -7.2718,
-          "ret_100d_pct": -14.6353,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -1.0817,
+          "ret_5d_pct": 5.8449,
+          "ret_10d_pct": 4.4546,
+          "ret_20d_pct": 2.8684,
+          "ret_50d_pct": -7.9053,
+          "ret_100d_pct": -19.851,
           "calendar_returns": {
             "1": {
-              "pct": 0.5985,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": 0.8269,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -10.5899,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -11.8129,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": -31.8467,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": -31.8046,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -0.2697,
-          "ret_3m_pct": -10.3298,
+          "ret_1m_pct": 0.8269,
+          "ret_3m_pct": -11.2136,
           "ticker": "266360",
           "name": "미디어·엔터테인먼트",
           "group": "한국 KRX 섹터 지수",
@@ -882,7 +882,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -899,41 +899,41 @@
           "rs_qqq_1m_pct": null
         },
         {
-          "price": 8895.0,
-          "ytd_pct": 9.4769,
-          "ma20": 9039.5,
-          "ma60": 9538.5833,
-          "vs_ma20_pct": -1.5985,
-          "vs_ma60_pct": -6.7472,
-          "high20_gap_pct": -6.1709,
+          "price": 8540.0,
+          "ytd_pct": 5.1077,
+          "ma20": 8998.75,
+          "ma60": 9516.6667,
+          "vs_ma20_pct": -5.0979,
+          "vs_ma60_pct": -10.2627,
+          "high20_gap_pct": -9.9156,
           "above_ma20": false,
           "above_ma60": false,
-          "observed_date": "2026-11-06",
-          "ret_1d_pct": -1.767,
-          "ret_5d_pct": 0.8503,
-          "ret_10d_pct": -0.9465,
-          "ret_20d_pct": -6.1709,
-          "ret_50d_pct": -11.9743,
-          "ret_100d_pct": -4.6624,
+          "observed_date": "2026-11-09",
+          "ret_1d_pct": -3.991,
+          "ret_5d_pct": -4.2601,
+          "ret_10d_pct": -2.9545,
+          "ret_20d_pct": -8.7119,
+          "ret_50d_pct": -17.0874,
+          "ret_100d_pct": -8.5653,
           "calendar_returns": {
             "1": {
-              "pct": -5.6734,
-              "base_date": "2026-10-06",
-              "end_date": "2026-11-06"
+              "pct": -9.9156,
+              "base_date": "2026-10-08",
+              "end_date": "2026-11-09"
             },
             "3": {
-              "pct": -8.0145,
-              "base_date": "2026-08-06",
-              "end_date": "2026-11-06"
+              "pct": -14.1277,
+              "base_date": "2026-08-07",
+              "end_date": "2026-11-09"
             },
             "12": {
-              "pct": 9.0742,
-              "base_date": "2025-11-06",
-              "end_date": "2026-11-06"
+              "pct": 5.2372,
+              "base_date": "2025-11-07",
+              "end_date": "2026-11-09"
             }
           },
-          "ret_1m_pct": -7.8238,
-          "ret_3m_pct": -3.7858,
+          "ret_1m_pct": -9.9156,
+          "ret_3m_pct": -7.9245,
           "ticker": "266410",
           "name": "필수소비재",
           "group": "한국 KRX 섹터 지수",
@@ -942,7 +942,7 @@
           "market": "KR",
           "asset_class": "ETF",
           "bar_status": "COMPLETED_DAILY",
-          "completed_cutoff": "2026-11-06",
+          "completed_cutoff": "2026-11-09",
           "rs_spy_1d_pct": null,
           "rs_qqq_1d_pct": null,
           "rs_spy_5d_pct": null,
@@ -6202,10 +6202,6 @@
     ],
     "069500": [
       {
-        "date": "2025-03-19",
-        "value": 35435.0
-      },
-      {
         "date": "2025-03-20",
         "value": 35675.0
       },
@@ -7800,13 +7796,13 @@
       {
         "date": "2026-11-06",
         "value": 79005.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 78510.0
       }
     ],
     "229200": [
-      {
-        "date": "2025-03-19",
-        "value": 12425.0
-      },
       {
         "date": "2025-03-20",
         "value": 12110.0
@@ -9402,13 +9398,13 @@
       {
         "date": "2026-11-06",
         "value": 10510.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 10270.0
       }
     ],
     "133690": [
-      {
-        "date": "2025-03-19",
-        "value": 126300.0
-      },
       {
         "date": "2025-03-20",
         "value": 128950.0
@@ -11004,13 +11000,13 @@
       {
         "date": "2026-11-06",
         "value": 161300.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 160935.0
       }
     ],
     "091160": [
-      {
-        "date": "2025-03-19",
-        "value": 33930.0
-      },
       {
         "date": "2025-03-20",
         "value": 34455.0
@@ -12606,13 +12602,13 @@
       {
         "date": "2026-11-06",
         "value": 85400.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 87000.0
       }
     ],
     "091170": [
-      {
-        "date": "2025-03-19",
-        "value": 8660.0
-      },
       {
         "date": "2025-03-20",
         "value": 8680.0
@@ -14208,13 +14204,13 @@
       {
         "date": "2026-11-06",
         "value": 14310.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 14090.0
       }
     ],
     "091180": [
-      {
-        "date": "2025-03-19",
-        "value": 19020.0
-      },
       {
         "date": "2025-03-20",
         "value": 18885.0
@@ -15810,13 +15806,13 @@
       {
         "date": "2026-11-06",
         "value": 22365.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 21520.0
       }
     ],
     "102960": [
-      {
-        "date": "2025-03-19",
-        "value": 7915.0
-      },
       {
         "date": "2025-03-20",
         "value": 7780.0
@@ -17412,13 +17408,13 @@
       {
         "date": "2026-11-06",
         "value": 8735.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 8455.0
       }
     ],
     "117460": [
-      {
-        "date": "2025-03-19",
-        "value": 10410.0
-      },
       {
         "date": "2025-03-20",
         "value": 10480.0
@@ -19014,13 +19010,13 @@
       {
         "date": "2026-11-06",
         "value": 10730.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 10455.0
       }
     ],
     "117680": [
-      {
-        "date": "2025-03-19",
-        "value": 10660.0
-      },
       {
         "date": "2025-03-20",
         "value": 10900.0
@@ -20616,13 +20612,13 @@
       {
         "date": "2026-11-06",
         "value": 9920.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 9710.0
       }
     ],
     "117700": [
-      {
-        "date": "2025-03-19",
-        "value": 3135.0
-      },
       {
         "date": "2025-03-20",
         "value": 3110.0
@@ -22218,13 +22214,13 @@
       {
         "date": "2026-11-06",
         "value": 5545.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 5480.0
       }
     ],
     "140700": [
-      {
-        "date": "2025-03-19",
-        "value": 9335.0
-      },
       {
         "date": "2025-03-20",
         "value": 9330.0
@@ -23820,13 +23816,13 @@
       {
         "date": "2026-11-06",
         "value": 18150.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 18100.0
       }
     ],
     "266360": [
-      {
-        "date": "2025-03-19",
-        "value": 11780.0
-      },
       {
         "date": "2025-03-20",
         "value": 11565.0
@@ -25422,13 +25418,13 @@
       {
         "date": "2026-11-06",
         "value": 9245.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 9145.0
       }
     ],
     "266410": [
-      {
-        "date": "2025-03-19",
-        "value": 6760.0
-      },
       {
         "date": "2025-03-20",
         "value": 6860.0
@@ -27024,6 +27020,10 @@
       {
         "date": "2026-11-06",
         "value": 8895.0
+      },
+      {
+        "date": "2026-11-09",
+        "value": 8540.0
       }
     ],
     "XLK": [
