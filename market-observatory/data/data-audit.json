@@ -1,9 +1,9 @@
 {
   "schema": "JJOONI_OBSERVATORY_DATA_AUDIT_V2",
-  "generated_kst": "2026-11-09T08:48:10+09:00",
-  "overall": "PASS",
+  "generated_kst": "2026-11-09T09:36:53+09:00",
+  "overall": "WARN",
   "critical_count": 0,
-  "warning_count": 0,
+  "warning_count": 1,
   "observatory_session": "2026-11-06",
   "file_status": {
     "observatory": {
@@ -68,13 +68,11 @@
       "monitoring_scope": "INVESTMENT_BOARD_REFERENCE_ONLY"
     },
     "freshness": {
-      "generated_kst": "2026-11-09T08:48:07+09:00",
+      "generated_kst": "2026-11-09T09:36:51+09:00",
       "overall": "LIVE_WITH_WARNINGS",
       "critical_bad": [],
       "warnings": [
-        "energy",
-        "fx",
-        "metals",
+        "jp_rates",
         "audit"
       ]
     },
@@ -440,7 +438,7 @@
       "latest_mismatch": []
     },
     "jp_rates": {
-      "state": "LIVE",
+      "state": "LAGGING",
       "anchor": "2026-11-09",
       "allow_lag_days": 5,
       "critical": false,
@@ -496,7 +494,7 @@
       },
       "missing": [],
       "latest_mismatch": [],
-      "expected_latest_weekday": "2026-11-05",
+      "expected_latest_weekday": "2026-11-06",
       "published_source_status": "LIVE"
     },
     "crypto": {
@@ -506,19 +504,19 @@
       "critical": false,
       "items": {
         "BTCUSD": {
-          "count": 1104,
-          "last_date": "2026-11-08",
-          "last_value": 74833.0,
+          "count": 1105,
+          "last_date": "2026-11-09",
+          "last_value": 75021.0,
           "group": "crypto",
-          "latest_value": 74833.0,
+          "latest_value": 75021.0,
           "latest_matches": true
         },
         "ETHUSD": {
-          "count": 1104,
-          "last_date": "2026-11-08",
-          "last_value": 2131.17,
+          "count": 1105,
+          "last_date": "2026-11-09",
+          "last_value": 2140.74,
           "group": "crypto",
-          "latest_value": 2131.17,
+          "latest_value": 2140.74,
           "latest_matches": true
         }
       },
@@ -562,19 +560,25 @@
     "BTCUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-09T08:47:32+09:00",
-      "current_quote_age_seconds": 38,
-      "captured_quote_age_seconds": 22
+      "quote_as_of_kst": "2026-11-09T09:36:31+09:00",
+      "current_quote_age_seconds": 22,
+      "captured_quote_age_seconds": 19
     },
     "ETHUSD": {
       "status": "LIVE",
       "producer_status": "LIVE",
-      "quote_as_of_kst": "2026-11-09T08:47:43+09:00",
-      "current_quote_age_seconds": 27,
-      "captured_quote_age_seconds": 11
+      "quote_as_of_kst": "2026-11-09T09:36:31+09:00",
+      "current_quote_age_seconds": 22,
+      "captured_quote_age_seconds": 19
     }
   },
-  "issues": [],
+  "issues": [
+    {
+      "code": "GROUP_JP_RATES_LAGGING",
+      "severity": "WARN",
+      "detail": "anchor=2026-11-09 dates=JP2Y:2026-11-05,JP5Y:2026-11-05,JP10Y:2026-11-05,JP20Y:2026-11-05,JP30Y:2026-11-05,JP_2S10S:2026-11-05"
+    }
+  ],
   "contracts": {
     "completed_session": "CORE_US_AND_US_SUPPLEMENT_MUST_MATCH_OBSERVATORY_SESSION",
     "continuous_daily": "FX_ENERGY_METALS_MAY_LAG_CORE_BY_AT_MOST_1_CALENDAR_DAY",
